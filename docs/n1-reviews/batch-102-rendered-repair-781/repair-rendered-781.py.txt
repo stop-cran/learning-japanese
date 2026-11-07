@@ -1,0 +1,515 @@
+"""Bounded original-session repair with immutable evidence and full-history checkpoints."""
+import base64
+import copy
+import gzip
+import hashlib
+import importlib.util
+import io
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+from datetime import datetime, timezone
+
+from PIL import Image
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+SESSION = "0495c074-2405-4db2-a83f-75739373d6c1"
+L = C / "logs" / SESSION
+W = C / "batch-102-rendered-repair-781"
+D = R / "docs" / "n1-reviews" / "batch-102-rendered-repair-781"
+PRIOR = R / "docs" / "n1-reviews" / "batch-102-rendered-780"
+N = R / "docs" / "n1-reviews" / "batch-102-native-779" / "native"
+HEAD = "1ae398f6e8d11556795124cb727e6fe78f5f14f4"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+MODEL = "claude-opus-5.5"
+REVIEW_SESSION = "112f8849-4cce-4f19-8ed8-a6b25e6f9d2e"
+IMAGES = [N / "n1-102-curated-kun-feedback.png", N / "n1-102-curated-kun-question.png"]
+
+
+def load(path):
+    return json.loads(path.read_bytes().decode("utf-8-sig"))
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").strip()
+
+
+def absent(pid):
+    return subprocess.run(["pwsh", "-NoProfile", "-Command",
+                           f"if (Get-Process -Id {int(pid)} -ErrorAction SilentlyContinue) {{ exit 1 }}"],
+                          capture_output=True, check=False).returncode == 0
+
+
+def parent():
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 5920, SESSION)
+    assert not absent(5920)
+    assert load(L / "preflight-781.json")["lockTouched"] is False
+    progress = load(C / "progress.json")
+    assert (progress["checkpoint"], progress["status"], progress["batch"]) == (780, "continue", "102")
+
+
+def frozen():
+    parent()
+    for root, head in [(R, HEAD), (A, APP)]:
+        assert git("rev-parse", "HEAD", root=root) == head
+        assert git("log", "-1", "--format=%G?", root=root) == "G"
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+
+
+def runtime():
+    spec = importlib.util.spec_from_file_location("native778state", C / "native-778-state.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    result = module.verify_runtime()
+    assert not git("diff", "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477", HEAD,
+                   "--", "kanji", "words", "strokes", "manifest.json", "tools")
+    return {**result, "teachingDiffSince775": ""}
+
+
+def atomic_progress(before, after, suffix):
+    assert load(C / "progress.json") == before
+    temporary = C / f"progress.json.781-{suffix}.tmp"
+    save(temporary, after)
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == after
+
+
+def prepare():
+    frozen()
+    assert not W.exists()
+    before = load(C / "progress.json")
+    assert "execution781StartingState" not in before
+    request = (L / "request.txt").read_bytes()
+    text = request.decode("utf-8-sig")
+    checkpoint = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    assert checkpoint["execution780CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    assert before["execution780CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    for entry in load(PRIOR / "artifact-index.json"):
+        assert sha(PRIOR / entry["file"]) == entry["storedSha256"], entry["file"]
+    previous = load(PRIOR / "claude-execution.json")
+    assert previous["processExited"] and previous["exitCode"] == 0
+    assert len(previous["observedToolOverlaps"]) == 1 and not previous["unfinishedTools"]
+    assert absent(previous["launcherPid"])
+    coverage = load(PRIOR / "claude-coverage.json")
+    for image in IMAGES:
+        item = next(i for i in coverage["nativePngs"] if i["path"] == str(image))
+        assert sha(image) == item["sha256"]
+    state = {
+        "execution": 781, "batch": "102", "startingHead": HEAD, "androidHead": APP,
+        "freshOriginMain": git("rev-parse", "origin/main"), "startedAt": now(),
+        "scope": "SAME102 bounded original-Claude two-image serial repair/report clarification and normally signed LOCAL evidence only; no GPT/native/publication/103.",
+        "request": {"sha256": sha(L / "request.txt"), "bytes": len(request),
+                    "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request loaded/decoded and embedded checkpoint parsed; operative contract, complete issue and final780 inspected directly. Historical middle parsed, not freshly semantically rereviewed. Initial console encoding failure followed complete loading."},
+        "runnerPreflight": load(L / "preflight-781.json"), "runtime": runtime(),
+        "originalAttempt": {"remainsNoncompliant": True, "reportUnchanged": True,
+                            "priorLauncherPidConfirmedAbsent": previous["launcherPid"]},
+        "artifactPathPreflight": "Approved committed source/evidence packets, frozen workspace inputs and durable control helpers only; no optional historical-session recipes accessed.",
+        "actualNewPermissionDenials": [],
+    }
+    save(L / "progress-before-781.json", before)
+    save(L / "starting-state-781.json", state)
+    after = copy.deepcopy(before)
+    after["execution781StartingState"] = state
+    after["stage"] = "batch-102-original-Claude-serial-repair-preparing"
+    atomic_progress(before, after, "start")
+    W.mkdir()
+    cli = shutil.which("copilot")
+    for kind, args in [("help", ["--help"]), ("config-help", ["help", "config"])]:
+        result = subprocess.run([cli, *args], capture_output=True, check=True)
+        (W / f"cli-{kind}.txt").write_bytes(result.stdout)
+    assert f'"{MODEL}"' in (W / "cli-config-help.txt").read_text(encoding="utf-8-sig")
+    help_text = (W / "cli-help.txt").read_text(encoding="utf-8-sig")
+    assert all(flag in help_text for flag in ["--available-tools", "--session-id", "--model"])
+    save(W / "assigned-images.json", [{"path": str(p), "sha256": sha(p),
+                                     "sourceSize": list(Image.open(p).size)} for p in IMAGES])
+    print("Starting scope persisted; complete request parsed; live parent, signed heads and unchanged runtime verified.")
+
+
+def run():
+    frozen()
+    assert not (W / "claude.jsonl").exists()
+    previous = load(PRIOR / "claude-execution.json")
+    assert absent(previous["launcherPid"])
+    prompt = f"""DEPENDENT ORIGINAL-SESSION BOUNDED REPAIR, not a new blind review or a fresh full-scope reread.
+Model requested: {MODEL}; original session {REVIEW_SESSION}.
+Signed docs HEAD{HEAD}; same unchanged teaching snapshot54be1c9a; qualified Android{APP}.
+No teaching/runtime changes since your prior rendered report. Do not edit or use shell/delegation.
+Use ONLY two view calls in this EXACT order:
+1. view path {IMAGES[0]}
+2. ONLY AFTER the first tool result has returned, view path {IMAGES[1]}
+One call per assistant turn. Never parallel, never batch, never nest. Then issue the report.
+Do NOT reread the793094byte dossier, unrelated files, all43PNGs, or your whole old session.
+
+Your original report and exact execution are preserved unchanged at docs/n1-reviews/batch-102-rendered-780/.
+The original attempt is NONCOMPLIANT/UNACCEPTED: your kun feedback and question view calls overlapped.
+This NEW bounded two-image repair must not relabel the original execution compliant or count as a
+new independent initial review. It supplies serial rereads for only those two affected PNGs.
+Check the full learner-visible kun question and feedback, correctness/scopedcoverage/comprehensibility,
+including optionsおかす/つくる/ほたる/おとる and expected feedbackレツ、おとる.
+The view tool previously resized1080x2400sources to900x2000renditions; do not claim originalpixels.
+
+Clarify TWO report-only inaccuracies using this coordinator-supplied exact evidence (not fresh retrieval):
+- Original43 native PNG files hash to25 unique byte states. Eighteen are exact byte duplicates.
+  Correct/withdraw the claim "Clock differences mean the identical screenshots aren't byte-identical".
+  You may retain grouping by actual SHA evidence; this is not new visual inspection of the other41.
+- The live complete labels were劣"inferior;worse",冗"superfluous;redundant",蛍"firefly",
+  功"merit;achievement". "功merit(the opposite)" overstates lexical antonymy.
+  Defensibly wrong is not necessarily a lexical antonym. Clarify/withdraw this wording precisely.
+
+Separate finite sampled128production-option-set/40label semantic assessment from universal random-pool
+safety. Your previous five-resource/all43image assessment is inherited with actual3compactions and
+one serial-tools deviation, NOT freshly repeated. The original source dossier's full-family access is
+not proof of comprehension; the coordinator has not yet accepted two-family rendered closure.
+No new tests/upstream access, physicalphone/native-speaker evidence, installedfontface identification,
+gradedhandwriting/mastery, or learning-effect claim. Optional appUI trace wording remains outside scope.
+
+Return a compact standalone addendum with Snapshot;Scope;Verdicts;Findings;Optional;Limits.
+Name actual model and exactly these2freshimageopens and view-tool rendition limitations.
+Verdicts separately correctness/scopedcoverage/comprehensibility CLEAN/NEEDS FIX/UNVERIFIED for these
+two screens. Reconcile original protocol deviation and two wording corrections using resolved/
+partially resolved/unresolved/withdrawn/optional; do NOT retroaccept the old execution.
+Explicitly say whether affected-image serial reread supplies the necessary bounded supplement, or
+name the precise remaining evidence needed; do not manufacture a quota or demand wholesale repetition.
+Any semantic conclusion inherited from the earlier review remains finite, source-backed and dependent;
+all unsampled choices remain UNVERIFIED. No edits, no publication, no nextbatch.
+"""
+    (W / "claude-task.txt").write_text(prompt, encoding="utf-8")
+    env = os.environ.copy()
+    env.pop("GH_TOKEN", None)
+    env.pop("GITHUB_TOKEN", None)
+    command = [shutil.which("copilot"), "-C", str(R), "--add-dir", str(C), "--model", MODEL,
+               "--session-id", REVIEW_SESSION, "--no-ask-user", "--allow-tool=view",
+               "--disable-builtin-mcps", "--available-tools=view", "--no-custom-instructions",
+               "--output-format", "json", "--log-dir", str(C / "review-logs" / "batch-102-repair-781-claude"),
+               "--usage-output-file", str(W / "claude-usage.json"), "-p", prompt]
+    started = now()
+    with (W / "claude.jsonl").open("wb") as out, (W / "claude-stderr.txt").open("wb") as err:
+        proc = subprocess.Popen(command, stdout=out, stderr=err, env=env)
+        save(W / "claude-active.json", {"pid": proc.pid, "sessionId": REVIEW_SESSION,
+                                      "requestedModel": MODEL, "startedAt": started})
+        print("Original-Claude bounded repair running", proc.pid, REVIEW_SESSION, flush=True)
+        code = proc.wait()
+    events = [json.loads(line) for line in (W / "claude.jsonl").read_text(encoding="utf-8-sig").splitlines()
+              if line.strip()]
+    messages = [e["data"] for e in events if e.get("type") == "assistant.message"]
+    models = sorted({m.get("model", "") for m in messages})
+    (W / "claude.md").write_text(messages[-1]["content"] + "\n" if messages else "No completed report.\n",
+                                encoding="utf-8")
+    active, overlaps, starts, ends = set(), [], [], {}
+    for event in events:
+        data = event.get("data", {})
+        if event.get("type") == "tool.execution_start":
+            if active:
+                overlaps.append({"active": sorted(active), "new": data["toolCallId"]})
+            active.add(data["toolCallId"])
+            starts.append(data)
+        elif event.get("type") == "tool.execution_complete":
+            active.discard(data["toolCallId"])
+            ends[data["toolCallId"]] = data
+    images = []
+    for call in starts:
+        path = Path(call["arguments"]["path"])
+        completion = ends.get(call["toolCallId"], {})
+        binaries = completion.get("result", {}).get("binaryResultsForLlm", [])
+        returned = []
+        for binary in binaries:
+            data = binary.get("data") or binary.get("base64Data")
+            if not isinstance(data, str):
+                returned.append({"keys": list(binary), "validPngRendition": False})
+                continue
+            decoded = base64.b64decode(data)
+            source = Image.open(path)
+            rendition = Image.open(io.BytesIO(decoded))
+            returned.append({
+                "returnedSha256": hashlib.sha256(decoded).hexdigest(),
+                "sourceSize": list(source.size), "returnedSize": list(rendition.size),
+                "originalPngBytes": decoded == path.read_bytes(),
+                "validPngRendition": rendition.format == "PNG"
+                and source.width * rendition.height == source.height * rendition.width,
+            })
+        images.append({"path": str(path), "sha256": sha(path), "toolCallId": call["toolCallId"],
+                       "toolName": call.get("toolName"), "arguments": call["arguments"],
+                       "success": completion.get("success"), "renditions": returned})
+    usage = load(W / "claude-usage.json")
+    record = {
+        "snapshot": HEAD, "teachingSnapshot": "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477",
+        "originalSessionId": REVIEW_SESSION, "launcherPid": proc.pid, "startedAt": started,
+        "completedAt": now(), "exitCode": code, "actualModels": models,
+        "usageCurrentModel": usage["currentModel"], "availableTools": ["view"],
+        "observedToolOverlaps": overlaps, "unfinishedTools": sorted(active),
+        "actualToolCalls": len(starts), "images": images,
+        "requestedOrderCorrect": [i["path"] for i in images] == [str(p) for p in IMAGES],
+        "allAssignedPngRenditionsReturned": len(images) == 2 and all(
+            i["success"] and any(b["validPngRendition"] for b in i["renditions"]) for i in images),
+        "sessionCompactions": sum(e.get("type") == "session.compaction_complete" for e in events),
+        "processExited": absent(proc.pid), "reportSha256": sha(W / "claude.md"),
+        "rawExecutionSha256": sha(W / "claude.jsonl"),
+        "original780AttemptRemainsNoncompliant": True, "newBlindReviewCredit": False,
+        "gptLaunched": False,
+        "limits": "Two affected images freshly reopened only. Prior dossier/other41images inherited, not repeated. View renditions are not original pixels. Tool access does not prove comprehension.",
+    }
+    save(W / "claude-execution.json", record)
+    assert code == 0 and models == [MODEL] and usage["currentModel"] == MODEL
+    assert record["processExited"] and not active and not overlaps
+    assert record["actualToolCalls"] == 2 and record["requestedOrderCorrect"]
+    assert record["allAssignedPngRenditionsReturned"]
+    frozen()
+    print("Repair exited; exact two ordered successful image opens, actual model and strict serial tools verified.")
+
+
+def next_action():
+    return (
+        "SAME102 checkpoint781: original-Claude bounded SERIAL repair is accepted as a dependent "
+        "supplement ONLY; original780attempt remains NONCOMPLIANT/UNACCEPTED and immutable. "
+        "Read docs/n1-sources/execution-781.json and docs/n1-reviews/batch-102-rendered-repair-781/. "
+        "Actualclaude-opus-5.5 original112f8849-4cce-4f19-8ed8-a6b25e6f9d2e exited0; "
+        "PID27088confirmedabsent; EXACT2fresh successful view calls, feedbackTHENquestion, "
+        "differentassistantturns/nooverlap/nounfinishedtools/0newcompactions. "
+        "1080x2400sources returned900x2000renditions, NOToriginalpixels. Both kunscreens "
+        "correctness/scopedcoverage/comprehensibility CLEAN in that bounded report. "
+        "Unsupported clock/byte-difference and 功lexical-antonym wordings WITHDRAWN explicitly; "
+        "only report/process corrections, NOteachingdefectestablished. Earlier5resources/all43images/"
+        "25byte-states/3compactions inherited, NOTfreshlyreread. Finite128optionsets/40labels assessment "
+        "is NOTuniversalunsampledquizsafety, NOTtwofamilyacceptance. "
+        "NEXT bounded SAME102 originalGPT cd6cf58b-fbd1-4835-af8e-04079396d864 modelgpt-6.1-sol "
+        "if actualcurrentcatalogavailable. Freshsignedheads/checkpoint/whollyclean/freshmain/"
+        "liveparentancestry/decodedlauncher/exactsession required. Start from this checkpoint's "
+        "savedCommit and qualifiedAndroidbf30cdead8515739bc0e671d57a54b9a3109dd46; never invoke "
+        "historical780wrapper with staleHEAD/checkpoint or its deliberatelyfailing oldoverlap gate. "
+        "Use approvedcontrol/newboundedwrapper and committed780common5resources (793094bytes), "
+        "source40labels/all292complete matchingfamilies/original112families/40rawKANJIDIC/"
+        "72supportarticles/all128exactoptionsets and ALL43native779PNGs. "
+        "Verify committedstored/sourcehashes; restore boundedresources from committedlosslessgz "
+        "only if needed, not optionalhistoricalsessionrecipes. "
+        "GPT must NOT inherit Claude's NEW780renderedreport,781addendum or coordinatoradjudication; "
+        "original775reports/scopeclarification are allowed as dependentconfirmation context. "
+        "Exactteachingdiffsince775EMPTY; no newblindinitialcredit. One reviewerprocess/toolsSERIAL/"
+        "noedit/shell/delegation; record actualmodels/readranges/renditiondimensions/compactions/"
+        "toolturns and fullreport; waitactualEXIT/persist before otherheavywork. "
+        "Two-familyrenderedclosure and finite sampled ordinarysecondarysense semanticacceptance "
+        "remainUNVERIFIED until GPT+evidencebasedreconciliation; no native/HOSTrerun needed "
+        "for this docs-onlytree. Anygenuineambiguity requires exactlabels/fullfrozenevidence/"
+        "minimalcorrection/audits/manifest/normalsignedchangedfreeze/BOTHoriginalsessionconfirmations. "
+        "Originalnative779terminal0two cases/oneproductionContentSync and original775textual/"
+        "776HOST evidence inherited, NOTrepeated. "
+        "All8458runtimehashes/versionf376333b242ebb23 unchanged; exactnativearchive "
+        "73067936ccc548d615048c529adf3c5989659879847a69f9a8b49f53e661bd76/"
+        "8480entries/30483598compressed/44661694inflated/44393356retainedbytes/"
+        "perfilepathmedia originalguards passed. Noarchive rebuild/heap/guardchange. "
+        "Alloriginal combinedcurrentmain/nonrewritingmerge/changedteachingreview/"
+        "requiredPython/vocabulary/normal signing/ownerfastforward/terminalgreenCI/"
+        "EVERYimmutableZIPmanifesthash/18000entries42MiBcompressed80MiBinflated56MiBretained/"
+        "perfilepathmedia/verifiedownerissue gates remainMANDATORY. "
+        "Parent5920runner.lockuntouched;nochildacquire/delete/unlock/readprobe; "
+        "nooptionalhistoricalsessionhelper/newpermissiondenial. Preserve/report/yield actualnewdenial/"
+        "signinghang/uncertainownership. NoGPTlaunched781/no103/publication/unreviewedpush/"
+        "authoragents/concurrentheavywork/secondrunner/signingretry. QualifiedAndroidapprovedpairguard+"
+        "schemaonly, NOTlatestappmain. Published128/1228/remainder1100unchanged;"
+        "compatibleAndroid#125+#132required;oldclientsignorecuration/guards. Physicalphone/"
+        "generalrelease/whole-setoutstanding;projectincomplete. Everyearliergate/limitation remains "
+        "VERBATIM in historicalExecution780Before781Repair.nextAction."
+    )
+
+
+def archive():
+    frozen()
+    before = load(C / "progress.json")
+    execution = load(W / "claude-execution.json")
+    assert execution["processExited"] and absent(execution["launcherPid"])
+    assert execution["actualModels"] == [MODEL] and execution["exitCode"] == 0
+    assert not execution["observedToolOverlaps"] and not execution["unfinishedTools"]
+    assert execution["actualToolCalls"] == 2 and execution["requestedOrderCorrect"]
+    assert execution["allAssignedPngRenditionsReturned"]
+    events = [json.loads(line) for line in (W / "claude.jsonl").read_text(encoding="utf-8-sig").splitlines()
+              if line.strip()]
+    tool_turns = [e for e in events if e.get("type") == "assistant.message"
+                  and e.get("data", {}).get("toolRequests")]
+    assert len(tool_turns) == 2
+    assert all(len(e["data"]["toolRequests"]) == 1 for e in tool_turns)
+    timestamps = [{
+        "type": e["type"], "timestamp": e.get("timestamp"),
+        "toolCallId": e.get("data", {}).get("toolCallId"),
+        "messageId": e.get("data", {}).get("messageId"),
+    } for e in events if e.get("type") in {
+        "assistant.turn_start", "assistant.turn_end", "tool.execution_start", "tool.execution_complete"}]
+    save(W / "serial-turn-audit.json", {
+        "distinctToolRequestMessages": 2, "oneCallPerMessage": True,
+        "noToolOverlap": True, "actualTimeline": timestamps,
+        "original780NoncomplianceNotReclassified": True,
+    })
+    assert not D.exists()
+    D.mkdir()
+    index = []
+
+    def store(source, name=None, compress=False):
+        source = Path(source)
+        name = source.name if name is None else name
+        data = source.read_bytes()
+        destination = D / (name + ".gz" if compress else name)
+        assert not destination.exists()
+        destination.write_bytes(gzip.compress(data, mtime=0) if compress else data)
+        if compress:
+            assert gzip.decompress(destination.read_bytes()) == data
+        index.append({"file": destination.name, "sourcePath": str(source),
+                      "sourceBytes": len(data), "sourceSha256": sha(source),
+                      "storedSha256": sha(destination), "losslessGzip": compress})
+
+    for path in sorted(W.iterdir()):
+        if path.is_file():
+            store(path, compress=path.suffix in {".txt", ".jsonl"})
+    for path in [Path(__file__), C / "preflight-781.ps1"]:
+        store(path, path.name + ".txt")
+    store(L / "preflight-781.json")
+    save(D / "artifact-index.json", index)
+    reconciliation = {
+        "snapshot": HEAD, "teachingSnapshot": execution["teachingSnapshot"], "teachingDiff": "",
+        "original780Attempt": {
+            "status": "NONCOMPLIANT/UNACCEPTED, unchanged",
+            "originalOverlapRemainsRecorded": True,
+            "newRepairDoesNotRetroactivelyChangeOldExecution": True,
+            "originalReport": "docs/n1-reviews/batch-102-rendered-780/claude.md",
+            "originalRawExecution": "docs/n1-reviews/batch-102-rendered-780/claude.jsonl.gz",
+        },
+        "boundedSupplement": {
+            "status": "resolved within two affected-image scope",
+            "accepted": True, "reviewerReport": "claude.md",
+            "basis": "Exactly two successful ordered image opens in separate assistant turns, no overlaps or unfinished calls, actual same model/session, process exit confirmed. Reviewer explicitly found this supplement sufficient; original attempt remains noncompliant.",
+        },
+        "reportCorrections": [
+            {"status": "withdrawn", "claim": "Clock differences make the identical screenshots not byte-identical.",
+             "evidence": "Actual43source PNGs form25unique SHA states;18are exact byte duplicates. Reviewer explicitly withdrew contrary wording."},
+            {"status": "withdrawn", "claim": "功merit(the opposite).",
+             "evidence": "Reviewer explicitly distinguishes defensibly wrong merit;achievement from lexical antonymy."},
+        ],
+        "verdicts": {
+            "kunQuestion": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+            "kunFeedback": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+            "wholeRenderedBatch": "UNVERIFIED: original GPT rendered confirmation pending",
+            "finiteSampleOrdinarySenseFallbackSemantics": "UNVERIFIED: two-family reconciliation pending",
+            "universalUnsampledQuizSafety": "UNVERIFIED; not claimed",
+        },
+        "freshCoverage": {"imageOpens": 2, "sourceSize": [1080, 2400], "renditionSize": [900, 2000],
+                          "sessionCompactions": execution["sessionCompactions"],
+                          "dossierOrOther41ImagesReread": False},
+        "newTeachingDefectsEstablished": [], "teachingEditsRequired": False,
+        "optional": "Original drawing trace UI wording suggestion remains app scope, not changed.",
+        "limits": [
+            "Original5resources/all43image assessment and3compactions inherited, not repeated.",
+            "Image renditions, not original native pixels; access is not proof of comprehension.",
+            "No new blind initial review, GPT process, native/HOST test, upstream retrieval, or publication.",
+            "No physical phone, native speaker, identified installed font face, graded handwriting mastery, or measured learning effect.",
+        ],
+    }
+    save(D / "reconciliation.json", reconciliation)
+    evidence = {
+        "schemaVersion": 1, "execution": 781, "batch": "102",
+        "stage": "original-Claude-serial-supplement-complete-awaiting-original-GPT",
+        "recordedAt": now(), "startingState": before["execution781StartingState"],
+        "snapshot": HEAD, "qualifiedAndroidHead": APP, "runtime": runtime(),
+        "repairExecution": execution, "serialTurnAudit": "serial-turn-audit.json",
+        "evidenceDirectory": "docs/n1-reviews/batch-102-rendered-repair-781",
+        "reconciliation": reconciliation,
+        "original780AttemptRemainsNoncompliant": True,
+        "repairStrictSerialToolsAcceptance": True, "dependentClaudeSupplementAccepted": True,
+        "gptLaunched": False, "independentRenderedReviewClosed": False,
+        "ordinarySenseFallbackSemanticAcceptance": "UNVERIFIED",
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "nativeRerun": False, "nextBatchStarted": False,
+        "publishedAdditions": 128, "remainingAdditions": 1100,
+        "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "nextAction": next_action(),
+    }
+    save(R / "docs" / "n1-sources" / "execution-781.json", evidence)
+    for entry in index:
+        assert sha(D / entry["file"]) == entry["storedSha256"]
+    print("Full serial repair/addendum and adjudication archived; original780 noncompliance remains unchanged.")
+
+
+def finish():
+    parent()
+    current = load(C / "progress.json")
+    before = load(L / "progress-before-781.json")
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == HEAD and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    assert not git("diff", HEAD, head, "--", "manifest.json", "kanji", "words", "strokes", "tools")
+    posted, reread = load(L / "issue-781-posted.json"), load(L / "issue-781-reread.json")
+    body = (C / "batch-102-rendered-repair-781-issue-body.txt").read_bytes()
+    assert posted["author"] == reread["user"]["login"] == "stop-cran"
+    assert body.decode("utf-8") == reread["body"]
+    assert posted["bodySha256"] == hashlib.sha256(body).hexdigest()
+    assert posted["url"] == reread["html_url"]
+    for entry in load(D / "artifact-index.json"):
+        assert sha(D / entry["file"]) == entry["storedSha256"]
+    execution = load(D / "claude-execution.json")
+    assert absent(execution["launcherPid"]) and execution["processExited"]
+    runtime()
+    checkpoint = {
+        "schemaVersion": 1, "execution": 781, "checkpoint": 781, "batch": "102",
+        "status": "continue", "stage": "batch-102-Claude-serial-repair-complete-awaiting-original-GPT-rendered-confirmation",
+        "recordedAt": now(), "savedCommit": head, "signature": "G", "qualifiedAndroidHead": APP,
+        "evidence": "docs/n1-sources/execution-781.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True,
+        "repairProcessExited": True, "repairActualModel": MODEL,
+        "repairStrictSerialToolsAcceptance": True, "repairToolOverlaps": 0,
+        "repairFreshImageOpens": 2, "repairSessionCompactions": execution["sessionCompactions"],
+        "dependentClaudeSupplementAccepted": True, "original780AttemptRemainsNoncompliant": True,
+        "reportClockByteDifferenceWording": "withdrawn", "reportLexicalAntonymWording": "withdrawn",
+        "gptLaunched": False, "independentRenderedReviewClosed": False,
+        "ordinarySenseFallbackSemanticAcceptance": "UNVERIFIED",
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "reviewClosed": [], "published": [],
+        "dedicatedWorktreesClean": True, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 128, "remainingAdditions": 1100,
+        "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": next_action(), "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    after["historicalExecution780Before781Repair"] = copy.deepcopy(before["execution780CoordinatorCheckpoint"])
+    after["execution781CoordinatorCheckpoint"] = checkpoint
+    changed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    for key in changed:
+        after[key] = checkpoint[key]
+    for key, value in before.items():
+        if key not in changed:
+            assert after[key] == value, key
+    atomic_progress(current, after, "finish")
+    save(L / "checkpoint-781-summary.json", checkpoint)
+    print("Checkpoint781 persisted:", head, "; all", len(before), "historical root values preserved.")
+
+
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+    {"prepare": prepare, "run": run, "archive": archive, "finish": finish}[sys.argv[1]]()
