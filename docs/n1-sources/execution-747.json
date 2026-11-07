@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "execution": 747,
+  "checkpoint": 747,
+  "batch": "100",
+  "stage": "local-unreviewed-draft",
+  "sourceCheckpoint": "8a8daf9c63527fb34379346641f4c577dca7623e",
+  "publishedBase": "716c610153234e8d2240dcf528de3ef83b654b27",
+  "androidSignedHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+  "startingState": {
+    "execution": 747,
+    "batch": "100",
+    "startingHead": "8a8daf9c63527fb34379346641f4c577dca7623e",
+    "freshOriginMain": "716c610153234e8d2240dcf528de3ef83b654b27",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "startedAt": "2026-11-07T18:45:50.716404+00:00",
+    "scope": "SAME100 bounded LOCAL UNREVIEWED runtime draft/freeze only; no reviewer, Android/native, publication,101 or second runner.",
+    "request": {
+      "sha256": "f202e363c252af3d271eddbb1b1ff0f7bb3c8673c6d28373c8016cb376ca9ee6",
+      "bytes": 5099985,
+      "lines": 67604,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and complete checkpoint parsed. Operative contract, complete approved issue and final746 directly inspected; historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerPreflight": {
+      "execution": 747,
+      "sessionId": "cad52b97-90c7-458e-b57e-f78e2f3cdccd",
+      "verifiedAt": "2026-11-07T19:45:14.5458949+01:00",
+      "ancestry": [
+        26200,
+        16060,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "coordinatorPid": 16060,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "parentLockRole": "Live parent launcher owns runner.lock throughout child lifetime; no child acquire/delete/unlock/read-probe.",
+      "lockTouched": false
+    },
+    "artifactPathPreflight": "Approved control helpers, committed source packets and frozen workspace inputs only; no optional historical-session recipes accessed.",
+    "actualNewPermissionDenials": []
+  },
+  "runtimeDrafted": [
+    "\u5275"
+  ],
+  "reviewClosed": [],
+  "published": [],
+  "runtimeChanged": true,
+  "runtimePublished": false,
+  "contentVersion": "1bd5fb59e39b080d",
+  "checks": {
+    "tests": {
+      "archive": "batch-100-draft-tests-747.txt.gz",
+      "rawBytes": 147,
+      "rawSha256": "c56599ee0d24205fa2f0c3a0aab6830a43e8ee9052ed5e034256893642316cf9",
+      "archiveSha256": "9c7747c3e97dc463faa683df2f0e27acdf0b064cae505fd83932a45efd40a71c"
+    },
+    "validate": {
+      "archive": "batch-100-draft-validate-747.txt.gz",
+      "rawBytes": 12,
+      "rawSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "archiveSha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09"
+    },
+    "manifest": {
+      "archive": "batch-100-draft-manifest-747.txt.gz",
+      "rawBytes": 156,
+      "rawSha256": "af26b228eea410df0581a56a99db9bfb8c46ea2bb994bf1005402b76528cc15b",
+      "archiveSha256": "487bff907a5003ca824aff3233d6dcc82286b4a34f20cc8621015ed9e39e32cd"
+    },
+    "budget": {
+      "archive": "batch-100-draft-budget-747.txt.gz",
+      "rawBytes": 151,
+      "rawSha256": "3aba50064c59d3c1c3b2c516d4e699c848781b097a6d84eecdad2e1f63fac142",
+      "archiveSha256": "e5f6b3ae2be02c1915453393b5ccecce6c3fb9d7b6b94c293a73a7d4615edb06"
+    },
+    "vocabulary": {
+      "archive": "batch-100-draft-vocabulary-747.txt.gz",
+      "rawBytes": 62,
+      "rawSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "archiveSha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969"
+    },
+    "audit": {
+      "archive": "batch-100-draft-audit-747.txt.gz",
+      "rawBytes": 5421,
+      "rawSha256": "ca3d4801c0b5e83f76253bfac938d6ca2389c3604273db035a6952d4deb4442f",
+      "archiveSha256": "ad0790ef8bac55a573936b1311bd5accd25a5c0ca540ca1bb295473856f97028"
+    },
+    "whitespace": {
+      "archive": "batch-100-draft-whitespace-747.txt.gz",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e"
+    }
+  },
+  "pythonTestsPassed": 43,
+  "validatorErrors": 0,
+  "localBudget": {
+    "files": 8460,
+    "entries": 8475,
+    "retainedBytes": 44381325,
+    "inflatedBytes": 44649663,
+    "localZipBytes": 30294792,
+    "listeningTaskMediaBytes": 5893602
+  },
+  "focusedTestCommand": "python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch; PYTHONPATH=tools",
+  "vocabularyLimits": "Existing reviewed-prompt consistency only, not unrelated coverage completion:2122/2431,stage=pilot.",
+  "audit": "docs/n1-sources/batch-100-draft-audit.json",
+  "fontAudit": "docs/n1-sources/batch-100-draft-font-audit.json",
+  "strokeAudit": "docs/n1-sources/batch-100-draft-stroke-audit.json",
+  "diagnostic": "docs/n1-sources/batch-100-draft-diagnostic-747.json",
+  "durableHelperHashes": {
+    "batch-100-draft-recipe.py": "da16608b55e5b328bd63fcdd1336c312030e560f782b7259d318e1074b7b9bde",
+    "batch-100-draft-checkpoint-recipe.py": "4d9084b88298ec60147e16f86ddb19d19b9c9276c41f431f4934eb0ece1b336d",
+    "batch-100-draft-preflight-747.ps1.txt": "88ce01abbcb711bccde0cf8eedcdb552deb35fa608e39bc1d36077ad1be83caf",
+    "batch-100-draft-checks-747.ps1.txt": "105b35d66b38c4f721a74ae89dab28b13fc0ad0d5ec9dab4339d2df73bf8360d",
+    "batch-100-draft-issue-recipe-747.ps1.txt": "889a12ebe0463224c16d49c6ae4a5ae61bf8512bf38a6c25968036d8b8cfefbe"
+  },
+  "runnerPreflight": {
+    "execution": 747,
+    "sessionId": "cad52b97-90c7-458e-b57e-f78e2f3cdccd",
+    "verifiedAt": "2026-11-07T19:46:59.3486014+01:00",
+    "ancestry": [
+      4368,
+      16060,
+      5920
+    ],
+    "liveParentPid": 5920,
+    "coordinatorPid": 16060,
+    "decodedLauncherMatches": true,
+    "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+    "parentLockRole": "Live parent launcher owns runner.lock throughout child lifetime; no child acquire/delete/unlock/read-probe.",
+    "lockTouched": false
+  },
+  "independentReviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "publishedAdditions": 126,
+  "remainingAdditions": 1102,
+  "lastPublishedCommit": "716c610153234e8d2240dcf528de3ef83b654b27",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "actualNewPermissionDenials": [],
+  "nextAction": "SAME100 TWO serial blind different-model-family initial textual reviews on the normally signed LOCAL UNREVIEWED draft: complete\u5275 and exact reused\u5275\u4f5c/\u4f5c\u308b/\u4f5c changes, correctness/scoped coverage/phone comprehensibility. Both reviewers get same frozen137 member+16comparison families/13raw character records, actual public source blocks and final labels. Preserve six exact source readings/order; selected \u30bd\u30a6/\u3064\u304f.\u308b yield\u305d\u3046/\u3064\u304f\u308b. Reused\u5275\u4f5c\u305d\u3046\u3055\u304f N2 and same-family\u4f5c\u308b\u3064\u304f\u308b N5 retain all metadata and13/5 original guards; no new word identity/level. Qualified rare\u5275\u3081\u308b establishment sense only; standalone\u5275\u304d\u305a rare SPELLING, not pronunciation. Exact\u30b7\u30e7\u30a6/\u3051\u305a.\u3057\u3051\u308b remain explicitly source-only, lexical allocation UNVERIFIED, no invented gloss/example/invalidity/obsolescence/source repair, both excluded from quiz. No rigid\u4f5c\u308b/\u9020\u308b/\u5275\u308b compartments or cooking/crop substitutions. FIVE all-mapped pairs/TENdirections/ONEactivatedpair; THREE exact reused changes. Title originate; create; actual wrong labels\u5263/\u5039/\u9a13 and eight DIRECT symmetric NONTRANSITIVE guards\u4f5c\u9020\u59cb\u5143\u539f\u672c\u7dd2\u7523 need independent semantic review, no edits to unrelated existing cards. Canonical\u520018 visibly\u5202; structure-unclassified/no phonetic/history claim; twelve pinned converted paths. Cmap absence is NOT glyphfailure; actualHan and four-font/native/rendered acceptance pending. Preserve actual models, same snapshot, complete reports/read limits; serial reviewer processes AND internal tools, actual exit before next reviewer, evidence reconciliation and original-session confirmations. Then fresh non-skipped qualifiedAndroidbf30cdead RealContent/RareHan, productionContentSyncONCE/native N1-All/meaning/curatedreading/drawing/article/Back/offline/four-font/all-Han/rendered review, combinedcurrentmain checks, normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue gates remain mandatory. No unreviewedpush/101/authoragent/concurrentheavywork/secondrunner/signingretry/guardincrease. Verify whollyclean signedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent5920 ownsrunner.lock: no childacquire/delete/unlock/readprobe. Approvedcontrol/committedsource/frozeninputs only, not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/signinghang/uncertainownership. Published126/1228,1102acceptanceremainder unchanged; six earlier N2placements\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 remain separate, never duplicate/relevel. Physicalphone/generalrelease/whole-setoutstanding; projectincomplete.",
+  "limits": "Normally signed LOCAL UNREVIEWED freeze only. Source-only lexical allocation remains explicitly unverified; no independent content review, app/native/font/phone acceptance or publication claimed. All historical records and acceptance gates preserved."
+}
