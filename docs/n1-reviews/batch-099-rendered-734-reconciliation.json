@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "execution": 734,
+  "batch": "099",
+  "snapshot": "a580bb1c79174b57842e2ba5df32c4ff562239a3",
+  "unchangedTeachingSnapshot": "70dfe3344d167e5152a3685b09689d73fa1cdab1",
+  "reviewType": "Dependent ORIGINAL-session follow-ups; no new blind initial-review credit.",
+  "coordinator": "GPT-6.1 Sol",
+  "status": "blocked-narrow-kanji-fallback-prerequisite",
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "textualTeachingVerdicts": {
+    "kanji/剰.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/過剰.md:25 exact change": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "kanji/過.md:41 exact change": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [
+    {
+      "id": "N099-FALLBACK-JOU",
+      "status": "unresolved",
+      "priorStatus": "Unverified coordinator hypothesis in execution733.",
+      "currentDisposition": "Verified actionable ambiguity in the exact sampled production builder choices; publication blocker, not optional later work.",
+      "severity": "Moderate",
+      "facet": "Quiz correctness and comprehensibility",
+      "locations": [
+        "kanji/剰.md:3,13,22",
+        "kanji/冗.md:3,22",
+        "docs/n1-reviews/batch-099-native/execution-733/raw/n1-099-article-route.json:productionBuilderN1AndAllExactChoices/randomN1Subset/seed4",
+        "docs/n1-reviews/batch-099-native/execution-733/raw/n1-099-article-route.json:productionBuilderN1AndAllExactChoices/randomN1Subset/seed7"
+      ],
+      "claim": "A meaning question for 剰 can offer both remainder; surplus amount and superfluous; redundant. A learner can reasonably accept the second label for an amount beyond need and be marked wrong.",
+      "evidence": [
+        "Complete frozen KANJIDIC2 records: 剰 surplus/besides; 冗 superfluous/uselessness.",
+        "Complete JMdict1196170: 過剰 excess/surplus/superabundance/overabundance; current 剰 article explicitly teaches excess relative to need.",
+        "Complete JMdict1355490: 冗員 and 剰員 are spellings of the same family; first sense supernumerary/superfluous staff/excess personnel; second useless-staff sense especially冗員.",
+        "Complete JMdict1595440: 冗語 and rare spelling剰語 share verbiage/wordiness/tautology and unnecessary-talk senses. This corroborates overlap, not unrestricted substitution or frequency.",
+        "Both original-session model families identify the exact pair as a defensible competing meaning, not merely related topics or title-string duplication."
+      ],
+      "rootCause": "Current QuizBuilder uses available curated IDs then shared-tag/random fallbacks and deduplicates exact titles only. It has no supported pairwise kanji semantic exclusion. In filtered pools unavailable curated cards cannot prevent this pair.",
+      "implementationInspected": "Qualified TESTONLY Android1c1b7bf4 core/src/main/kotlin/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt, complete30line file; retained productionf9b59a2, not latest appmain.",
+      "minimalRemedy": "Establish a separately authorized narrow compatible-client prerequisite that prevents the verified pair co-occurring in supported meaning pools, then test actual import/projection/builder paths and replay the failing bounded pools. Do not silently add an ignored field or implement algorithm changes in issue60.",
+      "rejectedShortcuts": [
+        "Changing accurate titles or inventing a noun/adjective or quantitative/wordiness-only semantic firewall.",
+        "Calling exact string uniqueness semantic uniqueness.",
+        "Changing source membership, levels or readings.",
+        "Treating a Notes comparison as a prevention mechanism.",
+        "Treating three available curated choices in one pool as protection for arbitrary custom/filtered pools.",
+        "Reusing word quiz_exclusions as if it were supported for kanji."
+      ],
+      "qualification": "No claim of unrestricted interchangeability, spelling frequency, reverse冗-target exposure or exhaustive pool coverage. Two of16 sampled random-subset seeds is not a real-world incidence estimate.",
+      "reviewerSeverityReconciliation": "Claude called this Minor and later app work; GPT called it Moderate. Coordinator retains Moderate because a currently supported sampled question admits a defensible wrong-marked answer. Neither model vote nor incidence speculation closes the acceptance gate.",
+      "confidence": "High for exact exposure and defensible semantic overlap."
+    },
+    {
+      "id": "N099-RENDERED-PROTOCOL-734",
+      "status": "unresolved",
+      "severity": "Operational acceptance limitation",
+      "facet": "Required reviewer tool serialization and truthful receipts",
+      "claim": "Claude's original complete report says its tool reads were serial; execution timestamps contradict that statement.",
+      "evidence": "Actual execution records show13view calls: complete packet and12images. Fontpanel2 overlapped sheet01; sheets02-10 were launched together. Nine overlap-start events, maximum9 concurrent tools. Reviewer processes themselves did not overlap. GPT made13calls with zero tool overlaps.",
+      "impact": "Preserve the useful report as noncompliant execution evidence. Do not certify that both rendered follow-ups met the required per-reviewer serial-tool contract.",
+      "remedy": "Before claiming complete rendered-review acceptance, resolve the tool-serialization constraint and obtain only the necessary bounded compliant Claude confirmation. Preserve the original raw report and contradictory claim unchanged; no repeated-read loop or new blind credit.",
+      "confidence": "High; tool start/completion events and actual process exit were inspected."
+    }
+  ],
+  "otherDispositions": [
+    {
+      "id": "Original optional article/source wording polish",
+      "status": "optional",
+      "action": "No unrelated teaching changes."
+    },
+    {
+      "id": "Original fallback余 hypothesis",
+      "status": "partially resolved",
+      "action": "Not observed in these64 records; arbitrary pools remain unverified. Do not claim universal withdrawal."
+    },
+    {
+      "id": "Original no-native-rendering evidence limitation",
+      "status": "partially resolved",
+      "action": "Both families received two original font panels and ten indexed contact sheets. Actual fallback face, physical phone and individual full-resolution route-image inspection remain unverified."
+    }
+  ],
+  "glyphAndRouteEvidence": {
+    "verdict": "No new glyph/rendered-content defect established within supplied emulator panels and thumbnails.",
+    "scope": "12Han/fourproductionfontselections/twowords; complete剰article and exact reused過剰/過passages; meaning/reading/drawing/Back/navigation states.",
+    "limits": [
+      "This does not close the overall rendered gate because Claude tool work violated serialization.",
+      "No tofu or materially misleading glyph established; actual fallback font faces not identified.",
+      "Complementary horizontal table offsets are not every column visible in one frame.",
+      "Contact sheets are thumbnails, not39 individual full-resolution route reads per reviewer.",
+      "Offline/persistence/import/grade assertions are inherited native733 evidence, not newly executed.",
+      "Injected tracing and recall give-up are not human handwriting, MLKit or phone acceptance."
+    ]
+  },
+  "methodology": {
+    "reviewers": [
+      {
+        "model": "claude-opus-5.5",
+        "session": "2ac79fdb-83fc-485d-8f64-6c5d7b473973",
+        "processExit": 0,
+        "completePacketReturned": true,
+        "successfulImageCalls": 12,
+        "toolSerializationCompliant": false,
+        "reportPreservedUnchanged": true
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "session": "240faa46-7797-4c93-998e-af5db5677c98",
+        "processExit": 0,
+        "completePacketReturned": true,
+        "successfulImageCalls": 12,
+        "toolSerializationCompliant": true,
+        "reportPreservedUnchanged": true
+      }
+    ],
+    "processesSerial": true,
+    "secondStartedOnlyAfterFirstExitedAndReportPersisted": true,
+    "sameFrozenSnapshotAndSourceImagePacket": true,
+    "sourceAccess": "13 complete selected lexical families and two complete character records from committed frozen packets; no fresh upstream retrieval.",
+    "independentFindingCredit": "None: the overlap question was raised by the coordinator in733 and supplied to both dependent follow-ups.",
+    "coverageNotComprehension": true
+  },
+  "publishedAdditions": 125,
+  "remainingAdditions": 1103,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false
+}
