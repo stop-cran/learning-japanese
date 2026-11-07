@@ -1,0 +1,549 @@
+"""Original GPT rendered confirmation using committed, hash-verified common evidence."""
+import base64
+import copy
+import gzip
+import hashlib
+import importlib.util
+import io
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+from datetime import datetime, timezone
+
+from PIL import Image
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+SESSION = "1a5b6753-3ff1-4103-aa5f-a4e0171a5d7f"
+L = C / "logs" / SESSION
+W = C / "batch-102-rendered-782"
+D = R / "docs" / "n1-reviews" / "batch-102-rendered-782"
+PRIOR = R / "docs" / "n1-reviews" / "batch-102-rendered-780"
+REPAIR = R / "docs" / "n1-reviews" / "batch-102-rendered-repair-781"
+HEAD = "54dff7ed18d88ef1a3f3f19e38e4d5d0d42275b6"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+MODEL = "gpt-6.1-sol"
+REVIEW_SESSION = "cd6cf58b-fbd1-4835-af8e-04079396d864"
+
+
+def load(path):
+    return json.loads(path.read_bytes().decode("utf-8-sig"))
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").strip()
+
+
+def absent(pid):
+    return subprocess.run(["pwsh", "-NoProfile", "-Command",
+                           f"if (Get-Process -Id {int(pid)} -ErrorAction SilentlyContinue) {{ exit 1 }}"],
+                          capture_output=True, check=False).returncode == 0
+
+
+def parent():
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 5920, SESSION)
+    assert not absent(5920)
+    assert load(L / "preflight-782.json")["lockTouched"] is False
+    progress = load(C / "progress.json")
+    assert (progress["checkpoint"], progress["status"], progress["batch"]) == (781, "continue", "102")
+
+
+def frozen():
+    parent()
+    for root, head in [(R, HEAD), (A, APP)]:
+        assert git("rev-parse", "HEAD", root=root) == head
+        assert git("log", "-1", "--format=%G?", root=root) == "G"
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+
+
+def runtime():
+    spec = importlib.util.spec_from_file_location("native778state", C / "native-778-state.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    result = module.verify_runtime()
+    assert not git("diff", "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477", HEAD,
+                   "--", "kanji", "words", "strokes", "manifest.json", "tools")
+    return {**result, "teachingDiffSince775": ""}
+
+
+def atomic_progress(before, after, suffix):
+    assert load(C / "progress.json") == before
+    temporary = C / f"progress.json.782-{suffix}.tmp"
+    save(temporary, after)
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == after
+
+
+def committed_bytes(name):
+    entry = next(e for e in load(PRIOR / "artifact-index.json") if e["file"] == name)
+    path = PRIOR / name
+    assert sha(path) == entry["storedSha256"], name
+    data = gzip.decompress(path.read_bytes()) if entry["losslessGzip"] else path.read_bytes()
+    assert hashlib.sha256(data).hexdigest() == entry["sourceSha256"], name
+    assert len(data) == entry["sourceBytes"]
+    return data
+
+
+def prepare():
+    frozen()
+    assert not W.exists()
+    before = load(C / "progress.json")
+    request = (L / "request.txt").read_bytes()
+    text = request.decode("utf-8-sig")
+    supplied = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    assert supplied["execution781CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    assert before["execution781CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    repair = load(REPAIR / "claude-execution.json")
+    assert repair["processExited"] and repair["exitCode"] == 0 and absent(repair["launcherPid"])
+    assert not repair["observedToolOverlaps"] and not repair["unfinishedTools"]
+    assert repair["allAssignedPngRenditionsReturned"]
+    state = {
+        "execution": 782, "batch": "102", "startingHead": HEAD, "androidHead": APP,
+        "freshOriginMain": git("rev-parse", "origin/main"), "startedAt": now(),
+        "scope": "SAME102 original GPT-family dependent rendered confirmation, actual execution audit and signed LOCAL evidence only; no native rerun/publication/103.",
+        "request": {"sha256": sha(L / "request.txt"), "bytes": len(request),
+                    "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request loaded/decoded and embedded checkpoint parsed; operative contract, complete issue and final781 inspected directly. Historical middle parsed, not freshly semantically rereviewed. Initial remaining-text output exceeded tool return limit."},
+        "runnerPreflight": load(L / "preflight-782.json"), "runtime": runtime(),
+        "originalClaudeRepair": {"exited": True, "pidConfirmedAbsent": repair["launcherPid"],
+                                "original780NoncompliancePreserved": True},
+        "artifactPathPreflight": "Approved committed evidence packets, frozen workspace inputs and durable control helpers only; optional historical-session recipes not accessed.",
+        "actualNewPermissionDenials": [],
+    }
+    save(L / "progress-before-782.json", before)
+    save(L / "starting-state-782.json", state)
+    after = copy.deepcopy(before)
+    after["execution782StartingState"] = state
+    after["stage"] = "batch-102-original-GPT-rendered-confirmation-preparing"
+    atomic_progress(before, after, "start")
+    W.mkdir()
+    cli = shutil.which("copilot")
+    for kind, args in [("help", ["--help"]), ("config-help", ["help", "config"])]:
+        result = subprocess.run([cli, *args], capture_output=True, check=True)
+        (W / f"cli-{kind}.txt").write_bytes(result.stdout)
+    assert f'"{MODEL}"' in (W / "cli-config-help.txt").read_text(encoding="utf-8-sig")
+    help_text = (W / "cli-help.txt").read_text(encoding="utf-8-sig")
+    assert all(flag in help_text for flag in ["--available-tools", "--session-id", "--model"])
+    resources = json.loads(committed_bytes("bounded-resources.json"))
+    for resource in resources:
+        data = committed_bytes(Path(resource["path"]).name + ".gz")
+        assert hashlib.sha256(data).hexdigest() == resource["sha256"]
+        path = Path(resource["path"])
+        if path.exists():
+            assert path.read_bytes() == data
+        else:
+            path.write_bytes(data)
+    provenance = json.loads(committed_bytes("provenance.json"))
+    for image in provenance["pngs"]:
+        assert sha(Path(image["path"])) == image["sha256"]
+    assert len(provenance["pngs"]) == 43 and len(resources) == 5
+    assert sum(r["bytes"] for r in resources) == 793094
+    save(W / "assigned-resources.json", resources)
+    save(W / "assigned-images.json", provenance["pngs"])
+    print("Starting scope persisted; complete request parsed; live parent, signed heads, common source hashes and unchanged runtime verified.")
+
+
+def run():
+    frozen()
+    assert not (W / "gpt.jsonl").exists()
+    resources = load(W / "assigned-resources.json")
+    for resource in resources:
+        assert sha(Path(resource["path"])) == resource["sha256"]
+    # The common task contains only original textual reports, not newer rendered findings.
+    prompt = committed_bytes("claude-task.txt.gz").decode("utf-8")
+    prompt = prompt.replace("b130063515f48dd13deae10e41a6cc223f7cfc57", HEAD)
+    prompt += (
+        "\nEXECUTION782: original GPT session " + REVIEW_SESSION + ", requested model " + MODEL + ". "
+        "Use the identical five common resources/all43PNGscope above. Do not read any NEW Claude "
+        "rendered report, repair addendum or coordinator adjudication. This is dependent confirmation "
+        "of original775 textual work, not new blind review. STRICT SERIAL: exactly ONE view call per "
+        "assistant turn, wait for its result before requesting the next; NO multi_tool_use or batched "
+        "calls, including images and range recovery. For text forceReadLargeFiles=true. Report "
+        "actual rendered image dimensions; view may resize1080x2400to900x2000, not original pixels. "
+        "Identify actual source-byte groups independently; don't infer different clock pixels. "
+        "Source access/hashes do not certify comprehension. No shell/edit/delegation.\n"
+    )
+    (W / "gpt-task.txt").write_text(prompt, encoding="utf-8")
+    env = os.environ.copy()
+    env.pop("GH_TOKEN", None)
+    env.pop("GITHUB_TOKEN", None)
+    command = [shutil.which("copilot"), "-C", str(R), "--add-dir", str(C), "--model", MODEL,
+               "--session-id", REVIEW_SESSION, "--no-ask-user", "--allow-tool=view",
+               "--disable-builtin-mcps", "--available-tools=view", "--no-custom-instructions",
+               "--output-format", "json", "--log-dir", str(C / "review-logs" / "batch-102-rendered-782-gpt"),
+               "--usage-output-file", str(W / "gpt-usage.json"), "-p", prompt]
+    started = now()
+    with (W / "gpt.jsonl").open("wb") as out, (W / "gpt-stderr.txt").open("wb") as err:
+        proc = subprocess.Popen(command, stdout=out, stderr=err, env=env)
+        save(W / "gpt-active.json", {"pid": proc.pid, "sessionId": REVIEW_SESSION,
+                                   "requestedModel": MODEL, "startedAt": started})
+        print("Original-GPT rendered confirmation running", proc.pid, REVIEW_SESSION, flush=True)
+        code = proc.wait()
+    events = [json.loads(line) for line in (W / "gpt.jsonl").read_text(encoding="utf-8-sig").splitlines()
+              if line.strip()]
+    messages = [e["data"] for e in events if e.get("type") == "assistant.message"]
+    models = sorted({m.get("model", "") for m in messages})
+    (W / "gpt.md").write_text(messages[-1]["content"] + "\n" if messages else "No completed report.\n",
+                             encoding="utf-8")
+    active, overlaps, starts, ends = set(), [], [], {}
+    tool_turns = []
+    for event in events:
+        data = event.get("data", {})
+        if event.get("type") == "assistant.message" and data.get("toolRequests"):
+            tool_turns.append({"messageId": data.get("messageId"), "toolRequests": data["toolRequests"]})
+        if event.get("type") == "tool.execution_start":
+            if active:
+                overlaps.append({"active": sorted(active), "new": data["toolCallId"]})
+            active.add(data["toolCallId"])
+            starts.append(data)
+        elif event.get("type") == "tool.execution_complete":
+            active.discard(data["toolCallId"])
+            ends[data["toolCallId"]] = data
+    text_results = []
+    for resource in resources:
+        path = Path(resource["path"])
+        expected = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
+        calls, returned = [], []
+        for call in starts:
+            if call.get("arguments", {}).get("path") != str(path):
+                continue
+            end = ends.get(call["toolCallId"], {})
+            content = end.get("result", {}).get("content", "")
+            calls.append({"toolCallId": call["toolCallId"], "arguments": call["arguments"],
+                          "success": end.get("success"), "returnedCharacters": len(content)})
+            if end.get("success") and isinstance(content, str):
+                returned.append(content.replace("\r\n", "\n"))
+        text_results.append({**resource, "calls": calls, "exactFullReturn": expected in returned})
+    images = []
+    for image in load(W / "assigned-images.json"):
+        calls = []
+        for call in starts:
+            if call.get("arguments", {}).get("path") != image["path"]:
+                continue
+            completion = ends.get(call["toolCallId"], {})
+            renditions = []
+            for binary in completion.get("result", {}).get("binaryResultsForLlm", []):
+                data = binary.get("data") or binary.get("base64Data")
+                if not isinstance(data, str):
+                    renditions.append({"keys": list(binary), "validPngRendition": False})
+                    continue
+                decoded = base64.b64decode(data)
+                source = Image.open(image["path"])
+                rendition = Image.open(io.BytesIO(decoded))
+                renditions.append({
+                    "returnedSha256": hashlib.sha256(decoded).hexdigest(),
+                    "sourceSize": list(source.size), "returnedSize": list(rendition.size),
+                    "originalPngBytes": decoded == Path(image["path"]).read_bytes(),
+                    "validPngRendition": rendition.format == "PNG"
+                    and source.width * rendition.height == source.height * rendition.width,
+                })
+            calls.append({"toolCallId": call["toolCallId"], "success": completion.get("success"),
+                          "arguments": call["arguments"], "renditions": renditions})
+        images.append({**image, "calls": calls, "successfulPngRenditionReturned": any(
+            c["success"] and any(b["validPngRendition"] for b in c["renditions"]) for c in calls)})
+    usage = load(W / "gpt-usage.json")
+    record = {
+        "snapshot": HEAD, "teachingSnapshot": "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477",
+        "originalSessionId": REVIEW_SESSION, "launcherPid": proc.pid, "startedAt": started,
+        "completedAt": now(), "exitCode": code, "actualModels": models,
+        "usageCurrentModel": usage["currentModel"], "availableTools": ["view"],
+        "observedToolOverlaps": overlaps, "unfinishedTools": sorted(active),
+        "actualToolCalls": len(starts), "toolTurns": tool_turns,
+        "oneCallPerAssistantToolMessage": all(len(t["toolRequests"]) == 1 for t in tool_turns),
+        "textResources": text_results, "images": images,
+        "packetReadComplete": all(t["exactFullReturn"] for t in text_results),
+        "all43PngRenditionsReturned": all(i["successfulPngRenditionReturned"] for i in images),
+        "actualPngOpenCalls": sum(len(i["calls"]) for i in images),
+        "sourceByteStates": len({i["sha256"] for i in images}),
+        "sessionCompactions": sum(e.get("type") == "session.compaction_complete" for e in events),
+        "processExited": absent(proc.pid), "reportSha256": sha(W / "gpt.md"),
+        "rawExecutionSha256": sha(W / "gpt.jsonl"), "newBlindReviewCredit": False,
+        "newClaudeRenderedReportSupplied": False,
+        "limits": "Exact text returns and successful image renditions establish access, not retention/comprehension. Original native pixels may be resized. Original textual/HOST/native evidence inherited, not repeated. No physical phone, native speaker, identified font face, handwriting mastery, measured learning effect or universal unsampled quiz safety.",
+    }
+    save(W / "gpt-execution.json", record)
+    assert code == 0 and models == [MODEL] and usage["currentModel"] == MODEL
+    assert record["processExited"] and not active and not overlaps
+    assert record["oneCallPerAssistantToolMessage"]
+    assert record["packetReadComplete"] and record["all43PngRenditionsReturned"]
+    assert record["actualPngOpenCalls"] == 43
+    assert all(c.get("toolName") == "view" for c in starts)
+    frozen()
+    print("Original GPT exited; actual model, exact common text,43image returns and serial tools verified.")
+
+
+def next_action():
+    return (
+        "SAME102 checkpoint782: originalGPT dependent rendered confirmation and bounded two-family "
+        "reconciliation accepted; NOT whole-batch/publication acceptance. Read docs/n1-sources/"
+        "execution-782.json and docs/n1-reviews/batch-102-rendered-782/reconciliation.json. "
+        "Actualgpt-6.1-sol originalcd6cf58b-fbd1-4835-af8e-04079396d864 exited0/PID20648absent; "
+        "48successfulviewcalls=5exactcommontextresources793094bytes+43PNGopens, "
+        "onecallperassistanttoolmessage/zerooverlap/zerounfinishedtools/1compaction. "
+        "All1080x2400sources returned900x2000renditions, NOToriginalpixels;43sources/25SHAstates "
+        "versus reviewer24layoutgroups are different measures. NoNEWClauderenderedreport/addendum/"
+        "adjudication supplied toGPT. Original775textual/776HOST/779native inherited honestly, "
+        "NOTrepeated/newblindcredit. Claude780originalremainsNONCOMPLIANT/UNACCEPTED unchanged; "
+        "781exacttwoimageSERIALsupplement accepted only as dependentrepair, not retroacceptance. "
+        "Both source-backed reports establish no actionable defect in new劣/優劣, exacttwo "
+        "navigation-onlyreusedpassages, finite128productionoptionsets/40labels/liveN1default, "
+        "bothcuratedreadings/done, drawingpresentation and4fontpanels31Han. "
+        "BoundedrenderedcoverageCLEAN/finite-sampleordinarysecondarysensesCLEAN; "
+        "universalunsampledquizsafetyUNVERIFIED/notclaimed. No teachingeditrequired. "
+        "Optional longゆうlinewrap/content and apptracewording are NOTmandatorydefects; "
+        "no unrelatedappchange. Navigation/offlinemechanics anddrawing rely on originalnative779 "
+        "terminal0two cases/oneproductionContentSync; no handwritingmastery/learningeffect/"
+        "physicalphone/native-speaker/fontfaceidentification claim. "
+        "NEXT bounded SAME102 combined-current-main acceptance and authorized publication ONLY "
+        "if ALL original gates pass. Freshsignedheads/checkpoint/whollyclean/freshmain/"
+        "liveparentancestry/decodedlauncher/exactsession required. Dedicated content starts from "
+        "this checkpoint savedCommit; qualifiedAndroidbf30cdead8515739bc0e671d57a54b9a3109dd46 "
+        "approvedpairguard+schemaonly, NOTlatestappmain. Fetch/integrate latestorigin/main with "
+        "nonrewritingmerge if needed; substantive teachingchanges require independent bounded "
+        "originalfamilyconfirmation; regenerate derivedmanifest if actualruntimechanged and "
+        "rerun relevant combinedtree gates. RequiredPythonunittests/validator/manifestfreshness/"
+        "vocabulary/budget/membership/baseline/reading/link audits and applicableAndroid/"
+        "HOST/native unchanged-tree provenance remainMANDATORY, not replaced by this review. "
+        "Normal signed reviewed/integratedcommit+Co-authored-by; owner-scopednormalfastforwardpush "
+        "only after acceptance; verifyremoteSHA/terminalgreenCI/EVERYimmutableGithubZIPmanifesthash/"
+        "18000entries42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/ownerissue. "
+        "No unreviewedpush/103/authoragents/concurrentheavywork/secondrunner/signingretry/"
+        "heaporguardchange. All8458runtimehashes/versionf376333b242ebb23 unchanged; exactnativearchive "
+        "73067936ccc548d615048c529adf3c5989659879847a69f9a8b49f53e661bd76/"
+        "8480entries/30483598compressed/44661694inflated/44393356retainedbytes; "
+        "noarchive rebuild/nativeorHOSTrerun this docs-onlycheckpoint. "
+        "Parent5920runner.lockuntouched;nochildacquire/delete/unlock/readprobe; "
+        "approvedcontrol/committedsources/frozeninputs only, nooptionalhistoricalsessionrecipe. "
+        "Preserve/report/yield actualnewdenial/signinghang/uncertainownership. "
+        "Published128/1228/remainder1100unchanged; lastpublished1621cf6cbd2283d377936c77f9c81851baffdf20. "
+        "CompatibleAndroid#125+#132required;oldclientsignorecuration/guards. Physicalphone/"
+        "generalrelease/whole-setoutstanding;projectincomplete. Everyearliergate/limitation remains "
+        "VERBATIM in historicalExecution781Before782Rendered.nextAction."
+    )
+
+
+def archive():
+    frozen()
+    before = load(C / "progress.json")
+    execution = load(W / "gpt-execution.json")
+    assert execution["processExited"] and absent(execution["launcherPid"])
+    assert execution["actualModels"] == [MODEL] and execution["exitCode"] == 0
+    assert execution["usageCurrentModel"] == MODEL
+    assert not execution["observedToolOverlaps"] and not execution["unfinishedTools"]
+    assert execution["oneCallPerAssistantToolMessage"]
+    assert execution["packetReadComplete"] and execution["all43PngRenditionsReturned"]
+    assert execution["actualPngOpenCalls"] == 43 and execution["actualToolCalls"] == 48
+    assert not D.exists()
+    D.mkdir()
+    index = []
+
+    def store(source, name=None, compress=False):
+        source = Path(source)
+        name = source.name if name is None else name
+        data = source.read_bytes()
+        destination = D / (name + ".gz" if compress else name)
+        assert not destination.exists()
+        destination.write_bytes(gzip.compress(data, mtime=0) if compress else data)
+        if compress:
+            assert gzip.decompress(destination.read_bytes()) == data
+        index.append({"file": destination.name, "sourcePath": str(source),
+                      "sourceBytes": len(data), "sourceSha256": sha(source),
+                      "storedSha256": sha(destination), "losslessGzip": compress})
+
+    for path in sorted(W.iterdir()):
+        if path.is_file():
+            store(path, compress=path.suffix in {".txt", ".jsonl"})
+    for path in [Path(__file__), C / "preflight-782.ps1", C / "post-rendered-782.ps1"]:
+        store(path, path.name + ".txt")
+    store(L / "preflight-782.json")
+    save(D / "artifact-index.json", index)
+    clean = {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+    reconciliation = {
+        "snapshot": HEAD, "teachingSnapshot": execution["teachingSnapshot"], "teachingDiff": "",
+        "scope": "Dependent rendered confirmations of original775 textual reviews on unchanged teaching; finite sampled choices only, not universal pool safety or complete publication acceptance.",
+        "actualModels": ["claude-opus-5.5", MODEL],
+        "reports": {
+            "originalClaude": "docs/n1-reviews/batch-102-rendered-780/claude.md",
+            "acceptedBoundedClaudeSupplement": "docs/n1-reviews/batch-102-rendered-repair-781/claude.md",
+            "originalGPT": "gpt.md",
+        },
+        "processDisposition": {
+            "status": "resolved within bounded dependent supplement scope",
+            "original780AttemptRemainsNoncompliantAndUnaccepted": True,
+            "originalEvidenceUnmodified": True,
+            "claudeRepair": "781 exactly two serial kun image rereads accepted as dependent supplement only; other41images/five-source assessment inherited with3compactions.",
+            "gptExecution": "782 actual model/session verified, exited0/absent;48serial calls in distinct tool-request messages;5exact full text resources+43image renditions;1compaction.",
+            "newClaudeRenderedFindingsSuppliedToGPT": False,
+            "newBlindInitialReviewCredit": False,
+        },
+        "verdicts": {
+            "kanji/劣.md:1-50": clean,
+            "words/優劣.md:1-36": clean,
+            "words/劣る.md:26 navigation-only change": clean,
+            "kanji/優.md:42 navigation-only change": clean,
+            "finiteSample128OptionSets40LabelsAndLiveDefault": clean,
+            "bothCuratedReadingScreensFeedbackDone": clean,
+            "fourFontPanels31HanReadability": clean,
+            "drawingPresentationNotMastery": clean,
+            "navigationBackOfflinePresentation": clean,
+            "navigationBackOfflineMechanics": "Inherited native779 evidence, not newly executed.",
+            "universalUnsampledQuizSafety": "UNVERIFIED; not claimed",
+            "wholeBatchPublicationAcceptance": "UNVERIFIED; combined-current-main gates pending",
+        },
+        "reconciledItems": [
+            {"status": "resolved", "item": "Original textual rendered article/readings/font limitations",
+             "evidence": "Two original-family reports plus same actual43API35PNGs; full new prose and both bounded reused passages visible. Screenshots plus779case0 assertion evidence, not physical phone."},
+            {"status": "resolved", "item": "Finite sampled ordinary-secondary-sense fallback semantics",
+             "evidence": "Common five-resource dossier supplies40actual labels,292matching full families plus112original families,40character records/72linked support articles/all128exact production option sets. Both reports establish no second defensible answer to an actual sampled 劣 question; no universal guarantee."},
+            {"status": "withdrawn", "item": "Original report clock-versus-byte wording and 功 lexical-antonym wording",
+             "evidence": "Original Claude781 explicit withdrawals; original report preserved."},
+            {"status": "partially resolved", "item": "Navigation/Back/offline/drawing mechanics",
+             "evidence": "Visible endpoints/presentation confirmed; actions and persistence inherited from779terminal0cases. Not fresh execution, successful handwriting recognition/mastery or general scheduling proof."},
+            {"status": "optional", "item": "Longゆう line wrap and drawing feedback UI wording",
+             "evidence": "Nonblocking presentation polish only; no established teaching defect. App wording is outside this content scope."},
+            {"status": "unresolved", "item": "Physical-phone/general-release/whole-set acceptance",
+             "evidence": "Not performed; not inferred from emulator/model reports."},
+        ],
+        "newActionableTeachingDefects": [], "teachingEditsRequired": False,
+        "sampledSemanticsEvidence": {
+            "hostChoices": 64, "nativeChoices": 64, "distinctSampledLabels": 40,
+            "liveDefault": ["劣 inferior;worse", "冗 superfluous;redundant", "蛍 firefly", "功 merit;achievement"],
+            "curatedN1Count": 1, "actualN1Fallbacks": 2,
+            "guardsAreDirectSymmetricNontransitive": True,
+            "notEstablished": "Unrestricted synonymy or safety of unseen random-pool choices.",
+        },
+        "imageCoverage": {
+            "gptFreshOpens": 43, "sourceByteStates": 25, "gptVisualLayoutGroups": 24,
+            "groupingDisposition": "Different measures, not conflicting byte claims: GPT expressly did not certify source-byte groups. Byte hashes remain coordinator evidence; visual24groups are reviewer grouping, not a byte audit.",
+            "sourceSize": [1080, 2400], "returnedSize": [900, 2000],
+            "originalPixelsClaimed": False, "gptCompactions": execution["sessionCompactions"],
+        },
+        "limits": [
+            "Read-return evidence and hashes establish access/byte identity, not comprehension or equal fresh review depth.",
+            "Frozen supplied extracts, not independent upstream retrieval.",
+            "Original775 textual/776HOST/779native inherited honestly; no new native or HOST execution.",
+            "No physical phone, native speaker, identified installed font face, handwriting mastery, accessibility-scale acceptance or measured learning effect.",
+            "No changed teaching/runtime, publication, next batch, original-process retroacceptance or universal unsampled quiz safety.",
+        ],
+    }
+    save(D / "reconciliation.json", reconciliation)
+    evidence = {
+        "schemaVersion": 1, "execution": 782, "batch": "102",
+        "stage": "original-GPT-rendered-confirmation-and-bounded-reconciliation-complete",
+        "recordedAt": now(), "startingState": before["execution782StartingState"],
+        "snapshot": HEAD, "qualifiedAndroidHead": APP, "runtime": runtime(),
+        "gptExecution": execution, "evidenceDirectory": "docs/n1-reviews/batch-102-rendered-782",
+        "reconciliation": "docs/n1-reviews/batch-102-rendered-782/reconciliation.json",
+        "commonSourceEvidence": {
+            "artifactIndex": "docs/n1-reviews/batch-102-rendered-780/artifact-index.json",
+            "boundedResources": 5, "boundedBytes": 793094, "sampledLabels": 40,
+            "linkedSupportArticles": 72, "matchingCompleteFamilies": 292,
+            "additionalOriginalFamilies": 112, "rawCharacterRecords": 40,
+            "storedAndSourceHashesVerified": True,
+            "attribution": "Copyright James William Breen and EDRDG; CC BY-SA4.0; frozen2026-11-02 inputs; repository NOTICE.",
+        },
+        "original780AttemptRemainsNoncompliant": True,
+        "dependentClaudeSupplementAccepted": True,
+        "gptStrictSerialToolsAcceptance": True, "independentRenderedReviewClosed": True,
+        "ordinarySenseFallbackSemanticAcceptance": "CLEAN within finite128option-set/40label/live-default sample only",
+        "universalUnsampledQuizSafety": "UNVERIFIED; not claimed",
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "nativeRerun": False, "hostRerun": False,
+        "nextBatchStarted": False, "publishedAdditions": 128, "remainingAdditions": 1100,
+        "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "nextAction": next_action(),
+    }
+    save(R / "docs" / "n1-sources" / "execution-782.json", evidence)
+    for entry in index:
+        assert sha(D / entry["file"]) == entry["storedSha256"]
+    print("Original GPT report/raw execution, exact coverage and bounded two-family reconciliation archived.")
+
+
+def finish():
+    parent()
+    current = load(C / "progress.json")
+    before = load(L / "progress-before-782.json")
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == HEAD and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    assert not git("diff", HEAD, head, "--", "manifest.json", "kanji", "words", "strokes", "tools")
+    posted, reread = load(L / "issue-782-posted.json"), load(L / "issue-782-reread.json")
+    body = (C / "batch-102-rendered-782-issue-body.txt").read_bytes()
+    assert posted["author"] == reread["user"]["login"] == "stop-cran"
+    assert body.decode("utf-8") == reread["body"]
+    assert posted["bodySha256"] == hashlib.sha256(body).hexdigest()
+    assert posted["url"] == reread["html_url"]
+    for entry in load(D / "artifact-index.json"):
+        assert sha(D / entry["file"]) == entry["storedSha256"]
+    execution = load(D / "gpt-execution.json")
+    assert absent(execution["launcherPid"]) and execution["processExited"]
+    runtime()
+    checkpoint = {
+        "schemaVersion": 1, "execution": 782, "checkpoint": 782, "batch": "102",
+        "status": "continue", "stage": "batch-102-rendered-review-closed-awaiting-combined-current-main-acceptance",
+        "recordedAt": now(), "savedCommit": head, "signature": "G", "qualifiedAndroidHead": APP,
+        "evidence": "docs/n1-sources/execution-782.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True,
+        "gptProcessExited": True, "gptActualModel": MODEL,
+        "gptStrictSerialToolsAcceptance": True, "gptToolOverlaps": 0,
+        "gptExactFullTextResources": 5, "gptFreshPngOpens": 43,
+        "gptSessionCompactions": execution["sessionCompactions"], "sourcePngByteStates": 25,
+        "viewToolRescaledImages": True, "newClaudeRenderedFindingsSuppliedToGPT": False,
+        "dependentClaudeSupplementAccepted": True, "original780AttemptRemainsNoncompliant": True,
+        "independentRenderedReviewClosed": True,
+        "ordinarySenseFallbackSemanticAcceptance": "CLEAN within finite128option-set/40label/live-default sample only",
+        "universalUnsampledQuizSafety": "UNVERIFIED; not claimed",
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "reviewClosed": [], "published": [],
+        "dedicatedWorktreesClean": True, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 128, "remainingAdditions": 1100,
+        "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": next_action(), "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    after["historicalExecution781Before782Rendered"] = copy.deepcopy(before["execution781CoordinatorCheckpoint"])
+    after["execution782CoordinatorCheckpoint"] = checkpoint
+    changed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    for key in changed:
+        after[key] = checkpoint[key]
+    for key, value in before.items():
+        if key not in changed:
+            assert after[key] == value, key
+    atomic_progress(current, after, "finish")
+    save(L / "checkpoint-782-summary.json", checkpoint)
+    print("Checkpoint782 persisted:", head, "; all", len(before), "historical root values preserved.")
+
+
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+    {"prepare": prepare, "run": run, "archive": archive, "finish": finish}[sys.argv[1]]()

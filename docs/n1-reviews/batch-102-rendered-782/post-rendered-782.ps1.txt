@@ -1,0 +1,72 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\1a5b6753-3ff1-4103-aa5f-a4e0171a5d7f"
+$content = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$bodyPath = "$control\batch-102-rendered-782-issue-body.txt"
+if ((Test-Path "$log\issue-782-posted.json") -or (Test-Path $bodyPath)) {
+    throw 'Do not duplicate the issue update'
+}
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 5920 -or
+    $runner.sessionId -ne '1a5b6753-3ff1-4103-aa5f-a4e0171a5d7f') {
+    throw 'Uncertain parent ownership'
+}
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 781 -or $progress.batch -ne '102' -or $progress.status -ne 'continue') {
+    throw 'Unexpected checkpoint'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0 -or (git -C $content rev-parse 'HEAD^') -ne '54dff7ed18d88ef1a3f3f19e38e4d5d0d42275b6' -or
+    (git -C $content log -1 '--format=%G?') -ne 'G') { throw 'Evidence not normally signed' }
+foreach ($root in @($content, $android)) {
+    if ((git -C $root status --porcelain --untracked-files=all) -or $LASTEXITCODE -ne 0) {
+        throw 'Dedicated worktree not wholly clean'
+    }
+}
+if ((git -C $android rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?') -ne 'G') { throw 'Qualified Android changed' }
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-782.json") | ConvertFrom-Json
+if ($e.runtimeChanged -or $e.runtimePublished -or $e.runtimeAccepted -or
+    -not $e.independentRenderedReviewClosed -or -not $e.gptStrictSerialToolsAcceptance -or
+    -not $e.original780AttemptRemainsNoncompliant -or $e.runtime.runtimeHashesVerified -ne 8458 -or
+    $e.gptExecution.actualToolCalls -ne 48 -or $e.gptExecution.actualPngOpenCalls -ne 43 -or
+    $e.gptExecution.newClaudeRenderedReportSupplied -or -not $e.gptExecution.processExited) {
+    throw 'Rendered evidence mismatch'
+}
+$body = @"
+Checkpoint 782, SAME batch 102: signed LOCAL rendered-review evidence $head. No runtime edits or push. Full evidence: docs/n1-sources/execution-782.json and docs/n1-reviews/batch-102-rendered-782/.
+
+The original GPT session (actual gpt-6.1-sol) completed its dependent rendered confirmation: exit0, PID20648 absent,48successful view calls in distinct assistant tool-request messages, zero overlaps/unfinished calls. All five common source resources were returned exactly (793,094bytes), followed by all43native PNGs; one session compaction. Sources1080x2400 returned900x2000renditions, not original native pixels. The43source files form25SHA byte states; the reviewer's24visual-layout groups are a separate measure, not a contradictory byte count. No NEW Claude rendered report, repair addendum or coordinator adjudication was supplied to GPT.
+
+Bounded two-family rendered reconciliation is now closed: no established actionable defect in new劣/優劣, the two exact reused navigation passages, both reading screens/feedback/done, drawing presentation, four font panels/all31Han, or the finite128production-option-set/40label/live-default sample. Full matching frozen families support the sampled secondary-sense assessment; different English labels alone were not treated as proof. Only功of努功省isN1; the actual N1 question uses two fallbacks. Direct symmetric exclusions remain nontransitive. Universal unsampled random-pool safety is UNVERIFIED, not certified.
+
+The original780Claude attempt remains NONCOMPLIANT/UNACCEPTED and unchanged. Its781exact-two-image serial supplement remains accepted only as a dependent repair; neither report is new blind-review credit. Original775textual/776HOST/779native evidence is inherited, not repeated. The original two report-wording inaccuracies remain explicitly withdrawn. Navigation/offline actions and drawing persistence rely on original779terminal0case evidence, not screenshots alone. Optional line-wrap/app drawing wording is not an established teaching defect and no unrelated app change was made.
+
+All8,458runtime hashes/versionf376333b242ebb23 and exact native archive remain unchanged, with original budgets/per-file/media/path checks verified. Both dedicated worktrees clean and normal signatures verified. Parent runner.lock untouched; no child acquire/delete/unlock/read-probe. Approved committed evidence/workspace inputs/control helpers only; no optional historical-session recipes or new permission denial.
+
+Next bounded work is SAME102 combined-current-main acceptance and authorized publication ONLY if every original gate passes: latest-main nonrewriting integration, changed-teaching review if needed, required combined-tree Python/vocabulary/manifest/budget/baseline/membership/link/reading and applicable Android acceptance, normal signing, owner fast-forward push, remoteSHA/terminalgreenCI/EVERYimmutableZIPmanifesthash verification. No publication or103in this checkpoint. Published128/1,228; remaining1,100; last published1621cf6cbd2283d377936c77f9c81851baffdf20. Compatible reading-curation/kanji-exclusion-aware client required. Physical-phone, general-release and whole-set acceptance outstanding; project incomplete.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-782-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve posted receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-782-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}
