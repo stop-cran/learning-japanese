@@ -1,0 +1,599 @@
+package io.github.stopcran.kanji.ui
+
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Typeface
+import android.net.ConnectivityManager
+import android.os.Build
+import androidx.activity.ComponentActivity
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.content.res.ResourcesCompat
+import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.ViewModel
+import androidx.room.withTransaction
+import androidx.test.core.app.ActivityScenario
+import androidx.test.platform.app.InstrumentationRegistry
+import io.github.stopcran.kanji.KanjiApp
+import io.github.stopcran.kanji.MainActivity
+import io.github.stopcran.kanji.R
+import io.github.stopcran.kanji.core.content.ContentParser
+import io.github.stopcran.kanji.core.content.RepoSource
+import io.github.stopcran.kanji.core.quiz.QuizBuilder
+import io.github.stopcran.kanji.core.quiz.QuizCard
+import io.github.stopcran.kanji.core.reading.ReadingKind
+import io.github.stopcran.kanji.core.srs.KanjiFont
+import io.github.stopcran.kanji.core.srs.StudyMode
+import io.github.stopcran.kanji.data.*
+import kotlinx.coroutines.runBlocking
+import org.json.JSONArray
+import org.json.JSONObject
+import org.junit.Assert.*
+import org.junit.Rule
+import org.junit.Test
+import java.io.ByteArrayInputStream
+import java.io.File
+import java.security.MessageDigest
+import java.util.UUID
+
+private fun disposable089() {
+    assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+    assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+}
+
+class N1Batch089GlyphTest {
+    @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+
+    @Test fun illFortuneLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
+        disposable089()
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+        val pages = listOf("不 乂 二 今 作 兆 冷 凡 凵 凶 凸 凹", "収 器 大 害 年 悪 物 穫 米 続 豊", "凶 乂 凵 凡 凸 凹 作 悪 米 凶作")
+        val page = mutableStateOf(0)
+        rule.setContent {
+            MaterialTheme {
+                Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("Batch 089: ill fortune / look-alikes / radical fallback")
+                    Text("Panel ${page.value + 1} / ${pages.size}")
+                    fonts.forEach { font ->
+                        Text(font.name)
+                        Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                    }
+                    Text("Inspect all 23 scoped Han; focused 凶/凡/凸/凹 and 乂/凵. Fallback families may coincide.", fontSize = 16.sp)
+                }
+            }
+        }
+        val typefaces = listOf(Typeface.DEFAULT,
+            requireNotNull(ResourcesCompat.getFont(context, R.font.kanji_mincho)),
+            requireNotNull(ResourcesCompat.getFont(context, R.font.kanji_textbook)),
+            requireNotNull(ResourcesCompat.getFont(context, R.font.kanji_brush)))
+        val rows = JSONArray()
+        for ((index, typeface) in typefaces.withIndex()) {
+            val hashes = mutableSetOf<String>()
+            for (char in listOf("不", "乂", "二", "今", "作", "兆", "冷", "凡", "凵", "凶", "凸", "凹", "収", "器", "大", "害", "年", "悪", "物", "穫", "米", "続", "豊")) {
+                val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                    it.typeface = typeface
+                    it.textSize = 96f
+                    it.textLocale = java.util.Locale.JAPAN
+                }
+                assertTrue("$char ${fonts[index]}", paint.hasGlyph(char))
+                val image = Bitmap.createBitmap(if (char.length > 1) 256 else 128, 128, Bitmap.Config.ARGB_8888)
+                Canvas(image).drawText(char, 8f, 104f, paint)
+                val pixels = IntArray(image.width * image.height)
+                image.getPixels(pixels, 0, image.width, 0, 0, image.width, image.height)
+                assertTrue(pixels.any { it != 0 })
+                val bytes = java.nio.ByteBuffer.allocate(pixels.size * 4)
+                    .also { it.asIntBuffer().put(pixels) }.array()
+                val hash = MessageDigest.getInstance("SHA-256").digest(bytes)
+                    .joinToString("") { "%02x".format(it) }
+                assertTrue("Indistinguishable raster ${fonts[index]}", hashes.add(hash))
+                rows.put(JSONObject().put("character", char).put("font", fonts[index].name)
+                    .put("hasGlyph", true).put("nativePaintRasterSha256", hash))
+                image.recycle()
+            }
+            for (word in listOf("凶作")) {
+                val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                    it.typeface = typeface
+                    it.textSize = 96f
+                    it.textLocale = java.util.Locale.JAPAN
+                }
+                // hasGlyph tests multi-character ligatures, not ordinary word coverage.
+                val image = Bitmap.createBitmap(kotlin.math.ceil(paint.measureText(word)).toInt() + 16, 128, Bitmap.Config.ARGB_8888)
+                Canvas(image).drawText(word, 8f, 104f, paint)
+                val pixels = IntArray(image.width * image.height)
+                image.getPixels(pixels, 0, image.width, 0, 0, image.width, image.height)
+                for (position in word.indices) {
+                    val left = (8f + paint.measureText(word, 0, position)).toInt()
+                    val right = kotlin.math.ceil(8f + paint.measureText(word, 0, position + 1)).toInt()
+                    assertTrue("Word raster bounds $word ${fonts[index]}", left >= 0 && right <= image.width && left < right)
+                    assertTrue("Blank word character ${word[position]} ${fonts[index]}",
+                        (0 until image.height).any { y -> (left until right).any { x -> pixels[y * image.width + x] != 0 } })
+                }
+                val bytes = java.nio.ByteBuffer.allocate(pixels.size * 4)
+                    .also { it.asIntBuffer().put(pixels) }.array()
+                val hash = MessageDigest.getInstance("SHA-256").digest(bytes)
+                    .joinToString("") { "%02x".format(it) }
+                rows.put(JSONObject().put("word", word).put("font", fonts[index].name)
+                    .put("renderedCharactersNonblank", word.length).put("nativePaintRasterSha256", hash))
+                image.recycle()
+            }
+        }
+        assertEquals(96, rows.length())
+        for (index in pages.indices) {
+            rule.runOnIdle { page.value = index }
+            rule.waitForIdle()
+            rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+            for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+            File(context.getExternalFilesDir(null), "n1-089-font-panel-${index + 1}.png").outputStream().use {
+                assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+            }
+        }
+        File(context.getExternalFilesDir(null), "n1-089-font-raster.json").writeText(JSONObject()
+            .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+            .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+            .put("individualGlyphProbes", 92).put("wholeWordRasterProbes", 4).put("panels", 3)
+            .put("limits", "23 actual scoped Han including exact 乂/凵 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+            .toString(2))
+    }
+}
+
+class N1Batch089ArticleTest {
+    @get:Rule val rule = createEmptyComposeRule()
+    private lateinit var app: KanjiApp
+    private lateinit var scenario: ActivityScenario<MainActivity>
+
+    @Test fun fullSingleImportOfflineIllFortuneTwoReciprocalPairsOneOnKeyNoKunDrawingAndSystemBack() {
+        disposable089()
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        app = instrumentation.targetContext.applicationContext as KanjiApp
+        val source = RepoSource("acceptance-fixture", "n1-089-${UUID.randomUUID()}", "main")
+        val head = "72614eda48aa8752d9401540d63a479467948d10"
+        assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+        var archiveRequests = 0
+        val http = ContentHttp { url, _, _, _ ->
+            val input = when (url) {
+                "https://api.github.com/repos/${source.id}/commits/main" -> ByteArrayInputStream(head.toByteArray())
+                source.commitZipUrl(head) -> {
+                    archiveRequests++
+                    instrumentation.context.assets.open("n1-batch-089-72614eda-envelope.zip")
+                }
+                else -> error("Unexpected fixture request: $url")
+            }
+            object : ContentResponse {
+                override val code = 200
+                override val body = input
+                override fun header(name: String): String? = null
+                override fun close() = input.close()
+            }
+        }
+        val result = runBlocking { ContentSync(app.db, app.settings.sync, http).sync(source, force = true) }
+        assertTrue(result.toString(), result is SyncResult.Updated)
+        val updated = result as SyncResult.Updated
+        assertEquals(1, archiveRequests)
+        assertEquals(1112, updated.kanji)
+        assertEquals(5068, updated.words)
+        assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+        val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+        assertEquals("c6562f11cb371053", meta.contentVersion)
+        assertEquals(0, meta.problems)
+        assertNull(meta.grammarProblem)
+        assertNull(meta.listeningProblem)
+        assertNull(meta.grammarCurriculumProblem)
+        assertEquals(1, ContentParser.KANJI_READING_PARSER_EPOCH)
+        assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+        val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+        assertEquals(121, n1.size)
+        val illFortune = n1.single { it.kanji == "凶" }
+        assertEquals(listOf("凡", "凸", "凹"), illFortune.distractors.splitSep())
+        assertEquals(listOf("キョウ"), illFortune.onyomi.splitSep())
+        assertEquals(emptyList<String>(), illFortune.kunyomi.splitSep())
+        assertNotNull(illFortune.quizOnyomi)
+        assertNotNull(illFortune.quizKunyomi)
+        assertEquals(listOf("キョウ"), illFortune.quizOnyomi?.splitSep())
+        assertEquals(emptyList<String>(), illFortune.quizKunyomi?.splitSep())
+        assertEquals(listOf("きょう"), illFortune.toReadingCard().quizKeys(ReadingKind.On))
+        assertEquals(emptyList<String>(), illFortune.toReadingCard().quizKeys(ReadingKind.Kun))
+        val expectedMeanings = mapOf(
+            "凶" to "ill fortune; evil", "凸" to "convex; protruding",
+            "凡" to "commonplace; mediocre", "凹" to "concave; sunken",
+        )
+        val all = runBlocking { app.db.content().kanjiLite(source.id) }
+        val checkedPools = JSONObject()
+        for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
+            val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+            val target = cards.single { it.kanji == "凶" }
+            assertEquals(listOf("凡", "凸", "凹"), target.distractors)
+            val options = QuizBuilder.options(target, cards, kotlin.random.Random(631))
+            assertEquals(4, options.size)
+            assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
+            assertEquals(3, cards.count { it.kanji in target.distractors })
+            checkedPools.put(poolName, JSONObject().put("poolSize", pool.size)
+                .put("options", JSONArray().also { rows ->
+                    options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+                }).put("availableCuratedCount", cards.count { it.kanji in target.distractors })
+                .put("fallbackOptions", options.count { it.kanji !in expectedMeanings }))
+        }
+        val importedHarvest = requireNotNull(runBlocking { app.db.content().word(source.id, "凶作") })
+        assertEquals(listOf("収穫"), importedHarvest.quizExclusions.splitSep())
+        assertEquals("きょうさく", importedHarvest.reading)
+        assertNull(importedHarvest.jlpt)
+        val now = System.currentTimeMillis()
+        app.settings.sync.lastCheckMs = now
+        app.settings.setStartingGuideVisible(false)
+        app.settings.setDailyNewCards(50)
+        app.settings.setWeekPlan("FFFFFFF")
+        app.settings.setTraceNew(true)
+        app.settings.setVaryFonts(true)
+        app.settings.setStack("jlpt-n5")
+        runBlocking {
+            app.db.withTransaction {
+                n1.forEach { card ->
+                    app.db.reviews().putState(ReviewStateEntity(
+                        source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+                        if (card.kanji == "凶") now - 60_000 else now + 30L * 86_400_000,
+                        now - 2L * 86_400_000, 3, 0,
+                    ))
+                    for (kind in ReadingKind.entries) for (key in card.toReadingCard().quizKeys(kind)) {
+                        app.db.reviews().putState(ReviewStateEntity(
+                            source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+                            if (card.kanji == "凶" && kind == ReadingKind.On && key in setOf("きょう")) now - 60_000
+                            else now + 30L * 86_400_000,
+                            now - 2L * 86_400_000, 3, 0, reading = key,
+                        ))
+                    }
+                }
+                for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+                    0, source.id, "jlpt-n1", "凶", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                ))
+            }
+        }
+        val connectivity = app.getSystemService(ConnectivityManager::class.java)
+        assertNull("Disable disposable emulator Wi-Fi/data before offline acceptance", connectivity.activeNetwork)
+        val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+            .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+            .put("directWordGuardCount", importedHarvest.quizExclusions.splitSep().size)
+            .put("problems", updated.problems.size).put("n1Cards", n1.size)
+            .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+            .put("fullOnyomi", JSONArray(illFortune.onyomi.splitSep()))
+            .put("fullKunyomi", JSONArray(illFortune.kunyomi.splitSep()))
+            .put("quizOnKeys", JSONArray(illFortune.toReadingCard().quizKeys(ReadingKind.On)))
+            .put("quizKunKeys", JSONArray(illFortune.toReadingCard().quizKeys(ReadingKind.Kun)))
+            .put("liteQuizOnyomi", JSONArray(requireNotNull(illFortune.quizOnyomi).splitSep()))
+            .put("liteQuizKunyomi", JSONArray(requireNotNull(illFortune.quizKunyomi).splitSep()))
+            .put("productionBuilderN1AndAllExactChoices", checkedPools)
+            .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+            .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+            .put("fixture", "Other N1 meanings/readings postponed; 凶 meaning and exactly onきょう due; source kun[] and explicit quizKun[] give no questions. Two historical good 凶 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+            .put("phoneEvidence", false).put("passed", false)
+        scenario = ActivityScenario.launch(MainActivity::class.java)
+        try {
+            click("Kanji")
+            click("N1")
+            rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+            await("N1 · 121 cards").performScrollTo().assertIsDisplayed()
+            capture("selection")
+            click("Browse all kanji")
+            rule.onNode(hasSetTextAction()).performTextReplacement("凶")
+            click("ill fortune; evil")
+            await("凶 — ill fortune; evil")
+            show(articleBullet("Strokes: 4 · Key (radical): 凵 (no. 17) · JLPT: N1 (community list)"), "kanji-01")
+            section("Meaning and origin")
+            show(articleBullet("凶 concerns ill fortune, an unfavorable outcome, or evil. In 凶作 きょうさく, it describes a poor harvest; in 凶悪 (きょうあく), it concerns heinousness rather than agricultural failure. Learn the whole compound rather than translating every 凶 as \"bad luck.\""), "kanji-03")
+            show(articleBullet("Modern-shape mnemonic, not etymology: imagine the crossing strokes 乂 inside the open-topped frame 凵 as a warning mark for an unfavorable outcome. This is a memory aid for the current shape, not a historical derivation or a claim about a phonetic component."), "kanji-04")
+            section("Readings")
+            show(readingExample("キョウ"), "kanji-09")
+            show(readingExample("凶作 きょうさく — poor harvest; crop failure"), "kanji-11")
+            show(articleBullet("The frozen KANJIDIC2 source has this one on-reading and no kun-readings. キョウ is selected for reading practice with the linked compound."), "kanji-12")
+            section("Common words")
+            show(articleBullet("凶作 きょうさく — poor harvest; crop failure"), "kanji-14")
+            show(articleBullet("凶悪 きょうあく — heinous; atrocious"), "kanji-15")
+            show(articleBullet("凶器 きょうき — dangerous or lethal weapon"), "kanji-16")
+            section("Notes")
+            show(articleBullet("凶 (きょう) can itself mean bad luck. In fortune-telling, 大凶 (だいきょう) means very bad luck; 凶兆 (きょうちょう) is an ill omen."), "kanji-18")
+            show(articleBullet("悪 also concerns badness or evil, but 凶 is not a replacement for the ordinary adjective 悪い (わるい)."), "kanji-19")
+            show(articleBullet("凡 concerns being ordinary; 凸 and 凹 concern raised and sunken shapes. Similar outlines do not make their meanings interchangeable with 凶."), "kanji-20")
+            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word pairs: JMdict, entries 1235400, 1235440, 1235470, 1591510, 1591540 and 1785310. Reading and senses: Digital Daijisen, 凶."), "kanji-21")
+            section("Common words")
+            show(articleBullet("凶作 きょうさく — poor harvest; crop failure"), "harvest-forward")
+            inline(await(articleBullet("凶作 きょうさく — poor harvest; crop failure")), "凶作", 0)
+            await("Article contents")
+            await("凶作 (きょうさく) — poor harvest; crop failure")
+            section("Meaning")
+            show(articleBullet("凶作 is a very poor harvest or crop failure. It is a noun describing an agricultural outcome, not a verb meaning \"harvest.\""), "harvest-02")
+            show(articleBullet("今年は米が凶作でした。 (ことしはこめがきょうさくでした。) — This year's rice harvest was very poor."), "harvest-03")
+            show(articleBullet("冷害による凶作が二年続きました。 (れいがいによるきょうさくがにねんつづきました。) — Crop failures caused by cold-weather damage continued for two years."), "harvest-04")
+            show(articleBullet("凶作 does not necessarily mean that nothing at all could be harvested. It can describe a severely reduced yield."), "harvest-05")
+            section("How the kanji combine")
+            show(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship."), "harvest-07")
+            section("Synonyms and antonyms")
+            show(articleBullet("不作 (ふさく) overlaps in the poor-harvest sense, but also has a broader sense of low-quality work, including literary works. 豊作 (ほうさく), a bumper harvest, is the useful opposite."), "harvest-09")
+            show(articleBullet("作物 (さくもつ) names the crops themselves. 収穫 (しゅうかく) concerns gathering a crop or the resulting yield; it does not by itself say that the harvest was poor."), "harvest-10")
+            section("Distinctive meaning")
+            show(articleBullet("凶作 focuses on a very poor crop outcome, not every disappointing result or an unlucky event in general. Crop failure can contribute to food shortages, but 凶作 is not itself a statement that a famine occurred."), "harvest-12")
+            show(articleBullet("Dictionary: JMdict, entry 1235440; 作's crop/yield sense: entry 1297240, sense 2. Usage: Digital Daijisen and Nipponica, 凶作."), "harvest-13")
+            section("How the kanji combine")
+            show(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship."), "harvest-reverse")
+            inline(await(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship.")), "凶", 0)
+            await("Article contents")
+            section("Readings")
+            show(readingExample("キョウ"), "harvest-kanji-backlink")
+            back()
+            await(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship.")).assertIsDisplayed()
+            section("How the kanji combine")
+            capture("harvest-system-back-to-word")
+            section("How the kanji combine")
+            show(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship."), "crop-head-forward")
+            inline(await(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship.")), "作", 38)
+            await("Article contents")
+            await("作 — make, produce")
+            section("Common words")
+            show(articleBullet("凶作 きょうさく — poor harvest; crop failure"), "crop-head-reverse")
+            inline(await(articleBullet("凶作 きょうさく — poor harvest; crop failure")), "凶作", 0)
+            await("Article contents")
+            await("凶作 (きょうさく) — poor harvest; crop failure")
+            back()
+            await(articleBullet("凶作 きょうさく — poor harvest; crop failure")).assertIsDisplayed()
+            section("Common words")
+            capture("crop-head-system-back-to-kanji")
+            back()
+            await(articleBullet("凶 contributes an unfavorable outcome; 作 refers to the crop or yield in this compound. The relationship is modifier + head: a poor crop. The on-readings are キョウ + サク; 作's broader \"make\" meaning does not turn 凶作 into a general word for bad workmanship.")).assertIsDisplayed()
+            section("How the kanji combine")
+            capture("crop-head-system-back-to-word")
+            back()
+            await(articleBullet("凶作 きょうさく — poor harvest; crop failure")).assertIsDisplayed()
+            section("Common words")
+            capture("harvest-system-back-to-kanji")
+            back()
+            await("Search kanji, meaning or reading")
+            back()
+            await("Meaning quiz")
+            evidence.put("reciprocalLinkAndSystemBack", true)
+                .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4)
+                .put("completeArticleProjections", 2).put("changedReusedArticles", 1)
+            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+            rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+            val quiz = model("quiz:") as QuizViewModel
+            val meaning = quiz.ui as QuizUi.Question
+            assertEquals("凶", meaning.card.kanji)
+            val expectedMeanings = mapOf(
+                "凶" to "ill fortune; evil",
+                "凸" to "convex; protruding",
+                "凡" to "commonplace; mediocre",
+                "凹" to "concave; sunken",
+            )
+            assertEquals(4, meaning.options.size)
+            assertEquals(expectedMeanings, meaning.options.associate { it.kanji to it.title })
+            assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
+            assertTrue(meaning.options.any { it.kanji == "凹" })
+            assertEquals(0, meaning.options.count { it.kanji !in expectedMeanings })
+            assertEquals("ill fortune; evil", meaning.options.single { it.kanji == "凶" }.title)
+            assertEquals(listOf("凡", "凸", "凹"), meaning.card.distractors.splitSep())
+            for (option in meaning.options) await(option.title).assertIsDisplayed()
+            evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+                meaning.options.forEach { option ->
+                    options.put(JSONObject().put("kanji", option.kanji).put("title", option.title))
+                }
+            }).put("actualN1CuratedAvailable", 3).put("actualN1FallbackOptions", 0)
+                .put("meaningChoiceVisualAdjudicationRequired", true)
+            capture("meaning-question")
+            click("ill fortune; evil")
+            await("Correct!")
+            assertEquals("凶", (quiz.ui as QuizUi.Answer).card.kanji)
+            capture("meaning-feedback")
+            back()
+            await("Meaning quiz")
+            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+            val answeredKeys = mutableSetOf<String>()
+            repeat(1) {
+                rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                val reading = model("kreading:") as KanjiReadingViewModel
+                val question = reading.ui as ReadingUi.Question
+                assertEquals("凶", question.card.kanji)
+                assertEquals(ReadingKind.On, question.question.kind)
+                val key = question.question.correctKey
+                assertTrue(key in setOf("きょう"))
+                assertTrue("Duplicate target reading key", answeredKeys.add(key))
+                assertEquals(key, question.question.correctKey)
+                assertFalse(question.question.options.any { it.key.isBlank() })
+                assertEquals(1, question.question.options.count { it.key == key })
+                capture("curated-${key}-question")
+                click(question.question.options.single { it.key == key }.label)
+                await(if (question.question.kind == ReadingKind.On) "Correct! — on'yomi" else "Correct! — kun'yomi")
+                assertTrue((reading.ui as ReadingUi.Answer).correct)
+                capture("curated-${key}-feedback")
+                click("Next")
+                rule.waitUntil(30_000) { runBlocking {
+                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "凶" &&
+                        log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                } }
+            }
+            assertEquals(setOf("きょう"), answeredKeys)
+            rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+            val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+            assertEquals(1, done.answered)
+            assertEquals(1, done.correct)
+            val readingLogs = runBlocking {
+                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "凶" &&
+                    it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+            }
+            assertEquals(1, readingLogs.size)
+            assertEquals(setOf("きょう"), readingLogs.map { it.reading }.toSet())
+            assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
+            capture("curated-one-on-no-kun-done")
+            back()
+            await("Meaning quiz")
+            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+            await("Trace the kanji for")
+            await("ill fortune; evil").assertIsDisplayed()
+            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "凶") })
+            assertEquals(listOf("凡", "凸", "凹"), card.distractors.splitSep())
+            assertEquals(listOf("キョウ"), card.onyomi.splitSep())
+            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
+            assertNotNull(card.quizOnyomi)
+            assertNotNull(card.quizKunyomi)
+            assertEquals(listOf("キョウ"), card.quizOnyomi?.splitSep())
+            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
+            evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+                .put("fullProjectionQuizOnyomi", JSONArray(requireNotNull(card.quizOnyomi).splitSep()))
+                .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+            val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+            assertEquals(4, strokes.length())
+            capture("drawing-trace")
+            val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+            pad.performScrollTo()
+            for (index in 0 until strokes.length()) {
+                val points = strokes.getJSONObject(index).getJSONArray("points")
+                pad.performTouchInput {
+                    fun point(i: Int): Offset {
+                        val pair = points.getJSONArray(i)
+                        return Offset(pair.getDouble(0).toFloat() * width / 109f,
+                            pair.getDouble(1).toFloat() * height / 109f)
+                    }
+                    down(point(0))
+                    for (i in 1 until points.length()) moveTo(point(i), delayMillis = 16)
+                    up()
+                }
+            }
+            rule.onNode(hasContentDescription("4 strokes drawn", substring = true)).assertExists()
+            click("Check")
+            await("Practice only: this attempt is not graded.")
+            assertFalse(runBlocking {
+                app.db.reviews().allLog().any { it.sourceId == source.id &&
+                    it.kanji == "凶" && it.mode == StudyMode.Draw.name }
+            })
+            await("Correct strokes").performScrollTo().assertIsDisplayed()
+            capture("drawing-feedback")
+            click("Next")
+            await("Draw the kanji for")
+            click("I don't remember")
+            await("Here is the kanji")
+            capture("drawing-recall-feedback")
+            click("Next")
+            rule.waitUntil(30_000) { runBlocking {
+                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "凶" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+            } }
+            back()
+            await("Meaning quiz")
+            assertEquals("jlpt-n1", app.settings.stack.value)
+            assertNull(connectivity.activeNetwork)
+            assertEquals(1, archiveRequests)
+            evidence.put("meaningQuestionAndFeedback", true)
+                .put("singleCuratedOnKeyPersistedGoodAndDone", true)
+                .put("touchInjectedReferenceStrokes", strokes.length())
+                .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                .put("offline", true).put("passed", true)
+        } finally {
+            File(app.getExternalFilesDir(null), "n1-089-article-route.json").writeText(evidence.toString(2))
+            File(app.getExternalFilesDir(null), "n1-089-article-tree.txt").writeText(rule.onRoot().printToString())
+            scenario.close()
+        }
+    }
+
+    private fun model(prefix: String): ViewModel? {
+        var result: ViewModel? = null
+        scenario.onActivity { activity ->
+            result = activity.viewModelStore.keys().lastOrNull { it.startsWith(prefix) }?.let { activity.viewModelStore[it] }
+        }
+        return result
+    }
+
+    private fun await(text: String, substring: Boolean = false): SemanticsNodeInteraction {
+        return await(hasText(text, substring = substring))
+    }
+
+    private fun await(matcher: SemanticsMatcher): SemanticsNodeInteraction {
+        rule.waitUntil(30_000) { rule.onAllNodes(matcher).fetchSemanticsNodes().isNotEmpty() }
+        rule.onAllNodes(matcher).assertCountEquals(1)
+        return rule.onNode(matcher)
+    }
+
+    private fun readingExample(text: String): SemanticsMatcher {
+        return hasText(text) and hasAnyAncestor(hasTestTag("article-body")) and
+            hasAnyAncestor(SemanticsMatcher.keyIsDefined(SemanticsProperties.HorizontalScrollAxisRange))
+    }
+
+    private fun articleBullet(text: String): SemanticsMatcher {
+        return hasText(text) and hasAnyAncestor(hasTestTag("article-body")) and
+            !hasAnyAncestor(SemanticsMatcher.keyIsDefined(SemanticsProperties.HorizontalScrollAxisRange))
+    }
+
+    private fun click(text: String) = click(await(text))
+
+    private fun click(node: SemanticsNodeInteraction) {
+        rule.waitUntil(30_000) { !node.fetchSemanticsNode().config.contains(SemanticsProperties.Disabled) }
+        if (node.onAncestors().filter(hasScrollAction()).fetchSemanticsNodes().isNotEmpty()) node.performScrollTo()
+        node.assertIsDisplayed().assertIsEnabled().performClick()
+    }
+
+    private fun section(title: String) {
+        rule.onNodeWithTag("article-body").performScrollToIndex(0)
+        click("Article contents")
+        rule.onNode(hasText(title, substring = true) and hasClickAction()).performScrollTo().performClick()
+        rule.waitForIdle()
+    }
+
+    private fun show(selector: String, step: String) {
+        show(hasText(selector, substring = true), step)
+    }
+
+    private fun show(matcher: SemanticsMatcher, step: String) {
+        val body = rule.onNodeWithTag("article-body")
+        body.performScrollToNode(matcher)
+        val target = await(matcher)
+        target.performScrollTo()
+        val viewport = body.fetchSemanticsNode()
+        val cell = target.fetchSemanticsNode()
+        val top = viewport.positionInRoot.y
+        val bottom = top + viewport.size.height
+        if (cell.positionInRoot.y < top || cell.positionInRoot.y + cell.size.height > bottom) {
+            body.performSemanticsAction(SemanticsActions.ScrollBy) {
+                it(0f, cell.positionInRoot.y - top - 16f)
+            }
+            rule.waitForIdle()
+        }
+        target.assertIsDisplayed()
+        capture(step)
+    }
+
+    private fun inline(node: SemanticsNodeInteraction, label: String, offset: Int) {
+        node.performScrollTo().assertIsDisplayed()
+        val text = node.fetchSemanticsNode().config[SemanticsProperties.Text].joinToString("") { it.text }
+        val layouts = mutableListOf<TextLayoutResult>()
+        node.performSemanticsAction(SemanticsActions.GetTextLayoutResult) { it(layouts) }
+        assertTrue("Wrong linked offset $offset for $label in $text", offset >= 0 && text.substring(offset).startsWith(label))
+        node.performTouchInput { click(layouts.single().getBoundingBox(offset).center) }
+    }
+
+    private fun back() {
+        InstrumentationRegistry.getInstrumentation().uiAutomation.performGlobalAction(
+            android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_BACK)
+        rule.waitForIdle()
+    }
+
+    private fun capture(step: String) {
+        rule.waitForIdle()
+        val automation = InstrumentationRegistry.getInstrumentation().uiAutomation
+        automation.waitForIdle(500, 5_000)
+        android.os.SystemClock.sleep(1_000)
+        rule.waitForIdle()
+        val bitmap = requireNotNull(automation.takeScreenshot())
+        File(app.getExternalFilesDir(null), "n1-089-$step.png").outputStream().use {
+            assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+        }
+        bitmap.recycle()
+    }
+}
