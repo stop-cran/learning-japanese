@@ -1,0 +1,43 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\d9449cde-a292-4325-a8ad-908806a2ac62"
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+& "$control\preflight-749.ps1"
+if (-not $?) { throw 'Parent ownership preflight failed' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 748 -or $progress.batch -ne '100' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+$head = (Get-Content "$log\signed-head-749.txt" -Raw).Trim()
+if ((git -C $root rev-parse HEAD).Trim() -ne $head -or
+    (git -C $root rev-parse 'HEAD^').Trim() -ne 'b799e904d379466b8b7a034d10d906b06644fefd' -or
+    (git -C $root rev-parse origin/main).Trim() -ne '716c610153234e8d2240dcf528de3ef83b654b27' -or
+    (git -C $root log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $root status --porcelain)) { throw 'Unexpected content signed/clean state' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Unexpected Android signed/clean state' }
+if (-not (Test-Path "$control\batch-100-correction-749-issue.txt")) { throw 'Missing issue body' }
+if (Test-Path "$log\issue-749-posted.json") { throw 'Existing issue receipt; inspect rather than repost' }
+if ($env:GH_TOKEN -or $env:GITHUB_TOKEN) { throw 'Unexpected inherited token' }
+$globalIdentity = (gh api user --jq '.login').Trim()
+if ($LASTEXITCODE -ne 0 -or $globalIdentity -ne 'romanko-ms') { throw 'Unexpected global identity' }
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran).Trim()
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner token unavailable' }
+    $owner = (gh api user --jq '.login').Trim()
+    if ($LASTEXITCODE -ne 0 -or $owner -ne 'stop-cran') { throw 'Unexpected issue identity' }
+    gh api repos/stop-cran/learning-japanese/issues/60/comments -X POST -F "body=@$control\batch-100-correction-749-issue.txt" > "$log\issue-749-posted.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Issue comment failed' }
+    $posted = Get-Content "$log\issue-749-posted.json" -Raw | ConvertFrom-Json
+    gh api "repos/stop-cran/learning-japanese/issues/comments/$($posted.id)" > "$log\issue-749-verified.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Issue reread failed' }
+    $read = Get-Content "$log\issue-749-verified.json" -Raw | ConvertFrom-Json
+    $expected = [IO.File]::ReadAllText("$control\batch-100-correction-749-issue.txt")
+    if ($read.user.login -ne 'stop-cran' -or $read.body -cne $expected) { throw 'Owner issue author/body verification failed' }
+    Write-Output $read.html_url
+} finally {
+    $env:GH_TOKEN = $null
+}
+$after = (gh api user --jq '.login').Trim()
+if ($LASTEXITCODE -ne 0 -or $after -ne $globalIdentity) { throw 'Global identity changed' }
+Write-Output 'Owner issue author/body and unchanged global identity verified.'

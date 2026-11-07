@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "execution": 748,
   "batch": "100",
-  "status": "initial-textual-reviews-complete-reconciliation-required",
+  "status": "author-corrected-awaiting-original-session-confirmations",
   "originalTeachingSnapshot": "5a52b28e9f6f506171c5041bd52b0d9f8c261323",
-  "teachingChangedAfterInitialReviews": false,
+  "teachingChangedAfterInitialReviews": true,
   "initialModels": [
     "claude-opus-5.5",
     "gpt-6.1-sol"
@@ -66,9 +66,9 @@
   "verdicts": {
     "kanji/\u5275.md": {
       "correctness": "CLEAN",
-      "scopedCoverage": "NEEDS FIX",
+      "scopedCoverage": "UNVERIFIED; author correction awaits original-session confirmations",
       "textComprehensibility": "CLEAN",
-      "quizPoolAcceptance": "UNVERIFIED; post-review\u8a2d overlap requires correction/source confirmation"
+      "quizPoolAcceptance": "UNVERIFIED; author-added\u8a2d/\u521d pairs await changed-tree semantic and native checks"
     },
     "words/\u5275\u4f5c.md:30": {
       "correctness": "CLEAN",
@@ -90,7 +90,7 @@
     {
       "id": "F1",
       "reviewer": "claude",
-      "status": "unresolved",
+      "status": "partially resolved",
       "severity": "Minor",
       "facet": "scoped coverage",
       "locations": [
@@ -103,7 +103,15 @@
       "coordinatorDisposition": "Accept the localized teaching improvement, without a universal every-sense example quota. Two short qualified unlinked compound examples would suffice; no extra word identity, frequency claim or\u5275\u9020/idiom expansion required.",
       "reviewerDisagreement": "GPT reported scoped coverage CLEAN and no optional suggestions. This disagreement remains explicit; no majority/model-prestige adjudication.",
       "remedy": "Add minimal source-verified\u5275\u7acb and formal/literary\u5275\u50b7 recognition examples, recompute affected audits, then both original-session changed-passage confirmations.",
-      "confidence": "High that examples are absent and cited families support them; moderate that the localized coverage omission warrants a fix rather than optional expansion."
+      "confidence": "High that examples are absent and cited families support them; moderate that the localized coverage omission warrants a fix rather than optional expansion.",
+      "statusBefore749": "unresolved",
+      "correction749": {
+        "id": "F1",
+        "status": "partially resolved",
+        "authorChange": "Two minimal unlinked Common words examples: \u5275\u7acb\u305d\u3046\u308a\u3064 establishment/founding and\u5275\u50b7\u305d\u3046\u3057\u3087\u3046 wound/injury, explicitly formal or literary. Exact complete1398640/1398490; no new article, inferred level, frequency claim or idiom expansion.",
+        "evidence": "JMdict1398640 full sense and1398490 full sense/misc; original actual Daijisen\u5275 sense1\u5275\u50b7/sense2\u5275\u7acb.",
+        "limits": "Claude's localized coverage finding accepted; GPT initial coverage CLEAN remains historical disagreement. Await both original-session regression confirmations."
+      }
     },
     {
       "id": "H1-wound",
@@ -119,7 +127,7 @@
     {
       "id": "C1-establish",
       "reviewer": "coordinator post-review",
-      "status": "unresolved",
+      "status": "partially resolved",
       "severity": "Minor",
       "facet": "meaning-quiz ambiguity",
       "locations": [
@@ -131,18 +139,38 @@
       "claim": "Existing\u8a2d label establish; provide can defensibly describe\u5275's explicitly taught establishment/start-up meaning; no direct exclusion is declared.",
       "evidence": "Exact unchanged\u8a2d card and target\u5275\u3081\u308b establishment row; supplied frozen1307550 sense2 and Daijisen\u5275 sense2. \u8a2d was not in the blind initial packet.",
       "remedy": "Retain exact full frozen\u8a2d source/ordinary senses, add justified direct\u5275/\u8a2d guard on new\u5275 only, and submit exact metadata/diff/supplement to both original reviewers. No change to unrelated\u8a2d teaching.",
-      "confidence": "High for displayed-label overlap; not live-pool acceptance."
+      "confidence": "High for displayed-label overlap; not live-pool acceptance.",
+      "statusBefore749": "unresolved",
+      "correction749": {
+        "id": "C1-establish",
+        "status": "partially resolved",
+        "kanji": "\u8a2d",
+        "label": "establish; provide",
+        "reason": "\u8a2d's displayed establish branch can answer\u5275's explicitly taught establishment/founding/start-up meaning. Raw\u8a2d English establishment/provision/prepare, full1386000 sense2 set up/establish and1257420 establishment support the overlap. Provide is not asserted equivalent to every\u5275 sense.",
+        "authorChange": "Direct\u5275/\u8a2d exclusion on new\u5275 only; legacy\u8a2d unchanged.",
+        "limits": "Author source-confirmed correction; no independent changed-passage or live-pool acceptance yet."
+      }
     },
     {
       "id": "H1-initial",
       "reviewer": "claude tentative cue; coordinator post-review",
-      "status": "unresolved",
+      "status": "partially resolved",
       "severity": null,
       "facet": "bounded supplementary source check",
       "claim": "\u521d first time; initial may overlap\u5275's first-creation/start sense, but an additional direct pair has not been established.",
       "evidence": "Exact\u521d label inspected; full frozen\u521d family/raw source and independent follow-up judgment not yet supplied.",
       "remedy": "Resolve from actual source and precise labels in the SAME100 correction/source supplement; do not automatically add a transitive or merely topic-based pair.",
-      "confidence": "Low-moderate hypothesis; not counted as verified defect."
+      "confidence": "Low-moderate hypothesis; not counted as verified defect.",
+      "statusBefore749": "unresolved",
+      "correction749": {
+        "id": "H1-initial",
+        "status": "partially resolved",
+        "kanji": "\u521d",
+        "label": "first time; initial",
+        "reason": "Conservative direct guard for the initial/beginning branch: raw\u521d has beginning and\u5275 has start/genesis; full1342540 beginning/start/outset and1293990 beginning/outset support that branch. Initial occurrence is not always creation, and first time is not a general translation of\u5275. The pair is not inferred solely from Daijisen's\u521d\u3081\u3066 substring, novelty, a common topic or another guard.",
+        "authorChange": "Direct\u5275/\u521d exclusion on new\u5275 only; unchanged\u521d N3 metadata, source readings and article remain historical context.",
+        "limits": "Previously tentative hypothesis now has bounded author evidence and conservative safeguard. Both original reviewers must independently assess actual labels/senses; do not call this an independently verified defect or universal synonymy."
+      }
     }
   ],
   "optional": [
@@ -186,11 +214,20 @@
   "initialReviewsComplete": true,
   "textualAcceptanceComplete": false,
   "reviewClosed": [],
-  "runtimeChangedThisExecution": false,
+  "runtimeChangedThisExecution": true,
   "runtimePublished": false,
   "freshAndroidOrNativeClaimed": false,
   "physicalPhoneAcceptance": "outstanding",
   "generalReleaseAcceptance": "outstanding",
   "wholeProjectComplete": false,
-  "nextAction": "SAME100 bounded correction/source-supplement checkpoint before original-session confirmations. Two blind different-family initial textual reviews are COMPLETE on signed5a52b28e; do not rerun initial reviews or count this batch review-closed. Preserve complete original Claude4975f494 and GPTc9e3c7f4 sessions/reports/actualmodels/read/process evidence. Resolve F1 localized coverage using complete frozen1398640\u5275\u7acb\u305d\u3046\u308a\u3064 founding and 1398490\u5275\u50b7\u305d\u3046\u3057\u3087\u3046 formal/literary wound examples; no new word article or inferred level needed. Both families already preserved; do not manufacture a frequency claim. Reconcile source-confirmed missing direct\u5275/\u8a2d guard: actual\u8a2d label establish; provide overlaps explicitly taught establishment sense. Inspect exact frozen\u8a2d family/raw metadata and actual\u521d label first time; initial to decide independently whether\u5275/\u521d merits a direct guard; \u521d is still a hypothesis, not an accepted defect. \u50b7-kanji guard hypothesis withdrawn because kanji/\u50b7.md DOES NOT EXIST; words/\u50b7.md is a different quiz namespace. No missing-card guard, new\u50b7 card, transitive clique or unrelated legacy rewrite. Recompute all applicable source/metadata/reading/quiz/link/baseline/Han/font audits, validate and regenerate manifest after authorized changes; normal signed LOCAL changed-tree freeze before TWO SERIAL original-session changed-passage confirmations with exact diff and supplemental full evidence. Keep all six full readings/order and selected\u30bd\u30a6/\u3064\u304f.\u308b, same-family\u4f5c\u308bN5/\u5275\u4f5cN2 identities/exclusions, source-only\u30b7\u30e7\u30a6/\u3051\u305a.\u3057\u3051\u308b lexical allocation UNVERIFIED without invented gloss/example/invalidity/obsolescence/source repair. Then fresh non-skipped qualifiedAndroidbf30cdead RealContent/RareHan, productionContentSyncONCE/native N1-All/meaning/curatedreading/drawing/article/Back/offline/four-font/all-Han/rendered acceptance, combinedcurrentmain checks, normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue gates remain mandatory. No unreviewedpush/101/authoragent/concurrentheavywork/secondrunner/signingretry/guardincrease. Verify whollyclean signedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent5920 ownsrunner.lock: no childacquire/delete/unlock/readprobe. Approvedcontrol/committedsource/frozeninputs only, not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/signinghang/uncertainownership. Published126/1228,1102acceptanceremainder unchanged; six earlierN2placements \u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 remain separate, never duplicate/relevel. Physicalphone/generalrelease/whole-set outstanding; projectincomplete."
+  "nextAction": "SAME100 TWO SERIAL original-session changed-passage confirmations on the normally signed LOCAL corrected snapshot. Initial textual reviews are COMPLETE on5a52b28e: preserve Claude4975f494-5c25-4a2d-8060-775ded9c734c/claude-opus-5.5 and GPTc9e3c7f4-b439-4f44-9255-4256c0987d25/gpt-6.1-sol original reports and actual read/process limits; do not rerun blind initial reviews. Supply each original reviewer their original findings, exact5a52b28e-to-current teaching diff, complete revised\u5275, unchanged three reused changes/context and same bounded correction source supplement: 12complete frozen families including1398640\u5275\u7acb\u305d\u3046\u308a\u3064 establishment/founding and 1398490\u5275\u50b7\u305d\u3046\u3057\u3087\u3046 formal/literary wound/injury; full\u8a2d/\u521d source records and actual unchanged cards, original source blocks and correction decisions. F1/C1-establish/H1-initial are author-corrected but NOT independently confirmed: two unlinked examples plus direct\u5275/\u8a2d establishment and conservative\u5275/\u521d beginning/genesis guards now declared on new\u5275 only; ten direct symmetric NONTRANSITIVE guards total. Review\u521d independently from exactfirst time;initial label, rawbeginning and\u5275start/genesis; NOT merely substring\u521d\u3081\u3066 or shared topic. No universal substitution, transitive clique, new word identity/level or legacy\u8a2d/\u521d edit. H1-wound remains withdrawn: no kanji/\u50b7.md; words/\u50b7.md is another namespace. Original optional polish stays optional. All six full readings/order and selected\u30bd\u30a6/\u3064\u304f.\u308b remain; source-only\u30b7\u30e7\u30a6/\u3051\u305a.\u3057\u3051\u308b allocation UNVERIFIED, explicitly qualified/unselected. Reused\u5275\u4f5cN2/\u4f5c\u308bN5 metadata and13/5 guards preserved; five all-mapped pairs/ten directions/one activated baseline pair/three exact reused changes. ActualHan/font scope recomputed; cmap absence is NOT glyphfailure; native four-font/all-Han/rendered acceptance pending. Confirm serial reviewer PROCESS EXIT and internal tools, exact models/complete reports/read limits, reconcile evidence and check regressions; no actionable/consequential unresolved teaching claim before closure. Then fresh non-skipped qualifiedAndroidbf30cdead RealContent/RareHan, productionContentSyncONCE/native N1-All/meaning/curatedreading/drawing/article/Back/offline/four-font/all-Han/rendered acceptance, combinedcurrentmain checks, normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue gates remain mandatory. No unreviewedpush/101/authoragent/concurrentheavywork/secondrunner/signingretry/guardincrease. Verify whollyclean signedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent5920 ownsrunner.lock: no childacquire/delete/unlock/readprobe. Approvedcontrol/committedsource/frozeninputs only, not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/signinghang/uncertainownership. Published126/1228,1102acceptanceremainder unchanged; six earlierN2placements\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 remain separate, never duplicate/relevel. Physicalphone/generalrelease/whole-set outstanding; projectincomplete.",
+  "correctionCheckpoint": {
+    "execution": 749,
+    "initialTeachingSnapshot": "5a52b28e9f6f506171c5041bd52b0d9f8c261323",
+    "decisions": "batch-100-correction-decisions.json",
+    "originalAuthoringPlanUnchanged": true,
+    "changedTreeConfirmations": "pending",
+    "supplementFamilies": 12,
+    "supplementRawCharacterRecords": 2
+  }
 }

@@ -1,0 +1,42 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\d9449cde-a292-4325-a8ad-908806a2ac62"
+Set-Location $root
+& "$control\preflight-749.ps1"
+if (-not $?) { throw 'Parent preflight failed' }
+if ((git rev-parse HEAD).Trim() -ne 'b799e904d379466b8b7a034d10d906b06644fefd' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git rev-parse origin/main).Trim() -ne '716c610153234e8d2240dcf528de3ef83b654b27') { throw 'Unexpected main' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 748 -or $progress.batch -ne '100' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+$allowed = @('kanji/創.md', 'manifest.json', 'docs/n1-sources/batch-100-progress.json', 'docs/n1-reviews/batch-100-reconciliation.json')
+foreach ($change in @(git -c core.quotepath=false status --porcelain --untracked-files=all)) {
+    $name = $change.Substring(3)
+    if ($name -notin $allowed -and $name -notlike 'docs/n1-sources/batch-100-correction-*' -and
+        $name -ne 'docs/n1-sources/execution-749.json') { throw "Unaccounted change: $change" }
+}
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch test_validate.ValidateTests.test_kanji_quiz_exclusions_are_optional_and_one_sided test_validate.ValidateTests.test_kanji_quiz_exclusions_reject_malformed_or_shadowed_fields test_validate.ValidateTests.test_kanji_quiz_exclusions_validate_ids_and_curated_conflicts test_validate.ValidateTests.test_kanji_exclusion_checks_preserve_unrelated_legacy_keys test_validate.ValidateTests.test_kanji_quiz_exclusions_require_exact_case_even_on_windows test_validate.ValidateTests.test_kanji_quiz_exclusions_reject_unicode_noncharacters_even_if_file_exists test_validate.ValidateTests.test_curated_readings_allow_empty_or_linked_exact_subsets test_validate.ValidateTests.test_curated_readings_reject_malformed_or_non_subset_declarations test_validate.ValidateTests.test_curated_example_must_be_in_its_reading_row_not_elsewhere_or_in_code *> "$log\tests-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source/kanji-exclusion/curated-reading tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B "$control\correct-batch-100-749.py" audit *> "$log\audit-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Correction audit failed' }
+git diff --check *> "$log\whitespace-749.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\tests-749.txt" -Tail 4
+Get-Content "$log\validate-749.txt" -Tail 2
+Get-Content "$log\budget-749.txt" -Tail 2
+Get-Content "$log\vocabulary-749.txt" -Tail 2
+Write-Output 'Local changed-tree correction checks passed; no new reviewer, native execution or publication.'
