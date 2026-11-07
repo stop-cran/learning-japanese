@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "batch": "092",
+  "baseCommit": "2186eda1bf306c7cc16c1ceca80d273dd893a0bd",
+  "freshOriginMainAtPreparation": "2186eda1bf306c7cc16c1ceca80d273dd893a0bd",
+  "status": "source-prepared-not-drafted",
+  "membership": ["刈"],
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceReadingOrder": {
+    "onyomi": ["ガイ", "カイ"],
+    "kunyomi": ["か.る"]
+  },
+  "readingDispositions": [
+    {
+      "kanji": "刈",
+      "kind": "on",
+      "reading": "ガイ",
+      "proposedQuizSelection": false,
+      "sourceOnly": false,
+      "example": "刈除 がいじょ — removal; cutting off; mowing",
+      "entryIds": ["1209550"],
+      "qualification": "A verified dictionary compound, not a missing reading or an invented everyday example. Retain as recognition material. The introductory card can teach useful かる through existing support without adding a separate article merely to activate an on prompt. This is a bounded usefulness decision, not a frequency ranking or a claim that the reading is obsolete.",
+      "evidence": "Complete frozen JMdict1209550 records がいじょ and かいじょ without restrictions. Actual Jitsu heading 刈除 がいじよ supports the former reading and removal sense. Preserve its printed kana separately from normalized modern がいじょ."
+    },
+    {
+      "kanji": "刈",
+      "kind": "on",
+      "reading": "カイ",
+      "proposedQuizSelection": false,
+      "sourceOnly": false,
+      "example": "刈除 かいじょ — removal; cutting off; mowing",
+      "entryIds": ["1209550"],
+      "qualification": "Frozen JMdict explicitly recognizes this alternative whole-word reading. Do not treat the public Jitsu がいじよ heading as evidence for カイ, or absence of that heading as a contradiction. Keep this unselected recognition example without manufacturing frequency, register or conversational utility.",
+      "evidence": "Full KANJIDIC2 character record preserves カイ second; complete frozen JMdict1209550 has unrestricted かいじょ. No separate public カイ verification claimed."
+    },
+    {
+      "kanji": "刈",
+      "kind": "kun",
+      "reading": "か.る",
+      "proposedQuizSelection": true,
+      "sourceOnly": false,
+      "example": "刈る かる — mow; clip; reap",
+      "entryIds": ["1209540"],
+      "qualification": "Reuse actual existing N3 article, native transitive godan verb. The character supplies か and written る is okurigana; inflected 刈ります/刈った/刈らない do not establish extra dictionary readings. Useful grass/hair/crop contexts are already taught. Do not generalize to every harvesting method or every object of 切る.",
+      "evidence": "Complete frozen JMdict1209540, including rare alternative spelling 苅る, and actual Daijisen/Nikkoku か・る headings with grass/hair examples. Existing words/刈る.md read completely; primary reading, level, title and original exclusions preserved."
+    }
+  ],
+  "proposedCuratedProjection": {
+    "kanji": "刈",
+    "quizOnyomi": [],
+    "quizKunyomi": ["か.る"],
+    "onKeys": [],
+    "kunKeys": ["かる"],
+    "limits": "Proposed exact raw-string subsets only; full ガイ/カイ and か.る remain in order. Compatible curated-reading client required. No runtime prompt or started-key acceptance claimed."
+  },
+  "proposedSupportMapping": [
+    {
+      "kanji": "刈",
+      "article": "words/刈る.md",
+      "word": "刈る",
+      "primaryReading": "かる",
+      "entryId": "1209540",
+      "selectedSenses": [1],
+      "newArticle": false,
+      "allWrittenKanji": ["刈"],
+      "preservedWordJlpt": 3,
+      "disposition": "Reuse actual lexical identity. Only its activated component link and one tightly coupled direct quiz safeguard are proposed; no new supporting article is necessary."
+    }
+  ],
+  "proposedReciprocalPairs": [["刈", "words/刈る.md"]],
+  "proposedDirectedLinkPlan": [
+    {"from": "kanji/刈.md", "to": "words/刈る.md", "reason": "Selected か.る row and useful common-word navigation."},
+    {"from": "words/刈る.md", "to": "kanji/刈.md", "reason": "Activated baseline pair; link the existing substantive component explanation."}
+  ],
+  "requiredDirectionCount": 2,
+  "alreadyExistingRequiredDirections": [],
+  "activatedBaselinePairs": [
+    {"kanji": "刈", "article": "words/刈る.md", "word": "刈る", "primaryReading": "かる", "status": "unverified-candidate"}
+  ],
+  "proposedReusedChanges": [
+    {
+      "article": "words/刈る.md",
+      "before": "刈 represents cutting or reaping.",
+      "after": "[刈](../kanji/刈.md) represents cutting or reaping.",
+      "reason": "Navigation-only activated component link; preserve existing native-stem explanation and all other teaching."
+    },
+    {
+      "article": "words/刈る.md",
+      "before": "quiz_exclusions: [切る]",
+      "after": "quiz_exclusions: [切る, 収穫]",
+      "reason": "Necessary direct harvest/reap label safeguard for mapped support; preserve original 切る guard. Existing inbound 剃る and 取り入れる guards do not protect 刈る/収穫."
+    }
+  ],
+  "proposedQuiz": {
+    "kanjiTitle": "mow; reap",
+    "distractors": ["乃", "凹", "凸"],
+    "labels": ["thereupon; possessive no", "concave; sunken", "convex; protruding"],
+    "rationale": "Three existing same-level semantically wrong choices. None of their complete character records, lexical families or current articles supplies mowing/reaping. Similar low-stroke outlines alone are not semantic evidence.",
+    "unsafeComparisons": [
+      {"kanji": "切", "label": "cut", "disposition": "Meaningful broader-cutting contrast, NOT a wrong answer for 刈. Existing 切 already has three curated distractors, so no new default-four fallback repair is needed."},
+      {"kanji": "刀", "label": "sword; blade", "disposition": "Explain indexing radical 刀 and visible right-hand 刂 without treating the whole 刈 as a sword noun. Prefer three unrelated labels above."}
+    ],
+    "proposedDirectExclusions": [
+      {
+        "word": "刈る",
+        "exclude": ["切る", "収穫"],
+        "newPairs": [["刈る", "収穫"]],
+        "evidence": "JMdict1209540 harvesting/reaping sense and1330510 harvest/crop sense; current labels mow; clip; reap versus harvest; fruitful result. The ordinary crop sense can make the displayed labels defensible for either word; no unrestricted substitution is asserted."
+      }
+    ],
+    "existingInboundGuards": [
+      {"word": "剃る", "excludeContains": "刈る", "reason": "Existing hair-removal overlap safeguard retained unchanged."},
+      {"word": "取り入れる", "excludeContains": "刈る", "reason": "Existing harvest overlap safeguard retained unchanged."}
+    ],
+    "notAutomaticallyExcluded": [
+      {"word": "削る", "reason": "Its shave; pare; cut down title concerns surface material/reductions, not an ordinary mowing/reaping label. Shared cutting/removal topic is insufficient to create a clique."},
+      {"word": "稲", "reason": "Rice plant is the object of reaping, not the action."}
+    ],
+    "limits": "Bounded author audit and proposed safeguard only; complete final draft and every affected label remain subject to independent review and native checks."
+  },
+  "originDisposition": "Use structure-unclassified, no phonetic field, and a labelled modern-shape mnemonic: two crossed strokes on the left beside the upright knife form 刂 on the right, imagining clipping growth. Canonical radical stays 刀/no18. Pinned KanjiVG explicitly marks right 刂 as variant/original刀; its phonetic annotation is source data, not a historical teaching claim. Do not assert scissors etymology or transfer all historical Jitsu meanings into a modern core card.",
+  "proposedHanText": "刈 刂 刀 切 乃 凹 凸 刈る 刈除 草 髪 稲 稲刈り 庭 夏 短 収穫 剃る 削る 取り入れる",
+  "dictionaryPackets": [
+    {"xml": "batch-092-jmdict.xml", "selection": "batch-092-lexical-selection.json"},
+    {"xml": "batch-092-comparison-jmdict.xml", "selection": "batch-092-comparison-selection.json"}
+  ],
+  "pendingGates": [
+    "Bounded runtime draft, linked selected-reading row, pinned converter output, exact reused changes, final Han inventory, direct guards, baseline/link/reading/quiz audits, validator and regenerated manifest.",
+    "Normal signed LOCAL UNREVIEWED freeze; no unreviewed content push.",
+    "Two serial blind initial reviewers from different actually available model families on one frozen snapshot, including complete reused support and actual changed passages; preserve process/read limits and reconcile with original sessions.",
+    "Fresh non-skipped RealContentTest and RareHanTest on qualified dedicated Android, actual new-Han/four-font native rendering, production full ContentSync ONCE with unchanged limits, curated keys, meaning/drawing/article/Back/offline assertions and dependent original-session rendered confirmation.",
+    "Current-main integration and combined checks, normally signed acceptance, owner-scoped fast-forward publication, terminal green CI, EVERY immutable public ZIP runtime hash and unchanged entry/compressed/inflated/retained/per-file/path/media budgets.",
+    "Physical-phone/general-release and whole-set acceptance remain explicitly outstanding."
+  ],
+  "nextAction": "Resume SAME092 bounded runtime draft from the signed source-only checkpoint: new 刈 and generated stroke, existing N3 刈る component link plus direct 収穫 safeguard only, no new support word. Preserve full ガイ/カイ/か.る order; proposed []/[か.る] and both unselected 刈除 readings; one all-mapped pair/two directions. Read complete packets/evidence and actual reused passages. Run validator/build_manifest and focused source/baseline/link/font/stroke/quiz audits, then normally signed LOCAL UNREVIEWED freeze only. No reviewers, Android/native, publication or093 at that draft checkpoint. Approved control/committed evidence/frozen inputs only; parent19008 retains runner.lock, no child acquisition/deletion/unlocking. Preserve/report/yield actual new denial, signing hang or uncertain ownership. All original acceptance gates remain.",
+  "limits": [
+    "Source preparation only; runtime drafted/reviewClosed/published arrays are empty. No independent reviewer, fresh Android/native/font/phone acceptance or publication is claimed.",
+    "All dictionary families are complete, but author inspection is not independent review or native-speaker certification. Archive hashes establish bytes, not comprehension.",
+    "The public Jitsu 刈除 heading corroborates がいじょ only; カイ remains supported by the frozen complete JMdict/KANJIDIC2, not by an invented external heading. Curation is bounded usefulness, not a frequency claim.",
+    "Proposed Han and font cmaps are preflight only. Cmap presence/absence does not establish glyph legibility or actual fallback font identity.",
+    "Qualified TESTONLY Android1c1b7bf4 retains productionf9b59a2, NOT latest app main; historical native/Paint/injected-trace/MLKit/process/source-read qualifications remain unchanged.",
+    "118 issue60 additions published,1110 acceptance-remainder; six separately placed source members retain N2 and are not counted as accepted issue60 additions. No earlier deferred row is silently closed."
+  ]
+}
