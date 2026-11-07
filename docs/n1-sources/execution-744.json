@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "execution": 744,
+  "batch": "099",
+  "status": "published-verified-bounded-compatible-client-owner-testing",
+  "startingState": {
+    "execution": 744,
+    "batch": "099",
+    "startedAt": "2026-11-07T18:23:32.249915+00:00",
+    "startingHead": "93576e000175a2fcef04130ee6184769c4dd73f8",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "2d3a3fa022d48aca6ea8a2ac629bd7ee66b85f9f",
+    "scope": "SAME099 owner publication, exact remote/terminal CI/public ZIP/verified owner issue and durable checkpoint; yield before100.",
+    "request": {
+      "sha256": "c2234627cad3da7ed3578fac009c61c94a83fdb4acf7cd2960b3b7a35d784bf6",
+      "bytes": 5129001,
+      "characters": 5064019,
+      "lines": 67638,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and embedded checkpoint parsed; operative contract, entire approved issue and final743 inspected directly. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerLockRole": {
+      "parentPid": 5920,
+      "session": "cf779820-280a-4e99-a787-a7395b8150af",
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "parentLockTouched": false,
+      "ancestry": [
+        {
+          "pid": 2368,
+          "parent": 18892,
+          "name": "python.exe"
+        },
+        {
+          "pid": 18892,
+          "parent": 2584,
+          "name": "pwsh.exe"
+        },
+        {
+          "pid": 2584,
+          "parent": 5920,
+          "name": "copilot.exe"
+        },
+        {
+          "pid": 5920,
+          "parent": 11504,
+          "name": "pwsh.exe"
+        }
+      ]
+    },
+    "runtime": {
+      "runtimeHashesVerified": 8451,
+      "contentVersion": "39eb4a86902c6dec",
+      "manifestSha256": "a7d9f6405223cc06469558ea555a9b316c55f8decd21936e7b778b50fbdf66fa",
+      "manifestFresh": true,
+      "compiled739ArchiveSha256": "a4fc236ac601ee7d3039efdf38b0c731cac759f9492de912a891478917718bc1",
+      "everyNativeArchivePayloadEqual": true,
+      "runtimeChanged": false
+    },
+    "actualNewPermissionDenials": [],
+    "artifactPathPreflight": "Approved control and committed evidence/frozen inputs only; no optional historical-session recipes accessed.",
+    "diagnostics": [
+      "Initial request display hit cp1252 UnicodeEncodeError after successful complete decode/parse; ASCII/UTF-8 serialization used thereafter."
+    ]
+  },
+  "publicationRecord": "batch-099-publication.json",
+  "acceptedCommit": "93576e000175a2fcef04130ee6184769c4dd73f8",
+  "runtimeBytesUnchanged": true,
+  "runtimeAccepted": true,
+  "runtimePublished": true,
+  "counts": {
+    "kanji": 1122,
+    "words": 5073,
+    "n1Labels": 131,
+    "namedSourceMembersPresent": 136,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 126,
+    "remainingAdditions": 1102,
+    "batchNewNecessarySupportWords": 0,
+    "projectNewNecessarySupportWords": 124,
+    "batchChangedReusedArticles": 2,
+    "allMappedReciprocalPairs": 2,
+    "mappedDirectedLinks": 4,
+    "activatedBaselinePairs": 1
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42401118289,
+    "headSha": "93576e000175a2fcef04130ee6184769c4dd73f8",
+    "jobs": [
+      {
+        "completedAt": "2026-11-07T18:26:01Z",
+        "conclusion": "success",
+        "databaseId": 128488856578,
+        "name": "validate",
+        "startedAt": "2026-11-07T18:24:18Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-07T18:24:19Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-07T18:24:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:21Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-07T18:24:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:22Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-07T18:25:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:28Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-07T18:25:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:44Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-07T18:25:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:56Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-07T18:25:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:57Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-07T18:25:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:58Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-07T18:25:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:59Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-07T18:25:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:59Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-07T18:25:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:59Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-07T18:25:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T18:25:59Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-07T18:25:59Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42401118289/job/128488856578"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "93576e000175a2fcef04130ee6184769c4dd73f8",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/93576e000175a2fcef04130ee6184769c4dd73f8",
+    "sha256": "30165e59df148dc776819e08c3fed068dff76bc0eadb5374aa7939299b67822f",
+    "manifestEqual": true,
+    "contentVersion": "39eb4a86902c6dec",
+    "verifiedRuntimeHashes": 8451,
+    "zipEntries": 8473,
+    "compressedBytes": 30863024,
+    "inflatedBytes": 44642117,
+    "retainedBytes": 44373779,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "newReviewerNativeHostRuns": 0,
+  "actualNewPermissionDenials": [],
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "original733734Retroaccepted": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false
+}
