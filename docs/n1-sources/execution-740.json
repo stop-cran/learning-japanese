@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "execution": 740,
+  "batch": "099",
+  "stage": "fresh-guard-host-six-cases-passed-native-still-pending",
+  "recordedAt": "2026-11-07T17:46:54.132798+00:00",
+  "startingState": {
+    "execution": 740,
+    "batch": "099",
+    "startedAt": "2026-11-07T17:41:37.237891+00:00",
+    "startingHead": "9a38800b37e9deaebcc10de0818af310850eee98",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "2d3a3fa022d48aca6ea8a2ac629bd7ee66b85f9f",
+    "scope": "Fresh signed-current-head HOST3+1 and two one-sided meaning exclusion ViewModel regressions; signed LOCAL evidence checkpoint only. No native/reviewer/runtime edit/publication/100.",
+    "request": {
+      "sha256": "400435e52bd5871dbb3a453478b8db26dcc196a59624f6c85ad8ef08985ba99b",
+      "bytes": 5098844,
+      "characters": 4966706,
+      "lines": 67194,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded and checkpoint parsed; operative contract, complete issue and final checkpoint inspected. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerPreflight": {
+      "execution": 740,
+      "sessionId": "206bc5c9-88b3-4455-ba01-f7a4dec8ca7f",
+      "verifiedAt": "2026-11-07T17:41:34.2961531+00:00",
+      "ancestry": [
+        9804,
+        11468,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 739,
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "lockTouched": false,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe."
+    },
+    "artifactPathPreflight": "Approved control and committed evidence only; no optional historical-session recipes accessed.",
+    "actualNewPermissionDenials": []
+  },
+  "command": {
+    "execution": 740,
+    "arguments": [
+      ":core:test",
+      "--tests",
+      "io.github.stopcran.kanji.core.RealContentTest",
+      ":app:testDebugUnitTest",
+      "--tests",
+      "io.github.stopcran.kanji.core.RareHanTest",
+      "--tests",
+      "io.github.stopcran.kanji.ui.QuizViewModelTest.ordinaryCardsRetainOneSidedMeaningExclusions",
+      "--tests",
+      "io.github.stopcran.kanji.ui.QuizViewModelTest.borrowedPaddingCardsRetainOneSidedMeaningExclusions",
+      "--no-daemon",
+      "--no-parallel",
+      "--max-workers=1",
+      "--rerun-tasks",
+      "-Pkotlin.compiler.execution.strategy=in-process",
+      "--init-script",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle"
+    ],
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "ANDROID_HOME": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk",
+    "contentHead": "9a38800b37e9deaebcc10de0818af310850eee98",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "startedAt": "2026-11-07T17:41:51.8009875+00:00",
+    "parentLockTouched": false,
+    "hostOnlyHeapInitSha256": "438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24",
+    "nativeExecuted": false
+  },
+  "exitCode": 0,
+  "result": "BUILD SUCCESSFUL in 4m 17s",
+  "tests": [
+    {
+      "name": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-07T17:43:19.532Z",
+      "caseNames": [
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "a4c81ab288bebb81a1af016e756d6b939f883850b06abd450e86bb2dc1bdab3a"
+    },
+    {
+      "name": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-07T17:45:59.240Z",
+      "caseNames": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "sha256": "9c5329043f71968f8dc2029a48f33db6a154735cf493cd3f38a34d176fc4e36d"
+    },
+    {
+      "name": "io.github.stopcran.kanji.ui.QuizViewModelTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-07T17:46:01.614Z",
+      "caseNames": [
+        "borrowedPaddingCardsRetainOneSidedMeaningExclusions",
+        "ordinaryCardsRetainOneSidedMeaningExclusions"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.ui.QuizViewModelTest.xml",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/TEST-io.github.stopcran.kanji.ui.QuizViewModelTest.xml",
+      "sha256": "4fa78960f738ff744ba233e92ef17fcdf3b6f558ced30493d0ad35e195b3f482"
+    }
+  ],
+  "totalTests": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "allTestsFreshAfterCommandStart": true,
+  "rerunTasks": true,
+  "oneWorker": true,
+  "parallel": false,
+  "compilerInProcess": true,
+  "hostOnlyHeapInitUnchanged": true,
+  "contentFixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+  "verifiedRuntimeHashes": 8451,
+  "hashContract": "Repository-standard CRLF-to-LF normalization for text; binary sections byte-for-byte. All current normalized payloads equal the compiled739 archive.",
+  "manifestEqualToCompiled739Archive": true,
+  "archiveSha256": "a4fc236ac601ee7d3039efdf38b0c731cac759f9492de912a891478917718bc1",
+  "provenance": [
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\preflight-740.ps1",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/preflight-740.ps1.txt",
+      "sha256": "1858726865359ff24900c4adf323e16e638f84b7b86eec83f6b4ef27d4e8d4fa"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-740-host.ps1",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/run-740-host.ps1.txt",
+      "sha256": "55d1f3cfbe9a90de35f0a5dda4be05033efc5bafb9cc297ef8f8bdc12f7d5873"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\checkpoint-host-740.py",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/checkpoint-host-740.py.txt",
+      "sha256": "578a4d1b21b31ba4437112cdb2bcce6a9f2134fd0dc91ca6d0679fb11d4427db"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\206bc5c9-88b3-4455-ba01-f7a4dec8ca7f\\preflight-740.json",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/preflight-740.json",
+      "sha256": "224cb3d7c8991c76e2f5aab20419e9167f5d810d941bc37082a40a4a3935975d"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\206bc5c9-88b3-4455-ba01-f7a4dec8ca7f\\preflight-740-host.json",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/preflight-740-host.json",
+      "sha256": "c7f7fb546993e21464356ab44928a7a255a0711094a091051398971e608b546b"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\206bc5c9-88b3-4455-ba01-f7a4dec8ca7f\\host-740-command.json",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/command.json",
+      "sha256": "6c5a8a45a033c9f71c0415461ae037ef1adfd69a5dcba74e6522c61a73cdbb95"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\206bc5c9-88b3-4455-ba01-f7a4dec8ca7f\\host-740-exit.txt",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/exit.txt",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\206bc5c9-88b3-4455-ba01-f7a4dec8ca7f\\host-740-end.txt",
+      "archive": "docs/n1-reviews/batch-099-guard-host-740/end.txt",
+      "sha256": "1e1e172b6e65ad868184efb8ad9d6438529606e32fffe2582abee02a8fc5b39f"
+    }
+  ],
+  "buildLog": {
+    "archive": "docs/n1-reviews/batch-099-guard-host-740/gradle.txt.gz",
+    "sha256": "1a4a6aae75b6542796e579980e092e977e8b61829ff07f6d461b001165b8a018",
+    "gzipSha256": "b9059408aac70f4589b24cc936368987e2984236835a72e8a2d9a8fa8af3fe92"
+  },
+  "freshHostTestsExecuted": true,
+  "nativeExecuted": false,
+  "nativeOrVisualAccepted": false,
+  "independentReviewersLaunched": 0,
+  "independentRenderedReviewClosed": false,
+  "runtimeChanged": false,
+  "manifestChanged": false,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "original733734Retroaccepted": false,
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "publishedAdditions": 125,
+  "remainingAdditions": 1103,
+  "lastPublishedCommit": "d5a376ee2b014aae3c47c58eea47b327e44be6d2",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "nextAction": "SAME099 execute exact already-compiled739 GuardGlyph/GuardArticle native cases with fresh owned-device/port/ancestry/signed-head/clean checks; both terminal cases0 and rendered inspection, original-session serial confirmations and all normal publication gates remain. No100/unreviewedpush.",
+  "limits": "Fresh host checks only. Not emulator/phone acceptance, native rendered/semantic review, publication, or full N1 completion. Original733/734 and Claude serialization deviation remain preserved.",
+  "diagnostics": [
+    "First evidence archival stopped at a raw-byte hash assertion on CRLF text; no content changed. Matched the existing build_manifest.py and preparation739 text-normalization contract, preserving byte-for-byte hashing of binary sections. Retained and verified the already copied three XML reports; no test rerun or weakened gate.",
+    "Gradle lifecycle-only UP-TO-DATE tasks are not test skips; both selected test task lines executed and all41 actionable tasks executed. XMLs independently prove six tests and zero skipped cases."
+  ]
+}
