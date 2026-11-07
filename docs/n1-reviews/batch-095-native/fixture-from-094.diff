@@ -1,0 +1,603 @@
+--- docs/n1-reviews/batch-094-native/N1Batch094NativeTest.kt
++++ N1Batch095NativeTest.kt
+@@ -52,22 +52,22 @@
+ import java.util.UUID
+ 
+-private fun disposable094() {
++private fun disposable095() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch094GlyphTest {
++class N1Batch095GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun shavingLookalikesAndScopedHanAcrossFourProductionFamilies() {
+-        disposable094()
++    @Test fun dissectionLookalikesAndScopedHanAcrossFourProductionFamilies() {
++        disposable095()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("一 不 中 予 余 刀 刂 切 刑 判 削 前", "加 取 外 掃 文 斫 日 曜 止 氵 消 添", "減 省 筆 算 肖 行 複 要 追 都 重 鉛", "阜 阝 降 院 除", "削 消 肖 刀 刂 斫 氵 阜 阝 前 判 刑 削る 削除 削ぐ")
++        val pages = listOf("事 亻 件 体 倍 刀 刂 分 剖 副 医 口", "問 学 料 析 査 検 構 牛 物 特 理 生", "立 角 解 誤 造 部 阝 題", "剖 部 倍 副 立 口 刀 刂 亻 阝 解 解剖 解剖学")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 094: shaving / look-alikes / scoped Han")
++                    Text("Batch 095: dissection / look-alikes / scoped Han")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -75,5 +75,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 41 scoped Han; focused 削/消/肖/刀/刂/斫/氵/阜/阝/前/判/刑. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 32 scoped Han; focused 剖/部/倍/副/立/口/刀/刂/亻/阝/解. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -86,5 +86,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("一", "不", "中", "予", "余", "刀", "刂", "切", "刑", "判", "削", "前", "加", "取", "外", "掃", "文", "斫", "日", "曜", "止", "氵", "消", "添", "減", "省", "筆", "算", "肖", "行", "複", "要", "追", "都", "重", "鉛", "阜", "阝", "降", "院", "除")) {
++            for (char in listOf("事", "亻", "件", "体", "倍", "刀", "刂", "分", "剖", "副", "医", "口", "問", "学", "料", "析", "査", "検", "構", "牛", "物", "特", "理", "生", "立", "角", "解", "誤", "造", "部", "阝", "題")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -107,5 +107,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("削る", "削除", "削ぐ")) {
++            for (word in listOf("解剖", "解剖学")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -134,5 +134,5 @@
+             }
+         }
+-        assertEquals(176, rows.length())
++        assertEquals(136, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -140,28 +140,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-094-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-095-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-094-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-095-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 164).put("wholeWordRasterProbes", 12).put("panels", 5)
+-            .put("limits", "41 actual scoped Han; 刂/斫/氵/阝 absent from all three bundled cmaps requires actual system fallback inspection, four production families, five bounded Compose panels and twelve whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 128).put("wholeWordRasterProbes", 8).put("panels", 4)
++            .put("limits", "32 actual scoped Han; 亻/刂/阝 absent from all three bundled cmaps requires actual system fallback inspection, four production families, four bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch094ArticleTest {
++class N1Batch095ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineShavingTwoReusedN2ThreeReciprocalPairsBothReadingsNineStrokesAndSystemBack() {
+-        disposable094()
++    @Test fun fullSingleImportOfflineDissectionOneNewSupportTwoReciprocalPairsOneOnNoKunTenStrokesAndSystemBack() {
++        disposable095()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-094-${UUID.randomUUID()}", "main")
+-        val head = "18ad4bed3264a7c30e04cd60edbd85264a5b39d8"
++        val source = RepoSource("acceptance-fixture", "n1-095-${UUID.randomUUID()}", "main")
++        val head = "cc74834756847ad23fad6a721bb0a02ca859fa99"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -171,5 +171,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-094-18ad4bed-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-095-cc748347-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -186,9 +186,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1117, updated.kanji)
+-        assertEquals(5070, updated.words)
++        assertEquals(1118, updated.kanji)
++        assertEquals(5071, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("eeae47753a460f72", meta.contentVersion)
++        assertEquals("463619d79972e9f2", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -198,35 +198,35 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(126, n1.size)
+-        val shaving = n1.single { it.kanji == "削" }
+-        assertEquals(listOf("前", "判", "刑"), shaving.distractors.splitSep())
+-        assertEquals(listOf("サク"), shaving.onyomi.splitSep())
+-        assertEquals(listOf("けず.る", "はつ.る", "そ.ぐ"), shaving.kunyomi.splitSep())
+-        assertNotNull(shaving.quizOnyomi)
+-        assertNotNull(shaving.quizKunyomi)
+-        assertEquals(listOf("サク"), shaving.quizOnyomi?.splitSep())
+-        assertEquals(listOf("けず.る"), shaving.quizKunyomi?.splitSep())
+-        assertEquals(listOf("さく"), shaving.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("けずる"), shaving.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(127, n1.size)
++        val dissection = n1.single { it.kanji == "剖" }
++        assertEquals(listOf("部", "倍", "副"), dissection.distractors.splitSep())
++        assertEquals(listOf("ボウ"), dissection.onyomi.splitSep())
++        assertEquals(emptyList<String>(), dissection.kunyomi.splitSep())
++        assertNotNull(dissection.quizOnyomi)
++        assertNotNull(dissection.quizKunyomi)
++        assertEquals(listOf("ボウ"), dissection.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), dissection.quizKunyomi?.splitSep())
++        assertEquals(listOf("ぼう"), dissection.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), dissection.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "削" to "shave; sharpen; pare", "刑" to "criminal punishment",
+-            "前" to "front, before", "判" to "judge; seal",
++            "剖" to "dissect; split open", "副" to "vice-; secondary",
++            "部" to "section; department", "倍" to "multiple; double",
+         )
+         val all = runBlocking { app.db.content().kanjiLite(source.id) }
+         assertEquals(n1.map { it.kanji }.toSet(),
+             all.filter { "jlpt-n1" in it.tags.splitSep() }.map { it.kanji }.toSet())
+-        val curatedIds = listOf("前", "判", "刑")
+-        assertEquals(listOf("刑"), curatedIds.filter { id -> n1.any { it.kanji == id } })
++        val curatedIds = listOf("部", "倍", "副")
++        assertEquals(emptyList<String>(), curatedIds.filter { id -> n1.any { it.kanji == id } })
+         val boundedCustom = all.filter { it.kanji in expectedMeanings }
+-        val randomSubset = listOf(shaving, n1.single { it.kanji == "刑" }) +
+-            n1.filter { it.kanji !in setOf("削", "刑") }.shuffled(kotlin.random.Random(681)).take(12)
++        val randomSubset = listOf(dissection) +
++            n1.filter { it.kanji != "剖" }.shuffled(kotlin.random.Random(693)).take(15)
+         val checkedPools = JSONArray()
+         for ((poolName, pool) in listOf("N1" to n1, "All" to all,
+             "boundedCustom" to boundedCustom, "randomN1Subset" to randomSubset)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "削" }
++            val target = cards.single { it.kanji == "剖" }
+             assertEquals(curatedIds, target.distractors)
+             val available = curatedIds.filter { id -> cards.any { it.kanji == id } }
+-            val expectedAvailable = if (poolName == "N1" || poolName == "randomN1Subset") 1 else 3
++            val expectedAvailable = if (poolName == "N1" || poolName == "randomN1Subset") 0 else 3
+             assertEquals(expectedAvailable, available.size)
+             repeat(16) { seed ->
+@@ -247,14 +247,10 @@
+         assertEquals(64, checkedPools.length())
+         val words = runBlocking { app.db.content().wordsLite(source.id) }.map { it.toCard() }
+-        val importedShave = words.single { it.word == "削る" }
+-        val importedDeletion = words.single { it.word == "削除" }
+-        assertEquals(listOf("切る", "減らす", "省く", "消す", "除く", "外す"), importedShave.quizExclusions)
+-        assertEquals(listOf("消す", "除く", "外す", "取る", "削る", "省く"), importedDeletion.quizExclusions)
+-        assertEquals("けずる", importedShave.reading)
+-        assertEquals("さくじょ", importedDeletion.reading)
+-        assertEquals(2, importedShave.jlpt)
+-        assertEquals(2, importedDeletion.jlpt)
++        val importedDissection = words.single { it.word == "解剖" }
++        assertEquals(listOf("分析", "分解", "検査"), importedDissection.quizExclusions)
++        assertEquals("かいぼう", importedDissection.reading)
++        assertNull(importedDissection.jlpt)
+         val directGuardChecks = JSONArray()
+-        val guardPairs = listOf("削る" to "除く", "削る" to "外す", "削除" to "省く")
++        val guardPairs = listOf("解剖" to "分析", "解剖" to "分解", "解剖" to "検査")
+         for ((leftId, rightId) in guardPairs) {
+             val left = words.single { it.word == leftId }
+@@ -297,5 +293,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "削") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "剖") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -303,5 +299,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "削" && ((kind == ReadingKind.On && key == "さく") || (kind == ReadingKind.Kun && key == "けずる"))) now - 60_000
++                            if (card.kanji == "剖" && (kind == ReadingKind.On && key == "ぼう")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -310,5 +306,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "削", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "剖", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -321,14 +317,14 @@
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(shaving.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(shaving.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(shaving.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(shaving.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(shaving.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(shaving.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(dissection.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(dissection.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(dissection.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(dissection.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(dissection.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(dissection.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; only 削 meaning and onさく/kunけずる due. Full raw readings and explicit curation retained. Two historical good 削 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; only 剖 meaning and onぼう due; no kun keys. Full raw readings and explicit curation retained. Two historical good 剖 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -337,137 +333,97 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 126 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 127 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("削")
+-            click("shave; sharpen; pare")
+-            await("削 — shave; sharpen; pare")
+-            show(articleBullet("Strokes: 9 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("剖")
++            click("dissect; split open")
++            await("剖 — dissect; split open")
++            show(articleBullet("Strokes: 10 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("削 concerns shaving or cutting material away. 削る けずる can mean sharpening a pencil by shaving it, reducing an amount, or deleting part of a text. In 削除 さくじょ, the focus is deletion or erasure, not necessarily a physical cut."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: Picture the 肖-shaped left part as a block with small marks above it, being shaved by the blade radical 刂 on the right. This invented scene is a memory aid, not a historical explanation or a verified phonetic analysis."), "kanji-04")
++            show(articleBullet("剖 concerns cutting something open or separating it to examine it. In 解剖 かいぼう, it contributes the idea of dissecting; the whole word also has a figurative \"analysis\" sense. Do not use 剖 as a standalone replacement for the general verb 分ける わける, \"divide; separate.\""), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: Picture the stacked 立-over-口 shape on the left as something opened by the blade-shaped 刂 on the right. This invented scene helps distinguish the modern shape; it is not a historical or phonetic explanation."), "kanji-04")
+             section("Readings")
+-            show(readingExample("サク"), "kanji-09")
+-            show(readingExample("削除 さくじょ — deletion; erasure"), "kanji-11")
+-            show(readingExample("けず.る"), "kanji-12")
+-            show(readingExample("削る けずる — shave; sharpen; pare; cut down"), "kanji-14")
+-            show(readingExample("はつ.る"), "kanji-15")
+-            show(readingExample("削る はつる — shave off, especially concrete; usually written はつる; also written 斫る in construction"), "kanji-17")
+-            show(readingExample("そ.ぐ"), "kanji-18")
+-            show(readingExample("削ぐ そぐ — chip, shave or slice off"), "kanji-20")
+-            show(articleBullet("This card selects サク and けず.る for reading questions. The other two readings remain useful recognition information, not invalid or obsolete pronunciations. The dots mark the written ending: 削る has る outside the kanji, while 削ぐ has ぐ."), "kanji-21")
++            show(readingExample("ボウ"), "kanji-09")
++            show(readingExample("解剖 かいぼう — dissection; autopsy; figurative analysis"), "kanji-11")
++            show(articleBullet("This card selects ボウ for reading questions. The frozen KANJIDIC2 record has no kunyomi. Other dictionaries also record ホウ; that does not make it an invalid reading, but it is outside this card's source reading list."), "kanji-12")
+             section("Common words")
+-            show(articleBullet("削る けずる — shave; sharpen; cut down"), "kanji-23")
+-            show(articleBullet("削除 さくじょ — deletion; erasure"), "kanji-24")
+-            show(articleBullet("削減 さくげん — reduction; cut"), "kanji-25")
+-            show(articleBullet("添削 てんさく — correction of writing"), "kanji-26")
+-            show(articleBullet("Two practical uses of けずる are 鉛筆を削る (えんぴつをけずる), \"sharpen a pencil,\" and 予算を削る (よさんをけずる), \"cut the budget.\""), "kanji-27")
++            show(articleBullet("解剖 かいぼう — dissection; autopsy; analysis"), "kanji-14")
++            show(articleBullet("解剖学 かいぼうがく — anatomy, the field of study"), "kanji-15")
+             section("Notes")
+-            show(articleBullet("The indexing radical is 刀; its visible form here is 刂. 消 also has a 肖-shaped part, but its left side is 氵 rather than the right-side 刂 of 削. Erasing and deleting meanings can overlap; these shapes do not create an absolute semantic boundary."), "kanji-29")
+-            show(articleBullet("The spelling 削る can represent the separate verb はつる as well as けずる. The linked word article teaches けずる. JMdict's \"take a percentage\" sense belongs to its separate はつる entry, not the けずる lesson."), "kanji-30")
+-            show(articleBullet("削ぐ そぐ is another verb, not a different spelling of けずる. It also has figurative weakening or dampening uses; JMdict marks those senses as usually written in kana, not every physical use of 削ぐ."), "kanji-31")
+-            show(articleBullet("Compare the right-side 刂 in 前, 判 and 刑. Their meanings are not shaving or sharpening; a shared radical does not make the words interchangeable."), "kanji-32")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1298040, 1298090, 1298100, 1298110, 1298120, 1440850 and 1915010. Reading allocation and usage: Digital Daijisen, 削, 削る and 削除."), "kanji-33")
++            show(articleBullet("The indexing radical is 刀; its right-hand form here is 刂."), "kanji-17")
++            show(articleBullet("部, \"section; department,\" has the same stacked left shape but right-hand 阝 instead of 刂. 倍, \"multiple; double,\" has left-hand 亻 beside the stacked shape. 副, \"vice-; secondary,\" shares the right-hand 刂 but has a different left block."), "kanji-18")
++            show(articleBullet("分 and 解 also have separating or dividing associations. Those related meanings do not make all their words interchangeable."), "kanji-19")
++            show(articleBullet("解剖 is not limited to investigating a cause of death: it can concern learning a body's structure, and it can figuratively analyze a case."), "kanji-20")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1199270 and 1199280. Reading allocation and usage: Digital Daijisen, 剖 and 解剖."), "kanji-21")
+             section("Common words")
+-            show(articleBullet("削る けずる — shave; sharpen; cut down"), "kezuru-forward")
+-            inline(await(articleBullet("削る けずる — shave; sharpen; cut down")), "削る", 0)
++            show(articleBullet("解剖 かいぼう — dissection; autopsy; analysis"), "kaibou-forward")
++            inline(await(articleBullet("解剖 かいぼう — dissection; autopsy; analysis")), "解剖", 0)
+             await("Article contents")
+-            await("削る (けずる) - shave; pare; cut down")
++            await("解剖 (かいぼう) — dissection; autopsy; analysis")
+             section("Meaning")
+-            show(articleBullet("削る means shaving or scraping material away, including sharpening a pencil. It also means cutting down an amount, such as a budget, expenses, or time. This is a transitive godan verb: 削ります, 削って, 削らない."), "kezuru-02")
+-            show(articleBullet("ナイフで鉛筆を削ります。 (ナイフでえんぴつをけずります。) - I sharpen a pencil with a knife."), "kezuru-03")
+-            show(articleBullet("予算を削りました。 (よさんをけずりました。) - We cut the budget."), "kezuru-04")
+-            show(articleBullet("A further use is deleting or striking out part of a text: 不要な一文を削りました。 (ふようないちぶんをけずりました。) - I deleted an unnecessary sentence. This deletion use is additional teaching, not a separate N2 assignment."), "kezuru-05")
++            show(articleBullet("解剖 means dissection: cutting open a body to examine its internal structure. Depending on the purpose and context, it can mean an autopsy or postmortem examination. It is not limited to finding a cause of death."), "kaibou-02")
++            show(articleBullet("医学生は解剖で体の構造を学びます。 (いがくせいはかいぼうでからだのこうぞうをまなびます。) — Medical students learn the body's structure through dissection."), "kaibou-03")
++            show(articleBullet("It also means analyzing something in detail to clarify its structure or causal relationships. Digital Daijisen gives the figurative example 事件を解剖する (じけんをかいぼうする), \"analyze a case.\""), "kaibou-04")
++            show(articleBullet("解剖 is a noun and a transitive する verb: Nを解剖する means to dissect or analyze N. The object and context distinguish physical dissection from figurative analysis."), "kaibou-05")
+             section("How the kanji combine")
+-            show(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings."), "kezuru-07")
++            show(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ."), "kaibou-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("減らす (へらす) more generally means reducing an amount. 省く (はぶく) overlaps in omission or cutting down; 消す (けす) overlaps in erasing. 切る (きる) has broader cutting uses, including reductions."), "kezuru-09")
++            show(articleBullet("分析 ぶんせき is analysis and does not imply a physical cut. It overlaps the figurative sense of 解剖. 分解 ぶんかい means taking apart or breaking down into components and also has an analysis sense."), "kaibou-09")
++            show(articleBullet("検査 けんさ is inspection, examination or testing more generally. A medical test is not automatically 解剖: 解剖 specifically brings in dissection in its physical sense. There is no single everyday opposite covering both the physical and figurative senses."), "kaibou-10")
+             section("Distinctive meaning")
+-            show(articleBullet("削る need not mean removing a large piece in one cut; shaving a surface is a central use. Nor does every use require repeated tiny reductions. The source list's \"take a percentage\" belongs to the separate reading はつる in JMdict, not this けずる entry. Do not learn it here as a general expression for charging commission."), "kezuru-11")
+-            show(articleBullet("Dictionary: JMdict, entry 1298090, selected senses 1-2 and additional sense 3; separate はつる entry 1298100, sense 2. Usage check: Daijisen, hosted by Weblio, separate けずる, はつる, and へずる entries."), "kezuru-12")
++            show(articleBullet("In medical or biological contexts, 解剖 identifies dissection or an autopsy, not every examination of a patient. In figurative use, it presents detailed analysis as opening something up to understand how it works."), "kaibou-12")
++            show(articleBullet("Distinguish 解剖学 (かいぼうがく), \"anatomy,\" the field of study, from a particular dissection or autopsy."), "kaibou-13")
++            show(articleBullet("Dictionary: JMdict, entry 1199270, senses 1–2, and entry 1199280; Digital Daijisen, 解剖, including the attributed figurative example. The medical-student sentence is an original illustration, not a quotation."), "kaibou-14")
+             section("How the kanji combine")
+-            show(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings."), "kezuru-reverse")
+-            inline(await(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings.")), "削", 0)
++            show(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ."), "bou-reverse")
++            inline(await(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ.")), "剖", 41)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("けず.る"), "kezuru-kanji-backlink")
+-            back()
+-            await(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings.")).assertIsDisplayed()
++            show(readingExample("ボウ"), "bou-kanji-backlink")
++            back()
++            await(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("kezuru-system-back-to-word")
+-            back()
+-            await(articleBullet("削る けずる — shave; sharpen; cut down")).assertIsDisplayed()
++            capture("bou-system-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ."), "kai-reverse")
++            inline(await(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ.")), "解", 0)
++            await("Article contents")
++            await("解 — unravel; solve")
++            show(articleBullet("Strokes: 13 · Key (radical): 角 (no. 148) · JLPT: N3 (community list)"), "kai-01")
++            section("Meaning and origin")
++            show(articleBullet("解 spans undoing a tangle and working something out. 理解 りかい concerns comprehension; 解く とく can mean untying something or solving a problem. This gives a useful learning connection between releasing a knot and resolving a difficulty, without making a historical claim."), "kai-03")
++            show(articleBullet("Modern-shape mnemonic: locate 角 on the left, with 刀 above 牛 on the right. Imagine taking a complicated arrangement apart. This is a modern memory scene, not verified etymology."), "kai-04")
++            section("Readings")
++            show(readingExample("カイ"), "kai-09")
++            show(readingExample("理解 りかい — understanding; 誤解 ごかい — misunderstanding"), "kai-11")
++            show(readingExample("と.く"), "kai-12")
++            show(readingExample("解く とく — untie; solve"), "kai-14")
+             section("Common words")
+-            capture("kezuru-system-back-to-kanji")
++            show(articleBullet("理解 りかい — comprehension"), "kai-16")
++            show(articleBullet("解く とく — untie; solve"), "kai-17")
++            show(articleBullet("誤解 ごかい — misunderstanding"), "kai-18")
++            show(articleBullet("解剖 かいぼう — dissection; autopsy; figurative analysis"), "kai-19")
++            section("Notes")
++            show(articleBullet("問題を解く (もんだいをとく) means \"solve a problem.\" Understanding a problem and solving it are related but not identical tasks. 物 and 特 put their cattle component on the left, unlike the lower-right 牛 here. 料 is only a looser dense-stroke contrast; it has neither the same left part nor the same layout."), "kai-21")
++            show(articleBullet("Metadata: KANJIDIC2."), "kai-22")
++            show(articleBullet("Vocabulary: JMdict, entries 1549910, 1198890, 1271310."), "kai-23")
+             section("Common words")
+-            show(articleBullet("削除 さくじょ — deletion; erasure"), "sakujo-forward")
+-            inline(await(articleBullet("削除 さくじょ — deletion; erasure")), "削除", 0)
+-            await("Article contents")
+-            await("削除 (さくじょ) - deletion; erasure")
+-            section("Meaning")
+-            show(articleBullet("削除 is deletion or elimination, especially removing writing, entries, or data. 削除する is transitive: the item removed takes を."), "sakujo-02")
+-            show(articleBullet("重複した行を削除しました。 (ちょうふくしたぎょうをさくじょしました。) - I deleted the duplicate line."), "sakujo-03")
+-            show(articleBullet("このファイルを削除してもいいですか。 (このファイルをさくじょしてもいいですか。) - May I delete this file?"), "sakujo-04")
+-            show(articleBullet("削除されたファイル (さくじょされたファイル) is \"a deleted file\"; された is passive."), "sakujo-05")
+-            section("How the kanji combine")
+-            show(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved."), "sakujo-07")
+-            section("Synonyms and antonyms")
+-            show(articleBullet("消す (けす) also covers erasing or deleting, as well as turning off lights. 除く (のぞく) is broader removal or exclusion. 追加 (ついか), \"addition,\" supplies a practical contrast when editing a list."), "sakujo-09")
+-            section("Distinctive meaning")
+-            show(articleBullet("The legacy source's \"cancellation\" should not make 削除する a general verb for canceling an event. 中止 (ちゅうし) concerns calling off or discontinuing an activity. Deleting a calendar entry and canceling the event itself are different actions. The word alone also does not promise that deleted data can be recovered."), "sakujo-11")
+-            show(articleBullet("Dictionary: JMdict, entry 1298120, sense 1. Usage: Digital Daijisen."), "sakujo-12")
+-            section("How the kanji combine")
+-            show(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved."), "sakujo-saku-reverse")
+-            inline(await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")), "削", 0)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("サク"), "saku-kanji-backlink")
+-            back()
+-            await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("saku-system-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved."), "sakujo-jo-reverse")
+-            inline(await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")), "除", 43)
+-            await("Article contents")
+-            await("除 — remove; exclude")
+-            show(articleBullet("Strokes: 10 · Key (radical): 阜 (as left-hand 阝, no. 170) · JLPT: N3 (community list)"), "jo-01")
+-            section("Meaning and origin")
+-            show(articleBullet("除 concerns taking something away or leaving it out. 除く のぞく can describe physical removal, but also an exception: 日曜日を除く (にちようびをのぞく), \"excluding Sundays.\""), "jo-03")
+-            show(articleBullet("Modern-shape mnemonic: imagine clearing the 余-shaped piece away from the left-hand 阝. This is a visual reminder of removal, not an etymology."), "jo-04")
+-            section("Readings")
+-            show(articleBullet("The table selects useful readings; the metadata preserves the complete source reading list."), "jo-06")
+-            show(readingExample("のぞ.く"), "jo-10")
+-            show(readingExample("除く のぞく — remove; exclude"), "jo-12")
+-            show(readingExample("ジョ"), "jo-13")
+-            show(readingExample("除外 じょがい — exclusion"), "jo-15")
+-            show(readingExample("ジ"), "jo-16")
+-            show(readingExample("掃除 そうじ — cleaning"), "jo-18")
+-            section("Common words")
+-            show(articleBullet("除く のぞく — remove; exclude"), "jo-20")
+-            show(articleBullet("除外 じょがい — exclusion"), "jo-21")
+-            show(articleBullet("掃除 そうじ — cleaning"), "jo-22")
+-            show(articleBullet("削除 さくじょ — deletion; erasure"), "jo-23")
+-            section("Notes")
+-            show(articleBullet("掃除 uses ジ, not ジョ; learn its whole reading そうじ. Excluding a day from a schedule does not remove that day from the calendar: the scope of the statement changes. 降 shares left-hand 阝 but not the 余 on its right."), "jo-25")
+-            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1345640, 1345650, 1399790."), "jo-26")
+-            section("Common words")
+-            show(articleBullet("削除 さくじょ — deletion; erasure"), "jo-sakujo-forward")
+-            inline(await(articleBullet("削除 さくじょ — deletion; erasure")), "削除", 0)
++            show(articleBullet("解剖 かいぼう — dissection; autopsy; figurative analysis"), "kai-kaibou-forward")
++            inline(await(articleBullet("解剖 かいぼう — dissection; autopsy; figurative analysis")), "解剖", 0)
+             await("Article contents")
+             section("Meaning")
+-            capture("jo-sakujo-backlink")
+-            back()
+-            await(articleBullet("削除 さくじょ — deletion; erasure")).assertIsDisplayed()
++            capture("kai-kaibou-backlink")
++            back()
++            await(articleBullet("解剖 かいぼう — dissection; autopsy; figurative analysis")).assertIsDisplayed()
+             section("Common words")
+-            capture("jo-system-back-to-kanji")
+-            back()
+-            await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")).assertIsDisplayed()
++            capture("kai-system-back-to-kanji")
++            back()
++            await(articleBullet("解 contributes undoing or separating, and 剖 contributes splitting open or dissecting. The related actions combine in the idea of opening something up to examine it. This is a meaning aid, not a reconstruction of the word's history. The on readings are カイ + ボウ.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("jo-system-back-to-word")
+-            back()
+-            await(articleBullet("削除 さくじょ — deletion; erasure")).assertIsDisplayed()
++            capture("kai-system-back-to-word")
++            back()
++            await(articleBullet("解剖 かいぼう — dissection; autopsy; analysis")).assertIsDisplayed()
+             section("Common words")
+-            capture("sakujo-system-back-to-kanji")
++            capture("kaibou-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -475,19 +431,18 @@
+             await("Meaning quiz")
+             evidence.put("reciprocalLinkAndSystemBack", true)
+-                .put("mappedReciprocalPairs", 3).put("directedLinkTransitions", 6).put("activatedBaselinePairs", 2)
+-                .put("completeArticleProjections", 4).put("changedReusedArticles", 3)
++                .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4).put("activatedBaselinePairs", 0)
++                .put("completeArticleProjections", 3).put("changedReusedArticles", 1)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("削", meaning.card.kanji)
++            assertEquals("剖", meaning.card.kanji)
+             assertEquals(4, meaning.options.size)
+             assertEquals(4, meaning.options.map { it.title }.toSet().size)
+-            assertEquals(1, meaning.options.count { it.kanji == "削" })
++            assertEquals(1, meaning.options.count { it.kanji == "剖" })
+             assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
+-            assertEquals("criminal punishment", meaning.options.single { it.kanji == "刑" }.title)
+-            assertFalse(meaning.options.any { it.kanji in setOf("前", "判") })
+-            assertEquals("shave; sharpen; pare", meaning.options.single { it.kanji == "削" }.title)
+-            assertEquals(listOf("前", "判", "刑"), meaning.card.distractors.splitSep())
++            assertFalse(meaning.options.any { it.kanji in setOf("部", "倍", "副") })
++            assertEquals("dissect; split open", meaning.options.single { it.kanji == "剖" }.title)
++            assertEquals(listOf("部", "倍", "副"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+             evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+@@ -495,10 +450,10 @@
+                     options.put(JSONObject().put("kanji", option.kanji).put("title", option.title))
+                 }
+-            }).put("actualN1CuratedAvailable", 1).put("actualN1FallbackOptions", 2)
++            }).put("actualN1CuratedAvailable", 0).put("actualN1FallbackOptions", 3)
+                 .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("shave; sharpen; pare")
++            click("dissect; split open")
+             await("Correct!")
+-            assertEquals("削", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("剖", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+@@ -506,13 +461,14 @@
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+             val answeredKeys = mutableSetOf<String>()
+-            repeat(2) {
++            repeat(1) {
+                 rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("削", question.card.kanji)
++                assertEquals("剖", question.card.kanji)
++                assertEquals(ReadingKind.On, question.question.kind)
+                 val key = question.question.correctKey
+-                assertTrue(key in setOf("さく", "けずる"))
++                assertTrue(key in setOf("ぼう"))
+                 assertTrue("Duplicate target reading key", answeredKeys.add(key))
+-                assertEquals(if (key == "さく") ReadingKind.On else ReadingKind.Kun, question.question.kind)
++                assertEquals(key, question.question.correctKey)
+                 assertFalse(question.question.options.any { it.key.isBlank() })
+                 assertEquals(1, question.question.options.count { it.key == key })
+@@ -524,34 +480,34 @@
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "削" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "剖" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf("さく", "けずる"), answeredKeys)
++            assertEquals(setOf("ぼう"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+-            assertEquals(2, done.answered)
+-            assertEquals(2, done.correct)
++            assertEquals(1, done.answered)
++            assertEquals(1, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "削" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "剖" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+-            assertEquals(2, readingLogs.size)
+-            assertEquals(setOf("さく", "けずる"), readingLogs.map { it.reading }.toSet())
+-            assertEquals(setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name), readingLogs.map { it.mode }.toSet())
+-            capture("curated-one-on-one-kun-done")
++            assertEquals(1, readingLogs.size)
++            assertEquals(setOf("ぼう"), readingLogs.map { it.reading }.toSet())
++            assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
++            capture("curated-one-on-no-kun-done")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("shave; sharpen; pare").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "削") })
+-            assertEquals(listOf("前", "判", "刑"), card.distractors.splitSep())
+-            assertEquals(listOf("サク"), card.onyomi.splitSep())
+-            assertEquals(listOf("けず.る", "はつ.る", "そ.ぐ"), card.kunyomi.splitSep())
++            await("dissect; split open").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "剖") })
++            assertEquals(listOf("部", "倍", "副"), card.distractors.splitSep())
++            assertEquals(listOf("ボウ"), card.onyomi.splitSep())
++            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("サク"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("けず.る"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ボウ"), card.quizOnyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -559,5 +515,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(9, strokes.length())
++            assertEquals(10, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -576,10 +532,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("9 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("10 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "削" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "剖" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -592,5 +548,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "削" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "剖" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -600,11 +556,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("onlySakuAndKezuruBothKindsPersistedGoodAndDone", true)
++                .put("onlyOnBouNoKunPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-094-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-094-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-095-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-095-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -699,5 +655,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-094-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-095-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
