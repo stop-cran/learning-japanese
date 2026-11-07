@@ -1,0 +1,162 @@
+import copy
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+from datetime import datetime, timezone
+
+CONTROL = Path(__file__).resolve().parent
+CONTENT = CONTROL.parent / "learning-japanese"
+ANDROID = CONTROL.parent / "kanji-cards-android"
+SESSION = "eaa2130a-161f-46c1-86f2-e1148f83a658"
+LOG = CONTROL / "logs" / SESSION
+ARCHIVE = CONTENT / "docs" / "n1-sources" / "batch-099-reader-recovery-738"
+HEAD = "9d17fd04c1c5b67194c78f4a555e5da41adba148"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write(path, value):
+    if path.exists():
+        raise RuntimeError(f"Refusing to overwrite evidence: {path}")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def git(repo, *args):
+    return subprocess.check_output(["git", "-C", str(repo), *args], text=True, encoding="utf-8").strip()
+
+
+def update(before, after, allowed):
+    for key, value in before.items():
+        if key not in allowed and after.get(key) != value:
+            raise RuntimeError(f"Historical value changed: {key}")
+    target = CONTROL / "progress.json"
+    if load(target) != before:
+        raise RuntimeError("Progress changed during update")
+    temporary = CONTROL / f"progress.json.738-{sys.argv[1]}.tmp"
+    write(temporary, after)
+    if load(temporary) != after:
+        raise RuntimeError("Serialization mismatch")
+    os.replace(temporary, target)
+    if load(target) != after:
+        raise RuntimeError("Persisted checkpoint mismatch")
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+mode = sys.argv[1]
+progress = load(CONTROL / "progress.json")
+require(progress["checkpoint"] == 737 and progress["batch"] == "099"
+        and progress["status"] == "continue", "Unexpected checkpoint")
+require(progress["remainingAdditions"] == 1103
+        and progress["lastPublishedCommit"] == "d5a376ee2b014aae3c47c58eea47b327e44be6d2",
+        "Publication counters changed")
+
+if mode == "start":
+    preflight = load(LOG / "preflight-738.json")
+    require(preflight["sessionId"] == SESSION and not preflight["lockTouched"], "Missing live preflight")
+    request_path = LOG / "request.txt"
+    request = request_path.read_text(encoding="utf-8-sig")
+    marker = "Current execution checkpoint (complete historical state remains at checkpointHistory paths):"
+    embedded = json.loads(request.split(marker, 1)[1])
+    require(embedded["checkpoint"] == 737, "Request checkpoint mismatch")
+    write(LOG / "progress-before-738.json", progress)
+    state = {
+        "execution": 738, "batch": "099",
+        "startedAt": datetime.now(timezone.utc).isoformat(),
+        "startingHead": HEAD, "qualifiedAndroidHead": APP,
+        "freshOriginMain": git(CONTENT, "rev-parse", "origin/main"),
+        "scope": "Archive parent reader-collision recovery, reproduction, exact observer regression and terminal app CI; normal signed LOCAL evidence and verified owner issue correction. Yield before new native preparation; no runtime edit/publication/reviewer/batch100.",
+        "request": {
+            "sha256": sha(request_path), "characters": len(request),
+            "lines": len(request.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+            "limits": "Entire request loaded and embedded checkpoint decoded. Operative contract, complete issue and final checkpoint inspected directly; historical middle parsed, not freshly semantically re-reviewed."
+        },
+        "runnerPreflight": preflight,
+        "artifactPathPreflight": "Approved workspace control, committed sources and frozen inputs only; no optional historical-session helper access.",
+        "actualNewPermissionDenials": []
+    }
+    after = copy.deepcopy(progress)
+    after["execution738StartingState"] = state
+    after["stage"] = "batch-099-archiving-parent-progress-reader-recovery"
+    update(progress, after, {"stage"})
+    print("Early starting state saved; all previous historical values retained.")
+elif mode == "archive":
+    require(git(CONTENT, "rev-parse", "HEAD") == HEAD, "Content head changed")
+    require(git(ANDROID, "rev-parse", "HEAD") == APP, "Android head changed")
+    require(not git(CONTENT, "status", "--porcelain") and not git(ANDROID, "status", "--porcelain"),
+            "Worktrees must be clean before evidence generation")
+    recovery = load(CONTROL / "batch-099-progress-reader-recovery-737.json")
+    for key in ("originalBlockedReceipt", "canonicalBefore", "intendedStartingStatePreserved",
+                "sharingReproduction", "exactObserverRegression", "supervisor", "operationalNotes"):
+        artifact = recovery[key]
+        require(sha(Path(artifact["path"])) == artifact["sha256"], f"Recovery artifact changed: {key}")
+    require(recovery["original737WasNotNativePreparation"]
+            and not recovery["runtimeAccepted"] and not recovery["runtimePublished"], "Wrong disposition")
+    ci = load(LOG / "app-main-ci-738.json")
+    require(ci["databaseId"] == 42394221803 and ci["headSha"] == "2edbf366a4a6fce594b2a6580bfc4252b98d3f6d"
+            and ci["status"] == "completed" and ci["conclusion"] == "success", "App CI not exact terminal green")
+    ARCHIVE.mkdir()
+    files = [
+        (CONTROL / "batch-099-progress-reader-recovery-737.json", "parent-recovery.json"),
+        (CONTROL / "progress-reader-lock-notes.txt", "progress-reader-lock-notes.txt"),
+        (CONTROL / "supervise.ps1", "supervise.ps1.txt"),
+        (CONTROL / "recover-737-progress-reader.ps1", "parent-only-recover-737.ps1.txt"),
+        (CONTROL / "test-progress-reader-sharing.ps1", "test-progress-reader-sharing.ps1.txt"),
+        (CONTROL / "test-snapshot-supervision.ps1", "test-snapshot-supervision.ps1.txt"),
+        (CONTROL / "artifacts" / "progress-reader-sharing-737-v2" / "result.json", "sharing-result.json"),
+        (CONTROL / "artifacts" / "snapshot-supervision-737" / "result.json", "observer-result.json"),
+        (CONTROL / "artifacts" / "snapshot-supervision-737" / "rollout-supervision-publications.jsonl", "observer-publication.jsonl"),
+        (CONTROL / "artifacts" / "snapshot-supervision-737" / "rollout-supervision.jsonl", "observer-checkpoint.jsonl"),
+        (CONTROL / "artifacts" / "snapshot-supervision-737" / "checkpoint-full.json", "observer-fixture-checkpoint.json"),
+        (LOG / "preflight-738.json", "preflight-738.json"),
+        (CONTROL / "preflight-738.ps1", "preflight-738.ps1.txt"),
+        (Path(__file__), "archive-batch-099-reader-recovery-738.py.txt"),
+        (LOG / "app-main-ci-738.json", "app-main-ci.json"),
+    ]
+    provenance = []
+    for source, name in files:
+        destination = ARCHIVE / name
+        destination.write_bytes(source.read_bytes())
+        require(sha(source) == sha(destination), "Archive byte mismatch")
+        provenance.append({"source": str(source), "archive": str(destination.relative_to(CONTENT)),
+                           "sha256": sha(source)})
+    evidence = {
+        "schemaVersion": 1, "execution": 738, "checkpoint": 738, "batch": "099",
+        "status": "continue", "stage": "parent-progress-reader-recovery-archived-native-preparation-pending",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "startingState": progress["execution738StartingState"],
+        "parentRecovery": recovery, "provenance": provenance, "freshAppMainPushCi": ci,
+        "evidenceLimits": [
+            "Original conflicting handle owner was not captured; isolated same-error reproduction does not prove retrospective attribution.",
+            "Parent test results archived and source/result consistency checked here, not freshly rerun or attributed to this child.",
+            "Parent-only recovery script is historical evidence only. This child never executed it or touched the parent lock.",
+            "No new fixture/archive/HOST/native/reviewer work in this bounded recovery-archival checkpoint.",
+            "Original 733/734 evidence and Claude per-tool-serialization deviation remain preserved, not retroaccepted.",
+            "Native helper737 has stale head, session, PID and preflight; reference only. Next fresh helper must bind actual signed head/current live ancestry."
+        ],
+        "runtimeChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "independentRenderedReviewClosed": False, "independentReviewersLaunched": 0,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "publishedAdditions": 125, "remainingAdditions": 1103,
+        "lastPublishedCommit": progress["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "SAME099 fresh guard-aware full-archive fixture preparation bound to the actual new signed content HEAD and qualified bf30cdea, then fresh changed-tree HOST/native/serial dependent reviewer and all original publication gates; no stale737 helper execution, unreviewed push or100."
+    }
+    write(CONTENT / "docs" / "n1-sources" / "execution-738.json", evidence)
+    print(f"Archived {len(provenance)} exact evidence artifacts; runtime untouched.")
+else:
+    raise RuntimeError(f"Unknown action: {mode}")

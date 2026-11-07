@@ -1,0 +1,52 @@
+$ErrorActionPreference = 'Stop'
+$directory = Join-Path $PSScriptRoot 'artifacts\snapshot-supervision-737'
+if (Test-Path -LiteralPath $directory) { throw 'Do not overwrite diagnostic evidence.' }
+New-Item -ItemType Directory -Path $directory | Out-Null
+$source = Join-Path $PSScriptRoot 'supervise.ps1'
+$copy = Join-Path $directory 'supervise.ps1'
+Copy-Item -LiteralPath $source -Destination $copy
+$snapshot = [ordered]@{
+    checkpoint = 736
+    status = 'continue'
+    stage = 'snapshot-regression-test'
+    batch = '099'
+    remainingAdditions = 1103
+    lastPublishedCommit = 'd5a376ee2b014aae3c47c58eea47b327e44be6d2'
+    batch098PublicationCheckpoint = @{
+        finalPublishedCommit = 'd5a376ee2b014aae3c47c58eea47b327e44be6d2'
+        ciRun = 42382732511
+    }
+}
+$runtime = @{
+    status = 'running'
+    pid = $PID
+    sessionId = 'snapshot-regression-test'
+    log = Join-Path $directory 'output.jsonl'
+}
+$snapshot | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $directory 'checkpoint-full.json') -Encoding utf8NoBOM
+$runtime | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $directory 'runner.json') -Encoding utf8NoBOM
+$live = Join-Path $directory 'progress.json'
+[IO.File]::WriteAllText($live, 'deliberately invalid and unreadable during this test')
+$locked = [IO.File]::Open($live, 'Open', 'ReadWrite', 'None')
+try {
+    & $copy -VerifyOnce
+} finally {
+    $locked.Dispose()
+}
+$publication = Get-Content -LiteralPath (Join-Path $directory 'rollout-supervision-publications.jsonl') -Raw | ConvertFrom-Json
+if ($publication.publishedCommit -ne $snapshot.lastPublishedCommit -or $publication.ciConclusion -ne 'success') {
+    throw 'Exact publication verification was not retained.'
+}
+$result = [ordered]@{
+    verifiedAt = [DateTimeOffset]::UtcNow.ToString('o')
+    productionSupervisorSha256 = (Get-FileHash -LiteralPath $source).Hash.ToLowerInvariant()
+    copiedSupervisorSha256 = (Get-FileHash -LiteralPath $copy).Hash.ToLowerInvariant()
+    actualSupervisorExecuted = $true
+    liveProgressWasExclusivelyLockedAndInvalid = $true
+    immutableSnapshotConsumed = $true
+    originalExactHeadCiAndMainContainmentVerificationPreserved = $true
+    productionProgressTouched = $false
+}
+if ($result.productionSupervisorSha256 -ne $result.copiedSupervisorSha256) { throw 'Copied supervisor changed.' }
+$result | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $directory 'result.json') -Encoding utf8NoBOM
+$result | ConvertTo-Json

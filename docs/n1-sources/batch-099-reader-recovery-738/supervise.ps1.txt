@@ -1,0 +1,128 @@
+param([switch]$VerifyOnce)
+
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$utf8 = [Text.UTF8Encoding]::new($false)
+$lastCheckpoint = -1
+$lastStage = ''
+$lastPublished = ''
+
+function Read-State([string]$name) {
+    for ($attempt = 0; $attempt -lt 3; $attempt++) {
+        try {
+            $text = [IO.File]::ReadAllText((Join-Path $control $name))
+            return $text | ConvertFrom-Json
+        } catch {
+            if ($attempt -eq 2) { throw }
+            Start-Sleep -Seconds 1
+        }
+    }
+}
+
+function Append-Receipt([string]$name, $value) {
+    $line = ($value | ConvertTo-Json -Compress -Depth 8) + "`n"
+    [IO.File]::AppendAllText((Join-Path $control $name), $line, $utf8)
+}
+
+while ($true) {
+    $runtime = Read-State 'runner.json'
+    if ($runtime.status -in @('stopped', 'blocked', 'paused')) {
+        Write-Output ($runtime | ConvertTo-Json -Compress)
+        throw 'Sequential implementation needs recovery; the rollout is NOT complete.'
+    }
+    if ($runtime.status -eq 'completed') {
+        $progress = Read-State 'progress.json'
+    } else {
+        if (-not $runtime.log) { throw 'No checkpoint snapshot location in runtime.' }
+        $snapshot = Join-Path (Split-Path $runtime.log -Parent) 'checkpoint-full.json'
+        $text = [IO.File]::ReadAllText($snapshot)
+        $progress = $text | ConvertFrom-Json
+    }
+    if ($runtime.status -ne 'completed') {
+        $null = Get-Process -Id $runtime.pid
+        $children = @(Get-CimInstance Win32_Process -Filter "ParentProcessId = $($runtime.pid) AND Name = 'copilot.exe'")
+        if ($children.Count -gt 1) { throw 'More than one direct coordinator; inspect without starting another writer.' }
+    }
+    if ($lastCheckpoint -ne $progress.checkpoint -or $lastStage -ne $progress.stage) {
+        $record = [ordered]@{
+            observedAt = [DateTimeOffset]::Now.ToString('o')
+            runnerStatus = $runtime.status
+            runnerPid = $runtime.pid
+            sessionId = $runtime.sessionId
+            checkpoint = $progress.checkpoint
+            batch = $progress.batch
+            stage = $progress.stage
+            remainingAdditions = $progress.remainingAdditions
+            lastPublishedCommit = $progress.lastPublishedCommit
+        }
+        Append-Receipt 'rollout-supervision.jsonl' $record
+        Write-Output "Checkpoint $($progress.checkpoint), batch $($progress.batch), $($progress.stage); remaining $($progress.remainingAdditions)."
+        $lastCheckpoint = $progress.checkpoint
+        $lastStage = $progress.stage
+    }
+    if ($lastPublished -ne $progress.lastPublishedCommit) {
+        $receipt = @($progress.PSObject.Properties | Where-Object {
+            $_.Name -match '^batch\d+PublicationCheckpoint$' -and
+                ($_.Value.finalPublishedCommit ?? $_.Value.remoteMainVerified) -eq $progress.lastPublishedCommit
+        } | ForEach-Object { $_.Value }) | Select-Object -First 1
+        $ciRun = $receipt.ciRun ?? $receipt.terminalCi.databaseId ?? $receipt.ci.databaseId
+        if (-not $ciRun -and ($receipt.terminalCi -is [int] -or $receipt.terminalCi -is [long])) {
+            $ciRun = $receipt.terminalCi
+        }
+        if (-not $receipt -or -not $ciRun) {
+            throw 'No terminal CI identifier in the latest publication receipt; inspect the schema before claiming verified delivery.'
+        }
+        if ($receipt -and $ciRun) {
+            $verified = $false
+            $failure = ''
+            for ($attempt = 0; $attempt -lt 4; $attempt++) {
+                try {
+                    $raw = gh api "repos/stop-cran/learning-japanese/actions/runs/$ciRun"
+                    if ($LASTEXITCODE -ne 0) { throw 'CI API retrieval failed.' }
+                    $ci = $raw | ConvertFrom-Json
+                    if ($ci.head_sha -ne $progress.lastPublishedCommit -or
+                        $ci.status -ne 'completed' -or $ci.conclusion -ne 'success') {
+                        throw 'Published checkpoint has no matching successful terminal CI.'
+                    }
+                    $comparison = gh api "repos/stop-cran/learning-japanese/compare/$($progress.lastPublishedCommit)...main" --jq .status
+                    if ($LASTEXITCODE -ne 0 -or $comparison -notin @('identical', 'ahead')) {
+                        throw 'Main does not contain the accepted published checkpoint.'
+                    }
+                    Append-Receipt 'rollout-supervision-publications.jsonl' ([ordered]@{
+                        verifiedAt = [DateTimeOffset]::Now.ToString('o')
+                        batch = $progress.batch
+                        checkpoint = $progress.checkpoint
+                        publishedCommit = $progress.lastPublishedCommit
+                        ciRun = $ci.id
+                        ciConclusion = $ci.conclusion
+                        mainRelation = $comparison
+                        remainingAdditions = $progress.remainingAdditions
+                    })
+                    $verified = $true
+                    break
+                } catch {
+                    $failure = $_.Exception.Message
+                    if ($attempt -lt 3) { Start-Sleep -Seconds 15 }
+                }
+            }
+            if (-not $verified) {
+                throw "Could not verify publication: $failure Runner has not been stopped; inspect before taking action."
+            }
+            Write-Output "Verified public commit $($progress.lastPublishedCommit), green CI $ciRun, remaining $($progress.remainingAdditions)."
+        }
+        $lastPublished = $progress.lastPublishedCommit
+    }
+    if ($runtime.status -eq 'completed' -or $progress.status -eq 'completed') {
+        if ($progress.remainingAdditions -ne 0) { throw 'Completion claimed with additions outstanding.' }
+        Write-Output 'All additions reported delivered. Independent final whole-set acceptance and open-todo verification are still required.'
+        exit 0
+    }
+    if ($runtime.log -and (Test-Path -LiteralPath $runtime.log)) {
+        $log = Get-Item -LiteralPath $runtime.log
+        if (([DateTime]::Now - $log.LastWriteTime).TotalMinutes -gt 45) {
+            throw "Extended inactivity in $($runtime.sessionId) needs direct diagnosis without another writer."
+        }
+    }
+    if ($VerifyOnce) { exit 0 }
+    Start-Sleep -Seconds 30
+}

@@ -1,0 +1,59 @@
+$ErrorActionPreference = 'Stop'
+$directory = Join-Path $PSScriptRoot 'artifacts\progress-reader-sharing-737-v2'
+if (Test-Path -LiteralPath $directory) { throw 'Do not overwrite diagnostic evidence.' }
+New-Item -ItemType Directory -Path $directory | Out-Null
+$legacy = Join-Path $directory 'legacy.json'
+$legacyReplacement = Join-Path $directory 'legacy-replacement.json'
+$shared = Join-Path $directory 'shared.json'
+$sharedReplacement = Join-Path $directory 'shared-replacement.json'
+foreach ($path in @($legacy, $shared)) { [IO.File]::WriteAllText($path, '{"revision":1}') }
+foreach ($path in @($legacyReplacement, $sharedReplacement)) { [IO.File]::WriteAllText($path, '{"revision":2}') }
+$legacyResult = Get-Content -LiteralPath $legacy -Raw | ForEach-Object {
+    try {
+        [IO.File]::Move($legacyReplacement, $legacy, $true)
+        @{ replacementSucceeded = $true; errorCode = $null }
+    } catch {
+        $exception = $_.Exception
+        while ($exception.InnerException) { $exception = $exception.InnerException }
+        @{ replacementSucceeded = $false; errorCode = ($exception.HResult -band 65535); message = $exception.Message }
+    }
+}
+$stream = [IO.File]::Open($shared, 'Open', 'Read', ([IO.FileShare]::ReadWrite -bor [IO.FileShare]::Delete))
+$reader = [IO.StreamReader]::new($stream)
+try {
+    $snapshot = $reader.ReadToEnd() | ConvertFrom-Json
+    try {
+        [IO.File]::Move($sharedReplacement, $shared, $true)
+        $sharedResult = @{ replacementSucceeded = $true }
+    } catch {
+        $exception = $_.Exception
+        while ($exception.InnerException) { $exception = $exception.InnerException }
+        $sharedResult = @{ replacementSucceeded = $false; errorCode = ($exception.HResult -band 65535); message = $exception.Message }
+    }
+} finally {
+    $reader.Dispose()
+}
+$live = Join-Path $directory 'live-progress.json'
+$replacement = Join-Path $directory 'live-progress-replacement.json'
+$immutable = Join-Path $directory 'checkpoint-full.json'
+[IO.File]::WriteAllText($live, '{"revision":1}')
+[IO.File]::WriteAllText($replacement, '{"revision":2}')
+[IO.File]::WriteAllText($immutable, '{"revision":1}')
+$snapshotRevision = Get-Content -LiteralPath $immutable -Raw | ForEach-Object {
+    [IO.File]::Move($replacement, $live, $true)
+    ($_ | ConvertFrom-Json).revision
+}
+if ($snapshotRevision -ne 1 -or (Get-Content -LiteralPath $live -Raw | ConvertFrom-Json).revision -ne 2) {
+    throw 'Immutable-reader snapshot or atomic live replacement corrupted.'
+}
+$result = [ordered]@{
+    verifiedAt = [DateTimeOffset]::UtcNow.ToString('o')
+    productionProgressTouched = $false
+    legacyGetContentPipeline = $legacyResult
+    explicitReadWriteDeleteReader = $sharedResult
+    immutableSnapshotReader = @{ replacementSucceeded = $true; readerSnapshotPreserved = $true; replacementContentVerified = $true }
+    original737HandleOwner = 'Not captured; reproduction is not retrospective handle-owner proof.'
+}
+$result | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $directory 'result.json') -Encoding utf8NoBOM
+$result | ConvertTo-Json -Depth 6
+if ($legacyResult.replacementSucceeded) { throw 'Legacy reader did not reproduce replacement conflict.' }

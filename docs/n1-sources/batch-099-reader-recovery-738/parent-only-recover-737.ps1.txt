@@ -1,0 +1,135 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$workspace = Split-Path $control -Parent
+$content = Join-Path $workspace 'learning-japanese'
+$android = Join-Path $workspace 'kanji-cards-android'
+$lock = [IO.File]::Open((Join-Path $control 'runner.lock'), 'OpenOrCreate', 'ReadWrite', 'None')
+try {
+    $runtimeText = [IO.File]::ReadAllText((Join-Path $control 'runner.json'))
+    $runtime = $runtimeText | ConvertFrom-Json
+    if ($runtime.status -ne 'stopped' -or $runtime.sessionId -ne '6b3c8a3c-9088-47fa-a85b-c264900ed7fb') {
+        throw 'Prior runner state changed.'
+    }
+    $progressPath = Join-Path $control 'progress.json'
+    $text = [IO.File]::ReadAllText($progressPath)
+    $progress = $text | ConvertFrom-Json
+    if ($progress.checkpoint -ne 736 -or $progress.batch -ne '099' -or
+        $progress.status -ne 'continue' -or $progress.remainingAdditions -ne 1103 -or
+        $progress.lastPublishedCommit -ne 'd5a376ee2b014aae3c47c58eea47b327e44be6d2') {
+        throw 'Canonical checkpoint changed.'
+    }
+    $denialPath = Join-Path $content 'docs\n1-sources\execution-737.json'
+    $denialText = [IO.File]::ReadAllText($denialPath)
+    $denial = $denialText | ConvertFrom-Json
+    if ($denial.status -ne 'blocked' -or $denial.checkpoint -ne 737 -or
+        -not $denial.progressUnchanged -or $denial.newFixtureGenerated -or
+        $denial.newArchiveGenerated -or $denial.newHostBuildNativeExecuted -or
+        $denial.runtimePublished) { throw 'Original denial disposition changed.' }
+    if ((Get-FileHash -LiteralPath $progressPath).Hash.ToLowerInvariant() -ne $denial.beforeCheckpointSha256 -or
+        (Get-FileHash -LiteralPath $denial.beforeCheckpoint).Hash.ToLowerInvariant() -ne $denial.beforeCheckpointSha256 -or
+        (Get-FileHash -LiteralPath $denial.intendedStartingCheckpoint).Hash.ToLowerInvariant() -ne $denial.intendedStartingCheckpointSha256) {
+        throw 'Canonical/before/intended state no longer matches preserved denial.'
+    }
+    foreach ($repository in @(
+        @{ path = $content; head = '9d17fd04c1c5b67194c78f4a555e5da41adba148' },
+        @{ path = $android; head = 'bf30cdead8515739bc0e671d57a54b9a3109dd46' }
+    )) {
+        if ((git -C $repository.path rev-parse HEAD) -ne $repository.head -or
+            (git -C $repository.path log -1 --format=%G?) -ne 'G' -or
+            (git -C $repository.path status --porcelain)) { throw 'Signed clean HEAD changed.' }
+    }
+    $changed = @(git -C $content diff --name-only e06d30987084ab729df7ea7ba575379897620855 HEAD)
+    if ($LASTEXITCODE -ne 0 -or -not $changed.Count -or @($changed | Where-Object { $_ -notlike 'docs/*' }).Count) {
+        throw 'Denial evidence commit changed runtime content.'
+    }
+    foreach ($artifact in $denial.provenance) {
+        if ((Get-FileHash -LiteralPath (Join-Path $content $artifact.archive)).Hash.ToLowerInvariant() -ne $artifact.sha256 -or
+            (Get-FileHash -LiteralPath $artifact.source).Hash.ToLowerInvariant() -ne $artifact.sha256) {
+            throw 'Original denial source/archive changed.'
+        }
+    }
+    $sharingPath = Join-Path $control 'artifacts\progress-reader-sharing-737-v2\result.json'
+    $sharing = [IO.File]::ReadAllText($sharingPath) | ConvertFrom-Json
+    if ($sharing.productionProgressTouched -or $sharing.legacyGetContentPipeline.errorCode -ne 5 -or
+        -not $sharing.immutableSnapshotReader.replacementSucceeded) { throw 'Sharing reproduction failed.' }
+    $testPath = Join-Path $control 'artifacts\snapshot-supervision-737\result.json'
+    $test = [IO.File]::ReadAllText($testPath) | ConvertFrom-Json
+    if (-not $test.actualSupervisorExecuted -or -not $test.liveProgressWasExclusivelyLockedAndInvalid -or
+        -not $test.originalExactHeadCiAndMainContainmentVerificationPreserved -or
+        (Get-FileHash -LiteralPath (Join-Path $control 'supervise.ps1')).Hash.ToLowerInvariant() -ne $test.productionSupervisorSha256) {
+        throw 'Actual observer regression failed or changed.'
+    }
+    $raw = gh api repos/stop-cran/kanji-cards-android/actions/runs/42394221803
+    if ($LASTEXITCODE -ne 0) { throw 'Main-push CI lookup failed.' }
+    $ci = $raw | ConvertFrom-Json
+    if ($ci.head_sha -ne '2edbf366a4a6fce594b2a6580bfc4252b98d3f6d' -or
+        $ci.status -ne 'completed' -or $ci.conclusion -ne 'success') { throw 'Application main-push CI not green.' }
+    $output = Join-Path $control 'artifacts\batch-099-progress-reader-recovery-737'
+    $receiptPath = Join-Path $control 'batch-099-progress-reader-recovery-737.json'
+    if ((Test-Path -LiteralPath $output) -or (Test-Path -LiteralPath $receiptPath)) {
+        throw 'Do not overwrite recovery history.'
+    }
+    New-Item -ItemType Directory -Path $output | Out-Null
+    Copy-Item -LiteralPath $progressPath -Destination (Join-Path $output 'progress-before-recovery.json')
+    $receipt = [ordered]@{
+        checkpoint = 737
+        batch = '099'
+        verifiedAt = [DateTimeOffset]::UtcNow.ToString('o')
+        disposition = 'Parent diagnoses and fixes owned observer file-reading collision under standing locked-file recovery authorization; no permission/policy/ACL/signing/lock bypass and no automatic denied-write retry.'
+        originalBlockedReceipt = @{ path = $denialPath; sha256 = (Get-FileHash $denialPath).Hash.ToLowerInvariant() }
+        original737WasNotNativePreparation = $true
+        canonicalBefore = @{ path = $denial.beforeCheckpoint; sha256 = $denial.beforeCheckpointSha256; checkpoint = 736 }
+        intendedStartingStatePreserved = @{ path = $denial.intendedStartingCheckpoint; sha256 = $denial.intendedStartingCheckpointSha256; adoptedAsCurrentStartingState = $false }
+        originalConflictingHandleOwner = 'Not captured. Same-error isolated reproduction is evidence of a concrete collision mode, not retrospective attribution proof.'
+        observedAttributes = 'Canonical file is not read-only, with inherited full-control allow rules and no protected ACL.'
+        sharingReproduction = @{ path = $sharingPath; sha256 = (Get-FileHash $sharingPath).Hash.ToLowerInvariant(); legacyErrorCode = 5; deleteShareAlsoFailed = $true; immutableSnapshotReplacementPassed = $true }
+        exactObserverRegression = @{ path = $testPath; sha256 = (Get-FileHash $testPath).Hash.ToLowerInvariant(); liveProgressLockedAndInvalid = $true; snapshotReadPassed = $true; exactCiAndMainContainmentRetained = $true }
+        supervisor = @{ path = (Join-Path $control 'supervise.ps1'); sha256 = $test.productionSupervisorSha256 }
+        operationalNotes = @{ path = (Join-Path $control 'progress-reader-lock-notes.txt'); sha256 = (Get-FileHash (Join-Path $control 'progress-reader-lock-notes.txt')).Hash.ToLowerInvariant() }
+        observerBehavior = 'While active, read immutable per-session checkpoint-full.json only; report checkpoint boundaries rather than intra-child stage edits. Read canonical progress only after terminal completed runtime; stop before progress reads on stopped/blocked/paused.'
+        appMainPushCi = @{ id = 42394221803; head = $ci.head_sha; status = $ci.status; conclusion = $ci.conclusion }
+        contentHead = '9d17fd04c1c5b67194c78f4a555e5da41adba148'
+        qualifiedAndroidHead = 'bf30cdead8515739bc0e671d57a54b9a3109dd46'
+        runtimeContentUnchangedByDeniedExecution = $true
+        original733734Retroaccepted = $false
+        runtimeAccepted = $false
+        runtimePublished = $false
+        deliveredAdditions = 125
+        remainingAdditions = 1103
+    }
+    $receipt | ConvertTo-Json -Depth 15 | Set-Content -LiteralPath $receiptPath -Encoding utf8NoBOM
+    $progress | Add-Member -NotePropertyName historicalExecution736Before737Recovery -NotePropertyValue @{
+        status = $progress.status; stage = $progress.stage; nextAction = $progress.nextAction; blocker = $progress.blocker
+    }
+    $progress | Add-Member -NotePropertyName execution737BlockedReceipt -NotePropertyValue $receipt.originalBlockedReceipt
+    $progress | Add-Member -NotePropertyName parentExecution737ProgressReaderRecovery -NotePropertyValue $receipt
+    $progress.checkpoint = 737
+    $progress.stage = 'batch-099-progress-reader-collision-recovered-awaiting-native-preparation'
+    $progress.nextAction = @'
+SAME099 now checkpoint737 after parent adoption/disposition of separately SIGNED blocked737 receipt. Read control\batch-099-progress-reader-recovery-737.json, progress-reader-lock-notes.txt and unchanged docs/n1-sources/execution-737.json. Previousv103 exited and solewriter stopped on no-progress guard; actualOS WinError5 from progress replacement was preserved without child retry. Parent reproduced SAMEerror5 with Get-Content-Raw pipeline reader on isolated files; even explicitDeleteSharing failed, so not an accepted fix. Parent changed ONLY read-only observer: it reads immutable per-session checkpoint-full.json while active, never live progress. Exact modified supervisor executed with fake liveprogress BOTHinvalid/exclusivelylocked and still verified exactpublicSHA/greenCI/maincontainment. Original conflicting handle owner was NOTcaptured, do not claim proven retrospective attribution. Canonicalprogress was notreadOnly/protectedACL; no ACL/permissions/policy/signing/heap/lock change or denied-write retry loop. Parent held ordinary exclusive lock after oldwriter/observerexit, verified fulloriginalstate/sourcearchive hashes/clean signedheads, and atomically adopted737 with ALLhistoricalrootvalues preserved.
+Appmain2edbf366 separate main-pushCI42394221803 now ACTUALcompletedSUCCESS, matching exacthead. PR133merged/PRCI42392821090 alreadySUCCESS. Companioncontentmain2d3a3fa0/PR63/mainCI42393132653SUCCESS. Qualified frozenclient remains normalSIGNED/PUBLISHEDbf30cdead8515739bc0e671d57a54b9a3109dd46 (notlatestmain), originalold1cbranchpreserved. Guard plus schema-only17->20 bridges, no unrelated locale/sourcebehavior; cross-appDBand53core+92app/freshsignedHOST3+1 evidence remains intact. Contentcurrently cleanSIGNED9d17fd04c1c5b67194c78f4a555e5da41adba148; denialexecution onlyadded docs after teachingtreee06d3098 and did NOT createfixture/archive/build/native/reviewer. Supported quiz_exclusions:[冗] onnew剰 and contentVersion39eb4a86902c6dec from736 remain locallyunreviewed/notaccepted.125delivered/1103remaining,lastpublished098d5a376ee unchanged.
+NEXT execution738 FIRST normallysign/archive parent reader-fix/reproduction/regression/CI/disposition evidence and ownerissue60 correction, preserving original737error and intendedtemp hashes. Nativehelper737 is PRESERVEDREFERENCEONLY: stalee06HEAD/preflight/PID/session must NOTbe reused ascurrent; create NEW738helper/fixture/archive bound toactualcurrent signedhead and actualnewcoordinator/liveancestry. Never edit original733fixture/nativeoutputs/734reviewaudit/737failedhelper. Fresh justified changed-content HOST and native compilation/execution must use newactualfullarchive/all8451hashes/productionContentSyncONCE, quizExclusions through every parse/entity/full/lite/normal/padding/QuizCard mapping, bothpair targetorientations and sampled supported filteredpools/seeds4/7, alloriginalnamedterminal0percase/noskips/no-2/-3 and route/font/reading/stroke/offline/Back gates. Do not invent originalpoolmembership: reconstructed16choices are regression reconstruction only. HOST2ginit onlyHOST/maxworker1/noparallel/reruntasks/inprocess, nevernative/noheap/budgetincrease. Device/PID/local+remoteport ownership INCLUDINGTimeWait fresh; explicitadbserial/ownedreadonlyAVD5580/5581 only; neverforeignprocess/device and stoponlyownedPID.
+Both original model-family dependent confirmations still required serially (Claude2ac79fdb opus5.5 then GPT240faa46 gpt6.1sol asnecessary) onactualchangedqualifiedtree. Actualoneprocessatmost, actualper-toolserialization; preserve Claudeoriginal9overlapstarts/max9calls/falseserialclaim and obtain necessary boundedcompliantconfirmation, notnewblindcredit/repeatedreadloop. Original733/734notretroaccepted. Preserve exacttitle/meaning/level/membership/rawジョウ/あまつさえ/あま.り/あま.る/quizジョウ[]/elevenstrokes/curatedIDs/tworeciprocalpairs/fourdirections/oneactivatedbaselinepair/reused過剰N2/sevenwordguards/sourceledger and teachinglimits. OldclientsIGNOREguard; compatible-clientownertesting, notuniversal synonym/phone/generalrelease/whole-setacceptance.
+AllnormalSIGNEDlatestmainnonrewritingintegration/changedteachingreview/actualcurrentcombinedchecks/ownerfastforward/exactremoteSHA+terminalgreenCI/EVERYimmutableZIPmanifesthash/18000entries42MiBcompressed80MiBinflated56MiBretained/perfile-media-safepath/terminalreceipt/verifiedownerissue gates remain BEFORE099count/100. Issue132staysopenuntilhonestpromisednative/adoptiondisposition. Parentlauncher ownsrunner.lockthroughoutchildlifetime: NOchildacquire/delete/unlock/readprobe; exactsignedhead/checkpoint/whollyclean/ancestryguardsstay. Do not read canonical progress from periodic external observers whilewriteractive. Preserve ALLfullprogresshistory, not executionview; runtime/journallauncherowned. Approvedcontrol/committedsource/frozeninputs only, no optionalhistoricalsessionhelpers. Futureactualdenial/signingpopuphang/uncertainownership preserve/report/yield without policybypass. No secondrunner.
+'@
+    $temporary = "$progressPath.parent737.tmp"
+    $progress | ConvertTo-Json -Depth 100 | Set-Content -LiteralPath $temporary -Encoding utf8NoBOM
+    $beforeText = [IO.File]::ReadAllText((Join-Path $output 'progress-before-recovery.json'))
+    $before = $beforeText | ConvertFrom-Json
+    $afterText = [IO.File]::ReadAllText($temporary)
+    $after = $afterText | ConvertFrom-Json
+    foreach ($property in $before.PSObject.Properties) {
+        if ($property.Name -notin @('checkpoint', 'stage', 'nextAction') -and
+            ($property.Value | ConvertTo-Json -Depth 100 -Compress) -cne
+            ($after.($property.Name) | ConvertTo-Json -Depth 100 -Compress)) {
+            throw "Historical state changed: $($property.Name)"
+        }
+    }
+    if ($after.checkpoint -ne 737 -or $after.status -ne 'continue' -or $after.remainingAdditions -ne 1103) {
+        throw 'Recovery invariant failed.'
+    }
+    Move-Item -LiteralPath $temporary -Destination $progressPath -Force
+    @{ checkpoint = 737; status = 'continue'; preservedHistory = $true; remaining = 1103; oldFailurePreserved = $true } | ConvertTo-Json
+} finally {
+    $lock.Dispose()
+}
