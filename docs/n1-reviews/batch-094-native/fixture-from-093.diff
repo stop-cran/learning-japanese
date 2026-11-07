@@ -1,0 +1,673 @@
+--- docs/n1-reviews/batch-093-native/N1Batch093NativeTest.kt
++++ N1Batch094NativeTest.kt
+@@ -38,4 +38,6 @@
+ import io.github.stopcran.kanji.core.srs.KanjiFont
+ import io.github.stopcran.kanji.core.srs.StudyMode
++import io.github.stopcran.kanji.core.words.WordDirection
++import io.github.stopcran.kanji.core.words.WordQuizBuilder
+ import io.github.stopcran.kanji.data.*
+ import kotlinx.coroutines.runBlocking
+@@ -50,22 +52,22 @@
+ import java.util.UUID
+ 
+-private fun disposable093() {
++private fun disposable094() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch093GlyphTest {
++class N1Batch094GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun punishmentLookalikesAndScopedHanAcrossFourProductionFamilies() {
+-        disposable093()
++    @Test fun shavingLookalikesAndScopedHanAcrossFourProductionFamilies() {
++        disposable094()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("一 乃 亅 事 仕 件 偵 典 凸 凹 刀 刂", "刑 判 力 土 型 大 好 官 家 察 巡 彡", "形 探 撃 故 来 査 民 法 火 物 百 目", "省 科 罰 者 聞 裁 話 警 部 食", "刑 形 型 刀 刂 彡 土 事 亅 乃 凹 凸 刑事 刑罰 刑法")
++        val pages = listOf("一 不 中 予 余 刀 刂 切 刑 判 削 前", "加 取 外 掃 文 斫 日 曜 止 氵 消 添", "減 省 筆 算 肖 行 複 要 追 都 重 鉛", "阜 阝 降 院 除", "削 消 肖 刀 刂 斫 氵 阜 阝 前 判 刑 削る 削除 削ぐ")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 093: punishment / look-alikes / scoped Han")
++                    Text("Batch 094: shaving / look-alikes / scoped Han")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -73,5 +75,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 46 scoped Han; focused 刑/形/型/刀/刂/彡/事/亅/乃/凹/凸. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 41 scoped Han; focused 削/消/肖/刀/刂/斫/氵/阜/阝/前/判/刑. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -84,5 +86,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("一", "乃", "亅", "事", "仕", "件", "偵", "典", "凸", "凹", "刀", "刂", "刑", "判", "力", "土", "型", "大", "好", "官", "家", "察", "巡", "彡", "形", "探", "撃", "故", "来", "査", "民", "法", "火", "物", "百", "目", "省", "科", "罰", "者", "聞", "裁", "話", "警", "部", "食")) {
++            for (char in listOf("一", "不", "中", "予", "余", "刀", "刂", "切", "刑", "判", "削", "前", "加", "取", "外", "掃", "文", "斫", "日", "曜", "止", "氵", "消", "添", "減", "省", "筆", "算", "肖", "行", "複", "要", "追", "都", "重", "鉛", "阜", "阝", "降", "院", "除")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -105,5 +107,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("刑事", "刑罰", "刑法")) {
++            for (word in listOf("削る", "削除", "削ぐ")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -132,5 +134,5 @@
+             }
+         }
+-        assertEquals(196, rows.length())
++        assertEquals(176, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -138,28 +140,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-093-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-094-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-093-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-094-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 184).put("wholeWordRasterProbes", 12).put("panels", 5)
+-            .put("limits", "46 actual scoped Han; 亅/刂/彡 absent from all three bundled cmaps requires actual system fallback inspection, four production families, five bounded Compose panels and twelve whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 164).put("wholeWordRasterProbes", 12).put("panels", 5)
++            .put("limits", "41 actual scoped Han; 刂/斫/氵/阝 absent from all three bundled cmaps requires actual system fallback inspection, four production families, five bounded Compose panels and twelve whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch093ArticleTest {
++class N1Batch094ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflinePunishmentReusedN3TwoReciprocalPairsOneOnNoKunSixStrokesAndSystemBack() {
+-        disposable093()
++    @Test fun fullSingleImportOfflineShavingTwoReusedN2ThreeReciprocalPairsBothReadingsNineStrokesAndSystemBack() {
++        disposable094()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-093-${UUID.randomUUID()}", "main")
+-        val head = "324b0bd95ba8c255d7f0bead0b3f7ba771fccacc"
++        val source = RepoSource("acceptance-fixture", "n1-094-${UUID.randomUUID()}", "main")
++        val head = "18ad4bed3264a7c30e04cd60edbd85264a5b39d8"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -169,5 +171,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-093-324b0bd9-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-094-18ad4bed-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -184,9 +186,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1116, updated.kanji)
++        assertEquals(1117, updated.kanji)
+         assertEquals(5070, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("bf4cc85592bb9727", meta.contentVersion)
++        assertEquals("eeae47753a460f72", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -196,48 +198,90 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(125, n1.size)
+-        val punishment = n1.single { it.kanji == "刑" }
+-        assertEquals(listOf("乃", "凹", "凸"), punishment.distractors.splitSep())
+-        assertEquals(listOf("ケイ"), punishment.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), punishment.kunyomi.splitSep())
+-        assertNotNull(punishment.quizOnyomi)
+-        assertNotNull(punishment.quizKunyomi)
+-        assertEquals(listOf("ケイ"), punishment.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), punishment.quizKunyomi?.splitSep())
+-        assertEquals(listOf("けい"), punishment.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), punishment.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(126, n1.size)
++        val shaving = n1.single { it.kanji == "削" }
++        assertEquals(listOf("前", "判", "刑"), shaving.distractors.splitSep())
++        assertEquals(listOf("サク"), shaving.onyomi.splitSep())
++        assertEquals(listOf("けず.る", "はつ.る", "そ.ぐ"), shaving.kunyomi.splitSep())
++        assertNotNull(shaving.quizOnyomi)
++        assertNotNull(shaving.quizKunyomi)
++        assertEquals(listOf("サク"), shaving.quizOnyomi?.splitSep())
++        assertEquals(listOf("けず.る"), shaving.quizKunyomi?.splitSep())
++        assertEquals(listOf("さく"), shaving.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("けずる"), shaving.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "刑" to "criminal punishment", "凸" to "convex; protruding",
+-            "乃" to "thereupon; possessive no", "凹" to "concave; sunken",
++            "削" to "shave; sharpen; pare", "刑" to "criminal punishment",
++            "前" to "front, before", "判" to "judge; seal",
+         )
+         val all = runBlocking { app.db.content().kanjiLite(source.id) }
+-        val checkedPools = JSONObject()
+-        for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
++        assertEquals(n1.map { it.kanji }.toSet(),
++            all.filter { "jlpt-n1" in it.tags.splitSep() }.map { it.kanji }.toSet())
++        val curatedIds = listOf("前", "判", "刑")
++        assertEquals(listOf("刑"), curatedIds.filter { id -> n1.any { it.kanji == id } })
++        val boundedCustom = all.filter { it.kanji in expectedMeanings }
++        val randomSubset = listOf(shaving, n1.single { it.kanji == "刑" }) +
++            n1.filter { it.kanji !in setOf("削", "刑") }.shuffled(kotlin.random.Random(681)).take(12)
++        val checkedPools = JSONArray()
++        for ((poolName, pool) in listOf("N1" to n1, "All" to all,
++            "boundedCustom" to boundedCustom, "randomN1Subset" to randomSubset)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "刑" }
+-            assertEquals(listOf("乃", "凹", "凸"), target.distractors)
+-            val options = QuizBuilder.options(target, cards, kotlin.random.Random(671))
+-            assertEquals(4, options.size)
+-            assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
+-            assertEquals(3, cards.count { it.kanji in target.distractors })
+-            checkedPools.put(poolName, JSONObject().put("poolSize", pool.size)
+-                .put("options", JSONArray().also { rows ->
+-                    options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+-                }).put("availableCuratedCount", cards.count { it.kanji in target.distractors })
+-                .put("fallbackOptions", options.count { it.kanji !in expectedMeanings }))
+-        }
+-        val importedDetective = requireNotNull(runBlocking { app.db.content().word(source.id, "刑事") })
+-        assertEquals(listOf("警官", "警察", "巡査", "おまわりさん"), importedDetective.quizExclusions.splitSep())
+-        assertEquals("けいじ", importedDetective.reading)
+-        assertEquals(3, importedDetective.jlpt)
+-        assertEquals("police detective; criminal matters", importedDetective.title)
+-        val detective = requireNotNull(runBlocking { app.db.content().word(source.id, "探偵") })
+-        assertTrue("Existing inbound detective guard", "刑事" in detective.quizExclusions.splitSep())
+-        val policeGuards = JSONArray()
+-        for (id in importedDetective.quizExclusions.splitSep()) {
+-            val guard = requireNotNull(runBlocking { app.db.content().word(source.id, id) })
+-            assertNotEquals("Unusable direct guard", guard.word, importedDetective.word)
+-            policeGuards.put(JSONObject().put("word", guard.word).put("title", guard.title))
+-        }
++            val target = cards.single { it.kanji == "削" }
++            assertEquals(curatedIds, target.distractors)
++            val available = curatedIds.filter { id -> cards.any { it.kanji == id } }
++            val expectedAvailable = if (poolName == "N1" || poolName == "randomN1Subset") 1 else 3
++            assertEquals(expectedAvailable, available.size)
++            repeat(16) { seed ->
++                val options = QuizBuilder.options(target, cards, kotlin.random.Random(seed))
++                assertEquals(4, options.size)
++                assertEquals(4, options.map { it.title }.toSet().size)
++                assertEquals(1, options.count { it.kanji == target.kanji })
++                assertTrue(options.all { option -> cards.any { it.kanji == option.kanji && it.title == option.title } })
++                assertTrue(available.all { id -> options.any { it.kanji == id } })
++                if (expectedAvailable == 3) assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
++                checkedPools.put(JSONObject().put("pool", poolName).put("poolSize", pool.size).put("seed", seed)
++                    .put("options", JSONArray().also { rows ->
++                        options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
++                    }).put("availableCuratedCount", available.size)
++                    .put("fallbackOptions", options.count { it.kanji != target.kanji && it.kanji !in available }))
++            }
++        }
++        assertEquals(64, checkedPools.length())
++        val words = runBlocking { app.db.content().wordsLite(source.id) }.map { it.toCard() }
++        val importedShave = words.single { it.word == "削る" }
++        val importedDeletion = words.single { it.word == "削除" }
++        assertEquals(listOf("切る", "減らす", "省く", "消す", "除く", "外す"), importedShave.quizExclusions)
++        assertEquals(listOf("消す", "除く", "外す", "取る", "削る", "省く"), importedDeletion.quizExclusions)
++        assertEquals("けずる", importedShave.reading)
++        assertEquals("さくじょ", importedDeletion.reading)
++        assertEquals(2, importedShave.jlpt)
++        assertEquals(2, importedDeletion.jlpt)
++        val directGuardChecks = JSONArray()
++        val guardPairs = listOf("削る" to "除く", "削る" to "外す", "削除" to "省く")
++        for ((leftId, rightId) in guardPairs) {
++            val left = words.single { it.word == leftId }
++            val right = words.single { it.word == rightId }
++            assertTrue(right.word in left.quizExclusions)
++            for ((target, excluded) in listOf(left to right, right to left)) {
++                val custom = listOf(target, excluded) + words.filter {
++                    it.word !in setOf(target.word, excluded.word) && it.title !in setOf(target.title, excluded.title) &&
++                        it.word !in target.quizExclusions && target.word !in it.quizExclusions
++                }.take(12)
++                for ((poolName, pool) in listOf("All" to words, "boundedCustom" to custom)) {
++                    for (direction in listOf(WordDirection.JpToEn, WordDirection.EnToJp)) {
++                        repeat(16) { seed ->
++                            val options = WordQuizBuilder.options(target, pool, direction, kotlin.random.Random(seed))
++                            assertEquals(4, options.size)
++                            assertEquals(1, options.count { it.word == target.word })
++                            assertFalse("Direct exclusion leaked", options.any { it.word == excluded.word })
++                            directGuardChecks.put(JSONObject().put("target", target.word).put("excluded", excluded.word)
++                                .put("pool", poolName).put("direction", direction.name).put("seed", seed)
++                                .put("options", JSONArray().also { rows ->
++                                    options.forEach { rows.put(JSONObject().put("word", it.word).put("label", it.label)) }
++                                }))
++                        }
++                    }
++                }
++            }
++        }
++        assertEquals(384, directGuardChecks.length())
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -253,5 +297,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "刑") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "削") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -259,5 +303,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "刑" && (kind == ReadingKind.On && key == "けい")) now - 60_000
++                            if (card.kanji == "削" && ((kind == ReadingKind.On && key == "さく") || (kind == ReadingKind.Kun && key == "けずる"))) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -266,5 +310,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "刑", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "削", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -274,18 +318,17 @@
+         val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+             .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+-            .put("directWordGuardCount", importedDetective.quizExclusions.splitSep().size)
+-            .put("directPoliceLabelGuards", policeGuards).put("inboundTanteiGuardPreserved", true)
++            .put("newDirectWordGuardPairs", 3).put("directGuardBuilderChecks", directGuardChecks)
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(punishment.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(punishment.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(punishment.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(punishment.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(punishment.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(punishment.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(shaving.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(shaving.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(shaving.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(shaving.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(shaving.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(shaving.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; only 刑 meaning and onけい due, no kun keys. Full raw ケイ/emptykun and explicit curation retained. Two historical good 刑 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; only 削 meaning and onさく/kunけずる due. Full raw readings and explicit curation retained. Two historical good 削 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -294,99 +337,137 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 125 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 126 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("刑")
+-            click("criminal punishment")
+-            await("刑 — criminal punishment")
+-            show(articleBullet("Strokes: 6 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("削")
++            click("shave; sharpen; pare")
++            await("削 — shave; sharpen; pare")
++            show(articleBullet("Strokes: 9 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("刑 concerns criminal punishment or a legal sentence. Here \"sentence\" means a penalty imposed for an offense, not a grammatical sentence. In 刑事 けいじ, it contributes the criminal-law association: the whole word can name a police detective or concern criminal matters."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: Picture the squared-off left part as a rule board beside the blade radical 刂, a reminder of a legal penalty. This invented association does not establish the character's history or a phonetic component."), "kanji-04")
++            show(articleBullet("削 concerns shaving or cutting material away. 削る けずる can mean sharpening a pencil by shaving it, reducing an amount, or deleting part of a text. In 削除 さくじょ, the focus is deletion or erasure, not necessarily a physical cut."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: Picture the 肖-shaped left part as a block with small marks above it, being shaved by the blade radical 刂 on the right. This invented scene is a memory aid, not a historical explanation or a verified phonetic analysis."), "kanji-04")
+             section("Readings")
+-            show(readingExample("ケイ"), "kanji-09")
+-            show(readingExample("刑事 けいじ — police detective; criminal matters; 刑罰 けいばつ — criminal punishment; penalty"), "kanji-11")
+-            show(articleBullet("The frozen KANJIDIC2 metadata lists ケイ and no kun readings. Other dictionaries have broader reading coverage: Digital Daijisen also records ギョウ, as in the historical ministry name 刑部省 ぎょうぶしょう. That does not change the reading of 刑事 to ぎょうじ."), "kanji-12")
++            show(readingExample("サク"), "kanji-09")
++            show(readingExample("削除 さくじょ — deletion; erasure"), "kanji-11")
++            show(readingExample("けず.る"), "kanji-12")
++            show(readingExample("削る けずる — shave; sharpen; pare; cut down"), "kanji-14")
++            show(readingExample("はつ.る"), "kanji-15")
++            show(readingExample("削る はつる — shave off, especially concrete; usually written はつる; also written 斫る in construction"), "kanji-17")
++            show(readingExample("そ.ぐ"), "kanji-18")
++            show(readingExample("削ぐ そぐ — chip, shave or slice off"), "kanji-20")
++            show(articleBullet("This card selects サク and けず.る for reading questions. The other two readings remain useful recognition information, not invalid or obsolete pronunciations. The dots mark the written ending: 削る has る outside the kanji, while 削ぐ has ぐ."), "kanji-21")
+             section("Common words")
+-            show(articleBullet("刑事 けいじ — police detective; criminal matters"), "kanji-14")
+-            show(articleBullet("刑 けい — penalty; sentence"), "kanji-15")
+-            show(articleBullet("刑罰 けいばつ — criminal punishment; penalty"), "kanji-16")
+-            show(articleBullet("刑法 けいほう — criminal law; penal code"), "kanji-17")
++            show(articleBullet("削る けずる — shave; sharpen; cut down"), "kanji-23")
++            show(articleBullet("削除 さくじょ — deletion; erasure"), "kanji-24")
++            show(articleBullet("削減 さくげん — reduction; cut"), "kanji-25")
++            show(articleBullet("添削 てんさく — correction of writing"), "kanji-26")
++            show(articleBullet("Two practical uses of けずる are 鉛筆を削る (えんぴつをけずる), \"sharpen a pencil,\" and 予算を削る (よさんをけずる), \"cut the budget.\""), "kanji-27")
+             section("Notes")
+-            show(articleBullet("刀 is the dictionary radical; its visible right-side form here is 刂. Compare 形, with three slanting strokes 彡 on the right, and 型, with 土 underneath the 刑-shaped upper part."), "kanji-19")
+-            show(articleBullet("The main lesson here is punishment. Dictionaries also record older model/form-related senses of 刑; the shape comparisons above are not a claim that 刑, 型 and 形 have never overlapped in meaning."), "kanji-20")
+-            show(articleBullet("刑事 also has the slang whole-word reading でか. Learn it as a separate reading of the whole word, not as a kun reading of 刑 alone. The linked article's primary reading remains けいじ."), "kanji-21")
+-            show(articleBullet("In legal expressions, 刑事 does not mean \"criminal\" as a noun naming an offender. Use the surrounding noun and sentence role to distinguish criminal matters from the detective."), "kanji-22")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1249610, 1249660, 1249780, 1249790, 1008360 and 2256510. Character readings and wider senses: Digital Daijisen, 刑; compound senses: 刑事."), "kanji-23")
++            show(articleBullet("The indexing radical is 刀; its visible form here is 刂. 消 also has a 肖-shaped part, but its left side is 氵 rather than the right-side 刂 of 削. Erasing and deleting meanings can overlap; these shapes do not create an absolute semantic boundary."), "kanji-29")
++            show(articleBullet("The spelling 削る can represent the separate verb はつる as well as けずる. The linked word article teaches けずる. JMdict's \"take a percentage\" sense belongs to its separate はつる entry, not the けずる lesson."), "kanji-30")
++            show(articleBullet("削ぐ そぐ is another verb, not a different spelling of けずる. It also has figurative weakening or dampening uses; JMdict marks those senses as usually written in kana, not every physical use of 削ぐ."), "kanji-31")
++            show(articleBullet("Compare the right-side 刂 in 前, 判 and 刑. Their meanings are not shaving or sharpening; a shared radical does not make the words interchangeable."), "kanji-32")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1298040, 1298090, 1298100, 1298110, 1298120, 1440850 and 1915010. Reading allocation and usage: Digital Daijisen, 削, 削る and 削除."), "kanji-33")
+             section("Common words")
+-            show(articleBullet("刑事 けいじ — police detective; criminal matters"), "keiji-forward")
+-            inline(await(articleBullet("刑事 けいじ — police detective; criminal matters")), "刑事", 0)
++            show(articleBullet("削る けずる — shave; sharpen; cut down"), "kezuru-forward")
++            inline(await(articleBullet("削る けずる — shave; sharpen; cut down")), "削る", 0)
+             await("Article contents")
+-            await("刑事 (けいじ) - police detective; criminal matters")
++            await("削る (けずる) - shave; pare; cut down")
+             section("Meaning")
+-            show(articleBullet("刑事 has two related uses: a noun for a police detective, and \"criminal\" in legal expressions concerning criminal matters."), "keiji-02")
+-            show(articleBullet("刑事が目撃者に話を聞いています。 (けいじがもくげきしゃにはなしをきいています。) - A detective is talking to a witness."), "keiji-03")
+-            show(articleBullet("これは刑事事件です。 (これはけいじじけんです。) - This is a criminal case."), "keiji-04")
+-            show(articleBullet("In the first example, 刑事 is a person. In 刑事事件, it qualifies 事件 (じけん), \"case/incident\"; it does not mean \"a detective's incident.\" Another useful combination is 刑事裁判 (けいじさいばん), \"criminal trial.\""), "keiji-05")
++            show(articleBullet("削る means shaving or scraping material away, including sharpening a pencil. It also means cutting down an amount, such as a budget, expenses, or time. This is a transitive godan verb: 削ります, 削って, 削らない."), "kezuru-02")
++            show(articleBullet("ナイフで鉛筆を削ります。 (ナイフでえんぴつをけずります。) - I sharpen a pencil with a knife."), "kezuru-03")
++            show(articleBullet("予算を削りました。 (よさんをけずりました。) - We cut the budget."), "kezuru-04")
++            show(articleBullet("A further use is deleting or striking out part of a text: 不要な一文を削りました。 (ふようないちぶんをけずりました。) - I deleted an unnecessary sentence. This deletion use is additional teaching, not a separate N2 assignment."), "kezuru-05")
+             section("How the kanji combine")
+-            show(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ."), "keiji-07")
++            show(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings."), "kezuru-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("警官 (けいかん) means a police officer, a broader role than detective. 探偵 (たんてい) can refer to a detective such as a private investigator. For legal matters, 民事 (みんじ), \"civil,\" contrasts with 刑事; it is not an opposite kind of police officer."), "keiji-09")
++            show(articleBullet("減らす (へらす) more generally means reducing an amount. 省く (はぶく) overlaps in omission or cutting down; 消す (けす) overlaps in erasing. 切る (きる) has broader cutting uses, including reductions."), "kezuru-09")
+             section("Distinctive meaning")
+-            show(articleBullet("Use the surrounding noun and sentence role to separate the two senses. 刑事が来た (けいじがきた) means a detective came. 刑事事件 concerns criminal law. Neither use means \"criminal\" as a noun naming the person who committed an offense."), "keiji-11")
+-            show(articleBullet("Dictionary: JMdict, entry 1249660, senses 1-2."), "keiji-12")
++            show(articleBullet("削る need not mean removing a large piece in one cut; shaving a surface is a central use. Nor does every use require repeated tiny reductions. The source list's \"take a percentage\" belongs to the separate reading はつる in JMdict, not this けずる entry. Do not learn it here as a general expression for charging commission."), "kezuru-11")
++            show(articleBullet("Dictionary: JMdict, entry 1298090, selected senses 1-2 and additional sense 3; separate はつる entry 1298100, sense 2. Usage check: Daijisen, hosted by Weblio, separate けずる, はつる, and へずる entries."), "kezuru-12")
+             section("How the kanji combine")
+-            show(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ."), "keiji-kei-reverse")
+-            inline(await(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ.")), "刑", 0)
++            show(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings."), "kezuru-reverse")
++            inline(await(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings.")), "削", 0)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ケイ"), "kei-kanji-backlink")
+-            back()
+-            await(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ.")).assertIsDisplayed()
++            show(readingExample("けず.る"), "kezuru-kanji-backlink")
++            back()
++            await(articleBullet("削 contributes cutting away or shaving. The native reading is けず.る: the kanji supplies けず, and る is the written ending. This is one native verb, not a combination of on readings.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("kei-system-back-to-word")
++            capture("kezuru-system-back-to-word")
++            back()
++            await(articleBullet("削る けずる — shave; sharpen; cut down")).assertIsDisplayed()
++            section("Common words")
++            capture("kezuru-system-back-to-kanji")
++            section("Common words")
++            show(articleBullet("削除 さくじょ — deletion; erasure"), "sakujo-forward")
++            inline(await(articleBullet("削除 さくじょ — deletion; erasure")), "削除", 0)
++            await("Article contents")
++            await("削除 (さくじょ) - deletion; erasure")
++            section("Meaning")
++            show(articleBullet("削除 is deletion or elimination, especially removing writing, entries, or data. 削除する is transitive: the item removed takes を."), "sakujo-02")
++            show(articleBullet("重複した行を削除しました。 (ちょうふくしたぎょうをさくじょしました。) - I deleted the duplicate line."), "sakujo-03")
++            show(articleBullet("このファイルを削除してもいいですか。 (このファイルをさくじょしてもいいですか。) - May I delete this file?"), "sakujo-04")
++            show(articleBullet("削除されたファイル (さくじょされたファイル) is \"a deleted file\"; された is passive."), "sakujo-05")
+             section("How the kanji combine")
+-            show(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ."), "keiji-ji-reverse")
+-            inline(await(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ.")), "事", 39)
++            show(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved."), "sakujo-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("消す (けす) also covers erasing or deleting, as well as turning off lights. 除く (のぞく) is broader removal or exclusion. 追加 (ついか), \"addition,\" supplies a practical contrast when editing a list."), "sakujo-09")
++            section("Distinctive meaning")
++            show(articleBullet("The legacy source's \"cancellation\" should not make 削除する a general verb for canceling an event. 中止 (ちゅうし) concerns calling off or discontinuing an activity. Deleting a calendar entry and canceling the event itself are different actions. The word alone also does not promise that deleted data can be recovered."), "sakujo-11")
++            show(articleBullet("Dictionary: JMdict, entry 1298120, sense 1. Usage: Digital Daijisen."), "sakujo-12")
++            section("How the kanji combine")
++            show(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved."), "sakujo-saku-reverse")
++            inline(await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")), "削", 0)
+             await("Article contents")
+-            await("事 — matter, affair")
+-            show(articleBullet("Strokes: 8 · Key (radical): 亅 (no. 6) · JLPT: N4 (community list)"), "ji-01")
++            section("Readings")
++            show(readingExample("サク"), "saku-kanji-backlink")
++            back()
++            await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("saku-system-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved."), "sakujo-jo-reverse")
++            inline(await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")), "除", 43)
++            await("Article contents")
++            await("除 — remove; exclude")
++            show(articleBullet("Strokes: 10 · Key (radical): 阜 (as left-hand 阝, no. 170) · JLPT: N3 (community list)"), "jo-01")
+             section("Meaning and origin")
+-            show(articleBullet("事 means \"matter, affair, thing to be done\", and from there \"business\", \"incident\" and \"fact\". The early form is usually explained as a hand holding a tool or a pennant-like object, in the sense of \"to serve, to do a task\", but scholars disagree on the details, so treat the picture as uncertain. It is filed under 亅 (the hook stroke) only for dictionary purposes; the hook does not carry the meaning."), "ji-03")
++            show(articleBullet("除 concerns taking something away or leaving it out. 除く のぞく can describe physical removal, but also an exception: 日曜日を除く (にちようびをのぞく), \"excluding Sundays.\""), "jo-03")
++            show(articleBullet("Modern-shape mnemonic: imagine clearing the 余-shaped piece away from the left-hand 阝. This is a visual reminder of removal, not an etymology."), "jo-04")
+             section("Readings")
+-            show(readingExample("ジ"), "ji-08")
+-            show(readingExample("食事 しょくじ, 大事 だいじ, 火事 かじ, 事故 じこ, 事件 じけん"), "ji-10")
+-            show(readingExample("ズ"), "ji-11")
+-            show(readingExample("rare, e.g. 好事家 こうずか (a dilettante, an enthusiast)"), "ji-13")
+-            show(readingExample("こと"), "ji-14")
+-            show(readingExample("事 こと (a matter), 大事なこと (an important matter), 仕事 しごと (voiced: ごと)"), "ji-16")
++            show(articleBullet("The table selects useful readings; the metadata preserves the complete source reading list."), "jo-06")
++            show(readingExample("のぞ.く"), "jo-10")
++            show(readingExample("除く のぞく — remove; exclude"), "jo-12")
++            show(readingExample("ジョ"), "jo-13")
++            show(readingExample("除外 じょがい — exclusion"), "jo-15")
++            show(readingExample("ジ"), "jo-16")
++            show(readingExample("掃除 そうじ — cleaning"), "jo-18")
+             section("Common words")
+-            show(articleBullet("食事 しょくじ — a meal"), "ji-18")
+-            show(articleBullet("仕事 しごと — work, job"), "ji-19")
+-            show(articleBullet("火事 かじ — fire (a blaze)"), "ji-20")
+-            show(articleBullet("百科事典 ひゃっかじてん — encyclopedia"), "ji-21")
+-            show(articleBullet("刑事 けいじ — police detective; criminal matters"), "ji-22")
++            show(articleBullet("除く のぞく — remove; exclude"), "jo-20")
++            show(articleBullet("除外 じょがい — exclusion"), "jo-21")
++            show(articleBullet("掃除 そうじ — cleaning"), "jo-22")
++            show(articleBullet("削除 さくじょ — deletion; erasure"), "jo-23")
+             section("Notes")
+-            show(articleBullet("事 (こと) is an abstract matter or an act, while 物 (もの) is a concrete thing. 事 also serves as a formal noun (the こと-nominalizer) but is usually written in kana in that role; see the koto and wake article."), "ji-24")
+-            show(articleBullet("仕事 しごと is read with the kun reading (voiced ごと), while 食事 and 火事 use ジ."), "ji-25")
+-            show(articleBullet("Look-alikes: 事 has a vertical stroke with a hook running through the whole character, with 一 and a box-like part above it; compare 力 and 話, which are not related in shape."), "ji-26")
++            show(articleBullet("掃除 uses ジ, not ジョ; learn its whole reading そうじ. Excluding a day from a schedule does not remove that day from the calendar: the scope of the statement changes. 降 shares left-hand 阝 but not the 余 on its right."), "jo-25")
++            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1345640, 1345650, 1399790."), "jo-26")
+             section("Common words")
+-            show(articleBullet("刑事 けいじ — police detective; criminal matters"), "ji-keiji-forward")
+-            inline(await(articleBullet("刑事 けいじ — police detective; criminal matters")), "刑事", 0)
++            show(articleBullet("削除 さくじょ — deletion; erasure"), "jo-sakujo-forward")
++            inline(await(articleBullet("削除 さくじょ — deletion; erasure")), "削除", 0)
+             await("Article contents")
+             section("Meaning")
+-            capture("ji-keiji-backlink")
+-            back()
+-            await(articleBullet("刑事 けいじ — police detective; criminal matters")).assertIsDisplayed()
++            capture("jo-sakujo-backlink")
++            back()
++            await(articleBullet("削除 さくじょ — deletion; erasure")).assertIsDisplayed()
+             section("Common words")
+-            capture("ji-system-back-to-kanji")
+-            back()
+-            await(articleBullet("刑 contributes criminal punishment, and 事 contributes a matter or affair. The legal meaning is therefore a helpful guide to the compound. The on readings are ケイ + ジ.")).assertIsDisplayed()
++            capture("jo-system-back-to-kanji")
++            back()
++            await(articleBullet("削 contributes shaving or cutting away, and 除 contributes removal or exclusion. The related meanings reinforce taking something out. The on readings are サク + ジョ, with a small ょ. Deleting a line is not a claim that paper was physically shaved.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("ji-system-back-to-word")
+-            back()
+-            await(articleBullet("刑事 けいじ — police detective; criminal matters")).assertIsDisplayed()
++            capture("jo-system-back-to-word")
++            back()
++            await(articleBullet("削除 さくじょ — deletion; erasure")).assertIsDisplayed()
+             section("Common words")
+-            capture("keiji-system-back-to-kei")
++            capture("sakujo-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -394,24 +475,19 @@
+             await("Meaning quiz")
+             evidence.put("reciprocalLinkAndSystemBack", true)
+-                .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4).put("activatedBaselinePairs", 1)
+-                .put("completeArticleProjections", 3).put("changedReusedArticles", 2)
++                .put("mappedReciprocalPairs", 3).put("directedLinkTransitions", 6).put("activatedBaselinePairs", 2)
++                .put("completeArticleProjections", 4).put("changedReusedArticles", 3)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("刑", meaning.card.kanji)
+-            val expectedMeanings = mapOf(
+-                "刑" to "criminal punishment",
+-                "凸" to "convex; protruding",
+-                "乃" to "thereupon; possessive no",
+-                "凹" to "concave; sunken",
+-            )
++            assertEquals("削", meaning.card.kanji)
+             assertEquals(4, meaning.options.size)
+-            assertEquals(expectedMeanings, meaning.options.associate { it.kanji to it.title })
++            assertEquals(4, meaning.options.map { it.title }.toSet().size)
++            assertEquals(1, meaning.options.count { it.kanji == "削" })
+             assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
+-            assertTrue(meaning.options.any { it.kanji == "凹" })
+-            assertEquals(0, meaning.options.count { it.kanji !in expectedMeanings })
+             assertEquals("criminal punishment", meaning.options.single { it.kanji == "刑" }.title)
+-            assertEquals(listOf("乃", "凹", "凸"), meaning.card.distractors.splitSep())
++            assertFalse(meaning.options.any { it.kanji in setOf("前", "判") })
++            assertEquals("shave; sharpen; pare", meaning.options.single { it.kanji == "削" }.title)
++            assertEquals(listOf("前", "判", "刑"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+             evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+@@ -419,10 +495,10 @@
+                     options.put(JSONObject().put("kanji", option.kanji).put("title", option.title))
+                 }
+-            }).put("actualN1CuratedAvailable", 3).put("actualN1FallbackOptions", 0)
++            }).put("actualN1CuratedAvailable", 1).put("actualN1FallbackOptions", 2)
+                 .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("criminal punishment")
++            click("shave; sharpen; pare")
+             await("Correct!")
+-            assertEquals("刑", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("削", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+@@ -430,14 +506,13 @@
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+             val answeredKeys = mutableSetOf<String>()
+-            repeat(1) {
++            repeat(2) {
+                 rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("刑", question.card.kanji)
+-                assertEquals(ReadingKind.On, question.question.kind)
++                assertEquals("削", question.card.kanji)
+                 val key = question.question.correctKey
+-                assertTrue(key in setOf("けい"))
++                assertTrue(key in setOf("さく", "けずる"))
+                 assertTrue("Duplicate target reading key", answeredKeys.add(key))
+-                assertEquals(key, question.question.correctKey)
++                assertEquals(if (key == "さく") ReadingKind.On else ReadingKind.Kun, question.question.kind)
+                 assertFalse(question.question.options.any { it.key.isBlank() })
+                 assertEquals(1, question.question.options.count { it.key == key })
+@@ -449,34 +524,34 @@
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "刑" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "削" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf("けい"), answeredKeys)
++            assertEquals(setOf("さく", "けずる"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+-            assertEquals(1, done.answered)
+-            assertEquals(1, done.correct)
++            assertEquals(2, done.answered)
++            assertEquals(2, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "刑" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "削" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+-            assertEquals(1, readingLogs.size)
+-            assertEquals(setOf("けい"), readingLogs.map { it.reading }.toSet())
+-            assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
+-            capture("curated-one-on-no-kun-done")
++            assertEquals(2, readingLogs.size)
++            assertEquals(setOf("さく", "けずる"), readingLogs.map { it.reading }.toSet())
++            assertEquals(setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name), readingLogs.map { it.mode }.toSet())
++            capture("curated-one-on-one-kun-done")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("criminal punishment").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "刑") })
+-            assertEquals(listOf("乃", "凹", "凸"), card.distractors.splitSep())
+-            assertEquals(listOf("ケイ"), card.onyomi.splitSep())
+-            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
++            await("shave; sharpen; pare").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "削") })
++            assertEquals(listOf("前", "判", "刑"), card.distractors.splitSep())
++            assertEquals(listOf("サク"), card.onyomi.splitSep())
++            assertEquals(listOf("けず.る", "はつ.る", "そ.ぐ"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("ケイ"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("サク"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("けず.る"), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -484,5 +559,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(6, strokes.length())
++            assertEquals(9, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -501,10 +576,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("6 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("9 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "刑" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "削" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -517,5 +592,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "刑" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "削" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -525,11 +600,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("onlyOnKeiNoKunPersistedGoodAndDone", true)
++                .put("onlySakuAndKezuruBothKindsPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-093-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-093-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-094-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-094-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -624,5 +699,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-093-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-094-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
