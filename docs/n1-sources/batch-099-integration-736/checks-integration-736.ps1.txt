@@ -1,0 +1,37 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\1565f2c1-3987-4ba1-ae0b-39e21907daf9"
+$root = "$control\..\learning-japanese"
+Set-Location $root
+$runner = Get-Content "$control\runner.json" -Raw | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 28480 -or $runner.sessionId -ne '1565f2c1-3987-4ba1-ae0b-39e21907daf9') { throw 'Uncertain runner ownership' }
+if ((git rev-parse HEAD).Trim() -ne '7d38c956279c921ad3ac4f933603024568536577' -or (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Wrong signed integration head' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 735 -or $progress.batch -ne '099' -or $progress.status -ne 'continue') { throw 'Wrong checkpoint' }
+$exits = [ordered]@{}
+python -X utf8 -B tools\validate.py *> "$log\validate-736.txt"
+$exits.validate = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Content validation failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-736.txt"
+$exits.manifest = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+python -X utf8 -B "$control\checkpoint-integration-736.py" audit *> "$log\audit-736.txt"
+$exits.audit = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Exact combined-tree audit failed' }
+python -X utf8 -B -m unittest discover -s tools -p 'test_*.py' *> "$log\tests-736.txt"
+$exits.tests = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Combined Python tests failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-736.txt"
+$exits.vocabulary = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-736.txt"
+$exits.budget = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+git diff --check *> "$log\whitespace-736.txt"
+$exits.whitespace = $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+$exits | ConvertTo-Json | Set-Content "$log\check-exits-736.json" -Encoding utf8NoBOM
+Get-Content "$log\tests-736.txt" -Tail 6
+Get-Content "$log\validate-736.txt" -Tail 2
+Get-Content "$log\budget-736.txt"
+Write-Output 'Actual combined checks passed; no new Android/native/reviewer claim or child lock acquisition.'

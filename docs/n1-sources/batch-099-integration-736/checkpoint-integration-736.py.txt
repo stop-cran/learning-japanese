@@ -1,0 +1,298 @@
+"""Freeze the bounded batch099 content-guard integration, without accepting it."""
+import argparse
+import hashlib
+import json
+import shutil
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+L = C / "logs" / "1565f2c1-3987-4ba1-ae0b-39e21907daf9"
+S = R / "docs" / "n1-sources"
+HEAD = "2aec89b2c2b67bc79fc9eb3ce6c9b7a7777a9a5f"
+MAIN = "2d3a3fa022d48aca6ea8a2ac629bd7ee66b85f9f"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+STAGE = "batch-099-content-guard-integrated-local-unreviewed-awaiting-changed-tree-acceptance"
+NEXT = (
+    "SAME099 signed LOCAL UNREVIEWED content-guard integration complete; read "
+    "docs/n1-sources/execution-736.json and batch-099-integration-736-audit.json. "
+    "Only quiz_exclusions:[冗] added on剰 after normal signed nonrewriting merge of "
+    "contentmain2d3a3fa0; complete combined Python checks/fresh manifest/budget and "
+    "exact baseline/source/link preservation passed. No runtime accepted/published, "
+    "no100. Qualified Android remains signedbf30cdead8515739bc0e671d57a54b9a3109dd46 "
+    "on n1/issue-132-meaning-exclusions, not latest applicationmain: approved direct/"
+    "symmetric/nontransitive guard and schema-only17->18->19->20 bridges only. "
+    "NEXT create a NEW named native fixture carrying quizExclusions through every "
+    "parse/entity/normal/padding/QuizCard mapping, preserving old733fixture/hash. "
+    "Fresh justified signed-head HOST/native acceptance must use actual current "
+    "full archive and production ContentSync ONCE, all named terminalcase0/no skips, "
+    "both pair target orientations and arbitrary supported filtered pools; no "
+    "heap/archiveguard increase, shared-device interference or doubled parse. "
+    "Preserve raw/full/curated reading order, eleven strokes, titles/source provenance, "
+    "two reciprocalpairs/fourdirections/oneactivatedbaselinepair, reused過剰N2 metadata "
+    "and seven word guards. Obtain only necessary serial ORIGINAL-session dependent "
+    "semantic/rendered confirmations (Claude2ac79fdb then GPT240faa46), actual process "
+    "exits and per-tool serialization; no newblind credit or repeated-read loop. "
+    "Original733/734 and Claude9tool-overlap deviation remain unchanged/not retroaccepted. "
+    "Reconstruction matches16 outputs but original733pool membership/order uncaptured. "
+    "Separate applicationmainCI42394221803 was still in_progress in736; verify actual "
+    "terminal success before claiming it green or closing issue132 adoption. "
+    "Older APKs ignore guards; compatible-client owner testing only. All signed "
+    "latest-main integration/changedteachingreview/combinedchecks/ownerfastforward/"
+    "exactremote/terminalgreenCI/EVERYimmutableZIPmanifesthash/18000entries/"
+    "42MiBcompressed/80MiBinflated/56MiBretained/perfile-media-safepath/"
+    "verifiedownerissue gates remain. Delivered125/1103remaining unchanged. "
+    "Physicalphone/generalrelease/whole-set outstanding. Verify live runner ancestry/"
+    "session/checkpoint/exact signed heads/whollyclean; parent owns runner.lock "
+    "throughout child lifetime: NOchild acquire/delete/unlock/readprobe. "
+    "Approved control/committed sources/frozeninputs only. Preserve/report/yield "
+    "actual new denial/signinghang/uncertainownership. No secondrunner."
+)
+sys.path.insert(0, str(R / "tools"))
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def save(path, data):
+    temp = path.with_suffix(path.suffix + ".736.tmp")
+    assert not temp.exists(), temp
+    temp.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(temp) == data
+    temp.replace(path)
+
+
+def git(*args, root=R):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(root), *args], encoding="utf-8").strip()
+
+
+def raw(commit, name):
+    return subprocess.check_output(["git", "-C", str(R), "show", f"{commit}:{name}"])
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def context():
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["batch"], p["status"]) == (735, "099", "continue")
+    runner = load(C / "runner.json")
+    assert (runner["pid"], runner["sessionId"], runner["status"]) == (28480, L.name, "running")
+    assert git("rev-parse", "origin/main") == MAIN
+    assert git("rev-parse", "HEAD", root=A) == APP
+    assert git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", root=A)
+    return p
+
+
+def start():
+    p = context()
+    assert git("rev-parse", "HEAD") == HEAD and not git("status", "--porcelain")
+    assert git("log", "-1", "--format=%G?") == "G"
+    assert not (L / "progress-before-736.json").exists()
+    save(L / "progress-before-736.json", p)
+    request = L / "request.txt"
+    text = request.read_text(encoding="utf-8-sig")
+    marker = "Current execution checkpoint (complete historical state remains at checkpointHistory paths):"
+    frozen, end = json.JSONDecoder().raw_decode(text.split(marker, 1)[1].lstrip())
+    assert not text.split(marker, 1)[1].lstrip()[end:].strip()
+    assert frozen["checkpoint"] == p["checkpoint"]
+    state = {
+        "execution": 736, "batch": "099", "startedAt": datetime.now(timezone.utc).isoformat(),
+        "startingHead": HEAD, "androidHead": APP, "freshOriginMain": MAIN,
+        "scope": "Normal main integration, ONLY evidenced kanji pair metadata, actual combined Python checks and normally signed LOCAL UNREVIEWED checkpoint; no reviewer/HOST/native/runtime publication/100.",
+        "request": {"sha256": digest(request), "bytes": request.stat().st_size,
+                    "characters": len(text), "lines": len(text.splitlines()),
+                    "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request loaded/decoded and complete embedded checkpoint parsed; operative contract, complete issue and final735 inspected directly. Historical middle parsed, not freshly semantically re-reviewed."},
+        "runnerPreflight": load(L / "preflight-736.json"),
+        "artifactPathPreflight": "Approved control and committed source evidence only; no optional historical-session helpers accessed.",
+        "actualNewPermissionDenials": [],
+    }
+    p["execution736StartingState"] = state
+    p["stage"] = "batch-099-content-guard-integration-in-progress"
+    p["nextAction"] = "SAME099 merge approved content main normally, add only evidenced pair, validate and sign local changed-tree draft; no publication/100."
+    save(C / "progress.json", p)
+    save(L / "starting-state-736.json", state)
+    print("Starting state persisted with all historical values preserved.")
+
+
+def audit():
+    from audit_n1_batch import audit as batch_audit
+    from audit_n1_pilot import metadata
+    from build_manifest import build_manifest, sha256
+
+    context()
+    merge = git("rev-parse", "HEAD")
+    assert git("show", "-s", "--format=%P") == f"{HEAD} {MAIN}"
+    assert git("log", "-1", "--format=%G?") == "G"
+    changed = git("diff", "--name-only", HEAD, merge).splitlines()
+    assert changed == ["docs/content-format.md", "tools/test_validate.py", "tools/validate.py"]
+    for name in changed:
+        assert raw(merge, name) == raw(MAIN, name)
+    old = raw(HEAD, "kanji/剰.md").decode("utf-8").replace("\r\n", "\n")
+    now = (R / "kanji" / "剰.md").read_text(encoding="utf-8")
+    assert now == old.replace("distractors: [乗, 剣, 則]\n",
+                              "distractors: [乗, 剣, 則]\nquiz_exclusions: [冗]\n", 1)
+    before = json.loads(raw(HEAD, "manifest.json"))
+    current = load(R / "manifest.json")
+    assert current == build_manifest(R)
+    payloads = [(section, name, value) for section, entries in current.items()
+                if isinstance(entries, dict) for name, value in entries.items()]
+    delta = [(s, n) for s, n, h in payloads if before[s][n] != h]
+    assert delta == [("files", "kanji/剰.md")]
+    assert all(current[s].keys() == before[s].keys()
+               for s, entries in current.items() if isinstance(entries, dict))
+    for section, name, h in payloads:
+        binary = section in ("images", "audio", "listeningTaskAudio", "listeningTaskImages")
+        actual = digest(R / name) if binary else sha256(R / name)
+        assert actual == h, name
+    result = batch_audit(R, "099")
+    assert (result["draftKanji"], result["newWords"], result["changedReusedArticles"],
+            result["activatedBaselinePairs"], result["readingDispositions"],
+            result["curatedOfferedKeys"]) == (1, 0, 2, 1, 4, 1)
+    prior = metadata(R, "kanji/剰.md")
+    assert prior["quiz_exclusions"] == ["冗"]
+    word = metadata(R, "words/過剰.md")
+    assert word["jlpt"] == 2 and word["reading"] == "かじょう"
+    assert word["quiz_exclusions"] == load(S / "batch-099-draft-audit.json")["preservedWordExclusions"]
+    pairs = [("剰", "過剰"), ("過", "過剰")]
+    for char, spelling in pairs:
+        assert f"(../words/{spelling}.md)" in (R / "kanji" / f"{char}.md").read_text(encoding="utf-8")
+        assert f"(../kanji/{char}.md)" in (R / "words" / f"{spelling}.md").read_text(encoding="utf-8")
+    assert git("-c", "core.quotepath=false", "diff", "--name-only").splitlines() == [
+        "kanji/剰.md", "manifest.json"]
+    assert not git("ls-files", "--others", "--exclude-standard")
+    result.update({
+        "schemaVersion": 1, "execution": 736, "integrationCommit": merge,
+        "startingHead": HEAD, "integratedMain": MAIN,
+        "integrationSignature": "G", "approvedToolDeltaExact": changed,
+        "onlyChangedRuntimePayloadSince735": "kanji/剰.md",
+        "exactSingleLineChangeVerified": True, "allOtherRuntimePayloadsUnchanged": True,
+        "verifiedRuntimeHashes": len(payloads), "manifestSha256": digest(R / "manifest.json"),
+        "allMappedReciprocalPairs": 2, "directedLinksVerified": 4,
+        "preservedWordExclusions": word["quiz_exclusions"],
+        "allSourcePacketsMembershipStrokesAndTeachingOtherwiseUnchanged": True,
+        "kanjiExclusion": {"declaring": "剰", "exclude": ["冗"], "symmetricDirectNotTransitive": True,
+                           "evidence": "batch-099-rendered-734-reconciliation.json N099-FALLBACK-JOU; complete frozen JMdict1196170/1355490/1595440 and KANJIDIC2 records",
+                           "semanticAndNativeRevalidation": "pending", "olderClients": "ignore field"},
+        "original733734EvidenceUnchanged": True, "runtimeAccepted": False, "runtimePublished": False,
+        "independentReviewersLaunched": 0, "freshAndroidOrNativeClaimed": False,
+        "publishedAdditions": 125, "remainingAdditions": 1103,
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "limits": "Mechanical combined-tree audit, not changed-tree independent semantic/rendered/native acceptance or publication.",
+    })
+    save(S / "batch-099-integration-736-audit.json", result)
+    save(L / "audit-736.json", result)
+    print(json.dumps(result, ensure_ascii=True, indent=2))
+
+
+def record():
+    from build_manifest import build_manifest
+    import ast
+    import gzip
+    import re
+
+    p = context()
+    audit_result = load(L / "audit-736.json")
+    assert load(R / "manifest.json") == build_manifest(R)
+    test_log = (L / "tests-736.txt").read_text(encoding="utf-8-sig")
+    count = re.search(r"Ran (\d+) tests in ([0-9.]+)s", test_log)
+    assert count and int(count[1]) == 377 and test_log.rstrip().endswith("\nOK")
+    budget = ast.literal_eval((L / "budget-736.txt").read_text(encoding="utf-8-sig"))
+    checks = {}
+    for name in ("validate", "manifest", "tests", "vocabulary", "budget", "whitespace"):
+        source = L / f"{name}-736.txt"
+        checks[name] = {"log": str(source), "sha256": digest(source)}
+    for name in ("validate", "manifest", "tests", "vocabulary", "budget", "whitespace"):
+        assert load(L / "check-exits-736.json")[name] == 0
+    state = load(L / "starting-state-736.json")
+    evidence = {
+        "schemaVersion": 1, "execution": 736, "batch": "099", "status": STAGE,
+        "startingState": state, "integrationCommit": audit_result["integrationCommit"],
+        "integratedMain": MAIN, "qualifiedAndroidHead": APP,
+        "changedTeaching": "ONLY quiz_exclusions: [冗] appended on new剰; no prose/title/readings/stroke/support changes.",
+        "audit": "docs/n1-sources/batch-099-integration-736-audit.json",
+        "checks": checks, "combinedPythonTests": 377, "testFailuresErrorsSkips": 0,
+        "budget": budget, "appMainPushCi": load(L / "app-main-ci-736.json"),
+        "original733734Retroaccepted": False, "runtimeChanged": True,
+        "runtimeAccepted": False, "runtimePublished": False, "independentReviewersLaunched": 0,
+        "freshAndroidOrNativeClaimed": False, "publishedAdditions": 125,
+        "remainingAdditions": 1103, "lastPublishedCommit": p["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [], "nextAction": NEXT,
+    }
+    artifacts = S / "batch-099-integration-736"
+    artifacts.mkdir(exist_ok=True)
+    for name, info in checks.items():
+        source = Path(info["log"])
+        target = artifacts / f"{name}.txt.gz"
+        target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+        assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+        info["log"] = target.relative_to(R).as_posix()
+        info["gzipSha256"] = digest(target)
+    for name in ("checkpoint-integration-736.py", "preflight-736.ps1", "checks-integration-736.ps1"):
+        shutil.copyfile(C / name, artifacts / (name + ".txt"))
+    shutil.copyfile(L / "app-main-ci-736.json", artifacts / "app-main-ci.json")
+    shutil.copyfile(L / "preflight-736.json", artifacts / "runner-preflight.json")
+    shutil.copyfile(L / "check-exits-736.json", artifacts / "check-exits.json")
+    save(S / "execution-736.json", evidence)
+    print("Evidence and exact compressed check logs recorded; not accepted/published.")
+
+
+def finish():
+    p = context()
+    before = load(L / "progress-before-736.json")
+    assert not git("status", "--porcelain")
+    commit = git("rev-parse", "HEAD")
+    assert git("log", "-1", "--format=%G?") == "G"
+    evidence = load(S / "execution-736.json")
+    assert git("rev-parse", "HEAD^") == evidence["integrationCommit"]
+    owner = load(L / "issue-736-reread.json")
+    body = (C / "batch-099-integration-736-issue-body.txt").read_text(encoding="utf-8")
+    assert owner["user"]["login"] == "stop-cran" and owner["body"] == body
+    receipt = {
+        "schemaVersion": 1, "execution": 736, "checkpoint": 736, "batch": "099",
+        "savedCommit": commit, "signature": "G", "status": "continue", "stage": STAGE,
+        "integrationCommit": evidence["integrationCommit"], "integratedMain": MAIN,
+        "evidence": "docs/n1-sources/execution-736.json",
+        "audit": "docs/n1-sources/batch-099-integration-736-audit.json",
+        "issueUpdate": owner["html_url"], "ownerAuthorAndBodyVerified": True,
+        "dedicatedWorktreesClean": True, "qualifiedAndroidHead": APP,
+        "runtimeChanged": True, "runtimeAccepted": False, "runtimePublished": False,
+        "appMainPushCi": evidence["appMainPushCi"],
+        "original733734Retroaccepted": False, "independentRenderedReviewClosed": False,
+        "reviewClosed": [], "published": [], "publishedAdditions": 125, "remainingAdditions": 1103,
+        "lastPublishedCommit": p["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False, "nextAction": NEXT,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [],
+    }
+    p.update(checkpoint=736, status="continue", stage=STAGE, nextAction=NEXT, blocker=None)
+    p["execution736CoordinatorCheckpoint"] = receipt
+    p["batch099ContentGuardIntegrationCheckpoint"] = receipt
+    allowed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    assert all(p[k] == v for k, v in before.items() if k not in allowed)
+    receipt["originalRootKeysCompared"] = len(before)
+    receipt["allOriginalHistoricalRootValuesPreservedExactly"] = True
+    save(C / "progress.json", p)
+    assert all(load(C / "progress.json")[k] == v for k, v in before.items() if k not in allowed)
+    save(L / "checkpoint-736.json", receipt)
+    print(json.dumps(receipt, ensure_ascii=True, indent=2))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("phase", choices=("start", "audit", "record", "finish"))
+    args = parser.parse_args()
+    globals()[args.phase]()
