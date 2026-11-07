@@ -1,0 +1,33 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\47d1af28-dc02-481e-9d98-69756bbbc418"
+Set-Location $root
+& "$control\preflight-719.ps1"
+if (-not $?) { throw 'Parent ownership preflight failed' }
+if ((git rev-parse HEAD).Trim() -ne '0ccfbcc2ee066534a28414d428d6fc3a6240ef67') { throw 'Unexpected content head' }
+if ((git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unverified content signature' }
+if ((git -C $android rev-parse HEAD).Trim() -ne '1c1b7bf42cc91d820a93169f1088dc647ac51c0d') { throw 'Unexpected Android head' }
+if ((git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or (git -C $android status --porcelain)) { throw 'Android not wholly clean/signed' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 718 -or $progress.batch -ne '098' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B tools\validate.py *> "$log\validate-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+python -X utf8 -B "$control\batch-098-draft-719.py" audit *> "$log\audit-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Draft audit failed' }
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\tests-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+git diff --check *> "$log\whitespace-719.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\tests-719.txt" -Tail 4
+Get-Content "$log\validate-719.txt" -Tail 2
+Get-Content "$log\budget-719.txt" -Tail 8
+Write-Output 'Draft source/baseline/link/reading/quiz/font/manifest/budget checks passed; no app/native execution or child lock acquisition.'
