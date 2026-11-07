@@ -1,0 +1,111 @@
+import copy
+from datetime import datetime, timezone
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+
+CONTROL = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("native_checkpoint_758", CONTROL / "checkpoint-native-758.py")
+native = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(native)
+LOG = native.LOG
+current = native.context()
+before = native.load(LOG / "checkpoint-full.json")
+head = native.git("rev-parse", "HEAD")
+assert head != native.BASE and native.git("log", "-1", "--format=%G?") == "G"
+assert not native.git("status", "--porcelain", "--untracked-files=all")
+assert not native.git("diff", native.BASE, head, "--", "manifest.json", "kanji", "words", "strokes")
+native.verify()
+posted = native.load(LOG / "issue-758-posted.json")
+reread = native.load(LOG / "issue-758-reread.json")
+body_path = CONTROL / "batch-100-native-758-issue-body.txt"
+body = body_path.read_bytes()
+assert posted["author"] == reread["user"]["login"] == "stop-cran"
+assert posted["bodySha256"] == hashlib.sha256(body).hexdigest()
+assert body.decode("utf-8") == reread["body"]
+assert posted["url"] == reread["html_url"]
+diagnostic = {
+    "operation": "First checkpoint758 finalization comparison, before progress replacement",
+    "result": "Original helper read_text normalized6 CRLF in the saved issue body toLF, whereas API JSON retainedCRLF. Hash and PowerShell exact body verification already matched. Independently rechecked rawbytes.decode(utf-8)==API body and SHA; both true.",
+    "disposition": "Preserve original signed helper; separate corrected finalizer compares exact decoded raw bytes. No second issue post, no native rerun, no changed content, no actual permission denial, no weakened owner/body check.",
+    "originalHelper": "docs/n1-reviews/batch-100-native-758/receipts/checkpoint-native-758.py.txt",
+}
+inherited = before["execution757CoordinatorCheckpoint"]["nextAction"]
+downstream = inherited[inherited.index("Native11directpairs"):]
+next_action = (
+    f"SAME100 checkpoint758 signed LOCAL native evidence HEAD{head}, qualifiedAndroid{native.APP}. "
+    "Read docs/n1-sources/execution-758.json and docs/n1-reviews/batch-100-native-758/. "
+    "Exact NEW757 named Glyph/Article cases terminal0, no failures/skips. Actual corrected606c836e4be33ba9 "
+    "productionContentSyncONCE signedcde6cc0farchive;1123kanji/5073words/132N1/0problems/reading+meaningepochs1. "
+    "2464directguardchecks/11pairsbothorientations/1760NONTRANSITIVEneighborchecks/2304wordguardchecks/"
+    "64exactbuilderchoices. All8453runtimehashes/newarchiveSHAf65659592598f457d821583a69a7aaedad0f968a4f9b20a2009f7ed0d1bba77c/"
+    "8475entries/30476969compressed44649812inflated44381474retained bytes/perfilepathmedia withinunchangedguards. "
+    "Sourceconfirmed創/樹 safeguard ENFORCED; liveN1 fallback蚕'silkworm' replaces樹'tree; establish'. "
+    "Actual22sampledlabels exactly755confirmed23 minus樹, ZERO new labels. Fixture generic "
+    "meaningFallbackNeedsSemanticReview=true retained, NOT a new proven defect or樹recurrence; "
+    "actualPNG/options still require independent rendered confirmation. N1 TWOcurated剣倹 plus fallback;験N4 preserved. "
+    "Selectedそう/つくる persistedgood/done;12injectedstrokes/trace/recall;5pairs10directions/1activatedbaselinepair/"
+    "3exactreusedchanges/article/systemBack/offline passed.21Han/fourfamilies/84glyph+8wordrasters/"
+    "3panels/46originalPNGs+11contactsheets archived; coordinator viewed3originalpanels,meaningPNG,"
+    "all11sheets. No established glyph/layout defect; readingtable horizontal prompt/pairedviews, "
+    "Textbook panel3final設 wraps visibly. Native not phone, drawing shape-only fallback not MLKit/humanmastery. "
+    "OwnedreadonlyAPI35 emulator5580parent24136/qemu24896 stopped;192m growth/576mmax unchanged;parentlockuntouched. "
+    "NEXT SAME100 necessary SERIAL original-family RENDERED confirmations ONLY on this signed frozen snapshot: "
+    "Claude4975f494-5c25-4a2d-8060-775ded9c734c/claude-opus-5.5 then "
+    "GPTc9e3c7f4-b439-4f44-9255-4256c0987d25/gpt-6.1-sol. Include ownoriginalfindings/exactcorrectedteachingdiff/"
+    "new758PNG-index and actual22label/64choice/11guard results/knownsourceevidence. "
+    "Serialtools andactualprocessexits/fullreports/readlimits required; no freshblindcredit; "
+    "755textual+756HOST inherited, not recounted. Do not rerun native absentchangedpayload/"
+    "failure/newunresolvedconcern. Independent renderedclosure and all normal combinedmain acceptance/"
+    "publication gates remain. No runtime edits/unreviewedpush/101 in758. "
+    "Original finalizerCRLFcomparison preserved and corrected separately with exactbyte/APIbody verification; "
+    "no issue repost/native rerun/denial. " + downstream
+)
+checkpoint = {
+    "schemaVersion": 1, "execution": 758, "checkpoint": 758, "batch": "100",
+    "status": "continue", "stage": "batch-100-corrected-native-passed-awaiting-rendered-confirmations",
+    "recordedAt": datetime.now(timezone.utc).isoformat(), "savedCommit": head, "signature": "G",
+    "qualifiedAndroidHead": native.APP, "testedContentHead": native.BASE,
+    "archiveContentSnapshot": "cde6cc0f2114801a000c1210df7a1a4dc4a560c9",
+    "evidence": "docs/n1-sources/execution-758.json", "issueUpdate": posted["url"],
+    "ownerIssueAuthorAndExactBodyVerified": True, "nativeExecuted": True,
+    "nativeMechanicalChecksPassed": True, "terminalSuccessCases": 2, "nativeFailures": 0, "nativeSkipped": 0,
+    "kanjiDirectGuardChecks": 2464, "nontransitiveNeighborChecks": 1760,
+    "preservedWordGuardChecks": 2304, "productionChoiceChecks": 64, "sampledUniqueLabels": 22,
+    "newSampledLabelsSince755": [], "removedSampledLabelsSince755": [["樹", "tree; establish"]],
+    "actualN1CuratedAvailable": 2, "actualN1FallbackOptions": 1,
+    "finding": "N753-fallback-establish",
+    "findingStatus": "resolved semantically755; native enforcement passed758; rendered confirmation pending",
+    "ownedHelperStopped": True, "runtimeHashesVerified": 8453,
+    "contentVersion": "606c836e4be33ba9", "manifestEqualToCompiled757Archive": True,
+    "coordinatorRenderedInspectionDone": True, "originalPngs": 46, "contactSheetsViewed": 11,
+    "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+    "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+    "reviewClosed": [], "published": [], "dedicatedWorktreesClean": True,
+    "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+    "publishedAdditions": 126, "remainingAdditions": 1102, "lastPublishedCommit": before["lastPublishedCommit"],
+    "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+    "wholeProjectComplete": False, "nextBatchStarted": False, "nextAction": next_action, "blocker": None,
+    "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    "finalizationDiagnostic": diagnostic,
+}
+after = copy.deepcopy(current)
+assert "execution758CoordinatorCheckpoint" not in after
+after["execution758CoordinatorCheckpoint"] = checkpoint
+changed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+for key in changed:
+    after[key] = checkpoint[key]
+for key, value in before.items():
+    if key not in changed:
+        assert after[key] == value, key
+temporary = CONTROL / "progress.json.758-finish.tmp"
+native.save(temporary, after)
+assert native.load(CONTROL / "progress.json") == current
+os.replace(temporary, CONTROL / "progress.json")
+assert native.load(CONTROL / "progress.json") == after
+native.save(LOG / "checkpoint-758-summary.json", checkpoint)
+native.save(LOG / "finalization-758-diagnostic.json", diagnostic)
+print(json.dumps({"checkpoint": 758, "status": "continue", "savedCommit": head,
+                  "historicalRootKeysPreserved": len(before), "issueUpdate": posted["url"]}, indent=2))

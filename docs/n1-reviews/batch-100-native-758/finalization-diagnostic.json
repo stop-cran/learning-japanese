@@ -1,0 +1,7 @@
+{
+  "execution": 758,
+  "operation": "First checkpoint finalization comparison before progress replacement",
+  "observation": "The original helper used Path.read_text, which normalized six CRLF sequences in the saved issue body to LF. The GitHub API JSON retained CRLF. The body SHA256 and PowerShell exact author/body/URL verification had already passed.",
+  "verification": "Independent raw-byte decode comparison exactly matches the API body and its recorded SHA256. No incorrect public comment was posted.",
+  "disposition": "Preserve the original signed helper unchanged; archive a separately named corrected finalizer using read_bytes().decode('utf-8'). No duplicate issue post, native rerun, changed runtime, permission denial or weakened owner/body requirement."
+}
