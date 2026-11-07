@@ -1,0 +1,70 @@
+import hashlib
+import json
+from pathlib import Path
+import zipfile
+
+C = Path(__file__).resolve().parent
+W = C / "batch-100-native-retry-753"
+L = C / "logs" / "b1901c85-7fac-41cd-98c2-a8010b6b8c4c"
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+preparation = load(W / "preparation.json")
+app = C / "artifacts" / "n1-batch-100-retry-753-app.apk"
+test = C / "artifacts" / "n1-batch-100-retry-753-test.apk"
+assert (L / "native-retry-compile-753-exit.txt").read_text().strip() == "0"
+output = (L / "native-retry-compile-753.txt").read_text(encoding="utf-8-sig")
+assert "BUILD SUCCESSFUL" in output and "> Task :app:compileDebugAndroidTestKotlin\n" in output
+assert sha(app) == "3d7b17f489842cc29903123d0238586e06042ccaa09f6e1bfbcb67402869b776"
+with zipfile.ZipFile(test) as z:
+    asset = z.read("assets/n1-batch-100-1f413169-envelope.zip")
+    assert hashlib.sha256(asset).hexdigest() == preparation["archiveSha256"]
+    dex = b"".join(z.read(n) for n in z.namelist() if n.startswith("classes") and n.endswith(".dex"))
+    for name in (
+        b"N1Batch100ArticleTest", b"N1Batch100GlyphTest",
+        b"fullSingleImportCreationDirectGuardsTwoCuratedKeysFivePairsTwelveStrokesOfflineAndBack",
+        b"creationLookalikesAndAllTwentyHanAcrossFourProductionFamilies",
+        b"meaningFallbackNeedsSemanticReview", b"curatedDistractorLevels",
+    ):
+        assert name in dex, name
+compilation = {
+    "execution": 753, "status": "corrected-retry-compiled-not-executed",
+    "command": load(L / "native-retry-compile-753-command.json"),
+    "exitCode": 0, "result": next(line for line in output.splitlines() if "BUILD SUCCESSFUL" in line),
+    "kotlinFixtureCompilationExecuted": True, "packagedArchiveHashVerified": True,
+    "bothNamedClassesAndRouteMethodsPresentInDex": True,
+    "appApk": str(app), "appApkSha256": sha(app), "testApk": str(test), "testApkSha256": sha(test),
+    "fixtureSha256": preparation["fixtureSha256"], "archiveSha256": preparation["archiveSha256"],
+    "runtimeChanged": False, "manifestChanged": False, "nativeExecuted": False, "phoneEvidence": False,
+}
+packet = W / "compiled-packet.json"
+assert not packet.exists()
+packet.write_text(json.dumps({"preparation": preparation, "compilation": compilation}, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+original = C / "run-753-native.ps1"
+text = original.read_text(encoding="utf-8")
+replacements = [
+    ("batch-100-native-753", "batch-100-native-retry-753"),
+    ('"$content\\docs\\n1-sources\\execution-752.json"', '"$control\\batch-100-native-retry-753\\compiled-packet.json"'),
+    ("preflight-753-native.json", "preflight-753-native-retry.json"),
+]
+for before, after in replacements:
+    assert before in text, before
+    text = text.replace(before, after)
+wrapper = C / "run-753-native-retry.ps1"
+assert not wrapper.exists()
+wrapper.write_text(text, encoding="utf-8")
+receipt = {
+    "originalWrapper": str(original), "originalWrapperSha256": sha(original),
+    "generatedRetryWrapper": str(wrapper), "generatedRetryWrapperSha256": sha(wrapper),
+    "exactReplacements": replacements, "ownershipAndAcceptanceChecksUnchanged": True,
+    "compilation": compilation,
+}
+(W / "compilation-verification.json").write_text(json.dumps(receipt, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+print("Retry compiled: exact archive and both class/method names verified; ownership/terminal acceptance checks retained.")

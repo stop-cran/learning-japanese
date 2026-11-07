@@ -1,0 +1,69 @@
+import difflib
+import gzip
+import hashlib
+import json
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+W = C / "batch-100-native-retry-753"
+old = C / "batch-100-native-752" / "N1Batch100NativeTest.kt"
+evidence = json.loads((R / "docs" / "n1-sources" / "execution-752.json").read_text(encoding="utf-8"))
+raw = old.read_bytes()
+assert hashlib.sha256(raw).hexdigest() == evidence["preparation"]["fixtureSha256"]
+assert not W.exists()
+W.mkdir()
+text = raw.decode("utf-8")
+before = '''        assertTrue(curatedIds.all { id -> n1.any { it.kanji == id } })'''
+after = '''        assertEquals(mapOf("剣" to 1, "倹" to 1, "験" to 4),
+            all.filter { it.kanji in curatedIds }.associate { it.kanji to it.jlpt })
+        assertEquals(setOf("剣", "倹"), n1.filter { it.kanji in curatedIds }.map { it.kanji }.toSet())'''
+assert text.count(before) == 1
+text = text.replace(before, after)
+before = '''            assertEquals(expectedMeanings, meaning.options.associate { it.kanji to it.title })
+            assertEquals(guards, meaning.card.toQuizCard().quizExclusions)
+            assertTrue(meaning.options.none { it.kanji in guards })
+            for (option in meaning.options) await(option.title).assertIsDisplayed()
+            evidence.put("exactDefaultMeaningOptions", JSONArray().also { rows ->
+                meaning.options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+            }).put("actualN1CuratedAvailable", 3).put("actualN1FallbackOptions", 0)'''
+after = '''            val n1Curated = curatedIds.filter { id -> n1.any { it.kanji == id } }
+            assertEquals(setOf("剣", "倹"), n1Curated.toSet())
+            assertEquals(4, meaning.options.size)
+            assertEquals(4, meaning.options.map { it.title }.toSet().size)
+            assertEquals(1, meaning.options.count { it.kanji == "創" })
+            assertTrue(n1Curated.all { id -> meaning.options.any { it.kanji == id && it.title == expectedMeanings[id] } })
+            assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
+            assertFalse(meaning.options.any { it.kanji == "験" })
+            val fallback = meaning.options.filter { it.kanji != "創" && it.kanji !in curatedIds }
+            assertEquals(1, fallback.size)
+            assertEquals(guards, meaning.card.toQuizCard().quizExclusions)
+            assertTrue(meaning.options.none { it.kanji in guards })
+            val actualCards = meaning.options.map { option -> n1.single { it.kanji == option.kanji }.toQuizCard() }
+            for (left in actualCards) for (right in actualCards.filter { it.kanji != left.kanji })
+                assertFalse(right.kanji in left.quizExclusions || left.kanji in right.quizExclusions)
+            for (option in meaning.options) await(option.title).assertIsDisplayed()
+            evidence.put("exactDefaultMeaningOptions", JSONArray().also { rows ->
+                meaning.options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+            }).put("actualN1CuratedAvailable", 2).put("actualN1FallbackOptions", 1)
+                .put("curatedDistractorLevels", JSONObject().put("剣", 1).put("倹", 1).put("験", 4))
+                .put("meaningFallbackNeedsSemanticReview", true)'''
+assert text.count(before) == 1
+text = text.replace(before, after)
+fixture = W / "N1Batch100NativeRetry753Test.kt"
+fixture.write_bytes(text.encode("utf-8"))
+diff = "".join(difflib.unified_diff(raw.decode("utf-8").splitlines(True), text.splitlines(True),
+                                    fromfile="compiled752-original.kt", tofile=fixture.name))
+(W / "fixture-from-752.diff.gz").write_bytes(gzip.compress(diff.encode("utf-8"), mtime=0))
+preparation = dict(evidence["preparation"])
+preparation.update({
+    "execution": 753, "status": "corrected-retry-prepared-not-compiled-not-executed",
+    "fixture": str(fixture), "fixtureSha256": hashlib.sha256(fixture.read_bytes()).hexdigest(),
+    "preservedOriginalFixture": str(old), "preservedOriginalFixtureSha256": hashlib.sha256(raw).hexdigest(),
+    "retryReason": "Original752 native fixture wrongly required all curated distractors in N1. Actual unchanged source assigns 験 N4; 剣/倹 are N1. First run stopped at line228 before builder/UI checks. Preserve easier level and production pool, not relevel/filter/alter content.",
+    "correction": "Assert exact imported distractor levels1/1/4 and N1 membership of two. Actual N1 UI must have target, both available curated distractors and exactly one imported N1 fallback; check labels, unique choices and direct symmetric pair guards. Record exact fallback for later semantic/rendered review. All/custom pools retain exact three-curated option checks. All other import/guard/nontransitive/word/reading/drawing/article/font checks unchanged.",
+    "nativeCompiled": False, "nativeExecuted": False, "nativeOrVisualAccepted": False,
+})
+(W / "preparation.json").write_text(json.dumps(preparation, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"fixtureSha256": preparation["fixtureSha256"], "contentChanged": False,
+                  "originalPreserved": True, "diffLines": len(diff.splitlines())}))
