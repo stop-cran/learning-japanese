@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "batch": "100",
+  "execution": 754,
+  "snapshotBeforeCorrection": "344abbb2195fece3c72e897bda76852c577e1c42",
+  "status": "source-confirmed-author-correction-awaiting-independent-confirmation",
+  "finding": {
+    "id": "N753-fallback-establish",
+    "status": "partially resolved",
+    "severity": "Major",
+    "facet": "correctness/quiz ambiguity",
+    "locations": ["kanji/創.md:15", "kanji/創.md:35", "kanji/創.md:49", "kanji/樹.md:3", "kanji/樹.md:21"],
+    "claim": "Actual N1 meaning UI offered tree; establish as a wrong answer for 創, whose taught meanings include founding or establishing. The establish branch is defensible despite the unrelated tree branch.",
+    "impact": "A learner can choose a taught meaning and be marked wrong. This is an observed live fallback, not merely a title-search hypothesis.",
+    "evidence": [
+      "Preserved retry753 exactDefaultMeaningOptions and native meaning PNG show the actual 樹 option for 創; two available curated N1 distractors require one fallback because 験 is N4.",
+      "Complete frozen JMdict1330410 樹立じゅりつ includes establishment/founding/setting a record; complete1398640 創立そうりつ includes establishment/founding/organization.",
+      "Complete1307550 marks 創める as a rare written form but its establishment/start-up sense is not restricted to 始める; general starting and auxiliary senses are restricted.",
+      "Full raw 樹 record includes establish/set up; full raw 創 record includes genesis/start/originate. Current complete articles explicitly teach the founding/establishing branch.",
+      "Committed actual Digital Daijisen創 sense2 lists 創立 and はじめる. Historical batch015 external evidence is corroboration, not a new independent upstream lookup."
+    ],
+    "remedy": "Append only 樹 to the new 創 card's direct quiz_exclusions. Preserve all ten original pairs, full readings/order, selected keys, curated distractors and the entire legacy 樹 article/metadata.",
+    "confidence": "High for observed option and source-supported establishment overlap; independent changed-tree acceptance remains pending.",
+    "qualification": "Not universal interchangeability of 創/樹 or all their compounds. Tree, resin, artistic creation and founding have distinct lexical uses. Pair is direct, symmetric and nontransitive; it adds no exclusions between 樹 and the other ten neighbors."
+  },
+  "sampledLabelAudit": {
+    "choicesSource": "docs/n1-reviews/batch-100-native-753/retry/n1-100-article-route.json.gz",
+    "choiceRows": 64,
+    "uniqueLabels": 23,
+    "completeLabelAndMeaningSectionInspection": true,
+    "sourceMeaningListsInspected": 23,
+    "freshFullApplicableFamiliesInspected": ["1307550", "1330370", "1330400", "1330410", "1398420", "1398490", "1398640", "1534520", "1597890", "2248570"],
+    "freshFullRawCharacterRecordsInspected": ["創", "樹"],
+    "decisions": [
+      {"kanji": "亭", "result": "retain", "reason": "A pavilion or restaurant building is not the act of originating/founding it; the establishment-as-building English noun is not an establish verb."},
+      {"kanji": "俳", "result": "retain", "reason": "A haiku or actor is not creation/founding. Creating a poem or acting in a creative work does not make these displayed labels synonyms."},
+      {"kanji": "倹", "result": "retain", "reason": "Frugality and thrift differ from creation, beginning and wounds. Existing full1255980/1256010 comparison evidence remains."},
+      {"kanji": "僚", "result": "retain", "reason": "A colleague/official/companion is a person, not origination or creation."},
+      {"kanji": "儀", "result": "retain", "reason": "Ceremony or formal conduct is not founding. A ceremony at a founding is an associated event, not equivalent meaning."},
+      {"kanji": "冗", "result": "retain", "reason": "Superfluity/redundancy is not creation or fabrication. The 冗談 joke compound does not make every fabricated story superfluous."},
+      {"kanji": "凡", "result": "retain", "reason": "Commonplace/mediocre describes ordinariness, not creating. Originality versus ordinariness is contrast, not synonymous answers."},
+      {"kanji": "凸", "result": "retain", "reason": "Convex/protruding is a shape, not beginning, creation or injury. A bump is not by itself a wound."},
+      {"kanji": "剛", "result": "retain", "reason": "Sturdy/unyielding strength is a quality, not creation/start or wound."},
+      {"kanji": "剣", "result": "retain", "reason": "A sword is not the wound it causes. Existing complete1256750 includes other sword-related senses, not a creation label."},
+      {"kanji": "創", "result": "target", "reason": "Correct displayed label originate; create; do not reduce the article's other taught founding and wound senses to avoid ambiguity."},
+      {"kanji": "妖", "result": "retain", "reason": "Bewitching/supernatural is not creating; a supernatural fictional subject does not make these meanings interchangeable."},
+      {"kanji": "巳", "result": "retain", "reason": "The Snake zodiac sign is not creation/start or wound."},
+      {"kanji": "弐", "result": "retain", "reason": "Formal two is a numeral, not creation or an initial/first-time meaning."},
+      {"kanji": "扱", "result": "retain", "reason": "Handling/dealing with is not bringing into being; handling an injury is not the injury itself. Shared ソウ pronunciation is unrelated to meaning-choice correctness."},
+      {"kanji": "栞", "result": "retain", "reason": "Bookmark/guidebook names an object, not its creation."},
+      {"kanji": "樹", "result": "exclude directly with 創", "reason": "Observed displayed establish branch and full1330410/1398640 founding overlap justify the new pair; tree/material branches remain distinct."},
+      {"kanji": "猪", "result": "retain", "reason": "Wild boar names an animal, not creation, starting or injury."},
+      {"kanji": "畝", "result": "retain", "reason": "Raised ridge/land measure is not creating or originating. Cultivating a row does not make the ridge noun a create verb."},
+      {"kanji": "穂", "result": "retain", "reason": "A grain-bearing head is not its production; do not import 作る's cultivation sense into the distinct displayed noun."},
+      {"kanji": "蚕", "result": "retain", "reason": "Silkworm names an insect, not producing or creating; silk production is association only."},
+      {"kanji": "訳", "result": "retain", "reason": "Translation/explanation differs from creating an original work; translating something or inventing an explanation does not merge the meanings."},
+      {"kanji": "験", "result": "retain", "reason": "Testing/verification/effect is distinct from creation/start or wound. Remains N4, not incorrectly asserted available in N1."}
+    ],
+    "limits": "Bounded author semantic audit of these sampled labels against the target and actual companion options, not independent review or exhaustive future random-pool safety. No other actionable ambiguity established in this sample. Prior185樹/137創 full-family source equality verified, not a fresh semantic reread of every member."
+  },
+  "newRuntimeEdit": "One appended metadata exclusion on new創 only; no new prose, article, level or word identity.",
+  "historicalEvidence": "Original753 finding, native failure/retry, PNGs, route JSON and completed750 textual reports remain immutable. A passing mechanical case is not retroactive semantic acceptance.",
+  "acceptance": {
+    "independentChangedTreeConfirmation": "pending both original model families",
+    "freshHost": "pending for changed payload",
+    "freshNativeGuardPoolAndFontChecks": "pending",
+    "freshRenderedSemanticAndReadabilityReview": "pending",
+    "currentMainIntegrationAndPublication": "pending",
+    "physicalPhone": "outstanding",
+    "generalRelease": "outstanding",
+    "wholeProject": "incomplete"
+  }
+}

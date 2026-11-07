@@ -1,0 +1,47 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$log = "$control\logs\c74e7537-1643-4fa7-acc6-1ee654237065"
+Set-Location $root
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 5920 -or
+    $runner.sessionId -ne 'c74e7537-1643-4fa7-acc6-1ee654237065') { throw 'Uncertain parent ownership' }
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 753 -or $progress.batch -ne '100' -or
+    $progress.stage -ne 'batch-100-native-fallback-source-reconciliation-in-progress') { throw 'Checkpoint changed' }
+if ((git rev-parse HEAD) -ne '344abbb2195fece3c72e897bda76852c577e1c42' -or
+    (git log -1 '--format=%G?') -ne 'G') { throw 'Unexpected content signed head' }
+if ((git -C $android rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?') -ne 'G' -or
+    (git -C $android status --porcelain --untracked-files=all)) { throw 'Android changed' }
+$allowed = @('kanji/創.md', 'manifest.json', 'docs/n1-sources/batch-100-progress.json')
+foreach ($change in @(git -c core.quotepath=false status --porcelain --untracked-files=all)) {
+    $name = $change.Substring(3)
+    if ($name -notin $allowed -and $name -notlike 'docs/n1-sources/batch-100-fallback-754-*') {
+        throw "Unaccounted change: $change"
+    }
+}
+foreach ($name in @('tests', 'validate', 'manifest', 'budget', 'vocabulary', 'audit', 'whitespace')) {
+    if (Test-Path -LiteralPath "$log\$name-754.txt") { throw "Do not overwrite $name receipt" }
+}
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch test_validate.ValidateTests.test_kanji_quiz_exclusions_are_optional_and_one_sided test_validate.ValidateTests.test_kanji_quiz_exclusions_reject_malformed_or_shadowed_fields test_validate.ValidateTests.test_kanji_quiz_exclusions_validate_ids_and_curated_conflicts test_validate.ValidateTests.test_kanji_exclusion_checks_preserve_unrelated_legacy_keys test_validate.ValidateTests.test_kanji_quiz_exclusions_require_exact_case_even_on_windows test_validate.ValidateTests.test_kanji_quiz_exclusions_reject_unicode_noncharacters_even_if_file_exists test_validate.ValidateTests.test_curated_readings_allow_empty_or_linked_exact_subsets test_validate.ValidateTests.test_curated_readings_reject_malformed_or_non_subset_declarations test_validate.ValidateTests.test_curated_example_must_be_in_its_reading_row_not_elsewhere_or_in_code *> "$log\tests-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source/exclusion/reading tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Content validation failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budget failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B "$control\reconcile-batch-100-fallback-754.py" audit *> "$log\audit-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Bounded source/baseline/link/font/manifest audit failed' }
+git diff --check *> "$log\whitespace-754.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\tests-754.txt" -Tail 4
+Get-Content "$log\validate-754.txt" -Tail 2
+Get-Content "$log\budget-754.txt" -Tail 4
+Get-Content "$log\vocabulary-754.txt" -Tail 2
+Write-Output 'Bounded correction checks passed; no fresh reviewer/Android/native/publication claim.'
