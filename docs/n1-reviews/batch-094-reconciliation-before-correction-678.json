@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "execution": 678,
+  "batch": "094",
+  "status": "batch-094-initial-reviews-complete-awaiting-quiz-safeguards",
+  "originalTeachingSnapshot": "d1e986ec1a8c162beeaf4ae452a94be4c7b8b598",
+  "reviewedTeachingSnapshot": "d1e986ec1a8c162beeaf4ae452a94be4c7b8b598",
+  "teachingChangedAfterInitialReviews": false,
+  "reviewedRuntimeHashes": {
+    "kanji/\u524a.md": "5900ca06027e83786b3e4dad483416a89717e564908cd5edc0a13e88d308ce65",
+    "words/\u524a\u308b.md": "2726bc66a338188c74beb754556e8e138ea0d483b4fde0c66d1e87f1afaae0f7",
+    "words/\u524a\u9664.md": "b2ec53745c13be3f7eda1093d3f278712d130aa772c74f94eaa2c6feab257bc1",
+    "kanji/\u9664.md": "dde56955dae36eafea851224f5fc3563793b559c269ae67d5de62c1949a4ec87",
+    "strokes/\u524a.json": "e30c95bc0bbfb480b355cfca17eb2bc085f065ce07b508ede77a172bb36a0fe0",
+    "manifest.json": "72eb86089c8b1631229700a9baeb8c896d3b5972bc12db1dcc21b5da9d671320"
+  },
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 24064,
+      "sessionId": "edf22897-9f87-4a3b-b20f-4c2fd839013a",
+      "startedAt": "2026-11-07T08:15:10.379027+01:00",
+      "completedAt": "2026-11-07T08:17:15.220108+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "d1e986ec1a8c162beeaf4ae452a94be4c7b8b598",
+      "reportSha256": "fa0bf643c0f37087b2bd678402fb608a2dddfc905e6ef6368cca185a68e9d11e",
+      "rawExecutionSha256": "fceedab190525ab7ebf2fea64697de83a9b18c6f31b69c72a460deaf0952533b",
+      "report": "batch-094-initial-claude.md",
+      "execution": "batch-094-initial-claude-execution.json",
+      "coverage": "batch-094-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInOneCall": true,
+      "limits": "Actual complete returned bytes/ranges verified, not comprehension certification."
+    },
+    "gpt": {
+      "launcherPid": 18552,
+      "sessionId": "65fd64ff-aae2-40af-927e-bf19b52fecb6",
+      "startedAt": "2026-11-07T08:17:19.945691+01:00",
+      "completedAt": "2026-11-07T08:18:21.314159+01:00",
+      "exitCode": 0,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "d1e986ec1a8c162beeaf4ae452a94be4c7b8b598",
+      "reportSha256": "9727ebf9b6ecf2e29538073a3948420eddabf57261d3d932b101368618e45f93",
+      "rawExecutionSha256": "8b0a0fd81c543833d650686e7978e6286d1f29661a05642e258cfc93706dd03a",
+      "report": "batch-094-initial-gpt.md",
+      "execution": "batch-094-initial-gpt-execution.json",
+      "coverage": "batch-094-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInOneCall": true,
+      "limits": "Actual complete returned bytes/ranges verified, not comprehension certification."
+    }
+  },
+  "confirmations": {},
+  "serialReviewerProcessesVerified": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 255427,
+  "initialPacketLines": 5902,
+  "initialDistinctCompleteFamilies": 121,
+  "lexicalFamilies": 99,
+  "comparisonFamilies": 26,
+  "familyOccurrences": 125,
+  "rawCharacterRecords": 10,
+  "completeArticleBodiesSupplied": 24,
+  "newArticleBodies": 1,
+  "changedReusedBodies": 3,
+  "verdicts": {
+    "kanji/\u524a.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "Complete new article; bounded textual review only."
+    },
+    "words/\u524a\u308b.md": {
+      "correctness": "NEEDS FIX",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "Complete reused article; two accepted missing direct quiz guards, not erroneous prose."
+    },
+    "words/\u524a\u9664.md": {
+      "correctness": "NEEDS FIX",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "Complete reused article; one accepted missing direct quiz guard, not erroneous prose."
+    },
+    "kanji/\u9664.md:41": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "Added reciprocal-navigation line only; complete article supplied as context."
+    }
+  },
+  "findings": [
+    {
+      "id": "094-word-direct-guards",
+      "reportedSeverity": "Moderate",
+      "severity": "Moderate",
+      "facet": "quiz correctness",
+      "reportedBy": [
+        "GPT"
+      ],
+      "sourceReport": "batch-094-initial-gpt.md",
+      "locations": [
+        "words/\u524a\u308b.md:9,23-24,35-38",
+        "words/\u524a\u9664.md:9,16,30-33"
+      ],
+      "status": "unresolved",
+      "accepted": true,
+      "remediationApplied": false,
+      "claim": "Three overlapping word-title pairs lack direct exclusion guards.",
+      "impact": "An ordinary taught removal/deletion sense permits a competing title to be accepted; shared guards do not protect the missing direct pair.",
+      "pairs": [
+        {
+          "words": [
+            "\u524a\u308b",
+            "\u9664\u304f"
+          ],
+          "reason": "The taught sentence-deletion/removal sense of \u524a\u308b overlaps displayed remove; exclude for \u9664\u304f.",
+          "evidence": "JMdict1298090 sense3 versus1345640 senses1-2; complete actual articles and Daijisen\u3051\u305a\u308b sense3.",
+          "minimalRemedy": "Append \u9664\u304f to \u524a\u308b quiz_exclusions."
+        },
+        {
+          "words": [
+            "\u524a\u308b",
+            "\u5916\u3059"
+          ],
+          "reason": "Displayed remove; unfasten is defensible for the ordinary removal/deletion aspect of \u524a\u308b; staff/list removal overlaps the complete family of \u5916\u3059.",
+          "evidence": "JMdict1298090 senses2-3 versus1203270 senses1-2; actual displayed labels and Daijisen personnel/list examples. This is not a claim of unrestricted substitution.",
+          "minimalRemedy": "Append \u5916\u3059 to \u524a\u308b quiz_exclusions."
+        },
+        {
+          "words": [
+            "\u524a\u9664",
+            "\u7701\u304f"
+          ],
+          "reason": "Displayed omit; cut down on overlaps deletion/elimination of textual material.",
+          "evidence": "JMdict1298120 versus1351040 sense1; complete actual articles and Daijisen\u3055\u304f\u3058\u3087 definition.",
+          "minimalRemedy": "Append \u7701\u304f to \u524a\u9664 quiz_exclusions.",
+          "equivalentObservation": "Claude hypothesis mentions this same pair as low risk. Different label/confidence does not make the observation unique to GPT."
+        }
+      ],
+      "evidence": [
+        "docs/n1-sources/batch-094-comparison-jmdict.xml",
+        "docs/n1-sources/batch-094-kezuru-public-text.txt",
+        "docs/n1-sources/batch-094-sakujo-public-text.txt",
+        "docs/content-format.md:156-177"
+      ],
+      "confidence": "Medium-high semantic overlap; production co-occurrence not demonstrated.",
+      "adjudication": "Accepted from exact titles, whole taught senses, complete dictionary families and pairwise contract, not model votes. Add only the three direct guards, preserve all originals; no prose rewrite or transitive clique.",
+      "laterGate": "Confirm actual N1/All production choices and new three direct guards under original native gate; static semantic review does not certify every live pool."
+    }
+  ],
+  "optionalDispositions": [
+    {
+      "reportedBy": "Claude",
+      "location": "kanji/\u524a.md:51",
+      "claim": "Use characters instead of words interchangeable.",
+      "status": "optional",
+      "decision": "No edit in this checkpoint; the comparison does not imply the characters or words are semantically interchangeable."
+    },
+    {
+      "reportedBy": "Claude",
+      "location": "kanji/\u524a.md:50",
+      "claim": "Add attested figurative\u8208\u3092\u305d\u3050 example.",
+      "status": "optional",
+      "decision": "No edit; recognized figurative sense and its kana flag are already explained; no exhaustive alternate-reading course required."
+    },
+    {
+      "reportedBy": "Claude",
+      "location": "words/\u524a\u308b.md:25,44; words/\u524a\u9664.md:38",
+      "claim": "Internal source/N2 terminology and separate reading versus verb could be clearer.",
+      "status": "optional",
+      "decision": "No established actionable defect; existing text explicitly distinguishes separate\u306f\u3064\u308b from\u3051\u305a\u308b and does not infer a new N2 assignment."
+    },
+    {
+      "reportedBy": "Claude",
+      "location": "words/\u524a\u9664.md:22,41",
+      "claim": "Say passive past of\u3059\u308b and rephrase recoverability statement.",
+      "status": "optional",
+      "decision": "Current passive explanation is true, and word-alone-does-not-promise recovery is accurate without implying recovery impossible. No edit."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Both accept Japanese examples/translations, whole constructions, complete metadata/curation, separate\u306f\u3064\u308b, sense-local\u305d\u3050 flag, shape-only mnemonic/radical variant, three wrongkanji labels, mappings and preserved legacy identities. Both observe potential\u524a\u9664/\u7701\u304f overlap, Claude as a low-risk hypothesis and GPT as actionable.",
+    "gptUniqueVerifiedUseful": [
+      "\u524a\u308b/\u9664\u304f missing direct guard",
+      "\u524a\u308b/\u5916\u3059 missing direct guard"
+    ],
+    "claudeUnique": "Nonblocking wording/polish and explicit Weblio\u3078\u305a\u308b/\u4e2d\u6b62-target evidence limits. No unique verified mandatory teaching defect.",
+    "unsupportedSuggestions": "No required etymological, frequency, broad semantic or additional-support claim accepted; optional wording does not become a mandatory defect.",
+    "limits": "Same snapshot/task/source access, equivalent observations across findings/optional/hypotheses/limits compared. This sample is not a model benchmark, equal-depth comprehension certification or native-speaker review."
+  },
+  "actionableRemainingFindingGroups": 1,
+  "actionableRemainingDirectPairs": 3,
+  "consequentialUnresolvedTeachingClaims": 0,
+  "textualReviewClosed": false,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "094",
+    "baseCommit": "48765e20846e1d6769c6ddc35146f6ce58deab57",
+    "draftKanji": 1,
+    "newWords": 0,
+    "changedReusedArticles": 3,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselinePairs": 2,
+    "readingDispositions": 4,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 121,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "c054efb36f283dc7",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8438,
+  "previousCompleteSourceBaselineFontStrokeAudit": "docs/n1-sources/batch-094-draft-audit.json",
+  "previousCompleteSourceBaselineFontStrokeAuditSha256": "bf104a8e8eec5619e8bfb7584ed2b9b05875186d66e841522d88233d25fbb63a",
+  "allMappedReciprocalPairs": 3,
+  "directedLinksVerified": 6,
+  "activatedBaselinePairs": 2,
+  "newDirectWordExclusionPairsApplied": 0,
+  "acceptedDirectWordExclusionPairsPending": 3,
+  "actualHanCount": 41,
+  "nativeFontPending": [
+    "\u5202",
+    "\u65ab",
+    "\u6c35",
+    "\u961d"
+  ],
+  "checks": {
+    "validate": {
+      "path": "docs/n1-reviews/batch-094-textual-review-validate-678.txt.gz",
+      "sha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09",
+      "uncompressedSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs/n1-reviews/batch-094-textual-review-manifest-678.txt.gz",
+      "sha256": "7147e1cf69bfb8ce5098d5c0cbfd122275c23ab54d6ba7facd9b0589e83c6342",
+      "uncompressedSha256": "5dbec66a4f936937c24c49296ba1f81993ce247167d75da8ced56cde87dfc82d"
+    },
+    "audit": {
+      "path": "docs/n1-reviews/batch-094-textual-review-audit-678.txt.gz",
+      "sha256": "24635fb67cbaf7931621974a1c9a9021da86d7a44bc1c0fa75db8c0f6376efb1",
+      "uncompressedSha256": "b236d6577af68388470fdc051f25b718cba27b1e1d592a37dbe44201335b9ece"
+    },
+    "tests": {
+      "path": "docs/n1-reviews/batch-094-textual-review-tests-678.txt.gz",
+      "sha256": "58a4a271dfbfe0f6269051632c86c15ec03f9bae201d662643903c9b760dc0f8",
+      "uncompressedSha256": "2e3e4d6e0c98c3a6b17a9eb01c1cd7afd327c3f325c498371b9578fce890c207"
+    },
+    "vocabulary": {
+      "path": "docs/n1-reviews/batch-094-textual-review-vocabulary-678.txt.gz",
+      "sha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969",
+      "uncompressedSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    "budget": {
+      "path": "docs/n1-reviews/batch-094-textual-review-budget-678.txt.gz",
+      "sha256": "ee67b969fa9e603e944b32faed6875efc92d69d782f9675c74ca5e2cdfeb0988",
+      "uncompressedSha256": "337e4d56e67518ea5d31f4ca3614aa5289f4c11937e6b5c8cfe6b686f587afa1"
+    }
+  },
+  "focusedTestsPassedThisCheckpoint": 43,
+  "freshAndroidOrNativeClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "nextAction": "SAME094 bounded quiz-safeguard correction and original-session confirmations only: both blind initial textual reviews on signed d1e986ec are complete and archived; three direct overlaps are accepted but UNRESOLVED. Add ONLY \u9664\u304f and \u5916\u3059 to existing words/\u524a\u308b.md quiz_exclusions, and \u7701\u304f to words/\u524a\u9664.md quiz_exclusions, preserving all original exclusions/order, identities, primary readings, titles, N2 levels, bodies, full \u30b5\u30af and \u3051\u305a.\u308b/\u306f\u3064.\u308b/\u305d.\u3050 order and explicit [\u30b5\u30af]/[\u3051\u305a.\u308b]. Record exact header edits/additive dispositions in batch094 ledger, re-audit full baseline exceptions, three mapped pairs/six directions/two activated baseline pairs, source/reading/quiz/font/stroke invariants; run validator and manifest generator, focused tests and normal signed LOCAL revised freeze. Resume original Claude edf22897-9f87-4a3b-b20f-4c2fd839013a then GPT 65fd64ff-aae2-40af-927e-bf19b52fecb6 SERIAL read-only CLI confirmations with each own original report, revised signed snapshot/exact diff and precise source evidence; actual available models, one tool at a time, actual exit before next reviewer, preserve complete reports/model/session/read/process limits, no newblind credit. Reconcile evidence, not votes; Claude also mentions \u524a\u9664/\u7701\u304f in a low-risk hypothesis, so that observation is shared, NOT uniquely GPT. GPT uniquely establishes the other two unguarded pairs within this shared sample. No universal live-pool certification. If no actionable defect or consequential unresolved teaching claim remains, mark TEXTUAL closure only and yield before fresh Android/native. All later original gates remain: fresh non-skipped THREE RealContentTest and ONE RareHanTest against THIS sibling; qualified TESTONLY Android1c1b7bf4 retains productionf9b59a2, NOT latest appmain; productionContentSync ONCE/fullarchive, N1/All production choices and THREE new direct guards, only\u3055\u304f/\u3051\u305a\u308b, nine-stroke drawing/articles/SystemBack/offline/all41Han/fourfonts (\u5202/\u65ab/\u6c35/\u961d cmap absence is NOT glyph failure), original-session rendered confirmations; combined-main nonrewriting merge/review changed teaching/all checks/normal signing/owner fastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/media/path/verifiedownerissue. Parent19008 owns runner.lock throughout child lifetime: NO child acquire/delete/unlock. Approved control/committed packets/frozen inputs only; no optional historical-session helper access. Preserve/report/yield actual new denial, signing hang or uncertain ownership. Published120/1228 and1108acceptanceremainder unchanged; physicalphone/generalrelease/whole-set outstanding. No095, unreviewed push or secondrunner.",
+  "limits": [
+    "Initial textual reviews and evidence adjudication complete, NOT textual closure, runtime acceptance or publication. Three accepted direct quiz-guard fixes and both original-session confirmations remain.",
+    "Both actual model families received the same255427byte/5902linepacket:125completefamilyoccurrences/121distinctfamilies, tencharacterrecords and24completearticlebodies. Each made exactly ONE serial view call returning the exact full packet; no truncation/missinglines/tooloverlap/unfinishedtool; actualprocess exits verified.",
+    "Returned bytes/hashes are not comprehension certification. Both report inspecting all applicable families; actual models/session IDs/full original reports/executions and supplied-source provenance preserved.",
+    "Public text is coordinator-supplied committed extraction, not independent upstream retrieval. Gaiji may be omitted. Unchanged Webliofooter\u3078\u305a\u308b listing and\u4e2d\u6b62link target were not supplied to reviewers; not adopted as new claims or a new usage rule. Whole-deck title uniqueness not established by reviewers; structural validator remains separate.",
+    "Existing runtime teaching/metadata and all8438payloadhashes are unchanged in this checkpoint. No newguard applied. Prior full source/baseline/stroke/font audit is retained as execution677, not relabelled as fresh linguistic inspection.",
+    "Default-four three kanjichoices accepted textually; actualN1/All/widercustom pools remain runtime gates. Directguard semantic overlap does not establish unrestricted substitution or current production co-occurrence.",
+    "All41Han/ninestrokes unchanged; cmapsnotnativelegibility. FreshAndroid/RareHan/native/fourfonts/drawing/reading/N1-All/Back/offline/ContentSyncONCE and dependent rendered review remain.",
+    "QualifiedTESTONLYAndroid1c1b7bf4 retains productionf9b59a2, NOT latestappmain. Compatibleclientf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+    "Published120/1228 and1108acceptanceremainder unchanged; six separate earlierN2source members\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 and separate\u5996exception retained. No095 or wholeprojectcompletion.",
+    "Original combined-main/normalmerge/changedteachingreview/checks/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/originalbudgets/media/path/verifiedownerissue gates remain.",
+    "Parent19008 retainsrunner.lock untouched; no childacquire/delete/unlock, optional historical-session helper access, actual new permission denial or secondrunner."
+  ]
+}
