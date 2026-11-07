@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "execution": 784,
+  "batch": "102",
+  "status": "published-verified-bounded-compatible-client-owner-testing",
+  "startingState": {
+    "execution": 784,
+    "batch": "102",
+    "startedAt": "2026-11-07T23:20:22.070416+00:00",
+    "startingHead": "d9139458fb71b9d8d369b1671eaf8e690449ad98",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "1621cf6cbd2283d377936c77f9c81851baffdf20",
+    "scope": "SAME102 owner publication, exact remote/terminal CI/public ZIP/verified owner issue and durable checkpoint; yield before103.",
+    "request": {
+      "sha256": "d159279295d6bd9d13e7c8feed56fd8f5eec822ea95f6eaa64ce03bdc251f140",
+      "bytes": 5440419,
+      "characters": 5372787,
+      "lines": 72389,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request decoded and complete checkpoint parsed; operative contract, entire approved issue and final783 inspected directly. Historical middle parsed, not freshly semantically rereviewed. Initial terminal encoding and oversized-output limitations retained."
+    },
+    "runnerPreflight": {
+      "execution": 784,
+      "sessionId": "8b9a4f2c-5cbb-448d-9754-692845392e51",
+      "verifiedAt": "2026-11-07T23:20:21.2580543+00:00",
+      "ancestry": [
+        28116,
+        30760,
+        26920,
+        30080,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "coordinatorPid": 30080,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 783,
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe.",
+      "lockTouched": false
+    },
+    "runtime": {
+      "runtimeHashesVerified": 8458,
+      "contentVersion": "f376333b242ebb23",
+      "manifestSha256": "7c7be7419c16134f8413f6214640a663ca16c53a1bf66b26f8c98cfb3d3a3345",
+      "manifestEqualsCompiledArchive": true,
+      "archiveContentSnapshot": "ae9d2df569471dfadc25388c3a664612b56a1fc6",
+      "archiveSha256": "73067936ccc548d615048c529adf3c5989659879847a69f9a8b49f53e661bd76",
+      "zipEntries": 8480,
+      "compressedBytes": 30483598,
+      "inflatedBytes": 44661694,
+      "retainedBytes": 44393356,
+      "listeningTaskMediaBytes": 5893602,
+      "allOriginalBudgetsAndPerFilePathMediaGuardsPassed": true
+    },
+    "actualNewPermissionDenials": [],
+    "artifactPathPreflight": "Approved control and committed evidence/frozen inputs only; no optional historical-session recipes accessed."
+  },
+  "publicationRecord": "batch-102-publication.json",
+  "acceptedCommit": "d9139458fb71b9d8d369b1671eaf8e690449ad98",
+  "runtimeBytesUnchanged": true,
+  "runtimeAccepted": true,
+  "runtimePublished": true,
+  "counts": {
+    "kanji": 1125,
+    "words": 5074,
+    "n1Labels": 134,
+    "namedSourceMembersPresent": 139,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 129,
+    "remainingAdditions": 1099,
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 125,
+    "batchChangedReusedArticles": 2,
+    "allMappedReciprocalPairs": 3,
+    "mappedDirectedLinks": 6,
+    "activatedBaselinePairs": 1
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42424852787,
+    "headSha": "d9139458fb71b9d8d369b1671eaf8e690449ad98",
+    "jobs": [
+      {
+        "completedAt": "2026-11-07T23:22:58Z",
+        "conclusion": "success",
+        "databaseId": 128560818009,
+        "name": "validate",
+        "startedAt": "2026-11-07T23:21:08Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-07T23:21:10Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-07T23:21:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:24Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-07T23:21:10Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:24Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-07T23:22:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:31Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-07T23:22:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:44Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-07T23:22:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:53Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-07T23:22:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:54Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-07T23:22:53Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:54Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-07T23:22:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:55Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-07T23:22:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:55Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-07T23:22:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:55Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-07T23:22:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T23:22:55Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-07T23:22:55Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42424852787/job/128560818009"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "d9139458fb71b9d8d369b1671eaf8e690449ad98",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/d9139458fb71b9d8d369b1671eaf8e690449ad98",
+    "sha256": "af68f30082a0a1d5afce8bb8fc5b9b94df6d8b26fa9933e40f2108bd9f35ddbf",
+    "manifestEqual": true,
+    "contentVersion": "f376333b242ebb23",
+    "verifiedRuntimeHashes": 8458,
+    "zipEntries": 8480,
+    "compressedBytes": 30873678,
+    "inflatedBytes": 44661694,
+    "retainedBytes": 44393356,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "newReviewerNativeHostRuns": 0,
+  "actualNewPermissionDenials": [],
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false
+}

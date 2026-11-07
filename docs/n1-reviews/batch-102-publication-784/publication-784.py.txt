@@ -1,0 +1,382 @@
+"""Publish the accepted batch102 without changing its reviewed runtime."""
+import copy
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+
+C = Path(__file__).resolve().parent
+R, A = C.parent / "learning-japanese", C.parent / "kanji-cards-android"
+L = C / "logs" / "8b9a4f2c-5cbb-448d-9754-692845392e51"
+S, V = R / "docs" / "n1-sources", R / "docs" / "n1-reviews"
+D = V / "batch-102-publication-784"
+HEAD = "d9139458fb71b9d8d369b1671eaf8e690449ad98"
+MAIN = "1621cf6cbd2283d377936c77f9c81851baffdf20"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+VERSION = "f376333b242ebb23"
+MEMBER = "\u52a3"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def save(p, data, replace=False):
+    assert replace or not p.exists(), p
+    temp = p.with_suffix(p.suffix + ".784.tmp")
+    assert not temp.exists(), temp
+    temp.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(temp) == data
+    os.replace(temp, p)
+    assert load(p) == data
+
+
+def output(args, root=R):
+    return subprocess.check_output(args, cwd=root, encoding="utf-8").strip()
+
+
+def git(*args, root=R):
+    return output(["git", "--no-pager", "-C", str(root), *args])
+
+
+def context(head=HEAD, label="context"):
+    assert not os.environ.get("GH_TOKEN") and not os.environ.get("GITHUB_TOKEN")
+    name = f"preflight-784-{label}.json"
+    subprocess.run(["pwsh", "-NoProfile", "-NonInteractive", "-File", str(C / "preflight-784.ps1"),
+                    "-ExpectedHead", head, "-ReceiptName", name], check=True)
+    return load(L / name)
+
+
+def helper():
+    p = C / "accept-batch-102-combined-783.py"
+    assert sha(p) == "d41bfafbbcbc757cb53f46418687563a473f42dcc0d697a068566c45e2bbadd8"
+    assert sha(C / "native-778-state.py") == "d626983e915ee2571cf69531ce391e36b71b6b9aa45723c0b7c21f9439125230"
+    spec = importlib.util.spec_from_file_location("accepted783", p)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def runtime():
+    result = helper().runtime()
+    assert not git("diff", HEAD, "--", "kanji", "words", "articles", "strokes", "manifest.json", "tools")
+    return result
+
+
+def start():
+    role = context(label="start")
+    state = load(C / "progress.json")
+    assert state == load(L / "checkpoint-full.json")
+    assert git("rev-parse", "origin/main") == MAIN and git("merge-base", MAIN, HEAD) == MAIN
+    save(L / "progress-before-784.json", state)
+    raw = (L / "request.txt").read_bytes()
+    text = raw.decode("utf-8-sig")
+    embedded = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    assert embedded["checkpoint"] == state["checkpoint"] == 783
+    assert embedded["execution783CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    assert state["execution783CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    record = {
+        "execution": 784, "batch": "102", "startedAt": datetime.now(timezone.utc).isoformat(),
+        "startingHead": HEAD, "androidHead": APP, "freshOriginMain": MAIN,
+        "scope": "SAME102 owner publication, exact remote/terminal CI/public ZIP/verified owner issue and durable checkpoint; yield before103.",
+        "request": {"sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw),
+                    "characters": len(text), "lines": len(text.splitlines()),
+                    "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request decoded and complete checkpoint parsed; operative contract, entire approved issue and final783 inspected directly. Historical middle parsed, not freshly semantically rereviewed. Initial terminal encoding and oversized-output limitations retained."},
+        "runnerPreflight": role, "runtime": runtime(), "actualNewPermissionDenials": [],
+        "artifactPathPreflight": "Approved control and committed evidence/frozen inputs only; no optional historical-session recipes accessed.",
+    }
+    save(L / "starting-state-784.json", record)
+    state["execution784StartingState"] = record
+    state.update(stage="batch-102-owner-publication-in-progress", nextAction=record["scope"], blocker=None)
+    before = load(L / "progress-before-784.json")
+    assert all(state[k] == v for k, v in before.items() if k not in {"stage", "nextAction", "blocker"})
+    assert load(C / "progress.json") == before
+    save(C / "progress.json", state, replace=True)
+    print("SAME102 publication started; full live history preserved.", flush=True)
+
+
+def gate():
+    context(label="gate")
+    accepted = load(S / "execution-783.json")
+    assert accepted == load(V / "batch-102-combined-acceptance-783.json")
+    assert accepted["runtimeAccepted"] and not accepted["runtimePublished"]
+    assert accepted["reviewClosed"] == [MEMBER] and not accepted["published"]
+    assert accepted["actionableRemainingFindings"] == accepted["consequentialUnresolvedUnqualifiedTeachingClaims"] == 0
+    assert accepted["checks"]["pythonTests"] == 377
+    assert accepted["checks"]["validatorErrors"] == 0 and accepted["checks"]["manifestFresh"]
+    assert accepted["independentRenderedReviewClosed"] and accepted["original780NoncompliancePreserved"]
+    for row in accepted["receipts"]:
+        p = R / row["archive"]
+        assert sha(p) == row["archiveSha256"]
+        raw = gzip.decompress(p.read_bytes()) if row.get("losslessGzip") else p.read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == row["sourceSha256"]
+    inherited = helper().inherit()
+    assert inherited["hostTests"] == 5 and inherited["nativeTerminalCaseSuccesses"] == 2
+    assert inherited["sampledProductionOptionSets"] == 128 and inherited["sampledLabels"] == 40
+    save(L / "prepublication-gate-784.json", {
+        "execution": 784, "acceptedSignedCheckpoint": HEAD, "runtime": runtime(),
+        "acceptanceReceiptHashesReverified": len(accepted["receipts"]),
+        "inheritedAcceptance": inherited, "freshReviewerNativeHostRuns": 0,
+        "sourceChecks": "783 full frozen-source/baseline/reading/guard/link/font/pinned-stroke audits inherited on unchanged runtime; not fresh linguistic review."})
+    print("Acceptance, review, HOST/native receipts and all8458 runtime hashes verified.", flush=True)
+
+
+def verify(phase, head):
+    context(head, label=f"verify-{phase}")
+    runtime()
+    assert git("ls-remote", "origin", "refs/heads/main").split()[0] == head
+    runs = json.loads(output(["gh", "run", "list", "--repo", "stop-cran/learning-japanese",
+        "--commit", head, "--workflow", "Validate content", "--limit", "5",
+        "--json", "databaseId,status,conclusion,headSha"]))
+    assert runs and runs[0]["headSha"] == head, "Exact CI unavailable; preserve pending checkpoint"
+    subprocess.run(["gh", "run", "watch", str(runs[0]["databaseId"]), "--repo",
+        "stop-cran/learning-japanese", "--exit-status", "--interval", "10"], check=True)
+    ci = json.loads(output(["gh", "run", "view", str(runs[0]["databaseId"]), "--repo",
+        "stop-cran/learning-japanese", "--json", "databaseId,status,conclusion,headSha,workflowName,jobs"]))
+    save(L / f"{phase}-ci-784.json", ci)
+    p = C / "artifacts" / f"content-{head[:7]}.zip"
+    assert not p.exists(), p
+    url = f"https://codeload.github.com/stop-cran/learning-japanese/legacy.zip/{head}"
+    result = subprocess.run(["curl.exe", "--fail", "--location", "--silent", "--show-error",
+        "--max-time", "180", url, "--output", str(p)], capture_output=True, text=True)
+    save(L / f"archive-download-{phase}-784.json", {
+        "commit": head, "url": url, "exitCode": result.returncode, "stdout": result.stdout, "stderr": result.stderr})
+    result.check_returncode()
+    verifier = C / "verify-batch-002-publication.py"
+    assert sha(verifier) == "8d07dcdb04eefa2bef9f1fb66f9a47e0f3711f9328eb15c9da13606ed8b42a6d"
+    subprocess.run([sys.executable, "-X", "utf8", "-B", str(verifier), head, str(p),
+                    str(L / f"{phase}-archive-784.json")], check=True)
+    public(phase, head)
+
+
+def public(phase, head):
+    runtime()
+    assert git("rev-parse", "HEAD") == head and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert git("ls-remote", "origin", "refs/heads/main").split()[0] == head
+    ci, archive = load(L / f"{phase}-ci-784.json"), load(L / f"{phase}-archive-784.json")
+    assert ci["headSha"] == head and ci["status"] == "completed" and ci["conclusion"] == "success"
+    assert ci["jobs"] and all(j["conclusion"] == "success" for j in ci["jobs"])
+    assert archive["commit"] == head and archive["contentVersion"] == VERSION
+    assert archive["verifiedRuntimeHashes"] == 8458 and archive["manifestEqual"]
+    assert all(archive[k] for k in ("allPublishingBudgetsPassed", "contributorEvidenceExcluded", "perFileLimitsAndSafePathsPassed"))
+    assert sha(C / "artifacts" / f"content-{head[:7]}.zip") == archive["sha256"]
+    sys.path.insert(0, str(R / "tools"))
+    from check_content_budget import MAX_ENTRIES, MAX_COMPRESSED, MAX_INFLATED, MAX_RETAINED
+    assert (MAX_ENTRIES, MAX_COMPRESSED, MAX_INFLATED, MAX_RETAINED) == (
+        18000, 42 * 1024**2, 80 * 1024**2, 56 * 1024**2)
+    return ci, archive
+
+
+def records():
+    context(label="records")
+    ci, archive = public("accepted", HEAD)
+    accepted = load(S / "execution-783.json")
+    counts = dict(accepted["sourceAudit"]["currentCounts"])
+    assert counts == dict(kanji=1125, words=5074, n1Labels=134, namedSourceMembersPresent=139)
+    prior = load(S / "batch-101-publication.json")
+    assert prior["counts"]["projectPublishedAdditions"] == 128
+    assert prior["counts"]["projectNewNecessarySupportWords"] == 124
+    counts.update(batchPublishedAdditions=1, projectPublishedAdditions=129, remainingAdditions=1099,
+                  batchNewNecessarySupportWords=1, projectNewNecessarySupportWords=125,
+                  batchChangedReusedArticles=2, allMappedReciprocalPairs=3,
+                  mappedDirectedLinks=6, activatedBaselinePairs=1)
+    initial = load(V / "batch-102-reconciliation.json")
+    publication = {
+        "schemaVersion": 1, "execution": 784, "batch": "102", "membership": [MEMBER],
+        "status": "published-verified-bounded-compatible-client-owner-testing",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "baseCommit": MAIN, "authoredSnapshot": initial["originalTeachingSnapshot"],
+        "reviewedSnapshot": initial["originalTeachingSnapshot"],
+        "combinedTestedSnapshot": accepted["combinedTestedSnapshot"], "latestMainIntegrated": MAIN,
+        "acceptedCommit": HEAD, "integratedCommit": HEAD, "publishedCommit": HEAD,
+        "normalSignatureStatus": "G; normal owner-scoped fast-forward; no bypass/amendment/force push.",
+        "reviewRecord": "../n1-reviews/batch-102-reconciliation.json",
+        "renderedRecord": "../n1-reviews/batch-102-rendered-782/reconciliation.json",
+        "combinedAcceptanceRecord": "execution-783.json", "nativeRecord": "execution-779.json",
+        "validation": accepted["sourceAudit"], "pythonTestsPassed": 377,
+        "hostTestsReverified": 5, "nativeTerminalCasesReverified": 2, "newReviewerNativeHostRuns": 0,
+        "ci": ci, "immutablePublicArchive": archive, "counts": counts, "contentVersion": VERSION,
+        "qualifiedAndroidHead": APP,
+        "compatibleClient": "Approved Android #132/main2edbf366 guard plus #125 curated readings required. Old clients ignore these metadata fields; not universal synonym detection.",
+        "publicationIdentity": "stop-cran; process-scoped token only; global romanko-ms unchanged.",
+        "limits": accepted["limits"], "historicalPendingFlagsPreserved": True,
+        "pendingPublicationGateDisposition": "Accepted commit CI and exact public ZIP verified; terminal evidence/issue/checkpoint still pending.",
+        "sampledLivePoolSemanticAcceptance": "CLEAN only within finite128option-set/40label/live-default sample",
+        "unrestrictedLivePoolSemanticAcceptance": "UNVERIFIED; not claimed",
+        "original780NoncompliancePreserved": True,
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeSetAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "Verify terminal evidence CI/public ZIP/owner issue; checkpoint and yield before103.",
+    }
+    save(S / "batch-102-publication.json", publication)
+    ledger = load(S / "batch-102-progress.json")
+    ledger["prePublication784State"] = copy.deepcopy(ledger)
+    ledger.update(status=publication["status"], published=[MEMBER], publishedAdditions=129,
+                  remainingAdditions=1099, publishedCommit=HEAD, runtimePublished=True,
+                  publicationRecord="batch-102-publication.json", nextAction=publication["nextAction"],
+                  pendingGates=["Terminal evidence CI/public ZIP/verified owner issue; physical-phone/general-release and whole-set outstanding."])
+    save(S / "batch-102-progress.json", ledger, replace=True)
+    save(S / "execution-784.json", {
+        "schemaVersion": 1, "execution": 784, "batch": "102", "status": publication["status"],
+        "startingState": load(L / "starting-state-784.json"), "publicationRecord": "batch-102-publication.json",
+        "acceptedCommit": HEAD, "runtimeBytesUnchanged": True, "runtimeAccepted": True,
+        "runtimePublished": True, "counts": counts, "ci": ci, "immutablePublicArchive": archive,
+        "newReviewerNativeHostRuns": 0, "actualNewPermissionDenials": [], "parentLockTouched": False,
+        "optionalHistoricalSessionHelpersAccessed": False, "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False})
+    assert not D.exists()
+    D.mkdir()
+    for p in (Path(__file__), C / "publish-784.ps1", C / "preflight-784.ps1",
+              C / "verify-batch-002-publication.py", L / "starting-state-784.json",
+              L / "prepublication-gate-784.json", L / "preflight-784.json",
+              L / "archive-download-accepted-784.json", L / "accepted-ci-784.json",
+              L / "accepted-archive-784.json"):
+        shutil.copyfile(p, D / (p.name + (".txt" if p.suffix in {".ps1", ".py"} else "")))
+    state = load(C / "progress.json")
+    state["execution784AcceptedPublication"] = copy.deepcopy(publication)
+    state.update(stage="batch-102-published-awaiting-terminal-evidence", nextAction=publication["nextAction"])
+    save(C / "progress.json", state, replace=True)
+    runtime()
+    print("Verified accepted delivery; publication ledgers ready for signed terminal evidence.", flush=True)
+
+
+def comment(head):
+    context(head, label="comment")
+    ci, archive = public("terminal", head)
+    p = load(S / "batch-102-publication.json")
+    body = f"""Batch **102 ({MEMBER})** is published and verified for bounded compatible-client owner testing, with necessary support **優劣 (ゆうれつ)** covering relative superiority/inferiority; no inferred vocabulary level. Existing **劣る N3 / 優 N3** metadata and teaching preserved: TWO exact navigation-only reused changes. THREE all-mapped pairs/SIX link directions/ONE activated baseline pair; SIX pinned generated strokes, canonical 力19 below少, labelled modern-shape mnemonic, not etymology.
+
+Authored/reviewed `{p['reviewedSnapshot']}`; combined-tested `{p['combinedTestedSnapshot']}`; signed accepted publication `{HEAD}`; terminal evidence/remote main `{head}`. Original serial blind **claude-opus-5.5 / gpt-6.1-sol** textual775 and original-session dependent rendered780/781/782 retained. **Original780Claude remains NONCOMPLIANT/UNACCEPTED**, not retroaccepted by its serial two-image781 repair. Remaining Claude evidence inherited/three compactions; GPT782 five exact text resources and43PNG opens serial/one compaction. Rescaled renditions are NOT original pixels/equal comprehension/native-speaker approval. No new reviewer/HOST/native run784 or new blind credit. No actionable defect or consequential unresolved unqualified changed-teaching claim remains.
+
+Full **レツ / おと.る** source lists/order retained, both selected, only **れつ / おとる** offered; persistedGood/Done2of2 in native779. SEVEN direct symmetric NONTRANSITIVE kanji guards/FOUR word guards, not synonym cliques. Actual default N1 wrong choices: ONE curated **功 (merit; achievement)**, TWO fallbacks **冗 (superfluous; redundant) / 蛍 (firefly)**; 努/省 stay outside N1. Semantic acceptance **CLEAN only within finite128sampled production option sets/40labels/live-default sample**; unrestricted unsampled/future-pool safety **UNVERIFIED**, not claimed.
+
+Fresh main `{MAIN}` remains an ancestor; ZERO incoming/runtime/teaching changes. Normal stop-cran process-scoped fast-forwards; global romanko-ms unchanged. Combined783 **377 Python tests**, validator0errors, regenerated manifest, vocabulary consistency(**2122/2431 pilot**, not complete coverage), frozen sources/full dictionary packets/raw character records/full baseline/exact membership/all readings/pinned geometry/fonts/all mapped links/original budgets passed. HOST776 FIVE nonskipped cases and native779 TWO terminalcase0 successes inherited/reverified, NOT rerun784. Fullarchive production **ContentSync ONCE**: **1125kanji/5074words/134N1,zeroProblems,both accepted parser epochs1**, version `{VERSION}`; **1568direct/672NONTRANSITIVEneighbor/512wordguard checks/64native production choices**, plus64HOST choices =128sampled option sets/40distinctlabels. N1 selection/meaning/two curated readings/six-stroke drawing/articles/links/SystemBack/offline/31Han across four font families retained. Injected reference traces/deliberate recall reveal/grade1 are NOT human handwriting/mastery/MLKit approval or phone evidence.43PNGs/25byte-states and inherited rendered limits remain explicit.
+
+Accepted CI [{p['ci']['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{p['ci']['databaseId']}) and terminal CI [{ci['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{ci['databaseId']}) green. BOTH immutable publicZIPs preserve **all8458 runtime hashes** and manifest. Terminal **{archive['zipEntries']}entries / {archive['compressedBytes']}compressed / {archive['inflatedBytes']}inflated / {archive['retainedBytes']}retained bytes** passes unchanged18000entries/42MiB/80MiB/56MiB/perfile/media/safepath guards; contributor evidence excluded.
+
+Published **129/1228additions;1099remain**. Collection **1125kanji/5074words/134N1labels/139named-source members plus separate妖**. Six separately placed source保/案/派/第/策/結 retain earlierN2levels, not issue60accepted additions; no duplication/relevel. Necessarysupportarticles125project-wide, NOT an N1 vocabulary deck. Compatible **stop-cran/kanji-cards-android#132** plus **stop-cran/kanji-cards-android#125** required; old clients ignore guards/curation. Qualified Android `{APP}` carries approved guard and schema-only bridges, NOT unrelated latest-app behavior.
+
+Durable `docs/n1-sources/batch-102-publication.json`, `execution-784.json`, textual775/HOST776/native779/rendered780+781repair/782/combined783 records. Historical pending flags preserved with scoped discharge; all original evidence/permission/process limitations retained. **Physicalphone/generalrelease/whole-set acceptance outstanding; project incomplete**. Parent5920 retainsrunner.lock: no childacquisition/deletion/unlock/readprobe; no optional historicalsessionhelper or actualnewdenial. Checkpoint784 continues and yields before103; no nextbatch/secondrunner.
+"""
+    path = C / "batch-102-publication-comment.txt"
+    assert not path.exists()
+    path.write_text(body, encoding="utf-8")
+    save(L / "terminal-publication-784.json",
+         {"head": head, "ci": ci, "archive": archive, "issueBodySha256": sha(path)})
+
+
+def finish(head):
+    context(head, label="finish")
+    ci, archive = public("terminal", head)
+    receipt = load(L / "issue-784-reread.json")
+    remote = json.loads(output(["gh", "api",
+        f"repos/stop-cran/learning-japanese/issues/comments/{receipt['id']}"]))
+    body = (C / "batch-102-publication-comment.txt").read_bytes().decode("utf-8")
+    assert receipt["user"]["login"] == remote["user"]["login"] == "stop-cran"
+    assert receipt["id"] == remote["id"] and receipt["body"] == remote["body"] == body
+    assert output(["gh", "api", "user", "--jq", ".login"]) == "romanko-ms"
+    assert not (S / "batch-103-progress.json").exists()
+    ledger = load(S / "batch-102-progress.json")
+    assert ledger["membership"] == ledger["reviewClosed"] == ledger["published"] == [MEMBER]
+    publication = load(S / "batch-102-publication.json")
+    next_action = (
+        f"Batch102 accepted/published/verified at {head}; yield before103. Next coordinator ONE bounded103 "
+        "source-preparation checkpoint from remaining frozen rows below15. Read entire request/finalcheckpoint/"
+        "approvedissue; preserve FULLlivehistory. Verify whollyclean signedheads/freshmain/liveparentancestry/"
+        "decodedlauncher/exactsession. Parent5920 retainsrunner.lock: NOchildacquire/delete/unlock/readprobe. "
+        "Approvedcontrol/committedsourcepackets/frozeninputs only; no optional historicalsessionrecipes. Preserve/"
+        "report/yield actualnewdenial/signinghang/uncertainownership. All original fullfamily/readingallocation/"
+        "usefulness/baseline/fullmetadata/curation/directguards/allmapped+activatedlinks/pinnedstrokes/newHanfonts/"
+        "TWOserialblinddifferentfamilies/serialinternaltools/originalsessionconfirmation/non-skippedAndroid/native/"
+        "combinedmain/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutablepublicZIPhash/unchanged18000entries/"
+        "42MiBcompressed80MiBinflated56MiBretained/perfilemediasafepaths/verifiedownerissue gates remain. "
+        "Published129/1228;1099acceptance-remainder;1125kanji5074words134N1labels139namedmembers+separate妖; "
+        "125necessarysupportsNOTN1vocabulary. Six separatelyplacedsource保案派第策結 retain earlierN2levels, "
+        "not issue60accepted additions; do not duplicate/relevel.102劣/new優劣supportrelativecomparison/nolevel/"
+        "劣るN3優N3allmetadatapreserved/exacttwo reusednavigationchanges/fullレツおと.るsourceorder/"
+        "bothselected/onlyれつおとる/nativeGoodDone2of2. THREEallmappedpairs/SIXdirections/ONEactivatedbaselinepair/"
+        "SIXpinnedstrokes/canonical力19below少/labelledmodernshapemnemonicNOTetymology/"
+        "SEVENdirectsymmetricNONTRANSITIVEkanjiguards/FOURwordguardsNOTsynonymcliques. "
+        "N1ONEcurated功plusTWOfallbacks冗蛍;努省outsideN1unchanged. Finite128optionsets/40labels/live-default "
+        "semanticacceptanceCLEANonlywithinsample;unrestrictedunsampledquizsafetyUNVERIFIED/notclaimed. "
+        "HOST776fivecases/noskips/native779TWOterminalcase0/ContentSyncONCE1125kanji5074words134N1zeroProblems/"
+        "bothepochs1/1568directguards672neighbors512wordguards64native+64HOSTbuilderchoices. "
+        "Original780ClaudeNONCOMPLIANT/UNACCEPTEDimmutable;781twoimageSERIALdependentsupplementNOTretroacceptance/"
+        "otherClaudeevidenceinheritedthreecompactions. GPT782fiveexactresources+43imageopensserialonecompaction/"
+        "31Han/fourfonts/43PNGs25byte-states/rescaledrenditionsNOToriginalpixels/equalcomprehension/nativespeaker. "
+        "Injectedreferencepoints/deliberaterecallreveal/grade1NOTMLKithumanhandwritingmasteryphone. "
+        "CompatibleAndroid#132 main2edbf366 plus#125 required; oldclientsignore. "
+        "QualifiedsignedAndroidbf30cdead8515739bc0e671d57a54b9a3109dd46 approvedguard+schemaonlybridges NOTunrelatedlatestmain. "
+        "Combined783377Python/versionf376333b242ebb23/8458runtimehashes/accepted+terminalCI+ZIP/ownerissueverified784; "
+        "no newreviewnativehost784. Historical evidence/process/permission/OOM/source-only/pending limitations preserved, "
+        "no retroacceptance. Physicalphone/generalrelease/whole-setoutstanding;projectincomplete. No103started/authoragents/"
+        "concurrentheavywork/secondrunner/signingretry/guardincrease.")
+    publication.update(finalPublishedCommit=head, remoteMainVerified=head, terminalCi=ci,
+                       terminalImmutablePublicArchive=archive, issueUpdate=receipt["html_url"],
+                       pendingPublicationGateDisposition="Terminal CI/public ZIP/owner issue verified; bounded owner-testing delivery closed, not phone/general release.",
+                       nextAction=next_action)
+    save(C / "batch-102-publication-checkpoint.json", publication)
+    save(L / "batch-102-publication-checkpoint.json", publication)
+    before, state = load(L / "progress-before-784.json"), load(C / "progress.json")
+    checkpoint = {
+        "schemaVersion": 1, "execution": 784, "checkpoint": 784, "batch": "102",
+        "savedCommit": head, "signature": "G", "remoteMainVerified": head, "acceptedCommit": HEAD,
+        "acceptedCi": publication["ci"]["databaseId"], "terminalCi": ci["databaseId"],
+        "bothImmutablePublicArchivesVerified": True, "runtimeHashesPerArchive": 8458,
+        "contentVersion": VERSION, "reviewedRuntimeBytesUnchanged": True, "dedicatedWorktreesClean": True,
+        "allOriginalHistoricalRootValuesPreservedExactly": True, "originalRootKeysCompared": len(before),
+        "ownerIssueAuthorAndBodyVerified": True, "issueUpdate": receipt["html_url"],
+        "globalIdentityUnchanged": True, "parentLockTouched": False,
+        "optionalHistoricalSessionHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "status": "continue", "stage": "batch-102-published-verified-before-103",
+        "publishedAdditions": 129, "remainingAdditions": 1099, "lastPublishedCommit": head,
+        "nextAction": next_action, "blocker": None, "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False}
+    state["execution784CoordinatorCheckpoint"] = checkpoint
+    state["batch102PublicationCheckpoint"] = publication
+    state["batch102PublicationIssueReceipt"] = {
+        "id": receipt["id"], "url": receipt["html_url"], "author": "stop-cran",
+        "bodySha256": sha(C / "batch-102-publication-comment.txt"), "verified": True}
+    state.update(checkpoint=784, status="continue", stage=checkpoint["stage"],
+                 lastPublishedCommit=head, remainingAdditions=1099, blocker=None, nextAction=next_action)
+    state["unmetAcceptanceGates"] = copy.deepcopy(before["unmetAcceptanceGates"])
+    state["unmetAcceptanceGates"][0] = (
+        "Remaining1099 issue60 source-bounded additions not review-closed/published; six separately placed "
+        "earlier-level source members require accounted dispositions, not duplicates or issue60 acceptance credit. "
+        "All original source/review/baseline/reading/link/font/Android/native/currentmain/CI/publicZIP gates remain.")
+    allowed = {"checkpoint", "status", "stage", "lastPublishedCommit", "remainingAdditions",
+               "blocker", "nextAction", "unmetAcceptanceGates"}
+    assert before.keys() <= state.keys()
+    assert all(state[k] == v for k, v in before.items() if k not in allowed)
+    assert load(C / "progress.json")["checkpoint"] == 783
+    save(C / "progress.json", state, replace=True)
+    verified = load(C / "progress.json")
+    assert verified == state
+    assert all(verified[k] == v for k, v in before.items() if k not in allowed)
+    save(L / "checkpoint-784.json", checkpoint)
+    print(json.dumps({k: v for k, v in checkpoint.items() if k != "nextAction"}, indent=2))
+
+
+if __name__ == "__main__":
+    mode = sys.argv[1]
+    if mode == "context":
+        context(sys.argv[2], sys.argv[3])
+    elif mode == "verify":
+        verify(sys.argv[2], sys.argv[3])
+    elif mode in {"comment", "finish"}:
+        globals()[mode](sys.argv[2])
+    else:
+        {"start": start, "gate": gate, "records": records}[mode]()
