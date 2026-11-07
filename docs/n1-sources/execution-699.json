@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "execution": 699,
   "batch": "095",
-  "status": "review-closed-combined-accepted-awaiting-publication",
+  "status": "published-verified-bounded-owner-testing",
   "startingState": {
     "execution": 699,
     "batch": "095",
@@ -55,7 +55,7 @@
   "acceptanceRecord": "batch-095-acceptance-699.json",
   "runtimeBytesUnchanged": true,
   "runtimeAccepted": true,
-  "runtimePublished": false,
+  "runtimePublished": true,
   "newReviewerNativeHostRuns": 0,
   "actualNewPermissionDenials": [],
   "parentLockAcquiredOrModified": false,
@@ -63,5 +63,164 @@
   "physicalPhoneAcceptance": "outstanding",
   "generalReleaseAcceptance": "outstanding",
   "wholeProjectComplete": false,
-  "nextBatchStarted": false
+  "nextBatchStarted": false,
+  "publicationRecord": "batch-095-publication.json",
+  "acceptedCommit": "a557c76c4a8c1f82468d51964d42ba450da87de4",
+  "counts": {
+    "kanji": 1118,
+    "words": 5071,
+    "n1Labels": 127,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 122,
+    "remainingAdditions": 1106,
+    "namedSourceMembersPresent": 132,
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 122,
+    "batchChangedReusedArticles": 1,
+    "allMappedReciprocalPairs": 2,
+    "mappedDirectedLinks": 4,
+    "activatedBaselinePairs": 0,
+    "separateExceptionPreserved": "\u5996",
+    "separateEarlierLevelSourceMembers": [
+      "\u4fdd",
+      "\u6848",
+      "\u6d3e",
+      "\u7b2c",
+      "\u7b56",
+      "\u7d50"
+    ],
+    "earlierPlacementsCountedAsIssue60AcceptedBatches": false
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42362943106,
+    "headSha": "a557c76c4a8c1f82468d51964d42ba450da87de4",
+    "jobs": [
+      {
+        "completedAt": "2026-11-07T10:14:18Z",
+        "conclusion": "success",
+        "databaseId": 128374920905,
+        "name": "validate",
+        "startedAt": "2026-11-07T10:12:12Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-07T10:12:14Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-07T10:12:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:13:38Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-07T10:12:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:13:38Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-07T10:13:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:13:43Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-07T10:13:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:13:56Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-07T10:13:43Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:12Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-07T10:13:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:14Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-07T10:14:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:15Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-07T10:14:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:16Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-07T10:14:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:16Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-07T10:14:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:16Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-07T10:14:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T10:14:17Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-07T10:14:16Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42362943106/job/128374920905"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "a557c76c4a8c1f82468d51964d42ba450da87de4",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/a557c76c4a8c1f82468d51964d42ba450da87de4",
+    "sha256": "a1b856ba4e5d8239b802e59cf7184f6bdbe80dff3f34ee978e6a88e66993c1dd",
+    "manifestEqual": true,
+    "contentVersion": "3eebfff0fdad5e28",
+    "verifiedRuntimeHashes": 8441,
+    "zipEntries": 8463,
+    "compressedBytes": 30847172,
+    "inflatedBytes": 44612586,
+    "retainedBytes": 44344248,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  }
 }
