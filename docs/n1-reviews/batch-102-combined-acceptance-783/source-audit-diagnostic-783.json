@@ -1,0 +1,14 @@
+{
+  "execution": 783,
+  "type": "coordinator-helper-assertion-corrected",
+  "initialFailure": "source_audit asserted named[113] == CHAR although the durable sourceRow113 is one-based. Actual frozen raw array index112 is 劣; index113 is 励.",
+  "evidence": "Both frozen raw source and committed community-list are identical. Committed membership/source-index and standard audit_n1_batch.py already verify sourceRow113. The source helper now uses named[ledger.sourceRows[0] - 1] with exact sourceRows == [113].",
+  "disposition": "Corrected only the new control helper; no source/card/manifest edit. Resumed source audit successfully; six already-green Python/validator/manifest/vocabulary/budget/batch-audit commands were not redundantly rerun.",
+  "secondHelperAssertion": {
+    "initialFailure": "New inheritance union counted HOST64 and native64 option sets but omitted the separately recorded live-default options. It asserted40 labels on38 labels.",
+    "evidence": "Native sampled option sets32 labels; HOST34 labels; union38. Actual live default additionally supplies 冗 and 蛍, producing the documented40-label union.",
+    "disposition": "Included exactDefaultMeaningOptions in the union, with exact four live labels independently asserted. No evidence/runtime changes; failed record preflight preserved. No archive directory or acceptance ledger had been written."
+  },
+  "permissionDenial": false,
+  "nativeOrHostRerun": false
+}
