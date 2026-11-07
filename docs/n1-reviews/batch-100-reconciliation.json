@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "execution": 748,
+  "batch": "100",
+  "status": "initial-textual-reviews-complete-reconciliation-required",
+  "originalTeachingSnapshot": "5a52b28e9f6f506171c5041bd52b0d9f8c261323",
+  "teachingChangedAfterInitialReviews": false,
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 25660,
+      "sessionId": "4975f494-5c25-4a2d-8060-775ded9c734c",
+      "startedAt": "2026-11-07T19:51:38.638959+01:00",
+      "completedAt": "2026-11-07T19:54:00.555320+01:00",
+      "exitCode": 0,
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "5a52b28e9f6f506171c5041bd52b0d9f8c261323",
+      "reportSha256": "21874af488d93e9ee193876cf3ff8f8e7e93c3db58178983bc7684ed4e686943",
+      "rawExecutionSha256": "311c175632b713f815c87fbe7c8e45c101be2588936a2f3e598bb27534fc8bbe",
+      "report": "batch-100-initial-claude.md",
+      "execution": "batch-100-initial-claude-execution.json",
+      "coverage": "batch-100-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInFirstCall": true
+    },
+    "gpt": {
+      "launcherPid": 13488,
+      "sessionId": "c9e3c7f4-b439-4f44-9255-4256c0987d25",
+      "startedAt": "2026-11-07T19:54:04.737663+01:00",
+      "completedAt": "2026-11-07T19:54:53.656131+01:00",
+      "exitCode": 0,
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "5a52b28e9f6f506171c5041bd52b0d9f8c261323",
+      "reportSha256": "f5633254f8c0614face01871a1881207a300700aa46212708a86821b3db1532e",
+      "rawExecutionSha256": "186f4d2d9de7bc48956e26044aa0fbe5055c80c3ead1a7d76b597dadac903fdc",
+      "report": "batch-100-initial-gpt.md",
+      "execution": "batch-100-initial-gpt-execution.json",
+      "coverage": "batch-100-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInFirstCall": true
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "allInternalToolsSerial": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 260254,
+  "initialPacketLines": 6694,
+  "completeFamiliesSupplied": 153,
+  "rawCharacterRecordsSupplied": 13,
+  "completeArticleBodies": 17,
+  "newArticleBodies": 1,
+  "changedReusedPassages": 3,
+  "readDepthLimits": "Both executions returned the exact full packet in one serial view call. This proves byte access, not equal comprehension. Claude explicitly did not independently count137 member families; GPT reports inspecting all153. Public dictionaries are coordinator extractions, not reviewers' upstream retrieval.",
+  "verdicts": {
+    "kanji/\u5275.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "NEEDS FIX",
+      "textComprehensibility": "CLEAN",
+      "quizPoolAcceptance": "UNVERIFIED; post-review\u8a2d overlap requires correction/source confirmation"
+    },
+    "words/\u5275\u4f5c.md:30": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/\u4f5c\u308b.md:36": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/\u4f5c.md:45": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "reviewer": "claude",
+      "status": "unresolved",
+      "severity": "Minor",
+      "facet": "scoped coverage",
+      "locations": [
+        "kanji/\u5275.md:25",
+        "kanji/\u5275.md:33",
+        "kanji/\u5275.md:46-49"
+      ],
+      "claim": "No ordinary compound demonstrates the expressly taught wound sense or establishment sense; existing examples foreground creative work and a rare standalone/verb spelling.",
+      "evidence": "Actual Daijisen\u5275 sense1 lists\u5275\u50b7 and sense2\u5275\u7acb; complete frozen JMdict1398490\u5275\u50b7\u305d\u3046\u3057\u3087\u3046 is formal/literary wound/injury,1398640\u5275\u7acb\u305d\u3046\u308a\u3064 is establishment/founding.",
+      "coordinatorDisposition": "Accept the localized teaching improvement, without a universal every-sense example quota. Two short qualified unlinked compound examples would suffice; no extra word identity, frequency claim or\u5275\u9020/idiom expansion required.",
+      "reviewerDisagreement": "GPT reported scoped coverage CLEAN and no optional suggestions. This disagreement remains explicit; no majority/model-prestige adjudication.",
+      "remedy": "Add minimal source-verified\u5275\u7acb and formal/literary\u5275\u50b7 recognition examples, recompute affected audits, then both original-session changed-passage confirmations.",
+      "confidence": "High that examples are absent and cited families support them; moderate that the localized coverage omission warrants a fix rather than optional expansion."
+    },
+    {
+      "id": "H1-wound",
+      "reviewer": "claude",
+      "status": "withdrawn",
+      "severity": null,
+      "facet": "meaning-choice hypothesis",
+      "claim": "Potential missing\u5275/\u50b7 kanji guard if an existing wound-titled\u50b7 card exists.",
+      "evidence": "Exact kanji/\u50b7.md does not exist at frozen snapshot/current tree. Existing words/\u50b7.md is a separate quiz namespace.",
+      "remedy": "No missing-card reference, new\u50b7 card or namespace-crossing guard. Do not claim original hypothesis was a verified defect.",
+      "confidence": "High for exact current membership."
+    },
+    {
+      "id": "C1-establish",
+      "reviewer": "coordinator post-review",
+      "status": "unresolved",
+      "severity": "Minor",
+      "facet": "meaning-quiz ambiguity",
+      "locations": [
+        "kanji/\u5275.md:14",
+        "kanji/\u5275.md:36",
+        "kanji/\u8a2d.md:3",
+        "kanji/\u8a2d.md:21"
+      ],
+      "claim": "Existing\u8a2d label establish; provide can defensibly describe\u5275's explicitly taught establishment/start-up meaning; no direct exclusion is declared.",
+      "evidence": "Exact unchanged\u8a2d card and target\u5275\u3081\u308b establishment row; supplied frozen1307550 sense2 and Daijisen\u5275 sense2. \u8a2d was not in the blind initial packet.",
+      "remedy": "Retain exact full frozen\u8a2d source/ordinary senses, add justified direct\u5275/\u8a2d guard on new\u5275 only, and submit exact metadata/diff/supplement to both original reviewers. No change to unrelated\u8a2d teaching.",
+      "confidence": "High for displayed-label overlap; not live-pool acceptance."
+    },
+    {
+      "id": "H1-initial",
+      "reviewer": "claude tentative cue; coordinator post-review",
+      "status": "unresolved",
+      "severity": null,
+      "facet": "bounded supplementary source check",
+      "claim": "\u521d first time; initial may overlap\u5275's first-creation/start sense, but an additional direct pair has not been established.",
+      "evidence": "Exact\u521d label inspected; full frozen\u521d family/raw source and independent follow-up judgment not yet supplied.",
+      "remedy": "Resolve from actual source and precise labels in the SAME100 correction/source supplement; do not automatically add a transitive or merely topic-based pair.",
+      "confidence": "Low-moderate hypothesis; not counted as verified defect."
+    }
+  ],
+  "optional": [
+    {
+      "id": "O1",
+      "status": "optional",
+      "reviewer": "claude",
+      "claim": "More explicit look-alike block comparison at line55.",
+      "disposition": "Nonblocking wording preference; existing distinction is not established false."
+    },
+    {
+      "id": "O2",
+      "status": "optional",
+      "reviewer": "claude",
+      "claim": "Use fabrication/made-up account instead of fabricated story at line23.",
+      "disposition": "Existing can also mean a fabricated story is an instance, not an exhaustive gloss; no consequential mistranslation established."
+    },
+    {
+      "id": "O3",
+      "status": "optional",
+      "reviewer": "claude",
+      "claim": "Add sourced phonetic history.",
+      "disposition": "Do not broaden: explicitly labelled mnemonic/structure-unclassified acceptable to both reviewers."
+    },
+    {
+      "id": "O4",
+      "status": "optional",
+      "reviewer": "claude",
+      "claim": "Shorten source-only phone text.",
+      "disposition": "Nonblocking polish; preserve exact source/lexical-uncertainty distinctions."
+    }
+  ],
+  "matchedSampleContributions": {
+    "shared": "Readings/order, exact-spelling support, restrictions, rare spelling not pronunciation, three curated wrong choices, eight proposed direct guards, reciprocal navigation and shape/metadata accepted in both bounded reports.",
+    "claudeUnique": "Localized compound-coverage findingF1, conditional missing-guard hypothesisH1 and four optional observations. H1's proposed\u50b7 pair was not verified; follow-up established no such kanji card.",
+    "gptUniqueVerifiedUsefulFindings": [],
+    "coordinatorUnique": "Actual existing\u8a2d displayed-label overlap established after both initial reviews; initial reviewers did not inspect\u8a2d or\u521d cards.",
+    "limits": "Compare equivalent observations across findings/optional/hypotheses/limits. These are sample observations, not a general model ranking; exact full-byte delivery is not comprehension certification."
+  },
+  "sourceOnlyLexicalAllocation": "UNVERIFIED for\u30b7\u30e7\u30a6/\u3051\u305a.\u3057\u3051\u308b, explicitly qualified lookup-only and unselected; no invented lexical assertion accepted.",
+  "initialReviewsComplete": true,
+  "textualAcceptanceComplete": false,
+  "reviewClosed": [],
+  "runtimeChangedThisExecution": false,
+  "runtimePublished": false,
+  "freshAndroidOrNativeClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextAction": "SAME100 bounded correction/source-supplement checkpoint before original-session confirmations. Two blind different-family initial textual reviews are COMPLETE on signed5a52b28e; do not rerun initial reviews or count this batch review-closed. Preserve complete original Claude4975f494 and GPTc9e3c7f4 sessions/reports/actualmodels/read/process evidence. Resolve F1 localized coverage using complete frozen1398640\u5275\u7acb\u305d\u3046\u308a\u3064 founding and 1398490\u5275\u50b7\u305d\u3046\u3057\u3087\u3046 formal/literary wound examples; no new word article or inferred level needed. Both families already preserved; do not manufacture a frequency claim. Reconcile source-confirmed missing direct\u5275/\u8a2d guard: actual\u8a2d label establish; provide overlaps explicitly taught establishment sense. Inspect exact frozen\u8a2d family/raw metadata and actual\u521d label first time; initial to decide independently whether\u5275/\u521d merits a direct guard; \u521d is still a hypothesis, not an accepted defect. \u50b7-kanji guard hypothesis withdrawn because kanji/\u50b7.md DOES NOT EXIST; words/\u50b7.md is a different quiz namespace. No missing-card guard, new\u50b7 card, transitive clique or unrelated legacy rewrite. Recompute all applicable source/metadata/reading/quiz/link/baseline/Han/font audits, validate and regenerate manifest after authorized changes; normal signed LOCAL changed-tree freeze before TWO SERIAL original-session changed-passage confirmations with exact diff and supplemental full evidence. Keep all six full readings/order and selected\u30bd\u30a6/\u3064\u304f.\u308b, same-family\u4f5c\u308bN5/\u5275\u4f5cN2 identities/exclusions, source-only\u30b7\u30e7\u30a6/\u3051\u305a.\u3057\u3051\u308b lexical allocation UNVERIFIED without invented gloss/example/invalidity/obsolescence/source repair. Then fresh non-skipped qualifiedAndroidbf30cdead RealContent/RareHan, productionContentSyncONCE/native N1-All/meaning/curatedreading/drawing/article/Back/offline/four-font/all-Han/rendered acceptance, combinedcurrentmain checks, normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue gates remain mandatory. No unreviewedpush/101/authoragent/concurrentheavywork/secondrunner/signingretry/guardincrease. Verify whollyclean signedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent5920 ownsrunner.lock: no childacquire/delete/unlock/readprobe. Approvedcontrol/committedsource/frozeninputs only, not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/signinghang/uncertainownership. Published126/1228,1102acceptanceremainder unchanged; six earlierN2placements \u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 remain separate, never duplicate/relevel. Physicalphone/generalrelease/whole-set outstanding; projectincomplete."
+}

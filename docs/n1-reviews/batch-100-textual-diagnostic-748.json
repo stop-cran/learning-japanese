@@ -1,0 +1,9 @@
+{
+  "firstRecordAttempt": "AssertionError at raw-byte runtime hash comparison before commit. First differing entry curriculum/grammar.json has CRLF and its normalized hash exactly matches the existing manifest.",
+  "rootCause": "Control checkpoint helper incorrectly used raw hashing for every payload. Production build_manifest.py deliberately normalizes CRLF for text and preserves binary bytes.",
+  "remedy": "Use unchanged production build_manifest(root) equality for every current payload hash, language/schema and version. Keep separately verified git-clean runtime/manifest preservation. No runtime, manifest or validator rule changed.",
+  "originalFailure": "checkpoint-748.py record, original line263: assert sha(R / Path(name)) == value; AssertionError",
+  "actualNewPermissionDenials": [],
+  "signingRetried": false,
+  "archivalWhitespace": "Staged diff check found original dictionary whitespace and CLI trailing blank lines in immutable captures. Preserve both originals in lossless deterministic gzip, not rewritten/trimmed bytes or whitespace-rule relaxation. Original control review packet unchanged."
+}
