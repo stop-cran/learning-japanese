@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "batch": "094",
+  "execution": 687,
+  "status": "batch-094-combined-main-accepted-awaiting-owner-publication",
+  "snapshot": "bb11dc2809b401e253fc6e5c1fe278077040558f",
+  "contentVersion": "74b7e886a1afbd46",
+  "newIndependentReviewers": 0,
+  "inheritedRecords": {
+    "initialReviewRecord": "docs/n1-reviews/batch-094-reconciliation.json",
+    "renderedRecord": "docs/n1-reviews/batch-094-rendered-reconciliation-683.json",
+    "correctionTextualRecord": "docs/n1-reviews/batch-094-correction-reconciliation-685.json",
+    "correctedNativeRecord": "docs/n1-sources/execution-686.json"
+  },
+  "verdicts": {
+    "kanji/\u524a.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/\u524a\u308b.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/\u524a\u9664.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "kanji/\u9664.md:41": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "reconciliation": [
+    {
+      "id": "094-word-direct-guards",
+      "reportedSeverity": "Moderate",
+      "severity": "Moderate",
+      "facet": "quiz correctness",
+      "reportedBy": [
+        "GPT"
+      ],
+      "sourceReport": "batch-094-initial-gpt.md",
+      "locations": [
+        "words/\u524a\u308b.md:9,23-24,35-38",
+        "words/\u524a\u9664.md:9,16,30-33"
+      ],
+      "status": "resolved",
+      "accepted": true,
+      "remediationApplied": true,
+      "claim": "Three overlapping word-title pairs lack direct exclusion guards.",
+      "impact": "An ordinary taught removal/deletion sense permits a competing title to be accepted; shared guards do not protect the missing direct pair.",
+      "pairs": [
+        {
+          "words": [
+            "\u524a\u308b",
+            "\u9664\u304f"
+          ],
+          "reason": "The taught sentence-deletion/removal sense of \u524a\u308b overlaps displayed remove; exclude for \u9664\u304f.",
+          "evidence": "JMdict1298090 sense3 versus1345640 senses1-2; complete actual articles and Daijisen\u3051\u305a\u308b sense3.",
+          "minimalRemedy": "Append \u9664\u304f to \u524a\u308b quiz_exclusions.",
+          "status": "resolved"
+        },
+        {
+          "words": [
+            "\u524a\u308b",
+            "\u5916\u3059"
+          ],
+          "reason": "Displayed remove; unfasten is defensible for the ordinary removal/deletion aspect of \u524a\u308b; staff/list removal overlaps the complete family of \u5916\u3059.",
+          "evidence": "JMdict1298090 senses2-3 versus1203270 senses1-2; actual displayed labels and Daijisen personnel/list examples. This is not a claim of unrestricted substitution.",
+          "minimalRemedy": "Append \u5916\u3059 to \u524a\u308b quiz_exclusions.",
+          "status": "resolved"
+        },
+        {
+          "words": [
+            "\u524a\u9664",
+            "\u7701\u304f"
+          ],
+          "reason": "Displayed omit; cut down on overlaps deletion/elimination of textual material.",
+          "evidence": "JMdict1298120 versus1351040 sense1; complete actual articles and Daijisen\u3055\u304f\u3058\u3087 definition.",
+          "minimalRemedy": "Append \u7701\u304f to \u524a\u9664 quiz_exclusions.",
+          "equivalentObservation": "Claude hypothesis mentions this same pair as low risk. Different label/confidence does not make the observation unique to GPT.",
+          "status": "resolved"
+        }
+      ],
+      "evidence": [
+        "docs/n1-sources/batch-094-comparison-jmdict.xml",
+        "docs/n1-sources/batch-094-kezuru-public-text.txt",
+        "docs/n1-sources/batch-094-sakujo-public-text.txt",
+        "docs/content-format.md:156-177"
+      ],
+      "confidence": "Medium-high semantic overlap; production co-occurrence not demonstrated.",
+      "adjudication": "Accepted from exact titles, whole taught senses, complete dictionary families and pairwise contract, not model votes. Add only the three direct guards, preserve all originals; no prose rewrite or transitive clique.",
+      "laterGate": "Confirm actual N1/All production choices and new three direct guards under original native gate; static semantic review does not certify every live pool.",
+      "resolvedSnapshot": "4089e881d605ce92c4c425d57816bc795605ded8",
+      "confirmationEvidence": {
+        "claude": "batch-094-confirm-679-claude.md",
+        "gpt": "batch-094-confirm-679-gpt.md"
+      }
+    },
+    {
+      "id": "094-observed-kezuru-chijimeru",
+      "status": "resolved",
+      "severity": "minor",
+      "facet": "word meaning quiz correctness",
+      "file": "words/\u524a\u308b.md:9",
+      "textualEvidence": "Original-session source/declaration confirmations685 on signed b85d7a4d, frozen JMdict1298090 sense2/1337570 sense1.",
+      "runtimeEvidence": "Native686 exact corrected archive productionContentSync ONCE and128 productionWordQuizBuilder checks; both targets/directions/All+custom/16seeds.",
+      "confidence": "High for this directly declared pair in tested configurations; no exhaustive other-option semantic claim.",
+      "newBlindReviewCredit": false
+    }
+  ],
+  "optional": {
+    "textual": [
+      {
+        "reportedBy": "Claude",
+        "location": "kanji/\u524a.md:51",
+        "claim": "Use characters instead of words interchangeable.",
+        "status": "optional",
+        "decision": "No edit in this checkpoint; the comparison does not imply the characters or words are semantically interchangeable."
+      },
+      {
+        "reportedBy": "Claude",
+        "location": "kanji/\u524a.md:50",
+        "claim": "Add attested figurative\u8208\u3092\u305d\u3050 example.",
+        "status": "optional",
+        "decision": "No edit; recognized figurative sense and its kana flag are already explained; no exhaustive alternate-reading course required."
+      },
+      {
+        "reportedBy": "Claude",
+        "location": "words/\u524a\u308b.md:25,44; words/\u524a\u9664.md:38",
+        "claim": "Internal source/N2 terminology and separate reading versus verb could be clearer.",
+        "status": "optional",
+        "decision": "No established actionable defect; existing text explicitly distinguishes separate\u306f\u3064\u308b from\u3051\u305a\u308b and does not infer a new N2 assignment."
+      },
+      {
+        "reportedBy": "Claude",
+        "location": "words/\u524a\u9664.md:22,41",
+        "claim": "Say passive past of\u3059\u308b and rephrase recoverability statement.",
+        "status": "optional",
+        "decision": "Current passive explanation is true, and word-alone-does-not-promise recovery is accurate without implying recovery impossible. No edit."
+      }
+    ],
+    "rendered": [
+      "Keep prior optional polish optional. Mixed link wrapping and shave/sharpen/pare gloss consistency do not require runtime rewriting.",
+      "Any out-of-assignment \u9664\u304f/\u53d6\u308a\u51fa\u3059 hypothesis is not established by this packet and does not expand this checkpoint."
+    ],
+    "correction": "Earlier optional polish remains optional; no prose/title expansion and no new exclusion inferred through transitive closure."
+  },
+  "limits": [
+    "Local combined-tree acceptance only, not public delivery or fresh native/linguistic review.",
+    "Vocabulary2122/2431 pilot consistency not full coverage; no unrelated coverage fix.",
+    "125 complete family occurrences/121 distinct families; mechanical equality, not fresh linguistic rereview.",
+    "41 unchanged visible Han inherited;42 raw Han includes new metadata-only exclusion character\u7e2e, cmap verified in all bundled fonts, no new visible glyph claim.",
+    "Original683 overlap remains rejected; accepted serial repair and all original process/read/visual/fallbackface/injectedtrace/MLKit limitations retained.",
+    "Qualified test-only Android not latestappmain; CI/publicZIP/publication/physicalphone/generalrelease/whole-set remain outstanding."
+  ],
+  "originalLimits": {
+    "textual": [
+      "TEXTUAL closure only on revised signed4089e881; runtimeAccepted/runtimePublished remain false. All three source-supported direct guards applied and both original-session confirmations complete; no remaining actionable textual defect or consequential unresolved teaching claim.",
+      "Initial two-family blind review at d1e986ec retained unchanged. These are bounded follow-ups in original sessions, not newblind reviews or a fresh121family inspection. Exact full packets returned through one serial view call each; actual models/process exits verified. Returned bytes do not prove comprehension.",
+      "Confirmation packets contain each own original report, exactdiff, seven complete current articles, five complete applicable frozen families and two complete committed public extracts. Public evidence is supplied extraction, not independent upstream retrieval. Initial Weblio\u3078\u305a\u308b/footer and\u4e2d\u6b62target limitations remain historical, not newly verified.",
+      "Only two word-header exclusion lists and generatedmanifest changed. Bodies, stableidentities, primaryreadings, titles, N2levels, originalexclusions/order, fullsource readings/order, explicitcuration, links and strokegeometry preserved.",
+      "Fullbaseline985kanji/4942words/985strokes audited with original exceptions plus onlythree newdirectpairs. Frozeninputs/fullfamilyextractions/tenrawrecords/threeallmappedpairs/sixdirections/twoactivatedpairs/fourreadings/twokeys/ninepaths/all41Han/fontcmaps and8438payloadhashes verified mechanically, not linguistic/native certification.",
+      "LiveN1/All/custom/randompool choices and actualthreeguards remain original native gates, as do fresh non-skippedAndroid/RareHan, fullarchiveContentSyncONCE, drawing/reading/articles/SystemBack/offline/fourfonts and both original-session rendered confirmations. Cmapabsence of\u5202/\u65ab/\u6c35/\u961d is NOT glyphfailure.",
+      "QualifiedTESTONLYAndroid1c1b7bf4 retains productionf9b59a2, NOT latestappmain; compatiblef9b59a2+ required. Physicalphone/generalrelease/whole-set outstanding.",
+      "Published120/1228 and1108acceptanceremainder unchanged. Earlierlevel\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 and separate\u5996 retained. No095, unreviewedpush, secondrunner, parentlocktouch or optionalhistorical-sessionhelperaccess.",
+      "All original combined-main/nonrewritingmerge/changedteachingreview/checks/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/unchangedbudgets/media/path/verifiedownerissue gates remain."
+    ],
+    "rendered": [
+      "Contact sheets reduced and image returns resized; hashes establish delivery, not comprehension. Exact returned dimensions and actual read coverage retained per execution.",
+      "No new blind initial review, fresh full121family review, upstream verification, native-speaker certification or exhaustive random-pool safety.",
+      "Native tests are inherited682 coordinator receipts, not newly executed here; qualified TESTONLYAndroid1c1b7bf4 is not latest app main.",
+      "API35 emulator evidence is not physical-phone, human-handwriting or successful MLKit acceptance; phone/general release and whole-set outstanding.",
+      "A later quiz metadata correction changes the runtime manifest; old native682 archive must not be relabeled as the corrected import."
+    ],
+    "correction": [
+      "Full requested text delivery and process compliance verified, not proof of comprehension.",
+      "No fresh121family/visual/upstream review; original sources and85unchanged visual captures inherited.",
+      "No reviewer-run tests, corrected native import, full-pool semantic certification, physicalphone, handwriting/MLKit, latestappmain, generalrelease, whole-set or publication acceptance."
+    ],
+    "native": [
+      "API35 emulator at default tested font scale only; physical phone/general release outstanding.",
+      "Raster hashes/hasGlyph/nonblank checks alone do not prove legibility or exact fallback face; actual five panels inspected.",
+      "No new blind reviewers launched and no independent rendered confirmation yet.",
+      "64 kanji and384 word builder records are bounded seed/pool samples, not exhaustive random-pool safety."
+    ],
+    "correctedNative": [
+      "Focused runtime assertion evidence on qualified TESTONLYAndroid1c1b7bf4 with productionf9b59a2 unchanged, not latestappmain.",
+      "Local GitZIP/all runtime bytes verified, not exact immutable publicGithubZIP acceptance.",
+      "No fresh visual/font/linguistic review, phone, handwriting, MLKit or full-pool semantic certification.",
+      "Combined-current-main integration, all required checks, normal signing/owner fastforward/terminalCI/publicZIP/ownerissue gates remain."
+    ]
+  },
+  "runtimeAccepted": true,
+  "runtimePublished": false,
+  "evidence": "docs/n1-sources/execution-687.json",
+  "nextAction": "SAME094 only: normally signed owner fast-forward publication and exact public acceptance next; read docs/n1-sources/execution-687.json and docs/n1-reviews/batch-094-combined-reconciliation-687.json. Fresh origin/main48765e20 already ancestor of bb11dc28; normal merge Already up to date, no runtime/teaching change. Combined687 full Python/validator/vocabulary/regenerated manifest/budget/frozen sources/full baseline/membership/links/readings/strokes/font provenance/all8438 runtime hashes and fresh RealContentTHREE+RareHanONE zero skips passed. Original678 blind two-family textual reviews,679 corrections,682 native/font/85captures,683 original-session rendered confirmations with original Claude overlap REJECTED and serial repair preserved,685 original-session direct-pair confirmations and686 exact corrected import/128 builder checks inherited, NOT fresh review/native. All consequential in-scope findings resolved; optional suggestions and original read/visual/process limitations retained. Exact corrected native686 productionContentSync ONCE:1117kanji/5070words/126N1/zeroProblems/RoomreadingEpoch1/version74b7e886a1afbd46; terminalcase0 no skips. Qualified TESTONLYAndroid1c1b7bf4 retains productionf9b59a2, NOT latestappmain. No physicalphone/humanhandwriting/successfulMLKit/full-pool semantic certification. Before publication recheck freshmain/exactsignedheads/whollyclean; if main advanced normal nonrewriting merge/reconcile/regenerate/revalidate ACTUAL combinedtree and independently review substantive teaching changes. Normal ownerstop-cran token ONLY publicationchild, no global auth switch; normal fastforward, exactremoteSHA, terminalgreen relevantCI, EVERY immutable publicGithubZIP runtimeentryhash/manifest equality/original 18000entries42MiBcompressed80MiBinflated56MiBretained/perfile-media-safepath guards, durable authored/reviewed/integrated/publishedSHAs and verifiedownerissue before095. Local GitZIP/native686 is NOT publicGithubZIP acceptance. No forcepush/amend/signingbypass/heapguardincrease/productionappchange/redundantnative/reviewer/095/secondrunner. Parent19008 ownsrunner.lock: verify liveancestry/decodedlauncher/session/checkpoint/signedheads/whollyclean; NEVERchildacquire/delete/unlock. Approvedcontrol/committed sources/frozenworkspaceinputs only, no optional historicalsessionhelpers. Preserve/report/yield actualnewdenial/signinghang/uncertainownership. Published120/1228 and1108 remaining unchanged pending delivery; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding, projectincomplete."
+}
