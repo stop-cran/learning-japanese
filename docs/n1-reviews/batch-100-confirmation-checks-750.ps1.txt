@@ -1,0 +1,49 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\17b4ced1-f251-49d1-ae4c-45e6b886d292"
+Set-Location $root
+& "$control\preflight-750.ps1"
+if (-not $?) { throw 'Parent preflight failed' }
+if ((git rev-parse HEAD).Trim() -ne '44b5c4ee3957c74c44b649f815e35d447ea1f097' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git rev-parse origin/main).Trim() -ne '716c610153234e8d2240dcf528de3ef83b654b27') { throw 'Unexpected main' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 749 -or $progress.batch -ne '100' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+foreach ($change in @(git -c core.quotepath=false status --porcelain --untracked-files=all)) {
+    $name = $change.Substring(3)
+    if ($name -notlike 'docs/n1-reviews/batch-100-confirmation*' -and
+        $name -notlike 'docs/n1-reviews/batch-100-cli-*' -and
+        $name -notin @('docs/n1-reviews/batch-100-reconciliation.json',
+                      'docs/n1-sources/batch-100-progress.json',
+                      'docs/n1-sources/execution-750.json',
+                      'docs/n1-sources/batch-100-confirmation-recipe-750.py',
+                      'docs/n1-sources/batch-100-confirmation-checkpoint-recipe-750.py')) {
+        throw "Unaccounted change: $change"
+    }
+}
+if (git status --porcelain -- kanji words strokes articles manifest.json tools) { throw 'Runtime tree changed' }
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch test_validate.ValidateTests.test_kanji_quiz_exclusions_are_optional_and_one_sided test_validate.ValidateTests.test_kanji_quiz_exclusions_reject_malformed_or_shadowed_fields test_validate.ValidateTests.test_kanji_quiz_exclusions_validate_ids_and_curated_conflicts test_validate.ValidateTests.test_kanji_exclusion_checks_preserve_unrelated_legacy_keys test_validate.ValidateTests.test_kanji_quiz_exclusions_require_exact_case_even_on_windows test_validate.ValidateTests.test_kanji_quiz_exclusions_reject_unicode_noncharacters_even_if_file_exists test_validate.ValidateTests.test_curated_readings_allow_empty_or_linked_exact_subsets test_validate.ValidateTests.test_curated_readings_reject_malformed_or_non_subset_declarations test_validate.ValidateTests.test_curated_example_must_be_in_its_reading_row_not_elsewhere_or_in_code *> "$log\tests-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source/kanji-exclusion/curated-reading tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+git diff --exit-code -- manifest.json *> "$log\manifest-preservation-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest bytes changed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 100 *> "$log\audit-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Batch source/reading/link/baseline audit failed' }
+git diff --check *> "$log\whitespace-750.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\tests-750.txt" -Tail 4
+Get-Content "$log\validate-750.txt" -Tail 2
+Write-Output 'Textual checkpoint checks passed; no new Android/native execution or publication.'
