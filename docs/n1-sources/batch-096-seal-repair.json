@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "execution": 700,
+  "batch": "096",
+  "originalSourceCommit": "6002265b7a7da2397b6930ea7c4ab9f92590a9ee",
+  "originalRecipe": "batch-096-source-recipe.py",
+  "originalRecipeSha256": "c192c6077d66a1333fe231503ee6a6160c5ddc44b0cdbde26d3cd1290a87be8c",
+  "correctedDurableHelper": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\source-700.py",
+  "correctedArchivedHelper": "batch-096-source-recipe-repaired.py",
+  "correctedHelperSha256": "1c73bfcf36fc84d8acf763c3b9b09b48e2bfdac8d2f2d7146c28768d2041ae61",
+  "failure": "Initial seal assertion compared GitHub's exact CRLF body to Python read_text's LF-normalized body. It stopped before checkpoint mutation; the owner POST and exact-body readback had already succeeded.",
+  "diagnosis": {
+    "author": "stop-cran",
+    "rawExact": true,
+    "normalizedExact": false,
+    "rawCRLF": 13,
+    "githubCRLF": 13,
+    "rawCharacters": 3001,
+    "normalizedCharacters": 2988,
+    "checkpointUnchanged": 699
+  },
+  "fix": "Decode raw UTF-8 bytes for exact body comparison/hash, as in the previous durable helper. Accept one explicit normally signed source-only repair commit after the original source freeze, without amending it.",
+  "issueReceipt": {
+    "url": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6705587518",
+    "author": "stop-cran",
+    "bodySha256": "ab611cd686b74a63d7ebaf856fb5be9283df8b9c42fc0d1191f1e4f80db6b497",
+    "rawBodyExact": true
+  },
+  "originalEvidencePreserved": true,
+  "runtimeChanged": false,
+  "issueReposted": false,
+  "permissionDenial": false,
+  "ownershipUncertain": false,
+  "limits": "Operational receipt newline correction only; no new content/review/test/native/publication acceptance claim."
+}
