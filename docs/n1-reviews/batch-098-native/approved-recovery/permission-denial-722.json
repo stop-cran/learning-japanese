@@ -1,0 +1,18 @@
+{
+  "execution": 722,
+  "tool": "functions.powershell",
+  "description": "Inspect compiler diagnostics and verify normal signing configuration",
+  "command": "Get-Content 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\9b6504c7-7546-4384-b402-c83f56ee5497\\native-compile.txt' | Select-String -SimpleMatch 'warning:','error:','e: ','w: '; git --no-pager diff --numstat HEAD -- docs\\n1-sources\\batch-098-progress.json; git config --get commit.gpgsign",
+  "result": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+  "deniedCommandReturnedOutput": false,
+  "classification": "Actual new permission denial on read-only diagnostic command; exact denied suboperation not established.",
+  "disposition": "Preserve/report/yield. No retry, alternative command or access-policy change attempted.",
+  "completedBeforeDenial": "Fixture compiled BUILD SUCCESSFUL/exit0; production APK unchanged; Android temporary source/asset cleaned; all8449 runtime hashes/archive verified; validator0errors; manifest regenerated unchanged.",
+  "localEvidenceCommitCreated": false,
+  "nativeOrVisualExecuted": false,
+  "runtimePublished": false,
+  "uncommittedEvidence": [
+    "docs/n1-sources/execution-722.json",
+    "docs/n1-reviews/batch-098-native/"
+  ]
+}
