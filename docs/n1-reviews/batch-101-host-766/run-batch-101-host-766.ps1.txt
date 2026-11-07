@@ -1,0 +1,59 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\38ec935d-0cc5-45ad-9482-052c00fc10aa"
+& "$control\preflight-766.ps1" -ReceiptName 'preflight-766-host.json'
+$init = "$control\batch-065-host-integration-heap.init.gradle"
+if ((Get-FileHash $init).Hash.ToLowerInvariant() -ne
+    '438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24') {
+    throw 'Qualified HOST-only init changed'
+}
+$android = [IO.Path]::GetFullPath("$control\..\kanji-cards-android")
+$fixture = "$android\core\src\test\kotlin\io\github\stopcran\kanji\core\Batch101MeaningAcceptance766.kt"
+if ((Test-Path $fixture) -or (Test-Path "$log\host-766-command.json")) {
+    throw 'Do not overwrite fixture or acceptance evidence'
+}
+$source = "$control\Batch101MeaningAcceptance766.kt"
+$fixtureHash = (Get-FileHash $source).Hash.ToLowerInvariant()
+$arguments = @(
+    ':core:test', '--tests', 'io.github.stopcran.kanji.core.RealContentTest',
+    '--tests', 'io.github.stopcran.kanji.core.Batch101MeaningAcceptance766',
+    ':app:testDebugUnitTest', '--tests', 'io.github.stopcran.kanji.core.RareHanTest',
+    '--no-daemon', '--no-parallel', '--max-workers=1', '--rerun-tasks',
+    '-Pkotlin.compiler.execution.strategy=in-process', '--init-script', $init
+)
+$env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot'
+$env:ANDROID_HOME = 'C:\Users\stop-\AppData\Local\Android\Sdk'
+[ordered]@{
+    execution = 766
+    arguments = $arguments
+    JAVA_HOME = $env:JAVA_HOME
+    ANDROID_HOME = $env:ANDROID_HOME
+    contentHead = '94681815fa315aca4f3affe2ea7c2eeada2b177f'
+    androidHead = 'bf30cdead8515739bc0e671d57a54b9a3109dd46'
+    startedAt = [DateTimeOffset]::UtcNow.ToString('o')
+    parentLockTouched = $false
+    hostOnlyHeapInitSha256 = (Get-FileHash $init).Hash.ToLowerInvariant()
+    temporaryFixture = $fixture
+    temporaryFixtureSha256 = $fixtureHash
+    nativeExecuted = $false
+} | ConvertTo-Json -Depth 8 | Set-Content "$log\host-766-command.json" -Encoding utf8NoBOM
+Copy-Item -LiteralPath $source -Destination $fixture
+try {
+    if ((Get-FileHash $fixture).Hash.ToLowerInvariant() -ne $fixtureHash) { throw 'Fixture copy mismatch' }
+    Set-Location $android
+    & .\gradlew.bat @arguments 2>&1 | Tee-Object -FilePath "$log\host-766.txt"
+    $code = $LASTEXITCODE
+    $code | Set-Content "$log\host-766-exit.txt"
+    [DateTimeOffset]::UtcNow.ToString('o') | Set-Content "$log\host-766-end.txt"
+} finally {
+    if ((Get-FileHash $fixture).Hash.ToLowerInvariant() -ne $fixtureHash) {
+        throw 'Temporary fixture changed unexpectedly; preserve and yield'
+    }
+    Remove-Item -LiteralPath $fixture
+    if ((git -C $android status --porcelain --untracked-files=all) -or $LASTEXITCODE -ne 0) {
+        throw 'Android not wholly clean after own fixture cleanup'
+    }
+    @{ temporaryFixtureRemoved=$true; androidWhollyClean=$true; fixtureSha256=$fixtureHash } |
+        ConvertTo-Json | Set-Content "$log\host-766-cleanup.json" -Encoding utf8NoBOM
+}
+exit $code
