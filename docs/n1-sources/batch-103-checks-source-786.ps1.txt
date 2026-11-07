@@ -1,0 +1,39 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\78d3bc2f-7fc7-49d9-8fcb-f9905e90af49"
+Set-Location $root
+& "$control\preflight-786.ps1"
+if ((git rev-parse HEAD).Trim() -ne 'cbb067776d8f095823e15435cb302e40e43efb9c' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 785 -or $progress.batch -ne '103' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+foreach ($change in @(git status --porcelain --untracked-files=all)) {
+    if ($change -notmatch '^(\?\?| M) docs/n1-sources/batch-103-') { throw "Unaccounted change: $change" }
+}
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\source-tests-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+git diff --exit-code -- manifest.json *> "$log\manifest-diff-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Source-only checkpoint changed runtime manifest' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B "$control\source-786.py" audit *> "$log\audit-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Source-completion audit failed' }
+git diff --check *> "$log\whitespace-786.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\source-tests-786.txt" -Tail 4
+Get-Content "$log\validate-786.txt" -Tail 2
+Get-Content "$log\budget-786.txt" -Tail 8
+Get-Content "$log\vocabulary-786.txt" -Tail 2
+Write-Output 'Source-completion, runtime manifest, vocabulary and budget checks passed; no app/native execution.'

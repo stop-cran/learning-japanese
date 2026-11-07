@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "execution": 786,
+  "batch": "103",
+  "status": "source-prepared-not-drafted",
+  "sourceBase": "cbb067776d8f095823e15435cb302e40e43efb9c",
+  "publishedBase": "a38f4cf554300ce34ee65aada79e87b7c9d0319e",
+  "membership": ["励"],
+  "sourceRows": [114],
+  "sourcePreparationComplete": true,
+  "sourcePacket": "batch-103-jmdict.xml",
+  "comparisonPacket": "batch-103-comparison-jmdict.xml",
+  "rawCharacterPacket": "batch-103-comparison-kanjidic2.xml",
+  "proposedMetadata": {
+    "kanji": "励",
+    "title": "encourage; be diligent",
+    "jlpt": 1,
+    "tags": ["jlpt-n1", "grade-8", "structure-unclassified"],
+    "strokes": 7,
+    "radical": "力",
+    "radicalNumber": 19,
+    "onyomi": ["レイ"],
+    "kunyomi": ["はげ.む", "はげ.ます"],
+    "quizOnyomi": ["レイ"],
+    "quizKunyomi": ["はげ.む", "はげ.ます"],
+    "distractors": ["劣", "万", "厚"],
+    "quiz_exclusions": ["努", "勉", "勤", "支"]
+  },
+  "readingDispositions": [
+    {
+      "kind": "on",
+      "reading": "レイ",
+      "status": "selected",
+      "entryIds": ["1253760"],
+      "example": {"word": "激励", "reading": "げきれい", "article": "words/激励.md", "newNecessarySupport": true},
+      "allocation": "Actual archived Digital Daijisen れい【励〔勵〕】 heading explicitly lists 激励 under the encouraging-others branch and 音レイ. The actual げき‐れい【激励】 heading and complete1253760 confirm the word. Raw 激 metadata supplies ゲキ, not an allocation inferred solely from kana substrings.",
+      "usefulness": "Useful noun/suru form for encouragement, giving the on-reading its own linked row. No existing spelling/primary-reading candidate. No word-level or measured frequency claim.",
+      "proposedRowText": "[激励](../words/激励.md) げきれい — encouragement; spurring on"
+    },
+    {
+      "kind": "kun",
+      "reading": "はげ.む",
+      "status": "selected",
+      "entryIds": ["1557390", "1907660"],
+      "example": {"word": "励む", "reading": "はげむ", "article": "words/励む.md", "newNecessarySupport": true},
+      "allocation": "Actual はげ・む【励む】 heading, godan-mu notation and full1557390 establish the exact verb. Complete1907660 勉強に励む and actual 学業に励む/研究に励む examples support the activity-ni construction.",
+      "usefulness": "Useful modern own-effort verb, contrasted with encouraging someone. Preserve full source はげ.む; no extrapolation of historical transitive examples to the modern model.",
+      "proposedRowText": "[励む](../words/励む.md) はげむ — work hard; strive"
+    },
+    {
+      "kind": "kun",
+      "reading": "はげ.ます",
+      "status": "selected",
+      "entryIds": ["1557350"],
+      "example": {"word": "励ます", "reading": "はげます", "article": "words/励ます.md", "newNecessarySupport": true},
+      "allocation": "Actual はげま・す【励ます】 heading and full1557350 establish the godan-su verb. Keep KANJIDIC2's written はげ.ます boundary, rather than confusing the dictionary's conjugational dot with okurigana.",
+      "usefulness": "Useful encouragement verb with an existing comparison in 応援 and 慰める but no primary article. Plain 励ます is NOT the polite form of 励む: 励まします versus 励みます.",
+      "proposedRowText": "[励ます](../words/励ます.md) はげます — encourage; cheer someone on"
+    }
+  ],
+  "readingKeys": {"on": ["れい"], "kun": ["はげむ", "はげます"]},
+  "sourceOnlyQualifications": [
+    "All three frozen metadata readings are selected in source order. Nanori and other dictionaries' broader historical lists do not add practice keys.",
+    "Original47-family observations remain unchanged. Dated voice-raising is a separate1557350 sense, not a flag on ordinary encouragement; historical transitive励む is not the modern teaching pattern.",
+    "Technical excitation, specialized idioms, rare-spelling flags, search-only aliases and historical quotations remain in full source evidence, not required everyday examples.",
+    "No frequency ranking is inferred from JMdict priorities, missing flags or dictionary recognition. No historical/phonetic formation claim is adopted."
+  ],
+  "supportMappings": [
+    {"kanji": "励", "article": "words/激励.md", "word": "激励", "reading": "げきれい", "entryId": "1253760", "newArticle": true},
+    {"kanji": "励", "article": "words/励む.md", "word": "励む", "reading": "はげむ", "entryId": "1557390", "newArticle": true},
+    {"kanji": "励", "article": "words/励ます.md", "word": "励ます", "reading": "はげます", "entryId": "1557350", "newArticle": true}
+  ],
+  "newSupportArticles": ["words/激励.md", "words/励む.md", "words/励ます.md"],
+  "reusedSupportArticles": [],
+  "activatedBaselinePairs": [],
+  "allMappedReciprocalPairs": [["励", "words/激励.md"], ["励", "words/励む.md"], ["励", "words/励ます.md"]],
+  "requiredDirections": 6,
+  "newDirectionsRequired": 6,
+  "missingComponentDisposition": "激 has no card. Retain kanji:[激,励] in 激励 metadata; do not link absent激 or add it out of batch. The proposed 激 intensity/inciting contribution is supported by its full character record and1600720, not by an invented etymology.",
+  "reusedPassageChanges": [
+    {
+      "article": "words/応援.md",
+      "old": "励ます (はげます) is encouraging or cheering someone on.",
+      "new": "[励ます](励ます.md) (はげます) is encouraging or cheering someone on.",
+      "constraints": "Navigation-only. Preserve N2 level, complete metadata, primary reading, original exclusions and all prose."
+    },
+    {
+      "article": "words/慰める.md",
+      "old": "励ます (はげます), \"encourage,\" can urge someone onward;",
+      "new": "[励ます](励ます.md) (はげます), \"encourage,\" can urge someone onward;",
+      "constraints": "Navigation-only. Preserve N2 level, complete metadata and existing qualified consolation/encouragement distinction."
+    },
+    {
+      "article": "words/学問.md",
+      "old": "学問に励む means to apply oneself to study;",
+      "new": "学問に[励む](励む.md) means to apply oneself to study;",
+      "constraints": "Navigation-only. Preserve N3 level, metadata, actual examples and all comparison prose. 力強い's passive example is not a required component introduction; no change there."
+    }
+  ],
+  "newSupportMetadata": [
+    {
+      "word": "激励", "reading": "げきれい", "title": "encouragement; spurring on",
+      "type": "kango", "kanji": ["激", "励"],
+      "tags": ["kango", "noun", "suru-verb", "transitive", "encouragement"],
+      "quiz_exclusions": ["励ます", "応援", "勧める", "慰める", "支える", "力強い"]
+    },
+    {
+      "word": "励む", "reading": "はげむ", "title": "work hard; strive",
+      "type": "wago", "kanji": ["励"],
+      "tags": ["wago", "verb", "godan-verb", "intransitive", "effort"],
+      "quiz_exclusions": ["努める", "努力", "一生懸命", "苦心", "せっせと", "凝らす", "注ぐ", "ねっしん", "くるくる", "ばりばり", "もりもり", "勉強", "凝る", "夢中", "熱中", "張り切る"]
+    },
+    {
+      "word": "励ます", "reading": "はげます", "title": "encourage; cheer someone on",
+      "type": "wago", "kanji": ["励"],
+      "tags": ["wago", "verb", "godan-verb", "transitive", "encouragement"],
+      "quiz_exclusions": ["応援", "勧める", "慰める", "支える", "力強い"]
+    }
+  ],
+  "newSupportTeaching": {
+    "level": "Omit jlpt and JLPT tags for all three: no vocabulary-level source established. Necessary kanji support, not N1 vocabulary delivery.",
+    "激励": {
+      "meaning": "激励 is encouragement that spurs someone on; 激励する means to encourage or give a pep talk. The encouraged person or group can take を.",
+      "examples": [
+        {"japanese": "選手団を激励する。", "kana": "せんしゅだんをげきれいする。", "english": "Encourage the team.", "provenance": "Exact short Digital Daijisen example, archived actual激励 heading; kana and translation supplied by author."},
+        {"japanese": "先生は学生たちを激励しました。", "kana": "せんせいはがくせいたちをげきれいしました。", "english": "The teacher encouraged the students.", "provenance": "Original pedagogical sentence using the attested person/groupを激励する construction; not invented as a collocation or register contrast."}
+      ],
+      "combination": "激 contributes intensity or stirring up, and linked励 contributes encouraging. An intensifying combination, not a literal command to become violent. ゲキ+レイ. No historical formation or every-use forcefulness claim.",
+      "comparisons": "Link励ますはげます as the native encouragement verb and応援おうえん for support/cheering that can also be practical backup. The overlap is real, not a rigid distinction between speech and action.",
+      "distinctiveMeaning": "Learn the noun andする use without treating every kind of assistance as a pep talk. 激励 does not guarantee success or that the recipient immediately feels better. Separate historical self-exertion sense is not taught as the unrestricted modern core."
+    },
+    "励む": {
+      "meaning": "励む means working hard or applying oneself to an activity. For the useful modern pattern, mark the activity with に: 勉強に励む.",
+      "examples": [
+        {"japanese": "毎日、勉強に励んでいます。", "kana": "まいにち、べんきょうにはげんでいます。", "english": "I work hard at my studies every day.", "provenance": "Original pedagogical inflection of the complete1907660 attested勉強に励む phrase; full1557390 and actual public activity-ni examples support the use."},
+        {"japanese": "研究に励みました。", "kana": "けんきゅうにはげみました。", "english": "I applied myself to research.", "provenance": "Polite past of actual Digital Daijisen研究に励む model, with source meaning preserved."}
+      ],
+      "combination": "Linked励 writesはげ; む is the written ending. One native verb, not a compound of separate on-reading words. Godan-mu: 励みます, 励んで, 励んだ, 励まない.",
+      "comparisons": "Link努めるつとめる and努力どりょく for overlapping effort. Link励ますはげます to contrast encouraging someone: 自分が勉強に励む versus友達を励ます; selective kana and English translations required. Do not frame own-effort and encouragement as an exhaustive lexical division.",
+      "distinctiveMeaning": "Effort does not guarantee success. Modern activityに励む is the teaching model, not a claim that dictionaries contain no historical transitive uses. 励みます is the polite form; plain励ます belongs to the separate godan-su verb."
+    },
+    "励ます": {
+      "meaning": "励ます means encouraging or cheering someone on or up. In the ordinary person-encouragement use, the person takes を.",
+      "examples": [
+        {"japanese": "友達を励ましました。", "kana": "ともだちをはげましました。", "english": "I encouraged my friend.", "provenance": "Original simple pedagogical personを model, supported by1557350 and Digital Daijisen病床の友を励ます."},
+        {"japanese": "友人の言葉に励まされました。", "kana": "ゆうじんのことばにはげまされました。", "english": "I was encouraged by my friend's words.", "provenance": "Narrowed version of existing力強い's natural passive example; explicit passive explanation required. Not a new frequency or collocation contrast."}
+      ],
+      "combination": "Linked励 writesはげ; ます is part of the dictionary-form spelling here, NOT a polite ending. Godan-su: 励まします, 励まして, 励ました, 励まさない. Contrast 励む→励みます.",
+      "comparisons": "Link激励げきれい for noun/suru encouragement,応援おうえん for support/cheering, and慰めるなぐさめる for consolation. Encouragement can urge someone onward; consolation emphasizes easing distress. They may occur together, not mutually exclusive compartments.",
+      "distinctiveMeaning": "The passive 励まされる means be encouraged. Encouragement need not produce success; one can encourage oneself too. The full source separately records raising one's voice, marked dated inJMdict but not identically marked inDaijisen; this article focuses on encouragement and does not assign that label to the ordinary sense."
+    }
+  },
+  "quizPlan": {
+    "targetLabel": "encourage; be diligent",
+    "targetEvidence": "Full frozen励 English meanings and both actual Digital Daijisen character senses: own exertion and spurring someone on. Do not erase either to avoid overlaps.",
+    "distractors": [
+      {"kanji": "劣", "label": "inferior; worse", "reason": "Shared力, but comparative inferiority is neither encouragement nor diligent exertion. All complete English source meanings and actual card inspected. Preserve its seven existing guards."},
+      {"kanji": "万", "label": "ten thousand", "reason": "万-shaped strokes appear at left in励, but the numerical/all-many branch is not encouragement or diligent effort. Do not infer semantic contribution from shape alone."},
+      {"kanji": "厚", "label": "thick; cordial", "reason": "Shared厂-like overhang makes a shape contrast; physical thickness and kind/cordial treatment are not the act of encouragement or diligence. Full source heavy/rich/brazen/shameless secondary meanings do not establish an overlap."}
+    ],
+    "directGuards": [
+      {"kanji": "努", "label": "make an effort", "reason": "Exact勤勉/own-effort overlap: raw努 diligent/toil, complete1240820 effort/strive, and actual励む definition努める. Not a defensibly wrong answer for励's own-effort branch."},
+      {"kanji": "勉", "label": "strive, exert effort", "reason": "Raw勉 includes encourage/strive/diligent and complete1240820 preserves勉める as a rare spelling. Shared ordinary effort branch, without promoting that spelling."},
+      {"kanji": "勤", "label": "employment; diligence", "reason": "The displayed diligence branch and raw勤 diligence overlap励 be diligent. Employment is not thereby inferred for励."},
+      {"kanji": "支", "label": "support", "reason": "Conservative broad English support/encouragement overlap in emotional support, supported by actual支える article and1310090. Not a rule that physical or financial support is励ます."}
+    ],
+    "guardSemantics": "Four direct pairs declared only on new励; symmetric and NONTRANSITIVE. No clique among努/勉/勤/支, no overwritten old guard, no curated-distractor overlap.",
+    "wordGuardEvidence": [
+      {"newWords": ["激励", "励ます"], "neighbors": ["応援"], "entryIds": ["1179840"], "reason": "Actual cheering/rooting-on branch overlaps both encouragement labels; practical reinforcement is not claimed equivalent."},
+      {"newWords": ["激励", "励ます"], "neighbors": ["勧める"], "entryIds": ["1595680"], "reason": "Actual encouraged/urged sense1 is restricted to勧める/奨める, and actual勧める label explicitly includes encourage. Do not extend it to薦める or all drink-offering uses."},
+      {"newWords": ["激励", "励ます"], "neighbors": ["慰める"], "entryIds": ["1156890"], "reason": "Conservative cheer-up/comfort label boundary:励ます sense1 includes cheer someone up, while consolation can be that action in distress. Preserve the useful emphasis contrast; not universal substitution."},
+      {"newWords": ["激励", "励ます"], "neighbors": ["支える"], "entryIds": ["1310090"], "reason": "Conservative broad support/encouragement overlap for emotional support; financial/physical support remains distinct."},
+      {"newWords": ["激励", "励ます"], "neighbors": ["力強い"], "entryIds": ["1554940"], "reason": "Reverse-direction protection for the complete reassuring/encouraging sense2, which the actual article illustrates with励まされました. Different parts of speech do not alone prove safe bare-gloss quiz choices."},
+      {"newWords": ["激励"], "neighbors": ["励ます"], "entryIds": ["1253760", "1557350"], "reason": "Direct encouragement/cheering-on overlap. Declare once on激励; no redundant reverse declaration needed."},
+      {"newWords": ["励む"], "neighbors": ["努める", "努力", "一生懸命", "苦心"], "entryIds": ["1240820", "1445130", "1164010", "1244530"], "reason": "Full primary families share striving/hard-work/effort; actual existing labels inspected. POS differences do not by themselves protect English meaning choices."},
+      {"newWords": ["励む"], "neighbors": ["せっせと", "くるくる", "ばりばり", "もりもり", "勉強"], "entryIds": ["2008620", "1003960", "1010340", "1012700", "1512670"], "reason": "Diligent/hard-work branches, including non-initial sense3くるくる, sense4ばりばり, sense2もりもり and sense2勉強. Guard each directly; do not infer throughせっせと or existing exclusions. Study/rotation/eating/sound/discount meanings are not erased."},
+      {"newWords": ["励む"], "neighbors": ["凝らす", "注ぐ", "凝る", "夢中", "熱中"], "entryIds": ["1239010", "1581730", "1239070", "1529500", "1467950"], "reason": "Direct devotion/applying-oneself branches overlap full1557390 devotion sense. Preserve actual primary readingsこらす/そそぐ/こる; other frozen homograph families are not substituted."},
+      {"newWords": ["励む"], "neighbors": ["ねっしん", "張り切る"], "entryIds": ["1467910", "1427870"], "reason": "Zeal/enthusiasm/eagerness overlaps full1557390 be-zealous branch. No guaranteed skill or success inferred; usual熱心 spelling is the existing kana article's identity."}
+    ],
+    "wordGuardSemantics": "27 unique direct pairs declared on the three new words only; symmetric and NONTRANSITIVE. Do not infer激励/励む or励ます/励む from shared spelling or any neighbor pair. Preserve every existing exclusion and title.",
+    "nonGuardComparisons": [
+      {"ids": ["助", "丞", "助ける"], "reason": "Help/aid/rescue is broader than encouragement; actual source families do not make encourage/diligent a demonstrated equivalent of their displayed rescue/help labels. Not curated as wrong answers, and no universal future-pool claim."},
+      {"ids": ["集中"], "reason": "Concentrating/focusing is not itself hard work or zealous devotion. Useful comparison, but no direct word guard established merely because both can describe studying."},
+      {"ids": ["学問", "激しい"], "reason": "Academic learning and intensity are not encouragement or striving. An activity argument of励む and a component-related adjective are not automatically synonyms."},
+      {"ids": ["励む", "励ます"], "reason": "Own effort versus causing encouragement are distinct event roles, not an intransitive/transitive alternation with interchangeable meanings. Keep distinct titles and explicit examples rather than excluding solely for shared kanji."}
+    ],
+    "fallbackScope": "劣 is N1;万 N5 and厚 N2 are outside an N1-only pool, so N1 needs tag/random fallbacks. Later qualified-builder All/N1/custom-pool sampling and native exact-label inspection are required. No exhaustive semantic safety for unsampled/current/future pools is claimed.",
+    "confusableInventory": "Existing confusable-words candidate inventory and its direct-pair/nontransitivity policy consulted. Inventory membership is navigation, not proof of interchangeability."
+  },
+  "shapeAndStrokePlan": {
+    "canonicalRadical": "力 no.19, visibly at right. Use ordinaryU+529B, not compatibility radicalU+2F12.",
+    "historicalClassification": "structure-unclassified, no phonetic field or phonetic facts item. Label modern厂-like cover over万-shaped strokes beside力 as a mnemonic only. KanjiVG phon attributes and gaiji-damaged historical prose are not adopted as etymology.",
+    "svg": "batch-103-kanjivg.svg",
+    "sourceRevision": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "sourcePaths": 7,
+    "converter": "tools/generate_strokes.py",
+    "converterNormalizedSha256": "22677a42589c5a8e21c2f1cf25ada71ad4987684d8309820ea70b1354fe06625",
+    "generation": "During the bounded runtime draft call unchanged converter.convert with the exact archived verifiedSVG. Verify seven consecutive IDs, finite16point polylines, revision/viewBox/count and regenerate equality. Do not hand-edit geometry.",
+    "geometryConverted": false,
+    "nativeDrawingAccepted": false
+  },
+  "proposedTeachingOutline": {
+    "meaning": "励 covers both encouraging someone and diligently applying oneself. Link激励/励む/励ます; do not equate one's effort with another person's encouragement.",
+    "mnemonic": "Modern-shape mnemonic, not etymology: a厂-like cover over万-shaped strokes beside力. Imagine strength being put into effort or encouragement. Link existing万/力; canonical力 sits at right. No semantic万=ten-thousand derivation.",
+    "readings": "Three separate source-order rows, all selected, each with its own relative-linked primary-reading word. Preserve rawdots; explain励ます versus polite励みます.",
+    "commonWords": "Link all three necessary supports withげきれい/はげむ/はげます. Never link missing激 or infer vocabulary levels.",
+    "notes": "Contrast shared力 in劣,万-shaped strokes in励, and厂-like overhang in厚. Useful own-effort comparisons努/勉/勤 are NOT wrong answers. Diligence does not guarantee success.",
+    "sources": "Cite KANJIDIC2 2026-11-02, JMdict1253760/1557390/1557350/1907660 and actual archived https://kotobank.jp/word/励-660815 plus relevant word headings. No imported relative docs links."
+  },
+  "proposedHanText": "励 激励 励む 励ます 激 力 厂 万 厚 劣 努 勉 勤 支 助 丞 応援 慰める 学問 力強い 勧める 努める 努力 一生懸命 苦心 凝らす 注ぐ 熱心 夢中 熱中 張り切る 勉強 集中 選手団 先生 学生 友達 友人 言葉 毎日 研究 自分 勉強に励む 友達を励ます 励みます 励んで 励んだ 励まない 励まします 励まして 励ました 励まさない 励まされる",
+  "fontInventoryScope": "Proposed new kanji/support words and examples, component/shape comparisons, all direct guard IDs and three navigation-only replacements. Recompute final actual runtime Han after drafting; no rare historical forms or compatibility radicals are proposed.",
+  "fontPreparationDisposition": "49 distinct proposed Han. 励 and all other proposed Han except 厂 are present in all three actual bundled cmaps. Ordinary 厂U+5382 is absent from all three; this is not itself a glyph failure. Retain the useful accurately labelled modern-shape comparison, require specific actual native readability/fallback inspection for厂 in all four selected/default typography modes before acceptance, and preserve the missing-cmap evidence. No native rendering or fallback-face identity is claimed here.",
+  "authorInspection": {
+    "freshCompleteMemberFamilies": 47,
+    "memberReturnedRanges": ["control/batch-103-full-family-reading.txt1-47; one complete nontruncated16342byte return"],
+    "freshCompleteComparisonFamilies": 31,
+    "comparisonReturnedRanges": ["control/batch-103-comparison-reading.txt1-15", "control/batch-103-comparison-reading.txt16-31"],
+    "rawCharacterInspection": "All11 complete records retained; Japanese readings/strokes/classical radicals and full English meanings directly inspected. Unrelated multilingual translations/reference numbers not freshly semantically reviewed.",
+    "existingArticleScope": "34 complete existing articles listed with exact metadata/hashes in batch-103-comparison-selection.json, each directly read. 勤勉 has no standalone article; no assumed reuse.",
+    "publicEvidence": "All extracted actual励/励む/励ます/激励 dictionary blocks freshly read from committed packet. No new upstream fetch claimed; original rawHTML/URLs/hashes/gaiji and extraction limits retained.",
+    "diagnostics": "Full-request load/JSON parse succeeded before an initial cp1252 print failure; later scripts use explicitUTF8/ASCII-safe output. Guessed optional workspace filenames that did not exist were replaced by actual committed paths/glob discovery, not denied historical recipes. No new permission denial occurred.",
+    "limits": "Author source inspection and bounded source plan, not independent review, linguistic certification of unchanged decks, frequency evidence, native rendering or phone acceptance."
+  },
+  "runtimeDrafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "independentReviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextAction": "SAME103 bounded LOCAL UNREVIEWED runtime draft/freeze only: new励 card, seven generated strokes, three necessary support articles, exactly three navigation-only reused changes and regeneratedmanifest. Audit actualHan/fonts/labels/four directkanji and27directword safeguards/threeallmappedpairs/sixdirections/zeroactivatedbaselinepairs/baselinepreservation. Proposed49Han include厂U+5382 absent from allTHREEbundledcmaps; NOTglyphfailure/nativeaccepted. Retain usefulmodernshapecomparison and require specific厂nativefallback/readability in allfourfonts/default beforeacceptance. Then all original two serial blind different-family textual reviews, original-session reconciliation, qualified non-skippedAndroid/ContentSyncONCE/native/rendered four-font checks and combined-current-main/signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/originalbudgets/verifiedownerissue gates remain required. No unreviewedpush,104,secondrunner,signingretry,guardincrease or parent-lock access. Published129/1228 and1099acceptance-remainder unchanged. Physicalphone/generalrelease/whole-setoutstanding."
+}
