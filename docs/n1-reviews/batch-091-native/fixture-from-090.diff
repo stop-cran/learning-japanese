@@ -1,0 +1,574 @@
+--- docs/n1-reviews/batch-090-native/N1Batch090NativeTest.kt
++++ N1Batch091NativeTest.kt
+@@ -50,22 +50,22 @@
+ import java.util.UUID
+ 
+-private fun disposable090() {
++private fun disposable091() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch090GlyphTest {
++class N1Batch091GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun swordLookalikesAndScopedHanAcrossFourProductionFamilies() {
+-        disposable090()
++    @Test fun bladeLookalikesAndScopedHanAcrossFourProductionFamilies() {
++        disposable091()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("丁 乃 写 凸 凹 刀 剃 力 包 博 古 日", "本 毎 物 真 見 館", "刀 力 乃 凹 凸 丁 包 剃 日本刀")
++        val pages = listOf("丁 丶 乃 傷 先 写 凸 凹 刀 刃 切 包", "日 本 物 白 真 端 縁 見 鋭", "刃 刀 丶 乃 凹 凸 丁 包 先 端 刃物")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 090: sword / look-alikes / scoped Han")
++                    Text("Batch 091: blade / look-alikes / scoped Han")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -73,5 +73,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 18 scoped Han; focused 刀/力/乃/凹/凸 and 日本刀. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 21 scoped Han; focused 刃/刀/丶/乃/凹/凸 and 先/端. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -84,5 +84,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("丁", "乃", "写", "凸", "凹", "刀", "剃", "力", "包", "博", "古", "日", "本", "毎", "物", "真", "見", "館")) {
++            for (char in listOf("丁", "丶", "乃", "傷", "先", "写", "凸", "凹", "刀", "刃", "切", "包", "日", "本", "物", "白", "真", "端", "縁", "見", "鋭")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -105,5 +105,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("日本刀")) {
++            for (word in listOf("刃物")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -132,5 +132,5 @@
+             }
+         }
+-        assertEquals(76, rows.length())
++        assertEquals(88, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -138,28 +138,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-090-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-091-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-090-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-091-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 72).put("wholeWordRasterProbes", 4).put("panels", 3)
+-            .put("limits", "18 actual scoped Han; all main-font cmaps cover these, native readability still requires inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 84).put("wholeWordRasterProbes", 4).put("panels", 3)
++            .put("limits", "21 actual scoped Han; 丶 absent from all three bundled cmaps requires actual system fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch090ArticleTest {
++class N1Batch091ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineSwordFiveReciprocalPairsBothReadingKindsDrawingAndSystemBack() {
+-        disposable090()
++    @Test fun fullSingleImportOfflineBladeReciprocalPairOneKunNoOnDrawingForefrontAndSystemBack() {
++        disposable091()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-090-${UUID.randomUUID()}", "main")
+-        val head = "40bc5a5533bce9f9a1fcb460fd220110fb30dade"
++        val source = RepoSource("acceptance-fixture", "n1-091-${UUID.randomUUID()}", "main")
++        val head = "f6b2ee397b4e2998abcef6fd747b25d6178b1fa3"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -169,5 +169,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-090-40bc5a55-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-091-f6b2ee39-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -184,9 +184,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1113, updated.kanji)
+-        assertEquals(5069, updated.words)
++        assertEquals(1114, updated.kanji)
++        assertEquals(5070, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("ceee0f79a6d394df", meta.contentVersion)
++        assertEquals("cb3c857f3614485d", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -196,17 +196,17 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(122, n1.size)
+-        val sword = n1.single { it.kanji == "刀" }
+-        assertEquals(listOf("乃", "凹", "凸"), sword.distractors.splitSep())
+-        assertEquals(listOf("トウ"), sword.onyomi.splitSep())
+-        assertEquals(listOf("かたな", "そり"), sword.kunyomi.splitSep())
+-        assertNotNull(sword.quizOnyomi)
+-        assertNotNull(sword.quizKunyomi)
+-        assertEquals(listOf("トウ"), sword.quizOnyomi?.splitSep())
+-        assertEquals(listOf("かたな"), sword.quizKunyomi?.splitSep())
+-        assertEquals(listOf("とう"), sword.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("かたな"), sword.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(123, n1.size)
++        val blade = n1.single { it.kanji == "刃" }
++        assertEquals(listOf("乃", "凹", "凸"), blade.distractors.splitSep())
++        assertEquals(listOf("ジン", "ニン"), blade.onyomi.splitSep())
++        assertEquals(listOf("は", "やいば", "き.る"), blade.kunyomi.splitSep())
++        assertNotNull(blade.quizOnyomi)
++        assertNotNull(blade.quizKunyomi)
++        assertEquals(emptyList<String>(), blade.quizOnyomi?.splitSep())
++        assertEquals(listOf("は"), blade.quizKunyomi?.splitSep())
++        assertEquals(emptyList<String>(), blade.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("は"), blade.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "刀" to "sword; blade", "凸" to "convex; protruding",
++            "刃" to "blade; cutting edge", "凸" to "convex; protruding",
+             "乃" to "thereupon; possessive no", "凹" to "concave; sunken",
+         )
+@@ -215,7 +215,7 @@
+         for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "刀" }
++            val target = cards.single { it.kanji == "刃" }
+             assertEquals(listOf("乃", "凹", "凸"), target.distractors)
+-            val options = QuizBuilder.options(target, cards, kotlin.random.Random(640))
++            val options = QuizBuilder.options(target, cards, kotlin.random.Random(649))
+             assertEquals(4, options.size)
+             assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
+@@ -227,12 +227,8 @@
+                 .put("fallbackOptions", options.count { it.kanji !in expectedMeanings }))
+         }
+-        val importedSword = requireNotNull(runBlocking { app.db.content().word(source.id, "日本刀") })
+-        assertEquals(listOf("刀"), importedSword.quizExclusions.splitSep())
+-        assertEquals("にほんとう", importedSword.reading)
+-        assertNull(importedSword.jlpt)
+-        assertEquals(3, requireNotNull(runBlocking { app.db.content().word(source.id, "刀") }).jlpt)
+-        val importedRazor = requireNotNull(runBlocking { app.db.content().word(source.id, "剃刀") })
+-        assertEquals(2, importedRazor.jlpt)
+-        assertEquals(listOf("鋭い"), importedRazor.quizExclusions.splitSep())
++        val importedBlade = requireNotNull(runBlocking { app.db.content().word(source.id, "刃") })
++        assertEquals(listOf("刀", "日本刀", "端", "縁", "先端"), importedBlade.quizExclusions.splitSep())
++        assertEquals("は", importedBlade.reading)
++        assertNull(importedBlade.jlpt)
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -248,5 +244,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "刀") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "刃") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -254,5 +250,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "刀" && (kind == ReadingKind.On && key == "とう" || kind == ReadingKind.Kun && key == "かたな")) now - 60_000
++                            if (card.kanji == "刃" && (kind == ReadingKind.Kun && key == "は")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -261,5 +257,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "刀", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "刃", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -269,17 +265,17 @@
+         val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+             .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+-            .put("directWordGuardCount", importedSword.quizExclusions.splitSep().size)
++            .put("directWordGuardCount", importedBlade.quizExclusions.splitSep().size)
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(sword.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(sword.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(sword.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(sword.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(sword.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(sword.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(blade.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(blade.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(blade.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(blade.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(blade.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(blade.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; 刀 meaning and exactly onとう/kunかたな due, source-onlyそり excluded without erasing raw metadata. Two historical good 刀 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; only 刃 meaning and kunは due, no on keys. All five raw readings retained. Two historical good 刃 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -288,136 +284,77 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 122 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 123 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("刀")
+-            click("sword; blade")
+-            await("刀 — sword; blade")
+-            show(articleBullet("Strokes: 2 · Key (radical): 刀 (no. 18) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("刃")
++            click("blade; cutting edge")
++            await("刃 — blade; cutting edge")
++            show(articleBullet("Strokes: 3 · Key (radical): 刀 (no. 18) · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("刀 concerns swords and blades. The standalone word 刀 かたな means a sword, especially a Japanese single-edged sword. The character's wider cutting-tool senses do not make かたな a general word for every knife."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: Picture a blade inside the bent, hooked outline, with the separate sweeping stroke starting inside it. This is a memory aid for the modern shape, not a reconstruction of its history."), "kanji-04")
++            show(articleBullet("刃 concerns a blade or cutting edge. The standalone word 刃 は names the cutting part of a knife or sword, not automatically the whole tool. The character also appears in words concerning swords."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: Compare 刀, \"sword; blade,\" and notice the extra short inner mark, shaped like 丶. Let that mark remind you of the cutting edge. This is a memory aid for the modern shape, not a historical explanation."), "kanji-04")
+             section("Readings")
+-            show(readingExample("トウ"), "kanji-09")
+-            show(readingExample("日本刀 にほんとう — Japanese sword; also read にっぽんとう"), "kanji-11")
+-            show(readingExample("かたな"), "kanji-12")
+-            show(readingExample("刀 かたな — sword; katana"), "kanji-14")
+-            show(readingExample("そり"), "kanji-15")
+-            show(readingExample("KANJIDIC2 lists this reading; no independently allocated word example is established here"), "kanji-17")
+-            show(articleBullet("剃刀 かみそり means \"razor,\" usually written in kana. It has a special whole-word reading: the kana ending そり is not by itself evidence that 刀 independently supplies that reading. Keep the source reading そり for lookup, not as a new standalone word for \"razor.\""), "kanji-18")
++            show(readingExample("ジン"), "kanji-09")
++            show(readingExample("白刃 はくじん — drawn sword; the same word is also read しらは"), "kanji-11")
++            show(readingExample("ニン"), "kanji-12")
++            show(readingExample("刃傷 にんじょう — injury or bloodshed involving a blade; recognize the whole word"), "kanji-14")
++            show(readingExample("は"), "kanji-15")
++            show(readingExample("刃 は — blade; cutting edge"), "kanji-17")
++            show(readingExample("やいば"), "kanji-18")
++            show(readingExample("刃 やいば — blade; sword; a separate documented word reading"), "kanji-20")
++            show(readingExample("き.る"), "kanji-21")
++            show(readingExample("KANJIDIC2 lists this reading; no independently verified word example is established here"), "kanji-23")
++            show(articleBullet("This small lesson practices は. ジン, ニン and やいば remain recognition material here; leaving them out of practice does not make them invalid or uniformly rare. The source-only き.る is not a recommendation to replace the spelling of 切る きる, \"cut,\" with an invented spelling."), "kanji-24")
+             section("Common words")
+-            show(articleBullet("刀 かたな — sword; katana"), "kanji-20")
+-            show(articleBullet("日本刀 にほんとう — Japanese sword"), "kanji-21")
+-            show(articleBullet("剃刀 かみそり — razor; recognize the kanji spelling, but the word is usually written in kana"), "kanji-22")
++            show(articleBullet("刃 は — blade; cutting edge"), "kanji-26")
++            show(articleBullet("刃物 はもの — edged tool; cutting instrument"), "kanji-27")
+             section("Notes")
+-            show(articleBullet("Compare 力, \"power.\" In 力 the slanting stroke crosses the upper stroke; in 刀 it starts inside the hooked outline. Both have two strokes."), "kanji-24")
+-            show(articleBullet("乃, with connecting or particle-related uses, 凹, \"concave; sunken,\" and 凸, \"convex; protruding,\" do not share 刀's sword/blade meaning."), "kanji-25")
+-            show(articleBullet("Learn each whole word with its reading. The とう-only scalpel and engraving-tool senses in the standalone 刀 dictionary family do not automatically belong to かたな."), "kanji-26")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1446420, 1464780 and 1435180. Character and lexical readings: Digital Daijisen, 刀 and 日本刀."), "kanji-27")
++            show(articleBullet("刀 かたな names a sword; 刃 は can name its cutting part. Learn the whole word and context rather than treating the two characters as freely interchangeable."), "kanji-29")
++            show(articleBullet("乃, with connecting or particle-related uses, 凹, \"concave; sunken,\" and 凸, \"convex; protruding,\" do not share the blade/cutting-edge meaning."), "kanji-30")
++            show(articleBullet("The same spelling 刃 also has the reading やいば. Its dictionary senses are not all automatically senses of the noun は."), "kanji-31")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1369820, 1369830, 1369840, 1369890 and 1475260. Character and lexical readings: Digital Daijisen and Seisenban Nihon Kokugo Daijiten, 刃."), "kanji-32")
+             section("Common words")
+-            show(articleBullet("日本刀 にほんとう — Japanese sword"), "japanese-sword-forward")
+-            inline(await(articleBullet("日本刀 にほんとう — Japanese sword")), "日本刀", 0)
++            show(articleBullet("刃 は — blade; cutting edge"), "blade-forward")
++            inline(await(articleBullet("刃 は — blade; cutting edge")), "刃", 0)
+             await("Article contents")
+-            await("日本刀 (にほんとう) — Japanese sword")
++            await("刃 (は) — blade; cutting edge")
+             section("Meaning")
+-            show(articleBullet("日本刀 is a Japanese sword made in the traditional Japanese manner. It is a noun naming the object, not an action. The dictionary also records the reading にっぽんとう."), "japanese-sword-02")
+-            show(articleBullet("博物館で古い日本刀を見ました。 (はくぶつかんでふるいにほんとうをみました。) — I saw an old Japanese sword at the museum."), "japanese-sword-03")
+-            show(articleBullet("これは日本刀の写真です。 (これはにほんとうのしゃしんです。) — This is a photograph of a Japanese sword."), "japanese-sword-04")
+-            show(articleBullet("In 日本刀を見る (にほんとうをみる), \"look at a Japanese sword,\" を marks the object. 日本刀の写真 uses の to connect the sword with its photograph."), "japanese-sword-05")
++            show(articleBullet("刃 is a noun naming the blade or cutting edge of a knife, sword or similar tool. This article teaches the reading は and the physical cutting-part sense."), "blade-02")
++            show(articleBullet("この包丁の刃は鋭いです。 (このほうちょうのははするどいです。) — This kitchen knife's blade is sharp."), "blade-03")
++            show(articleBullet("写真では、刃がよく見えます。 (しゃしんでは、はがよくみえます。) — The blade is clearly visible in the photograph."), "blade-04")
++            show(articleBullet("In 包丁の刃 (ほうちょうのは), \"the blade of a kitchen knife,\" の connects the tool with its cutting part. In 刃が見える (はがみえる), \"the blade is visible,\" が marks what is visible."), "blade-05")
+             section("How the kanji combine")
+-            show(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition."), "japanese-sword-07")
+-            show(articleBullet("The whole compound is にほんとう or にっぽんとう. The two readings name the same category; learn them as documented forms, not as a general rule for changing sounds in other compounds."), "japanese-sword-08")
++            show(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は."), "blade-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("刀 かたな, \"sword; katana,\" overlaps with 日本刀. A katana is a familiar example of a Japanese sword, but 日本刀 is not limited to one narrowly defined historical subtype."), "japanese-sword-10")
+-            show(articleBullet("ナイフ, \"knife,\" 包丁 ほうちょう, \"kitchen knife,\" and 剃刀 かみそり, \"razor,\" name different kinds of cutting tools. They are not general substitutes for 日本刀. There is no natural lexical antonym."), "japanese-sword-11")
++            show(articleBullet("ナイフ, \"knife,\" and 包丁 ほうちょう, \"kitchen knife,\" name whole tools. 刃 は focuses on the cutting part. Likewise, 刀 かたな and 日本刀 にほんとう name swords rather than just their cutting edges."), "blade-09")
++            show(articleBullet("端 はし, \"edge; end; tip,\" and 縁 ふち, \"rim; edge,\" describe boundaries more broadly. Not every edge is a cutting edge. There is no single lexical antonym for 刃."), "blade-10")
+             section("Distinctive meaning")
+-            show(articleBullet("日本刀 identifies a Japanese sword tradition, not simply any knife made in Japan. The category is often associated with a curved, single-edged sword, but do not turn that familiar image into a rule that every 日本刀 must have exactly the same shape."), "japanese-sword-13")
+-            show(articleBullet("Dictionary: JMdict, entry 1464780, both readings; Digital Daijisen and Seisenban Nihon Kokugo Daijiten, 日本刀."), "japanese-sword-14")
++            show(articleBullet("English \"edge\" can mean the edge of a desk or the boundary of an area. 刃 は does not generally replace 端 or 縁 for those spatial meanings. Learn it with a cutting tool and keep the distinction between the tool and its blade."), "blade-12")
++            show(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は."), "blade-13")
++            show(articleBullet("Dictionary: JMdict, entry 1369820, sense 1; separate やいば family 1369830. Physical は sense: Digital Daijisen and Seisenban Nihon Kokugo Daijiten, 刃."), "blade-14")
+             section("How the kanji combine")
+-            show(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition."), "japanese-sword-reverse")
+-            inline(await(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition.")), "刀", 81)
++            show(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は."), "blade-reverse")
++            inline(await(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は.")), "刃", 0)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("トウ"), "japanese-sword-kanji-backlink")
+-            back()
+-            await(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition.")).assertIsDisplayed()
++            show(readingExample("は"), "blade-kanji-backlink")
++            back()
++            await(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("japanese-sword-system-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition."), "country-first-forward")
+-            inline(await(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition.")), "日", 0)
++            capture("blade-system-back-to-word")
++            section("Distinctive meaning")
++            show(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は."), "forefront-forward")
++            inline(await(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は.")), "先端", 90)
+             await("Article contents")
++            await("先端 (せんたん) - tip; leading edge")
++            capture("forefront-destination")
++            back()
++            await(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は.")).assertIsDisplayed()
++            section("Distinctive meaning")
++            capture("forefront-system-back-to-word")
++            back()
++            await(articleBullet("刃 は — blade; cutting edge")).assertIsDisplayed()
+             section("Common words")
+-            show(articleBullet("日本刀 にほんとう — Japanese sword; 日本 names Japan in this compound"), "country-first-reverse")
+-            inline(await(articleBullet("日本刀 にほんとう — Japanese sword; 日本 names Japan in this compound")), "日本刀", 0)
+-            await("Article contents")
+-            await("日本刀 (にほんとう) — Japanese sword")
+-            back()
+-            await(articleBullet("日本刀 にほんとう — Japanese sword; 日本 names Japan in this compound")).assertIsDisplayed()
+-            section("Common words")
+-            capture("country-first-system-back-to-kanji")
+-            back()
+-            await(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("country-first-system-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition."), "country-second-forward")
+-            inline(await(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition.")), "本", 6)
+-            await("Article contents")
+-            section("Common words")
+-            show(articleBullet("日本刀 にほんとう — Japanese sword; 日本 names Japan in this compound"), "country-second-reverse")
+-            inline(await(articleBullet("日本刀 にほんとう — Japanese sword; 日本 names Japan in this compound")), "日本刀", 0)
+-            await("Article contents")
+-            await("日本刀 (にほんとう) — Japanese sword")
+-            back()
+-            await(articleBullet("日本刀 にほんとう — Japanese sword; 日本 names Japan in this compound")).assertIsDisplayed()
+-            section("Common words")
+-            capture("country-second-system-back-to-kanji")
+-            back()
+-            await(articleBullet("日 and 本 together spell the country name 日本 (にほん／にっぽん), \"Japan.\" Here 日本 modifies 刀, read トウ and meaning \"sword\": a Japanese sword. Treat 日本 as the country name, not as a new literal \"sun + book\" definition.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("country-second-system-back-to-word")
+-            back()
+-            await(articleBullet("日本刀 にほんとう — Japanese sword")).assertIsDisplayed()
+-            section("Common words")
+-            capture("japanese-sword-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("刀 かたな — sword; katana"), "katana-forward")
+-            inline(await(articleBullet("刀 かたな — sword; katana")), "刀", 0)
+-            await("Article contents")
+-            await("刀 (かたな) - sword; katana")
+-            section("How the kanji combine")
+-            show(articleBullet("刀 is one character, with the native reading かたな for this standalone word. There is no compound to split. The character also has the on reading トウ, but another reading does not make all dictionary senses interchangeable."), "katana-reverse")
+-            inline(await(articleBullet("刀 is one character, with the native reading かたな for this standalone word. There is no compound to split. The character also has the on reading トウ, but another reading does not make all dictionary senses interchangeable.")), "刀", 0)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("かたな"), "katana-kanji-backlink")
+-            back()
+-            await(articleBullet("刀 is one character, with the native reading かたな for this standalone word. There is no compound to split. The character also has the on reading トウ, but another reading does not make all dictionary senses interchangeable.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("katana-system-back-to-word")
+-            back()
+-            await(articleBullet("刀 かたな — sword; katana")).assertIsDisplayed()
+-            section("Common words")
+-            capture("katana-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("剃刀 かみそり — razor; recognize the kanji spelling, but the word is usually written in kana"), "razor-forward")
+-            inline(await(articleBullet("剃刀 かみそり — razor; recognize the kanji spelling, but the word is usually written in kana")), "剃刀", 0)
+-            await("Article contents")
+-            await("剃刀 (かみそり) - razor")
+-            section("How the kanji combine")
+-            show(articleBullet("剃 concerns shaving and 刀 a blade, which helps associate the spelling with a shaving tool. The assigned かみそり is a special whole-word reading: do not split it into invented independent readings for 剃 and 刀."), "razor-reverse")
+-            inline(await(articleBullet("剃 concerns shaving and 刀 a blade, which helps associate the spelling with a shaving tool. The assigned かみそり is a special whole-word reading: do not split it into invented independent readings for 剃 and 刀.")), "刀", 23)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("かたな"), "razor-kanji-backlink")
+-            back()
+-            await(articleBullet("剃 concerns shaving and 刀 a blade, which helps associate the spelling with a shaving tool. The assigned かみそり is a special whole-word reading: do not split it into invented independent readings for 剃 and 刀.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("razor-system-back-to-word")
+-            back()
+-            await(articleBullet("剃刀 かみそり — razor; recognize the kanji spelling, but the word is usually written in kana")).assertIsDisplayed()
+-            section("Common words")
+-            capture("razor-system-back-to-kanji")
++            capture("blade-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -425,13 +362,13 @@
+             await("Meaning quiz")
+             evidence.put("reciprocalLinkAndSystemBack", true)
+-                .put("mappedReciprocalPairs", 5).put("directedLinkTransitions", 10)
+-                .put("completeArticleProjections", 2).put("changedReusedArticles", 4)
++                .put("mappedReciprocalPairs", 1).put("directedLinkTransitions", 2).put("extraForefrontTransition", true)
++                .put("completeArticleProjections", 2).put("changedReusedArticles", 0)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("刀", meaning.card.kanji)
++            assertEquals("刃", meaning.card.kanji)
+             val expectedMeanings = mapOf(
+-                "刀" to "sword; blade",
++                "刃" to "blade; cutting edge",
+                 "凸" to "convex; protruding",
+                 "乃" to "thereupon; possessive no",
+@@ -443,5 +380,5 @@
+             assertTrue(meaning.options.any { it.kanji == "凹" })
+             assertEquals(0, meaning.options.count { it.kanji !in expectedMeanings })
+-            assertEquals("sword; blade", meaning.options.single { it.kanji == "刀" }.title)
++            assertEquals("blade; cutting edge", meaning.options.single { it.kanji == "刃" }.title)
+             assertEquals(listOf("乃", "凹", "凸"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+@@ -453,60 +390,61 @@
+                 .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("sword; blade")
++            click("blade; cutting edge")
+             await("Correct!")
+-            assertEquals("刀", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("刃", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+-            val answeredKinds = mutableSetOf<ReadingKind>()
+-            repeat(2) {
++            val answeredKeys = mutableSetOf<String>()
++            repeat(1) {
+                 rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("刀", question.card.kanji)
+-                assertTrue("Duplicate target reading kind", answeredKinds.add(question.question.kind))
+-                val key = if (question.question.kind == ReadingKind.On) "とう" else "かたな"
++                assertEquals("刃", question.card.kanji)
++                assertEquals(ReadingKind.Kun, question.question.kind)
++                val key = question.question.correctKey
++                assertTrue(key in setOf("は"))
++                assertTrue("Duplicate target reading key", answeredKeys.add(key))
+                 assertEquals(key, question.question.correctKey)
+-                assertNotEquals("そり", key)
+                 assertFalse(question.question.options.any { it.key.isBlank() })
+                 assertEquals(1, question.question.options.count { it.key == key })
+-                capture("curated-${question.question.kind}-question")
++                capture("curated-${key}-question")
+                 click(question.question.options.single { it.key == key }.label)
+                 await(if (question.question.kind == ReadingKind.On) "Correct! — on'yomi" else "Correct! — kun'yomi")
+                 assertTrue((reading.ui as ReadingUi.Answer).correct)
+-                capture("curated-${question.question.kind}-feedback")
++                capture("curated-${key}-feedback")
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "刀" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "刃" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
++            assertEquals(setOf("は"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+-            assertEquals(2, done.answered)
+-            assertEquals(2, done.correct)
++            assertEquals(1, done.answered)
++            assertEquals(1, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "刀" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "刃" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+-            assertEquals(2, readingLogs.size)
+-            assertEquals(setOf("とう", "かたな"), readingLogs.map { it.reading }.toSet())
+-            assertEquals(setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name), readingLogs.map { it.mode }.toSet())
+-            capture("curated-on-kun-done")
++            assertEquals(1, readingLogs.size)
++            assertEquals(setOf("は"), readingLogs.map { it.reading }.toSet())
++            assertTrue(readingLogs.all { it.mode == ReadingKind.Kun.mode.name })
++            capture("curated-one-kun-no-on-done")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("sword; blade").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "刀") })
++            await("blade; cutting edge").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "刃") })
+             assertEquals(listOf("乃", "凹", "凸"), card.distractors.splitSep())
+-            assertEquals(listOf("トウ"), card.onyomi.splitSep())
+-            assertEquals(listOf("かたな", "そり"), card.kunyomi.splitSep())
++            assertEquals(listOf("ジン", "ニン"), card.onyomi.splitSep())
++            assertEquals(listOf("は", "やいば", "き.る"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("トウ"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("かたな"), card.quizKunyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("は"), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -514,5 +452,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(2, strokes.length())
++            assertEquals(3, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -531,10 +469,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("2 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("3 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "刀" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "刃" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -547,5 +485,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "刀" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "刃" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -555,11 +493,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("bothCuratedKindsPersistedGoodAndDone", true)
++                .put("onlyKunHaNoOnPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-090-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-090-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-091-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-091-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -654,5 +592,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-090-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-091-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
