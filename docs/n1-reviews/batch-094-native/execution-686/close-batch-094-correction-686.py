@@ -190,8 +190,8 @@ def finalize():
     assert set(m.git(R, "diff", "--name-only", m.HEAD, head).splitlines()) == expected
     for row in evidence["receipts"]:
         assert m.sha(R / row["archive"]) == row["archiveSha256"]
-    issue = m.load(C / "batch-094-correction-686-issue-receipt.json")
-    body = (C / "batch-094-correction-686-issue-body.txt").read_text(encoding="utf-8")
+    issue = m.load(C / "batch-094-correction-686-issue-final-receipt.json")
+    body = (C / "batch-094-correction-686-issue-final-body.txt").read_bytes().decode("utf-8")
     assert issue["user"]["login"] == "stop-cran" and issue["body"] == body and head in body
     state = m.load(C / "progress.json")
     before = m.load(L / "progress-before-686.json")
