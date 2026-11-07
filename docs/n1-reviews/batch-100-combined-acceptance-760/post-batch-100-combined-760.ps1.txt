@@ -1,0 +1,57 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\cc53eba8-ebd4-461a-804c-9a559cb61644"
+$content = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$bodyPath = "$control\batch-100-combined-760-issue-body.txt"
+if ((Test-Path "$log\issue-760-posted.json") -or (Test-Path $bodyPath)) { throw 'Do not duplicate issue update' }
+$head = git -C $content rev-parse HEAD
+& "$control\preflight-760.ps1" -ExpectedHead $head -ReceiptName 'preflight-760-before-issue.json'
+if (-not $?) { throw 'Parent/signed-head/clean-state preflight failed' }
+if ((git -C $content rev-parse HEAD^) -ne 'b33b4553255ab17dc72c09e65888f6584aa8d79d') {
+    throw 'Unexpected evidence parent'
+}
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-760.json") | ConvertFrom-Json
+if (-not $e.runtimeAccepted -or $e.runtimePublished -or $e.checks.pythonTests -ne 377) {
+    throw 'Combined acceptance not established'
+}
+$b = $e.checks.localArchiveBudgets
+$body = @"
+Checkpoint760, SAME batch100: **combined-current-main acceptance complete locally; not yet published**. Normally signed LOCAL review-closed evidence commit: $head. Evidence: docs/n1-sources/execution-760.json and docs/n1-reviews/batch-100-combined-acceptance-760.json.
+
+Fresh main716c610153234e8d2240dcf528de3ef83b654b27 is already ancestor; nonrewriting merge returned Already up to date. No incoming teaching/runtime changes. Fresh checks passed:377 Python tests/no skips, validator0 errors, unchanged regenerated manifest, vocabulary consistency, frozen inputs/complete dictionary packets/full985kanji4942word985stroke baseline, exact membership, all six reading dispositions, eleven direct guard declarations, five mapped pairs/ten link directions/one activated baseline pair, twelve pinned converted paths and actual21Han/font provenance. Vocabulary remains the existing2122/2431 reviewed-prompt pilot; this does not close unrelated coverage gaps.
+
+Every8453 current runtime hash and manifest/version606c836e4be33ba9 exactly match compiled757's full archive. Qualified Androidbf30cdead8515739bc0e671d57a54b9a3109dd46 unchanged. HOST756 RealContentTest3+RareHanTest1/no skips and corrected native758 TWO named terminalcase0 successes inherited, not rerun: ContentSyncONCE/1123kanji5073words132N1/zero problems/both epochs1;2464direct/1760NONTRANSITIVEneighbor/2304wordguard checks;64actualbuilderchoices/22sampledlabels. Original-family759 rendered confirmations and their exact report/capture hashes reverified. Claude then GPT exited0 serially;17serialcalls/15images each,zerooverlaps. No fresh blind credit or retroactive change to historical reports.
+
+N753-fallback-establish resolved semantically755/mechanically758/rendered759. Eleven direct symmetric NONTRANSITIVE guards retain the corrected silkworm fallback; N1 has TWOcurated剣倹 plusfallback because験N4. No masking/releveling/future-pool safety claim. Six full readings/order and selectedソウ/つく.る retained; source-onlyショウ/けず.しける allocation remains explicitlyUNVERIFIED/unselected. F1/C1-establish/H1-initial resolved andH1-wound withdrawn;創/初 remains conservative, not proven historical live failure/universal synonymy. OptionalO1-O4/wrapping nonblocking. 創作N2/作るN5/13and5wordguards preserved; no new word.
+
+Local archive:$($b.entries) entries/$($b.localZipBytes) compressed/$($b.inflatedBytes) inflated/$($b.retainedBytes) retained bytes. Exact compiled native archive likewise within unchanged18000entries/42MiBcompressed80MiBinflated56MiBretained/per-file/path/media guards. Reduced contact sheets are not full-resolution reads of all originals; pixels do not establish fallback face. Back/offline relies on758execution. API35emulator is not a phone; injectedstrokes/seededdue/shapeonly drawing is not MLKit/human mastery.
+
+NEXT checkpoint: fresh-main check, nonrewriting reconciliation/revalidation and changed-teaching review if needed, normal authorized owner fast-forward, exact remoteSHA, terminalgreenCI and EVERY immutable GitHub ZIP runtime hash/budget check, verified owner issue and durable publication ledgers before101. No push this execution. Published126/1228,remaining1102,lastpublished716c6101 unchanged until delivery verified. Phone/general-release/whole-set outstanding. Parent runner.lock untouched; no optional historical-session helper access, new permission denial, concurrent heavy work or second runner.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+if ($env:GH_TOKEN -or $env:GITHUB_TOKEN) { throw 'Unexpected inherited token' }
+$globalIdentity = gh api user --jq .login
+if ($LASTEXITCODE -ne 0 -or $globalIdentity -cne 'romanko-ms') { throw 'Unexpected global identity' }
+try {
+    $env:GH_TOKEN = gh auth token --user stop-cran
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-760-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve posted receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-760-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $null
+}
+if ((gh api user --jq .login) -cne $globalIdentity) { throw 'Global identity changed' }
