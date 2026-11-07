@@ -1,0 +1,474 @@
+--- docs/n1-reviews/batch-091-native/N1Batch091NativeTest.kt
++++ N1Batch092NativeTest.kt
+@@ -50,22 +50,22 @@
+ import java.util.UUID
+ 
+-private fun disposable091() {
++private fun disposable092() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch091GlyphTest {
++class N1Batch092GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun bladeLookalikesAndScopedHanAcrossFourProductionFamilies() {
+-        disposable091()
++    @Test fun mowLookalikesAndScopedHanAcrossFourProductionFamilies() {
++        disposable092()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("丁 丶 乃 傷 先 写 凸 凹 刀 刃 切 包", "日 本 物 白 真 端 縁 見 鋭", "刃 刀 丶 乃 凹 凸 丁 包 先 端 刃物")
++        val pages = listOf("乃 凸 凹 刀 刂 切 刈 収 夏 庭 短 稲", "穫 草 除 髪", "刈 切 刀 刂 乃 凹 凸 草 髪 稲 刈除")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 091: blade / look-alikes / scoped Han")
++                    Text("Batch 092: mow / look-alikes / scoped Han")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -73,5 +73,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 21 scoped Han; focused 刃/刀/丶/乃/凹/凸 and 先/端. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 16 scoped Han; focused 刈/切/刀/刂/乃/凹/凸. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -84,5 +84,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("丁", "丶", "乃", "傷", "先", "写", "凸", "凹", "刀", "刃", "切", "包", "日", "本", "物", "白", "真", "端", "縁", "見", "鋭")) {
++            for (char in listOf("乃", "凸", "凹", "刀", "刂", "切", "刈", "収", "夏", "庭", "短", "稲", "穫", "草", "除", "髪")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -105,5 +105,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("刃物")) {
++            for (word in listOf("刈除")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -132,5 +132,5 @@
+             }
+         }
+-        assertEquals(88, rows.length())
++        assertEquals(68, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -138,28 +138,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-091-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-092-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-091-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-092-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 84).put("wholeWordRasterProbes", 4).put("panels", 3)
+-            .put("limits", "21 actual scoped Han; 丶 absent from all three bundled cmaps requires actual system fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 64).put("wholeWordRasterProbes", 4).put("panels", 3)
++            .put("limits", "16 actual scoped Han; 刂 absent from all three bundled cmaps requires actual system fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch091ArticleTest {
++class N1Batch092ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineBladeReciprocalPairOneKunNoOnDrawingForefrontAndSystemBack() {
+-        disposable091()
++    @Test fun fullSingleImportOfflineMowReusedN3ReciprocalPairOneKunNoOnFourStrokesAndSystemBack() {
++        disposable092()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-091-${UUID.randomUUID()}", "main")
+-        val head = "f6b2ee397b4e2998abcef6fd747b25d6178b1fa3"
++        val source = RepoSource("acceptance-fixture", "n1-092-${UUID.randomUUID()}", "main")
++        val head = "62c6d3e29b87d89a2027bcb3d063081de23c4320"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -169,5 +169,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-091-f6b2ee39-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-092-62c6d3e2-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -184,9 +184,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1114, updated.kanji)
++        assertEquals(1115, updated.kanji)
+         assertEquals(5070, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("cb3c857f3614485d", meta.contentVersion)
++        assertEquals("8445a5717d080dcc", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -196,17 +196,17 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(123, n1.size)
+-        val blade = n1.single { it.kanji == "刃" }
+-        assertEquals(listOf("乃", "凹", "凸"), blade.distractors.splitSep())
+-        assertEquals(listOf("ジン", "ニン"), blade.onyomi.splitSep())
+-        assertEquals(listOf("は", "やいば", "き.る"), blade.kunyomi.splitSep())
+-        assertNotNull(blade.quizOnyomi)
+-        assertNotNull(blade.quizKunyomi)
+-        assertEquals(emptyList<String>(), blade.quizOnyomi?.splitSep())
+-        assertEquals(listOf("は"), blade.quizKunyomi?.splitSep())
+-        assertEquals(emptyList<String>(), blade.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("は"), blade.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(124, n1.size)
++        val mow = n1.single { it.kanji == "刈" }
++        assertEquals(listOf("乃", "凹", "凸"), mow.distractors.splitSep())
++        assertEquals(listOf("ガイ", "カイ"), mow.onyomi.splitSep())
++        assertEquals(listOf("か.る"), mow.kunyomi.splitSep())
++        assertNotNull(mow.quizOnyomi)
++        assertNotNull(mow.quizKunyomi)
++        assertEquals(emptyList<String>(), mow.quizOnyomi?.splitSep())
++        assertEquals(listOf("か.る"), mow.quizKunyomi?.splitSep())
++        assertEquals(emptyList<String>(), mow.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("かる"), mow.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "刃" to "blade; cutting edge", "凸" to "convex; protruding",
++            "刈" to "mow; reap", "凸" to "convex; protruding",
+             "乃" to "thereupon; possessive no", "凹" to "concave; sunken",
+         )
+@@ -215,7 +215,7 @@
+         for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "刃" }
++            val target = cards.single { it.kanji == "刈" }
+             assertEquals(listOf("乃", "凹", "凸"), target.distractors)
+-            val options = QuizBuilder.options(target, cards, kotlin.random.Random(649))
++            val options = QuizBuilder.options(target, cards, kotlin.random.Random(662))
+             assertEquals(4, options.size)
+             assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
+@@ -227,8 +227,9 @@
+                 .put("fallbackOptions", options.count { it.kanji !in expectedMeanings }))
+         }
+-        val importedBlade = requireNotNull(runBlocking { app.db.content().word(source.id, "刃") })
+-        assertEquals(listOf("刀", "日本刀", "端", "縁", "先端"), importedBlade.quizExclusions.splitSep())
+-        assertEquals("は", importedBlade.reading)
+-        assertNull(importedBlade.jlpt)
++        val importedMow = requireNotNull(runBlocking { app.db.content().word(source.id, "刈る") })
++        assertEquals(listOf("切る", "収穫"), importedMow.quizExclusions.splitSep())
++        assertEquals("かる", importedMow.reading)
++        assertEquals(3, importedMow.jlpt)
++        assertEquals("mow; clip; reap", importedMow.title)
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -244,5 +245,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "刃") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "刈") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -250,5 +251,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "刃" && (kind == ReadingKind.Kun && key == "は")) now - 60_000
++                            if (card.kanji == "刈" && (kind == ReadingKind.Kun && key == "かる")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -257,5 +258,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "刃", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "刈", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -265,17 +266,17 @@
+         val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+             .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+-            .put("directWordGuardCount", importedBlade.quizExclusions.splitSep().size)
++            .put("directWordGuardCount", importedMow.quizExclusions.splitSep().size)
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(blade.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(blade.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(blade.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(blade.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(blade.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(blade.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(mow.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(mow.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(mow.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(mow.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(mow.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(mow.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; only 刃 meaning and kunは due, no on keys. All five raw readings retained. Two historical good 刃 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; only 刈 meaning and kunかる due, no on keys. All three raw readings retained. Two historical good 刈 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -284,77 +285,62 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 123 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 124 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("刃")
+-            click("blade; cutting edge")
+-            await("刃 — blade; cutting edge")
+-            show(articleBullet("Strokes: 3 · Key (radical): 刀 (no. 18) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("刈")
++            click("mow; reap")
++            await("刈 — mow; reap")
++            show(articleBullet("Strokes: 4 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("刃 concerns a blade or cutting edge. The standalone word 刃 は names the cutting part of a knife or sword, not automatically the whole tool. The character also appears in words concerning swords."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: Compare 刀, \"sword; blade,\" and notice the extra short inner mark, shaped like 丶. Let that mark remind you of the cutting edge. This is a memory aid for the modern shape, not a historical explanation."), "kanji-04")
++            show(articleBullet("刈 concerns cutting growing things: mowing grass, clipping hair, or reaping crops. The native verb 刈る かる retains a cutting action; it is not a general word for every method of harvesting."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: Picture the two crossed strokes on the left as growth to be clipped beside the upright knife form 刂 on the right. The indexing radical is 刀; 刂 is its right-hand form. This shape association is a memory aid, not a reconstruction of the character's history."), "kanji-04")
+             section("Readings")
+-            show(readingExample("ジン"), "kanji-09")
+-            show(readingExample("白刃 はくじん — drawn sword; the same word is also read しらは"), "kanji-11")
+-            show(readingExample("ニン"), "kanji-12")
+-            show(readingExample("刃傷 にんじょう — injury or bloodshed involving a blade; recognize the whole word"), "kanji-14")
+-            show(readingExample("は"), "kanji-15")
+-            show(readingExample("刃 は — blade; cutting edge"), "kanji-17")
+-            show(readingExample("やいば"), "kanji-18")
+-            show(readingExample("刃 やいば — blade; sword; a separate documented word reading"), "kanji-20")
+-            show(readingExample("き.る"), "kanji-21")
+-            show(readingExample("KANJIDIC2 lists this reading; no independently verified word example is established here"), "kanji-23")
+-            show(articleBullet("This small lesson practices は. ジン, ニン and やいば remain recognition material here; leaving them out of practice does not make them invalid or uniformly rare. The source-only き.る is not a recommendation to replace the spelling of 切る きる, \"cut,\" with an invented spelling."), "kanji-24")
++            show(readingExample("ガイ"), "kanji-09")
++            show(readingExample("刈除 がいじょ — removal; cutting off; mowing"), "kanji-11")
++            show(readingExample("カイ"), "kanji-12")
++            show(readingExample("刈除 かいじょ — an alternative reading of the same word"), "kanji-14")
++            show(readingExample("か.る"), "kanji-15")
++            show(readingExample("刈る かる — mow; clip; reap"), "kanji-17")
++            show(articleBullet("Focus practice on かる. The two on readings are retained for recognition: JMdict records both がいじょ and かいじょ for 刈除, without a spelling or sense restriction separating them. This does not establish how often either is used. In 刈る, 刈 supplies か and る is the written verb ending."), "kanji-18")
+             section("Common words")
+-            show(articleBullet("刃 は — blade; cutting edge"), "kanji-26")
+-            show(articleBullet("刃物 はもの — edged tool; cutting instrument"), "kanji-27")
++            show(articleBullet("刈る かる — mow; clip; reap"), "kanji-20")
++            show(articleBullet("稲刈り いねかり — rice reaping; rice harvesting"), "kanji-21")
++            show(articleBullet("The object helps with the English translation: 草を刈る (くさをかる) is mowing grass, 髪を刈る (かみをかる) is clipping hair, and 稲を刈る (いねをかる) is reaping rice plants. See the linked verb article for complete examples."), "kanji-22")
+             section("Notes")
+-            show(articleBullet("刀 かたな names a sword; 刃 は can name its cutting part. Learn the whole word and context rather than treating the two characters as freely interchangeable."), "kanji-29")
+-            show(articleBullet("乃, with connecting or particle-related uses, 凹, \"concave; sunken,\" and 凸, \"convex; protruding,\" do not share the blade/cutting-edge meaning."), "kanji-30")
+-            show(articleBullet("The same spelling 刃 also has the reading やいば. Its dictionary senses are not all automatically senses of the noun は."), "kanji-31")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1369820, 1369830, 1369840, 1369890 and 1475260. Character and lexical readings: Digital Daijisen and Seisenban Nihon Kokugo Daijiten, 刃."), "kanji-32")
++            show(articleBullet("切, \"cut,\" has a broader range. Compare 刈's crossed left strokes and separate upright 刂 with 切's left part and bent 刀 on the right."), "kanji-24")
++            show(articleBullet("乃, \"thereupon; possessive no,\" 凹, \"concave; sunken,\" and 凸, \"convex; protruding,\" do not mean mowing or reaping."), "kanji-25")
++            show(articleBullet("Learn 刈る as a godan verb: 刈ります (かります), 刈った (かった), 刈らない (からない). These inflections do not add new dictionary readings."), "kanji-26")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1209540, 1209550 and 1167840. Native verb usage: Digital Daijisen and Nikkoku, 刈る. The ガイ compound is also recorded by Jitsu, 刈除; that heading does not independently verify カイ."), "kanji-27")
+             section("Common words")
+-            show(articleBullet("刃 は — blade; cutting edge"), "blade-forward")
+-            inline(await(articleBullet("刃 は — blade; cutting edge")), "刃", 0)
++            show(articleBullet("刈る かる — mow; clip; reap"), "karu-forward")
++            inline(await(articleBullet("刈る かる — mow; clip; reap")), "刈る", 0)
+             await("Article contents")
+-            await("刃 (は) — blade; cutting edge")
++            await("刈る (かる) - mow; clip; reap")
+             section("Meaning")
+-            show(articleBullet("刃 is a noun naming the blade or cutting edge of a knife, sword or similar tool. This article teaches the reading は and the physical cutting-part sense."), "blade-02")
+-            show(articleBullet("この包丁の刃は鋭いです。 (このほうちょうのははするどいです。) — This kitchen knife's blade is sharp."), "blade-03")
+-            show(articleBullet("写真では、刃がよく見えます。 (しゃしんでは、はがよくみえます。) — The blade is clearly visible in the photograph."), "blade-04")
+-            show(articleBullet("In 包丁の刃 (ほうちょうのは), \"the blade of a kitchen knife,\" の connects the tool with its cutting part. In 刃が見える (はがみえる), \"the blade is visible,\" が marks what is visible."), "blade-05")
++            show(articleBullet("刈る means to cut grass, hair, crops, or similar growth: to mow, clip, shear, or reap according to the object. It is a transitive godan verb. The thing cut takes を; the polite form is 刈ります (かります), the past 刈った, and the negative 刈らない."), "karu-02")
++            show(articleBullet("庭の草を刈りました。 (にわのくさをかりました。) - I cut the grass in the garden."), "karu-03")
++            show(articleBullet("夏なので、髪を短く刈りました。 (なつなので、かみをみじかくかりました。) - Since it is summer, I had my hair cropped short."), "karu-04")
++            show(articleBullet("短く describes the resulting short length in the second example."), "karu-05")
+             section("How the kanji combine")
+-            show(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は."), "blade-07")
++            show(articleBullet("刈 represents cutting or reaping. It supplies the native stem か, followed by the kana ending る. There is no multi-kanji compound to decompose."), "karu-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("ナイフ, \"knife,\" and 包丁 ほうちょう, \"kitchen knife,\" name whole tools. 刃 は focuses on the cutting part. Likewise, 刀 かたな and 日本刀 にほんとう name swords rather than just their cutting edges."), "blade-09")
+-            show(articleBullet("端 はし, \"edge; end; tip,\" and 縁 ふち, \"rim; edge,\" describe boundaries more broadly. Not every edge is a cutting edge. There is no single lexical antonym for 刃."), "blade-10")
++            show(articleBullet("切る (きる) is the broader verb for cutting. It works with many objects that do not suit 刈る, such as a sheet of paper. 髪を切る, \"cut one's hair,\" does not specifically present the haircut as cropping or clipping."), "karu-09")
+             section("Distinctive meaning")
+-            show(articleBullet("English \"edge\" can mean the edge of a desk or the boundary of an area. 刃 は does not generally replace 端 or 縁 for those spatial meanings. Learn it with a cutting tool and keep the distinction between the tool and its blade."), "blade-12")
+-            show(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は."), "blade-13")
+-            show(articleBullet("Dictionary: JMdict, entry 1369820, sense 1; separate やいば family 1369830. Physical は sense: Digital Daijisen and Seisenban Nihon Kokugo Daijiten, 刃."), "blade-14")
++            show(articleBullet("The object helps determine the English verb: 草を刈る is mowing or cutting grass, while 稲を刈る (いねをかる) is reaping rice plants. Do not extend the English gloss \"harvest\" to every crop or method of gathering food. 刈る retains a cutting action, rather than simply collecting something that has grown."), "karu-11")
++            show(articleBullet("Dictionary: JMdict, entry 1209540, sense 1."), "karu-12")
+             section("How the kanji combine")
+-            show(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は."), "blade-reverse")
+-            inline(await(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は.")), "刃", 0)
++            show(articleBullet("刈 represents cutting or reaping. It supplies the native stem か, followed by the kana ending る. There is no multi-kanji compound to decompose."), "karu-reverse")
++            inline(await(articleBullet("刈 represents cutting or reaping. It supplies the native stem か, followed by the kana ending る. There is no multi-kanji compound to decompose.")), "刈", 0)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("は"), "blade-kanji-backlink")
+-            back()
+-            await(articleBullet("刃 represents the whole native noun は here. There is no compound to split. The same written character also has the separate word reading やいば, \"blade; sword\"; that does not make every sense under やいば a sense of は.")).assertIsDisplayed()
++            show(readingExample("か.る"), "karu-kanji-backlink")
++            back()
++            await(articleBullet("刈 represents cutting or reaping. It supplies the native stem か, followed by the kana ending る. There is no multi-kanji compound to decompose.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("blade-system-back-to-word")
+-            section("Distinctive meaning")
+-            show(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は."), "forefront-forward")
+-            inline(await(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は.")), "先端", 90)
+-            await("Article contents")
+-            await("先端 (せんたん) - tip; leading edge")
+-            capture("forefront-destination")
+-            back()
+-            await(articleBullet("For figurative English \"cutting edge\" meaning the forefront of a field, use words such as 先端 せんたん, not 刃 は.")).assertIsDisplayed()
+-            section("Distinctive meaning")
+-            capture("forefront-system-back-to-word")
+-            back()
+-            await(articleBullet("刃 は — blade; cutting edge")).assertIsDisplayed()
++            capture("karu-system-back-to-word")
++            back()
++            await(articleBullet("刈る かる — mow; clip; reap")).assertIsDisplayed()
+             section("Common words")
+-            capture("blade-system-back-to-kanji")
++            capture("karu-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -362,13 +348,13 @@
+             await("Meaning quiz")
+             evidence.put("reciprocalLinkAndSystemBack", true)
+-                .put("mappedReciprocalPairs", 1).put("directedLinkTransitions", 2).put("extraForefrontTransition", true)
+-                .put("completeArticleProjections", 2).put("changedReusedArticles", 0)
++                .put("mappedReciprocalPairs", 1).put("directedLinkTransitions", 2).put("activatedBaselinePairs", 1)
++                .put("completeArticleProjections", 2).put("changedReusedArticles", 1)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("刃", meaning.card.kanji)
++            assertEquals("刈", meaning.card.kanji)
+             val expectedMeanings = mapOf(
+-                "刃" to "blade; cutting edge",
++                "刈" to "mow; reap",
+                 "凸" to "convex; protruding",
+                 "乃" to "thereupon; possessive no",
+@@ -380,5 +366,5 @@
+             assertTrue(meaning.options.any { it.kanji == "凹" })
+             assertEquals(0, meaning.options.count { it.kanji !in expectedMeanings })
+-            assertEquals("blade; cutting edge", meaning.options.single { it.kanji == "刃" }.title)
++            assertEquals("mow; reap", meaning.options.single { it.kanji == "刈" }.title)
+             assertEquals(listOf("乃", "凹", "凸"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+@@ -390,7 +376,7 @@
+                 .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("blade; cutting edge")
++            click("mow; reap")
+             await("Correct!")
+-            assertEquals("刃", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("刈", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+@@ -402,8 +388,8 @@
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("刃", question.card.kanji)
++                assertEquals("刈", question.card.kanji)
+                 assertEquals(ReadingKind.Kun, question.question.kind)
+                 val key = question.question.correctKey
+-                assertTrue(key in setOf("は"))
++                assertTrue(key in setOf("かる"))
+                 assertTrue("Duplicate target reading key", answeredKeys.add(key))
+                 assertEquals(key, question.question.correctKey)
+@@ -417,9 +403,9 @@
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "刃" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "刈" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf("は"), answeredKeys)
++            assertEquals(setOf("かる"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+@@ -427,9 +413,9 @@
+             assertEquals(1, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "刃" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "刈" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+             assertEquals(1, readingLogs.size)
+-            assertEquals(setOf("は"), readingLogs.map { it.reading }.toSet())
++            assertEquals(setOf("かる"), readingLogs.map { it.reading }.toSet())
+             assertTrue(readingLogs.all { it.mode == ReadingKind.Kun.mode.name })
+             capture("curated-one-kun-no-on-done")
+@@ -438,13 +424,13 @@
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("blade; cutting edge").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "刃") })
++            await("mow; reap").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "刈") })
+             assertEquals(listOf("乃", "凹", "凸"), card.distractors.splitSep())
+-            assertEquals(listOf("ジン", "ニン"), card.onyomi.splitSep())
+-            assertEquals(listOf("は", "やいば", "き.る"), card.kunyomi.splitSep())
++            assertEquals(listOf("ガイ", "カイ"), card.onyomi.splitSep())
++            assertEquals(listOf("か.る"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+             assertEquals(emptyList<String>(), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("は"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("か.る"), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -452,5 +438,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(3, strokes.length())
++            assertEquals(4, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -469,10 +455,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("3 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("4 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "刃" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "刈" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -485,5 +471,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "刃" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "刈" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -493,11 +479,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("onlyKunHaNoOnPersistedGoodAndDone", true)
++                .put("onlyKunKaruNoOnPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-091-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-091-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-092-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-092-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -592,5 +578,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-091-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-092-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
