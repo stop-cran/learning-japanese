@@ -1,0 +1,40 @@
+            val answeredKeys = mutableSetOf<String>()
+            repeat(2) {
+                rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                val reading = model("kreading:") as KanjiReadingViewModel
+                val question = reading.ui as ReadingUi.Question
+                assertEquals("劣", question.card.kanji)
+                val expectedKey = when (question.question.kind) {
+                    ReadingKind.On -> "れつ"
+                    ReadingKind.Kun -> "おとる"
+                }
+                assertEquals(expectedKey, question.question.correctKey)
+                assertTrue(answeredKeys.add(expectedKey))
+                assertEquals(1, question.question.options.count { it.key == expectedKey })
+                val kind = if (question.question.kind == ReadingKind.On) "on" else "kun"
+                capture("curated-$kind-question")
+                click(question.question.options.single { it.key == expectedKey }.label)
+                await(if (question.question.kind == ReadingKind.On) "Correct! — on'yomi" else "Correct! — kun'yomi")
+                assertTrue((reading.ui as ReadingUi.Answer).correct)
+                capture("curated-$kind-feedback")
+                click("Next")
+            }
+            assertEquals(setOf("れつ", "おとる"), answeredKeys)
+            rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+            val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+            assertEquals(2, done.answered)
+            assertEquals(2, done.correct)
+            rule.waitUntil(30_000) { runBlocking {
+                app.db.reviews().allLog().count { log -> log.sourceId == source.id && log.kanji == "劣" &&
+                    log.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) && log.grade == 3 } == 2
+            } }
+            val logs = runBlocking { app.db.reviews().allLog().filter {
+                it.sourceId == source.id && it.kanji == "劣" &&
+                    it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name)
+            } }
+            assertEquals(2, logs.size)
+            assertEquals(setOf("れつ", "おとる"), logs.map { it.reading }.toSet())
+            assertTrue(logs.all { it.grade == 3 })
+            assertEquals(ReadingKind.On.mode.name, logs.single { it.reading == "れつ" }.mode)
+            assertEquals(ReadingKind.Kun.mode.name, logs.single { it.reading == "おとる" }.mode)
+            capture("curated-two-keys-done")

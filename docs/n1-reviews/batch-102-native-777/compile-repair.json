@@ -1,0 +1,23 @@
+{
+  "firstCompileExit": 1,
+  "firstCompileResult": "BUILD FAILED in 41s",
+  "finding": "Pairwise exclusion assertions used QuizOption.quizExclusions, but QuizOption exposes IDs/labels only.",
+  "disposition": "Options carry labels/IDs, not quizExclusions; resolve offered IDs to actual transported cards before pairwise assertion. No builder or production edits.",
+  "exactReplacements": [
+    [
+      "                for (left in options) for (right in options.filter { it.kanji != left.kanji })",
+      "                val offeredCards = options.map { option -> cards.single { it.kanji == option.kanji } }\n                for (left in offeredCards) for (right in offeredCards.filter { it.kanji != left.kanji })"
+    ],
+    [
+      "                        for (left in options) for (right in options.filter { it.kanji != left.kanji })",
+      "                        val offeredCards = options.map { option -> allCards.single { it.kanji == option.kanji } }\n                        for (left in offeredCards) for (right in offeredCards.filter { it.kanji != left.kanji })"
+    ]
+  ],
+  "originalFixtureSha256": "ae0a2cb19ba16858777939ed59e682b3104d393fa6dfeef55fe04aed701996b4",
+  "correctedFixtureSha256": "7aeaac143983adfd21b2b3a83de2204d1f5e4d088f10f0b594ea02e806ee37e7",
+  "archiveSha256": "73067936ccc548d615048c529adf3c5989659879847a69f9a8b49f53e661bd76",
+  "failedAttemptDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-102-native-777\\failed-compile-1",
+  "originalWrapperPreserved": true,
+  "runtimeChanged": false,
+  "nativeExecuted": false
+}
