@@ -1,0 +1,392 @@
+import copy
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import zipfile
+
+CONTROL = Path(__file__).resolve().parent
+ROOT = CONTROL.parent / "learning-japanese"
+ANDROID = CONTROL.parent / "kanji-cards-android"
+SESSION = "b2b715c3-880b-4e95-b3b4-2413816a600c"
+LOG = CONTROL / "logs" / SESSION
+BASE = "a847a3cb3aada0460b01c0df227bad0efbfcf397"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+RAW = CONTROL / "artifacts" / "batch-100-native-758"
+INSPECTION = CONTROL / "batch-100-native-inspection-758"
+DEST = ROOT / "docs" / "n1-reviews" / "batch-100-native-758"
+EVIDENCE = ROOT / "docs" / "n1-sources" / "execution-758.json"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def git(*args, root=ROOT):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(root), *args], encoding="utf-8"
+    ).strip()
+
+
+def context():
+    progress = load(CONTROL / "progress.json")
+    assert (progress["checkpoint"], progress["status"], progress["batch"]) == (757, "continue", "100")
+    assert progress["stage"] == "batch-100-corrected-native-execution-in-progress"
+    runner = load(CONTROL / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 5920)
+    assert git("rev-parse", "HEAD", root=ANDROID) == APP
+    assert git("log", "-1", "--format=%G?", root=ANDROID) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=ANDROID)
+    return progress
+
+
+def runtime():
+    packet = load(CONTROL / "batch-100-native-757" / "compiled-packet.json")
+    prep = packet["preparation"]
+    for path, digest in [
+        (prep["archive"], prep["archiveSha256"]),
+        (prep["fixture"], prep["fixtureSha256"]),
+        (packet["compilation"]["appApk"], packet["compilation"]["appApkSha256"]),
+        (packet["compilation"]["testApk"], packet["compilation"]["testApkSha256"]),
+    ]:
+        assert sha(Path(path)) == digest
+    manifest = load(ROOT / "manifest.json")
+    assert manifest["contentVersion"] == "606c836e4be33ba9"
+    assert sha(ROOT / "manifest.json") == "c11e9f588a0a487579a5d0adac2f35cf90523fc412d6444eb2af9e9bab56df73"
+    archive_path = Path(prep["archive"])
+    with zipfile.ZipFile(archive_path) as archive:
+        names = archive.namelist()
+        assert len(names) == len(set(names)) == 8475 and len(names) <= 18000
+        assert all(n.startswith("n1-batch-100/") and "\\" not in n and ".." not in n.split("/")
+                   and not n.startswith("/") and not re.search(r"(^|/)[^/]*:", n) for n in names)
+        assert not any("/docs/" in n or "/tools/" in n for n in names)
+        assert archive.read("n1-batch-100/manifest.json") == (ROOT / "manifest.json").read_bytes()
+        retained = len((ROOT / "manifest.json").read_bytes())
+        count = media = 0
+        for section_name, section in manifest.items():
+            if not isinstance(section, dict):
+                continue
+            for name, digest in section.items():
+                assert len(name.split("/")) == 2 and ".." not in name.split("/")
+                data = archive.read("n1-batch-100/" + name)
+                local = (ROOT / name).read_bytes()
+                binary = section_name in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}
+                limit = 150 * 1024 if section_name in {"images", "listeningTaskImages"} else (
+                    512 * 1024 if section_name in {"audio", "listeningTaskAudio"} else 2 * 1024 * 1024)
+                assert len(data) <= limit, name
+                normalized = data if binary else data.replace(b"\r\n", b"\n")
+                assert hashlib.sha256(normalized).hexdigest() == digest, name
+                assert normalized == (local if binary else local.replace(b"\r\n", b"\n")), name
+                retained += len(data)
+                count += 1
+                if section_name in {"listeningTaskAudio", "listeningTaskImages"}:
+                    media += len(data)
+        inflated = sum(info.file_size for info in archive.infolist())
+        assert count == 8453 and retained == 44381474 and inflated == 44649812
+        assert retained <= 56 * 1024 * 1024 and inflated <= 80 * 1024 * 1024
+        assert archive_path.stat().st_size == 30476969 <= 42 * 1024 * 1024
+        assert media == 5893602 <= 20 * 1024 * 1024
+    return {"runtimeHashesVerified": count, "contentVersion": manifest["contentVersion"],
+            "manifestSha256": sha(ROOT / "manifest.json"), "zipEntries": len(names),
+            "compressedBytes": archive_path.stat().st_size, "inflatedBytes": inflated,
+            "retainedBytes": retained, "listeningTaskMediaBytes": media,
+            "archiveSha256": prep["archiveSha256"], "allOriginalBudgetsAndPathMediaGuardsPassed": True}
+
+
+def validate_native():
+    attempt = load(RAW / "execution.json")
+    assert attempt["passed"] and attempt["nativeExecuted"] and attempt["failure"] is None
+    assert attempt["adbExitCode"] == 0 and attempt["terminalSuccessCases"] == 2
+    assert attempt["ownedHelperStopped"] and attempt["ownedQemuStopped"]
+    assert attempt["heapGrowth"] == "192m" and attempt["heapSize"] == "576m"
+    assert attempt["network"] == "Active default network: none"
+    assert not attempt["parentLockTouched"] and not attempt["guestOrAppHeapChanged"] and not attempt["guardsChanged"]
+    text = (RAW / "instrumentation.txt").read_text(encoding="utf-8-sig")
+    packet = load(CONTROL / "batch-100-native-757" / "compiled-packet.json")["preparation"]
+    assert "OK (2 tests)" in text and text.count("INSTRUMENTATION_STATUS_CODE: 0") == 2
+    assert not re.search(r"INSTRUMENTATION_STATUS_CODE: -[234]|FAILURES|INSTRUMENTATION_FAILED|INSTRUMENTATION_STATUS: (?:ignored|assumptionFailure)", text)
+    for key in ("glyphClass", "articleClass"):
+        assert text.count("INSTRUMENTATION_STATUS: class=" + packet[key]) == 2, key
+    for key in ("glyphMethod", "articleMethod"):
+        assert text.count("INSTRUMENTATION_STATUS: test=" + packet[key]) == 2, key
+    route = load(RAW / "n1-100-article-route.json")
+    raster = load(RAW / "n1-100-font-raster.json")
+    assert route["passed"] and route["archiveRequests"] == 1
+    assert (route["importedKanji"], route["importedWords"], route["n1Cards"], route["problems"],
+            route["acceptedReadingParserEpoch"], route["acceptedMeaningParserEpoch"]) == (1123, 5073, 132, 0, 1, 1)
+    assert route["contentSnapshot"] == "cde6cc0f2114801a000c1210df7a1a4dc4a560c9"
+    assert route["contentVersion"] == "606c836e4be33ba9"
+    assert route["fullOnyomi"] == route["fullProjectionOnyomi"] == ["ソウ", "ショウ"]
+    assert route["fullKunyomi"] == route["fullProjectionKunyomi"] == ["つく.る", "はじ.める", "きず", "けず.しける"]
+    assert route["quizOnKeys"] == ["そう"] and route["quizKunKeys"] == ["つくる"]
+    assert route["fullProjectionQuizOnyomi"] == ["ソウ"] and route["fullProjectionQuizKunyomi"] == ["つく.る"]
+    guards = ["作", "造", "始", "元", "原", "本", "緒", "産", "設", "初", "樹"]
+    assert route["kanjiQuizExclusions"] == guards
+    rows = route["kanjiDirectGuardChecks"]
+    assert len(rows) == 2464 and len({r["pool"] for r in rows}) == 7
+    for guard in guards:
+        selected = [r for r in rows if {r["target"], r["excluded"]} == {"創", guard}]
+        assert len(selected) == 224
+        assert {r["target"] for r in selected} == {"創", guard}
+        assert {r["seed"] for r in selected} == set(range(16))
+        for row in selected:
+            assert row["target"] in row["options"] and row["excluded"] not in row["options"]
+            assert 1 <= len(row["options"]) <= 4 and len(row["options"]) == len(set(row["options"]))
+            assert (set(row["options"]) - {row["target"]}).issubset(set(row["poolMembershipInOrder"]))
+    nontransitive = route["nontransitiveNeighborChecks"]
+    assert len(nontransitive) == 1760
+    assert len({(r["target"], r["neighbor"]) for r in nontransitive}) == 110
+    assert all(set(r["options"]) == {r["target"], r["neighbor"]} for r in nontransitive)
+    word_checks = route["preservedWordGuardChecks"]
+    assert len(word_checks) == 2304
+    assert len({tuple(sorted((r["target"], r["excluded"]))) for r in word_checks}) == 18
+    for row in word_checks:
+        assert row["target"] in {o["word"] for o in row["options"]}
+        assert row["excluded"] not in {o["word"] for o in row["options"]}
+        assert len(row["options"]) == 4
+    choices = route["productionBuilderN1AndAllExactChoices"]
+    assert len(choices) == 64
+    expected_meanings = {"創": "originate; create", "剣": "sword; double-edged blade",
+                         "倹": "frugal; thrifty", "験": "test; verify"}
+    for row in choices:
+        ids = {o["kanji"] for o in row["options"]}
+        assert len(ids) == len(row["options"]) == 4 and "創" in ids
+        assert not ids.intersection(guards) and ids.issubset(set(row["poolMembershipInOrder"]))
+        if row["pool"] in {"All", "boundedCustom"}:
+            assert {o["kanji"]: o["title"] for o in row["options"]} == expected_meanings
+        if row["pool"] == "N1":
+            assert {"創", "剣", "倹"}.issubset(ids) and "験" not in ids
+    labels = sorted({(o["kanji"], o["title"]) for row in choices for o in row["options"]})
+    old = load(CONTROL / "artifacts" / "batch-100-native-retry-753" / "n1-100-article-route.json")
+    old_labels = {(o["kanji"], o["title"]) for row in old["productionBuilderN1AndAllExactChoices"] for o in row["options"]}
+    assert set(labels) == old_labels - {("樹", "tree; establish")} and len(labels) == 22
+    assert route["actualN1CuratedAvailable"] == 2 and route["actualN1FallbackOptions"] == 1
+    assert route["curatedDistractorLevels"] == {"剣": 1, "倹": 1, "験": 4}
+    live = {o["kanji"]: o["title"] for o in route["exactDefaultMeaningOptions"]}
+    assert live == {"倹": "frugal; thrifty", "創": "originate; create",
+                    "蚕": "silkworm", "剣": "sword; double-edged blade"}
+    for key in ("reciprocalLinkAndSystemBack", "meaningQuestionAndFeedback",
+                "twoCuratedKeysPersistedGoodAndDone", "drawingTraceThenRecall",
+                "drawingGradeRecordedOnNext", "offline"):
+        assert route[key] is True, key
+    assert route["touchInjectedReferenceStrokes"] == 12
+    assert (route["mappedReciprocalPairs"], route["directedLinkTransitions"],
+            route["activatedBaselinePairs"], route["changedReusedArticles"]) == (5, 10, 1, 3)
+    assert raster["sdk"] == 35 and raster["fontScale"] == 1
+    assert raster["individualGlyphProbes"] == 84 and raster["wholeWordRasterProbes"] == 8
+    assert raster["panels"] == 3 and len(raster["rows"]) == 92
+    assert all(r.get("hasGlyph", True) for r in raster["rows"])
+    assert all(r.get("renderedCharactersNonblank", 2) == 2 for r in raster["rows"])
+    assert len(list(RAW.glob("*.png"))) == 46 and len(list(INSPECTION.glob("sheet-*.png"))) == 11
+    return attempt, route, [list(pair) for pair in labels]
+
+
+def archive():
+    progress = context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    attempt, route, labels = validate_native()
+    payload = runtime()
+    inspection = {
+        "reviewer": "Coordinator GPT-6.1 Sol (gpt-6.1-sol), not independent review",
+        "viewedOriginalPngs": [f"n1-100-font-panel-{i}.png" for i in range(1, 4)] + ["n1-100-meaning-question.png"],
+        "viewedContactSheets": [f"sheet-{i:02d}.png" for i in range(1, 12)],
+        "contactSheetRouteCoverage": 43, "originalNativePngsPreserved": 46,
+        "glyphObservation": "All21 scoped Han readable and distinguishable in three original panels across four production families, including visible blade variant刂 and new exclusion樹. No blank/replacement glyph established. Textbook final設 wraps onto a second line in panel3 and remains visible. Typeface source/fallback face not proven.",
+        "layoutObservation": "Article and changed reused passages legible in indexed contact sheets. Reading table needs horizontal scrolling; visible prompt and paired captures expose full explanation. No actionable new layout defect established. Not a fresh full-resolution inspection of all43 individual route PNGs.",
+        "semanticObservation": "Actual N1 UI now offers蚕 silkworm, not guarded樹 tree; establish. The22 sampled title pairs are exactly the755-confirmed23 minus樹, no new label. Native guard enforcement is demonstrated, not universal future fallback safety or independent rendered closure.",
+        "drawingObservation": "Twelve injected reference strokes, trace/recall and recorded Next demonstrated; shape-only fallback explicitly shown with handwriting model unavailable. Not recognition-model or human spontaneous-recall evidence.",
+        "independentRenderedAcceptance": False, "phoneEvidence": False,
+    }
+    save(INSPECTION / "inspection.json", inspection)
+    DEST.mkdir(exist_ok=False)
+    sources = []
+    for folder, name in [(RAW, "native"), (INSPECTION, "inspection")]:
+        for path in sorted(folder.iterdir()):
+            if path.is_file():
+                sources.append((path, DEST / name / (path.name if path.suffix == ".png" else path.name + ".gz")))
+    for path in [
+        CONTROL / "preflight-758.ps1", CONTROL / "start-native-758.py",
+        CONTROL / "run-758-native.ps1", CONTROL / "inspect-batch-100-native-758.py",
+        Path(__file__), LOG / "preflight-758.json", LOG / "preflight-758-native.json",
+        LOG / "starting-state-758.json",
+    ]:
+        sources.append((path, DEST / "receipts" / (path.name + ".txt")))
+    provenance = []
+    for source, target in sources:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.suffix == ".gz":
+            target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+            assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+        else:
+            shutil.copyfile(source, target)
+            assert sha(source) == sha(target)
+        provenance.append({"source": str(source), "archive": target.relative_to(ROOT).as_posix(),
+                           "sourceSha256": sha(source), "sha256": sha(target), "bytes": target.stat().st_size})
+    save(DEST / "artifact-index.json", provenance)
+    evidence = {
+        "schemaVersion": 1, "execution": 758, "batch": "100",
+        "stage": "corrected-native-passed-awaiting-independent-rendered-confirmations",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "startingState": progress["execution758StartingState"],
+        "testedContentHead": BASE, "archiveContentSnapshot": route["contentSnapshot"],
+        "qualifiedAndroidHead": APP, "nativeAttempt": attempt,
+        "nativeRouteSummary": {k: v for k, v in route.items() if k not in {
+            "productionBuilderN1AndAllExactChoices", "kanjiDirectGuardChecks",
+            "nontransitiveNeighborChecks", "preservedWordGuardChecks"}},
+        "payloadAcceptance": payload,
+        "kanjiDirectGuardChecks": 2464, "nontransitiveNeighborChecks": 1760,
+        "preservedWordGuardChecks": 2304, "productionChoiceChecks": 64,
+        "sampledUniqueKanjiTitlePairs": labels, "sampledLabels": 22,
+        "sampledLabelDeltaFrom755ConfirmedSet": {"added": [], "removed": [["樹", "tree; establish"]]},
+        "actualN1CuratedAvailable": 2, "actualN1FallbackOptions": 1,
+        "capturedPoolMembershipAndOrder": True, "inspection": inspection,
+        "finding": {"id": "N753-fallback-establish",
+                    "status": "resolved semantically in755; corrected native enforcement passed in758; independent rendered confirmation pending",
+                    "evidence": "Eleven direct guard pairs, both orientations, including創/樹;110 oriented neighbor pairs remain NONTRANSITIVE. New N1 live UI fallback蚕 silkworm. No legacy樹/設/初 edits.",
+                    "fixtureFlagQualification": "meaningFallbackNeedsSemanticReview=true is retained generic fixture output, not a newly established defect. Actual rendered options and sampled labels still require independent confirmation; do not convert the flag into either a clean verdict or an unresolved樹 recurrence."},
+        "artifactIndex": (DEST / "artifact-index.json").relative_to(ROOT).as_posix(),
+        "artifactCount": len(provenance),
+        "archivalDiagnostics": [
+            "Initial verification counted the full class name anywhere in the runner output and found3 occurrences (two class status lines plus stream heading), not2. Before any archive/evidence write, corrected helper to match exact class= and test= status prefixes. Original native result unchanged; no rerun, denial or relaxed terminal requirement.",
+            "Initial supplemental verification incorrectly required even an explicitly out-of-pool target to belong to the distractor pool. Exact compiled fixture lines275-280 require every NON-TARGET option to belong to that pool; the target is always injected. All512 such rows had only target outside, zero non-target violations. Matched that existing invariant before any archival write. Native7pool/11pair tests unchanged; no production/content/test change or bypass.",
+        ],
+        "textualAcceptance": "Original750 reviews and755 exact-diff source confirmations retained; no new blind review or dictionary-family reread claimed.",
+        "freshHostAcceptance": "execution756 HOST3+1 for unchanged606c836e4be33ba9 retained, not rerun here.",
+        "nativeExecuted": True, "nativeMechanicalChecksPassed": True,
+        "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 126, "remainingAdditions": 1102,
+        "lastPublishedCommit": progress["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "SAME100 SERIAL original-family rendered confirmations of corrected758 actual PNGs/22 sampled labels and11directguards; Claude4975f494 then GPTc9e3c7f4. Exact frozen evidence, original findings, no blind-review credit. All downstream integration/publication gates remain.",
+        "limits": "API35 emulator, not phone. Mechanical results and coordinator contact-sheet inspection do not replace independent rendered acceptance. Sampled22 labels/64pools are not universal future semantic safety. Source-onlyショウ/けず.しける allocation remains explicitly UNVERIFIED/unselected. Drawing uses injected reference strokes/disposable seeded due states and shape-only fallback, not handwriting-model or human mastery evidence.",
+    }
+    save(EVIDENCE, evidence)
+    verify()
+
+
+def verify():
+    context()
+    validate_native()
+    payload = runtime()
+    evidence = load(EVIDENCE)
+    assert evidence["payloadAcceptance"] == payload
+    for entry in load(DEST / "artifact-index.json"):
+        source, target = Path(entry["source"]), ROOT / entry["archive"]
+        assert sha(source) == entry["sourceSha256"] and sha(target) == entry["sha256"]
+        if target.suffix == ".gz":
+            assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+        else:
+            assert target.read_bytes() == source.read_bytes()
+    print("Verified758: both exact native cases0;2464 direct/1760 NONTRANSITIVE/2304 word checks;64choices/22labels;8453runtime hashes and every archived artifact.")
+
+
+def finish():
+    current = context()
+    before = load(LOG / "checkpoint-full.json")
+    head = git("rev-parse", "HEAD")
+    assert head != BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert not git("diff", BASE, head, "--", "manifest.json", "kanji", "words", "strokes")
+    verify()
+    posted, reread = load(LOG / "issue-758-posted.json"), load(LOG / "issue-758-reread.json")
+    body = CONTROL / "batch-100-native-758-issue-body.txt"
+    assert posted["author"] == reread["user"]["login"] == "stop-cran"
+    assert posted["bodySha256"] == sha(body) and body.read_text(encoding="utf-8") == reread["body"]
+    assert posted["url"] == reread["html_url"]
+    inherited = before["execution757CoordinatorCheckpoint"]["nextAction"]
+    downstream = inherited[inherited.index("Native11directpairs"):]
+    next_action = (
+        f"SAME100 checkpoint758 signed LOCAL native evidence HEAD{head}, qualifiedAndroid{APP}. "
+        "Read docs/n1-sources/execution-758.json and docs/n1-reviews/batch-100-native-758/. "
+        "Exact NEW757 named Glyph/Article cases terminal0, no failures/skips. Actual corrected606c836e4be33ba9 "
+        "productionContentSyncONCE signedcde6cc0farchive;1123kanji/5073words/132N1/0problems/reading+meaningepochs1. "
+        "2464directguardchecks/11pairsbothorientations/1760NONTRANSITIVEneighborchecks/2304wordguardchecks/"
+        "64exactbuilderchoices. All8453runtimehashes/newarchiveSHAf65659592598f457d821583a69a7aaedad0f968a4f9b20a2009f7ed0d1bba77c/"
+        "8475entries/30476969compressed44649812inflated44381474retained bytes/perfilepathmedia withinunchangedguards. "
+        "Sourceconfirmed創/樹 safeguard ENFORCED; liveN1 fallback蚕'silkworm' replaces樹'tree; establish'. "
+        "Actual22sampledlabels exactly755confirmed23 minus樹, ZERO new labels. Fixture generic "
+        "meaningFallbackNeedsSemanticReview=true retained, NOT a new proven defect or樹recurrence; "
+        "actualPNG/options still require independent rendered confirmation. N1 TWOcurated剣倹 plus fallback;験N4 preserved. "
+        "Selectedそう/つくる persistedgood/done;12injectedstrokes/trace/recall;5pairs10directions/1activatedbaselinepair/"
+        "3exactreusedchanges/article/systemBack/offline passed.21Han/fourfamilies/84glyph+8wordrasters/"
+        "3panels/46originalPNGs+11contactsheets archived; coordinator viewed3originalpanels,meaningPNG,"
+        "all11sheets. No established glyph/layout defect; readingtable horizontal prompt/pairedviews, "
+        "Textbook panel3final設 wraps visibly. Native not phone, drawing shape-only fallback not MLKit/humanmastery. "
+        "OwnedreadonlyAPI35 emulator5580parent24136/qemu24896 stopped;192m growth/576mmax unchanged;parentlockuntouched. "
+        "NEXT SAME100 necessary SERIAL original-family RENDERED confirmations ONLY on this signed frozen snapshot: "
+        "Claude4975f494-5c25-4a2d-8060-775ded9c734c/claude-opus-5.5 then "
+        "GPTc9e3c7f4-b439-4f44-9255-4256c0987d25/gpt-6.1-sol. Include ownoriginalfindings/exactcorrectedteachingdiff/"
+        "new758PNG-index and actual22label/64choice/11guard results/knownsourceevidence. "
+        "Serialtools andactualprocessexits/fullreports/readlimits required; no freshblindcredit; "
+        "755textual+756HOST inherited, not recounted. Do not rerun native absentchangedpayload/"
+        "failure/newunresolvedconcern. Independent renderedclosure and all normal combinedmain acceptance/"
+        "publication gates remain. No runtime edits/unreviewedpush/101 in758. " + downstream
+    )
+    checkpoint = {
+        "schemaVersion": 1, "execution": 758, "checkpoint": 758, "batch": "100",
+        "status": "continue", "stage": "batch-100-corrected-native-passed-awaiting-rendered-confirmations",
+        "recordedAt": datetime.now(timezone.utc).isoformat(), "savedCommit": head, "signature": "G",
+        "qualifiedAndroidHead": APP, "testedContentHead": BASE,
+        "archiveContentSnapshot": "cde6cc0f2114801a000c1210df7a1a4dc4a560c9",
+        "evidence": EVIDENCE.relative_to(ROOT).as_posix(), "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True, "nativeExecuted": True,
+        "nativeMechanicalChecksPassed": True, "terminalSuccessCases": 2, "nativeFailures": 0, "nativeSkipped": 0,
+        "kanjiDirectGuardChecks": 2464, "nontransitiveNeighborChecks": 1760,
+        "preservedWordGuardChecks": 2304, "productionChoiceChecks": 64, "sampledUniqueLabels": 22,
+        "newSampledLabelsSince755": [], "removedSampledLabelsSince755": [["樹", "tree; establish"]],
+        "actualN1CuratedAvailable": 2, "actualN1FallbackOptions": 1,
+        "finding": "N753-fallback-establish", "findingStatus": "resolved semantically755; native enforcement passed758; rendered confirmation pending",
+        "ownedHelperStopped": True, "runtimeHashesVerified": 8453,
+        "contentVersion": "606c836e4be33ba9", "manifestEqualToCompiled757Archive": True,
+        "coordinatorRenderedInspectionDone": True, "originalPngs": 46, "contactSheetsViewed": 11,
+        "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "dedicatedWorktreesClean": True,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 126, "remainingAdditions": 1102, "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False, "nextAction": next_action, "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    assert "execution758CoordinatorCheckpoint" not in after
+    after["execution758CoordinatorCheckpoint"] = checkpoint
+    changed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    for key in changed:
+        after[key] = checkpoint[key]
+    for key, value in before.items():
+        if key not in changed:
+            assert after[key] == value, key
+    temporary = CONTROL / "progress.json.758-finish.tmp"
+    save(temporary, after)
+    assert load(CONTROL / "progress.json") == current
+    os.replace(temporary, CONTROL / "progress.json")
+    assert load(CONTROL / "progress.json") == after
+    save(LOG / "checkpoint-758-summary.json", checkpoint)
+    print(json.dumps({"checkpoint": 758, "status": "continue", "savedCommit": head,
+                      "historicalRootKeysPreserved": len(before), "issueUpdate": posted["url"]}, indent=2))
+
+
+if __name__ == "__main__":
+    {"archive": archive, "verify": verify, "finish": finish}[sys.argv[1]]()

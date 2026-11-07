@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "execution": 758,
+  "batch": "100",
+  "stage": "corrected-native-passed-awaiting-independent-rendered-confirmations",
+  "validation": {
+    "validatorCommand": "python -B tools\\validate.py",
+    "validatorErrors": 0,
+    "manifestCommand": "python -B tools\\build_manifest.py",
+    "manifestRegeneratedUnchanged": true,
+    "runtimeAndManifestChanged": false,
+    "dedicatedAndroidWhollyClean": true
+  },
+  "recordedAt": "2026-11-07T20:10:20.861715+00:00",
+  "startingState": {
+    "execution": 758,
+    "batch": "100",
+    "startedAt": "2026-11-07T20:02:54.400850+00:00",
+    "startingHead": "a847a3cb3aada0460b01c0df227bad0efbfcf397",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "716c610153234e8d2240dcf528de3ef83b654b27",
+    "scope": "SAME100 execute exact corrected757 APKs on freshly owned native emulator; signed LOCAL evidence checkpoint only; no reviewer/publication/101.",
+    "request": {
+      "sha256": "98b9fa72e0684ac5717de302f8849c738bb0473c3239b14d8b7a17d58e95ec4d",
+      "bytes": 5188215,
+      "characters": 5122233,
+      "lines": 68677,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request decoded and complete checkpoint parsed. Operative contract, complete issue and final757 directly inspected; historical middle parsed, not freshly semantically rereviewed."
+    },
+    "runnerPreflight": {
+      "execution": 758,
+      "sessionId": "b2b715c3-880b-4e95-b3b4-2413816a600c",
+      "verifiedAt": "2026-11-07T20:02:33.4482832+00:00",
+      "ancestry": [
+        2600,
+        21852,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "coordinatorPid": 21852,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 757,
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "lockTouched": false,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe."
+    },
+    "artifactPathPreflight": "Approved committed source/evidence, frozen workspace inputs and durable control helpers only; optional historical-session recipes not accessed.",
+    "actualNewPermissionDenials": [],
+    "runtimeHashesVerified": 8453,
+    "contentVersion": "606c836e4be33ba9",
+    "manifestSha256": "c11e9f588a0a487579a5d0adac2f35cf90523fc412d6444eb2af9e9bab56df73",
+    "compiledArchiveRuntimeEqualityVerified": true
+  },
+  "testedContentHead": "a847a3cb3aada0460b01c0df227bad0efbfcf397",
+  "archiveContentSnapshot": "cde6cc0f2114801a000c1210df7a1a4dc4a560c9",
+  "qualifiedAndroidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+  "nativeAttempt": {
+    "execution": 758,
+    "batch": "100",
+    "startedAt": "2026-11-07T20:02:55.0999282+00:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "cde6cc0f2114801a000c1210df7a1a4dc4a560c9",
+    "androidSnapshot": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "coordinatorHead": "a847a3cb3aada0460b01c0df227bad0efbfcf397",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-100-757-app.apk",
+    "appApkSha256": "3d7b17f489842cc29903123d0238586e06042ccaa09f6e1bfbcb67402869b776",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-100-757-test.apk",
+    "testApkSha256": "5ef327898eb40a0e3a08a9793674c19e71a81abb91dbafbd67c6951d1eda52d0",
+    "fixtureSha256": "eab8789a7fa76c2eca2922936cf2536ed8b6facf061d30a7d1441674fa225372",
+    "archiveSha256": "f65659592598f457d821583a69a7aaedad0f968a4f9b20a2009f7ed0d1bba77c",
+    "nativeExecuted": true,
+    "passed": true,
+    "failure": null,
+    "guestOrAppHeapChanged": false,
+    "guardsChanged": false,
+    "parentLockTouched": false,
+    "parentRole": {
+      "execution": 758,
+      "sessionId": "b2b715c3-880b-4e95-b3b4-2413816a600c",
+      "verifiedAt": "2026-11-07T21:02:56.7691511+01:00",
+      "ancestry": [
+        6428,
+        21852,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "coordinatorPid": 21852,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 757,
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "lockTouched": false,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe."
+    },
+    "preexistingEmulators": [],
+    "prelaunch": {
+      "connections": [],
+      "devices": "List of devices attached\r\n\r\n",
+      "verifiedAt": "2026-11-07T20:03:00.6455766+00:00"
+    },
+    "parentEmulatorPid": 24136,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 24896,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 24896
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 24896
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 24896
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 24896
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "avd": "N3_Acceptance_20261029",
+    "network": "Active default network: none",
+    "instrumentationCommand": "adb -s emulator-5580 shell am instrument -w -r -e n1Disposable true -e class io.github.stopcran.kanji.ui.N1Batch100Glyph757Test#creationLookalikesAndAllTwentyOneHanAcrossFourProductionFamilies,io.github.stopcran.kanji.ui.N1Batch100Article757Test#fullSingleImportCreationDirectGuardsTwoCuratedKeysFivePairsTwelveStrokesOfflineAndBack io.github.stopcran.kanji.test/androidx.test.runner.AndroidJUnitRunner",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 2,
+    "artifacts": [
+      "n1-100-article-00.png",
+      "n1-100-article-02.png",
+      "n1-100-article-03.png",
+      "n1-100-article-04.png",
+      "n1-100-article-06.png",
+      "n1-100-article-07.png",
+      "n1-100-article-08.png",
+      "n1-100-article-09.png",
+      "n1-100-article-10.png",
+      "n1-100-article-11.png",
+      "n1-100-article-12.png",
+      "n1-100-article-13.png",
+      "n1-100-article-14.png",
+      "n1-100-article-15.png",
+      "n1-100-article-16.png",
+      "n1-100-article-17.png",
+      "n1-100-article-18.png",
+      "n1-100-article-19.png",
+      "n1-100-article-20.png",
+      "n1-100-article-22.png",
+      "n1-100-article-23.png",
+      "n1-100-article-24.png",
+      "n1-100-article-25.png",
+      "n1-100-article-27.png",
+      "n1-100-article-28.png",
+      "n1-100-article-29.png",
+      "n1-100-article-30.png",
+      "n1-100-article-route.json",
+      "n1-100-article-tree.txt",
+      "n1-100-curated-two-keys-done.png",
+      "n1-100-curated-\u305d\u3046-feedback.png",
+      "n1-100-curated-\u305d\u3046-question.png",
+      "n1-100-curated-\u3064\u304f\u308b-feedback.png",
+      "n1-100-curated-\u3064\u304f\u308b-question.png",
+      "n1-100-drawing-feedback.png",
+      "n1-100-drawing-recall-feedback.png",
+      "n1-100-drawing-trace.png",
+      "n1-100-font-panel-1.png",
+      "n1-100-font-panel-2.png",
+      "n1-100-font-panel-3.png",
+      "n1-100-font-raster.json",
+      "n1-100-meaning-feedback.png",
+      "n1-100-meaning-question.png",
+      "n1-100-saku-new-reciprocal.png",
+      "n1-100-selection.png",
+      "n1-100-sosaku-components.png",
+      "n1-100-tsukuru-primary-component.png",
+      "n1-100-tsukuru-spelling-boundaries.png",
+      "n1-100-zo-alternative-reciprocal.png"
+    ],
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-07T20:08:05.8566597+00:00"
+  },
+  "nativeRouteSummary": {
+    "contentSnapshot": "cde6cc0f2114801a000c1210df7a1a4dc4a560c9",
+    "contentVersion": "606c836e4be33ba9",
+    "archiveRequests": 1,
+    "importedKanji": 1123,
+    "importedWords": 5073,
+    "problems": 0,
+    "n1Cards": 132,
+    "acceptedReadingParserEpoch": 1,
+    "acceptedMeaningParserEpoch": 1,
+    "fullOnyomi": [
+      "\u30bd\u30a6",
+      "\u30b7\u30e7\u30a6"
+    ],
+    "fullKunyomi": [
+      "\u3064\u304f.\u308b",
+      "\u306f\u3058.\u3081\u308b",
+      "\u304d\u305a",
+      "\u3051\u305a.\u3057\u3051\u308b"
+    ],
+    "quizOnKeys": [
+      "\u305d\u3046"
+    ],
+    "quizKunKeys": [
+      "\u3064\u304f\u308b"
+    ],
+    "kanjiQuizExclusions": [
+      "\u4f5c",
+      "\u9020",
+      "\u59cb",
+      "\u5143",
+      "\u539f",
+      "\u672c",
+      "\u7dd2",
+      "\u7523",
+      "\u8a2d",
+      "\u521d",
+      "\u6a39"
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "transport": "Exact full git archive through production ContentSync ONCE; synthetic source/HEAD",
+    "fixture": "Other N1 meanings/readings postponed; only\u5275 meaning and\u305d\u3046/\u3064\u304f\u308b due. Two historical good meaning logs unlock drawing. No drawing state seeded. Disposable source, not owner progress.",
+    "limits": "Sampled pools, not exhaustive future semantics. Conservative\u5275/\u521d safeguard is not proven historical live failure/universal synonym. Source-only allocation remains UNVERIFIED/unselected. Raster hashes are not readability. Emulator, not phone.",
+    "phoneEvidence": false,
+    "passed": true,
+    "mappedReciprocalPairs": 5,
+    "directedLinkTransitions": 10,
+    "activatedBaselinePairs": 1,
+    "changedReusedArticles": 3,
+    "reciprocalLinkAndSystemBack": true,
+    "exactDefaultMeaningOptions": [
+      {
+        "kanji": "\u5039",
+        "title": "frugal; thrifty"
+      },
+      {
+        "kanji": "\u5275",
+        "title": "originate; create"
+      },
+      {
+        "kanji": "\u8695",
+        "title": "silkworm"
+      },
+      {
+        "kanji": "\u5263",
+        "title": "sword; double-edged blade"
+      }
+    ],
+    "actualN1CuratedAvailable": 2,
+    "actualN1FallbackOptions": 1,
+    "curatedDistractorLevels": {
+      "\u5263": 1,
+      "\u5039": 1,
+      "\u9a13": 4
+    },
+    "meaningFallbackNeedsSemanticReview": true,
+    "fullProjectionOnyomi": [
+      "\u30bd\u30a6",
+      "\u30b7\u30e7\u30a6"
+    ],
+    "fullProjectionKunyomi": [
+      "\u3064\u304f.\u308b",
+      "\u306f\u3058.\u3081\u308b",
+      "\u304d\u305a",
+      "\u3051\u305a.\u3057\u3051\u308b"
+    ],
+    "fullProjectionQuizOnyomi": [
+      "\u30bd\u30a6"
+    ],
+    "fullProjectionQuizKunyomi": [
+      "\u3064\u304f.\u308b"
+    ],
+    "meaningQuestionAndFeedback": true,
+    "twoCuratedKeysPersistedGoodAndDone": true,
+    "touchInjectedReferenceStrokes": 12,
+    "drawingTraceThenRecall": true,
+    "drawingGradeRecordedOnNext": true,
+    "offline": true
+  },
+  "payloadAcceptance": {
+    "runtimeHashesVerified": 8453,
+    "contentVersion": "606c836e4be33ba9",
+    "manifestSha256": "c11e9f588a0a487579a5d0adac2f35cf90523fc412d6444eb2af9e9bab56df73",
+    "zipEntries": 8475,
+    "compressedBytes": 30476969,
+    "inflatedBytes": 44649812,
+    "retainedBytes": 44381474,
+    "listeningTaskMediaBytes": 5893602,
+    "archiveSha256": "f65659592598f457d821583a69a7aaedad0f968a4f9b20a2009f7ed0d1bba77c",
+    "allOriginalBudgetsAndPathMediaGuardsPassed": true
+  },
+  "kanjiDirectGuardChecks": 2464,
+  "nontransitiveNeighborChecks": 1760,
+  "preservedWordGuardChecks": 2304,
+  "productionChoiceChecks": 64,
+  "sampledUniqueKanjiTitlePairs": [
+    [
+      "\u4ead",
+      "pavilion; restaurant building"
+    ],
+    [
+      "\u4ff3",
+      "haiku; actor"
+    ],
+    [
+      "\u5039",
+      "frugal; thrifty"
+    ],
+    [
+      "\u50da",
+      "colleague"
+    ],
+    [
+      "\u5100",
+      "ceremony; formal conduct"
+    ],
+    [
+      "\u5197",
+      "superfluous; redundant"
+    ],
+    [
+      "\u51e1",
+      "commonplace; mediocre"
+    ],
+    [
+      "\u51f8",
+      "convex; protruding"
+    ],
+    [
+      "\u525b",
+      "sturdy; unyielding strength"
+    ],
+    [
+      "\u5263",
+      "sword; double-edged blade"
+    ],
+    [
+      "\u5275",
+      "originate; create"
+    ],
+    [
+      "\u5996",
+      "bewitching; supernatural"
+    ],
+    [
+      "\u5df3",
+      "Snake zodiac sign"
+    ],
+    [
+      "\u5f10",
+      "two (formal numeral)"
+    ],
+    [
+      "\u6271",
+      "handle; deal with"
+    ],
+    [
+      "\u681e",
+      "bookmark; guidebook"
+    ],
+    [
+      "\u732a",
+      "wild boar"
+    ],
+    [
+      "\u755d",
+      "raised ridge; land measure"
+    ],
+    [
+      "\u7a42",
+      "grain-bearing head"
+    ],
+    [
+      "\u8695",
+      "silkworm"
+    ],
+    [
+      "\u8a33",
+      "translate; explanation"
+    ],
+    [
+      "\u9a13",
+      "test; verify"
+    ]
+  ],
+  "sampledLabels": 22,
+  "sampledLabelDeltaFrom755ConfirmedSet": {
+    "added": [],
+    "removed": [
+      [
+        "\u6a39",
+        "tree; establish"
+      ]
+    ]
+  },
+  "actualN1CuratedAvailable": 2,
+  "actualN1FallbackOptions": 1,
+  "capturedPoolMembershipAndOrder": true,
+  "inspection": {
+    "reviewer": "Coordinator GPT-6.1 Sol (gpt-6.1-sol), not independent review",
+    "viewedOriginalPngs": [
+      "n1-100-font-panel-1.png",
+      "n1-100-font-panel-2.png",
+      "n1-100-font-panel-3.png",
+      "n1-100-meaning-question.png"
+    ],
+    "viewedContactSheets": [
+      "sheet-01.png",
+      "sheet-02.png",
+      "sheet-03.png",
+      "sheet-04.png",
+      "sheet-05.png",
+      "sheet-06.png",
+      "sheet-07.png",
+      "sheet-08.png",
+      "sheet-09.png",
+      "sheet-10.png",
+      "sheet-11.png"
+    ],
+    "contactSheetRouteCoverage": 43,
+    "originalNativePngsPreserved": 46,
+    "glyphObservation": "All21 scoped Han readable and distinguishable in three original panels across four production families, including visible blade variant\u5202 and new exclusion\u6a39. No blank/replacement glyph established. Textbook final\u8a2d wraps onto a second line in panel3 and remains visible. Typeface source/fallback face not proven.",
+    "layoutObservation": "Article and changed reused passages legible in indexed contact sheets. Reading table needs horizontal scrolling; visible prompt and paired captures expose full explanation. No actionable new layout defect established. Not a fresh full-resolution inspection of all43 individual route PNGs.",
+    "semanticObservation": "Actual N1 UI now offers\u8695 silkworm, not guarded\u6a39 tree; establish. The22 sampled title pairs are exactly the755-confirmed23 minus\u6a39, no new label. Native guard enforcement is demonstrated, not universal future fallback safety or independent rendered closure.",
+    "drawingObservation": "Twelve injected reference strokes, trace/recall and recorded Next demonstrated; shape-only fallback explicitly shown with handwriting model unavailable. Not recognition-model or human spontaneous-recall evidence.",
+    "independentRenderedAcceptance": false,
+    "phoneEvidence": false
+  },
+  "finding": {
+    "id": "N753-fallback-establish",
+    "status": "resolved semantically in755; corrected native enforcement passed in758; independent rendered confirmation pending",
+    "evidence": "Eleven direct guard pairs, both orientations, including\u5275/\u6a39;110 oriented neighbor pairs remain NONTRANSITIVE. New N1 live UI fallback\u8695 silkworm. No legacy\u6a39/\u8a2d/\u521d edits.",
+    "fixtureFlagQualification": "meaningFallbackNeedsSemanticReview=true is retained generic fixture output, not a newly established defect. Actual rendered options and sampled labels still require independent confirmation; do not convert the flag into either a clean verdict or an unresolved\u6a39 recurrence."
+  },
+  "artifactIndex": "docs/n1-reviews/batch-100-native-758/artifact-index.json",
+  "artifactCount": 75,
+  "archivalDiagnostics": [
+    "Initial verification counted the full class name anywhere in the runner output and found3 occurrences (two class status lines plus stream heading), not2. Before any archive/evidence write, corrected helper to match exact class= and test= status prefixes. Original native result unchanged; no rerun, denial or relaxed terminal requirement.",
+    "Initial supplemental verification incorrectly required even an explicitly out-of-pool target to belong to the distractor pool. Exact compiled fixture lines275-280 require every NON-TARGET option to belong to that pool; the target is always injected. All512 such rows had only target outside, zero non-target violations. Matched that existing invariant before any archival write. Native7pool/11pair tests unchanged; no production/content/test change or bypass."
+  ],
+  "textualAcceptance": "Original750 reviews and755 exact-diff source confirmations retained; no new blind review or dictionary-family reread claimed.",
+  "freshHostAcceptance": "execution756 HOST3+1 for unchanged606c836e4be33ba9 retained, not rerun here.",
+  "nativeExecuted": true,
+  "nativeMechanicalChecksPassed": true,
+  "independentReviewersLaunched": 0,
+  "independentRenderedReviewClosed": false,
+  "runtimeChanged": false,
+  "manifestChanged": false,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "reviewClosed": [],
+  "published": [],
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "publishedAdditions": 126,
+  "remainingAdditions": 1102,
+  "lastPublishedCommit": "716c610153234e8d2240dcf528de3ef83b654b27",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "nextAction": "SAME100 SERIAL original-family rendered confirmations of corrected758 actual PNGs/22 sampled labels and11directguards; Claude4975f494 then GPTc9e3c7f4. Exact frozen evidence, original findings, no blind-review credit. All downstream integration/publication gates remain.",
+  "limits": "API35 emulator, not phone. Mechanical results and coordinator contact-sheet inspection do not replace independent rendered acceptance. Sampled22 labels/64pools are not universal future semantic safety. Source-only\u30b7\u30e7\u30a6/\u3051\u305a.\u3057\u3051\u308b allocation remains explicitly UNVERIFIED/unselected. Drawing uses injected reference strokes/disposable seeded due states and shape-only fallback, not handwriting-model or human mastery evidence."
+}
