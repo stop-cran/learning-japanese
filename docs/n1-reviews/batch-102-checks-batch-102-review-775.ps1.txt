@@ -1,0 +1,34 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\c78a4783-a062-42bb-9fd0-e132d134da9d"
+Set-Location $root
+& "$control\preflight-775.ps1"
+if ((git rev-parse HEAD).Trim() -ne '54be1c9ad3f052b23b0bde1c74e7f6c580cd4477' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git rev-parse origin/main).Trim() -ne '1621cf6cbd2283d377936c77f9c81851baffdf20') { throw 'Unexpected main' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 774 -or $progress.batch -ne '102' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+foreach ($change in @(git -c core.quotepath=false status --porcelain --untracked-files=all)) {
+    if ($change.Substring(3) -notlike 'docs/n1-reviews/batch-102-*') { throw "Unaccounted change: $change" }
+}
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\tests-775.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-775.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 102 *> "$log\audit-775.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Source/runtime batch audit failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-775.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-775.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+Get-Content "$log\tests-775.txt" -Tail 4
+Get-Content "$log\validate-775.txt"
+Get-Content "$log\audit-775.txt"
+Get-Content "$log\budget-775.txt"
+Get-Content "$log\vocabulary-775.txt" -Tail 2
