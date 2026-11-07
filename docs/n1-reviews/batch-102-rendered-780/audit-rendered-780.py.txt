@@ -1,0 +1,103 @@
+"""Audit actual text returns and decoded original PNG bytes, not reviewer assertions."""
+import base64
+import hashlib
+import importlib.util
+import json
+import sys
+import io
+from pathlib import Path
+from PIL import Image
+
+C = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("rendered780", C / "review-batch-102-rendered-780.py")
+r = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(r)
+label = sys.argv[1]
+W = C / "batch-102-rendered-780"
+raw = W / (label + ".jsonl")
+events = [json.loads(line) for line in raw.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+starts = {e["data"]["toolCallId"]: e["data"] for e in events if e.get("type") == "tool.execution_start"}
+ends = {e["data"]["toolCallId"]: e["data"] for e in events if e.get("type") == "tool.execution_complete"}
+resources = r.load(W / "bounded-resources.json")
+provenance = r.load(W / "provenance.json")
+text_results = []
+image_results = []
+for resource in resources:
+    path = Path(resource["path"])
+    expected = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
+    returned = []
+    ranges = []
+    for call_id, call in starts.items():
+        arguments = call.get("arguments", {})
+        if arguments.get("path") != str(path):
+            continue
+        end = ends.get(call_id, {})
+        result = end.get("result", {})
+        content = result.get("content", "")
+        ranges.append({"toolCallId": call_id, "arguments": arguments,
+                       "success": end.get("success"), "returnedCharacters": len(content)})
+        if end.get("success") and isinstance(content, str):
+            returned.append(content.replace("\r\n", "\n"))
+    exact_full = any(s == expected for s in returned)
+    text_results.append({"path": str(path), "sha256": r.sha(path),
+                         "expectedCharacters": len(expected), "calls": ranges,
+                         "exactFullReturn": exact_full})
+for image in provenance["pngs"]:
+    matches = []
+    for call_id, call in starts.items():
+        if call.get("arguments", {}).get("path") != image["path"]:
+            continue
+        end = ends.get(call_id, {})
+        binaries = end.get("result", {}).get("binaryResultsForLlm", [])
+        returned = []
+        for binary in binaries:
+            data = binary.get("data") or binary.get("base64Data")
+            if not isinstance(data, str):
+                returned.append({"keys": list(binary), "matched": False})
+                continue
+            decoded = base64.b64decode(data)
+            digest = hashlib.sha256(decoded).hexdigest()
+            original = Image.open(image["path"])
+            rendition = Image.open(io.BytesIO(decoded))
+            proportional = original.width * rendition.height == original.height * rendition.width
+            returned.append({"sha256": digest, "bytes": len(decoded), "matched": digest == image["sha256"],
+                             "originalSize": list(original.size), "returnedSize": list(rendition.size),
+                             "proportionalPngRendition": rendition.format == "PNG" and proportional})
+        matches.append({"toolCallId": call_id, "success": end.get("success"), "binaryResults": returned})
+    image_results.append({**image, "calls": matches,
+                          "exactOriginalPngReturned": any(
+                              m["success"] and any(b["matched"] for b in m["binaryResults"]) for m in matches),
+                          "successfulPngRenditionReturned": any(
+                              m["success"] and any(b.get("proportionalPngRendition", False)
+                                                  for b in m["binaryResults"]) for m in matches)})
+record = r.load(W / (label + "-execution.json"))
+record.pop("toolCompletions", None)
+record["packetReadComplete"] = all(x["exactFullReturn"] for x in text_results)
+record["all43PngsReturned"] = all(x["successfulPngRenditionReturned"] for x in image_results)
+record["all43OriginalPngBytesReturned"] = all(x["exactOriginalPngReturned"] for x in image_results)
+record["sessionCompactions"] = sum(e.get("type") == "session.compaction_complete" for e in events)
+record["actualToolCalls"] = len(starts)
+record["actualPngOpenCalls"] = sum(len(x["calls"]) for x in image_results)
+record["uniquePngByteStates"] = len({x["sha256"] for x in provenance["pngs"]})
+record["limits"] = (
+    "Dependent original-session confirmation, not new blind review. Exact returned text and successful "
+    "proportional image renditions establish access, not retention or comprehension. The view tool "
+    "resized1080x2400 source images to900x2000; returned bytes/pixels are NOT original native pixels. "
+    "Source hashes remain verified; actual returned rendition hashes/dimensions recorded. Session compactions counted. "
+    "No physical phone, native speaker, independent upstream retrieval or unsampled-pool certification."
+)
+coverage = {"textResources": text_results, "nativePngs": image_results,
+            "allAssignedTextExactlyReturned": record["packetReadComplete"],
+            "all43SuccessfulPngRenditionsReturned": record["all43PngsReturned"],
+            "all43OriginalPngsExactlyReturned": record["all43OriginalPngBytesReturned"],
+            "sessionCompactions": record["sessionCompactions"], "limits": record["limits"]}
+r.save(W / (label + "-coverage.json"), coverage)
+r.save(W / (label + "-execution.json"), record)
+print(label, "exact text resources", sum(x["exactFullReturn"] for x in text_results), "/", len(resources),
+      "PNG renditions", sum(x["successfulPngRenditionReturned"] for x in image_results), "/43",
+      "compactions", record["sessionCompactions"])
+if not record["packetReadComplete"]:
+    print("Non-exact text resources:", [x["path"] for x in text_results if not x["exactFullReturn"]])
+if not record["all43PngsReturned"]:
+    print("Unverified PNG samples:", [x for x in image_results if not x["exactOriginalPngReturned"]][:1])
+assert record["packetReadComplete"] and record["all43PngsReturned"]

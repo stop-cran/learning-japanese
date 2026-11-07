@@ -1,0 +1,253 @@
+"""Preserve an unaccepted rendered confirmation and checkpoint without weakening its gate."""
+import copy
+import gzip
+import importlib.util
+import os
+import shutil
+import sys
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("rendered780", C / "review-batch-102-rendered-780.py")
+r = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(r)
+W = C / "batch-102-rendered-780"
+D = r.D
+NEXT = (
+    "SAME102 checkpoint780: LOCAL unaccepted original-Claude rendered evidence; do not publish or start103. "
+    "Read docs/n1-sources/execution-780.json and docs/n1-reviews/batch-102-rendered-780/. "
+    "Teaching and all8458runtime hashes/versionf376333b242ebb23 unchanged since signed54be1c9a; "
+    "current native evidence779 still valid (both terminal0/one productionContentSync/owned helper stopped). "
+    "New source dossier maps all40 distinct HOST776/native779 sampled labels,72 linked support-word articles,"
+    "292complete matching frozenJMdict families (plus original112 complete families),40rawKANJIDIC records, "
+    "all128 exact sampled option sets with pools/seeds and native live default. No frequency/all-compound "
+    "claim; full provenance/limits retained. Original oversized6.6MB preliminary packet NOT assigned; "
+    "five bounded resources793094bytes exactly returned. Source access is NOT comprehension; "
+    "3sessioncompactions occurred. Claude original112f8849-4cce-4f19-8ed8-a6b25e6f9d2e actualclaude-opus-5.5 "
+    "exited0/PID17056confirmedabsent, full report preserved. 43image opens/25source-byte-states, "
+    "all successful view renditions; tool resized1080x2400to900x2000, NOT originalpixels. "
+    "STRICT SERIAL-TOOLS GATE FAILED: TWO kunquestion/kunfeedback view calls overlapped in one turn; "
+    "coordinator correctly exited1 on detection. Original attempt remains NONCOMPLIANT/UNACCEPTED, "
+    "not retroaccepted by useful report or pixel/hash audit. All other views serial; no unfinished calls. "
+    "NoGPT launched this checkpoint. Rendered review and finite sampled ordinarysecondarysense semantic "
+    "acceptance remain UNVERIFIED, despite Claude report saying no proven content defect. "
+    "NEXT bounded SAME102 original-Claude SERIAL repair/clarification: reopen exact "
+    "n1-102-curated-kun-feedback.png THEN n1-102-curated-kun-question.png ONEatATIME with full process/tool "
+    "audit; preserve original deviation and do not call original compliant. Clarify report's unsupported "
+    "'clock differences/not byte-identical' (actual43PNGs collapse to25SHA-identical states) and "
+    "'功merit(the opposite)' (defensibly wrong is not necessarily lexical antonymy), and separate finite "
+    "sample from universal fallback safety. This correction is reviewer-report reconciliation, not an "
+    "established teaching defect. Exact2-image bounded follow-up only, no need to reread793k source dossier. "
+    "After actual repairprocess EXIT+persisted strictserial evidence, start originalGPT "
+    "cd6cf58b-fbd1-4835-af8e-04079396d864 modelgpt-6.1-sol if currentlyavailable; SAME frozen teaching and "
+    "common bounded source resources/all43PNGscope (source40labels/all292families accessible). "
+    "Preserve actualcatalog/modelidentity/readranges/renditiondimensions/compactions. "
+    "GPT should not inherit Claude's NEW rendered report/adjudication; both may see original775 reports "
+    "as dependent confirmations. Prior original775 textual reviews/776HOST/779native inherited honestly; "
+    "no newblindcredit. Adjudicate source-backed findings, not votes. If the repair's scope is insufficient, "
+    "preserve UNVERIFIED and bound the necessary follow-up rather than waive tools-serialization. "
+    "Any new genuine content ambiguity requires exactlabels/fullfrozenevidence/minimalcorrection/"
+    "audits/manifest/normalsignedchangedfreeze/BOTHoriginalsessionconfirmations. "
+    "Claude optional traceUI wording lies in app, not an authorized unrelated app change. "
+    "All original publication/combinedcurrentmain/nonrewritingmerge/changedteachingreview/"
+    "requiredPython/vocabulary/normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/"
+    "18000entries42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue gates remain. "
+    "Nativearchive remains73067936ccc548d615048c529adf3c5989659879847a69f9a8b49f53e661bd76/"
+    "8480entries/30483598compressed44661694inflated44393356retainedbytes;noarchive rebuild/heap/guardchange. "
+    "Freshsignedheads/checkpoint/whollyclean/freshmain/liveparentancestry/decodedlauncher/exactsession required. "
+    "Parent5920runner.lockuntouched;nochildacquire/delete/unlock/readprobe;approvedcontrol/committedsources/"
+    "frozeninputs only. Nooptionalhistoricalsessionrecipe/newpermissiondenial. Preserve/report/yield "
+    "actualnewdenial/signinghang/uncertainownership. QualifiedAndroidbf30cdead8515739bc0e671d57a54b9a3109dd46 "
+    "approvedpairguard+schemaonly, NOTlatestappmain. Noauthoragents/concurrentheavywork/secondrunner/"
+    "unreviewedpush/signingretry. Published128/1228/remainder1100unchanged;compatibleAndroid#125+#132required;"
+    "oldclientsignorecuration/guards. Physicalphone/generalrelease/whole-setoutstanding;projectincomplete. "
+    "Every earlier limitation/gate remains VERBATIM in historicalExecution779Before780Rendered.nextAction."
+)
+
+
+def archive():
+    r.frozen()
+    before = r.load(C / "progress.json")
+    assert before["stage"] == "batch-102-rendered-confirmation-evidence-preparing"
+    execution = r.load(W / "claude-execution.json")
+    coverage = r.load(W / "claude-coverage.json")
+    assert execution["actualModels"] == ["claude-opus-5.5"]
+    assert execution["exitCode"] == 0 and execution["processExited"]
+    assert r.absent(execution["launcherPid"]) and not execution["unfinishedTools"]
+    assert len(execution["observedToolOverlaps"]) == 1
+    assert execution["packetReadComplete"] and execution["all43PngsReturned"]
+    assert execution["actualPngOpenCalls"] == 43 and execution["uniquePngByteStates"] == 25
+    assert not (W / "gpt.jsonl").exists()
+    assert not D.exists()
+    D.mkdir()
+    index = []
+
+    def store(source, name=None, compress=False):
+        source = Path(source)
+        name = source.name if name is None else name
+        data = source.read_bytes()
+        destination = D / (name + ".gz" if compress else name)
+        assert not destination.exists()
+        destination.write_bytes(gzip.compress(data, mtime=0) if compress else data)
+        if compress:
+            assert gzip.decompress(destination.read_bytes()) == data
+        index.append({"file": destination.name, "sourcePath": str(source),
+                      "sourceBytes": len(data), "sourceSha256": r.sha(source),
+                      "storedSha256": r.sha(destination), "losslessGzip": compress})
+
+    for path in sorted(W.iterdir()):
+        if path.is_file():
+            compress = path.suffix in {".txt", ".xml", ".jsonl"} or path.stat().st_size > 100000
+            store(path, compress=compress)
+    store(r.PACKET, "preliminary-unassigned-combined-packet.txt", compress=True)
+    for path in [C / "review-batch-102-rendered-780.py", C / "audit-rendered-780.py",
+                 C / "checkpoint-rendered-780.py", C / "preflight-780.ps1"]:
+        store(path, path.name + ".txt")
+    store(r.L / "preflight-780.json")
+    r.save(D / "artifact-index.json", index)
+    reconciliation = {
+        "snapshot": r.HEAD, "teachingSnapshot": execution["originalTeachingSnapshot"],
+        "teachingDiff": "", "status": "UNVERIFIED: original-Claude attempt not accepted",
+        "scope": "Partial dependent rendered confirmation, not new blind review or batch acceptance.",
+        "originalClaudeReport": "claude.md", "originalClaudeProcessExitCode": 0,
+        "coordinatorCommandExitCode": 1,
+        "processDeviation": {
+            "status": "unresolved", "observedToolOverlaps": execution["observedToolOverlaps"],
+            "claim": "Two kun question/feedback view tools overlapped despite serial-only task.",
+            "impact": "Violates explicit serial internal-tool gate; original attempt remains unaccepted.",
+            "remedy": "Bounded original-session serial reread of both affected PNGs with actual execution audit; preserve original deviation, never relabel it compliant.",
+        },
+        "reportClarifications": [
+            {"status": "unresolved", "claim": "Clock differences mean identical screenshots are not byte-identical.",
+             "evidence": "Actual43source PNG hashes form25unique groups;18source files are exact duplicates.",
+             "remedy": "Original-session report correction; retain original report unchanged."},
+            {"status": "unresolved", "claim": "功merit(the opposite).",
+             "evidence": "功merit;achievement is defensibly wrong for inferior;worse, not necessarily its lexical antonym.",
+             "remedy": "Clarify reporting wording, not a proved teaching defect."},
+        ],
+        "coverage": {
+            "exactFullTextResources": 5, "sourceDossierBytes": 793094,
+            "originalNativePngOpens": 43, "sourcePngByteStates": 25,
+            "returnedImageSize": [900, 2000], "originalImageSize": [1080, 2400],
+            "imagesWereRescaledByViewTool": True, "sessionCompactions": 3,
+            "gptLaunched": False,
+            "limits": "Actual returned ranges/images establish access, not retention/comprehension; no claim of equal fresh review depth.",
+        },
+        "articleVerdicts": "Claude reported CLEAN for new劣/優劣 and two reused navigation passages; report is preserved but rendered gate NOT accepted.",
+        "finiteSampleSemanticAcceptance": "UNVERIFIED until process repair and second original family confirmation/reconciliation.",
+        "optional": "Claude drawing trace UI wording suggestion: app scope, not changed or treated as a content defect.",
+        "limits": ["No physical-phone/native-speaker evidence.", "No universal unsampled quiz-pool safety.",
+                   "No independent upstream retrieval.", "No new native/HOST test claim.",
+                   "No runtime change, publication or next batch."],
+    }
+    r.save(D / "reconciliation.json", reconciliation)
+    evidence = {
+        "schemaVersion": 1, "execution": 780, "batch": "102",
+        "stage": "partial-original-Claude-rendered-confirmation-unaccepted-serial-repair-pending",
+        "recordedAt": r.now(), "startingState": before["execution780StartingState"],
+        "snapshot": r.HEAD, "qualifiedAndroidHead": r.APP, "runtime": r.runtime(),
+        "dictionaryDossier": {
+            "provenance": "docs/n1-reviews/batch-102-rendered-780/provenance.json",
+            "sampledLabels": 40, "linkedSupportWordArticles": 72,
+            "newCompleteMatchingFamilies": 292, "additionalOriginalFamiliesSupplied": 112,
+            "rawCharacterRecords": 40, "boundedResources": 5, "boundedBytes": 793094,
+            "selection": "Every matching full JMdict family for exact40option characters,72linked support spellings and exact support readings; not all compounds containing those characters.",
+            "attribution": "Copyright James William Breen and EDRDG; CC BY-SA4.0; frozen2026-11-02 inputs; repository NOTICE.",
+        },
+        "originalClaude": {k: v for k, v in execution.items() if k != "toolCalls"},
+        "evidenceDirectory": "docs/n1-reviews/batch-102-rendered-780",
+        "reconciliation": "docs/n1-reviews/batch-102-rendered-780/reconciliation.json",
+        "independentRenderedReviewClosed": False,
+        "ordinarySenseFallbackSemanticAcceptance": "UNVERIFIED",
+        "originalClaudeSerialToolsAcceptance": False,
+        "actualReviewProcessExitCode": 0, "coordinatorDetectionExitCode": 1,
+        "gptLaunched": False, "nativeRerun": False, "runtimeChanged": False,
+        "runtimePublished": False, "runtimeAccepted": False, "nextBatchStarted": False,
+        "publishedAdditions": 128, "remainingAdditions": 1100,
+        "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "diagnostics": [
+            "Initial checkpoint snapshot equality stopped before progress mutation: only recordedAt offset differed; exact datetime instants equal. All other checkpoint fields matched.",
+            "Initial hash check used raw local CRLF bytes; stopped before progress mutation. Reused existing production-normalized all8458 runtime/archive verifier; all hashes passed.",
+            "Initial combined dossier6.6MB was not assigned; bounded resources omit repeated memberships/mechanical guards, preserve every exact option set/pool/seed and full selected dictionary records.",
+            "Strict serial tool assertion detected one overlap after reviewer exited0; wrapper exited1. Original attempt unaccepted, report/raw evidence retained.",
+            "Initial binary-equality image audit failed because view resizes1080x2400to900x2000. Derived audit now records proportional successful renditions separately; original native bytes are not claimed returned.",
+        ],
+        "nextAction": NEXT,
+    }
+    r.save(r.S / "execution-780.json", evidence)
+    for entry in index:
+        assert r.sha(D / entry["file"]) == entry["storedSha256"]
+    print("Preserved full unaccepted Claude report/raw execution, frozen source dossier and explicit serial-repair gate.")
+
+
+def finish():
+    current = r.load(C / "progress.json")
+    before = r.load(r.L / "progress-before-780.json")
+    assert (current["checkpoint"], current["batch"], current["status"]) == (779, "102", "continue")
+    head = r.git("rev-parse", "HEAD")
+    assert r.git("rev-parse", "HEAD^") == r.HEAD
+    assert r.git("log", "-1", "--format=%G?") == "G"
+    assert not r.git("status", "--porcelain", "--untracked-files=all")
+    assert r.git("rev-parse", "HEAD", root=r.A) == r.APP
+    assert not r.git("status", "--porcelain", "--untracked-files=all", root=r.A)
+    assert not r.git("diff", r.HEAD, head, "--", "manifest.json", "kanji", "words", "strokes", "tools")
+    posted = r.load(r.L / "issue-780-posted.json")
+    reread = r.load(r.L / "issue-780-reread.json")
+    body = (C / "batch-102-rendered-780-issue-body.txt").read_bytes()
+    assert posted["author"] == reread["user"]["login"] == "stop-cran"
+    assert body.decode("utf-8") == reread["body"] and posted["bodySha256"] == hashlib.sha256(body).hexdigest()
+    assert posted["url"] == reread["html_url"]
+    for entry in r.load(D / "artifact-index.json"):
+        assert r.sha(D / entry["file"]) == entry["storedSha256"]
+    r.runtime()
+    checkpoint = {
+        "schemaVersion": 1, "execution": 780, "checkpoint": 780, "batch": "102",
+        "status": "continue", "stage": "batch-102-partial-rendered-review-awaiting-serial-Claude-repair-and-GPT",
+        "recordedAt": r.now(), "savedCommit": head, "signature": "G",
+        "qualifiedAndroidHead": r.APP, "evidence": "docs/n1-sources/execution-780.json",
+        "issueUpdate": posted["url"], "ownerIssueAuthorAndExactBodyVerified": True,
+        "originalClaudeProcessExited": True, "originalClaudeActualModel": "claude-opus-5.5",
+        "originalClaudeSerialToolsAcceptance": False, "originalClaudeToolOverlaps": 1,
+        "exactFullTextResources": 5, "pngRenditionsReturned": 43, "sourcePngByteStates": 25,
+        "viewToolRescaledImages": True, "sessionCompactions": 3, "gptLaunched": False,
+        "independentRenderedReviewClosed": False, "ordinarySenseFallbackSemanticAcceptance": "UNVERIFIED",
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "reviewClosed": [], "published": [],
+        "dedicatedWorktreesClean": True, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 128, "remainingAdditions": 1100,
+        "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": NEXT, "blocker": None, "historicalRootKeysCompared": len(before),
+        "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    after["historicalExecution779Before780Rendered"] = copy.deepcopy(before["execution779CoordinatorCheckpoint"])
+    after["execution780CoordinatorCheckpoint"] = checkpoint
+    changed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    for key in changed:
+        after[key] = checkpoint[key]
+    for key, value in before.items():
+        if key not in changed:
+            assert after[key] == value, key
+    temporary = C / "progress.json.780-finish.tmp"
+    r.save(temporary, after)
+    assert r.load(C / "progress.json") == current
+    os.replace(temporary, C / "progress.json")
+    assert r.load(C / "progress.json") == after
+    r.save(r.L / "checkpoint-780-summary.json", checkpoint)
+    print("Checkpoint780 persisted:", head, "; all", len(before), "historical root values preserved.")
+
+
+if __name__ == "__main__":
+    import hashlib
+    if sys.argv[1] == "archive":
+        archive()
+    elif sys.argv[1] == "finish":
+        finish()
+    else:
+        raise ValueError("Unknown operation")

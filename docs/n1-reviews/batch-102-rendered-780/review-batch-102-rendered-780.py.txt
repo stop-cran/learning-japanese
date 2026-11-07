@@ -1,0 +1,434 @@
+"""Prepare and execute dependent, serial rendered confirmations from workspace evidence."""
+import copy
+import gzip
+import hashlib
+import importlib.util
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+L = C / "logs" / "75d851f7-3b5b-47c4-89a6-1f04484aa06a"
+V = R / "docs" / "n1-reviews"
+S = R / "docs" / "n1-sources"
+D = V / "batch-102-rendered-780"
+N = V / "batch-102-native-779"
+H = V / "batch-102-host-776"
+HEAD = "b130063515f48dd13deae10e41a6cc223f7cfc57"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+MODELS = {"claude": "claude-opus-5.5", "gpt": "gpt-6.1-sol"}
+SESSIONS = {"claude": "112f8849-4cce-4f19-8ed8-a6b25e6f9d2e",
+            "gpt": "cd6cf58b-fbd1-4835-af8e-04079396d864"}
+PACKET = C / "batch-102-rendered-780-packet.txt"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def save(p, value):
+    p.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").strip()
+
+
+def absent(pid):
+    return subprocess.run(["pwsh", "-NoProfile", "-Command",
+                           f"if (Get-Process -Id {int(pid)} -ErrorAction SilentlyContinue) {{ exit 1 }}"],
+                          capture_output=True).returncode == 0
+
+
+def frozen():
+    assert git("rev-parse", "HEAD") == HEAD and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert git("rev-parse", "HEAD", root=A) == APP
+    assert git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 5920, L.name)
+    assert not absent(5920)
+    assert load(L / "preflight-780.json")["lockTouched"] is False
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["batch"], p["status"]) == (779, "102", "continue")
+
+
+def runtime():
+    spec = importlib.util.spec_from_file_location("native778state", C / "native-778-state.py")
+    state = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(state)
+    result = state.verify_runtime()
+    assert not git("diff", "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477", HEAD,
+                   "--", "kanji", "words", "strokes", "manifest.json")
+    return {**result, "teachingDiffSince775": ""}
+
+
+def prepare():
+    frozen()
+    assert not PACKET.exists() and not D.exists()
+    before = load(C / "progress.json")
+    backup = L / "progress-before-780.json"
+    if backup.exists():
+        assert load(backup) == before
+    else:
+        save(backup, before)
+    request = (L / "request.txt").read_bytes()
+    text = request.decode("utf-8-sig")
+    supplied = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    expected = copy.deepcopy(supplied["execution779CoordinatorCheckpoint"])
+    actual = copy.deepcopy(before["execution779CoordinatorCheckpoint"])
+    assert datetime.fromisoformat(expected.pop("recordedAt")) == datetime.fromisoformat(actual.pop("recordedAt"))
+    assert expected == actual
+    state = {
+        "execution": 780, "batch": "102", "startingHead": HEAD, "androidHead": APP,
+        "freshOriginMain": git("rev-parse", "origin/main"), "startedAt": now(),
+        "scope": "SAME102 bounded source-backed original-family rendered confirmations and signed LOCAL evidence; no native rerun/publication/103.",
+        "request": {"sha256": sha(L / "request.txt"), "bytes": len(request),
+                    "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request loaded/decoded and checkpoint parsed; operative contract, complete issue and final779 inspected directly. Historical middle parsed, not freshly semantically rereviewed. Initial console encoding failure followed complete loading."},
+        "runnerPreflight": load(L / "preflight-780.json"), "runtime": runtime(),
+        "artifactPathPreflight": "Approved committed source packets, frozen inputs and durable control helpers only; optional historical session recipes not accessed.",
+        "actualNewPermissionDenials": [],
+    }
+    after = copy.deepcopy(before)
+    after["execution780StartingState"] = state
+    after["stage"] = "batch-102-rendered-confirmation-evidence-preparing"
+    temp = C / "progress.json.780-start.tmp"
+    save(temp, after)
+    assert load(C / "progress.json") == before
+    os.replace(temp, C / "progress.json")
+    save(L / "starting-state-780.json", state)
+    work = C / "batch-102-rendered-780"
+    work.mkdir()
+    for kind, args in [("help", ["--help"]), ("config-help", ["help", "config"])]:
+        result = subprocess.run([shutil.which("copilot"), *args], capture_output=True, check=True)
+        (work / f"cli-{kind}.txt").write_bytes(result.stdout)
+    catalog = (work / "cli-config-help.txt").read_text(encoding="utf-8-sig")
+    assert all(f'"{model}"' in catalog for model in MODELS.values())
+    help_text = (work / "cli-help.txt").read_text(encoding="utf-8-sig")
+    assert all(flag in help_text for flag in ["--available-tools", "--session-id", "--model"])
+    snapshot = load(R / "docs" / "n1-source-snapshot.json")
+    inputs = {}
+    for name in ["n1-implementation-JMdict_e.gz", "n1-planning-kanjidic2.xml.gz"]:
+        raw = (C / "inputs" / name).read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == snapshot["inputs"][name]["sha256"]
+        xml = gzip.decompress(raw)
+        kind = "jmdict" if "JMdict" in name else "kanjidic2"
+        assert hashlib.sha256(xml).hexdigest() == snapshot[kind]["xmlSha256"]
+        inputs[kind] = ET.fromstring(xml)
+    labels = load(N / "sampled-labels-and-host-delta.json")
+    host = load(H / "sampled-labels.json")
+    labels_union = {v[0]: v[1] for v in labels["nativeLabels"]}
+    labels_union.update({v["kanji"]: v["title"] for v in host})
+    words = set()
+    bodies = []
+    for char, title in sorted(labels_union.items()):
+        p = R / "kanji" / (char + ".md")
+        body = p.read_text(encoding="utf-8-sig")
+        assert re.search(r"^title: (.+)$", body, re.M).group(1).strip() == title
+        bodies.append((p, body))
+        words.update(re.findall(r"\]\(\.\./words/([^()]+)\.md\)", body))
+    for word in sorted(words):
+        p = R / "words" / (word + ".md")
+        bodies.append((p, p.read_text(encoding="utf-8-sig")))
+    spellings = set(labels_union) | words
+    readings = set()
+    for p, body in bodies:
+        if p.parent.name == "words":
+            spellings.add(re.search(r"^word: (.+)$", body, re.M).group(1).strip())
+            readings.add(re.search(r"^reading: (.+)$", body, re.M).group(1).strip())
+    # Include whole families for every linked spelling and homographic/homophonic alternative.
+    selected = []
+    for entry in inputs["jmdict"].findall("entry"):
+        keb = {n.text for n in entry.findall("k_ele/keb")}
+        reb = {n.text for n in entry.findall("r_ele/reb")}
+        if keb & spellings or reb & readings:
+            selected.append(entry)
+    root = ET.Element("JMdict")
+    root.extend(selected)
+    ET.indent(root, space="  ")
+    dictionary = ET.tostring(root, encoding="utf-8", xml_declaration=True) + b"\n"
+    (work / "applicable-jmdict.xml").write_bytes(dictionary)
+    raw_characters = ET.Element("kanjidic2")
+    raw_characters.append(inputs["kanjidic2"].find("header"))
+    chars = [e for e in inputs["kanjidic2"].findall("character")
+             if e.findtext("literal") in labels_union]
+    assert len(chars) == len(labels_union)
+    raw_characters.extend(chars)
+    ET.indent(raw_characters, space="  ")
+    (work / "applicable-kanjidic2.xml").write_bytes(
+        ET.tostring(raw_characters, encoding="utf-8", xml_declaration=True) + b"\n")
+    native_index = load(N / "artifact-index.json")
+    for entry in native_index:
+        assert sha(N / entry["file"]) == entry["storedSha256"], entry["file"]
+    pngs = sorted((N / "native").glob("*.png"))
+    assert len(pngs) == 43
+    parts = [
+        "DEPENDENT ORIGINAL-FAMILY RENDERED CONFIRMATION. Signed content " + HEAD,
+        "Original teaching snapshot54be1c9a is unchanged: exact diff of kanji/words/strokes/manifest is EMPTY. "
+        "This is not a new blind initial review. Complete applicable frozen families below are coordinator "
+        "extraction with source hashes, not independent retrieval. Inspect actual PNGs separately.",
+        "ORIGINAL CLAUDE REPORT\n" + (V / "batch-102-initial-claude.md").read_text(encoding="utf-8"),
+        "ORIGINAL CLAUDE SCOPE CLARIFICATION\n" + (V / "batch-102-scope-claude.md").read_text(encoding="utf-8"),
+        "ORIGINAL GPT REPORT\n" + (V / "batch-102-initial-gpt.md").read_text(encoding="utf-8"),
+    ]
+    sources = []
+
+    def add(path, body=None):
+        body = path.read_text(encoding="utf-8-sig") if body is None else body
+        parts.append(f"SOURCE {path}; SHA256 {sha(path)}\n{body}")
+        sources.append({"path": str(path), "sha256": sha(path)})
+
+    for path, body in bodies:
+        add(path, body)
+    for path in [R / "kanji" / "劣.md", R / "words" / "優劣.md", R / "words" / "劣る.md",
+                 R / "kanji" / "優.md"]:
+        if path not in [p for p, _ in bodies]:
+            add(path)
+    for path in [work / "applicable-jmdict.xml", work / "applicable-kanjidic2.xml",
+                 S / "batch-102-jmdict.xml", S / "batch-102-comparison-jmdict.xml",
+                 S / "batch-102-character-public-text.txt", S / "batch-102-yuuretsu-public-text.txt",
+                 S / "batch-102-otoru-public-text.txt", S / "execution-779.json",
+                 N / "sampled-labels-and-host-delta.json", H / "sampled-labels.json",
+                 H / "scope-and-limits.json"]:
+        add(path)
+    for path in [H / "meaning-776-choices.json.gz", N / "native" / "n1-102-article-route.json.gz",
+                 N / "native" / "n1-102-font-raster.json.gz"]:
+        body = gzip.decompress(path.read_bytes()).decode("utf-8-sig")
+        add(path, body)
+    parts.append("ACTUAL NATIVE PNG SCOPE (43 files; inspect each using separate SERIAL view calls):\n" +
+                 "\n".join(str(p) for p in pngs))
+    PACKET.write_text("\n\n".join(parts) + "\n", encoding="utf-8")
+    provenance = {
+        "snapshot": HEAD, "teachingSnapshot": "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477",
+        "sourceSnapshots": snapshot["inputs"],
+        "labelCount": len(labels_union), "labels": labels_union,
+        "kanjiArticles": len(labels_union), "linkedWordArticles": len(words),
+        "completeFamilies": len(selected), "entryIds": [e.findtext("ent_seq") for e in selected],
+        "rawCharacterRecords": len(chars), "selectedSpellings": sorted(spellings),
+        "selectedReadingFamilies": sorted(readings), "sources": sources,
+        "packetSha256": sha(PACKET), "packetBytes": PACKET.stat().st_size,
+        "packetLines": len(PACKET.read_text(encoding="utf-8").splitlines()),
+        "pngs": [{"path": str(p), "sha256": sha(p)} for p in pngs],
+        "limits": "All matching complete families for exact option characters and linked support spellings/readings; not all compounds containing these characters. Recognition is not frequency; bytes are not comprehension. Original reports supplied to both for dependent reconciliation only.",
+    }
+    save(work / "provenance.json", provenance)
+    print("Prepared dependent source packet:", provenance["packetBytes"], "bytes;",
+          len(labels_union), "labels;", len(selected), "complete families;", len(words),
+          "linked word articles;43 original PNGs.")
+
+
+def run(label):
+    frozen()
+    work = C / "batch-102-rendered-780"
+    provenance = load(work / "provenance.json")
+    assert sha(PACKET) == provenance["packetSha256"]
+    for source in provenance["sources"]:
+        assert sha(Path(source["path"])) == source["sha256"]
+    for png in provenance["pngs"]:
+        assert sha(Path(png["path"])) == png["sha256"]
+    if label == "gpt":
+        prior = load(work / "claude-execution.json")
+        assert prior["exitCode"] == 0 and prior["processExited"]
+        assert not prior["unfinishedTools"] and not prior["observedToolOverlaps"]
+        assert prior["all43PngsReturned"] and prior["packetReadComplete"]
+        assert absent(prior["launcherPid"])
+    model, session = MODELS[label], SESSIONS[label]
+    prefix = f"batch-102-rendered-780-{label}"
+    raw, stderr = work / (label + ".jsonl"), work / (label + "-stderr.txt")
+    assert not raw.exists(), "Never overwrite an execution"
+    resources = load(work / "bounded-resources.json")
+    resources_text = "\n".join(f"{r['path']} ({r['bytes']}bytes/{r['lines']}lines)" for r in resources)
+    prompt = f"""DEPENDENT ORIGINAL-SESSION RENDERED CONFIRMATION; not a new blind initial.
+Same unchanged teaching snapshot54be1c9a; current signed docs-evidence HEAD{HEAD}; qualified app{APP}.
+Read these complete common bounded resources in order:
+{resources_text}
+Use SERIAL view calls only, never parallel/nested tools. For EACH text resource use forceReadLargeFiles=true
+without view_range; if truncated recover every missing consecutive range and disclose actual coverage.
+The original oversized unreviewed combined packet is NOT assigned; use only the bounded resources.
+Then view ALL43 original native PNG files enumerated in the last resource, ONE SERIAL view call
+per image. Do not treat JSON/raster hashes/text trees as visual inspection. No shell/edit/delegation tools.
+Both original reports and Claude's scope clarification are supplied because this is dependent
+reconciliation, not fresh blind credit. Exact teaching diff since both initial reviews is EMPTY.
+
+Review complete learner-visible native screenshots: both new劣 and優劣 articles, two navigation-only
+reused劣る/優 passages, three reciprocal pairs/six directions, N1 selection and meaning, BOTH curated
+reading questions/feedback/done, drawing trace/recall, article/Back/offline presentation, and ALLfour
+font panels/all31Han including radical力/crossed少 and lookalikes. Assess readable/distinguishable
+glyphs, missing/tofu/materially misleading forms and phone-sized comprehensibility; a typeface
+difference is not itself a defect. This API35 emulator is NOT physical-phone/native-speaker evidence.
+43files can include byte-identical route screenshots; report actual image opens separately from
+unique visual states. Empty/missing target passages must be UNVERIFIED, not presumed visible.
+
+Resolve original runtime UNVERIFIED scope using exact production HOST77664choices, native77964choices
+and live default 劣inferior;worse/冗superfluous;redundant/蛍firefly/功merit;achievement.
+All40 distinct sampled labels have their actual kanji article, linked support word articles,
+complete matching frozen JMdict families (restrictions/all senses) and40 raw KANJIDIC records;
+original112 complete teaching/comparison families and three public dictionary extracts also supplied.
+Six native additions vs HOST: 丘hill;knoll,冗superfluous;redundant,冠crown;peerless,
+凹concave;sunken,刃blade;cuttingedge,蛍firefly. Check ordinary SECONDARY senses, not English title
+differences alone. Focus any candidate on exact question/actual complete option set; pairs must be
+defensibly wrong, including reverse and pairwise ambiguity, but different questions or broader
+unseen random pools are not evidence of an actual defect. Seven 劣 direct guards 弱悪下低貧負少,
+word guards 質長短利害損得 remain direct, symmetric, NONTRANSITIVE. Only功 of curated努功省 is N1;
+actualN1 uses TWO fallbacks. Correct finite sampled fallback semantic disposition is required;
+do not certify all possible random choices or ordinary senses from hashes, guard counts or prior votes.
+If source coverage is insufficient, name exact label/entry/sense missing and preserve UNVERIFIED.
+
+Native inherited terminal0two cases/one ContentSync import1125kanji5074words134N1/no problems;
+れつ/おとる each persistedgood/done. Touch-injected six-stroke trace was UNGRADED and noDrawlog;
+recall deliberatelyI-dont-remember reveals answer/persistsgrade1Next, NOT handwriting mastery.
+OtherN1keys were fixture-postponed and two old meaning logs seeded; no drawingstate seeded.
+Don't claim new tests/retrieval, real phone acceptance, installed family face or measured learning.
+
+Return FULL compact report using Snapshot;Scope;Verdicts;Findings;Optional;Limits.
+State ACTUAL model, all actual packet ranges and43image opens/unique states. For EACH newarticle,
+EACH exact reusedpassage and sampledquizsemantics/fonts/reading/drawing presentation distinguish
+correctness, scopedcoverage, comprehensibility CLEAN/NEEDS FIX/UNVERIFIED; CLEAN is bounded.
+Adjudicate original relevant findings/limitations as resolved/partially resolved/unresolved/withdrawn/
+optional. Findings need severity;facet;file:line or exactPNG/prompt;claim/impact;minimalremedy;evidence;
+confidence. No invented finding quota, no edits, no unrelated expansion, no nextbatch/publication.
+"""
+    (work / (label + "-task.txt")).write_text(prompt, encoding="utf-8")
+    cmd = [shutil.which("copilot"), "-C", str(R), "--add-dir", str(C), "--model", model,
+           "--session-id", session, "--no-ask-user", "--allow-tool=view", "--disable-builtin-mcps",
+           "--available-tools=view", "--no-custom-instructions", "--output-format", "json",
+           "--log-dir", str(C / "review-logs" / prefix),
+           "--usage-output-file", str(work / (label + "-usage.json")), "-p", prompt]
+    env = os.environ.copy()
+    env.pop("GH_TOKEN", None)
+    env.pop("GITHUB_TOKEN", None)
+    started = now()
+    with raw.open("wb") as out, stderr.open("wb") as err:
+        proc = subprocess.Popen(cmd, stdout=out, stderr=err, env=env)
+        save(work / (label + "-active.json"), {"pid": proc.pid, "sessionId": session,
+                                              "startedAt": started, "requestedModel": model})
+        print("Original-session rendered reviewer running", label, proc.pid, session, flush=True)
+        code = proc.wait()
+    events = [json.loads(line) for line in raw.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    messages = [e["data"] for e in events if e.get("type") == "assistant.message"]
+    models = sorted({m.get("model", "") for m in messages})
+    report = work / (label + ".md")
+    report.write_text(messages[-1]["content"] + "\n" if messages else "No completed report.\n",
+                      encoding="utf-8")
+    active, overlaps, calls, completions = set(), [], [], []
+    for event in events:
+        data = event.get("data", {})
+        if event.get("type") == "tool.execution_start":
+            if active:
+                overlaps.append(sorted(active))
+            active.add(data["toolCallId"])
+            calls.append(data)
+        elif event.get("type") == "tool.execution_complete":
+            active.discard(data["toolCallId"])
+            completions.append(data)
+    requested_pngs = {str(Path(c.get("arguments", {}).get("path", ""))) for c in calls
+                      if c.get("arguments", {}).get("path", "").endswith(".png")}
+    expected_pngs = {p["path"] for p in provenance["pngs"]}
+    usage = load(work / (label + "-usage.json"))
+    record = {
+        "snapshot": HEAD, "originalTeachingSnapshot": "54be1c9ad3f052b23b0bde1c74e7f6c580cd4477",
+        "originalSessionId": session, "launcherPid": proc.pid, "startedAt": started,
+        "completedAt": now(), "exitCode": code, "actualModels": models,
+        "usageCurrentModel": usage["currentModel"], "availableTools": ["view"], "toolCalls": calls,
+        "observedToolOverlaps": overlaps, "unfinishedTools": sorted(active),
+        "requestedPngs": sorted(requested_pngs), "expectedPngs": sorted(expected_pngs),
+        "all43PngsRequested": requested_pngs == expected_pngs,
+        "all43PngsReturned": False, "packetReadComplete": False,
+        "toolCompletions": completions, "processExited": absent(proc.pid),
+        "reportSha256": sha(report), "rawExecutionSha256": sha(raw),
+        "limits": "Dependent original-session confirmation, not new blind review. Coverage fields require execution-result inspection; byte access is not comprehension.",
+    }
+    save(work / (label + "-execution.json"), record)
+    assert code == 0 and models == [model] and usage["currentModel"] == model
+    assert not active and not overlaps and record["processExited"]
+    frozen()
+    print("Original-session review exited and preserved:", label, "calls", len(calls),
+          "PNG requests", len(requested_pngs), "; coverage awaits raw-result audit.")
+
+
+def bound():
+    frozen()
+    work = C / "batch-102-rendered-780"
+    provenance = load(work / "provenance.json")
+    assert sha(PACKET) == provenance["packetSha256"]
+    assert not (work / "bounded-resources.json").exists()
+    parts = PACKET.read_text(encoding="utf-8").split("\n\nSOURCE ")
+    selected = [parts[0]]
+    for part in parts[1:]:
+        name, _, body = part.partition("\n")
+        if "n1-102-article-route.json.gz" in name:
+            route = json.loads(body.split("\n\nACTUAL NATIVE PNG SCOPE", 1)[0])
+            summary = {k: v for k, v in route.items()
+                       if k not in {"kanjiDirectGuardChecks", "nontransitiveNeighborChecks",
+                                    "preservedWordGuardChecks", "productionBuilderN1AndAllExactChoices"}}
+            choices = [{k: v for k, v in item.items() if k != "poolMembershipInOrder"}
+                       for item in route["productionBuilderN1AndAllExactChoices"]]
+            summary["productionBuilderN1AndAllExactChoices"] = choices
+            summary["omittedNumericalGuardArrayLengths"] = {
+                k: len(route[k]) for k in ["kanjiDirectGuardChecks", "nontransitiveNeighborChecks",
+                                          "preservedWordGuardChecks"]}
+            selected.append("SOURCE " + name + "\nBOUNDED DERIVATION: retained every exact option set, "
+                            "pool, seed and all route acceptance fields; omitted repeated complete pool "
+                            "memberships and mechanical guard arrays only. Original immutable source above.\n" +
+                            json.dumps(summary, ensure_ascii=False, separators=(",", ":")))
+        elif "meaning-776-choices.json.gz" in name:
+            choices = json.loads(body)
+            compact = [{k: v for k, v in item.items() if k != "poolMembershipInOrder"} for item in choices]
+            selected.append("SOURCE " + name + "\nBOUNDED DERIVATION: retained all64 exact option "
+                            "sets, pools and seeds; omitted repeated complete pool membership only.\n" +
+                            json.dumps(compact, ensure_ascii=False, separators=(",", ":")))
+        elif "n1-102-font-raster.json.gz" in name:
+            selected.append("SOURCE " + part.split("\n\nACTUAL NATIVE PNG SCOPE", 1)[0])
+        else:
+            selected.append("SOURCE " + part)
+    pngs = provenance["pngs"]
+    selected.append("ACTUAL NATIVE PNG SCOPE43FILES:\n" + "\n".join(p["path"] for p in pngs))
+    chunks, current = [], ""
+    for part in selected:
+        if current and len((current + "\n\n" + part).encode("utf-8")) > 180000:
+            chunks.append(current)
+            current = ""
+        current += ("\n\n" if current else "") + part
+    if current:
+        chunks.append(current)
+    resources = []
+    for i, body in enumerate(chunks, 1):
+        path = work / f"resource-{i:02}.txt"
+        assert not path.exists()
+        path.write_text(body + "\n", encoding="utf-8")
+        resources.append({"path": str(path), "sha256": sha(path), "bytes": path.stat().st_size,
+                          "lines": len(body.splitlines())})
+    save(work / "bounded-resources.json", resources)
+    print("Bounded source dossier:", [(r["bytes"], r["lines"]) for r in resources],
+          "bytes", sum(r["bytes"] for r in resources))
+
+
+if __name__ == "__main__":
+    if sys.argv[1] == "prepare":
+        prepare()
+    elif sys.argv[1] == "run":
+        run(sys.argv[2])
+    elif sys.argv[1] == "bound":
+        bound()
+    else:
+        raise ValueError("Unknown operation")
