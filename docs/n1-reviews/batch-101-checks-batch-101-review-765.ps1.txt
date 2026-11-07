@@ -1,0 +1,36 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\df7fcd8c-a828-4dec-92fb-7b2ca99864f3"
+Set-Location $root
+& "$control\preflight-765.ps1"
+if ((git rev-parse HEAD).Trim() -ne '7f275e0de16fe3a4588fac1845af5af80d487415' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git rev-parse origin/main).Trim() -ne 'ba1a7f467a2431523e3131d4f259c1d3260c93af') { throw 'Unexpected main' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 764 -or $progress.batch -ne '101' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+foreach ($change in @(git -c core.quotepath=false status --porcelain --untracked-files=all)) {
+    if ($change.Substring(3) -notlike 'docs/n1-reviews/batch-101-*') { throw "Unaccounted change: $change" }
+}
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\tests-765.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-765.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 101 *> "$log\audit-765.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Source/runtime batch audit failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-765.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-765.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+git diff --check *> "$log\whitespace-765.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\tests-765.txt" -Tail 4
+Get-Content "$log\validate-765.txt"
+Get-Content "$log\audit-765.txt"
+Get-Content "$log\budget-765.txt"
+Get-Content "$log\vocabulary-765.txt" -Tail 2

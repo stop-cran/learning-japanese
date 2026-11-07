@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "execution": 765,
+  "batch": "101",
+  "status": "textual-review-closed-runtime-acceptance-pending",
+  "originalTeachingSnapshot": "7f275e0de16fe3a4588fac1845af5af80d487415",
+  "teachingChangedAfterInitialReviews": false,
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 29136,
+      "sessionId": "3bed863f-b19d-4de6-9a11-1ba15e409a84",
+      "startedAt": "2026-11-07T21:54:40.238239+01:00",
+      "completedAt": "2026-11-07T21:56:21.492781+01:00",
+      "exitCode": 0,
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "7f275e0de16fe3a4588fac1845af5af80d487415",
+      "reportSha256": "ee9dbb0fbfaec56b5cf988bde09d2553884996029075e1876b0d514b0fbe4b2f",
+      "rawExecutionSha256": "c1f16c8837c26640f51b7b13fcfa41ceb6f5ebbc5a148c7a2b332756b2fd684c",
+      "report": "batch-101-initial-claude.md",
+      "execution": "batch-101-initial-claude-execution.json",
+      "coverage": "batch-101-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInFirstCall": true,
+      "losslessExecutionArchive": "batch-101-initial-claude.jsonl.gz",
+      "archiveSha256": "13922dcc959cbafc3125c99d049ca2e76289bf738fd05c7f996bc6cd3040bf8a"
+    },
+    "gpt": {
+      "launcherPid": 26072,
+      "sessionId": "d82fb475-a4fb-4ea4-9da9-945d176127cd",
+      "startedAt": "2026-11-07T21:56:25.475317+01:00",
+      "completedAt": "2026-11-07T21:57:16.107674+01:00",
+      "exitCode": 0,
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "7f275e0de16fe3a4588fac1845af5af80d487415",
+      "reportSha256": "30f51364f1863a7b391971f65c0c4173f0bd9c2dea397bce1711ccb13683cbd6",
+      "rawExecutionSha256": "455bbd1fe0e25a0a2a5829814156b55384608ba7ed9aa24eda4dedd2dc7c3b74",
+      "report": "batch-101-initial-gpt.md",
+      "execution": "batch-101-initial-gpt-execution.json",
+      "coverage": "batch-101-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInFirstCall": true,
+      "losslessExecutionArchive": "batch-101-initial-gpt.jsonl.gz",
+      "archiveSha256": "55f6105634fc525039c9135b4b7a86d74fa3ccc85bffa48157460a58937d9f15"
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "allInternalToolsSerial": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 244842,
+  "initialPacketLines": 5743,
+  "completeFamiliesSupplied": 122,
+  "rawCharacterRecordsSupplied": 18,
+  "completeArticleBodies": 20,
+  "newArticleBodies": 1,
+  "changedReusedPassages": 3,
+  "readDepthLimits": "Both executions returned exact full packet in one serial view call. Byte access is not comprehension, native-speaker certification or independent upstream retrieval. Both report inspecting all122 families but did not independently verify byte/line counts. Raw\u529f record supplied in comparison packet, not separate duplicate raw packet.",
+  "verdicts": {
+    "kanji/\u529f.md:1-51": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/\u529f\u7e3e.md:28-30": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/\u6210\u529f.md:28-30": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/\u6210.md:38": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "consequentialUnresolvedChangedTeachingClaims": [],
+  "optional": [
+    {
+      "id": "O1",
+      "status": "optional",
+      "reviewer": "claude",
+      "claim": "Note that JMdict2411570 lists\u52f2 before\u529f.",
+      "disposition": "No edit. Complete dated noun family supports exact\u529f/\u3044\u3055\u304a with no spelling restriction; listing order does not invalidate this documented spelling or require a spelling detour. No commonness claim is made.",
+      "evidence": "Complete frozen2411570 and actual Seisenban\u3044\u3055\u304a\u3010\u529f\u30fb\u52f2\u30fb\u7e3e\u3011heading."
+    },
+    {
+      "id": "O2",
+      "status": "withdrawn",
+      "reviewer": "claude optional",
+      "claim": "Change valid reading in religious compounds to mainly in religious compounds because Daijisen also lists\u529f\u592b\u304f\u3075\u3046.",
+      "disposition": "No defect established: valid in does not say only in. Adding mainly would introduce an unmeasured distribution claim. The actual row gives a precisely sourced religious example, not an unrestricted/exhaustive lexical partition.",
+      "evidence": "kanji/\u529f.md:34,37; Daijisen character\u30af lists\u529f\u5fb3/\u529f\u529b and\u529f\u592b. Complete1275080 has Buddhist and Christian senses."
+    },
+    {
+      "id": "O3",
+      "status": "optional",
+      "reviewer": "claude",
+      "claim": "Could add sourced phonetic history from Jitsu/SVG.",
+      "disposition": "No edit or scope expansion. Labelled modern-shape mnemonic/structure-unclassified explicitly adopts no historical/phonetic account; omission is not a claim that no phonetic component exists.",
+      "evidence": "kanji/\u529f.md:5,27 and supplied Jitsu/SVG. Both reviewers found current approach acceptable."
+    }
+  ],
+  "boundedEvidenceLimits": [
+    {
+      "id": "L1",
+      "status": "unresolved",
+      "reviewer": "gpt",
+      "facet": "unchanged legacy guard label audit, outside exact navigation-only review closure",
+      "claim": "Six of\u529f\u7e3e's seven guarded word articles and displayed titles were not supplied. Their exact full label-level behavior remains UNVERIFIED.",
+      "disposition": "Preserve explicitly, do not claim new complete legacy-word-choice certification. No title/guard changed, and exact old seven exclusions are preserved. No new missing pair or contradictory teaching established. Later complete word-choice claim requires actual labels/evidence; no legacy rewrite or automatic exclusion expansion."
+    },
+    {
+      "id": "L2",
+      "status": "unresolved",
+      "facet": "runtime/native acceptance",
+      "claim": "Default N1 uses fallback because\u52a0/\u5e7c are outside N1; no production-builder/native/font/rendered acceptance performed.",
+      "disposition": "Mandatory next gates, not CLEAN runtime acceptance. Three curated choices and thirteen direct guards are textually defensible; test actual live pools and reconcile any established ambiguity before native/publication."
+    }
+  ],
+  "matchedSampleContributions": {
+    "shared": "All four assigned teaching units CLEAN in three facets; full readings/order and qualified recognition rows, exact selected allocation/support, merit/effect scope, three wrong labels, thirteen direct conservative guards, eight reciprocal directions, navigation-only preservation and mnemonic metadata accepted.",
+    "claudeUnique": "Two optional expansion observations and the nonexclusive-religious wording suggestion. None established an actionable defect; no useful defect credit invented.",
+    "gptUnique": "Explicit exact-label coverage limitation for six unchanged word guards. Claude generally noted unavailable whole corpus labels, but did not identify this precise six-word evidence boundary. Useful scoped reporting clarification, not a proved teaching defect.",
+    "limits": "Common matched sample; compare equivalent optional/limits/hypothesis observations, not severity labels. Not a general model ranking or equal-comprehension certification."
+  },
+  "coordinatorEvidence": "Freshly inspected all three reused article bodies, target body, seven applicable complete member families and all23 complete comparison families in bounded12/11 ranges after an initial21.3KiB output was truncated. Actual public authority-headed extracted blocks inspected. No new upstream fetch or fresh99-family reread claimed.",
+  "initialReviewsComplete": true,
+  "textualAcceptanceComplete": true,
+  "fullBatchAcceptanceComplete": false,
+  "reviewClosed": [],
+  "runtimeChangedThisExecution": false,
+  "runtimePublished": false,
+  "freshAndroidOrNativeClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextAction": "SAME101 fresh qualifiedAndroidbf30cdead HOST acceptance checkpoint: non-skipped RealContentTest/RareHanTest plus actual production meaning-builder defaultN1/All/custom-pool choices and direct symmetric NONTRANSITIVE guards. Two blind different-family initial TEXTUAL reviews COMPLETE on signed7f275e0d; reconciliation has no actionable changed-text defect and no teaching correction was needed. Do not rerun initials or claim full batch closure/publication. Preserve Claude 3bed863f-b19d-4de6-9a11-1ba15e409a84 and GPTd82fb475-a4fb-4ea4-9da9-945d176127cd original reports/model/process/exact full packet return/read limits. Both received same99member+23comparison families/18rawcharacterrecords/20articlebodies; exact byte return is not comprehension or independent upstream retrieval. Optional alternate-spelling/etymology expansions declined; valid-in-religious-compounds is not exclusively/mainly religious, no invented frequency. GPT's six uninspected retained word-guard labels remain UNVERIFIED outside the exact navigation-only scope; unchanged guards were not newly certified. Inspect actual labels if making a later complete word-choice claim. Preserve [\u30b3\u30a6,\u30af]/[\u3044\u3055\u304a] order, only\u30b3\u30a6 selected with own-row links to \u529f\u7e3e\u3053\u3046\u305b\u304dN2/\u6210\u529f\u305b\u3044\u3053\u3046N3; \u30af valid recognition, \u3044\u3055\u304a dated lexical noun NOT merely nanori. No new support identity/level. Three exact navigation-only reused changes/all metadata/seven\u529f\u7e3eguards preserved. Four allmappedpairs/eightdirections/fivenew/twoactivatedbaselinepairs include\u6210-\u6210\u529f. Three semantically wrong curated labels\u52a0\u5e7c\u5200 and thirteen direct kanji guards textually accepted; two choices outsideN1 require actual defaultN1 fallback acceptance. Any newly established ambiguity requires exact full frozen source/labels, minimal justified change, recomputed audits/manifest, normal signed changed-tree freeze and BOTH original-session changed-passage confirmations. Then productionContentSyncONCE/native N1/All/meaning/curatedreading/drawing/article/Back/offline/four-font/all-Han/rendered acceptance and two serial rendered reviews as applicable. Five pinned paths/canonical\u529b19right/\u5de5left/labelledmodernshapemnemonic/structure-unclassified; actual19Han allcmaps/zeroRareHan is NOT rendering acceptance. Native fixtures must bind current content/signedqualifiedapp, unchanged2gguest/192mheap/oneworker, exactownedport/device checks, terminal case0 evidence and owned-helper cleanup. No current native/rendered/physical-phone claim. Keep combinedcurrentmain/allrequiredPython/vocabulary/normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue gates. No unreviewedpush/102/authoragent/concurrentheavywork/secondrunner/signingretry/guardincrease. Verify whollyclean signedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent5920 ownsrunner.lock: no childacquire/delete/unlock/readprobe. Approvedcontrol/committedsource/frozeninputs only, not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/signinghang/uncertainownership. QualifiedAndroidapprovedpairguard+schemaonly, NOT unrelated latestmain. Published127/1228,1101acceptance remainder unchanged; six earlierN2placements\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 separate. CompatibleAndroid#125+#132 required; oldclientsignorecuration/guards. Physicalphone/generalrelease/whole-setoutstanding;projectincomplete. Historical limitations preserved."
+}
