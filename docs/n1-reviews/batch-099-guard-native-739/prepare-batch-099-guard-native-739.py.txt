@@ -1,0 +1,257 @@
+"""Prepare the current signed batch099 archive and guard-aware native fixture."""
+import difflib
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import zipfile
+from datetime import datetime, timezone
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+SESSION = "892c0026-25c1-4c9d-b388-b430be08cfa7"
+L = C / "logs" / SESSION
+HEAD = "749ea11b0c9a43d13577b104cd5fe33d9e864e62"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+WORK = C / "batch-099-guard-native-739"
+OLD = R / "docs" / "n1-reviews" / "batch-099-native" / "N1Batch099NativeTest.kt"
+FIXTURE = WORK / "N1Batch099GuardNativeTest.kt"
+ARCHIVE = C / "artifacts" / "n1-batch-099-749ea11b-guard-envelope.zip"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(root), *args], encoding="utf-8"
+    ).strip()
+
+
+def clean():
+    for root, head in [(R, HEAD), (A, APP)]:
+        assert git("rev-parse", "HEAD", root=root) == head
+        assert git("log", "-1", "--format=%G?", root=root) == "G"
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 5920)
+
+
+def start():
+    clean()
+    progress = load(C / "progress.json")
+    assert (progress["checkpoint"], progress["batch"], progress["status"]) == (738, "099", "continue")
+    text = (L / "request.txt").read_text(encoding="utf-8-sig")
+    frozen = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1
+    )[1])
+    assert frozen["checkpoint"] == progress["checkpoint"]
+    role = load(L / "preflight-739.json")
+    assert role["decodedLauncherMatches"] and role["exactSignedHeadsVerified"] and not role["lockTouched"]
+    save(L / "progress-before-739.json", progress)
+    state = {
+        "execution": 739, "batch": "099", "startedAt": datetime.now(timezone.utc).isoformat(),
+        "startingHead": HEAD, "androidHead": APP, "freshOriginMain": git("rev-parse", "origin/main"),
+        "scope": "NEW issue132-aware native fixture/full archive preparation and focused structural verification; signed LOCAL evidence checkpoint only. No HOST/native execution, reviewer, runtime publication or100.",
+        "request": {
+            "sha256": sha(L / "request.txt"), "bytes": (L / "request.txt").stat().st_size,
+            "characters": len(text), "lines": len(text.splitlines()),
+            "completeFileLoadedAndCheckpointParsed": True,
+            "limits": "Entire request loaded and embedded checkpoint decoded. Operative contract, complete issue and final checkpoint inspected directly; historical middle parsed, not freshly semantically re-reviewed.",
+        },
+        "runnerPreflight": role,
+        "artifactPathPreflight": "Approved control and committed source evidence only; no optional historical-session helpers accessed or executed.",
+        "actualNewPermissionDenials": [],
+    }
+    assert "execution739StartingState" not in progress
+    progress["execution739StartingState"] = state
+    progress["stage"] = "batch-099-guard-native-preparation-in-progress"
+    progress["nextAction"] = state["scope"]
+    save(L / "starting-state-739.json", state)
+    temporary = C / "progress.json.739-start.tmp"
+    save(temporary, progress)
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == progress
+    print("Starting739 persisted with full history retained.")
+
+
+def prepare():
+    clean()
+    progress = load(C / "progress.json")
+    assert progress["checkpoint"] == 738 and progress["stage"] == "batch-099-guard-native-preparation-in-progress"
+    assert not WORK.exists() and not ARCHIVE.exists()
+    sys.path.insert(0, str(R / "tools"))
+    from build_manifest import build_manifest
+
+    manifest = load(R / "manifest.json")
+    assert build_manifest(R) == manifest and manifest["contentVersion"] == "39eb4a86902c6dec"
+    assert sha(OLD) == "c1c51e7d4cae026316e40cf5f60576aabe6ed9bf545f1aec04c9601ad325da00"
+    text = OLD.read_text(encoding="utf-8")
+
+    def replace(old, new):
+        nonlocal text
+        assert text.count(old) == 1, (old, text.count(old))
+        text = text.replace(old, new)
+
+    text = text.replace("N1Batch099GlyphTest", "N1Batch099GuardGlyphTest").replace(
+        "N1Batch099ArticleTest", "N1Batch099GuardArticleTest")
+    replace("import io.github.stopcran.kanji.core.quiz.QuizCard\n", "")
+    replace("import kotlinx.coroutines.runBlocking\n",
+            "import kotlinx.coroutines.runBlocking\nimport kotlinx.coroutines.flow.first\n")
+    replace("fullSingleImportOfflineSurplusReusedSupportTwoReciprocalPairsOneOnNoKunElevenStrokesAndSystemBack",
+            "fullSingleImportGuardedSurplusBothOrientationsFilteredPoolsOfflineRoutesAndSystemBack")
+    replace('val head = "17a4bbb997c1940dc802cf4e97599c560009e4a7"', f'val head = "{HEAD}"')
+    replace("n1-batch-099-17a4bbb9-envelope.zip", ARCHIVE.name)
+    replace('"5408632b5aa1382c", meta.contentVersion', '"39eb4a86902c6dec", meta.contentVersion')
+    replace("        val n1 = runBlocking", """        assertEquals(1, ContentParser.KANJI_MEANING_PARSER_EPOCH)
+        assertEquals(ContentParser.KANJI_MEANING_PARSER_EPOCH, meta.kanjiMeaningParserEpoch)
+        val n1 = runBlocking""")
+    replace('        val surplus = n1.single { it.kanji == "剰" }', """        val surplus = n1.single { it.kanji == "剰" }
+        assertEquals(listOf("冗"), surplus.quizExclusions.splitSep())
+        val observedSurplus = runBlocking { app.db.content().observeKanjiLite(source.id).first() }
+            .single { it.kanji == "剰" }
+        assertEquals(listOf("冗"), observedSurplus.toQuizCard().quizExclusions)
+        val fullSurplus = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "剰") })
+        assertEquals(listOf("冗"), fullSurplus.quizExclusions.splitSep())
+        assertEquals(listOf("冗"), fullSurplus.toQuizCard().quizExclusions)
+        assertEquals(listOf("冗"), runBlocking { app.db.content().kanji(source.id) }
+            .single { it.kanji == "剰" }.toQuizCard().quizExclusions)""")
+    replace("            val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }",
+            "            val cards = pool.map { it.toQuizCard() }")
+    replace('                checkedPools.put(JSONObject().put("pool", poolName).put("poolSize", pool.size).put("seed", seed)\n'
+            '                    .put("options", JSONArray().also { rows ->',
+            '                checkedPools.put(JSONObject().put("pool", poolName).put("poolSize", pool.size).put("seed", seed)\n'
+            '                    .put("poolMembershipInOrder", JSONArray(pool.map { it.kanji }))\n'
+            '                    .put("options", JSONArray().also { rows ->')
+    replace("        assertEquals(64, checkedPools.length())", """        assertEquals(64, checkedPools.length())
+        val guardedCards = all.map { it.toQuizCard() }
+        val pair = guardedCards.filter { it.kanji in setOf("剰", "冗") }
+        assertEquals(2, pair.size)
+        assertEquals(listOf("冗"), pair.single { it.kanji == "剰" }.quizExclusions)
+        assertEquals(emptyList<String>(), pair.single { it.kanji == "冗" }.quizExclusions)
+        val kanjiGuardChecks = JSONArray()
+        for (target in pair) {
+            val excluded = pair.single { it.kanji != target.kanji }
+            repeat(16) { seed ->
+                val random = kotlin.random.Random(739 + seed)
+                val sampled = pair + guardedCards.filter { it.kanji !in setOf("剰", "冗") }
+                    .shuffled(random).take(seed)
+                val custom = pair + guardedCards.filter { it.kanji in curatedIds }
+                for ((poolName, pool) in listOf(
+                    "N1" to n1.map { it.toQuizCard() }, "All" to guardedCards,
+                    "boundedCustom" to custom, "randomN1Subset732" to randomSubset.map { it.toQuizCard() },
+                    "sampledFiltered" to sampled, "pairOnly" to pair,
+                    "targetOutsidePool" to sampled.filter { it.kanji != target.kanji },
+                )) {
+                    val options = QuizBuilder.options(target, pool, kotlin.random.Random(seed))
+                    assertEquals(1, options.count { it.kanji == target.kanji })
+                    assertFalse("Direct kanji exclusion leaked in $poolName seed$seed",
+                        options.any { it.kanji == excluded.kanji })
+                    assertEquals(options.size, options.map { it.title }.toSet().size)
+                    assertTrue(options.size in 1..4)
+                    assertTrue(options.all { it.kanji == target.kanji || pool.any { c -> c.kanji == it.kanji } })
+                    if (poolName == "pairOnly") assertEquals(1, options.size)
+                    if (poolName in setOf("N1", "All", "boundedCustom", "randomN1Subset732"))
+                        assertEquals(4, options.size)
+                    kanjiGuardChecks.put(JSONObject().put("target", target.kanji).put("excluded", excluded.kanji)
+                        .put("pool", poolName).put("seed", seed)
+                        .put("poolMembershipInOrder", JSONArray(pool.map { it.kanji }))
+                        .put("options", JSONArray().also { rows ->
+                            options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+                        }))
+                }
+            }
+        }
+        assertEquals(224, kanjiGuardChecks.length())""")
+    replace('.put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)',
+            '.put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)\n'
+            '            .put("acceptedMeaningParserEpoch", meta.kanjiMeaningParserEpoch)\n'
+            '            .put("kanjiQuizExclusions", JSONArray(surplus.quizExclusions.splitSep()))\n'
+            '            .put("kanjiDirectGuardChecks", kanjiGuardChecks)\n'
+            '            .put("kanjiGuardLimits", "Both actual imported target orientations; seven pool scenarios and16 seeds. Sampled filtered pools, not exhaustive arbitrary-pool certification. Normal/padding production mapping separately requires HOST QuizViewModelTest.")')
+    replace('            assertEquals(listOf("乗", "剣", "則"), meaning.card.distractors.splitSep())',
+            '            assertEquals(listOf("乗", "剣", "則"), meaning.card.distractors.splitSep())\n'
+            '            assertEquals(listOf("冗"), meaning.card.toQuizCard().quizExclusions)\n'
+            '            assertFalse(meaning.options.any { it.kanji == "冗" })')
+    replace('            assertEquals(listOf("乗", "剣", "則"), card.distractors.splitSep())',
+            '            assertEquals(listOf("乗", "剣", "則"), card.distractors.splitSep())\n'
+            '            assertEquals(listOf("冗"), card.quizExclusions.splitSep())')
+    assert text.count("ContentSync(app.db, app.settings.sync, http).sync(") == 1
+    assert "ContentParser.parse" not in text and "QuizCard(" not in text.replace("toQuizCard(", "")
+    assert "17a4bbb9" not in text and "5408632b" not in text
+    subprocess.run(["git", "archive", "--format=zip", "--prefix=n1-batch-099/",
+                    f"--output={ARCHIVE}", HEAD], cwd=R, check=True)
+    with zipfile.ZipFile(ARCHIVE) as archive:
+        names = archive.namelist()
+        assert len(names) == len(set(names)) <= 18000
+        assert all(n.startswith("n1-batch-099/") and "\\" not in n and ".." not in n.split("/") for n in names)
+        raw = archive.read("n1-batch-099/manifest.json")
+        assert json.loads(raw) == manifest and raw == (R / "manifest.json").read_bytes()
+        retained, verified = len(raw), 0
+        for section, entries in manifest.items():
+            if not isinstance(entries, dict):
+                continue
+            for name, digest in entries.items():
+                data = archive.read("n1-batch-099/" + name)
+                binary = section in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}
+                limit = 150 * 1024 if section in {"images", "listeningTaskImages"} else (
+                    512 * 1024 if section in {"audio", "listeningTaskAudio"} else 2 * 1024 * 1024)
+                assert len(data) <= limit
+                assert hashlib.sha256(data if binary else data.replace(b"\r\n", b"\n")).hexdigest() == digest, name
+                retained += len(data)
+                verified += 1
+        inflated = sum(info.file_size for info in archive.infolist())
+        assert verified == 8451 and retained <= 56 * 1024 * 1024 and inflated <= 80 * 1024 * 1024
+        assert ARCHIVE.stat().st_size <= 42 * 1024 * 1024
+        assert not any("/docs/" in n or "/tools/" in n for n in names)
+    WORK.mkdir()
+    FIXTURE.write_text(text, encoding="utf-8", newline="\n")
+    diff = WORK / "fixture-from-native733.diff"
+    diff.write_text("".join(difflib.unified_diff(
+        OLD.read_text(encoding="utf-8").splitlines(keepends=True), text.splitlines(keepends=True),
+        fromfile="preserved-native733/N1Batch099NativeTest.kt", tofile=FIXTURE.name, n=3
+    )), encoding="utf-8")
+    save(WORK / "verification.json", {
+        "schemaVersion": 1, "execution": 739, "batch": "099", "status": "prepared-not-compiled-not-executed",
+        "contentSnapshot": HEAD, "androidSnapshot": APP, "contentVersion": manifest["contentVersion"],
+        "coordinatorSession": SESSION, "runnerPreflight": load(L / "preflight-739.json"),
+        "archive": str(ARCHIVE), "archiveSha256": sha(ARCHIVE),
+        "fixture": str(FIXTURE), "fixtureSha256": sha(FIXTURE),
+        "preservedOriginalFixture": OLD.relative_to(R).as_posix(), "preservedOriginalFixtureSha256": sha(OLD),
+        "fixtureDiff": str(diff), "fixtureDiffSha256": sha(diff),
+        "expectedCounts": {"kanji": 1122, "words": 5073, "n1": 131},
+        "verifiedRuntimeHashes": verified, "manifestEqual": True, "zipEntries": len(names),
+        "compressedBytes": ARCHIVE.stat().st_size, "inflatedBytes": inflated, "retainedBytes": retained,
+        "originalBudgetsPassed": True, "productionContentSyncCalls": 1, "preparseCalls": 0,
+        "kanjiGuard": {
+            "declaration": ["剰", "冗"], "symmetric": True, "transitive": False,
+            "plannedChecks": 224, "bothTargetOrientations": True,
+            "projections": ["kanjiCard", "kanji", "kanjiLite", "observeKanjiLite", "production toQuizCard"],
+            "normalAndPaddingMappings": "Requires fresh HOST QuizViewModelTest both named regressions",
+            "parserTransport": "Assert actual accepted Room meaning parser epoch1 after full production import",
+        },
+        "preservedWordGuardPlannedChecks": 896, "choicePlannedChecks": 64,
+        "hostExecuted": False, "nativeCompiled": False, "nativeExecuted": False,
+        "nativeOrVisualAccepted": False, "phoneEvidence": False,
+        "limits": "Preparation only, not compilation, HOST/native evidence or semantic acceptance. Both orientations and sampled filtered pools are asserted, not exhaustive pool certification. Original733/734 and Claude overlap deviation preserved, not retroaccepted. Complete inherited article/link/curated reading/eleven stroke/offline/Back/four-family glyph routes retained. No heap/guard change.",
+    })
+    clean()
+    print("NEW739 fixture/full archive prepared; original733 preserved; all8451 payload hashes verified.")
+
+
+if __name__ == "__main__":
+    {"start": start, "prepare": prepare}[sys.argv[1]]()

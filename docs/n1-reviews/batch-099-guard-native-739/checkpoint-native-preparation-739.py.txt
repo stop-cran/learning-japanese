@@ -1,0 +1,270 @@
+import copy
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import zipfile
+from datetime import datetime, timezone
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+SESSION = "892c0026-25c1-4c9d-b388-b430be08cfa7"
+L = C / "logs" / SESSION
+WORK = C / "batch-099-guard-native-739"
+FOLDER = R / "docs" / "n1-reviews" / "batch-099-guard-native-739"
+BASE = "749ea11b0c9a43d13577b104cd5fe33d9e864e62"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def git(*args, root=R):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(root), *args], encoding="utf-8"
+    ).strip()
+
+
+def context():
+    progress = load(C / "progress.json")
+    assert (progress["checkpoint"], progress["status"], progress["batch"]) == (738, "continue", "099")
+    assert progress["remainingAdditions"] == 1103
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 5920)
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    return progress
+
+
+def archive():
+    progress = context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    verification = load(WORK / "verification.json")
+    assert verification["verifiedRuntimeHashes"] == 8451 and verification["contentSnapshot"] == BASE
+    assert sha(Path(verification["fixture"])) == verification["fixtureSha256"]
+    assert sha(Path(verification["archive"])) == verification["archiveSha256"]
+    original = R / verification["preservedOriginalFixture"]
+    assert sha(original) == verification["preservedOriginalFixtureSha256"]
+    log = L / "native-compile-739.txt"
+    assert (L / "native-compile-739-exit.txt").read_text().strip() == "0"
+    output = log.read_text(encoding="utf-8-sig")
+    assert "BUILD SUCCESSFUL in 2m 4s" in output and "> Task :app:compileDebugAndroidTestKotlin\n" in output
+    command = load(L / "native-compile-739-command.json")
+    assert command["fixtureSha256"] == verification["fixtureSha256"]
+    assert command["archiveSha256"] == verification["archiveSha256"]
+    assert command["androidHead"] == APP and command["contentHead"] == BASE
+    assert not command["heapOrGuardsChanged"] and not command["parentLockTouched"]
+    fixture = Path(verification["fixture"]).read_text(encoding="utf-8")
+    old = original.read_text(encoding="utf-8")
+    glyph_start = "    @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()"
+    glyph_end = "    @get:Rule val rule = createEmptyComposeRule()"
+    assert old.split(glyph_start, 1)[1].split(glyph_end, 1)[0].replace(
+        "N1Batch099ArticleTest", "N1Batch099GuardArticleTest"
+    ) == fixture.split(glyph_start, 1)[1].split(glyph_end, 1)[0]
+    routes = "            click(\"Kanji\")"
+    old_route = old.split(routes, 1)[1]
+    new_route = fixture.split(routes, 1)[1]
+    assert new_route.replace(
+        '            assertEquals(listOf("冗"), meaning.card.toQuizCard().quizExclusions)\n'
+        '            assertFalse(meaning.options.any { it.kanji == "冗" })\n', ""
+    ).replace('            assertEquals(listOf("冗"), card.quizExclusions.splitSep())\n', "") == old_route
+    assert fixture.count("@Test fun ") == 2 and fixture.count("ContentSync(app.db, app.settings.sync, http).sync(") == 1
+    assert "ContentParser.parse" not in fixture
+    app = C / "artifacts" / "n1-batch-099-guard-739-app.apk"
+    test = C / "artifacts" / "n1-batch-099-guard-739-test.apk"
+    with zipfile.ZipFile(test) as apk:
+        asset = "assets/" + Path(verification["archive"]).name
+        assert hashlib.sha256(apk.read(asset)).hexdigest() == verification["archiveSha256"]
+        dex = b"".join(apk.read(name) for name in apk.namelist() if name.endswith(".dex"))
+        for name in (
+            b"N1Batch099GuardArticleTest", b"N1Batch099GuardGlyphTest",
+            b"fullSingleImportGuardedSurplusBothOrientationsFilteredPoolsOfflineRoutesAndSystemBack",
+        ):
+            assert name in dex
+    compile_receipt = {
+        "schemaVersion": 1, "execution": 739, "status": "compiled-not-executed",
+        "compiledFixtureSha256": verification["fixtureSha256"], "archiveSha256": verification["archiveSha256"],
+        "contentSnapshot": BASE, "androidSnapshot": APP, "command": command,
+        "exitCode": 0, "result": "BUILD SUCCESSFUL in 2m 4s;74 actionable tasks:16 executed,58 up-to-date",
+        "kotlinFixtureCompilationExecuted": True, "packagedArchiveHashVerified": True,
+        "bothNamedClassesAndRouteMethodPresentInDex": True,
+        "appApk": str(app), "appApkSha256": sha(app), "testApk": str(test), "testApkSha256": sha(test),
+        "originalGlyphFixtureUnchanged": True, "originalAllUiRoutesUnchangedExceptThreeGuardAssertions": True,
+        "temporaryAndroidSourceAndAssetRemoved": True, "dedicatedAndroidWhollyClean": True,
+        "hostTestsExecuted": False, "nativeExecuted": False, "nativeOrVisualAccepted": False,
+        "limits": "Debug app/test APK compilation only, not owner-signed release, device installation, terminal native cases, HOST tests, independent semantic/rendered review or acceptance.",
+    }
+    if (WORK / "compilation.json").exists():
+        assert load(WORK / "compilation.json") == compile_receipt
+    else:
+        save(WORK / "compilation.json", compile_receipt)
+    FOLDER.mkdir()
+    pairs = [
+        (Path(verification["fixture"]), "N1Batch099GuardNativeTest.kt"),
+        (Path(verification["fixtureDiff"]), "fixture-from-native733.diff.gz"),
+        (WORK / "verification.json", "preparation.json"),
+        (WORK / "compilation.json", "compilation.json"),
+        (C / "prepare-batch-099-guard-native-739.py", "prepare-batch-099-guard-native-739.py.txt"),
+        (C / "preflight-739.ps1", "preflight-739.ps1.txt"),
+        (C / "run-739-native-compile.ps1", "run-739-native-compile.ps1.txt"),
+        (Path(__file__), "checkpoint-native-preparation-739.py.txt"),
+        (L / "preflight-739.json", "preflight-739.json"),
+        (L / "preflight-739-compile.json", "preflight-739-compile.json"),
+        (L / "native-compile-739-command.json", "compile-command.json"),
+        (L / "native-compile-739-exit.txt", "compile-exit.txt"),
+        (L / "native-compile-739-end.txt", "compile-end.txt"),
+    ]
+    provenance = []
+    for source, name in pairs:
+        target = FOLDER / name
+        assert not target.exists()
+        if name.endswith(".gz"):
+            target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+            assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+        else:
+            target.write_bytes(source.read_bytes())
+            assert sha(source) == sha(target)
+        provenance.append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                           "sha256": sha(target), "sourceSha256": sha(source)})
+    compressed = FOLDER / "compile.txt.gz"
+    compressed.write_bytes(gzip.compress(log.read_bytes(), mtime=0))
+    assert gzip.decompress(compressed.read_bytes()) == log.read_bytes()
+    evidence = {
+        "schemaVersion": 1, "execution": 739, "batch": "099",
+        "stage": "guard-aware-native-prepared-compiled-not-executed",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "startingState": progress["execution739StartingState"],
+        "preparation": verification, "compilation": compile_receipt, "provenance": provenance,
+        "compilationLog": {"archive": compressed.relative_to(R).as_posix(),
+                           "sha256": sha(log), "gzipSha256": sha(compressed)},
+        "diagnostics": [
+            "First generator call stopped before fixture/archive creation: a broad options-line replacement matched two sites. Narrowed to the checkedPools insertion and reran preparation successfully. No permission denial, runtime edit or weakened assertion.",
+            "The original prepared-not-compiled receipt is immutable; the separate compilation receipt records the subsequent actual build.",
+            "Compilation emitted only pre-existing deprecation warnings in CounterFlowTest, GrammarAnswerFlowTest and WordAnswerFlowTest.",
+            "Initial staged whitespace check rejected standard unified-diff blank context lines. Store that exact generated diff losslessly gzipped, like the build log, rather than altering the diff bytes or weakening checks. The first commit command did not run.",
+        ],
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "freshHostTestsExecuted": False, "nativeExecuted": False, "independentReviewersLaunched": 0,
+        "independentRenderedReviewClosed": False, "original733734Retroaccepted": False,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 125, "remainingAdditions": 1103,
+        "lastPublishedCommit": progress["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "SAME099 fresh signed-current-head HOST3+1 plus both normal/padding QuizViewModel regressions, then owned native execution of this exact compiled guard-aware fixture/full archive. Do not regenerate solely for docs-only evidence commits: verify exact payload equivalence to signed archive749ea11b. Fresh live ancestry/clean-head/checkpoint/device/local+remoteport ownership and all original acceptance/publication gates remain. No100/unreviewedpush.",
+    }
+    save(R / "docs" / "n1-sources" / "execution-739.json", evidence)
+    print("Archived13 byte-identical provenance pairs and lossless build log; compiled APK asset/classes verified.")
+
+
+def finish():
+    current = context()
+    before = load(L / "progress-before-739.json")
+    head = git("rev-parse", "HEAD")
+    assert head != BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    changed = git("diff", "--name-only", BASE, head).splitlines()
+    assert changed and all(name.startswith("docs/n1-reviews/batch-099-guard-native-739/")
+                           or name == "docs/n1-sources/execution-739.json" for name in changed)
+    assert not git("diff", BASE, head, "--", "manifest.json", "kanji", "words", "strokes", "articles",
+                   "grammar", "listening", "listening-tasks", "audio", "task-audio", "task-images")
+    evidence = load(R / "docs" / "n1-sources" / "execution-739.json")
+    for pair in evidence["provenance"]:
+        assert sha(R / pair["archive"]) == pair["sha256"]
+    posted, comment = load(L / "issue-739-posted.json"), load(L / "issue-739-reread.json")
+    body = C / "batch-099-native-preparation-739-issue-body.txt"
+    assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
+    assert comment["body"] == body.read_bytes().decode("utf-8")
+    assert sha(body) == posted["bodySha256"]
+    next_action = (
+        f"SAME099 checkpoint739: signed LOCAL evidence HEAD{head}, qualifiedAndroid{APP}. "
+        "NEW guard-aware fixture/full archive bound to signed749ea11b/version39eb4a86902c6dec is now prepared AND COMPILED, "
+        "not executed/accepted. Read docs/n1-sources/execution-739.json and docs/n1-reviews/batch-099-guard-native-739/. "
+        "Exact debug app/test APKs and hashes in compilation.json; exact archive/fixture hashes in preparation.json. "
+        "All8451 payload hashes,8473ZIPentries,30473266compressed/44642117inflated/44373779retained bytes verified within original guards; "
+        "actual packaged APK asset hash and both NEWGuard classes/route method verified. Original733 fixture/hash/routes preserved; "
+        "only added guard assertions plus production toQuizCard mapping, both orientations, seven pool scenarios*16seeds=224planned "
+        "and64existingchoice/896wordguard checks; pool membership/order now logged. Full/lite/observed/kanji projections and epoch1 asserted; "
+        "productionContentSyncONCE, no preparse. Full raw/curated reading order, eleven strokes, all source/teaching/titles/links/sevenwordguards unchanged. "
+        "NEXT fresh signed-current-head HOST3+1 (RealContentTest3,RareHanTest1,no skips) plus QuizViewModelTest."
+        "ordinaryCardsRetainOneSidedMeaningExclusions and borrowedPaddingCardsRetainOneSidedMeaningExclusions. "
+        "HOST2ginit onlyHOST/maxworker1/noparallel/reruntasks/inprocess; do not increase heap/archiveguards. "
+        "Then execute exact compiled739GuardGlyph/GuardArticle native cases on freshly ownership-verified readonlyAVD5580/5581, "
+        "explicitserial/local+remoteports includingTimeWait/PIDs/expectedfingerprint/192m; no foreigndevice/process interference, "
+        "stop only owned helper. Require BOTH named terminalcase0/no skips/no-2/-3 and inherited route/font/reading/drawing/stroke/offline/Back assertions; "
+        "actual PNG readability/semantic inspection, not compile/rasterhash acceptance. Docs-only evidence commit preserves all runtime payloads, "
+        "so do NOT regenerate/recompile just to embed evidence HEAD; verify payload equivalence to signed749ea11b archive. "
+        "Fresh HOST/native acceptance justified by changed content/client remains unperformed. "
+        "Then necessary ORIGINAL-session dependent confirmations SERIAL actualprocess exits/toolcalls: Claude2ac79fdb opus5.5 then GPT240faa46 gpt6.1sol as necessary. "
+        "Preserve original733/734 and Claude9overlapstarts/max9calls/falseserialclaim; no retroacceptance/newblindcredit/repeatedreadloop. "
+        "Original16choice reconstruction matches outputs, NOT captured733 pool membership. AppmainCI42394221803 completedSUCCESS exact2edbf366 archived738; "
+        "issue132 adoption remains open pending native/review. quiz_exclusions:[冗] on剰 remains LOCAL UNREVIEWED/NOT ACCEPTED; old clients ignore it, "
+        "compatible-client owner testing only, not universal synonym detection. "
+        "All normal signed latestmain nonrewritingintegration/changedteachingreview/actualcombinedchecks/ownerfastforward/exactremoteSHA/"
+        "terminalgreenCI/EVERY immutable GitHubZIP manifesthash/18000entries42MiBcompressed80MiBinflated56MiBretained/perfile-media-safepath/"
+        "verifiedownerissue gates remain BEFORE099 count or100. Delivered125/1228,remaining1103,lastpublished098d5a376ee unchanged. "
+        "Physicalphone/generalrelease/whole-set outstanding. Full inherited738nextAction preserved in historicalExecution738Before739Preparation. "
+        "Parentrunner ownsrunner.lock throughout child lifetime: NOchild acquire/delete/unlock/readprobe; exactsignedhead/checkpoint/"
+        "whollyclean/liveancestry guards stay. Periodic observers read immutable checkpoint-full.json, not live progress. "
+        "Preserve all fullprogress history, approvedcontrol/committedsource/frozeninputs only; no optional historicalsessionhelpers. "
+        "Preserve/report/yield actual new denial/signinghang/uncertainownership; no secondrunner/unreviewedpush/batch100."
+    )
+    checkpoint = {
+        "schemaVersion": 1, "execution": 739, "checkpoint": 739, "batch": "099",
+        "status": "continue", "stage": "batch-099-guard-native-compiled-awaiting-fresh-host-and-native-execution",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "savedCommit": head, "signature": "G", "qualifiedAndroidHead": APP,
+        "archiveContentSnapshot": BASE, "contentVersion": "39eb4a86902c6dec",
+        "evidence": "docs/n1-sources/execution-739.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndBodyVerified": True, "provenancePairsVerified": 13,
+        "verifiedRuntimeHashes": 8451, "fixtureCompiled": True, "packagedAssetAndClassesVerified": True,
+        "freshHostTestsExecuted": False, "nativeExecuted": False, "independentReviewersLaunched": 0,
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "original733734Retroaccepted": False, "independentRenderedReviewClosed": False,
+        "dedicatedWorktreesClean": True, "parentLockTouched": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 125, "remainingAdditions": 1103, "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False, "nextAction": next_action,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    for name in ("historicalExecution738Before739Preparation", "execution739CoordinatorCheckpoint",
+                 "batch099GuardNativePreparationCheckpoint"):
+        assert name not in after
+    after["historicalExecution738Before739Preparation"] = {
+        key: before[key] for key in ("checkpoint", "status", "stage", "nextAction", "blocker")
+    }
+    after["execution739CoordinatorCheckpoint"] = checkpoint
+    after["batch099GuardNativePreparationCheckpoint"] = checkpoint
+    after.update(checkpoint=739, status="continue", stage=checkpoint["stage"], nextAction=next_action, blocker=None)
+    for key, value in before.items():
+        if key not in {"checkpoint", "status", "stage", "nextAction", "blocker"}:
+            assert after.get(key) == value, key
+    save(L / "checkpoint-739.json", checkpoint)
+    temporary = C / "progress.json.739-final.tmp"
+    save(temporary, after)
+    assert load(C / "progress.json") == current
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == after
+    print(json.dumps({"checkpoint": 739, "savedCommit": head, "issue": posted["url"],
+                      "historicalRootKeysPreserved": len(before), "status": "continue"}, indent=2))
+
+
+if __name__ == "__main__":
+    {"archive": archive, "finish": finish}[sys.argv[1]]()
