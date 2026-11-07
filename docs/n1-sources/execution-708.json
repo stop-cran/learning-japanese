@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "execution": 708,
+  "batch": "096",
+  "status": "published-verified-bounded-owner-testing",
+  "startingState": {
+    "execution": 708,
+    "batch": "096",
+    "startedAt": "2026-11-07T11:24:50.738827+00:00",
+    "startingHead": "831e4f3a9f827e3a4be49119943617dfc04a1f17",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "4c2416e4c5925e6910b32215412bb1b795f60524",
+    "scope": "SAME096 owner fast-forward publication, terminal CI/public ZIP/verified owner issue, then yield before097.",
+    "request": {
+      "sha256": "0e871d11762f4367e9b5da4b4df665a4111073f82540cca96faaf4658b97fb12",
+      "bytes": 4795265,
+      "characters": 4733059,
+      "lines": 62731,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and complete embedded checkpoint parsed. Operative contract, complete approved issue and final707 directly inspected; historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerLockRole": {
+      "parentPid": 19008,
+      "session": "81f6cfe2-6ac2-4955-93d7-c0a9deec5dc6",
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "parentLockTouched": false,
+      "ancestry": [
+        {
+          "pid": 10860,
+          "parent": 16100,
+          "name": "python.exe"
+        },
+        {
+          "pid": 16100,
+          "parent": 6548,
+          "name": "pwsh.exe"
+        },
+        {
+          "pid": 6548,
+          "parent": 19008,
+          "name": "copilot.exe"
+        },
+        {
+          "pid": 19008,
+          "parent": 30364,
+          "name": "pwsh.exe"
+        }
+      ]
+    },
+    "runtime": {
+      "runtimeHashesVerified": 8444,
+      "contentVersion": "54645b95fe8e939c",
+      "manifestSha256": "8a71c3f56462e62bd625332b734abb4eb49948cf259cb13d52cd1c89a68e814f",
+      "manifestFresh": true,
+      "runtimeChanged": false
+    },
+    "actualNewPermissionDenials": [],
+    "artifactPathPreflight": "Approved control and committed evidence/frozen inputs only; no optional historical-session helpers accessed."
+  },
+  "publicationRecord": "batch-096-publication.json",
+  "acceptedCommit": "831e4f3a9f827e3a4be49119943617dfc04a1f17",
+  "runtimeBytesUnchanged": true,
+  "runtimeAccepted": true,
+  "runtimePublished": true,
+  "counts": {
+    "kanji": 1119,
+    "words": 5072,
+    "n1Labels": 128,
+    "namedSourceMembersPresent": 133,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 123,
+    "remainingAdditions": 1105,
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 123,
+    "batchChangedReusedArticles": 0,
+    "allMappedReciprocalPairs": 1,
+    "mappedDirectedLinks": 2,
+    "activatedBaselinePairs": 0,
+    "separateExceptionPreserved": "\u5996",
+    "separateEarlierLevelSourceMembers": [
+      "\u4fdd",
+      "\u6848",
+      "\u6d3e",
+      "\u7b2c",
+      "\u7b56",
+      "\u7d50"
+    ],
+    "earlierPlacementsCountedAsIssue60AcceptedBatches": false
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42368114639,
+    "headSha": "831e4f3a9f827e3a4be49119943617dfc04a1f17",
+    "jobs": [
+      {
+        "completedAt": "2026-11-07T11:27:28Z",
+        "conclusion": "success",
+        "databaseId": 128390396105,
+        "name": "validate",
+        "startedAt": "2026-11-07T11:25:26Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-07T11:25:27Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-07T11:25:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:26:56Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-07T11:25:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:26:56Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-07T11:26:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:02Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-07T11:26:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:13Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-07T11:27:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:24Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-07T11:27:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:26Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-07T11:27:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:26Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-07T11:27:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:27Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-07T11:27:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:27Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-07T11:27:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:27Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-07T11:27:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T11:27:27Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-07T11:27:27Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42368114639/job/128390396105"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "831e4f3a9f827e3a4be49119943617dfc04a1f17",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/831e4f3a9f827e3a4be49119943617dfc04a1f17",
+    "sha256": "989b799fc0c9592650336f19bc850d02db6d1237a4dc9b089a0c05d8a58198b8",
+    "manifestEqual": true,
+    "contentVersion": "54645b95fe8e939c",
+    "verifiedRuntimeHashes": 8444,
+    "zipEntries": 8466,
+    "compressedBytes": 30851652,
+    "inflatedBytes": 44620567,
+    "retainedBytes": 44352229,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "newReviewerNativeHostRuns": 0,
+  "actualNewPermissionDenials": [],
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false
+}
