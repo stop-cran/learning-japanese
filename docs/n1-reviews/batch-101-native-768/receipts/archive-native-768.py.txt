@@ -1,0 +1,299 @@
+import gzip
+import hashlib
+import json
+from pathlib import Path
+import re
+import shutil
+import subprocess
+from datetime import datetime, timezone
+import zipfile
+
+CONTROL = Path(__file__).resolve().parent
+ROOT = CONTROL.parent / "learning-japanese"
+ANDROID = CONTROL.parent / "kanji-cards-android"
+SESSION = "b683cc5d-e782-4126-bed9-1748b95f8bdb"
+LOG = CONTROL / "logs" / SESSION
+BASE = "223b227af1eb3220272346957f312bb829e9510e"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+RAW = CONTROL / "artifacts" / "batch-101-native-768"
+SHEETS = CONTROL / "batch-101-native-inspection-768"
+DEST = ROOT / "docs" / "n1-reviews" / "batch-101-native-768"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def save(path, data):
+    assert not path.exists(), path
+    path.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == data
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def git(*args, root=ROOT):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(root), *args], encoding="utf-8"
+    ).strip()
+
+
+def verify_runtime():
+    packet = load(CONTROL / "batch-101-native-767" / "compiled-packet.json")
+    prep, compiled = packet["preparation"], packet["compilation"]
+    for path, digest in [
+        (prep["archive"], prep["archiveSha256"]),
+        (prep["fixture"], prep["fixtureSha256"]),
+        (compiled["appApk"], compiled["appApkSha256"]),
+        (compiled["testApk"], compiled["testApkSha256"]),
+    ]:
+        assert sha(Path(path)) == digest
+    manifest_bytes = (ROOT / "manifest.json").read_bytes()
+    manifest = json.loads(manifest_bytes)
+    assert manifest["contentVersion"] == "6e9b74967e21fc3c"
+    assert hashlib.sha256(manifest_bytes).hexdigest() == prep["manifestSha256"]
+    assert subprocess.check_output([
+        "git", "-C", str(ROOT), "show", prep["contentSnapshot"] + ":manifest.json"
+    ]) == manifest_bytes
+    with zipfile.ZipFile(prep["archive"]) as archive:
+        names = archive.namelist()
+        prefix = "n1-batch-101/"
+        assert len(names) == len(set(names)) == 8477 <= 18000
+        assert all(n.startswith(prefix) and "\\" not in n and ".." not in n.split("/")
+                   and not n.startswith("/") and not re.search(r"(^|/)[^/]*:", n) for n in names)
+        assert not any("/docs/" in n or "/tools/" in n for n in names)
+        assert archive.read(prefix + "manifest.json") == manifest_bytes
+        retained = len(manifest_bytes)
+        count = media = 0
+        for section_name, section in manifest.items():
+            if not isinstance(section, dict):
+                continue
+            for name, digest in section.items():
+                assert len(name.split("/")) == 2 and ".." not in name.split("/")
+                data = archive.read(prefix + name)
+                local = (ROOT / name).read_bytes()
+                binary = section_name in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}
+                limit = 150 * 1024 if section_name in {"images", "listeningTaskImages"} else (
+                    512 * 1024 if section_name in {"audio", "listeningTaskAudio"} else 2 * 1024 * 1024)
+                assert len(data) <= limit, name
+                normalized = data if binary else data.replace(b"\r\n", b"\n")
+                assert hashlib.sha256(normalized).hexdigest() == digest, name
+                assert normalized == (local if binary else local.replace(b"\r\n", b"\n")), name
+                retained += len(data)
+                count += 1
+                if section_name in {"listeningTaskAudio", "listeningTaskImages"}:
+                    media += len(data)
+        inflated = sum(info.file_size for info in archive.infolist())
+        compressed = Path(prep["archive"]).stat().st_size
+        assert count == 8455 and retained == 44386225 <= 56 * 1024 * 1024
+        assert inflated == 44654563 <= 80 * 1024 * 1024
+        assert compressed == 30479587 <= 42 * 1024 * 1024
+        assert media == 5893602 <= 20 * 1024 * 1024
+    return {
+        "runtimeHashesVerified": count, "contentVersion": manifest["contentVersion"],
+        "manifestSha256": sha(ROOT / "manifest.json"), "manifestEqualsCompiledArchive": True,
+        "archiveContentSnapshot": prep["contentSnapshot"], "archiveSha256": prep["archiveSha256"],
+        "zipEntries": len(names), "compressedBytes": compressed, "inflatedBytes": inflated,
+        "retainedBytes": retained, "listeningTaskMediaBytes": media,
+        "allOriginalBudgetsAndPerFilePathMediaGuardsPassed": True,
+    }
+
+
+def verify_native():
+    attempt = load(RAW / "execution.json")
+    assert attempt["passed"] and attempt["nativeExecuted"] and attempt["failure"] is None
+    assert attempt["adbExitCode"] == 0 and attempt["terminalSuccessCases"] == 2
+    assert attempt["ownedHelperStopped"] and attempt["ownedQemuStopped"]
+    assert attempt["heapGrowth"] == "192m" and attempt["heapSize"] == "576m"
+    assert attempt["network"] == "Active default network: none"
+    assert not attempt["parentLockTouched"] and not attempt["guestOrAppHeapChanged"] and not attempt["guardsChanged"]
+    assert attempt["coordinatorHead"] == BASE and attempt["androidSnapshot"] == APP
+    text = (RAW / "instrumentation.txt").read_text(encoding="utf-8-sig")
+    packet = load(CONTROL / "batch-101-native-767" / "compiled-packet.json")["preparation"]
+    assert "OK (2 tests)" in text and text.count("INSTRUMENTATION_STATUS_CODE: 0") == 2
+    assert not re.search(r"INSTRUMENTATION_STATUS_CODE: -[234]|FAILURES|INSTRUMENTATION_FAILED|INSTRUMENTATION_STATUS: (?:ignored|assumptionFailure)", text)
+    for key in ("glyphClass", "articleClass"):
+        assert text.count("INSTRUMENTATION_STATUS: class=" + packet[key]) == 2, key
+    for key in ("glyphMethod", "articleMethod"):
+        assert text.count("INSTRUMENTATION_STATUS: test=" + packet[key]) == 2, key
+    route = load(RAW / "n1-101-article-route.json")
+    raster = load(RAW / "n1-101-font-raster.json")
+    assert route["passed"] and route["archiveRequests"] == 1
+    assert (route["importedKanji"], route["importedWords"], route["n1Cards"], route["problems"],
+            route["acceptedReadingParserEpoch"], route["acceptedMeaningParserEpoch"]) == (1124, 5073, 133, 0, 1, 1)
+    assert route["contentSnapshot"] == packet["contentSnapshot"]
+    assert route["contentVersion"] == packet["contentVersion"]
+    assert route["fullOnyomi"] == route["fullProjectionOnyomi"] == ["コウ", "ク"]
+    assert route["fullKunyomi"] == route["fullProjectionKunyomi"] == ["いさお"]
+    assert route["quizOnKeys"] == ["こう"] and route["quizKunKeys"] == []
+    assert route["fullProjectionQuizOnyomi"] == ["コウ"] and route["fullProjectionQuizKunyomi"] == []
+    guards = ["績", "効", "果", "成", "達", "勝", "凱", "栄", "敬", "働", "業", "技", "工"]
+    assert route["kanjiQuizExclusions"] == guards
+    rows = route["kanjiDirectGuardChecks"]
+    assert len(rows) == 2912 and len({r["pool"] for r in rows}) == 7
+    for guard in guards:
+        selected = [r for r in rows if {r["target"], r["excluded"]} == {"功", guard}]
+        assert len(selected) == 224
+        assert {r["target"] for r in selected} == {"功", guard}
+        assert {r["seed"] for r in selected} == set(range(16))
+        for row in selected:
+            assert row["target"] in row["options"] and row["excluded"] not in row["options"]
+            assert 1 <= len(row["options"]) <= 4 and len(row["options"]) == len(set(row["options"]))
+            assert (set(row["options"]) - {row["target"]}).issubset(set(row["poolMembershipInOrder"]))
+    nontransitive = route["nontransitiveNeighborChecks"]
+    assert len(nontransitive) == 2496
+    assert len({(r["target"], r["neighbor"]) for r in nontransitive}) == 156
+    assert all(set(r["options"]) == {r["target"], r["neighbor"]} for r in nontransitive)
+    word_checks = route["preservedWordGuardChecks"]
+    assert len(word_checks) == 896
+    assert len({tuple(sorted((r["target"], r["excluded"]))) for r in word_checks}) == 7
+    for row in word_checks:
+        assert row["target"] in {o["word"] for o in row["options"]}
+        assert row["excluded"] not in {o["word"] for o in row["options"]}
+        assert len(row["options"]) == 4
+    choices = route["productionBuilderN1AndAllExactChoices"]
+    assert len(choices) == 64
+    expected_meanings = {"功": "merit; achievement", "加": "add",
+                         "幼": "early childhood; immature", "刀": "sword; blade"}
+    for row in choices:
+        ids = {o["kanji"] for o in row["options"]}
+        assert len(ids) == len(row["options"]) == 4 and "功" in ids
+        assert not ids.intersection(guards) and ids.issubset(set(row["poolMembershipInOrder"]))
+        if row["pool"] in {"All", "boundedCustom"}:
+            assert {o["kanji"]: o["title"] for o in row["options"]} == expected_meanings
+        if row["pool"] == "N1":
+            assert "刀" in ids and not ids.intersection({"加", "幼"})
+    assert route["actualN1CuratedAvailable"] == 1 and route["actualN1FallbackOptions"] == 2
+    assert route["curatedDistractorLevels"] == {"加": 3, "幼": 2, "刀": 1}
+    live = {o["kanji"]: o["title"] for o in route["exactDefaultMeaningOptions"]}
+    assert live == {"松": "pine tree", "功": "merit; achievement",
+                    "刀": "sword; blade", "梨": "pear tree"}
+    for key in ("reciprocalLinkAndSystemBack", "meaningQuestionAndFeedback",
+                "oneCuratedKeyPersistedGoodAndDone", "drawingTraceThenRecall",
+                "drawingGradeRecordedOnNext", "offline"):
+        assert route[key] is True, key
+    assert route["touchInjectedReferenceStrokes"] == 5
+    assert (route["mappedReciprocalPairs"], route["directedLinkTransitions"],
+            route["activatedBaselinePairs"], route["changedReusedArticles"]) == (4, 8, 2, 3)
+    assert raster["sdk"] == 35 and raster["fontScale"] == 1
+    assert raster["individualGlyphProbes"] == 76 and raster["wholeWordRasterProbes"] == 8
+    assert raster["panels"] == 3 and len(raster["rows"]) == 84
+    assert all(r.get("hasGlyph", True) for r in raster["rows"])
+    assert all(r.get("renderedCharactersNonblank", 2) == 2 for r in raster["rows"])
+    assert len(list(RAW.glob("*.png"))) == 34 and len(list(SHEETS.glob("sheet-*.png"))) == 8
+    return attempt, route
+
+
+def archive():
+    original = load(CONTROL / "progress.json")
+    assert (original["checkpoint"], original["status"], original["batch"]) == (767, "continue", "101")
+    assert original["stage"] == "batch-101-native-execution-in-progress"
+    runner = load(CONTROL / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 5920)
+    for root, head in [(ROOT, BASE), (ANDROID, APP)]:
+        assert git("rev-parse", "HEAD", root=root) == head
+        assert git("log", "-1", "--format=%G?", root=root) == "G"
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+    attempt, route = verify_native()
+    runtime = verify_runtime()
+    labels = sorted({(o["kanji"], o["title"]) for row in route["productionBuilderN1AndAllExactChoices"]
+                     for o in row["options"]})
+    old_labels = {(r["kanji"], r["title"]) for r in load(
+        ROOT / "docs" / "n1-reviews" / "batch-101-host-766" / "sampled-labels.json")}
+    comparison = {
+        "nativeUniqueLabelCount": len(labels),
+        "nativeLabels": [list(x) for x in labels],
+        "newVersusHost766": [list(x) for x in sorted(set(labels) - old_labels)],
+        "absentVersusHost766": [list(x) for x in sorted(old_labels - set(labels))],
+        "liveDefaultLabels": route["exactDefaultMeaningOptions"],
+        "limits": "Native seed767 differs from HOST766. All exact native labels supplied for pending independent rendered review; label differences are not established defects or universal semantic safety. Unchanged legacy word-guard exact-label audit remains UNVERIFIED.",
+    }
+    inspection = {
+        "reviewer": "Coordinator GPT-6.1 Sol (gpt-6.1-sol), not independent review",
+        "viewedOriginalPngs": [f"n1-101-font-panel-{i}.png" for i in range(1, 4)] + ["n1-101-meaning-question.png"],
+        "viewedContactSheets": [f"sheet-{i:02d}.png" for i in range(1, 9)],
+        "contactSheetRouteCoverage": 31,
+        "originalNativePngsPreserved": 34,
+        "observations": [
+            "All19 scoped Han distinguishable across four production families in three actual panels; no blank/tofu or established misleading glyph.",
+            "Live defaultN1 meaning choices: pine tree / merit; achievement / sword; blade / pear tree. Only merit; achievement answers the visible功 prompt; the two tree fallbacks are not hidden or relabelled.",
+            "Complete article and three exact reused passages captured. Readings table explicitly requests horizontal scrolling; paired positions expose clipped columns, not missing source text.",
+            "One selectedコウ reading question, fullコウ/ク/いさお feedback, one-key done screen. No new selected kun question.",
+            "Five-stroke trace and recall feedback visible. Drawing uses reference-injected strokes and shape-only grading when the handwriting model is unavailable; not MLKit or human handwriting/mastery evidence.",
+            "No established new actionable teaching/layout defect in this bounded coordinator inspection; independent original-family rendered confirmation remains required.",
+        ],
+        "limits": "Emulator screenshot inspection at captured font scale1, not physical-phone/native-speaker certification. Raster/cmap/hash results alone are not readability. Sampled meaning labels, not every future fallback or full legacy word-guard semantic audit.",
+        "independentRenderedReviewClosed": False,
+    }
+    DEST.mkdir(exist_ok=False)
+    (DEST / "native").mkdir()
+    (DEST / "contact-sheets").mkdir()
+    (DEST / "receipts").mkdir()
+    artifacts = []
+    for source in sorted(RAW.iterdir()):
+        if source.is_file():
+            output = DEST / "native" / (source.name + ".gz" if source.suffix in {".json", ".txt"} else source.name)
+            if output.suffix == ".gz":
+                output.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+                assert gzip.decompress(output.read_bytes()) == source.read_bytes()
+            else:
+                shutil.copyfile(source, output)
+            artifacts.append({"file": str(output.relative_to(DEST)).replace("\\", "/"),
+                              "storedSha256": sha(output), "sourceSha256": sha(source),
+                              "sourceBytes": source.stat().st_size})
+    for source in sorted(SHEETS.iterdir()):
+        shutil.copyfile(source, DEST / "contact-sheets" / source.name)
+    for name in ("preflight-768.ps1", "start-native-768.py", "run-768-native.ps1",
+                 "inspect-batch-101-native-768.py", "archive-native-768.py"):
+        shutil.copyfile(CONTROL / name, DEST / "receipts" / (name + ".txt"))
+    for name in ("preflight-768.json", "preflight-768-native.json", "starting-state-768.json"):
+        shutil.copyfile(LOG / name, DEST / "receipts" / name)
+    save(DEST / "artifact-index.json", artifacts)
+    save(DEST / "sampled-labels-and-host-delta.json", comparison)
+    save(DEST / "coordinator-rendered-inspection.json", inspection)
+    evidence = {
+        "schemaVersion": 1, "execution": 768, "batch": "101",
+        "stage": "native-passed-awaiting-two-original-family-rendered-confirmations",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "startingState": original["execution768StartingState"],
+        "testedContentHead": BASE, "qualifiedAndroidHead": APP,
+        "runtime": runtime, "nativeAttempt": attempt,
+        "terminalSuccessCases": 2, "nativeFailures": 0, "nativeSkipped": 0,
+        "kanjiDirectPairs": 13, "kanjiDirectGuardChecks": 2912,
+        "nontransitiveNeighborChecks": 2496, "preservedWordGuardPairs": 7,
+        "preservedWordGuardChecks": 896, "productionChoiceChecks": 64,
+        "actualN1CuratedAvailable": 1, "actualN1FallbackOptions": 2,
+        "importedCounts": {"kanji": 1124, "words": 5073, "n1": 133, "problems": 0},
+        "productionContentSyncCalls": 1, "preparseCalls": 0,
+        "fullOnyomi": ["コウ", "ク"], "fullKunyomi": ["いさお"],
+        "selectedOnKeys": ["こう"], "selectedKunKeys": [],
+        "oneCuratedKeyPersistedGoodAndDone": True, "drawingStrokes": 5,
+        "mappedReciprocalPairs": 4, "directedLinkTransitions": 8,
+        "activatedBaselinePairs": 2, "changedReusedArticles": 3,
+        "individualGlyphProbes": 76, "wholeWordRasterProbes": 8, "fontPanels": 3,
+        "nativePngs": 34, "contactSheets": 8,
+        "sampledLabels": comparison, "coordinatorInspection": inspection,
+        "textual765AndHost766": "Inherited as recorded; not rerun or recounted.",
+        "legacyWordGuardFullLabelAudit": "UNVERIFIED; mechanical896 checks do not certify every retained word label.",
+        "runtimeChanged": False, "manifestChanged": False,
+        "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+        "runtimeAccepted": False, "runtimePublished": False,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [],
+        "publishedAdditions": 127, "remainingAdditions": 1101,
+        "lastPublishedCommit": original["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "TWO SERIAL original-family rendered confirmations on this unchanged teaching/runtime snapshot and actual native images/options; then all normal combined-main acceptance and publication gates. No native rerun absent changed payload/failure/new unresolved concern. No102 or publication in768.",
+    }
+    save(ROOT / "docs" / "n1-sources" / "execution-768.json", evidence)
+    print(json.dumps({"evidence": "docs/n1-sources/execution-768.json",
+                      "nativeCases": 2, "pngs": 34, "contactSheets": 8,
+                      "sampledLabels": len(labels), "newLabelCountVersusHost766": len(set(labels) - old_labels),
+                      "runtimeHashes": runtime["runtimeHashesVerified"]}, indent=2))
+
+
+if __name__ == "__main__":
+    archive()

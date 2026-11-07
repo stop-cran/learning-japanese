@@ -1,0 +1,63 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\b683cc5d-e782-4126-bed9-1748b95f8bdb"
+$content = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$bodyPath = "$control\batch-101-native-768-issue-body.txt"
+if ((Test-Path "$log\issue-768-posted.json") -or (Test-Path $bodyPath)) {
+    throw 'Do not duplicate the issue update'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0 -or (git -C $content rev-parse 'HEAD^') -ne '223b227af1eb3220272346957f312bb829e9510e' -or
+    (git -C $content log -1 '--format=%G?') -ne 'G') { throw 'Evidence not normally signed' }
+foreach ($root in @($content, $android)) {
+    if ((git -C $root status --porcelain --untracked-files=all) -or $LASTEXITCODE -ne 0) {
+        throw 'Dedicated worktree not wholly clean'
+    }
+}
+if ((git -C $android rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?') -ne 'G') { throw 'Qualified Android changed' }
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-768.json") | ConvertFrom-Json
+if (-not $e.nativeAttempt.passed -or $e.terminalSuccessCases -ne 2 -or
+    -not $e.nativeAttempt.ownedHelperStopped -or -not $e.nativeAttempt.ownedQemuStopped -or
+    $e.runtime.runtimeHashesVerified -ne 8455 -or $e.runtimeChanged -or $e.runtimePublished) {
+    throw 'Native evidence mismatch'
+}
+$body = @"
+Checkpoint 768, SAME batch 101: the two exact NEW767 compiled native cases PASSED with terminal per-case status 0, no failures or skips. Signed LOCAL evidence commit $head preserves docs/n1-sources/execution-768.json and docs/n1-reviews/batch-101-native-768/ (complete raw results, 34 original PNGs, eight contact sheets, exact choices and provenance). No teaching changed or unreviewed content was pushed.
+
+The full signed93540981 archive passed production ContentSync ONCE: 1,124 kanji / 5,073 words / 133 N1 cards / zero problems; accepted reading and meaning parser epochs1. All 8,455 runtime hashes and exact compiled APK/fixture/archive bindings reverified; contentVersion6e9b74967e21fc3c. Archive SHA256d02ccd665ba14c218f3a4e712888141cbbebf43849f9ccbeaa00380a244a9e9b, 8,477 entries / 30,479,587 compressed / 44,654,563 inflated / 44,386,225 retained bytes; unchanged budgets and per-file/media/path limits passed. No reduced archive or double preparse.
+
+Actual device checks passed: thirteen direct symmetric NONTRANSITIVE kanji guards (2,912 both-direction checks, 2,496 neighbor checks), 64 production-builder N1/All/custom/random-subset choices, and seven preserved word pairs (896 mechanical checks). All exact sampled labels/pool memberships are archived, not universal semantic certification. DefaultN1 actually used ONE curated choice (sword; blade) and TWO fallback choices (pine tree; pear tree), alongside merit; achievement. Easier levels remain unchanged. The native seed differs from HOST766: 25 unique labels, 13 newly sampled labels, supplied explicitly for upcoming independent rendered confirmation. No coordinator-established new ambiguity; the fixture's generic needs-semantic-review flag remains pending independent review, not a proved defect.
+
+Complete new article/three exact navigation-only reused passages/four all-mapped pairs/eight link directions/two activated baseline pairs/system Back/offline assertions passed. Only the selected on-key persisted good and reached one-key Done; full on/kun metadata and explicit empty kun selection were preserved. Five injected reference strokes, trace practice, recall feedback and saved drawing grade passed. Shape-only grading when the handwriting model is unavailable is NOT MLKit or human handwriting/mastery evidence. All19 scoped Han passed 76 individual glyph and eight word raster probes across four production families, with three actual font panels. The coordinator viewed all three original panels, the original meaning question and all eight route contact sheets: no established blank/tofu, misleading glyph or actionable layout defect; the reading table exposes sideways-scroll guidance and paired column views. This is bounded emulator evidence, not physical-phone or independent native-speaker certification.
+
+Fresh signed-head/wholly-clean/live-parent/session/decoded-launcher preflight and local+remote ports including TimeWait/PID checks passed. Owned read-only API35 emulator5580 parent16412/QEMU7856 was responsive and is stopped; 2GiB guest, 192m growth / 576m max heaps and all guards unchanged. No parent-lock probe/acquire/unlock, optional historical-session helper access, new permission denial or concurrent heavy work.
+
+Next bounded checkpoint: TWO SERIAL original-family rendered confirmations on this unchanged snapshot and actual native images/exact choices (Claude original3bed863f-b19d-4de6-9a11-1ba15e409a84 then GPT originald82fb475-a4fb-4ea4-9da9-945d176127cd), with original findings/exact teaching diff/source evidence, actual process exits and full reports/read limits. No fresh blind credit. Original765 textual and766 HOST five-case evidence are inherited, not repeated. The unchanged legacy word-guard exact-label audit remains UNVERIFIED; mechanical896 checks do not certify every retained word label. No native rerun is needed absent changed payload/failure/new unresolved concern. Combined-current-main integration, required checks, normal signing/owner fast-forward push, terminal green CI and EVERY immutable-ZIP runtime hash/budget check remain mandatory.
+
+Published additions remain127/1,228; acceptance remainder1,101; last published ba1a7f467a2431523e3131d4f259c1d3260c93af. Batch101 is not yet review-closed or published; no102 started. Compatible reading-curation/kanji-exclusion-aware client required; old clients ignore those fields. Physical-phone, general-release and whole-set acceptance remain outstanding; project incomplete.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-768-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve posted receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-768-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}

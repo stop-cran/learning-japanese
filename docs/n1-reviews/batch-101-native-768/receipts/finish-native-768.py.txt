@@ -1,0 +1,125 @@
+import copy
+from datetime import datetime, timezone
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+
+CONTROL = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("archive_native_768", CONTROL / "archive-native-768.py")
+native = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(native)
+LOG = native.LOG
+current = native.load(CONTROL / "progress.json")
+before = native.load(LOG / "checkpoint-full.json")
+assert (current["checkpoint"], current["status"], current["batch"]) == (767, "continue", "101")
+assert current["stage"] == "batch-101-native-execution-in-progress"
+runner = native.load(CONTROL / "runner.json")
+assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", native.SESSION, 5920)
+head = native.git("rev-parse", "HEAD")
+assert native.git("rev-parse", "HEAD^") == native.BASE
+assert native.git("log", "-1", "--format=%G?") == "G"
+assert native.git("rev-parse", "HEAD", root=native.ANDROID) == native.APP
+assert native.git("log", "-1", "--format=%G?", root=native.ANDROID) == "G"
+for root in (native.ROOT, native.ANDROID):
+    assert not native.git("status", "--porcelain", "--untracked-files=all", root=root)
+assert not native.git("diff", native.BASE, head, "--", "manifest.json", "kanji", "words", "strokes")
+runtime = native.verify_runtime()
+attempt, route = native.verify_native()
+posted = native.load(LOG / "issue-768-posted.json")
+reread = native.load(LOG / "issue-768-reread.json")
+body = (CONTROL / "batch-101-native-768-issue-body.txt").read_bytes()
+assert posted["author"] == reread["user"]["login"] == "stop-cran"
+assert posted["bodySha256"] == hashlib.sha256(body).hexdigest()
+assert body.decode("utf-8") == reread["body"]
+assert posted["url"] == reread["html_url"]
+prior = before["execution767CoordinatorCheckpoint"]
+next_action = (
+    f"SAME101 checkpoint768 signed LOCAL native evidence HEAD{head}, qualifiedAndroid{native.APP}. "
+    "Read docs/n1-sources/execution-768.json and docs/n1-reviews/batch-101-native-768/. "
+    "Exact NEW767 Glyph/Article cases terminal0,0failures/skips; productionContentSyncONCE signed93540981"
+    "fullarchive/version6e9b74967e21fc3c/1124kanji5073words133N1/0problems/reading+meaningepochs1. "
+    "All8455runtimehashes/8477entries/30479587compressed44654563inflated44386225retainedbytes/"
+    "perfilepathmedia verified within unchangedguards.2912directguardchecks/13bothorientations/"
+    "2496NONTRANSITIVEneighborchecks/896preservedwordguards/64productionchoices. "
+    "DefaultN1 actualONEcurated刀 plusTWOfallback松'pine tree'/梨'pear tree';加N3/幼N2 unchanged. "
+    "Native25sampleduniquelabels/13newversusHOST766 recorded EXACTLY in sampled-labels-and-host-delta.json. "
+    "Coordinator established no new ambiguity; genericmeaningFallbackNeedsSemanticReview=true NOT a proved "
+    "defect or completed independent confirmation. "
+    "Onlyこう persistedgood/done;fullコウ/ク/いさお retained;quizKunyomi[];5injectedstrokes/"
+    "trace/recall/4pairs8directions/2activatedbaselinepairs/3exactreusedchanges/article/systemBack/offlinepassed. "
+    "19Han/fourfamilies/76glyph+8wordrasters/3panels/34originalPNGs+8contactsheets archived; "
+    "coordinator viewed3originalpanels,meaningPNG,all8sheets. No established glyph/layout defect; "
+    "readingtable sideways-scroll guidance/pairedcolumnviews. Raster/cmap not readability, "
+    "drawing shape-only fallback not MLKit/humanmastery. OwnedreadonlyAPI35 emulator5580parent16412/"
+    "qemu7856stopped;192mgrowth576mmax unchanged;parentlockuntouched. "
+    "NEXT SAME101 TWO SERIAL original-family RENDERED confirmations ONLY on this signed unchanged snapshot: "
+    "Claude3bed863f-b19d-4de6-9a11-1ba15e409a84/claude-opus-5.5 then "
+    "GPTd82fb475-a4fb-4ea4-9da9-945d176127cd/gpt-6.1-sol. Include ownoriginalfindings/exactteachingdiff/"
+    "actual768PNGindex/25exactlabels/64choices/13guardresults/knownfullsourceevidence. "
+    "Serialtools/actualprocessexits/fullreports/readlimits required; no freshblindcredit; "
+    "765textual+766HOST inherited, not repeated. Unchanged legacywordguard exact-label audit remains "
+    "UNVERIFIED;896mechanicalchecks NOT complete semantic certification. Do NOT rerun native "
+    "absentchangedpayload/failure/newunresolvedconcern. Independent renderedclosure and ALL original "
+    "combinedmain/requiredPython/vocabulary/normal signing/ownerfastforward/terminalgreenCI/"
+    "EVERYimmutableZIPmanifesthash/18000entries42MiBcompressed80MiBinflated56MiBretained/"
+    "perfilepathmedia/verifiedownerissue gates remain. No runtime edits/unreviewedpush/102/"
+    "authoragent/concurrentheavywork/secondrunner/signingretry/guardincrease. "
+    "Fresh whollyclean signedheads/main/liveparentancestry/decodedlauncher/exactsession required. "
+    "Parent5920 ownsrunner.lock: no childacquire/delete/unlock/readprobe. Approvedcontrol/committedsource/"
+    "frozeninputs only, not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/"
+    "signinghang/uncertainownership. Any newly established ambiguity needs full frozen source/exactlabels/"
+    "minimalcorrection/audits/manifest/normal signednewfreeze/BOTH originalsession confirmations. "
+    "QualifiedAndroidapprovedpairguard+schemaonly NOT latestappmain. Published127/1228,1101acceptance "
+    "remainder unchanged;sixearlierN2placements separate;compatibleAndroid#125+#132 required;"
+    "oldclientsignorecuration/guards. Physicalphone/generalrelease/whole-setoutstanding;projectincomplete. "
+    "All prior gates/limitations retained verbatim in historicalExecution767Before768Native.nextAction."
+)
+checkpoint = {
+    "schemaVersion": 1, "execution": 768, "checkpoint": 768, "batch": "101",
+    "status": "continue", "stage": "batch-101-native-passed-awaiting-rendered-confirmations",
+    "recordedAt": datetime.now(timezone.utc).isoformat(),
+    "savedCommit": head, "signature": "G", "qualifiedAndroidHead": native.APP,
+    "testedContentHead": native.BASE, "archiveContentSnapshot": "93540981895e8586c9227098214d04aa56a767c3",
+    "evidence": "docs/n1-sources/execution-768.json", "issueUpdate": posted["url"],
+    "ownerIssueAuthorAndExactBodyVerified": True,
+    "nativeExecuted": True, "nativeMechanicalChecksPassed": True,
+    "terminalSuccessCases": 2, "nativeFailures": 0, "nativeSkipped": 0,
+    "kanjiDirectGuardChecks": 2912, "nontransitiveNeighborChecks": 2496,
+    "preservedWordGuardChecks": 896, "productionChoiceChecks": 64,
+    "actualN1CuratedAvailable": 1, "actualN1FallbackOptions": 2,
+    "sampledUniqueLabels": 25, "newSampledLabelsVersusHost766": 13,
+    "ownedHelperStopped": True, "runtimeHashesVerified": 8455,
+    "contentVersion": runtime["contentVersion"], "manifestEqualToCompiled767Archive": True,
+    "coordinatorRenderedInspectionDone": True, "originalPngs": 34, "contactSheetsViewed": 8,
+    "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+    "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+    "reviewClosed": [], "published": [], "dedicatedWorktreesClean": True,
+    "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+    "publishedAdditions": 127, "remainingAdditions": 1101,
+    "lastPublishedCommit": before["lastPublishedCommit"],
+    "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+    "wholeProjectComplete": False, "nextBatchStarted": False,
+    "nextAction": next_action, "blocker": None,
+    "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+}
+after = copy.deepcopy(current)
+assert "execution768CoordinatorCheckpoint" not in after
+assert "historicalExecution767Before768Native" not in after
+after["historicalExecution767Before768Native"] = copy.deepcopy(prior)
+after["execution768CoordinatorCheckpoint"] = checkpoint
+changed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+for key in changed:
+    after[key] = checkpoint[key]
+for key, value in before.items():
+    if key not in changed:
+        assert after[key] == value, key
+temporary = CONTROL / "progress.json.768-finish.tmp"
+native.save(temporary, after)
+assert native.load(CONTROL / "progress.json") == current
+os.replace(temporary, CONTROL / "progress.json")
+assert native.load(CONTROL / "progress.json") == after
+native.save(LOG / "checkpoint-768-summary.json", checkpoint)
+print(json.dumps({"checkpoint": 768, "status": "continue", "savedCommit": head,
+                  "historicalRootKeysPreserved": len(before), "issueUpdate": posted["url"]}, indent=2))

@@ -1,0 +1,67 @@
+import datetime
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+
+CONTROL = Path(__file__).resolve().parent
+SESSION = "b683cc5d-e782-4126-bed9-1748b95f8bdb"
+LOG = CONTROL / "logs" / SESSION
+path = CONTROL / "progress.json"
+original = json.loads(path.read_text(encoding="utf-8-sig"))
+assert original["checkpoint"] == 767 and original["status"] == "continue"
+assert "execution768StartingState" not in original
+request = (LOG / "request.txt").read_bytes()
+text = request.decode("utf-8-sig")
+checkpoint = json.loads(text.split(
+    "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1
+)[1])
+assert checkpoint["execution767CoordinatorCheckpoint"]["savedCommit"] == "223b227af1eb3220272346957f312bb829e9510e"
+content = CONTROL.parent / "learning-japanese"
+manifest = json.loads((content / "manifest.json").read_text(encoding="utf-8"))
+count = 0
+for section_name, section in manifest.items():
+    if not isinstance(section, dict):
+        continue
+    for name, expected in section.items():
+        data = (content / name).read_bytes()
+        if section_name not in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}:
+            data = data.replace(b"\r\n", b"\n")
+        assert hashlib.sha256(data).hexdigest() == expected, name
+        count += 1
+frozen_manifest = subprocess.check_output(
+    ["git", "-C", str(content), "show", "93540981895e8586c9227098214d04aa56a767c3:manifest.json"]
+)
+assert frozen_manifest == (content / "manifest.json").read_bytes()
+state = {
+    "execution": 768, "batch": "101",
+    "startedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    "startingHead": "223b227af1eb3220272346957f312bb829e9510e",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": subprocess.check_output(["git", "-C", str(content), "rev-parse", "origin/main"], text=True).strip(),
+    "scope": "SAME101 execute exact NEW767 APKs on freshly owned native emulator; signed LOCAL evidence checkpoint only; no reviewer/publication/102.",
+    "request": {
+        "sha256": hashlib.sha256(request).hexdigest(), "bytes": len(request),
+        "characters": len(text), "lines": len(text.splitlines()),
+        "completeFileLoadedAndCheckpointParsed": True,
+        "limits": "Entire request decoded and complete checkpoint parsed. Operative contract, complete issue and final767 directly inspected; historical middle parsed, not freshly semantically rereviewed.",
+    },
+    "runnerPreflight": json.loads((LOG / "preflight-768.json").read_text(encoding="utf-8-sig")),
+    "artifactPathPreflight": "Approved committed source/evidence, frozen workspace inputs and durable control helpers only; optional historical-session recipes not accessed.",
+    "actualNewPermissionDenials": [],
+    "runtimeHashesVerified": count, "contentVersion": manifest["contentVersion"],
+    "manifestSha256": hashlib.sha256(frozen_manifest).hexdigest(),
+    "compiledArchiveRuntimeEqualityVerified": True,
+}
+updated = dict(original)
+updated["execution768StartingState"] = state
+updated["stage"] = "batch-101-native-execution-in-progress"
+temporary = CONTROL / "progress.json.768-start.tmp"
+assert not temporary.exists()
+temporary.write_text(json.dumps(updated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+os.replace(temporary, path)
+reread = json.loads(path.read_text(encoding="utf-8-sig"))
+assert all(reread[k] == v for k, v in original.items() if k != "stage")
+(LOG / "starting-state-768.json").write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+print("Starting scope persisted; complete request parsed; runtime hashes verified:", count)
