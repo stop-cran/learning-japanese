@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "execution": 626,
+  "batch": "088",
+  "status": "published-verified-bounded-owner-testing",
+  "startingState": {
+    "execution": 626,
+    "batch": "088",
+    "startedAt": "2026-11-07T00:59:39.600058+00:00",
+    "startingHead": "77a1a79b8c1baf9a1145929aeb49cce1d27e4f41",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "8a36f8cd81c0e35c330079881cac1a1f3a771e26",
+    "scope": "SAME088 normal owner fast-forward publication, exact CI/public ZIP/owner issue verification; yield before089. No new reviewer/native/host absent change.",
+    "request": {
+      "sha256": "a8476c77be49834e1936e8221905c7ceb49ffa6721ab1f38e8fe404a42efb0d5",
+      "bytes": 3226742,
+      "characters": 3204196,
+      "lines": 42732,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and complete checkpoint parsed; operative contract, entire approved issue and final625 directly inspected. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerLockRole": "Live parent19008 ancestry, decoded runner.ps1 command and exact current session verified; no child acquisition/delete/unlock.",
+    "ancestryPids": [
+      20888,
+      9680,
+      3480,
+      30524,
+      19008,
+      30364,
+      31588,
+      28600,
+      23800,
+      1508,
+      1320,
+      1196
+    ],
+    "artifactPathPreflight": "Approved control helpers, committed source/review packets and frozen workspace inputs only; no optional historical-session artifact accessed.",
+    "actualNewPermissionDenials": []
+  },
+  "publicationRecord": "batch-088-publication.json",
+  "acceptedCommit": "77a1a79b8c1baf9a1145929aeb49cce1d27e4f41",
+  "counts": {
+    "kanji": 1111,
+    "words": 5067,
+    "n1Labels": 120,
+    "namedSourceMembersPresent": 125,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 115,
+    "remainingAdditions": 1113,
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 118,
+    "batchChangedReusedArticles": 0,
+    "allMappedReciprocalPairs": 1,
+    "mappedDirectedLinks": 2,
+    "activatedBaselinePairs": 0,
+    "separateExceptionPreserved": "\u5996",
+    "separateEarlierLevelSourceMembers": [
+      "\u4fdd",
+      "\u6848",
+      "\u6d3e",
+      "\u7b2c",
+      "\u7b56",
+      "\u7d50"
+    ],
+    "earlierPlacementsCountedAsIssue60AcceptedBatches": false
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42321575629,
+    "headSha": "77a1a79b8c1baf9a1145929aeb49cce1d27e4f41",
+    "jobs": [
+      {
+        "completedAt": "2026-11-07T01:02:00Z",
+        "conclusion": "success",
+        "databaseId": 128247126041,
+        "name": "validate",
+        "startedAt": "2026-11-07T01:00:16Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-07T01:00:18Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-07T01:00:17Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:22Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-07T01:00:18Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:23Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-07T01:01:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:27Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-07T01:01:23Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:39Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-07T01:01:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:54Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-07T01:01:39Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:56Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-07T01:01:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:57Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-07T01:01:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:58Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-07T01:01:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:58Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-07T01:01:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:58Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-07T01:01:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-07T01:01:58Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-07T01:01:58Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42321575629/job/128247126041"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "77a1a79b8c1baf9a1145929aeb49cce1d27e4f41",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/77a1a79b8c1baf9a1145929aeb49cce1d27e4f41",
+    "sha256": "e86ff3ceb48ff0cae37a7c675f57e8f5f4c9adee5b0f908734ec89df6e782e1c",
+    "manifestEqual": true,
+    "contentVersion": "afff40af0e155dbe",
+    "verifiedRuntimeHashes": 8423,
+    "zipEntries": 8445,
+    "compressedBytes": 30821200,
+    "inflatedBytes": 44567583,
+    "retainedBytes": 44299245,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "inheritedAcceptanceRecord": "execution-625.json",
+  "runtimeBytesUnchanged": true,
+  "runtimePublished": true,
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "newReviewNativeHostRuns": 0,
+  "limits": {
+    "combined": "Local combined-tree acceptance only, not publication or fresh linguistic/native review. Existing vocabulary pilot2122/2431 is consistency, not full coverage. Original source/process/read-depth/denial/OOM/downscale/pool/font/MLKit/phone limitations and optional dispositions preserved. Physical phone/general release/whole set outstanding.",
+    "sourceText": [
+      "Textual closure only. Fresh non-skipped Android/native/fourfont/visual/combinedmain/signing/publication gates pending; runtime not accepted or published.",
+      "Both actual model families independently received identical141101byte2665line packet with25distinct completeJMdictfamilies,6rawcharacters,14completearticlebodies including2new and0changedreuseddiffs. Each returned one exact fullpacketview, no truncation/tooloverlap/unfinishedtool. Bytes do not prove comprehension or equivalent fresh-read depth; Claude's rough2620line estimate is retained in its originalreport.",
+      "Original reports preserved verbatim. No author adjudication or other report supplied to initial reviewers. No teaching fix needed; zero dependent textual confirmations, original sessions retained for later visuals.",
+      "PublicDaijisen/Jitsu/Nikkoku text extracted by coordinator from committedHTML; formatting/links stripped, imageplaceholders retained. Not independentupstream retrieval, historical-glyphinspection or contemporaryfrequencymeasurement.",
+      "All four rawreadings/order preserved: on\u30ac\u30a4/\u30ab\u30a4 and undottedkun\u304b\u3061\u3069\u304d/\u3084\u308f\u3089\u3050. Only\u30ac\u30a4selected, explicitkun[]. Characterdictionary glosses are not manufactured ordinary wordspellings. No frequency/name-only inference or wordlevel inferred.",
+      "Oneallmappedpair/twodirections, noactivatedbaselinepair/reusedteaching. Fourdirectguards not transitivecliques or universal livepool safety. Allthree curatedwrongcards N1-available; actualN1/All production and broader custom/randompools remain uncertified.",
+      "All27scopedHan especially\u51e0/\u8c48/\u9b28 missingmainbundledcmap needfreshnativefourfont/systemfallback legibility; cmapabsence notglyphfailure. Twelvepinnedstrokes unchanged. Inheritedall40font evidence stayshistorical.",
+      "QualifiedTESTONLYAndroid1c1b7bf4 atop unchangedproductionf9b59a2 is not latestappmain. Compatibleclientf9b59a2+ required; oldclients ignorecuration/wordguards. Physicalphone/generalrelease/whole-set outstanding.",
+      "Published114/1228,1114acceptanceremainder unchanged. Sixseparate earlierN2sourcemembers\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 are not acceptedissue60 additions or candidates toduplicate/relevel; separate\u5996exception retained.",
+      "Alloriginalnormalmerge/substantiveteachingreview/validation/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/perfilemedia/safepaths/ownerissue gates remain; no guardincrease or algorithmchange.",
+      "Liveparent19008 retainsrunner.lock; nochildacquisition/delete/unlock. Approvedcontrolhelpers/committedsourcepackets/frozenworkspaceinputs only; nooptionalhistoricalsessionhelper access, policychange or actualnewpermissiondenial."
+    ],
+    "visual": [
+      "No fresh full lexical/source review or independent Git/upstream verification.",
+      "Eleven decoded image payloads per original reviewer; actual tool resizing and dimensions recorded, not byte-identical source views.",
+      "108individual+4wholewordPaint probes recycled, not separately viewed exportedPNGs.",
+      "No fresh native/Android624 execution; qualified TESTONLY app retains productionf9b59a2 and is not latestappmain.",
+      "Injectedtrace/giveup not humanhandwriting/offlineMLKit/phone; no physicalphone/native-speaker/learningeffectiveness certification.",
+      "Initial Claude two text views overlapped; complete original deviation preserved and corrected with same-session strictlyserial text rereads, not erased.",
+      "Combined current-main acceptance/normal signing/publication/terminalCI/every immutableZIP hash/phone/generalrelease/whole-set remain later gates."
+    ],
+    "visualDispositions": [
+      {
+        "claim": "Actual glyph/article/session rendering unverified in initial textual reviews",
+        "status": "resolved",
+        "scope": "bounded supplied API35 captures",
+        "evidence": "Both original reviewers decoded all eleven requested PNGs: eight mapped sheets cover46captures and three original font panels. All27Han including U+51E0/U+8C48/U+9B28 readable/distinguishable in four production font selections; both complete article projections readable.",
+        "limits": "Tool resized payloads recorded in coverage. No fallback font-face, native-speaker, physical-phone or112PaintPNG claim."
+      },
+      {
+        "claim": "N1/All fallback could offer overlapping victory-related choices",
+        "status": "resolved",
+        "scope": "two tested production configurations only",
+        "evidence": "Both inspected pictured victorysong;triumph versus \u51e1commonplace;mediocre/\u51f8convex;protruding/\u51f9concave;sunken. N1 and All production route receipts independently record exactly these four identities,3curatedavailable/0fallback.",
+        "limits": "All configuration is supplied JSON, not a separately pictured All question; no futurecustompool/oldclient certification."
+      },
+      {
+        "claim": "Side-scroll table clipping, word wrapping and full-readings feedback",
+        "status": "optional",
+        "evidence": "Complementary captures expose complete table columns with explicit scrolling instruction. Character-dictio/nary wrap cosmetic; feedback full readings followed by article explanation. No established content defect.",
+        "decision": "No article/app edit. Preserve original observations without claiming every screen qualifies all source-only readings."
+      },
+      {
+        "claim": "Original wording suggestions, \u5c71 target and destination\u3078 source limitation",
+        "status": "optional",
+        "evidence": "Original textual reconciliation620 already preserves and adjudicates these: three nonblocking wordings, mechanical target verification and coordinator Tofugu directional-particle evidence. Claude did not independently verify them in visual follow-up; this remains a reviewer evidence limit, not a new unresolved construction claim.",
+        "decision": "No content edit or new source-review credit; retain both original reports and prior evidence-based dispositions."
+      },
+      {
+        "claim": "Native import, persisted grade/key queues and route assertions",
+        "status": "resolved",
+        "scope": "supplied native623 receipts only",
+        "evidence": "Both distinguish actual visible selection/question/feedback/done/drawing/article screens from imported counts, queues/persistence/offline/Back assertions supplied by passing native tests.",
+        "limits": "Not reviewer-executed tests, real handwriting, offlineMLKit, physical phone or new native624 execution."
+      }
+    ],
+    "clarification": "Historical pending gates remain historical, not erased: combined625 and accepted/terminal626 receipts discharge only their recorded scope. Original source/process/denial/OOM/read-depth/downscale/font/pool/MLKit/phone limitations and optional dispositions remain."
+  },
+  "diagnostics": [
+    "Initial prepublication check stopped before any push: helper mistakenly compared rawExecutionSha256 with the structured execution.json bytes. Verified it against the actual committed raw .jsonl and checked the structured model/hash fields separately; no evidence or acceptance gate changed."
+  ],
+  "terminalLocalValidation": [
+    {
+      "path": "docs/n1-reviews/batch-088-publication-626/validate-626.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "path": "docs/n1-reviews/batch-088-publication-626/manifest-626.txt",
+      "sha256": "de10490854ca4a80052fd341ef16d796caaf53044bb4205e9b2c895a94f49759",
+      "exitCode": 0
+    },
+    {
+      "path": "docs/n1-reviews/batch-088-publication-626/budget-626.txt",
+      "sha256": "a030e43869c0b298c21b440da1bdd3b26a024f9ae18c5d9e7eb1e20c14f5d3b6",
+      "exitCode": 0
+    }
+  ],
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false
+}
