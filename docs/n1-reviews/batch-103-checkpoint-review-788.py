@@ -16,6 +16,7 @@ L = C / "logs" / "d195583f-f80d-422a-9401-2a01567f444d"
 INITIAL = "2a296c3f1cadca725b80274f7e312773f4c18ca8"
 APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
 MAIN = "a38f4cf554300ce34ee65aada79e87b7c9d0319e"
+REVISED = "08e76c1688ada4898a79e25e13650687dadf65d1"
 STAGE = "batch-103-textual-review-closed-runtime-acceptance-pending"
 NEXT = (
     "SAME103 fresh qualifiedAndroidbf30cdead HOST acceptance checkpoint: non-skipped RealContentTest/"
@@ -305,5 +306,280 @@ def freeze():
     print("Both original reviews preserved; minimal changed-tree correction audited and ready for normal signed local freeze.")
 
 
+def record():
+    common()
+    assert git("rev-parse", "HEAD") == REVISED and git("rev-parse", "HEAD^") == INITIAL
+    before = load(V / "batch-103-initial-reconciliation-788.json")
+    confirmations = {}
+    for label, model in [("claude", "claude-opus-5.5"), ("gpt", "gpt-6.1-sol")]:
+        prefix = f"batch-103-confirmation-{label}"
+        execution = load(V / (prefix + "-execution.json"))
+        coverage = load(V / (prefix + "-coverage.json"))
+        assert execution["snapshot"] == coverage["snapshot"] == REVISED
+        assert execution["sessionId"] == before["processes"][label]["sessionId"]
+        assert execution["exitCode"] == 0 and execution["actualModels"] == [model]
+        assert execution["usageCurrentModel"] == model and coverage["allAssignedRangesReturned"]
+        assert not execution["observedToolOverlaps"] and not execution["unfinishedTools"]
+        assert execution["availableTools"] == ["view"] and execution["multiToolResponseCount"] == 0
+        assert len(execution["toolCalls"]) == 1
+        call = execution["toolCalls"][0]
+        assert call["success"] and call["exactRequestedTextContainedInResult"] and not call["truncationMarker"]
+        assert absent(execution["launcherPid"])
+        assert sha(V / (prefix + ".md")) == execution["reportSha256"]
+        assert sha(V / (prefix + ".jsonl")) == execution["rawExecutionSha256"]
+        confirmations[label] = {k: execution[k] for k in [
+            "launcherPid", "sessionId", "startedAt", "completedAt", "exitCode", "actualModels",
+            "snapshot", "reportSha256", "rawExecutionSha256"]}
+        confirmations[label].update(
+            report=prefix + ".md", execution=prefix + "-execution.json",
+            coverage=prefix + "-coverage.json", allAssignedRangesReturned=True,
+            toolCalls=1, observedToolOverlaps=0,
+            losslessExecutionArchive=archive(V / (prefix + ".jsonl")))
+    assert before["processes"]["gpt"]["completedAt"] < confirmations["claude"]["startedAt"]
+    assert confirmations["claude"]["completedAt"] < confirmations["gpt"]["startedAt"]
+    runtime = audit_runtime()
+    assert runtime == load(V / "batch-103-runtime-correction-audit-788.json")
+    required = load(V / "batch-103-confirmation-required-review-ranges.json")[0]
+    assert required["end"] == 502 and sha(C / "batch-103-confirmation-packet.txt") == required["sha256"]
+    hypotheses = before["hypotheses"]
+    hypotheses[1].update(
+        status="withdrawn",
+        finalDisposition="Original Claude confirmation withdraws the hypothesis: context-dependent pep-talk paraphrase is supported, not an asserted literal JMdict gloss. GPT retains original CLEAN.")
+    finding = before["finding"]
+    finding.update(
+        status="resolved", revisedTeachingSnapshot=REVISED,
+        finalDisposition="Original Claude confirms minor English ambiguity resolved, high confidence. Original GPT accepts clarity improvement but explicitly does not retroactively classify original English as a proved error. This calibrated disagreement is preserved; both find no remaining in-scope textual defect.",
+        bothOriginalSessionsConfirmed=True)
+    verdicts = {
+        unit: {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "textComprehensibility": "CLEAN"}
+        for unit in ["kanji/励.md:1-53", "words/激励.md:1-32", "words/励む.md:1-43",
+                     "words/励ます.md:1-38", "words/応援.md:40",
+                     "words/慰める.md:33", "words/学問.md:21"]
+    }
+    reconciliation = {
+        "schemaVersion": 1, "execution": 788, "batch": "103",
+        "status": STAGE, "originalTeachingSnapshot": INITIAL, "revisedTeachingSnapshot": REVISED,
+        "initialModels": before["initialModels"], "processes": before["processes"],
+        "confirmations": confirmations,
+        "serialReviewerProcessesVerified": True, "allInternalToolsSerial": True,
+        "eachOriginalReportArchivedBeforeNextLaunch": True, "allAssignedRangesReturned": True,
+        "initialPacketBytes": 267532, "initialPacketLines": 5542,
+        "confirmationPacketBytes": 30573, "confirmationPacketLines": 502,
+        "completeFamiliesSupplied": 78, "rawCharacterRecordsSupplied": 11,
+        "completeArticleBodies": 38, "newArticleBodies": 4, "changedReusedPassages": 3,
+        "verdicts": verdicts, "findings": [finding], "hypotheses": hypotheses,
+        "optional": before["optional"], "consequentialUnresolvedChangedTeachingClaims": [],
+        "coordinatorEvidence": before["coordinatorEvidence"],
+        "runtime": runtime,
+        "boundedEvidenceLimits": before["limits"] + [
+            "Confirmations reread four complete current new articles, four complete relevant families and four extracted public dictionary texts. Broader78-family/34comparison/guard/navigation scope carried forward from originals, not freshly repeated.",
+            "Reused navigation-only passages not supplied again in confirmations; initial CLEAN verdicts carried forward explicitly. Coordinator runtime diff proves they are unchanged.",
+            "Native 厂 fallback/readability in allfourfonts/default remains mandatory; neither reviewer independently reproduced47Han/cmap inventory.",
+            "No exhaustive whole-corpus/future-pool semantic guarantee, native-speaker approval, physical-phone/general-release acceptance or learning-effectiveness claim.",
+        ],
+        "matchedSampleContributions": {
+            "shared": "All seven scoped units CLEAN after confirmation, three raw readingentries/twoactualkeys/allocation, conjugations/eventroles,27directword/fourkanjiguards/sixlinkdirections and preserved navigation-only legacy content accepted textually.",
+            "claudeUnique": "Identified avoidable imperative-looking English translation; minimal declarative clarification implemented and confirmed. Also raised contextualが and pep-talk hypotheses, both withdrawn in original-session evidence reconciliation; three optional repetitions/display hints declined.",
+            "gptUnique": "No unique proved defect; retained original declarative/dictionary-phrase acceptance and explicit non-retroactive classification. Detailed sense-local homograph/spelling restrictions support current guards, not invented new defect credit.",
+            "limits": "Common snapshot/scope/source access; compared equivalent findings/hypotheses/optional/limits. Actual byte return is not equal read depth or a general model benchmark.",
+        },
+        "processDiagnostic": before["processDiagnostic"],
+        "initialReviewsComplete": True, "textualAcceptanceComplete": True,
+        "fullBatchAcceptanceComplete": False, "reviewClosed": [], "runtimeChangedThisExecution": True,
+        "runtimePublished": False, "freshAndroidOrNativeClaimed": False,
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextAction": NEXT,
+    }
+    save(V / "batch-103-reconciliation.json", reconciliation)
+    ledger_path = S / "batch-103-progress.json"
+    ledger = load(ledger_path)
+    ledger.update(status=STAGE, nextAction=NEXT)
+    ledger["textualReview"].update(
+        revisedSnapshot=REVISED, textualAcceptanceComplete=True,
+        reconciliation="docs/n1-reviews/batch-103-reconciliation.json",
+        bothOriginalSessionsConfirmed=True, fullBatchAcceptanceComplete=False,
+        scopeLimits=reconciliation["boundedEvidenceLimits"])
+    ledger["limits"][0] = "Textual reviews and both original-session confirmations closed; full batch acceptance/publication still pending."
+    ledger["limits"][3] = "Fresh non-skipped qualified Android, ContentSyncONCE/native/rendered/font/finite-option acceptance and all publication gates remain."
+    save(ledger_path, ledger)
+    freeze_evidence = load(L / "freeze-evidence-788.json")
+    save(S / "execution-788.json", {
+        "schemaVersion": 1, "execution": 788, "checkpoint": 788, "batch": "103",
+        "stage": STAGE, "originalTeachingSnapshot": INITIAL, "revisedTeachingSnapshot": REVISED,
+        "androidSignedHead": APP, "freshOriginMain": MAIN,
+        "startingState": load(C / "progress.json")["execution788StartingState"],
+        "initialReviewers": before["processes"], "confirmations": confirmations,
+        "reconciliation": "docs/n1-reviews/batch-103-reconciliation.json",
+        "checks": freeze_evidence["checks"], "pythonTestsPassed": 43, "validatorErrors": 0,
+        "localBudget": freeze_evidence["budget"], "runtimeHashesVerified": 8463,
+        "contentVersion": runtime["contentVersion"], "runtimeChangedThisExecution": True,
+        "onlyRuntimeChange": runtime["onlyTeachingChange"], "runtimePublished": False, "reviewClosed": [],
+        "initialReviewsComplete": True, "bothOriginalSessionsConfirmed": True,
+        "textualAcceptanceComplete": True, "fullBatchAcceptanceComplete": False,
+        "freshAndroidOrNativeClaimed": False, "publishedAdditions": 129,
+        "remainingAdditions": 1099, "lastPublishedCommit": MAIN,
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "parentLockTouched": False,
+        "optionalHistoricalSessionHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "processDiagnostic": before["processDiagnostic"],
+        "localAuditDiagnostic": "First correction audit compared Git blobCRLF to universal-newline text and failed an assertion after preserving initial JSONL archives. Corrected comparison to normalize CRLF, verified existing archives byte-for-byte against original control outputs, resumed without overwriting original reports or archives. No source/runtime semantic relaxation or signing retry.",
+        "nextAction": NEXT,
+    })
+    for name in ["checkpoint-review-788.py", "confirm-batch-103-788.py"]:
+        target = ("batch-103-checkpoint-review-788.py" if name.startswith("checkpoint")
+                  else "batch-103-confirmation-recipe.py")
+        shutil.copyfile(C / name, V / target)
+    shutil.copyfile(C / "post-batch-103-review-788.ps1",
+                    V / "batch-103-post-batch-103-review-788.ps1.txt")
+    archive(V / "batch-103-confirmation-packet.txt")
+    (C / "commit-review-788.txt").write_text(
+        "Record batch 103 textual reconciliation and original-session confirmations\n\n"
+        "Textual acceptance only; qualified Android/native/rendered and publication remain pending.\n\n"
+        "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\n",
+        encoding="utf-8")
+    print("Both original sessions confirmed; final textual reconciliation and pending runtime gates persisted.")
+
+
+def signed_final():
+    common()
+    head = git("rev-parse", "HEAD")
+    assert head != REVISED and git("rev-parse", "HEAD^") == REVISED
+    assert not git("status", "--porcelain")
+    changes = git("-c", "core.quotepath=false", "diff", "--name-only", REVISED, head).splitlines()
+    assert all(n.startswith("docs/n1-reviews/batch-103-")
+               or n in {"docs/n1-sources/batch-103-progress.json", "docs/n1-sources/execution-788.json"}
+               for n in changes), changes
+    assert not git("diff", REVISED, "--", "kanji", "words", "articles", "strokes", "manifest.json", "tools")
+    runtime = audit_runtime()
+    assert runtime == load(V / "batch-103-runtime-correction-audit-788.json")
+    return head, runtime
+
+
+def package_confirmation_tasks():
+    common()
+    assert git("rev-parse", "HEAD") == REVISED
+    receipts = [archive(V / f"batch-103-confirmation-{label}-task.txt")
+                for label in ["claude", "gpt"]]
+    save(V / "batch-103-confirmation-evidence-packaging-788.json", {
+        "snapshot": REVISED, "archives": receipts,
+        "diagnostic": "Final staged whitespace check found an extra blank EOF line in each exact original confirmation prompt. Archived original prompt bytes losslessly rather than modifying reviewer inputs or weakening the check. No runtime change or signing attempt occurred."})
+    shutil.copyfile(Path(__file__), V / "batch-103-checkpoint-review-788.py")
+    print("Exact original confirmation prompts archived without changing their bytes.")
+
+
+def issue():
+    head, runtime = signed_final()
+    path = C / "batch-103-review-788-issue.txt"
+    assert not path.exists()
+    path.write_text(
+        "Batch103 / checkpoint788: **two independent textual reviews and both original-session "
+        "confirmations completed; runtime/native/publication acceptance pending**.\n\n"
+        f"Normally signed local evidence `{head}` preserves initial snapshot `{INITIAL}` and revised "
+        f"teaching `{REVISED}`. Claude Opus5.5 (`claude-opus-5.5`) and GPT-6.1 Sol (`gpt-6.1-sol`) "
+        "ran serially, view-only, against the same267532-byte/5542-line blind packet:47member+31comparison="
+        "78complete JMdict families,11raw character records,38complete article bodies,4archived public "
+        "dictionary texts. Each first read returned the exact full packet. GPT made3additional serial "
+        "overlapping tail reads (first2truncated); all original scope already returned, no missing scope. "
+        "Actual models, zero internal tool overlap, and real process exit before each subsequent "
+        "review verified; complete original reports, raw/model/session/range evidence preserved.\n\n"
+        "**One minimal clarification:** 激励's team example now translates as **'They encourage the team.'** "
+        "instead of imperative-looking 'Encourage the team.' Japanese/kana unchanged. Claude identified "
+        "minor ambiguity and confirms resolution; GPT accepted the original as a dictionary-style "
+        "translation and accepts the clarity improvement without retrospectively calling it a proved "
+        "error. That calibrated disagreement is retained, not decided by votes. Both original sessions "
+        "confirm the same signed revised tree and find no consequential textual defect/regression. "
+        "Claude withdraws its contextualが/pep-talk hypotheses; optional repetitions/display hints are "
+        "not required changes. All4newarticles and3exact navigation-only reused passages CLEAN in "
+        "the three bounded textual facets. Confirmations reread4currentarticles/4relevantfamilies/"
+        "4dictionarytexts; unchanged broader scope carried forward, not claimed freshly reread. "
+        "Byte access/self-report is not equal semantic depth or independent upstream retrieval.\n\n"
+        "The three retained/selected full readings still yield **TWO keys れい/はげむ**, not an "
+        "independentはげます question. Original786three-keyclaim remains explicitly corrected, not rewritten. "
+        "Plain励ます versus polite励みます, activityに versus personを, conjugations/passive roles, "
+        "4directkanji/27directwordguards,3mappedpairs/6directions and navigation-only legacy metadata/"
+        "levels/identities preserved. No supportwordlevel inferred. Actual47Han still includes "
+        "**厂 U+5382**, absent from all3bundledcmaps: NOT a glyphfailure or native-readability "
+        "result. Its specific fallback/readability in all4fonts/default remains mandatory.\n\n"
+        f"43focused tests, validator0errors, regenerated manifest/batch-baseline-link-reading audits, "
+        f"vocabulary consistency and unchanged local budgets passed; all**8463runtime hashes** verified, "
+        f"contentVersion`{runtime['contentVersion']}`. Existing vocabulary coverage remains2122/2431pilot. "
+        "Runtime diff since initial review is ONLY this English clarification plus generated manifest. "
+        "Local initial auditCRLF comparison diagnostic corrected without semantic relaxation. One optional "
+        "live-log probe hit an open-writer sharing conflict; no live retry/access-policy change, waited "
+        "for reviewer exit, then normal closed-output archiving succeeded. Not an ACL/policy denial; "
+        "original error/disposition retained. Parent5920/exact session/ancestry verified; runner.lock "
+        "untouched; durable control/committed evidence only.\n\n"
+        "**129/1228 published;1099 acceptance remainder unchanged.** No push, fresh Android/native/"
+        "rendered acceptance or batch104. Next SAME103 non-skipped qualifiedAndroid host checks and "
+        "actual production N1/All/custom meaning-builder/fallback/direct-symmetric-nontransitive guards "
+        "(only劣 of劣万厚 isN1), then current-content ContentSyncONCE/native/four-font/厂fallback/"
+        "rendered finite-option semantic acceptance and every original combined-main/signing/"
+        "owner-fast-forward/terminal-CI/exact-immutable-ZIP/hash/budget publication gate. Approved "
+        "Android`bf30cdead8515739bc0e671d57a54b9a3109dd46` remains qualifiedguard+schemaonly, not "
+        "unrelated latestmain. Compatible stop-cran/kanji-cards-android#125 and "
+        "stop-cran/kanji-cards-android#132 mechanisms required; old clients ignore them. "
+        "Physical-phone/general-release/whole-set acceptance remains outstanding; project incomplete. "
+        "Evidence: docs/n1-reviews/batch-103-reconciliation.json and docs/n1-sources/execution-788.json.\n",
+        encoding="utf-8", newline="\n")
+    (L / "signed-head-788.txt").write_text(head + "\n", encoding="ascii")
+    print("Signed clean local textual acceptance verified; exact owner issue body prepared.")
+
+
+def finish():
+    head, runtime = signed_final()
+    posted = load(L / "issue-788-verified.json")
+    body = (C / "batch-103-review-788-issue.txt").read_text(encoding="utf-8")
+    assert posted["user"]["login"] == "stop-cran" and posted["body"] == body and head in body
+    before, p = load(L / "progress-before-788.json"), load(C / "progress.json")
+    mutable = {"checkpoint", "status", "stage", "batch", "nextAction", "blocker"}
+    assert all(p[k] == value for k, value in before.items() if k not in mutable)
+    receipt = {
+        "schemaVersion": 1, "execution": 788, "checkpoint": 788, "batch": "103",
+        "savedCommit": head, "signature": "G", "originalTeachingSnapshot": INITIAL,
+        "revisedTeachingSnapshot": REVISED, "freshOriginMain": MAIN, "androidSignedHead": APP,
+        "evidence": "docs/n1-sources/execution-788.json",
+        "reconciliation": "docs/n1-reviews/batch-103-reconciliation.json",
+        "contentVersion": runtime["contentVersion"], "initialReviewsComplete": True,
+        "bothOriginalSessionsConfirmed": True, "textualAcceptanceComplete": True,
+        "fullBatchAcceptanceComplete": False, "runtimeDrafted": ["励"], "reviewClosed": [], "published": [],
+        "runtimeChangedThisExecution": True, "runtimePublished": False,
+        "independentReviewersLaunched": 2, "dependentOriginalSessionConfirmations": 2,
+        "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+        "originalSessions": {
+            "claude": "eb1a8995-1568-4cd5-b7bb-0a1056233592",
+            "gpt": "93b54be3-157e-4b13-a32c-e48e9f51c8d8"},
+        "serialReviewerProcessesVerified": True, "allInternalToolsSerial": True,
+        "allAssignedRangesReturned": True, "freshAndroidOrNativeClaimed": False,
+        "pythonTestsPassed": 43, "validatorErrors": 0, "runtimeHashesVerified": 8463,
+        "unresolvedChangedTeachingFindings": [],
+        "readDepthLimits": "Both exact full initial packets returned. GPT3extra overlapping serialtailreads(first2truncated) retained. Confirmations reread4newarticles/4families/4dictionarytexts; broader original scope carriedforward. Byteaccess is not comprehension/equaldepth/upstreamverification.",
+        "publishedAdditions": 129, "remainingAdditions": 1099, "lastPublishedCommit": MAIN,
+        "dedicatedWorktreesClean": True, "originalHistoricalRootValuesPreservedExactly": True,
+        "originalRootKeysCompared": len(before), "ownerIssueAuthorAndExactBodyVerified": True,
+        "issueUpdate": posted["html_url"], "parentLockTouched": False,
+        "optionalHistoricalSessionHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "sharingConflict": "One optional live rawJSONL read failed while reviewer output writer open; no live retry or policy change, waited normal exit and archived closed output. Preserved in reconciliation/execution receipt.",
+        "status": "continue", "stage": STAGE, "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False,
+        "nextAction": NEXT, "blocker": None,
+    }
+    p["execution788CoordinatorCheckpoint"] = receipt
+    p["execution788StartingState"]["status"] = "signed-local-textual-review-checkpoint-complete"
+    p["batch103TextualReviewIssueReceipt"] = {
+        "id": posted["id"], "url": posted["html_url"], "author": posted["user"]["login"],
+        "bodySha256": hashlib.sha256(body.encode("utf-8")).hexdigest(), "verified": True}
+    p.update(checkpoint=788, status="continue", stage=STAGE, batch="103", nextAction=NEXT, blocker=None)
+    assert all(p[k] == value for k, value in before.items() if k not in mutable)
+    save(C / "progress.json", p)
+    persisted = load(C / "progress.json")
+    assert persisted == p
+    assert all(persisted[k] == value for k, value in before.items() if k not in mutable)
+    save(L / "checkpoint-788-final-verification.json", receipt)
+    print(json.dumps({k: receipt[k] for k in ["checkpoint", "savedCommit", "status", "stage", "issueUpdate",
+                                            "originalHistoricalRootValuesPreservedExactly"]}, indent=2))
+
+
 if __name__ == "__main__":
-    {"freeze": freeze, "audit": lambda: print(json.dumps(audit_runtime(), ensure_ascii=True))}[sys.argv[1]]()
+    {"freeze": freeze, "audit": lambda: print(json.dumps(audit_runtime(), ensure_ascii=True)),
+     "record": record, "package": package_confirmation_tasks,
+     "issue": issue, "finish": finish}[sys.argv[1]]()
