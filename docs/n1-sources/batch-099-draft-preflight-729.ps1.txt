@@ -1,0 +1,35 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$session = '74433e37-cb70-4ec6-bd55-433a33d3610c'
+$runner = Get-Content "$control\runner.json" -Raw | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 15692 -or $runner.sessionId -ne $session) { throw 'Uncertain runner ownership' }
+$ancestry = @()
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+while ($process -and $ancestry.Count -lt 12) {
+    $ancestry += $process.ProcessId
+    if ($process.ProcessId -eq $runner.pid) { break }
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+if (-not $process -or $process.ProcessId -ne $runner.pid) { throw 'Expected live parent missing from ancestry' }
+if ($process.CommandLine -notmatch '(?i)-EncodedCommand\s+(\S+)') { throw 'Expected encoded launcher' }
+$decoded = [Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($Matches[1]))
+if (-not $decoded.Contains("& $control\runner.ps1")) { throw 'Wrong decoded launcher' }
+$scriptText = Get-Content "$control\runner.ps1" -Raw
+if (-not $scriptText.Contains("`$lock = [IO.File]::Open((Join-Path `$control 'runner.lock'), 'OpenOrCreate', 'ReadWrite', 'None')") -or
+    -not $scriptText.Contains('$lock.Dispose()')) { throw 'Launcher lock lifetime contract changed' }
+$hash = (Get-FileHash "$control\runner.ps1" -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($hash -ne 'f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af') { throw 'Launcher changed; inspect ownership' }
+$child = Get-CimInstance Win32_Process -Filter "ProcessId=$($ancestry[1])"
+if (-not $child.CommandLine.Contains("--session-id $session")) { throw 'Unexpected coordinator session' }
+[ordered]@{
+    execution = 729
+    sessionId = $session
+    verifiedAt = [DateTimeOffset]::Now.ToString('o')
+    ancestry = $ancestry
+    liveParentPid = $process.ProcessId
+    decodedLauncherMatches = $true
+    launcherSha256 = $hash
+    parentLockRole = 'Live parent launcher owns runner.lock throughout child lifetime; no child acquire/delete/unlock/read-probe.'
+    lockTouched = $false
+} | ConvertTo-Json -Depth 8 | Set-Content "$control\logs\$session\preflight-729.json" -Encoding utf8NoBOM
+Write-Output 'Live launcher ancestry, exact session and parent-only lock role verified.'
