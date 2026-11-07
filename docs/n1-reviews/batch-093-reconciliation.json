@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "execution": 669,
+  "batch": "093",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "27663944c7217a19e7de2f363e1b31a5f13452b6",
+  "reviewedTeachingSnapshot": "27663944c7217a19e7de2f363e1b31a5f13452b6",
+  "teachingChangedAfterInitialReviews": false,
+  "reviewedRuntimeHashes": {
+    "kanji/刑.md": "d0de2941772af4e00aad0987fba8f1fa0616126baa55c1262aa74b288d57be26",
+    "words/刑事.md": "88a510b0e89964856c68ac0ddc53a970ab71b85f9c3a2b858275070b8f6f8105",
+    "kanji/事.md": "3c91cf35f710df7c32304a6fa631f417932d1f5b7a1d83fbdbb5300d84cd935d",
+    "strokes/刑.json": "631e51d3a5d2e63de5fe9dd581f550017c2d250a3bce18628943bea484450dc6",
+    "manifest.json": "e4e4a54741a3700feb7527eff4bc62819d82c32fd5ec404022d52c1ac244ba31"
+  },
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 21112,
+      "sessionId": "c8c0a762-a31b-4dca-a1a0-bc010350ec18",
+      "startedAt": "2026-11-07T07:07:42.954330+01:00",
+      "completedAt": "2026-11-07T07:09:05.773060+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "27663944c7217a19e7de2f363e1b31a5f13452b6",
+      "reportSha256": "a097e0483b7daad4d3669464a6fb8db7296baf6a3d618064754d12910c4aa73e",
+      "rawExecutionSha256": "162c300910ab3d17f93ec85f3d0edfc66a493d09b5ab34dd4ccf89c08ad3cf36",
+      "report": "batch-093-initial-claude.md",
+      "execution": "batch-093-initial-claude-execution.json",
+      "coverage": "batch-093-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 2,
+      "observedToolOverlaps": 0,
+      "firstCallExactFullPacketReturned": true,
+      "redundantTailReads": [
+        {
+          "range": [
+            5300,
+            5392
+          ],
+          "truncated": false,
+          "exactRequestedTextContainedInResult": true
+        }
+      ]
+    },
+    "gpt": {
+      "launcherPid": 1548,
+      "sessionId": "feee7268-db4e-48e3-b7d6-f3568c7173b6",
+      "startedAt": "2026-11-07T07:09:09.649922+01:00",
+      "completedAt": "2026-11-07T07:10:13.703990+01:00",
+      "exitCode": 0,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "27663944c7217a19e7de2f363e1b31a5f13452b6",
+      "reportSha256": "d61743e0066dc43ba75c7eddb613d2ce3fb70c31aabf38e04fc1b1f94a79026c",
+      "rawExecutionSha256": "aa25e633e4df4a92e08f97b0279d353ab832ea4399272278d59a631f554eb60a",
+      "report": "batch-093-initial-gpt.md",
+      "execution": "batch-093-initial-gpt-execution.json",
+      "coverage": "batch-093-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 3,
+      "observedToolOverlaps": 0,
+      "firstCallExactFullPacketReturned": true,
+      "redundantTailReads": [
+        {
+          "range": [
+            5000,
+            -1
+          ],
+          "truncated": true,
+          "exactRequestedTextContainedInResult": false
+        },
+        {
+          "range": [
+            5214,
+            -1
+          ],
+          "truncated": false,
+          "exactRequestedTextContainedInResult": true
+        }
+      ]
+    }
+  },
+  "confirmations": {},
+  "serialReviewerProcessesVerified": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 222131,
+  "initialPacketLines": 5392,
+  "initialDistinctCompleteFamilies": 180,
+  "lexicalFamilies": 157,
+  "comparisonFamilies": 23,
+  "rawCharacterRecords": 8,
+  "completeArticleBodiesSupplied": 15,
+  "newArticleBodies": 1,
+  "changedReusedBodies": 2,
+  "verdicts": {
+    "kanji/刑.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "complete new article"
+    },
+    "words/刑事.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "complete reused article and exact link/four-guard diff"
+    },
+    "kanji/事.md:37": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "added reciprocal-navigation line only; complete article supplied for context"
+    }
+  },
+  "findings": [],
+  "hypothesisDispositions": [
+    {
+      "reportedBy": "Claude",
+      "claim": "Older model/form wording is not an explicit archaic flag in Daijisen.",
+      "status": "optional",
+      "decision": "No edit. The note recognizes the additional senses and explicitly rejects semantic disconnection; it neither labels all model/form compounds obsolete nor prohibits current usage. Both reviewers accept its scoped qualified wording. No dating or frequency inference is certified.",
+      "evidence": "刑.md:45; Daijisen character senses2/3 (型/形通用) and complete JMdict1592030儀刑/儀型/儀形. Recognition is established; a historical dating claim is not added."
+    },
+    {
+      "reportedBy": "Claude",
+      "claim": "文 sentence/writing may overlap in wider quiz pools.",
+      "status": "unresolved",
+      "scope": "later runtime/custom-pool limitation, not an established textual defect",
+      "decision": "Default-four uses three explicit semantically wrong choices. Legal-versus-grammatical sentence is explicit; retain actual N1/All production-choice gate. Do not claim arbitrary pool certification."
+    }
+  ],
+  "reviewReportCorrections": [
+    {
+      "reportedBy": "GPT",
+      "claim": "Activated baseline pair is事/刑事.",
+      "status": "withdrawn",
+      "decision": "Coordinator accounting correction only; preserve original report verbatim. Newly introduced刑 activates baseline刑/刑事, not the existing事/刑事 pair. The two-pair/four-direction count is correct.",
+      "evidence": "batch-093-progress.json activatedBaselinePairs and basefe9e1a37:words/刑事.md metadata [刑,事]; base has事card but no刑card. Current changed component link is刑, current new事line closes the additional mapped pair."
+    }
+  ],
+  "optionalDispositions": [
+    {
+      "reportedBy": [
+        "Claude"
+      ],
+      "claim": "Translate witness example as is questioning a witness.",
+      "status": "optional",
+      "decision": "No edit. Existing is talking to a witness accurately conveys contextual話を聞いています; GPT independently accepts it. Stronger English questioning is not required."
+    },
+    {
+      "reportedBy": [
+        "Claude"
+      ],
+      "claim": "Mention katakanaデカ and add a pointer to reused刑事.",
+      "status": "optional",
+      "decision": "No edit. Whole-word slangでか is already explained in new刑; no new support article or exhaustive slang lesson is needed."
+    },
+    {
+      "reportedBy": [
+        "Claude"
+      ],
+      "claim": "Wrong labels are unambiguous but not very believable.",
+      "status": "optional",
+      "decision": "No edit. These approved existing N1 choices preserve a single defensible answer; shape comparisons形/型remain useful teaching but unsafe wrong answers. No proved defect."
+    },
+    {
+      "reportedBy": [
+        "GPT"
+      ],
+      "claim": "Explain detective designation is not a police rank.",
+      "status": "optional",
+      "decision": "No edit. The current two senses do not equate role with a rank. Public dictionaries corroborate optional clarification; the bounded article need not survey police ranks."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Bothaccept complete刑/刑事andadded事line, readings/curation/specialwholeword/outsidefreeze, legal-role boundaries, examples/translations, shape-onlymnemonic/radicalvariant, threewrongkanjilabels, fourdirectguards and two mapped pairs/four directions.",
+    "claudeUnique": "Nonblocking temporal-wording hypothesis, optional stronger witness translation, slangpointer and distractor plausibility. Wider custom-pool concern is also present in GPT limits, not unique. No unique verified mandatory defect.",
+    "gptUnique": "Optional not-a-rank clarification; original report misidentifies activated baseline pair, corrected above from actual baseline. No unique verified mandatory defect.",
+    "limits": "Common snapshot/task/source access; equivalent observations compared across findings/optional/hypotheses/limits/supportingnotes. No general model ranking, finding quota, native-speaker certification or equal comprehension claim."
+  },
+  "actionableRemainingTeachingFindings": 0,
+  "consequentialUnresolvedTeachingFindings": 0,
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "093",
+    "baseCommit": "fe9e1a37acddae69a3b131bdf2ea01f9ca8cd2f4",
+    "draftKanji": 1,
+    "newWords": 0,
+    "changedReusedArticles": 2,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 1,
+    "readingDispositions": 1,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 180,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "bf4cc85592bb9727",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8436,
+  "previousCompleteSourceBaselineFontStrokeAudit": "docs/n1-sources/batch-093-draft-audit.json",
+  "previousCompleteSourceBaselineFontStrokeAuditSha256": "4097958f4b5b5298ab5d190776453c890b887dabc7dd23d6be1a03fc63942b13",
+  "allMappedReciprocalPairs": 2,
+  "directedLinksVerified": 4,
+  "activatedBaselinePairs": 1,
+  "newDirectWordExclusionPairs": 4,
+  "actualHanCount": 46,
+  "nativeFontPending": [
+    "亅",
+    "刂",
+    "彡"
+  ],
+  "checks": {
+    "validate": {
+      "path": "docs/n1-reviews/batch-093-textual-review-validate-669.txt.gz",
+      "sha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09",
+      "uncompressedSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs/n1-reviews/batch-093-textual-review-manifest-669.txt.gz",
+      "sha256": "23e5df706a62602ad8f003de590c4e2b9d9b5208ee048a6a397556c9abc3edee",
+      "uncompressedSha256": "4d8f2fb05a48248d72c82449a3ab9644088cd2de38e9b42dd5d8a8123ca9ecbd"
+    },
+    "audit": {
+      "path": "docs/n1-reviews/batch-093-textual-review-audit-669.txt.gz",
+      "sha256": "df68df4cce18ac722a73b1f47ad82d870e312a06bf54e4f5a0facaba6bdef00c",
+      "uncompressedSha256": "82817bf5ad78337fbc7d7e397606321b48d861b7b114d14656e8815667ae24e5"
+    },
+    "tests": {
+      "path": "docs/n1-reviews/batch-093-textual-review-tests-669.txt.gz",
+      "sha256": "0407403718273e61692f60348e082ebeb67d7064b079421998b63361d0d8d5a8",
+      "uncompressedSha256": "39c7fc44177df0b0548e8f1de121b86bb7ee275ce3ad94e6cb119970aed1974b"
+    },
+    "vocabulary": {
+      "path": "docs/n1-reviews/batch-093-textual-review-vocabulary-669.txt.gz",
+      "sha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969",
+      "uncompressedSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    "budget": {
+      "path": "docs/n1-reviews/batch-093-textual-review-budget-669.txt.gz",
+      "sha256": "c34b8d231c82efd812cc18848047b83f69ef7602a10e3dfd474d5ea12341bcc4",
+      "uncompressedSha256": "9e0b95a558d65cccfd55633a02cc9dcdb02f2d0f84627cdafb2c1d8a79df9f53"
+    }
+  },
+  "focusedTestsPassedThisCheckpoint": 43,
+  "newNativeOrAndroidClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "nextAction": "SAME093 fresh non-skipped sibling Android RealContentTest THREE cases and RareHanTest ONE case against THIS content tree; preserve exact XML/provenance and normally signed local evidence, then yield. Qualified TESTONLY Android1c1b7bf42cc91d820a93169f1088dc647ac51c0d retains productionf9b59a2, not latest app main. Explicit JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot and ANDROID_HOME=C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk in same shell, one Gradle worker and quoted '-Pkotlin.compiler.execution.strategy=in-process'. Parent19008 already owns runner.lock; NO child reacquisition/delete/unlock or parent-only recovery wrapper copy. Keep exact signed-head/checkpoint/wholly-clean-worktree/verified-parent-ancestry checks; preserve/report/yield actual new denial, signing hang or uncertain ownership. Textual093 closed after serial blind Claude/GPT initials on27663944; no proved teaching defect, consequential unresolved claim or teaching edit. Full rawケイ/emptykun retained; explicit[ケイ]/[] selects onlyけい through own linked existing N3刑事 row. Special whole-wordでか and outside-freezeギョウ remain distinguished. One new刑card/six generated paths, no new support word; reused N3刑事 adds component link/four DIRECT police-label guards only, preserving identity/reading/title/level/inbound探偵guard; 事 adds reciprocal navigation only. Two all-mapped pairs/four directions, one activated baseline刑/刑事 pair (NOT事/刑事; GPT report bookkeeping corrected in reconciliation without changing original). Later native gate requires all46 scopedHan especially亅/刂/彡 across FOUR productionfont families, SIX pinned drawingstrokes, onlyonけい/nokun keys, articles/SystemBack/offline, actualN1/All productionchoices and four direct police guards, fullarchive productionContentSync ONCE with terminalcase0/no skips. Cmapabsence notglyphfailure; originalsessions retained for dependent visuals, no newblindcredit. All original source/baseline/link/reading/twofamily/native/currentmain-normalmerge/substantiveteachingreview/checks/normal-signing/owner-fastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/media/path/ownerissue gates remain. Published119/1228 and1109 acceptanceremainder unchanged; physicalphone/generalrelease/whole-set outstanding. No094, native/reviewer/publication or secondrunner in next hostcheckpoint. Approved control/committed evidence/frozen inputs only; no optional historical-session helper access.",
+  "limits": [
+    "Textual closure only. No fresh Android/native/font/visual/phone or runtime publication acceptance.",
+    "Both actual families received identical222131byte/5392line packet,180completefamilies/eightcharacterrecords/15completearticles. First full-file view returned exact full packet in each process. Claude then made one redundant tail read; GPT two, first of which truncated then recovered. All reads serial, no missing packet lines or active tools; actual process exits verified.",
+    "Returned bytes are not equal comprehension certification. Claude reports counting23comparisonfamilies but not manually tallying157lexicalfamilies, while reading all. Original reports, raw executions, actual model/session/tool ranges retained.",
+    "Public text is coordinator-supplied committed extraction, not independent upstream retrieval. Missing gaiji prevents historical verification; dictionary presence is not frequency. No additional historical dating is certified.",
+    "No teaching edit or dependent textual confirmation was necessary. Original sessions retained for required later rendered confirmations. GPT report baseline-pair error corrected explicitly without altering original report.",
+    "Complete earlier source/baseline/font/stroke audit retained as execution668, not relabelled as fresh full source inspection. Fresh current baseline/runtime/link/reading/quiz audit and all8436manifestpayloadhashes verified; runtime/source bytes unchanged.",
+    "One new刑card, no new support word, N3刑事identity/reading/title/level preserved; only component link/four direct safeguards and事navigation changed. Fullケイ/emptykun retained, onlyけいoffered; specialでかandpublicギョウdistinct.",
+    "All46Han/sixstrokesunchanged; cmapsnotnativelegibility. Fresh四font/亅刂彡/native/drawing/N1-All/reading/Back/offline/ContentSyncONCE and dependent rendered review gates remain.",
+    "QualifiedTESTONLYAndroid1c1b7bf4 retains productionf9b59a2, not latestappmain. Compatibleclientf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+    "Published119/1228,1109acceptanceremainder unchanged; separate earlierN2source保案派第策結 and separate妖exception retained. No094 or wholeprojectcompletion.",
+    "All original normalmerge/substantiveteachingreview/checks/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/media/path/ownerissue gates remain.",
+    "Parent19008retainsrunner.lock untouched; no child acquisition/deletion/unlocking. Approved control/committed packets/frozen inputs only; no optional historical-session-helper access or actual new permission denial."
+  ]
+}
