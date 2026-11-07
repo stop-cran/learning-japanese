@@ -1,0 +1,58 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\8666b32a-3aab-4e57-9367-59f6ace38496"
+$content = "$control\..\learning-japanese"
+$bodyPath = "$control\batch-101-combined-770-issue-body.txt"
+if ((Test-Path "$log\issue-770-posted.json") -or (Test-Path $bodyPath)) { throw 'Do not duplicate issue update' }
+$head = git -C $content rev-parse HEAD
+& "$control\preflight-770.ps1" -ExpectedHead $head -ReceiptName 'preflight-770-before-issue.json'
+if (-not $?) { throw 'Parent/signed-head/clean-state preflight failed' }
+if ((git -C $content rev-parse HEAD^) -ne '7039253dae5c33e11e71990fef25cdecc6fdcecf') {
+    throw 'Unexpected evidence parent'
+}
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-770.json") | ConvertFrom-Json
+if (-not $e.runtimeAccepted -or $e.runtimePublished -or $e.checks.pythonTests -ne 377) {
+    throw 'Combined acceptance not established'
+}
+$b = $e.checks.localArchiveBudgets
+$body = @"
+Checkpoint770, SAME batch101: **combined-current-main acceptance complete locally; not yet published**. Normally signed LOCAL review-closed evidence commit: $head. Evidence: docs/n1-sources/execution-770.json and docs/n1-reviews/batch-101-combined-acceptance-770.json.
+
+Fresh mainba1a7f467a2431523e3131d4f259c1d3260c93af is already ancestor; nonrewriting merge returned Already up to date. No incoming teaching/runtime changes. Fresh checks passed:377 Python tests/no skips, validator0 errors, unchanged regenerated manifest, vocabulary consistency, five frozen inputs/122 complete dictionary families/18 raw character records/full985kanji4942word985stroke baseline, exact membership, all three reading dispositions, thirteen direct guard declarations, four mapped pairs/eight link directions/two activated baseline pairs, five pinned converted paths and actual19Han/font provenance. Vocabulary remains the existing2122/2431 reviewed-prompt pilot; this does not close unrelated coverage gaps.
+
+Every8455 current runtime hash and manifest/version6e9b74967e21fc3c exactly match compiled767's full archive. Qualified Androidbf30cdead8515739bc0e671d57a54b9a3109dd46 unchanged. HOST766 RealContentTest3+RareHanTest1+production-meaning1/no skips and native768 TWO named terminalcase0 successes inherited, not rerun: ContentSyncONCE/1124kanji5073words133N1/zero problems/both epochs1;2912direct/2496NONTRANSITIVEneighbor/896wordguard checks;64actualbuilderchoices/25sampledlabels. Original-family765 textual and769 rendered confirmations and their exact report/capture hashes reverified. Claude then GPT exited0 serially;26assignedimages per rendered reviewer. No fresh blind credit, independent upstream retrieval or retroactive change to historical reports.
+
+ActualdefaultN1:功 merit; achievement,刀 sword; blade,松 pine tree,梨 pear tree. ONEcuratedwrong刀/TWOfallbacks松梨;加N3幼N2 unchanged. Thirteen direct symmetric NONTRANSITIVE guards remain conservative, not synonymcliques or universal future-pool semantic certification. Unchanged功績sevenwordguards preserved; sixunsuppliedlegacytitles remain explicitlyUNVERIFIED outside exactnavigation scope;896mechanicalchecks are not complete semantic certification.
+
+Fullコウ/ク/いさお retained;onlyこう persistedGood/Done1of1,quizKunyomi[]; recognitionク is not exclusively/mainly religious,いさお is a dated lexical noun, not justnanori. No new support identity/word level. 功績N2/成功N3 and exact three navigation-only reused changes preserved. Fourallmappedpairs/eightdirections/twoactivatedbaselinepairs passed as inherited768receipts.
+
+Local archive:$($b.entries) entries/$($b.localZipBytes) compressed/$($b.inflatedBytes) inflated/$($b.retainedBytes) retained bytes. Exact compiled native archive likewise within unchanged18000entries/42MiBcompressed80MiBinflated56MiBretained/per-file/path/media guards. Rendered19Han/fourfonts/3panels/8mappedcontactsheets and15additionalstandaloneoriginals per reviewer;26assignedPNGs are NOT34 separately viewed originals. Original1080x2400 returned900x2000 and1000x2260sheets returned885x2000. Pixels/byte return are not equal comprehension or native-speaker certification. Back/offline relies on768execution. API35emulator is not a phone; five injected reference strokes/seeded due/shape-only drawing with model unavailable are not MLKit/human mastery.
+
+NEXT checkpoint: fresh-main check, nonrewriting reconciliation/revalidation and changed-teaching review if needed, normal authorized owner fast-forward, exact remoteSHA, terminalgreenCI and EVERY immutable GitHub ZIP runtime hash/budget check, verified owner issue and durable publication ledgers before102. No push this execution. Published127/1228,remaining1101,lastpublishedba1a7f46 unchanged until delivery verified. Compatible stop-cran/kanji-cards-android#125 and stop-cran/kanji-cards-android#132 required;oldclientsignorecuration/guards. Phone/general-release/whole-set outstanding. Parent runner.lock untouched; no optional historical-session helper access, new permission denial, concurrent heavy work or second runner.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+if ($env:GH_TOKEN -or $env:GITHUB_TOKEN) { throw 'Unexpected inherited token' }
+$globalIdentity = gh api user --jq .login
+if ($LASTEXITCODE -ne 0 -or $globalIdentity -cne 'romanko-ms') { throw 'Unexpected global identity' }
+try {
+    $env:GH_TOKEN = gh auth token --user stop-cran
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-770-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve posted receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-770-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $null
+}
+if ((gh api user --jq .login) -cne $globalIdentity) { throw 'Global identity changed' }
