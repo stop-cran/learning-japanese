@@ -628,10 +628,81 @@ class ValidateTests(unittest.TestCase):
                 self.check_card(self.word_path)
                 self.assertEqual([], validate.errors)
 
-    def test_word_quiz_exclusion_rule_does_not_change_legacy_kanji_behavior(self):
-        self.write("kanji/日.md", KANJI_HEADER + "\nquiz_exclusions: []\nquiz_exclusions: []", KANJI_BODY)
+    def test_kanji_quiz_exclusions_are_optional_and_one_sided(self):
+        (self.root / "kanji" / "𠮷.md").touch()
+        for field in ("", "quiz_exclusions: []", "quiz_exclusions: [ ]",
+                      "quiz_exclusions: [𠮷]", "quiz_exclusions: ['𠮷']",
+                      'quiz_exclusions: ["𠮷"]'):
+            with self.subTest(field=field):
+                validate.errors.clear()
+                self.write("kanji/日.md", KANJI_HEADER + "\n" + field, KANJI_BODY)
+                self.check_card(self.kanji_path)
+                self.assertEqual([], validate.errors)
+
+    def test_kanji_quiz_exclusions_reject_malformed_or_shadowed_fields(self):
+        fields = (
+            "quiz_exclusions: []\nquiz_exclusions: []",
+            "quiz_exclusions: null\nquiz_exclusions: []",
+            "quiz_exclusions: []\nnotes: |\n  quiz_exclusions: []",
+            "'quiz_exclusions': []", '"quiz_exclusions": []',
+            "quiz_exclusions: [] # comment", "quiz_exclusions:\n  - 月",
+            r'"\u0071uiz_exclusions": [月]' + "\nquiz_exclusions: []",
+            "!!str quiz_exclusions: [月]\nquiz_exclusions: []",
+            "&key quiz_exclusions: [月]\nquiz_exclusions: []",
+            "saved: &key quiz_exclusions\n*key: [月]\nquiz_exclusions: []",
+        )
+        for field in fields:
+            with self.subTest(field=field):
+                validate.errors.clear()
+                self.write("kanji/日.md", KANJI_HEADER + "\n" + field, KANJI_BODY)
+                validate.parse(self.kanji_path)
+                self.assert_error("'quiz_exclusions' must be a single top-level")
+        for value in ("null", "true", "5", "{}", "月", "'[]'", "[1]", "[true]", "[null]",
+                      "[{}]", '["\\u6708"]'):
+            with self.subTest(value=value):
+                validate.errors.clear()
+                self.write("kanji/日.md", KANJI_HEADER + f"\nquiz_exclusions: {value}", KANJI_BODY)
+                self.check_card(self.kanji_path)
+                self.assert_error("'quiz_exclusions'")
+
+    def test_kanji_quiz_exclusions_validate_ids_and_curated_conflicts(self):
+        for choices, message in (
+                (["月", "月"], "must not contain repeated entries"),
+                (["日"], "must not include the card itself"),
+                (["𠮷"], "has no card with that exact ID"),
+                ([""], "must be a single non-control kanji ID"),
+                (["月 "], "must be a single non-control kanji ID"),
+                (["../月"], "must be a single non-control kanji ID"),
+                (["\\"], "must be a single non-control kanji ID"),
+                (["\x1f"], "must be a single non-control kanji ID"),
+                (["月"], "also listed in 'quiz_exclusions'")):
+            with self.subTest(choices=choices):
+                validate.errors.clear()
+                meta, _ = validate.parse(self.kanji_path)
+                validate.check_kanji(self.kanji_path, dict(meta, quiz_exclusions=choices), {})
+                self.assert_error(message)
+
+    def test_kanji_exclusion_checks_preserve_unrelated_legacy_keys(self):
+        extra = "\njlpt: 5\n# quiz_exclusions: [月]\nnote: 'quiz_exclusions: [月]'"
+        self.write("kanji/日.md", KANJI_HEADER + extra, KANJI_BODY)
         self.check_card(self.kanji_path)
         self.assertEqual([], validate.errors)
+
+    def test_kanji_quiz_exclusions_require_exact_case_even_on_windows(self):
+        (self.root / "kanji" / "A.md").touch()
+        meta, _ = validate.parse(self.kanji_path)
+        validate.check_kanji(self.kanji_path, dict(meta, quiz_exclusions=["a"]), {})
+        self.assert_error("has no card with that exact ID")
+
+    def test_kanji_quiz_exclusions_reject_unicode_noncharacters_even_if_file_exists(self):
+        meta, _ = validate.parse(self.kanji_path)
+        for codepoint in (0xFDD0, 0xFDEF, 0xFFFE, 0xFFFF, 0x1FFFE, 0x1FFFF, 0x10FFFE, 0x10FFFF):
+            with self.subTest(codepoint=hex(codepoint)):
+                validate.errors.clear()
+                other = chr(codepoint)
+                with patch.object(Path, "glob", return_value=[Path(f"{other}.md")]):
+                    validate.check_kanji(self.kanji_path, dict(meta, quiz_exclusions=[other]), {})
+                self.assert_error("must be a single non-control kanji ID")
 
     def test_word_keys_reject_encoded_tagged_and_anchored_duplicate_exclusions(self):
         for key in (r'"\u0071uiz_exclusions"', r'"\x71uiz_exclusions"',

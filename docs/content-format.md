@@ -89,13 +89,27 @@ Mapping-shaped opening blocks are checked as metadata; use `***` for an opening 
 | `onyomi`, `kunyomi` | Lists in kana; kunyomi uses `.` before okurigana and `-` for affixes. |
 | `quizOnyomi`, `quizKunyomi` | Optional ordered exact-string subsets of the corresponding full lists. Omit for legacy full-list questions; `[]` disables that kind. See [curated reading questions](#curated-reading-questions). |
 | `distractors` | The app can omit this field, but authored cards must supply at least two distinct, plausible wrong options with existing cards; never include the card itself. |
+| `quiz_exclusions` | Optional inline list of other exact single-character kanji IDs that must not appear together as meaning choices. Omission or `[]` means no authored exclusions. Declare once using a top-level unquoted key; no duplicate, self, missing, unsafe or non-character IDs, or overlap with `distractors`. Requires a kanji-exclusion-aware client; older apps ignore it. |
 
 ### Quiz authoring
 
 The meaning quiz displays a kanji and offers other cards' English titles as answers. For new cards, curate **three** semantically
 distinct wrong options for the default four-choice quiz. Two remain structurally valid for older cards, but the app fills missing
-choices from other cards, preferring shared tags. It only deduplicates exact title strings: different English synonyms can still
-produce two defensible answers. Keep useful semantic comparisons in the body even when they are unsuitable as wrong answers.
+choices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:
+different English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when
+they are unsuitable as wrong answers.
+
+Kanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor
+`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair
+both against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.
+Exclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted
+source, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an
+excluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.
+
+Author a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity
+motivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not
+enforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not
+prove compatibility of an older installed app or physical-phone/general-release acceptance.
 
 Editorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.
 This behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);
