@@ -1,0 +1,21 @@
+{
+  "execution": 766,
+  "stage": "post-commit-checkpoint-comparison-correction",
+  "originalHostEvidenceCommit": "7893b154",
+  "failedOperation": "finish() exact owner comment comparison",
+  "cause": "Python read_text applied universal-newline conversion to a Windows here-string body. GitHub retained six CRLF sequences, so normalized text was not byte-equivalent to the already verified actual comment.",
+  "diagnostic": {
+    "rawDecodedEqualsVerifiedGitHubBody": true,
+    "universalNewlineReadEquals": false,
+    "crlfCount": 6,
+    "shaMatchesPosted": true
+  },
+  "remedy": "Compare UTF-8-decoded original bytes without newline conversion, retaining exact author, URL and SHA checks. Preserve the originally signed recipe and archive the corrected helper separately. Allow the additional normally signed evidence-only correction commit while requiring all commits since tested BASE to verify G and restricting all changed paths to this batch's evidence.",
+  "originalRecipePreserved": "checkpoint-host-766.py.txt",
+  "correctedRecipe": "checkpoint-host-766-corrected.py.txt",
+  "issueCommentRepeated": false,
+  "runtimeChanged": false,
+  "hostTestsRepeated": false,
+  "permissionDenial": false,
+  "acceptanceGateWeakened": false
+}
