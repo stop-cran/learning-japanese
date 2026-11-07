@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "execution": 710,
+  "batch": "097",
+  "stage": "local-unreviewed-draft",
+  "sourceCheckpoint": "fb8a532bb0230e0576b854ba71899252cb28542b",
+  "baseCommit": "1b00a924a007f32da36894ea92b05f675436e60d",
+  "runtimePublished": false,
+  "startingState": {
+    "execution": 710,
+    "batch": "097",
+    "startingHead": "fb8a532bb0230e0576b854ba71899252cb28542b",
+    "freshOriginMain": "1b00a924a007f32da36894ea92b05f675436e60d",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "startedAt": "2026-11-07T11:39:37.971134+00:00",
+    "scope": "SAME097 bounded runtime draft and normally signed LOCAL UNREVIEWED freeze only; no reviewer, Android/native, publication,098 or second runner.",
+    "request": {
+      "sha256": "2dfd211fc4f57e90aca6082a26d74f69c032e0d89a66f7488759a3be8ff67e8e",
+      "bytes": 4778861,
+      "characters": 4716499,
+      "lines": 62731,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and complete checkpoint parsed. Operative contract, complete approved issue and final709 directly inspected; historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerPreflight": {
+      "execution": 710,
+      "sessionId": "e3c4d315-e520-40d1-80d1-6b10ec7a29c5",
+      "verifiedAt": "2026-11-07T12:39:37.1539426+01:00",
+      "ancestry": [
+        27680,
+        16156,
+        19008
+      ],
+      "liveParentPid": 19008,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "parentLockRole": "Live parent launcher owns runner.lock throughout child lifetime. Child does not acquire, delete, unlock or read-probe it.",
+      "lockTouched": false
+    },
+    "artifactPathPreflight": "Approved committed packets/frozen workspace inputs and durable control helpers only; optional historical-session recipes not accessed.",
+    "worktrees": "Wholly clean dedicated content and qualified TESTONLY Android; normal signatures G. Fresh main equals published BASE. Android1c1b7bf4 retains productionf9b59a2, NOT latest appmain; canonical repositories not accessed.",
+    "actualNewPermissionDenials": []
+  },
+  "runtimeDrafted": [
+    "\u5263"
+  ],
+  "reviewClosed": [],
+  "published": [],
+  "contentVersion": "a066afceaf1f447a",
+  "checks": {
+    "validate": {
+      "path": "docs/n1-sources/batch-097-draft-validate-710.txt.gz",
+      "sha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09",
+      "uncompressedSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs/n1-sources/batch-097-draft-manifest-710.txt.gz",
+      "sha256": "a3bc4c40600eff15d81095f8166c58e70f304f58f9128bd4d6005f3cede1536f",
+      "uncompressedSha256": "9bf6a36eabb5f6eaeaa12795f395229e510acdccaf6868021e38cb224bc2a2ad"
+    },
+    "audit": {
+      "path": "docs/n1-sources/batch-097-draft-audit-710.txt.gz",
+      "sha256": "65b59bc8f312d74811eff4426c699bc5383d424f1c171c07c41171f359275f75",
+      "uncompressedSha256": "e5cc5f5889c3e450f5565263177d7bef65a4d22feb67738561ae5aaf58cdad78"
+    },
+    "tests": {
+      "path": "docs/n1-sources/batch-097-draft-tests-710.txt.gz",
+      "sha256": "c9a7d11ec37df54f18d8029ffa6c35ef1e48ee5e850cad6d439f66ffa9bee20f",
+      "uncompressedSha256": "eff45a56ee71f2d9a3efcbed393abaa43553fd5cbe294eae457a739764a2413c"
+    },
+    "vocabulary": {
+      "path": "docs/n1-sources/batch-097-draft-vocabulary-710.txt.gz",
+      "sha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969",
+      "uncompressedSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    "budget": {
+      "path": "docs/n1-sources/batch-097-draft-budget-710.txt.gz",
+      "sha256": "960fbf54b2b6034efb5ef363c00bf35529d94e1e21954daad98f336089dadb4a",
+      "uncompressedSha256": "03a925ed409b5375089c0987fe04e0e111773a1a9d5986df6c044e8ca2bb0da5"
+    },
+    "whitespace": {
+      "path": "docs/n1-sources/batch-097-draft-whitespace-710.txt.gz",
+      "sha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "uncompressedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "pythonTestsPassed": 43,
+  "validatorErrors": 0,
+  "localBudget": {
+    "files": 8454,
+    "entries": 8469,
+    "retainedBytes": 44360371,
+    "inflatedBytes": 44628709,
+    "localZipBytes": 30284634,
+    "listeningTaskMediaBytes": 5893602
+  },
+  "focusedTestCommand": "python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch; PYTHONPATH=tools",
+  "vocabularyLimits": "Existing reviewed-prompt consistency only, not unrelated coverage completion.",
+  "audit": "docs/n1-sources/batch-097-draft-audit.json",
+  "fontAudit": "docs/n1-sources/batch-097-draft-font-audit.json",
+  "strokeAudit": "docs/n1-sources/batch-097-draft-stroke-audit.json",
+  "recipe": "docs/n1-sources/batch-097-draft-recipe.py",
+  "recipeSha256": "f947b8fe31018e5cd092fcac29b509cff934de07244036d974b25352759a5105",
+  "independentReviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "runnerLockRole": "Live parent19008 owns runner.lock; child never acquires/deletes/unlocks/read-probes.",
+  "artifactPathPreflight": "Approved workspace/frozen inputs/committed evidence only; reusable helpers in control.",
+  "readEvidenceLimits": {
+    "execution": 710,
+    "sourceCheckpoint": "fb8a532bb0230e0576b854ba71899252cb28542b",
+    "freshCompleteSelectedFamilies": [
+      "1256750",
+      "1256770",
+      "1256910",
+      "1363650"
+    ],
+    "freshCompleteComparisonFamilies": 17,
+    "inheritedSourceInspection": "Source709 complete122 member families/11 raw character records/20 articles retained in committed evidence. Unselected lexical families are freshly byte-bound to frozen dictionary, not all freshly semantically reread in710.",
+    "rawCharacterScope": "Complete\u5263 record freshly read; comparison raw records inherited709 and freshly byte-bound. No historical/phonetic claim derived from SVG.",
+    "freshExistingArticles": [
+      "words/\u771f\u5263.md",
+      "kanji/\u771f.md",
+      "words/\u5200.md",
+      "words/\u65e5\u672c\u5200.md",
+      "words/\u5203.md",
+      "words/\u30ca\u30a4\u30d5.md",
+      "words/\u91dd.md",
+      "words/\u5305\u4e01.md",
+      "words/\u65ac\u308b.md",
+      "kanji/\u525b.md",
+      "kanji/\u5256.md",
+      "kanji/\u5247.md"
+    ],
+    "publicLookup": "Committed actual Digital Daijisen\u5263/\u771f\u5263 entry text freshly read; archived coordinator source evidence, not fresh upstream retrieval. Character extract1-100 read; later unrelated product/place/navigation content inherited709.",
+    "pinnedSvg": "Complete committed SVG freshly read; ten paths. Rare component/phon attributes not printed as etymology or necessary learner glyphs.",
+    "exampleProvenance": "Original ordinary museum/photograph noun examples, not dictionary quotations or evidence of rare collocation/frequency.",
+    "limits": "Author inspection only, not independent review, native-speaker certification, phone evidence or uniform reviewer comprehension."
+  },
+  "actualNewPermissionDenials": [],
+  "publishedAdditions": 123,
+  "remainingAdditions": 1105,
+  "finalLabelAuditChange": "Four proposed direct guards retained after final-label audit; additional\u65ac\u308b verb article inspected without new guard or teaching change.",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "limits": [
+    "LOCAL UNREVIEWED draft only; no reviewer, fresh Android/native/font/phone acceptance or runtime publication.",
+    "Full\u30b1\u30f3/[\u3064\u308b\u304e] retained in original order and both explicitly selected. Valid standalone\u3051\u3093 mentioned without importing its restricted senses into\u3064\u308b\u304e.",
+    "One necessary\u5263\u3064\u308b\u304e support with no inferred word level; reused\u771f\u5263\u3057\u3093\u3051\u3093 N3 metadata/readings/original\u307e\u3058\u3081 guard unchanged.",
+    "THREE all-mapped pairs/SIX directions/ONE activated baseline pair. Two exact reused navigation changes, no broader rewrite or metadata change.",
+    "Four direct word guards after actual final-label/article/family inspection, not transitive cliques or unrestricted substitutions.",
+    "Labelled modern-shape mnemonic only, structure-unclassified, no phonetic/history claim. Canonical\u520018 retained, visible\u5202 explained; ten pinned paths generated.",
+    "Final Han/cmap audit is not native glyph/fallback acceptance. Fresh non-skipped Android/native/four-font/all-Han/rendered review pending.",
+    "Published123/1228 and1105 acceptance remainder unchanged. Six earlier-level source\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 remain separate;\u5996exception preserved.",
+    "CompatibleAndroidf9b59a2+ required; qualified TESTONLY1c1b7bf4 not latest appmain. Physical-phone/general-release/whole-set outstanding.",
+    "All original source/review/process/denial/OOM/read-depth/native/combined-main/signing/owner-push/terminal-CI/EVERY-immutable-ZIP-hash/budget/owner-issue gates retained; no098 or second runner."
+  ],
+  "nextAction": "SAME097 TWO serial blind different-model-family initial textual reviews on the normally signed LOCAL UNREVIEWED snapshot: complete\u5263/\u5263\u3064\u308b\u304e and exact reused \u771f\u5263/\u771f changes; full\u30b1\u30f3/[\u3064\u308b\u304e] and both selected, four direct word guards, THREE all-mapped pairs/SIX directions/ONE activated baseline pair. Same frozen 137 complete dictionary families/11 raw character records/public source evidence for both reviewers; correctness, scoped coverage and phone comprehensibility. Use actual available models/read-only tools and wait for actual process exit before next reviewer; preserve complete original reports/sessions/read limits, reconcile evidence and obtain bounded original-session confirmations. Then fresh non-skipped Android, production ContentSync ONCE/native N1-All/meaning/reading/drawing/article/Back/offline/four-font/all-Han/rendered review, actual combined-main acceptance, normal signing/owner fast-forward/terminal CI/EVERY immutable public ZIP runtime hash/unchanged budgets/verified owner issue. Do not start098 or push unreviewed content. Approved control/committed evidence/frozen inputs only; parent19008 retains runner.lock, no child acquire/delete/unlock/readprobe. Preserve/report/yield actual new denial/signing hang/uncertain ownership. Published123/1228,1105 acceptance remainder unchanged; physical-phone/general-release/whole-set outstanding."
+}
