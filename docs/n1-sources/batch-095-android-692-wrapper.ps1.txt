@@ -1,0 +1,48 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$session = 'b6df4efb-f500-4c5c-9cf8-abc57d00a9b1'
+$log = Join-Path $control "logs\$session"
+$runner = Get-Content "$control\runner.json" -Raw | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 19008 -or $runner.sessionId -ne $session) { throw 'Uncertain runner ownership' }
+$ancestry = @()
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+while ($process -and $ancestry.Count -lt 12) {
+    $ancestry += $process.ProcessId
+    if ($process.ProcessId -eq $runner.pid) { break }
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+if (-not $process -or $process.ProcessId -ne $runner.pid) { throw 'Expected live parent missing from ancestry' }
+if ($process.CommandLine -notmatch '(?i)-EncodedCommand\s+(\S+)') { throw 'Expected encoded launcher' }
+$decoded = [Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($Matches[1]))
+if (-not $decoded.Contains("& $control\runner.ps1")) { throw 'Wrong decoded launcher' }
+$scriptText = Get-Content "$control\runner.ps1" -Raw
+if (-not $scriptText.Contains("`$lock = [IO.File]::Open((Join-Path `$control 'runner.lock'), 'OpenOrCreate', 'ReadWrite', 'None')") -or -not $scriptText.Contains('$lock.Dispose()')) { throw 'Unexpected launcher lock lifetime contract' }
+[ordered]@{
+    execution = 692
+    sessionId = $session
+    verifiedAt = [DateTimeOffset]::Now.ToString('o')
+    ancestry = $ancestry
+    liveParentPid = $process.ProcessId
+    launcherSha256 = (Get-FileHash "$control\runner.ps1" -Algorithm SHA256).Hash.ToLowerInvariant()
+    parentLockRole = 'Live parent launcher owns runner.lock throughout child lifetime; no child lock operation.'
+    lockTouched = $false
+} | ConvertTo-Json -Depth 8 | Set-Content "$log\android-runner-role.json" -Encoding utf8NoBOM
+$env:PYTHONIOENCODING = 'utf-8'
+python -B "$control\checkpoint-692-android.py" start
+if ($LASTEXITCODE -ne 0) { throw 'Signed-head/checkpoint/clean-state preflight failed' }
+$arguments = @(':core:test', '--tests', 'io.github.stopcran.kanji.core.RealContentTest',
+    ':app:testDebugUnitTest', '--tests', 'io.github.stopcran.kanji.core.RareHanTest',
+    '--no-daemon', '--no-parallel', '--max-workers=1', '--rerun-tasks',
+    '-Pkotlin.compiler.execution.strategy=in-process', '--init-script',
+    (Join-Path $control 'batch-065-host-integration-heap.init.gradle'))
+$arguments | ConvertTo-Json | Set-Content "$log\android-arguments.json" -Encoding utf8NoBOM
+$env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot'
+$env:ANDROID_HOME = 'C:\Users\stop-\AppData\Local\Android\Sdk'
+Set-Location -LiteralPath (Join-Path (Split-Path $control -Parent) 'kanji-cards-android')
+[DateTimeOffset]::UtcNow.ToString('o') | Set-Content "$log\android-start.txt"
+& .\gradlew.bat @arguments *> "$log\android.txt"
+$code = $LASTEXITCODE
+$code | Set-Content "$log\android-exit.txt"
+[DateTimeOffset]::UtcNow.ToString('o') | Set-Content "$log\android-end.txt"
+Get-Content "$log\android.txt" -Tail 18
+exit $code
