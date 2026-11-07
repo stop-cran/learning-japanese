@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "batch": "094",
+  "baseCommit": "48765e20846e1d6769c6ddc35146f6ce58deab57",
+  "freshOriginMainAtPreparation": "48765e20846e1d6769c6ddc35146f6ce58deab57",
+  "status": "source-prepared-not-drafted",
+  "membership": ["削"],
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceReadingOrder": {
+    "onyomi": ["サク"],
+    "kunyomi": ["けず.る", "はつ.る", "そ.ぐ"]
+  },
+  "readingDispositions": [
+    {
+      "kanji": "削",
+      "kind": "on",
+      "reading": "サク",
+      "proposedQuizSelection": true,
+      "sourceOnly": false,
+      "example": "削除 さくじょ — deletion; erasure",
+      "entryIds": ["1298120"],
+      "article": "words/削除.md",
+      "qualification": "Reuse the existing N2 primary さくじょ and its deletion sense. Raw KANJIDIC2 lists サク; the actual Digital Daijisen character heading explicitly places 削除 under サク. Existing word article explicitly assigns サク + ジョ. This is not allocation inferred solely from a kana substring.",
+      "evidence": "Complete frozen JMdict1298120; raw 削 and 除 records; actual Digital Daijisen さく【削】［漢字項目］ and さく‐じょ【削除】 in archived HTML/article text."
+    },
+    {
+      "kanji": "削",
+      "kind": "kun",
+      "reading": "けず.る",
+      "proposedQuizSelection": true,
+      "sourceOnly": false,
+      "example": "削る けずる — shave; sharpen; pare; cut down",
+      "entryIds": ["1298090"],
+      "article": "words/削る.md",
+      "qualification": "Reuse actual N2 article, primary けずる and all three supported senses. 削 supplies けず and る is written okurigana. Concrete pencil-sharpening and budget-cutting examples are independently matched by the inspected Daijisen heading. Do not assign the separate はつる percentage sense to this reading.",
+      "evidence": "Complete frozen JMdict1298090 versus1298100; raw 削 record; actual Digital Daijisen けず・る【削る】, senses1-3."
+    },
+    {
+      "kanji": "削",
+      "kind": "kun",
+      "reading": "はつ.る",
+      "proposedQuizSelection": false,
+      "sourceOnly": false,
+      "example": "削る はつる — shave off, especially concrete; usually written in kana",
+      "entryIds": ["1298100"],
+      "qualification": "Recognition-only separate whole verb. Both JMdict senses are usually-kana, not tagged archaic: do not call the pronunciation obsolete. The shaving/construction sense is the bounded recognition example; the separate take-a-percentage sense is not taught as けずる. Do NOT link this reading to the existing primaryけずる article as if its reading matched. No extra support article merely to quiz this specialist spelling.",
+      "evidence": "Complete frozen JMdict1298100 preserves 削る/斫る/砕る and both senses. Digital Daijisen はつ・る【▽削る】 is separately headed and notes construction spelling斫る. No rarity inference from absent priorities or ▽ alone."
+    },
+    {
+      "kanji": "削",
+      "kind": "kun",
+      "reading": "そ.ぐ",
+      "proposedQuizSelection": false,
+      "sourceOnly": false,
+      "example": "削ぐ そぐ — chip, shave or slice off",
+      "entryIds": ["1298040"],
+      "qualification": "Recognition-only viable modern verb, not a source-only or invalid reading. Preserve exact boundary 削+ぐ. JMdict's usually-kana flag belongs only to metaphorical sense3, not physical senses1-2 or the pronunciation in general. Focus new questions on the two verified existing support articles; no new support is necessary for this bounded selection. An unlinked table example can still explain this retained reading.",
+      "evidence": "Complete frozen JMdict1298040 and raw KANJIDIC2削; actual Digital Daijisen character heading explicitly lists そぐ. Inflected削がれる and derived削げる are different forms, not replacements for metadataそ.ぐ."
+    }
+  ],
+  "proposedCuratedProjection": {
+    "kanji": "削",
+    "quizOnyomi": ["サク"],
+    "quizKunyomi": ["けず.る"],
+    "onKeys": ["さく"],
+    "kunKeys": ["けずる"],
+    "limits": "Exact raw-string subsets of full frozen metadata in source order. Compatible curated-reading client required. No runtime prompt or started-key acceptance claimed."
+  },
+  "proposedSupportMapping": [
+    {
+      "kanji": "削",
+      "article": "words/削る.md",
+      "word": "削る",
+      "primaryReading": "けずる",
+      "entryId": "1298090",
+      "selectedSenses": [1, 2, 3],
+      "newArticle": false,
+      "allWrittenKanji": ["削"],
+      "preservedWordJlpt": 2,
+      "disposition": "Reuse verified lexical identity. Only activated component link proposed; preserve identity, level, title, forms, all senses and original exclusions."
+    },
+    {
+      "kanji": "削",
+      "article": "words/削除.md",
+      "word": "削除",
+      "primaryReading": "さくじょ",
+      "entryId": "1298120",
+      "selectedSenses": [1],
+      "newArticle": false,
+      "allWrittenKanji": ["削", "除"],
+      "preservedWordJlpt": 2,
+      "disposition": "Reuse verified lexical identity. Only activated component link proposed; preserve N2, primary reading, all exclusions and the warning distinguishing deletion from event cancellation."
+    }
+  ],
+  "proposedReciprocalPairs": [
+    ["削", "words/削る.md"],
+    ["削", "words/削除.md"],
+    ["除", "words/削除.md"]
+  ],
+  "proposedDirectedLinkPlan": [
+    {"from": "kanji/削.md", "to": "words/削る.md", "reason": "Selected native reading row and common-word navigation."},
+    {"from": "words/削る.md", "to": "kanji/削.md", "reason": "Activated baseline substantive component link."},
+    {"from": "kanji/削.md", "to": "words/削除.md", "reason": "Selected on reading row and common-word navigation."},
+    {"from": "words/削除.md", "to": "kanji/削.md", "reason": "Activated baseline substantive component link."},
+    {"from": "kanji/除.md", "to": "words/削除.md", "reason": "All-mapped existing component pair, not another activated削 pair."},
+    {"from": "words/削除.md", "to": "kanji/除.md", "reason": "Existing substantive component link preserved."}
+  ],
+  "requiredDirectionCount": 6,
+  "alreadyExistingRequiredDirections": [
+    {"from": "words/削除.md", "to": "kanji/除.md"}
+  ],
+  "activatedBaselinePairs": [
+    {"kanji": "削", "article": "words/削る.md", "word": "削る", "primaryReading": "けずる", "status": "unverified-candidate"},
+    {"kanji": "削", "article": "words/削除.md", "word": "削除", "primaryReading": "さくじょ", "status": "unverified-candidate"}
+  ],
+  "proposedReusedChanges": [
+    {
+      "article": "words/削る.md",
+      "before": "削 contributes cutting away or shaving.",
+      "after": "[削](../kanji/削.md) contributes cutting away or shaving.",
+      "reason": "Navigation-only activated component link; preserve existing factual and lexical distinctions."
+    },
+    {
+      "article": "words/削除.md",
+      "before": "削 contributes shaving or cutting away, and",
+      "after": "[削](../kanji/削.md) contributes shaving or cutting away, and",
+      "reason": "Navigation-only activated component link; preserve existing サク+ジョ and 除 link."
+    },
+    {
+      "article": "kanji/除.md",
+      "before": "- 掃除 そうじ — cleaning",
+      "after": "- 掃除 そうじ — cleaning\n- [削除](../words/削除.md) さくじょ — deletion; erasure",
+      "reason": "All-mapped reciprocal navigation. Preserve existing readings, level and unrelated teaching."
+    }
+  ],
+  "proposedQuiz": {
+    "kanjiTitle": "shave; sharpen; pare",
+    "distractors": ["前", "判", "刑"],
+    "labels": ["front, before", "judge; seal", "criminal punishment"],
+    "rationale": "Three visible刂 comparisons with distinct spatial/time, judgment/seal and punishment labels. Complete raw character records, applicable standalone families and actual articles inspected, including secondary senses. None supplies the target's shaving/sharpening/paring answer.",
+    "unsafeComparisons": [
+      {"kanji": "消", "disposition": "Useful visible肖 comparison, not a wrong choice: erase overlaps the deletion sense of削."},
+      {"kanji": "切", "disposition": "General cutting overlaps shaving or paring; not a wrong choice."},
+      {"kanji": "減", "disposition": "Reduction overlaps削る's budget-cutting sense; not a wrong choice."},
+      {"kanji": "省", "disposition": "Omission overlaps deleting material; not a wrong choice."},
+      {"kanji": "除", "disposition": "Removal overlaps削除; not a wrong choice."}
+    ],
+    "proposedDirectExclusions": [],
+    "existingInboundGuards": [
+      {"word": "剃る", "excludeContains": "削る", "reason": "Context-free shave label overlaps; existing direct edge already protects it."},
+      {"word": "擦る", "excludeContains": "削る", "reason": "Scrape overlaps material-removal sense; existing direct edge already protects it."},
+      {"word": "むく", "excludeContains": "削る", "reason": "Pare overlaps; existing direct edge already protects it."},
+      {"word": "削除", "excludeContains": "削る", "reason": "Deletion overlaps; existing direct edge already protects it."},
+      {"word": "略す", "excludeContains": "削る", "reason": "Omit overlaps deletion; existing direct edge already protects it."},
+      {"word": "省略", "excludeContains": "削る", "reason": "Omission overlaps deletion; existing direct edge already protects it."},
+      {"word": "略す", "excludeContains": "削除", "reason": "Existing direct deletion/omission protection preserved."},
+      {"word": "省略", "excludeContains": "削除", "reason": "Existing direct deletion/omission protection preserved."}
+    ],
+    "existingOwnGuards": [
+      {"word": "削る", "exclude": ["切る", "減らす", "省く", "消す"]},
+      {"word": "削除", "exclude": ["消す", "除く", "外す", "取る", "削る"]}
+    ],
+    "legacyFallbackDisposition": "All five inspected overlapping kanji消切減省除 already have three curated distractors, so the default four-choice fallback is not newly activated there. Do not reclassify unchanged larger-quiz fallback as newly certified."
+  },
+  "proposedHanText": "削 刀 刂 肖 月 消 氵 前 判 刑 切 減 省 除 削る けずる 削除 さくじょ 削ぐ そぐ 削る はつる 斫る 砕る 鉛筆を削る 予算を削る 文章 削減 さくげん 添削 てんさく",
+  "nextAction": "Resume SAME094 bounded runtime draft only, using this committed source packet and durable control recipe. Preserve all full metadata/order; propose quizサク/けず.る only. Reuse actual N2削る/削除, add no unnecessary support, preserve direct guards, implement two activated component links and all three reciprocal pairs. Generate pinned nine-stroke geometry with existing converter, audit final all-Han/font inventory and manifest, then normal signed LOCAL UNREVIEWED freeze. Do not push or begin095. Two serial blind model families on frozen teaching, reconciliation, fresh non-skipped Android/native/rendered acceptance, combined-main/CI/exact ZIP/ownerissue gates remain mandatory.",
+  "limits": [
+    "Source preparation only; no runtime content drafted, independent review, fresh Android/native/font/phone acceptance or publication.",
+    "99 complete member families and26 comparison families were inspected as source evidence; not all are selected for teaching. Dictionary recognition does not establish frequency or native-speaker certification.",
+    "Full サク andけず.る/はつ.る/そ.ぐ are retained. The two unselected native readings have verified lexical examples and are not falsely called invalid, obsolete or dictionary-only.",
+    "Two activated baseline pairs, three all-mapped pairs and six directed links are distinct counts. Existing除 pair is included, not counted as another activated削 pair.",
+    "Font cmaps are preflight, not final glyph/fallbackface acceptance. Fresh final-draft inventory, four-font/all-Han native rendering, actual N1 route and ContentSyncONCE gates remain.",
+    "Qualified TESTONLY Android1c1b7bf4 retains productionf9b59a2, NOT latest app main; historical native/Paint/injected-trace/MLKit/process/source-read limitations remain unchanged.",
+    "120 issue60 additions are published;1108 acceptance-remainder. Six separately placed source members retain N2 and are not counted as accepted issue60 additions. Physicalphone/generalrelease/whole-set remain outstanding; no095."
+  ]
+}

@@ -1,0 +1,37 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\5735d282-ffbf-4702-9d5c-05d2572a4a13"
+Set-Location $root
+& "$control\preflight-676.ps1"
+if ((git rev-parse HEAD).Trim() -ne '48765e20846e1d6769c6ddc35146f6ce58deab57') { throw 'Unexpected content head' }
+if ((git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unverified content signature' }
+if ((git -C $android rev-parse HEAD).Trim() -ne '1c1b7bf42cc91d820a93169f1088dc647ac51c0d') { throw 'Unexpected Android head' }
+if ((git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or (git -C $android status --porcelain)) { throw 'Android not wholly clean/signed' }
+$progress = Get-Content "$control\progress.json" -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 675 -or $progress.batch -ne '094' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+$changes = @(git status --porcelain --untracked-files=all)
+foreach ($change in $changes) {
+    if ($change -notmatch '^\?\? docs/n1-sources/batch-094-') { throw "Unaccounted change: $change" }
+}
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\source-tests-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+git diff --exit-code -- manifest.json *> "$log\manifest-diff-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Source-only checkpoint changed runtime manifest' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B "$control\source-676.py" audit *> "$log\audit-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Source audit failed' }
+git diff --check *> "$log\whitespace-676.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\source-tests-676.txt" -Tail 4
+Get-Content "$log\validate-676.txt" -Tail 2
+Get-Content "$log\budget-676.txt" -Tail 8
+Get-Content "$log\audit-676.txt" -Tail 12
+Write-Output 'Source, runtime-preservation, manifest and budget checks passed; no app/native execution.'
