@@ -1,0 +1,64 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\7c2f528d-06be-4961-aa7d-424b4ec1d51b"
+$content = "$control\..\learning-japanese"
+$bodyPath = "$control\batch-105-native-preparation-812-issue-body.txt"
+if ((Test-Path "$log\issue-812-posted.json") -or (Test-Path $bodyPath)) {
+    throw 'Do not duplicate issue update'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0) { throw 'HEAD lookup failed' }
+& "$control\preflight-812.ps1" -ReceiptName 'preflight-812-before-issue.json' -ExpectedContentHead $head
+if ((git -C $content rev-parse 'HEAD^') -ne '303a8cf752f70c024626c9e4e56b9b7b317a41e4' -or
+    $LASTEXITCODE -ne 0) { throw 'Wrong evidence ancestry' }
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-812.json") | ConvertFrom-Json
+$p = $e.preparation
+$c = $e.compilation
+if (-not $c.kotlinFixtureCompilationExecuted -or -not $c.packagedArchiveHashVerified -or
+    -not $c.bothNamedClassesAndRouteMethodsPresentInDex -or -not $c.productionAppApkIdenticalToAccepted801 -or
+    $c.nativeExecuted -or $p.productionContentSyncCalls -ne 1 -or $p.preparseCalls -ne 0 -or
+    $p.verifiedRuntimeHashes -ne 8469 -or $p.contentVersion -ne '5572c6c467e6b73b' -or
+    $p.actualHan.Count -ne 14 -or $p.drawingStrokes -ne 9 -or
+    $p.kanjiGuardChecksPlanned -ne 896 -or $p.wordGuardChecksPlanned -ne 384) {
+    throw 'Prepared evidence mismatch'
+}
+$body = @"
+Checkpoint812, SAME batch105: completed full-archive native fixture and APK PREPARATION only. Signed LOCAL evidence commit $head preserves docs/n1-sources/execution-812.json and docs/n1-reviews/batch-105-native-812/. Both native cases compiled successfully on qualified signed Android bf30cdead8515739bc0e671d57a54b9a3109dd46: $($c.result); $($c.taskSummary), explicit JDK17/SDK, one worker, no parallel Gradle work, in-process Kotlin and unchanged heap/guards. Both named classes/methods are present in test DEX; the full archived-content asset matches its exact SHA256. The production debug APK is byte-identical to accepted801's qualified APK, not unrelated latest application main. These are preparation/compilation checks, NOT passing native cases or an owner-signed release.
+
+The new LF git archive binds signed content303a8cf752f70c024626c9e4e56b9b7b317a41e4, contentVersion5572c6c467e6b73b, SHA256 $($p.archiveSha256). Exact raw manifest and every one of8,469 runtime manifest hashes verified; $($p.zipEntries) ZIP entries / $($p.compressedBytes) compressed / $($p.inflatedBytes) inflated / $($p.retainedBytes) retained bytes pass unchanged18,000-entry /42-MiB /80-MiB /56-MiB guards and per-file/path/media checks. This LOCAL git archive is NOT a published immutable GitHub ZIP. Command-local git -c core.autocrlf=false preserves committed LF, without changing any Git configuration, runtime content, policy, heap or guard. Original104 fixtures/artifacts remain intact; new fixtures and reusable helpers live under approved control, with exact contributor evidence archived in Git.
+
+The fixture imports the complete archive through production ContentSync ONCE without pre-parsing. Expected counts are1,128 kanji /5,079 words /137 N1-labelled, including UNACCEPTED batch105. Planned assertions:64 actual meaning-option sets across N1/All/custom/random pools,896 direct symmetric kanji-guard checks,192 nontransitive neighbor checks and384 pair-only word-guard checks in both directions. Every offered kanji set is pairwise exclusion-checked. All THREE curated distractors are N1, so the real default N1 question must retain all THREE and has ZERO fallback. Filtered sampled pools may use fallback; the inherited semantic-review flag does not claim default fallback occurred.
+
+Planned Room projections preserve full on[KEI]/kun[tsuyo.i] and selected sole on/empty kun; source-only kun spelling is not offered, and a kun question must be null. Exactly one on-key answer/log/done is expected, with actual kana key/katakana display bound in the fixture. Nine-stroke trace/recall, both complete new articles, one mapped reciprocal pair/two directions, system Back and offline routing are included; zero reused/baseline article edits or activated baseline pairs. Support has no inferred vocabulary level.
+
+The glyph case plans56 individual probes (14 actual runtime Han across four production families/default), four whole-word rasters and three visible panels. It explicitly includes U+52C1, U+5DE0 and U+5202, absent from all three bundled cmaps: actual fallback/readability remains UNVERIFIED until native PNG inspection and both original-family rendered confirmations. Presence/raster hashes alone will not close it. Temporary Android fixture and asset were removed; both dedicated worktrees wholly clean; all runtime/manifest bytes unchanged; parent runner lock untouched, optional historical-session recipes not accessed, no new permission denial. No emulator, native case or reviewer ran.
+
+Original810 two-family textual acceptance and811's five non-skipped HOST cases/finite10-kanji22-word semantic disposition are inherited, not repeated. The original withdrawn hypotheses, optional dispositions, complete reports and read-depth limits remain preserved, without new review credit or universal semantic safety claim. New actual native options still need exact source-backed semantic/rendered adjudication.
+
+Next: fresh exact signed-head/checkpoint/live-parent/session/device/local+remote-port/PID checks, then execute the two exact NEW812 cases/APKs on the owned read-only API35 environment, unchanged2-GiB guest/192m growth limit. Require BOTH named terminal case-status0, actual route/PNG acceptance and TWO serial ORIGINAL-session family rendered confirmations. All combined-current-main checks, normal signed integration/publication, terminal green CI and EVERY immutable-GitHub-ZIP manifest hash/budget check remain mandatory. No unreviewed content pushed; no batch106 begun.
+
+Published additions remain131/1,228; acceptance remainder1,097; last published047c2cef6b6a48b1738f2c5957de01be481c63e1. Compatible stop-cran/kanji-cards-android#125 and stop-cran/kanji-cards-android#132 reading-curation/kanji-exclusion-aware client required; old clients ignore those fields. Physical-phone, general-release and whole-set acceptance remain outstanding; the project is incomplete.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant()} |
+        ConvertTo-Json | Set-Content "$log\issue-812-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-812-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}
