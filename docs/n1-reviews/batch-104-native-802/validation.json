@@ -1,0 +1,25 @@
+{
+  "execution": 802,
+  "snapshot": "e275d7c4245335bed7268afb022568f7daa8ad33",
+  "scope": "Native evidence only; no runtime, teaching, Android production or manifest edits.",
+  "commands": [
+    {
+      "command": "python -B tools\\validate.py",
+      "exitCode": 0,
+      "result": "0 error(s)"
+    },
+    {
+      "command": "python -B tools\\build_manifest.py",
+      "exitCode": 0,
+      "result": "8466 files; contentVersion a5bc9b199c7df334"
+    },
+    {
+      "command": "git --no-pager diff --exit-code -- manifest.json",
+      "exitCode": 0,
+      "result": "Regenerated manifest unchanged"
+    }
+  ],
+  "tests": "Both exact801 native cases terminal status0 on fresh owned emulator5584, zero failures/skips in successful220.232s retry. Initial failed attempt and port-only no-launch preserved separately.",
+  "hostEvidence": "Prior execution800 HOST5/finite semantic evidence inherited, not repeated.",
+  "limits": "Not combined-main/full-suite/publication or independent rendered-review acceptance."
+}
