@@ -1,0 +1,31 @@
+Checkpoint737 stopped on a real Python os.replace(progress.json.737.tmp,
+progress.json) WinError5. Original error, proposed state and signed denial
+receipt remain preserved. The original process holding any conflicting
+handle was NOT captured; do not identify it retrospectively as proven.
+
+Parent isolated reproduction:
+- Get-Content -Raw piped to processing retains a reader during processing;
+  concurrent atomic overwrite fails with the same Windows error5.
+- Explicit FileShare.ReadWrite|Delete also failed on this host. Merely adding
+  delete sharing is NOT the established fix.
+- Reading an immutable checkpoint-full.json instead leaves live progress
+  unheld and allows the atomic live replacement; snapshot stays consistent.
+
+supervise.ps1 now reads the immutable per-coordinator checkpoint-full.json
+whenever work is active. The launcher creates it before publishing that
+session's runtime entry. It does NOT read live progress while a writer is
+active. Terminal completed state may read canonical progress after the child
+exits. Stopped/blocked/paused states report and stop before any progress read.
+Small runtime reads are fully closed before JSON processing.
+
+The observer now reports checkpoint-boundary snapshots, not live intra-child
+stage changes. Its exact CI/head/main-containment gates and stop guards remain.
+No ACL, ownership, permissions, policy, heap, signing, or writer lock change.
+No automatic retry of denied writes was introduced. A future real denial
+still preserves evidence and yields for diagnosis rather than looping.
+
+Parent recovery can adopt the separately signed blocked737 receipt after
+the old writer/observer have exited, acquire the ordinary parent exclusive
+lock, verify clean signed heads and original state hashes, and atomically save
+the full history-preserving disposition. Do not reuse stale737 preflight,
+PID/session, old helper HEAD or original733 fixture. Next execution is738.
