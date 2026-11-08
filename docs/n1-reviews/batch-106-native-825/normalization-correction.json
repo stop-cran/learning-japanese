@@ -1,0 +1,16 @@
+{
+  "execution": 825,
+  "originalSignedEvidenceCommit": "b75de041f075680f1d0580da0207ddc48c50251b",
+  "exactError": "finish-native-825.py:98 AssertionError in git-object evidence hash verification; checkpoint not advanced",
+  "scope": "Only receipts/preflight-825-path-quoting-diagnostic.json hash entry differed; all other indexed Git objects matched.",
+  "cause": "Python Windows write_text wrote13CRLF lines; Git normalized that JSON to LF, but the index retained its raw CRLF hash. Byte comparison proves newline-only change.",
+  "oldRawSha256": "d33fbf2228dd2874e77928c7c506dc940cb143ebf6aa89063f7d0961512a75cf",
+  "correctGitLfSha256": "c5fe0cac27d619504887aee8d2f34179852b8e273fda8fbebbf0766bd32f96cc",
+  "remedy": "Preserve exact original CRLF diagnostic and index in gzip; record actual LF Git-object hash, normalize working JSON, preserve corrected finalizer and validate both signed evidence commits without amendment.",
+  "originalOwnerNativeReport": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6721431430",
+  "permissionDenial": false,
+  "runtimeChanged": false,
+  "nativeRepeated": false,
+  "parentLockTouched": false,
+  "originalCommitAmended": false
+}
