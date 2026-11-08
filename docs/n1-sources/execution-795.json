@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "execution": 795,
+  "batch": "103",
+  "startingState": {
+    "execution": 795,
+    "batch": "103",
+    "startedAt": "2026-11-08T07:12:12.165461+00:00",
+    "startingHead": "a09335629270e35b87301d79efa6675664a19cbd",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "a38f4cf554300ce34ee65aada79e87b7c9d0319e",
+    "scope": "SAME103 reviewed acceptance ledgers, normal signed owner fast-forward publication, terminal CI/public ZIP/verified owner issue and durable full-history checkpoint; yield before104.",
+    "request": {
+      "sha256": "a6c902df59f0a78af567324db1d18832302822686f8549fa73f3a9ea95637260",
+      "bytes": 5547527,
+      "characters": 5479139,
+      "lines": 74057,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded and checkpoint decoded; operative contract, entire approved issue and final794 inspected directly. Historical middle parsed, not freshly semantically re-reviewed. Initial oversized outputs and terminal encoding errors did not change disk or acceptance evidence."
+    },
+    "runnerPreflight": {
+      "execution": 795,
+      "sessionId": "5f211b02-d1e5-4341-8506-ff266cbf58bd",
+      "verifiedAt": "2026-11-08T07:11:48.6398912+00:00",
+      "ancestry": [
+        3692,
+        22452,
+        13320
+      ],
+      "liveParentPid": 13320,
+      "coordinatorPid": 22452,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 794,
+      "contentHead": "a09335629270e35b87301d79efa6675664a19cbd",
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe.",
+      "lockTouched": false
+    },
+    "runtime": {
+      "contentVersion": "38c32a8df5fd6063",
+      "runtimeHashesVerified": 8463,
+      "manifestSha256": "acebe94dc10555d4163dfa9d1c72289369ca174ab9d91e7364f2e48ec9b994d6",
+      "unchangedSinceTeaching": "08e76c1688ada4898a79e25e13650687dadf65d1"
+    },
+    "artifactPathPreflight": "Approved committed packets/frozen workspace inputs/control helpers only; optional historical-session recipes not accessed.",
+    "parentLockTouched": false,
+    "actualNewPermissionDenials": []
+  },
+  "status": "published-verified-bounded-compatible-client-owner-testing",
+  "publicationRecord": "batch-103-publication.json",
+  "acceptedCommit": "270cdf4654d580d1f3aaa599e889630d99b3e13f",
+  "runtimeBytesUnchanged": true,
+  "runtimeAccepted": true,
+  "runtimePublished": true,
+  "counts": {
+    "kanji": 1126,
+    "words": 5077,
+    "n1Labels": 135,
+    "namedSourceMembersPresent": 140,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 130,
+    "remainingAdditions": 1098,
+    "batchNewNecessarySupportWords": 3,
+    "projectNewNecessarySupportWords": 128,
+    "batchChangedReusedArticles": 3,
+    "allMappedReciprocalPairs": 3,
+    "mappedDirectedLinks": 6,
+    "activatedBaselinePairs": 0
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42458116646,
+    "headSha": "270cdf4654d580d1f3aaa599e889630d99b3e13f",
+    "jobs": [
+      {
+        "completedAt": "2026-11-08T07:18:35Z",
+        "conclusion": "success",
+        "databaseId": 128661369602,
+        "name": "validate",
+        "startedAt": "2026-11-08T07:16:35Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-08T07:16:36Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-08T07:16:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:17:56Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-08T07:16:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:17:56Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-08T07:17:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:02Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-08T07:17:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:19Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-08T07:18:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:31Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-08T07:18:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:32Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-08T07:18:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:33Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-08T07:18:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:34Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-08T07:18:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:34Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-08T07:18:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:34Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-08T07:18:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T07:18:34Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-08T07:18:34Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42458116646/job/128661369602"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "270cdf4654d580d1f3aaa599e889630d99b3e13f",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/270cdf4654d580d1f3aaa599e889630d99b3e13f",
+    "sha256": "1ff720d3cdbfe52aefa801448a4b7e812072b7d833289e4428b0d56454eff641",
+    "manifestEqual": true,
+    "contentVersion": "38c32a8df5fd6063",
+    "verifiedRuntimeHashes": 8463,
+    "zipEntries": 8485,
+    "compressedBytes": 30880878,
+    "inflatedBytes": 44674131,
+    "retainedBytes": 44405793,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "newReviewerNativeHostRuns": 0,
+  "actualNewPermissionDenials": [],
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "executionDiagnostic": "First checks attempt stopped before any tests because a process-inherited GH_TOKEN was present. Subsequent isolated shell cleared inherited token locally before checks; no credentials printed/persisted, global auth unchanged, no permission denial or gate bypass. Initial encoding/oversized read diagnostics preserved in coordinator log."
+}
