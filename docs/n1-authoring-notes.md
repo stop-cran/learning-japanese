@@ -59,6 +59,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 106: local unreviewed draft
+
+The bounded draft adds **勅**, source row 117, and necessary **勅令**
+(ちょくれい), with no vocabulary level inferred from its kanji. The
+[source-completion plan](n1-sources/batch-106-source-completion-plan.json)
+retains 79 complete dictionary families and all reading dispositions.
+Full metadata チョク / いまし.める / みことのり stays in source order;
+only チョク is selected for questions. The unmatched いまし.める remains
+qualified character-dictionary reference information, not an invented
+spelling or a claim of modern use. The documented noun みことのり remains
+for recognition; outside-Joyo-list notation is not a rarity or invalidity flag.
+
+The sole reused teaching change is a new 勅令 common-word example in **令**,
+not navigation-only. Two mapped pairs require four link directions; no
+baseline word-to-勅 pair is activated. Three wrong kanji choices, two direct
+kanji exclusions and six direct word exclusions are source-based proposals,
+not a claim that every live option set has been inspected. Pinned nine-path
+stroke conversion and final actual-Han/cmap checks are mechanical preparation;
+four-font rendered/native acceptance remains pending.
+
+This checkpoint is **local and unreviewed**, not published. Both serial blind
+different-family textual reviews must cover both new articles and the actual
+令 addition. Qualified non-skipped Android, native import/session/drawing/
+article/Back/offline/font checks, combined-main validation, signing, owner
+fast-forward, green CI and every immutable-ZIP runtime hash remain mandatory.
+Published coverage stays **132 additions; 1,096 remaining**. Physical-phone,
+general-release and whole-set acceptance remain outstanding.
+
 ## Batch 086: textually reviewed; runtime acceptance pending
 
 **凡**, source row 95, and its necessary **凡例** (はんれい) support article
