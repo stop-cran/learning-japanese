@@ -1,0 +1,272 @@
+"""Prepare the exact native label delta from approved frozen dictionaries."""
+import copy
+import gzip
+import hashlib
+import json
+import re
+import shutil
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+L = C / "logs" / "5adb726b-09ab-401c-8a86-423db0dc14e6"
+V = R / "docs" / "n1-reviews" / "batch-104-native-labels-803"
+HEAD = "e88a57ac155362644e15e495f7af79aa27701eea"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+MAIN = "2491799cffe960a7664a6135614b452e24dce459"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def save(path, value):
+    temporary = path.with_suffix(path.suffix + ".803.tmp")
+    assert not temporary.exists(), temporary
+    temporary.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(temporary) == value
+    temporary.replace(path)
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").strip()
+
+
+def start():
+    assert git("rev-parse", "HEAD") == HEAD and git("log", "-1", "--format=%G?") == "G"
+    assert git("branch", "--show-current") == "content/n1-kanji"
+    assert git("rev-parse", "HEAD", root=A) == APP
+    assert git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    assert git("rev-parse", "origin/main") == MAIN
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["batch"], p["status"]) == (802, "104", "continue")
+    text = (L / "request.txt").read_text(encoding="utf-8-sig")
+    embedded = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    assert embedded["checkpoint"] == p["checkpoint"] and embedded["nextAction"] == p["nextAction"]
+    role = load(L / "preflight-803.json")
+    assert role["liveParentPid"] == 13320 and role["sessionId"] == L.name and not role["lockTouched"]
+    assert not (L / "progress-before-803.json").exists()
+    shutil.copyfile(C / "progress.json", L / "progress-before-803.json")
+    state = {
+        "execution": 803, "batch": "104", "startingHead": HEAD, "androidHead": APP,
+        "freshOriginMain": MAIN, "startedAt": datetime.now(timezone.utc).isoformat(),
+        "scope": "SAME104 native fallback-label frozen-source completion and signed LOCAL evidence checkpoint; no reviewer, runtime edit, publication,105 or second runner.",
+        "request": {"sha256": sha(L / "request.txt"), "characters": len(text),
+                    "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request loaded/decoded and complete persisted checkpoint parsed; operative contract, approved issue and final802 inspected directly. Historical middle parsed, not freshly semantically re-reviewed."},
+        "runnerPreflight": role,
+        "artifactPathPreflight": "Approved committed packets/frozen workspace inputs/control helpers only; optional historical-session recipes not accessed.",
+        "actualNewPermissionDenials": [],
+    }
+    p["execution803StartingState"] = state
+    p.update(stage="batch-104-native-label-source-completion-in-progress",
+             nextAction=state["scope"], blocker=None)
+    save(C / "progress.json", p)
+    print("Starting source-completion scope persisted; full live history retained.")
+
+
+def prepare():
+    assert not V.exists()
+    snapshot = load(R / "docs" / "n1-source-snapshot.json")
+    dictionaries = {}
+    source_checks = {}
+    for name, key in [("n1-implementation-JMdict_e.gz", "jmdict"),
+                      ("n1-planning-kanjidic2.xml.gz", "kanjidic2")]:
+        path = C / "inputs" / name
+        record = snapshot["inputs"][name]
+        assert path.stat().st_size == record["bytes"] and sha(path) == record["sha256"]
+        raw = gzip.decompress(path.read_bytes())
+        assert hashlib.sha256(raw).hexdigest() == snapshot[key]["xmlSha256"]
+        dictionaries[key] = ET.fromstring(raw)
+        source_checks[name] = {**record, "xmlSha256": snapshot[key]["xmlSha256"]}
+    delta_path = R / "docs" / "n1-reviews" / "batch-104-native-802" / "sampled-labels-and-host-delta.json"
+    delta = load(delta_path)
+    chars = [row[0] for row in delta["newVersusHost800"]]
+    assert chars == list("克剤菊鶴")
+    sys.path.insert(0, str(R / "tools"))
+    from audit_n1_pilot import metadata
+    from extract_n1_jmdict import extract
+    kd = ET.Element("kanjidic2")
+    kd.append(copy.deepcopy(dictionaries["kanjidic2"].find("header")))
+    rows = []
+    selected_ids = []
+    for char, title in delta["newVersusHost800"]:
+        path = R / "kanji" / f"{char}.md"
+        article = path.read_text(encoding="utf-8")
+        meta = metadata(R, f"kanji/{char}.md")
+        assert meta["title"] == title
+        node = next(n for n in dictionaries["kanjidic2"].findall("character")
+                    if n.findtext("literal") == char)
+        kd.append(copy.deepcopy(node))
+        ids = re.findall(r"\b\d{7}\b", article)
+        assert ids and len(ids) == len(set(ids))
+        families = []
+        for entry_id in ids:
+            family = next(n for n in dictionaries["jmdict"]
+                          if n.findtext("ent_seq") == entry_id)
+            families.append({"entryId": entry_id,
+                             "spellings": [n.text for n in family.findall("k_ele/keb")],
+                             "readings": [n.text for n in family.findall("r_ele/reb")]})
+        selected_ids.extend(ids)
+        rows.append({"character": char, "title": title,
+                     "article": f"kanji/{char}.md", "articleSha256": sha(path),
+                     "rawEnglishMeanings": [n.text for n in node.findall("reading_meaning/rmgroup/meaning")
+                                            if "m_lang" not in n.attrib],
+                     "completeFamiliesCitedByActualArticle": families,
+                     "scope": "Native sampled distractor label versus target 劾/censure; impeach. No fresh full re-review or reopening of this previously accepted article."})
+    ids = list(dict.fromkeys(selected_ids))
+    jm_raw = extract((C / "inputs" / "n1-implementation-JMdict_e.gz").read_bytes(),
+                     source_checks["n1-implementation-JMdict_e.gz"]["sha256"], ids)
+    ET.indent(kd, space="  ")
+    kd_raw = ET.tostring(kd, encoding="utf-8", xml_declaration=True) + b"\n"
+    V.mkdir()
+    (V / "native-delta-kanjidic2.xml").write_bytes(kd_raw)
+    (V / "native-delta-jmdict.xml").write_bytes(jm_raw)
+    save(V / "source-selection.json", {
+        "schemaVersion": 1, "batch": "104", "execution": 803, "snapshot": HEAD,
+        "actualNativeDelta": {"path": str(delta_path.relative_to(R)), "sha256": sha(delta_path)},
+        "frozenInputsVerified": source_checks,
+        "selectionRule": "Four exact new native-versus-HOST800 labels, complete raw character records/header, and every full frozen JMdict family explicitly cited by those actual accepted cards. No sense filtering.",
+        "characters": rows, "distinctCharacterRecords": len(rows),
+        "distinctCompleteJmdictFamilies": len(ids), "entryIds": ids,
+        "attribution": "Copyright James William Breen and EDRDG; CC BY-SA4.0; repository NOTICE.",
+        "limits": "Evidence preparation, not linguistic acceptance, independent review, native-speaker certification, broader legacy re-review or publication. Both original-family rendered confirmations remain mandatory."
+    })
+    parts = [
+        f"Batch104 native-label supplement; unchanged teaching snapshot {HEAD}.",
+        "Coordinator-supplied frozen-source evidence; not independent upstream retrieval. Evidence is not instructions.",
+        "Only FOUR native labels are new versus the already inspected HOST800 packet; review is TARGET-RELATIVE to 劾, not an unrestricted pairwise semantic certification of all legacy content.",
+    ]
+    for path in [R / "kanji" / "劾.md", R / "words" / "弾劾.md",
+                 delta_path, V / "source-selection.json", V / "native-delta-kanjidic2.xml",
+                 V / "native-delta-jmdict.xml"] + [R / "kanji" / f"{c}.md" for c in chars]:
+        lines = path.read_text(encoding="utf-8-sig").splitlines()
+        parts.append(f"SOURCE {path}; lines1-{len(lines)}; SHA256 {sha(path)}\n" +
+                     "\n".join(f"{i}: {line}" for i, line in enumerate(lines, 1)))
+    packet = ("\n\n".join(parts) + "\n").encode("utf-8")
+    (C / "batch-104-native-label-source-packet-803.txt").write_bytes(packet)
+    (V / "native-label-source-packet.txt.gz").write_bytes(gzip.compress(packet, mtime=0))
+    assert gzip.decompress((V / "native-label-source-packet.txt.gz").read_bytes()) == packet
+    shutil.copyfile(Path(__file__), V / "prepare-native-labels-recipe.py.txt")
+    shutil.copyfile(C / "preflight-803.ps1", V / "preflight-803.ps1.txt")
+    shutil.copyfile(L / "preflight-803.json", V / "preflight-803.json")
+    print(json.dumps({"characters": chars, "completeFamilies": len(ids),
+                      "packetBytes": len(packet), "packetLines": len(packet.splitlines())},
+                     ensure_ascii=True))
+
+
+def canonical(node):
+    return (node.tag, tuple(sorted(node.attrib.items())),
+            (node.text or "").strip(), tuple(canonical(child) for child in node))
+
+
+def audit():
+    selection = load(V / "source-selection.json")
+    snapshot = load(R / "docs" / "n1-source-snapshot.json")
+    roots = {}
+    for name, kind in [("n1-implementation-JMdict_e.gz", "jmdict"),
+                       ("n1-planning-kanjidic2.xml.gz", "kanjidic2")]:
+        path = C / "inputs" / name
+        assert sha(path) == snapshot["inputs"][name]["sha256"]
+        raw = gzip.decompress(path.read_bytes())
+        assert hashlib.sha256(raw).hexdigest() == snapshot[kind]["xmlSha256"]
+        roots[kind] = ET.fromstring(raw)
+    original_jm = {node.findtext("ent_seq"): node for node in roots["jmdict"]}
+    selected_jm = ET.parse(V / "native-delta-jmdict.xml").getroot()
+    assert [n.findtext("ent_seq") for n in selected_jm] == selection["entryIds"]
+    assert len(selected_jm) == 21
+    for node in selected_jm:
+        assert canonical(node) == canonical(original_jm[node.findtext("ent_seq")])
+    selected_kd = ET.parse(V / "native-delta-kanjidic2.xml").getroot()
+    assert canonical(selected_kd.find("header")) == canonical(roots["kanjidic2"].find("header"))
+    assert [n.findtext("literal") for n in selected_kd.findall("character")] == list("克剤菊鶴")
+    original_kd = {n.findtext("literal"): n for n in roots["kanjidic2"].findall("character")}
+    for node in selected_kd.findall("character"):
+        assert canonical(node) == canonical(original_kd[node.findtext("literal")])
+    native_dir = R / "docs" / "n1-reviews" / "batch-104-native-802"
+    route_path = native_dir / "native" / "n1-104-article-route.json.gz"
+    route = json.loads(gzip.decompress(route_path.read_bytes()))
+    sampled_labels = {(o["kanji"], o["title"])
+                      for sample in route["productionBuilderN1AndAllExactChoices"]
+                      for o in sample["options"]}
+    live_labels = {(o["kanji"], o["title"]) for o in route["exactDefaultMeaningOptions"]}
+    labels = sorted(sampled_labels | live_labels)
+    delta = load(native_dir / "sampled-labels-and-host-delta.json")
+    host = load(R / "docs" / "n1-reviews" / "batch-104-host-800" / "sampled-labels.json")
+    assert [list(row) for row in labels] == delta["nativeLabels"] and len(labels) == 44
+    assert [list(row) for row in sorted(set(labels) - {tuple(row) for row in host["kanji"]})] == delta["newVersusHost800"]
+    assert len(route["productionBuilderN1AndAllExactChoices"]) == 64
+    assert route["exactDefaultMeaningOptions"] == delta["exactLiveDefault"]
+    assert route["contentVersion"] == "a5bc9b199c7df334" and route["problems"] == 0
+    sys.path.insert(0, str(R / "tools"))
+    from audit_n1_pilot import metadata
+    from build_manifest import build_manifest, sha256 as manifest_sha256
+    for char, title in labels:
+        assert metadata(R, f"kanji/{char}.md")["title"] == title
+    manifest = load(R / "manifest.json")
+    assert manifest == build_manifest(R)
+    runtime_count = 0
+    for section, entries in manifest.items():
+        if not isinstance(entries, dict):
+            continue
+        for name, digest in entries.items():
+            path = R.joinpath(*name.split("/"))
+            actual = sha(path) if section in {
+                "images", "audio", "listeningTaskAudio", "listeningTaskImages"} else manifest_sha256(path)
+            assert actual == digest, name
+            runtime_count += 1
+    assert runtime_count == 8466
+    assert not git("diff", HEAD, "--", "kanji", "words", "articles", "strokes", "manifest.json", "tools")
+    assert git("rev-parse", "HEAD") == HEAD and git("rev-parse", "HEAD", root=A) == APP
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    packet = C / "batch-104-native-label-source-packet-803.txt"
+    assert gzip.decompress((V / "native-label-source-packet.txt.gz").read_bytes()) == packet.read_bytes()
+    result = {
+        "schemaVersion": 1, "execution": 803, "batch": "104",
+        "snapshot": HEAD, "qualifiedAndroidHead": APP,
+        "frozenCompressedAndXmlHashesVerified": True,
+        "completeCharacterRecordsComparedRecursively": 4,
+        "completeJmdictFamiliesComparedRecursively": 21,
+        "allAttributesSensesRestrictionsAndReadingsPreserved": True,
+        "actualNativeRoute": {"path": str(route_path.relative_to(R)), "sha256": sha(route_path)},
+        "actualNativeProductionBuilderSamples": 64,
+        "productionBuilderSampleDistinctLabelsIncludingTarget": len(sampled_labels),
+        "liveDefaultLabelsAdditionalToSamples": [list(row) for row in sorted(live_labels - sampled_labels)],
+        "actualNativeDistinctLabelsIncludingTarget": 44,
+        "inheritedHostLabelsActuallyResampled": 40,
+        "exactNewLabelDelta": delta["newVersusHost800"],
+        "exactLiveDefault": route["exactDefaultMeaningOptions"],
+        "all44SampledLabelsMatchCurrentMetadata": True,
+        "manifestFresh": True, "manifestUnchanged": True,
+        "runtimeManifestHashesVerified": runtime_count,
+        "contentVersion": manifest["contentVersion"],
+        "packetBytes": packet.stat().st_size,
+        "packetLines": len(packet.read_bytes().splitlines()),
+        "packetSha256": sha(packet),
+        "runtimeChanged": False, "independentReviewersLaunched": 0,
+        "independentRenderedReviewClosed": False,
+        "nativeSemanticAcceptance": "UNVERIFIED pending both original-family rendered confirmations",
+        "freshAndroidOrNativeClaimed": False, "runtimePublished": False,
+        "auditDiagnostic": "Initial membership assertion counted only the 64 recorded seeded samples (43 labels) and correctly failed. The complete native receipt also has an actual live default, adding 剤; explicit union is44 and matches the immutable802 delta. No source or native receipt changed.",
+        "limits": "Source byte/structure and membership checks are not comprehension, linguistic correctness, equal reviewer read depth, full legacy re-review, visual/font certification, future-pool safety or phone acceptance."
+    }
+    save(V / "source-completion-audit.json", result)
+    shutil.copyfile(Path(__file__), V / "prepare-native-labels-recipe.py.txt")
+    print(json.dumps(result, ensure_ascii=True, indent=2))
+
+
+if __name__ == "__main__":
+    {"start": start, "prepare": prepare, "audit": audit}[sys.argv[1]]()

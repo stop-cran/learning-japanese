@@ -1,0 +1,168 @@
+"""Persist the source-only checkpoint without dropping any live history."""
+import gzip
+import importlib.util
+import json
+import shutil
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("labels803", C / "prepare-batch-104-native-labels-803.py")
+m = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(m)
+R, A, L, V = m.R, m.A, m.L, m.V
+
+
+def evidence():
+    p = m.load(C / "progress.json")
+    assert p["checkpoint"] == 802 and p["batch"] == "104"
+    tests = L / "source-tests-803.txt"
+    text = tests.read_text(encoding="utf-8-sig")
+    assert "Ran 5 tests" in text and text.rstrip().endswith("OK")
+    shutil.copyfile(C / "preflight-803.ps1", V / "preflight-803.ps1.txt")
+    (V / "source-tests-803.txt.gz").write_bytes(gzip.compress(tests.read_bytes(), mtime=0))
+    audit = m.load(V / "source-completion-audit.json")
+    assert audit["runtimeManifestHashesVerified"] == 8466
+    files = [{"file": str(path.relative_to(R)), "bytes": path.stat().st_size,
+              "sha256": m.sha(path)} for path in sorted(V.iterdir()) if path.is_file()]
+    record = {
+        "schemaVersion": 1, "execution": 803, "batch": "104",
+        "stage": "native-label-sources-complete-awaiting-original-family-rendered-confirmations",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "startingState": p["execution803StartingState"],
+        "evidenceDirectory": str(V.relative_to(R)),
+        "sourceCompletion": audit,
+        "coordinatorDisposition": m.load(V / "coordinator-semantic-disposition.json"),
+        "focusedTests": {"command": "python -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+                         "tests": 5, "failures": 0, "skipped": 0,
+                         "archive": str((V / "source-tests-803.txt.gz").relative_to(R))},
+        "artifactIndex": files,
+        "originalReviewSessions": {
+            "claude": {"sessionId": "2a96f7cf-4ed1-427d-90a8-e00e4bf1ef85", "actualModelAt799": "claude-opus-5.5"},
+            "gpt": {"sessionId": "40b1dab7-bea4-4403-810b-828fa28d53c7", "actualModelAt799": "gpt-6.1-sol"}
+        },
+        "nextScope": "SAME104 two SERIAL original-session family rendered confirmations on unchanged teaching/native802 scope. Use same exact source packet plus full inherited HOST800 sources, actual successful native PNGs/routes and own original report. Do not supply other report or coordinator adjudication as reviewer instructions. Inspect current CLI model/help catalog; preserve actual execution models, tool seriality, read/rendition/source limits and full reports before next process.",
+        "inheritedEvidence": {
+            "textualReview": "docs/n1-reviews/batch-104-reconciliation.json",
+            "hostFiniteSemantics": "docs/n1-reviews/batch-104-host-800/finite-semantic-disposition.json",
+            "nativeExecution": "docs/n1-sources/execution-802.json",
+            "nativeVisualScope": "docs/n1-reviews/batch-104-native-802/coordinator-inspection.json",
+            "sourcePacket": str(V / "native-label-source-packet.txt.gz"),
+            "durableUncompressedSourcePacket": str(C / "batch-104-native-label-source-packet-803.txt")
+        },
+        "runtimeChanged": False, "manifestChanged": False,
+        "independentReviewersLaunched": 0, "freshAndroidOrNativeClaimed": False,
+        "nativeSemanticAcceptance": "UNVERIFIED pending both original-family rendered confirmations",
+        "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [],
+        "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": m.MAIN,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "limits": "Source preparation is a recoverable intermediate checkpoint, not independent review or batch delivery. All previous acceptance/publication gates and original799 hypotheses/disagreement/optional/read-depth limits remain unchanged."
+    }
+    destination = R / "docs" / "n1-sources" / "execution-803.json"
+    assert not destination.exists()
+    m.save(destination, record)
+    shutil.copyfile(Path(__file__), V / "checkpoint-native-labels-recipe.py.txt")
+    print("Source-only803 ledger and complete evidence prepared; no runtime edit or acceptance claim.")
+
+
+def finish():
+    p = m.load(C / "progress.json")
+    original = m.load(L / "progress-before-803.json")
+    assert p["checkpoint"] == 802 and p["batch"] == "104" and p["status"] == "continue"
+    head = m.git("rev-parse", "HEAD")
+    assert m.git("rev-parse", "HEAD^") == m.HEAD and m.git("log", "-1", "--format=%G?") == "G"
+    assert not m.git("status", "--porcelain", "--untracked-files=all")
+    assert m.git("rev-parse", "HEAD", root=A) == m.APP
+    assert not m.git("status", "--porcelain", "--untracked-files=all", root=A)
+    assert m.git("rev-parse", "origin/main") == m.MAIN
+    posted = m.load(L / "issue-803-posted.json")
+    reread = m.load(L / "issue-803-reread.json")
+    body = (C / "batch-104-native-labels-803-issue-body.txt").read_bytes().decode("utf-8")
+    assert reread["user"]["login"] == "stop-cran" and reread["body"] == body
+    assert reread["html_url"] == posted["url"]
+    allowed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    assert all(p[k] == v for k, v in original.items() if k not in allowed)
+    old_state = {k: original[k] for k in allowed}
+    p["historicalExecution802Before803SourceCompletion"] = old_state
+    next_action = (
+        f"SAME104 checkpoint803 signed LOCAL source-completion evidence HEAD{head}, qualifiedAndroid{m.APP}. "
+        "Read docs/n1-sources/execution-803.json and docs/n1-reviews/batch-104-native-labels-803/. "
+        "FOUR exact native-vs-HOST800 labels 克/剤/菊/鶴 now have full frozen character records and21complete JMdict families, "
+        "compressed+XMLsourcehashes and recursive full-node equality verified; four actual accepted article bodies inspected by coordinator. "
+        "Native64seededbuilders contain43labels; actualLIVEdefault adds剤 for44union. Full actual route union/delta/default/currenttitles checked, "
+        "not just receipt constants. HOST40resampledlabels/26wordsemantics inherited800, not fresh or independent rereview. "
+        "Coordinator finds no new target-relative consequential defect; independent native semantic acceptance REMAINS UNVERIFIED. "
+        "NEXT TWO SERIAL ORIGINAL-family rendered confirmations using original799 sessions/reports from batch-104-reconciliation.json. "
+        "Same frozen unchanged teaching/native802 scope; currentCLIcatalog/actualmodels/read-onlytools/serialtoolcalls; "
+        "include exact four-label source packet control\\batch-104-native-label-source-packet-803.txt "
+        "(lossless committed gzip in new evidence folder), full inheritedHOST800sourceevidence, actual native802successful PNGs/routes, "
+        "own original report and exact teaching diff; no other review report or coordinator adjudication as instructions. "
+        "Wait actualprocessEXIT/archivecompleteoriginalreport before next reviewer. Reuse sessions "
+        "Claude2a96f7cf-4ed1-427d-90a8-e00e4bf1ef85/GPT40b1dab7-bea4-4403-810b-828fa28d53c7; "
+        "originalactualmodelsclaude-opus-5.5/gpt-6.1-sol, not inferred future availability. "
+        "Preserve799low-riskunproved劾/偵and弾劾/叱るhypotheses/disagreement/fouroptionalpolish/readdepth; "
+        "802firstfailedMessagesANR/no-launchremote5581/passingfresh5584/equalassertions+resources/ownedhelperstop/900x2000renditionlimits "
+        "remain historicalexact. No new blindinitialcredit/universalpool-safety/equalcomprehension/fallbackface/native-speaker/retention claims. "
+        "Any consequential defect requires minimalcorrection/audits/manifest/normalnew signedfreeze/BOTHoriginal-familyconfirmations. "
+        "ALL8466runtimehashes/versiona5bc9b199c7df334/manifest unchanged; 5focusedextracttests passed. "
+        "No reviewer/newAndroid-native/runtimeedit/push/105 this checkpoint. "
+        "ALL original802gates/nextAction preserved VERBATIM in historicalExecution802Before803SourceCompletion.nextAction: "
+        "combinedcurrentmain/nonrewritingmerge/changedteachingreview/fullrequiredPython/vocabulary/baseline-membership-links/"
+        "manifestbudget/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/"
+        "unchanged18000entries42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue remainMANDATORY. "
+        "Freshsignedheads/checkpoint/whollyclean/freshmain/liveparentancestry/decodedlauncher/exactsession required. "
+        "Parent13320ownsrunner.lock:nochildacquire/delete/unlock/readprobe; approvedcontrol/committedsource/frozeninputs only. "
+        "Preserve/report/yield actualnewdenial/signinghang/uncertainownership. "
+        "Published130/1228/remainder1098/lastpublished2491799cffe960a7664a6135614b452e24dce459 unchanged; "
+        "batch104unaccepted/unpublished; compatibleAndroid#125+#132required; oldclientsignore. "
+        "Physicalphone/generalrelease/whole-setoutstanding; projectincomplete."
+    )
+    checkpoint = {
+        "schemaVersion": 1, "execution": 803, "checkpoint": 803, "batch": "104",
+        "status": "continue",
+        "stage": "batch-104-native-label-sources-complete-awaiting-original-family-rendered-confirmations",
+        "savedCommit": head, "signature": "G", "qualifiedAndroidHead": m.APP,
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "evidence": "docs/n1-sources/execution-803.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True,
+        "completeCharacterRecords": 4, "completeJmdictFamilies": 21,
+        "nativeDistinctSeededLabels": 43, "nativeDistinctLabelsWithLiveDefault": 44,
+        "fullSourceStructureAndExactNativeUnionVerified": True,
+        "sourceTests": 5, "runtimeHashesVerified": 8466,
+        "contentVersion": "a5bc9b199c7df334",
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "independentReviewersLaunched": 0,
+        "independentRenderedReviewClosed": False,
+        "nativeSemanticAcceptance": "UNVERIFIED pending both original-family rendered confirmations",
+        "freshAndroidOrNativeClaimed": False, "reviewClosed": [], "published": [],
+        "dedicatedWorktreesClean": True, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 130, "remainingAdditions": 1098, "lastPublishedCommit": m.MAIN,
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "historicalRootKeysCompared": len(original), "allOriginalHistoricalValuesPreserved": True,
+        "nextAction": next_action, "blocker": None
+    }
+    p["execution803CoordinatorCheckpoint"] = checkpoint
+    p.update(checkpoint=803, status=checkpoint["status"], stage=checkpoint["stage"],
+             nextAction=next_action, blocker=None)
+    assert all(p[k] == v for k, v in original.items() if k not in allowed)
+    m.save(C / "progress.json", p)
+    saved = m.load(C / "progress.json")
+    assert saved == p
+    assert all(saved[k] == v for k, v in original.items() if k not in allowed)
+    m.save(L / "checkpoint-803-verification.json", checkpoint)
+    print(json.dumps({k: checkpoint[k] for k in ["checkpoint", "status", "savedCommit",
+                                               "issueUpdate", "historicalRootKeysCompared",
+                                               "allOriginalHistoricalValuesPreserved"]}, indent=2))
+
+
+if __name__ == "__main__":
+    {"evidence": evidence, "finish": finish}[sys.argv[1]]()
