@@ -10,7 +10,9 @@ from unittest.mock import patch
 import yaml
 
 import generate_strokes
-from audit_n1_batch import activated_baseline_pairs, audit, runtime_delta
+from audit_n1_batch import (
+    activated_baseline_pairs, audit, lexical_pair, runtime_delta, teachable_lexical_pair,
+)
 from build_manifest import build_manifest
 from freeze_n1_sources import KVG_REVISION
 
@@ -432,6 +434,30 @@ class N1SourcePlanAuditTest(unittest.TestCase):
         tree.write(packet, encoding="utf-8", xml_declaration=True)
         with self.assertRaisesRegex(ValueError, "Support identity/restrictions mismatch"):
             self.run_audit()
+
+    def test_rejects_search_only_support_reading(self):
+        self.make_fixture("current")
+        packet = self.folder / f"batch-{self.batch}-jmdict.xml"
+        tree = ET.parse(packet)
+        ET.SubElement(tree.getroot().find("entry/r_ele"), "re_inf").text = "search-only kana form"
+        tree.write(packet, encoding="utf-8", xml_declaration=True)
+        with self.assertRaisesRegex(ValueError, "Support identity/restrictions mismatch"):
+            self.run_audit()
+
+    def test_teachable_reading_requires_an_applicable_non_search_only_row(self):
+        entry = ET.fromstring("""
+            <entry>
+              <k_ele><keb>甲乙</keb></k_ele>
+              <k_ele><keb>甲丙</keb></k_ele>
+              <r_ele><reb>こうおつ</reb><re_inf>search-only kana form</re_inf>
+                <re_restr>甲乙</re_restr></r_ele>
+              <r_ele><reb>こうおつ</reb><re_restr>甲丙</re_restr></r_ele>
+              <sense><gloss>example</gloss></sense>
+            </entry>
+        """)
+        self.assertTrue(lexical_pair(entry, "甲乙", "こうおつ"))
+        self.assertFalse(teachable_lexical_pair(entry, "甲乙", "こうおつ"))
+        self.assertTrue(teachable_lexical_pair(entry, "甲丙", "こうおつ"))
 
     def test_rejects_conflicting_duplicate_dictionary_family(self):
         self.make_fixture("current")

@@ -6389,11 +6389,12 @@ pins the frozen candidate inventory to the batch base and also detects written
 member characters in existing word filenames, including articles added by
 earlier batches. This does not discover alternate spellings or kana-headed
 candidates; independent source and reuse searches remain required. The
-source-plan audit additionally checks direct exclusions and regenerates
-strokes from the SVG and converter identified in the frozen source index
-(requires `svgpathtools==1.8.0`), with stroke-order variants unchanged from the
-base. A CRLF checkout is accepted only
-when LF-normalized SVG bytes reproduce the pinned source blob and evidence.
+source-plan audit requires both a non-search-only support spelling and an
+applicable, non-search-only reading row. It checks direct exclusions and
+regenerates strokes from the SVG and converter identified in the frozen
+source index (requires `svgpathtools==1.8.0`), with stroke-order variants
+unchanged from the base. A CRLF checkout is accepted only when LF-normalized
+SVG bytes reproduce the pinned source blob and evidence.
 Baseline manifest sections, schema and language metadata must also remain
 unchanged.
 It does not independently re-extract dictionary packets. Unsupported or

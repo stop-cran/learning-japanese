@@ -42,14 +42,17 @@ def runtime_delta(before, after, additions, changed):
             "Changed baseline payload differs from recorded reused passages")
 
 
-def lexical_pair(entry, spelling, reading):
+def lexical_pair(entry, spelling, reading, *, reject_search_only_readings=False):
     spellings = {v.text for v in entry.findall("k_ele/keb")}
     if spelling not in spellings:
         return False
     for row in entry.findall("r_ele"):
         restrictions = {v.text for v in row.findall("re_restr")}
         if (row.findtext("reb") == reading and row.find("re_nokanji") is None
-                and (not restrictions or spelling in restrictions)):
+                and (not restrictions or spelling in restrictions)
+                and (not reject_search_only_readings
+                     or all("search-only" not in (flag.text or "").lower()
+                            for flag in row.findall("re_inf")))):
             return True
     return False
 
@@ -165,7 +168,7 @@ def source_plan_packets(folder, batch, plan, source_audit, variant):
 
 
 def teachable_lexical_pair(entry, spelling, reading, sense_number=None):
-    if not lexical_pair(entry, spelling, reading):
+    if not lexical_pair(entry, spelling, reading, reject_search_only_readings=True):
         return False
     written = [row for row in entry.findall("k_ele") if row.findtext("keb") == spelling]
     if not any(all("search-only" not in (flag.text or "").lower()
