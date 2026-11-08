@@ -1,0 +1,159 @@
+{
+  "batch": "106",
+  "validatedIndexTree": "197e68f658e061ccdfe7ed6eda7cf87b8f98d3c7",
+  "reviewEvidenceHead": "605318f7ae066284bc7eeb4077004d146aaf0bda",
+  "mainMergeParent": "e0dd9371c8f7501c5416973dfd3578ef86a2132e",
+  "checks": [
+    {
+      "name": "python-tests",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 66.16,
+      "log": "python-tests.log",
+      "originalLocalLogSha256": "7fddf1a4f7c697fdda4562d805a4337338a9567dff7e1a5435e888e57811a4b1",
+      "publicLfLogSha256": "9d389d2b4661c0af206be16af2d3edf37b05b0484dc913a2bc86b02ae71b1d28"
+    },
+    {
+      "name": "content-validator",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools\\validate.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 31.09,
+      "log": "content-validator.log",
+      "originalLocalLogSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "publicLfLogSha256": "d76219a16ae024518727cd88255c3c11316194b0b7181b95aa3bb3d46a6472db"
+    },
+    {
+      "name": "content-budget",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools\\check_content_budget.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 7.38,
+      "log": "content-budget.log",
+      "originalLocalLogSha256": "755c4319bf39a6359ddbf03929a0dff7b510901dadfbe802abe7d4db30032ad0",
+      "publicLfLogSha256": "91ae41411c83ff40f3b5601f64c7a1fef5093b9fdc2e99889a14de5a9173237c"
+    },
+    {
+      "name": "grammar-vocabulary",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools\\grammar_vocabulary.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.12,
+      "log": "grammar-vocabulary.log",
+      "originalLocalLogSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "publicLfLogSha256": "c2362f303180a98576f2928f2a1f8e60ac6c625910a068fdd401aeb1b3261e73"
+    },
+    {
+      "name": "build-manifest",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools\\build_manifest.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 2.7,
+      "log": "build-manifest.log",
+      "originalLocalLogSha256": "2e453c9eb4ed54b46a7fea9457e80fc6dd74f60987d61d6ba4f1588743eefcbf",
+      "publicLfLogSha256": "ff1a2663dfa6d50bddd6c1f48cdf7b55bcffb6b589330fb8f2d6d6846dde548d"
+    }
+  ],
+  "pythonTestCount": 431,
+  "logsNormalizedToLfForPortability": true,
+  "manifestSha256": "68a3f8fca761353b9023233f5cca3c4fa4417bf5f9d52811768638770799f946",
+  "runtimeFilesVerified": 8472,
+  "runtimeHashRules": "CRLF to LF, as in build_manifest.py; binaries byte-for-byte",
+  "runtimeGitBlobsUnchangedAgainstReviewedAndNativeCommits": true,
+  "sourceInputHashes": [
+    {
+      "path": "docs/n1-sources/batch-106-comparison-kanjidic2.xml",
+      "historicalReceiptSha256": "d4dfd8855dd272411f79871d2f429bed5f0f1d254a91d108547b895826ae1956",
+      "historicalHashScope": "LF-normalized XML",
+      "stagedLfNormalizedSha256": "d4dfd8855dd272411f79871d2f429bed5f0f1d254a91d108547b895826ae1956"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-comparison-selection.json",
+      "historicalReceiptSha256": "a138b1dea929795dc96e8a90fc704fbe6b11d44118737cf595e82c2f2e6cf852",
+      "historicalHashScope": "Windows checkout bytes",
+      "stagedLfNormalizedSha256": "e4e335e35f575778b84ce8716e3a2573e29113b9c9b5188d9a6a2ffc5ac6f76c"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-comparisons.xml",
+      "historicalReceiptSha256": "09a40553b1e7fbc21adcf0cfbcd98d39b11bfb8db30663dbeebe9fa6de296fd3",
+      "historicalHashScope": "LF-normalized XML",
+      "stagedLfNormalizedSha256": "09a40553b1e7fbc21adcf0cfbcd98d39b11bfb8db30663dbeebe9fa6de296fd3"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-completion-comparisons.xml",
+      "historicalReceiptSha256": "be8c5c22f2c0344d238d28cb25d88a90cb7c4756a29a472a1b228816b6feb49c",
+      "historicalHashScope": "LF-normalized XML",
+      "stagedLfNormalizedSha256": "be8c5c22f2c0344d238d28cb25d88a90cb7c4756a29a472a1b228816b6feb49c"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-completion-kanjidic2.xml",
+      "historicalReceiptSha256": "2f6151f13ad814c032822e7c32d176a149063779530fb3cc8bf383ae064479ce",
+      "historicalHashScope": "LF-normalized XML",
+      "stagedLfNormalizedSha256": "2f6151f13ad814c032822e7c32d176a149063779530fb3cc8bf383ae064479ce"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-completion-selection.json",
+      "historicalReceiptSha256": "f1638c36365e3ac989f6bd3760d4aa9c2582715b21c818d8f63a29b41710fc03",
+      "historicalHashScope": "Windows checkout bytes",
+      "stagedLfNormalizedSha256": "2cee2793bbe5061d206d5eace56c47e334af1030af79628a3a514abc2a4d0e9a"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-jmdict.xml",
+      "historicalReceiptSha256": "ac21a1fd12b18b8525aff0a570f33446bf867f788027f8094887644af572ff1e",
+      "historicalHashScope": "LF-normalized XML",
+      "stagedLfNormalizedSha256": "ac21a1fd12b18b8525aff0a570f33446bf867f788027f8094887644af572ff1e"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-kanjidic2.xml",
+      "historicalReceiptSha256": "73c832cd55b2de5404c0532a9648f4237c8289cf8931a9b968e276ee129c2fd7",
+      "historicalHashScope": "LF-normalized XML",
+      "stagedLfNormalizedSha256": "73c832cd55b2de5404c0532a9648f4237c8289cf8931a9b968e276ee129c2fd7"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-lexical-selection.json",
+      "historicalReceiptSha256": "4e4d1b8a046d3d8be634db9539874ef65830445391ef7b8e5e8f3967965f4206",
+      "historicalHashScope": "Windows checkout bytes",
+      "stagedLfNormalizedSha256": "d3337f0eb946299b8479d503e41dfe33458a4a7a1a6e1db574186e5056436619"
+    },
+    {
+      "path": "docs/n1-sources/batch-106-source-completion-plan.json",
+      "historicalReceiptSha256": "f6dfd51d8047eab702693bbd4fbb1e5c3dd00530705634a5c9336789c8f26274",
+      "historicalHashScope": "Windows checkout bytes",
+      "stagedLfNormalizedSha256": "0e0c5d59111df945a7835576c6090a1d5ccd2e7c461e00e1e4b5c73b6395c889"
+    }
+  ],
+  "historicalSourceReceipts": "The original source-reproduction receipts record the review state at their earlier timestamps; later bounded reviewer confirmation is recorded separately in execution 835."
+}

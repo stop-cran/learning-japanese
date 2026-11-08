@@ -59,7 +59,13 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 106: local unreviewed draft
+## Batch 106: local unreviewed draft (historical)
+
+> **Historical snapshot:** The notes below record the pre-review draft; their
+> review, gate and coverage statements are as of that checkpoint. Subsequent
+> bounded review confirmations and their limits are recorded in
+> [execution 835](n1-sources/execution-835.json); they do not by themselves
+> establish batch acceptance or publication.
 
 The bounded draft adds **勅**, source row 117, and necessary **勅令**
 (ちょくれい), with no vocabulary level inferred from its kanji. The
@@ -6410,6 +6416,35 @@ with that packet's ledger. It compares the whole runtime payload against the
 exact batch base and permits only its listed additions and exact reused-passage
 edits; it also checks source metadata, full reading dispositions, dictionary
 pair restrictions, reciprocal links, curated projections and labels.
+The source-completion-plan and draft-audit formats used by batches 105 and 106
+are also supported for one new kanji and one new support word, including
+reciprocal links from every written component that has a kanji card. The audit
+pins the frozen candidate inventory to the batch base and also detects written
+member characters in existing word filenames, including articles added by
+earlier batches. This does not discover alternate spellings or kana-headed
+candidates; independent source and reuse searches remain required. The
+source-plan audit requires both a non-search-only support spelling and an
+applicable, non-search-only reading row. It checks direct exclusions and
+regenerates strokes from the SVG and converter identified in the frozen
+source index (requires `svgpathtools==1.8.0`), with stroke-order variants
+unchanged from the base. A CRLF checkout is accepted only when LF-normalized
+SVG bytes reproduce the pinned source blob and evidence.
+Frozen source index, snapshot, and candidate inventory text is compared after
+CRLF-to-LF normalization; other changes still fail.
+Baseline manifest sections, schema and language metadata must also remain
+unchanged.
+It does not independently re-extract dictionary packets. Unsupported or
+incomplete plans, reused support words, and other baseline-edit shapes fail
+explicitly rather than inventing missing ledger evidence; use a complete
+supported ledger or extend the audit first.
+
+Run the audit on the exact runtime snapshot represented by its receipt, with
+the exact base commit available locally. If later reconciliation changes that
+snapshot, preserve the original draft audit and write a separate complete
+`batch-NNN-<name>-audit.json` receipt with `supersedesDraftAudit` naming the
+original. Record its filename as `runtimeAudit` and its content version as
+`runtimeAuditContentVersion` in the progress ledger. A mechanical pass does
+not replace any original-review confirmation or other acceptance gate.
 The earlier `audit_n1_pilot.py` intentionally remains pilot-bounded: its
 runtime-addition check is not applicable to a tree containing later drafts.
 Neither audit establishes linguistic correctness.
