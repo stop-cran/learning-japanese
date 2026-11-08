@@ -1,0 +1,39 @@
+{
+  "decodedLauncher": "& { try { [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false) } catch {}; try { if (Microsoft.PowerShell.Utility\\Get-Variable -Name PSStyle -ErrorAction Ignore) { $PSStyle.OutputRendering = 'PlainText' } } catch {}; $global:LASTEXITCODE = 0; $__copilotCommandFinished = $false; $__copilotSuccess = $false; try { $global:LASTEXITCODE = 0\n& C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1 -ValidateOnly; if ($LASTEXITCODE -ne 0) { throw 'Runner input validation failed' }; & C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1\n$__copilotSuccess = $?\n$__copilotCommandFinished = $true\n } finally { if ($__copilotCommandFinished) { if (-not $__copilotSuccess -and $LASTEXITCODE -is [int] -and $LASTEXITCODE -ne 0) { $host.SetShouldExit($LASTEXITCODE) } elseif (-not $__copilotSuccess) { $host.SetShouldExit(1) } else { $host.SetShouldExit(0) } } } } *>&1 | Microsoft.PowerShell.Utility\\Out-File -LiteralPath 'C:\\Users\\stop-\\AppData\\Local\\Temp\\copilot-detached-n1-sequential-runner-v105-1794118903815-af1db93e-7c23-4507-9ecc-1dababcea28d.log' -Encoding utf8",
+  "chain": [
+    {
+      "pid": 18000,
+      "parent": 26360,
+      "name": "pwsh.exe"
+    },
+    {
+      "pid": 26360,
+      "parent": 7344,
+      "name": "python.exe"
+    },
+    {
+      "pid": 7344,
+      "parent": 24360,
+      "name": "pwsh.exe"
+    },
+    {
+      "pid": 24360,
+      "parent": 13320,
+      "name": "copilot.exe"
+    },
+    {
+      "pid": 13320,
+      "parent": 7476,
+      "name": "pwsh.exe"
+    },
+    {
+      "pid": 7476,
+      "parent": 9940,
+      "name": "pwsh.exe"
+    }
+  ],
+  "liveParentPid": 13320,
+  "sessionId": "07145dbf-b4fc-49c3-86c1-f2eee5205283",
+  "lockTouched": false,
+  "role": "Child inherits live parent protection; no lock acquisition/read/delete/unlock."
+}
