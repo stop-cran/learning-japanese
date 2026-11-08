@@ -6382,6 +6382,25 @@ with that packet's ledger. It compares the whole runtime payload against the
 exact batch base and permits only its listed additions and exact reused-passage
 edits; it also checks source metadata, full reading dispositions, dictionary
 pair restrictions, reciprocal links, curated projections and labels.
+The source-completion-plan and draft-audit formats used by batches 105 and 106
+are also supported for one new kanji and one new support word, including
+reciprocal links from an existing component kanji. Their audit additionally
+checks direct exclusions and regenerates strokes from the SVG and converter
+identified in the frozen source index (requires `svgpathtools==1.8.0`), with
+stroke-order variants unchanged from the base. A CRLF checkout is accepted only
+when LF-normalized SVG bytes reproduce the pinned source blob and evidence.
+It does not independently re-extract dictionary packets. Unsupported or
+incomplete plans, reused support words, and other baseline-edit shapes fail
+explicitly rather than inventing missing ledger evidence; use a complete
+supported ledger or extend the audit first.
+
+Run the audit on the exact runtime snapshot represented by its receipt, with
+the exact base commit available locally. If later reconciliation changes that
+snapshot, preserve the original draft audit and write a separate complete
+`batch-NNN-<name>-audit.json` receipt with `supersedesDraftAudit` naming the
+original. Record its filename as `runtimeAudit` and its content version as
+`runtimeAuditContentVersion` in the progress ledger. A mechanical pass does
+not replace any original-review confirmation or other acceptance gate.
 The earlier `audit_n1_pilot.py` intentionally remains pilot-bounded: its
 runtime-addition check is not applicable to a tree containing later drafts.
 Neither audit establishes linguistic correctness.
