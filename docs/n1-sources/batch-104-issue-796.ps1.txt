@@ -1,0 +1,29 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\ca0c73bd-9afa-40ee-b78c-8569d573ad15"
+$root = "$control\..\learning-japanese"
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 795 -or $progress.batch -ne '104' -or
+    $runner.pid -ne 13320 -or $runner.status -ne 'running' -or
+    $runner.sessionId -ne 'ca0c73bd-9afa-40ee-b78c-8569d573ad15') { throw 'Checkpoint/session changed' }
+if ((git -C $root status --porcelain --untracked-files=all) -or
+    (git -C $root log -1 '--format=%G?') -ne 'G') { throw 'Expected wholly clean signed source checkpoint' }
+if (Test-Path "$log\issue-796-posted.json") { throw 'Do not post duplicate issue receipt' }
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner token unavailable' }
+    $owner = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $owner -ne 'stop-cran') { throw 'Wrong process identity' }
+    gh api --method POST repos/stop-cran/learning-japanese/issues/60/comments --input "$control\issue-request-796.json" > "$log\issue-796-posted.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Owner issue update failed' }
+    $posted = [IO.File]::ReadAllText("$log\issue-796-posted.json") | ConvertFrom-Json
+    gh api "repos/stop-cran/learning-japanese/issues/comments/$($posted.id)" > "$log\issue-796-verified.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Issue reread failed' }
+    $verified = [IO.File]::ReadAllText("$log\issue-796-verified.json") | ConvertFrom-Json
+    $expected = [IO.File]::ReadAllText("$control\issue-request-796.json") | ConvertFrom-Json
+    if ($verified.user.login -ne 'stop-cran' -or $verified.body -cne $expected.body) { throw 'Issue identity/body mismatch' }
+    Write-Output $verified.html_url
+} finally {
+    Remove-Item Env:\GH_TOKEN -ErrorAction SilentlyContinue
+}
