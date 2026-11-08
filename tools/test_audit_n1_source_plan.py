@@ -1,6 +1,7 @@
 import copy
 import hashlib
 import json
+import subprocess
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -719,6 +720,53 @@ class N1SourcePlanAuditTest(unittest.TestCase):
         self.write_json(path, draft)
         with self.assertRaisesRegex(ValueError, "Draft audit missing required fields"):
             self.run_audit()
+
+    def test_accepts_crlf_frozen_source_index_blob(self):
+        self.make_fixture("current")
+        name = "docs/n1-sources/source-index.json"
+        self.base_files[name] = self.base_files[name].replace("\n", "\r\n")
+        self.assertEqual(self.run_audit()["draftKanji"], 1)
+
+    def test_rejects_changed_frozen_source_index(self):
+        self.make_fixture("current")
+        path = self.folder / "source-index.json"
+        path.write_text(path.read_text(encoding="utf-8") + " ", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Immutable source index changed"):
+            self.run_audit()
+
+    def test_accepts_crlf_frozen_source_snapshot_blob(self):
+        self.make_fixture("current")
+        name = "docs/n1-source-snapshot.json"
+        self.base_files[name] = self.base_files[name].replace("\n", "\r\n")
+        self.assertEqual(self.run_audit()["draftKanji"], 1)
+
+    def test_audits_git_baseline_with_crlf_frozen_source_blobs(self):
+        self.make_fixture("current")
+
+        def git(*args, data=None):
+            return subprocess.run(
+                ["git", "-C", str(self.root), *args], input=data, check=True,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            ).stdout.decode("utf-8").strip()
+
+        git("init", "--quiet")
+        for name, text in self.base_files.items():
+            if name in {"docs/n1-sources/source-index.json", "docs/n1-source-snapshot.json"}:
+                text = text.replace("\n", "\r\n")
+            blob = git("hash-object", "-w", "--stdin", data=text.encode("utf-8"))
+            git("update-index", "--add", "--cacheinfo", f"100644,{blob},{name}")
+        tree = git("write-tree")
+        commit = git("-c", "user.name=Test", "-c", "user.email=test@example.invalid",
+                     "-c", "commit.gpgsign=false", "commit-tree", tree, "-m", "Test baseline")
+        for path, key in (
+                (self.file("membership"), "baseCommit"),
+                (self.file("progress"), "baseCommit"),
+                (self.file("source-completion-plan"), "publishedBaseline"),
+                (self.file("draft-audit"), "publishedBaseline")):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            data[key] = commit
+            self.write_json(path, data)
+        self.assertEqual(audit(self.root, self.batch)["baseCommit"], commit)
 
     def test_rejects_changed_frozen_source_snapshot(self):
         self.make_fixture("current")

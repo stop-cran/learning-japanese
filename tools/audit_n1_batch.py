@@ -596,7 +596,8 @@ def audit_source_plan(root, batch, ledger, frozen, members, commit, source, befo
                     f"Direct {kind} exclusion identity differs: {excluded}")
     snapshot_name = "docs/n1-source-snapshot.json"
     snapshot_text = (root / snapshot_name).read_text(encoding="utf-8")
-    require(snapshot_text == base_file(root, commit, snapshot_name), "Immutable source snapshot changed")
+    require(snapshot_text == base_file(root, commit, snapshot_name).replace("\r\n", "\n"),
+            "Immutable source snapshot changed")
     audit_pinned_strokes(root, folder, batch, c, meta, source[c], json.loads(snapshot_text),
                          plan, draft, variant, commit)
     return {"batch": batch, "baseCommit": commit, "draftKanji": 1,
@@ -642,7 +643,8 @@ def audit(root, batch):
             and ledger["drafted"] == members, "Incomplete or changed frozen membership")
     source_name = "docs/n1-sources/source-index.json"
     require((root / source_name).read_text(encoding="utf-8")
-            == base_file(root, commit, source_name), "Immutable source index changed")
+            == base_file(root, commit, source_name).replace("\r\n", "\n"),
+            "Immutable source index changed")
     source = {r["kanji"]: r for r in json.loads((root / source_name).read_text(encoding="utf-8"))}
     for row in frozen["members"]:
         require(source[row["kanji"]]["sourceRow"] == row["sourceRow"],
