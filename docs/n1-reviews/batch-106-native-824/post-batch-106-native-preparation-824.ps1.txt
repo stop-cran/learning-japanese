@@ -1,0 +1,62 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\e7ffa1ea-92f8-4b15-977e-f91d3cb79d0a"
+$content = "$control\..\learning-japanese"
+$bodyPath = "$control\batch-106-native-preparation-824-issue-body.txt"
+if ((Test-Path "$log\issue-824-posted.json") -or (Test-Path $bodyPath)) {
+    throw 'Do not duplicate issue update'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0) { throw 'HEAD lookup failed' }
+& "$control\preflight-824.ps1" -ReceiptName 'preflight-824-before-issue.json' -ExpectedContentHead $head
+if ((git -C $content rev-parse 'HEAD^') -ne '501c280681457cc80434520081beb90362ece211' -or
+    $LASTEXITCODE -ne 0) { throw 'Wrong evidence ancestry' }
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-824.json") | ConvertFrom-Json
+$p = $e.preparation
+$c = $e.compilation
+if (-not $c.kotlinFixtureCompilationExecuted -or -not $c.packagedArchiveHashVerified -or
+    -not $c.bothNamedClassesAndRouteMethodsPresentInDex -or -not $c.productionAppApkIdenticalToAccepted812 -or
+    $c.nativeExecuted -or $p.productionContentSyncCalls -ne 1 -or $p.preparseCalls -ne 0 -or
+    $p.verifiedRuntimeHashes -ne 8472 -or $p.contentVersion -ne '89809c00e1676979' -or
+    $p.actualHan.Count -ne 17 -or $p.drawingStrokes -ne 9 -or
+    $p.kanjiGuardChecksPlanned -ne 448 -or $p.wordGuardChecksPlanned -ne 384) {
+    throw 'Prepared evidence mismatch'
+}
+$body = @"
+Checkpoint824, SAME batch106: completed native fixture and APK PREPARATION only. Signed LOCAL evidence commit $head preserves docs/n1-sources/execution-824.json and docs/n1-reviews/batch-106-native-824/. Both named cases compiled on qualified signed Android bf30cdead8515739bc0e671d57a54b9a3109dd46: $($c.result); $($c.taskSummary), explicit JDK17/SDK, one worker, no parallel Gradle work, in-process Kotlin and unchanged heap/guards. Both classes/methods are present in test DEX; packaged full-content asset matches its exact SHA256. Production debug APK is byte-identical to accepted812's qualified APK, not unrelated latest application main. Compilation is NOT passing native cases, visual acceptance or an owner-signed release.
+
+The NEW LF git archive binds signed content501c280681457cc80434520081beb90362ece211, contentVersion89809c00e1676979, SHA256 $($p.archiveSha256). Exact raw manifest and EVERY8,472runtime manifest hash verified; $($p.zipEntries) ZIP entries / $($p.compressedBytes) compressed / $($p.inflatedBytes) inflated / $($p.retainedBytes) retained bytes pass unchanged18,000-entry /42-MiB /80-MiB /56-MiB guards and per-file/path/media checks. This LOCAL git archive is NOT a published immutable GitHub ZIP. Command-local git -c core.autocrlf=false preserves committed LF without any configuration change. Original105 artifacts remain intact; new reusable helpers/fixtures are under approved control, archived with contributor provenance.
+
+Planned acceptance imports the FULL archive through production ContentSync ONCE without pre-parsing. Expected1,129kanji /5,080words /138N1-labelled include the UNACCEPTED batch106. Planned checks:64actual meaning-option sets across N1/All/custom/random pools,448direct symmetric kanji-guard checks,32nontransitive neighbor checks,384pair-only word-guard checks in BOTH directions/orientations, and32explicit unguarded instruction/precept comparison samples. Every offered kanji set is pairwise exclusion-checked. All THREE curated distractors are outside N1; the real default N1 question must have ZERO curated and THREE fallback choices. Actual new fallback labels still require source-backed semantic/rendered assessment. Original822 weak comparison hypothesis remains UNRESOLVED NONBLOCKING, not withdrawn or promoted to an established defect; no speculative guard added.
+
+Full on/kun metadata and sole selected on/empty kun remain exact, with normalized hiragana key/katakana display, no kun question and exactly one on-key answer/log/done. Nine-stroke trace/recall, explicit All then N1 selection, both complete new articles, TWO mapped reciprocal pairs/FOUR directions, the ONE changed sourced example line in reused command/decree article, system Back and offline routing are included; zero activated baseline pairs. No inferred support vocabulary level. Precompile inspection caught the inherited generator splitting multiline example bullets contrary to production Markdown's joined-list semantics; corrected selectors now include each COMPLETE Japanese/kana/English example. Initial generated fixture/preparation/diff remain preserved; no native attempt preceded that correction.
+
+The glyph case plans72individual probes: all17actual runtime Han PLUS the retained comparison character across four production families/default, four whole-word rasters and three visible panels. Radical, whole word and look-alikes are explicit. No scoped cmap absences, but cmap presence/raster hashes alone do not prove readability. Actual native PNG inspection and TWO serial ORIGINAL-family rendered confirmations remain required. Temporary Android fixture/asset removed; both dedicated worktrees wholly clean; all runtime/manifest bytes unchanged; parent runner lock untouched, optional historical-session recipes not accessed, no new permission denial. No emulator/native case/reviewer ran.
+
+Next bounded checkpoint: fresh exact signed-head/checkpoint/live-parent/session and device/local+remote-port/PID checks, then execute the two exact NEW824 cases/APKs on the owned read-only API35 environment, unchanged2-GiB guest/192m growth limit. Require BOTH named terminal case-status0, actual route/PNG/finite fallback acceptance and TWO serial original-session family rendered confirmations. Original822 textual and823 five-case HOST/finite semantic evidence is inherited, NOT repeated or expanded to universal quiz safety. All combined-current-main checks, normal signed integration/publication, terminal green CI and EVERY immutable-GitHub-ZIP manifest hash/budget check remain mandatory. No unreviewed content pushed; no batch107 begun.
+
+Published additions remain132/1,228; acceptance remainder1,096; last published0c582f18b31f65a5e1a908d92e37dde3d34f81ee. Compatible stop-cran/kanji-cards-android#125 and stop-cran/kanji-cards-android#132 reading-curation/kanji-exclusion-aware client required; old clients ignore those fields. Physical-phone, general-release and whole-set acceptance remain outstanding; project incomplete.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant()} |
+        ConvertTo-Json | Set-Content "$log\issue-824-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-824-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}
