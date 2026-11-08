@@ -1,23 +1,153 @@
 {
   "schemaVersion": 1,
-  "execution": 817,
+  "execution": 818,
   "batch": "105",
   "membership": [
     "\u52c1"
   ],
-  "status": "review-closed-runtime-accepted-publication-pending",
-  "recordedAt": "2026-11-08T11:11:33.926359+00:00",
+  "status": "published-verified-bounded-compatible-client-owner-testing",
+  "recordedAt": "2026-11-08T11:18:25.611509+00:00",
   "baseCommit": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
   "authoredSnapshot": "27e252daa091e21c907ff6799818f6b2da74c7aa",
   "reviewedSnapshot": "27e252daa091e21c907ff6799818f6b2da74c7aa",
   "combinedTestedSnapshot": "f6de9f217044536460172e68cb07c5b3f8b42f4c",
   "latestMainIntegrated": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
   "acceptanceRecord": "batch-105-acceptance-817.json",
-  "acceptedCommit": null,
-  "publishedCommit": null,
-  "remoteVerified": false,
-  "ci": null,
-  "archive": null,
+  "acceptedCommit": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+  "publishedCommit": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+  "remoteVerified": true,
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42474946382,
+    "headSha": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+    "jobs": [
+      {
+        "completedAt": "2026-11-08T11:17:59Z",
+        "conclusion": "success",
+        "databaseId": 128714063523,
+        "name": "validate",
+        "startedAt": "2026-11-08T11:15:40Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-08T11:15:42Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-08T11:15:42Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:14Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-08T11:15:42Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:14Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-08T11:17:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:20Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-08T11:17:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:36Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-08T11:17:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:52Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-08T11:17:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:55Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-08T11:17:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:55Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-08T11:17:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:56Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-08T11:17:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:56Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-08T11:17:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:56Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-08T11:17:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T11:17:56Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-08T11:17:56Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42474946382/job/128714063523"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "archive": {
+    "commit": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+    "sha256": "ed7c9e58be48e18b2c75d766523e698cc9b1b556e00449752c794652ea6c88fc",
+    "manifestEqual": true,
+    "contentVersion": "5572c6c467e6b73b",
+    "verifiedRuntimeHashes": 8469,
+    "zipEntries": 8491,
+    "compressedBytes": 30889767,
+    "inflatedBytes": 44689710,
+    "retainedBytes": 44421372,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
   "runtime": {
     "contentVersion": "5572c6c467e6b73b",
     "runtimeHashesVerified": 8469,
@@ -25,31 +155,188 @@
     "unchangedSinceTeaching": "27e252daa091e21c907ff6799818f6b2da74c7aa"
   },
   "runtimeAccepted": true,
-  "runtimePublished": false,
+  "runtimePublished": true,
   "reviewClosed": [
     "\u52c1"
   ],
-  "published": [],
+  "published": [
+    "\u52c1"
+  ],
   "counts": {
     "kanji": 1128,
     "words": 5079,
     "n1Labels": 137,
-    "namedSourceMembersPresent": 142
+    "namedSourceMembersPresent": 142,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 132,
+    "remainingAdditions": 1096,
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 130,
+    "batchChangedReusedArticles": 0,
+    "allMappedReciprocalPairs": 1,
+    "mappedDirectedLinks": 2,
+    "activatedBaselinePairs": 0
   },
-  "projectPublishedAdditions": 131,
-  "remainingAdditions": 1097,
+  "projectPublishedAdditions": 132,
+  "remainingAdditions": 1096,
   "supportScope": "One necessary\u96c4\u52c1 article, not delivered N1 vocabulary.",
   "remainingPublicationGates": [
-    "Fresh main check before publication; nonrewriting merge/regenerated manifest/revalidation and changed-teaching confirmation only if actual combined tree changes.",
-    "Normal signed owner-scoped fast-forward; exact remote SHA and terminal green relevant CI.",
-    "Every exact immutable GitHub ZIP runtime manifest entry/hash, manifest equality,18000entries/42MiBcompressed/80MiBinflated/56MiBretained and per-file/media/path guards.",
-    "Signed publication ledger/terminal evidence, verified stop-cran issue receipt and full-history checkpoint before106; delivery counts change only after these gates."
+    "Terminal signed evidence/green CI/every public ZIP hash/verified owner issue/full-history checkpoint before106."
   ],
   "physicalPhoneAcceptance": "outstanding",
   "generalReleaseAcceptance": "outstanding",
   "wholeSetAcceptance": "outstanding",
   "wholeProjectComplete": false,
   "nextBatchStarted": false,
-  "limits": "Pending ledger only. No SHA, CI, ZIP or delivery receipt invented. Existing complete source/review/native/acceptance limits retained by reference.",
-  "nextAction": "SAME105 signed local acceptance only; normal owner fast-forward publication remains. Fresh fetch/exact signed heads/wholly clean dedicated worktrees/live parent ancestry/decoded launcher/current session required. If main advanced, nonrewriting merge, regenerate/revalidate actual combined tree and independently confirm changed substantive teaching. Then command-scoped stop-cran normal push, exact remote SHA, terminal green relevant CI, EVERY immutable GitHub ZIP runtime manifest entry/hash and unchanged 18000-entry/42MiB compressed/80MiB inflated/56MiB retained plus per-file/media/path guards. Persist signed publication ledgers and terminal evidence, verify owner issue receipt, update full-history checkpoint and delivery counts only after all publication gates; yield before106. Inherit unchanged810/811/813/814/815/816 evidence without new blind initials/native/image loops absent consequential change. Preserve both original reports, all source/read-depth/range/compaction/rendition/finite-pool/hypothesis/process/permission/OOM/ANR/routing/phone limits. Compatible Android125/132 required; old clients ignore curation/guards. QualifiedAPP is approved backport, not latestmain. Parent13320 owns runner.lock: no child acquire/delete/unlock/readprobe. Approved control/committed sources/frozen inputs only, not optional historical-session recipes. Preserve/report/yield actual new denial, signing hang or uncertain ownership; no signing retry/bypass, guard increase, unreviewed push, concurrent heavy work, author agents,106 or second runner. Published131/1228,remaining1097,lastpublished047c2cef unchanged until verified publication. Support words are not N1 vocabulary delivery; physical-phone/general-release/whole-set acceptance outstanding; project incomplete."
+  "limits": [
+    "Both complete original reports, exact execution evidence, original hypotheses/optional notes and every historical limitation remain intact. This is coordinator reconciliation, not a new independent review or retroactive certification of old executions.",
+    "Common815 scope: six resources504537bytes,87 complete article bodies, original full families plus HOST26 and FIVEnewnative23-family supplement. Exact returned bytes establish access, not equal sense-by-sense inspection, independent upstream retrieval or native-speaker certification.",
+    "Claude35 serial view calls include seven redundant boundary attempts and three partial requested-range returns; six complete forced reads were independently exact. GPT28 serial calls/no boundary extras. ClaudeTWO/GPTONE successful compactions; zero warnings is not a retention guarantee.",
+    "DefaultN1/All/custom retain ALLTHREE\u529f/\u52be/\u5256 and ZEROfallback. Native16-member filteredpool retainsTWO\u529f/\u52be, omits\u5256 and uses ONEfallback perseed. HOST811 filteredpool retainsNONE. Do not substitute pools or treat historical meaningFallbackNeedsSemanticReview=true as a default-fallback claim.",
+    "Nativefallback\u4ea5/\u5df3/\u5f57/\u67da/\u9d6c plus\u51cc considered with complete source senses; kana\u307b\u3046\u304dhomophones are not\u5f57senses, and broadcitron/phoenix glosses do not create unrestricted lexical identity.",
+    "Finite target-relative samples do not certify every future pool, every target orientation or semantic uniqueness between every wrong-choice pair. Mechanics check direct exclusions, not language understanding.",
+    "Original1080x2400 pixels, equal comprehension across scales/fonts, fallback face and physical-phone readability remain UNVERIFIED. Matching rasters cannot identify a face; cmap absence is not glyph failure.",
+    "Article08/09 duplicate viewport and11/16 substantial repetition, partial horizontal table, missing word-header capture and no native word-quiz samples remain disclosed. Capture IDs/hashes are not independent teaching coverage.",
+    "Sole\u3051\u3044/display\u30b1\u30a4/gooddone1of1/no kunquestion; legacy raw\u3064\u3088\u3044 remains reference display. Nine ungraded reference-point touches/model unavailable/intentional recall revealgrade1onNext are not recognition, learning mastery or measured effectiveness.",
+    "ONE mapped reciprocalpair/TWO directions/ZEROactivatedbaselinepairs/ZEROreusedchanges/systemBack/offline inherited813, not rerun. Actual2gguest/192mgrowthlimit/576mmax and owned emulator/QEMU shutdown preserved; only unrelated Messages force-stopped on the owned disposable emulator, sharedadb untouched.",
+    "Generic tools/audit_n1_batch.py failed KeyError:supportMappings on batch105's newer source-plan/draft ledger. Original failure retained; named current816 audit reuses tested helpers and exact source evidence without fabricating legacy fields, weakening checks or editing tools.",
+    "Compatible stop-cran/kanji-cards-android#125 and stop-cran/kanji-cards-android#132 client required; old clients ignore curation and guards. Qualified backport is not unrelated latest application main.",
+    "No runtime change, publication, physical-phone/general-release acceptance or whole-project completion in816. Published131 of1228, remaining1097 unchanged; ONE necessary support article is not N1 vocabulary delivery."
+  ],
+  "nextAction": "Verify terminal evidence CI/public ZIP/owner issue; checkpoint and yield before106.",
+  "prePublication818State": {
+    "schemaVersion": 1,
+    "execution": 817,
+    "batch": "105",
+    "membership": [
+      "\u52c1"
+    ],
+    "status": "review-closed-runtime-accepted-publication-pending",
+    "recordedAt": "2026-11-08T11:11:33.926359+00:00",
+    "baseCommit": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
+    "authoredSnapshot": "27e252daa091e21c907ff6799818f6b2da74c7aa",
+    "reviewedSnapshot": "27e252daa091e21c907ff6799818f6b2da74c7aa",
+    "combinedTestedSnapshot": "f6de9f217044536460172e68cb07c5b3f8b42f4c",
+    "latestMainIntegrated": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
+    "acceptanceRecord": "batch-105-acceptance-817.json",
+    "acceptedCommit": null,
+    "publishedCommit": null,
+    "remoteVerified": false,
+    "ci": null,
+    "archive": null,
+    "runtime": {
+      "contentVersion": "5572c6c467e6b73b",
+      "runtimeHashesVerified": 8469,
+      "manifestSha256": "2ad81645791d4d2d9b02521d96969da6c6248a9559f395fbaf39360e8795a8cd",
+      "unchangedSinceTeaching": "27e252daa091e21c907ff6799818f6b2da74c7aa"
+    },
+    "runtimeAccepted": true,
+    "runtimePublished": false,
+    "reviewClosed": [
+      "\u52c1"
+    ],
+    "published": [],
+    "counts": {
+      "kanji": 1128,
+      "words": 5079,
+      "n1Labels": 137,
+      "namedSourceMembersPresent": 142
+    },
+    "projectPublishedAdditions": 131,
+    "remainingAdditions": 1097,
+    "supportScope": "One necessary\u96c4\u52c1 article, not delivered N1 vocabulary.",
+    "remainingPublicationGates": [
+      "Fresh main check before publication; nonrewriting merge/regenerated manifest/revalidation and changed-teaching confirmation only if actual combined tree changes.",
+      "Normal signed owner-scoped fast-forward; exact remote SHA and terminal green relevant CI.",
+      "Every exact immutable GitHub ZIP runtime manifest entry/hash, manifest equality,18000entries/42MiBcompressed/80MiBinflated/56MiBretained and per-file/media/path guards.",
+      "Signed publication ledger/terminal evidence, verified stop-cran issue receipt and full-history checkpoint before106; delivery counts change only after these gates."
+    ],
+    "physicalPhoneAcceptance": "outstanding",
+    "generalReleaseAcceptance": "outstanding",
+    "wholeSetAcceptance": "outstanding",
+    "wholeProjectComplete": false,
+    "nextBatchStarted": false,
+    "limits": "Pending ledger only. No SHA, CI, ZIP or delivery receipt invented. Existing complete source/review/native/acceptance limits retained by reference.",
+    "nextAction": "SAME105 signed local acceptance only; normal owner fast-forward publication remains. Fresh fetch/exact signed heads/wholly clean dedicated worktrees/live parent ancestry/decoded launcher/current session required. If main advanced, nonrewriting merge, regenerate/revalidate actual combined tree and independently confirm changed substantive teaching. Then command-scoped stop-cran normal push, exact remote SHA, terminal green relevant CI, EVERY immutable GitHub ZIP runtime manifest entry/hash and unchanged 18000-entry/42MiB compressed/80MiB inflated/56MiB retained plus per-file/media/path guards. Persist signed publication ledgers and terminal evidence, verify owner issue receipt, update full-history checkpoint and delivery counts only after all publication gates; yield before106. Inherit unchanged810/811/813/814/815/816 evidence without new blind initials/native/image loops absent consequential change. Preserve both original reports, all source/read-depth/range/compaction/rendition/finite-pool/hypothesis/process/permission/OOM/ANR/routing/phone limits. Compatible Android125/132 required; old clients ignore curation/guards. QualifiedAPP is approved backport, not latestmain. Parent13320 owns runner.lock: no child acquire/delete/unlock/readprobe. Approved control/committed sources/frozen inputs only, not optional historical-session recipes. Preserve/report/yield actual new denial, signing hang or uncertain ownership; no signing retry/bypass, guard increase, unreviewed push, concurrent heavy work, author agents,106 or second runner. Published131/1228,remaining1097,lastpublished047c2cef unchanged until verified publication. Support words are not N1 vocabulary delivery; physical-phone/general-release/whole-set acceptance outstanding; project incomplete."
+  },
+  "integratedCommit": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+  "remoteMainVerified": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+  "immutablePublicArchive": {
+    "commit": "3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/3be9def98ca32d5f9c14a9b6f94c55d87734a05f",
+    "sha256": "ed7c9e58be48e18b2c75d766523e698cc9b1b556e00449752c794652ea6c88fc",
+    "manifestEqual": true,
+    "contentVersion": "5572c6c467e6b73b",
+    "verifiedRuntimeHashes": 8469,
+    "zipEntries": 8491,
+    "compressedBytes": 30889767,
+    "inflatedBytes": 44689710,
+    "retainedBytes": 44421372,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "contentVersion": "5572c6c467e6b73b",
+  "qualifiedAndroidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+  "localBatchAcceptanceComplete": true,
+  "fullBatchAcceptanceComplete": false,
+  "fullBatchAcceptanceDefinition": "Accepted teaching delivery verified; terminal evidence/CI/ZIP/issue/checkpoint still required before next batch.",
+  "inheritedAcceptance": {
+    "unchangedTeachingSnapshot": "27e252daa091e21c907ff6799818f6b2da74c7aa",
+    "textualReview": "docs/n1-reviews/batch-105-reconciliation.json",
+    "renderedAndNativeReconciliation": "docs/n1-reviews/batch-105-reconciliation-816/disposition.json",
+    "models": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ],
+    "originalSessions": [
+      "6f978e1c-a137-4b6c-879f-c7874d512549",
+      "113f3d1f-f44b-4233-91f2-f7bf720262b2"
+    ],
+    "pythonTestsPassed": 377,
+    "pythonTestsExecution": 816,
+    "hostTests": 5,
+    "hostFailuresErrorsSkips": [
+      0,
+      0,
+      0
+    ],
+    "hostExecution": 811,
+    "nativeExecution": 813,
+    "nativeTerminalCase0Results": 2,
+    "productionContentSyncCalls": 1,
+    "supplementalSourceExecution": 814,
+    "renderedOriginalFamilyConfirmationExecution": 815,
+    "finiteSampleSemanticAcceptance": "CLEAN for192 exact target-relative sets and live default only",
+    "finiteOptionSets": 192,
+    "finiteScope": "Target-relative exact supplied sets and live default only; not all future pools or wrong-choice pair relations.",
+    "renderedScope": "Delivered900x2000 readability and distinguishability only; no original-pixel/equal-comprehension/retention/fallback-face/phone certification.",
+    "drawingScope": "Nine ungraded reference-point touches and intentional recall reveal grade1 on Next; no model/recognition/mastery claim.",
+    "readingScope": "Full on[\u30b1\u30a4]/kun[\u3064\u3088.\u3044],selected[\u30b1\u30a4]/[],sole\u3051\u3044 displayed\u30b1\u30a4,good done1of1; legacy\u3064\u3088\u3044 remains reference display.",
+    "sourceOnlyDisposition": "\u52c1\u3044 search-only spelling; recognition only, ordinary\u5f37\u3044 guidance is not an allocation example.",
+    "lowConfidenceHypotheses": "Claude \u6d3b\u6c17/\u3082\u308a\u3082\u308a future-pool notes partially resolved/nondefects; GPT no actionable hypothesis. Original810 withdrawn history and original reports unchanged; no forced agreement or new exclusions.",
+    "newReviewerNativeHostRuns": 0,
+    "newImageInspection": false,
+    "legacyAuditFailure": "Original failed selector and traceback preserved; named816 current-schema audit passed without changing tools, source claims or teaching. Subsequent selectors completed without rerunning successful377tests.",
+    "limits": [
+      "Both complete original reports, exact execution evidence, original hypotheses/optional notes and every historical limitation remain intact. This is coordinator reconciliation, not a new independent review or retroactive certification of old executions.",
+      "Common815 scope: six resources504537bytes,87 complete article bodies, original full families plus HOST26 and FIVEnewnative23-family supplement. Exact returned bytes establish access, not equal sense-by-sense inspection, independent upstream retrieval or native-speaker certification.",
+      "Claude35 serial view calls include seven redundant boundary attempts and three partial requested-range returns; six complete forced reads were independently exact. GPT28 serial calls/no boundary extras. ClaudeTWO/GPTONE successful compactions; zero warnings is not a retention guarantee.",
+      "DefaultN1/All/custom retain ALLTHREE\u529f/\u52be/\u5256 and ZEROfallback. Native16-member filteredpool retainsTWO\u529f/\u52be, omits\u5256 and uses ONEfallback perseed. HOST811 filteredpool retainsNONE. Do not substitute pools or treat historical meaningFallbackNeedsSemanticReview=true as a default-fallback claim.",
+      "Nativefallback\u4ea5/\u5df3/\u5f57/\u67da/\u9d6c plus\u51cc considered with complete source senses; kana\u307b\u3046\u304dhomophones are not\u5f57senses, and broadcitron/phoenix glosses do not create unrestricted lexical identity.",
+      "Finite target-relative samples do not certify every future pool, every target orientation or semantic uniqueness between every wrong-choice pair. Mechanics check direct exclusions, not language understanding.",
+      "Original1080x2400 pixels, equal comprehension across scales/fonts, fallback face and physical-phone readability remain UNVERIFIED. Matching rasters cannot identify a face; cmap absence is not glyph failure.",
+      "Article08/09 duplicate viewport and11/16 substantial repetition, partial horizontal table, missing word-header capture and no native word-quiz samples remain disclosed. Capture IDs/hashes are not independent teaching coverage.",
+      "Sole\u3051\u3044/display\u30b1\u30a4/gooddone1of1/no kunquestion; legacy raw\u3064\u3088\u3044 remains reference display. Nine ungraded reference-point touches/model unavailable/intentional recall revealgrade1onNext are not recognition, learning mastery or measured effectiveness.",
+      "ONE mapped reciprocalpair/TWO directions/ZEROactivatedbaselinepairs/ZEROreusedchanges/systemBack/offline inherited813, not rerun. Actual2gguest/192mgrowthlimit/576mmax and owned emulator/QEMU shutdown preserved; only unrelated Messages force-stopped on the owned disposable emulator, sharedadb untouched.",
+      "Generic tools/audit_n1_batch.py failed KeyError:supportMappings on batch105's newer source-plan/draft ledger. Original failure retained; named current816 audit reuses tested helpers and exact source evidence without fabricating legacy fields, weakening checks or editing tools.",
+      "Compatible stop-cran/kanji-cards-android#125 and stop-cran/kanji-cards-android#132 client required; old clients ignore curation and guards. Qualified backport is not unrelated latest application main.",
+      "No runtime change, publication, physical-phone/general-release acceptance or whole-project completion in816. Published131 of1228, remaining1097 unchanged; ONE necessary support article is not N1 vocabulary delivery."
+    ]
+  },
+  "runtimeAcceptanceScope": "Bounded compatible-client owner testing: both new articles/192 exact target-relative option sets/live default/inherited native routes/delivered900x2000 rendering. Not unrestricted quiz safety or original-pixel/equal-comprehension/retention/fallback-face certification.",
+  "compatibleClient": "Android125 curated readings and approved132 direct kanji pair guards required; old clients ignore them. Qualified bf30 backport carries only approved guards/schema bridges, not unrelated latest-main behavior.",
+  "normalSignatureStatus": "G; normal owner-scoped fast-forward; no bypass/amendment/force push.",
+  "publicationIdentity": "stop-cran process-scoped token only; global romanko-ms unchanged."
 }
