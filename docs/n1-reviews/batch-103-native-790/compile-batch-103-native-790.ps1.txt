@@ -1,0 +1,73 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$android = "$control\..\kanji-cards-android"
+$logs = "$control\logs\e2d8f178-1159-4ba8-9f73-965bc74354ec"
+& "$control\preflight-790.ps1" -ReceiptName 'preflight-790-compile.json'
+$evidence = [IO.File]::ReadAllText("$control\batch-103-native-790\preparation.json") | ConvertFrom-Json
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.stage -ne 'batch-103-native-preparation-in-progress') { throw 'Wrong stage' }
+$target = "$android\app\src\androidTest\java\io\github\stopcran\kanji\ui\N1Batch103Native790Test.kt"
+$asset = Join-Path "$android\app\src\androidTest\assets" (Split-Path $evidence.archive -Leaf)
+$log = "$logs\native-compile-790.txt"
+$exitFile = "$logs\native-compile-790-exit.txt"
+$appCopy = "$control\artifacts\n1-batch-103-790-app.apk"
+$testCopy = "$control\artifacts\n1-batch-103-790-test.apk"
+$command = "$logs\native-compile-790-command.json"
+foreach ($path in @($target, $asset, $log, $exitFile, $appCopy, $testCopy, $command)) {
+    if (Test-Path -LiteralPath $path) { throw "Never overwrite an existing attempt: $path" }
+}
+foreach ($entry in @(@{path=$evidence.fixture; hash=$evidence.fixtureSha256},
+    @{path=$evidence.archive; hash=$evidence.archiveSha256})) {
+    if ((Get-FileHash -LiteralPath $entry.path).Hash.ToLowerInvariant() -ne $entry.hash) {
+        throw "Frozen input hash mismatch: $($entry.path)"
+    }
+}
+$installedSource = $false
+$installedAsset = $false
+Set-Location $android
+try {
+    Copy-Item -LiteralPath $evidence.fixture -Destination $target -ErrorAction Stop
+    $installedSource = $true
+    Copy-Item -LiteralPath $evidence.archive -Destination $asset -ErrorAction Stop
+    $installedAsset = $true
+    $env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot'
+    $env:ANDROID_HOME = 'C:\Users\stop-\AppData\Local\Android\Sdk'
+    $arguments = @(':app:assembleDebug', ':app:assembleDebugAndroidTest', '--no-daemon', '--no-parallel',
+        '--max-workers=1', '-Pkotlin.compiler.execution.strategy=in-process')
+    [ordered]@{
+        arguments=$arguments; JAVA_HOME=$env:JAVA_HOME; ANDROID_HOME=$env:ANDROID_HOME
+        androidHead=$evidence.androidSnapshot; contentHead=$evidence.contentSnapshot
+        coordinatorSession='e2d8f178-1159-4ba8-9f73-965bc74354ec'; startedAt=[DateTimeOffset]::UtcNow.ToString('o')
+        fixtureSha256=$evidence.fixtureSha256; archiveSha256=$evidence.archiveSha256
+        parentLockTouched=$false; hostOnlyHeapInitUsed=$false; nativeExecuted=$false
+        heapOrGuardsChanged=$false; purpose='Prepare full-archive SAME103 native fixture and APKs only, no device execution.'
+    } | ConvertTo-Json -Depth 6 | Set-Content $command -Encoding utf8NoBOM
+    & .\gradlew.bat @arguments *> $log
+    $code = $LASTEXITCODE
+    $code | Set-Content $exitFile
+    [DateTimeOffset]::UtcNow.ToString('o') | Set-Content "$logs\native-compile-790-end.txt"
+    Get-Content -LiteralPath $log -Tail 18
+    if ($code -ne 0) { throw "Fixture compilation failed: $code; original log retained." }
+    Copy-Item -LiteralPath "$android\app\build\outputs\apk\debug\app-debug.apk" -Destination $appCopy
+    Copy-Item -LiteralPath "$android\app\build\outputs\apk\androidTest\debug\app-debug-androidTest.apk" -Destination $testCopy
+} finally {
+    if ($installedSource) {
+        if ((Get-FileHash -LiteralPath $target).Hash.ToLowerInvariant() -ne $evidence.fixtureSha256) {
+            throw 'Temporary source changed; preserve instead of deleting.'
+        }
+        Remove-Item -LiteralPath $target -ErrorAction Stop
+    }
+    if ($installedAsset) {
+        if ((Get-FileHash -LiteralPath $asset).Hash.ToLowerInvariant() -ne $evidence.archiveSha256) {
+            throw 'Temporary asset changed; preserve instead of deleting.'
+        }
+        Remove-Item -LiteralPath $asset -ErrorAction Stop
+    }
+}
+$status = git --no-pager status --porcelain --untracked-files=all
+if ($LASTEXITCODE -ne 0 -or $status) { throw 'Android cleanup not wholly clean.' }
+[ordered]@{
+    androidWhollyClean=$true; temporarySourceRemoved=$true; temporaryArchiveRemoved=$true
+    fixtureSha256=$evidence.fixtureSha256; archiveSha256=$evidence.archiveSha256
+    nativeExecuted=$false; parentLockTouched=$false
+} | ConvertTo-Json | Set-Content "$logs\native-compile-790-cleanup.json" -Encoding utf8NoBOM
