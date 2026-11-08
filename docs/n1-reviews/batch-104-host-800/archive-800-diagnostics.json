@@ -1,0 +1,12 @@
+{
+  "execution": 800,
+  "phase": "evidence-archival",
+  "error": "AssertionError at save(sampled-labels.json): JSON round-trip yields lists but in-memory rows were tuples.",
+  "testsAffected": false,
+  "testRerunNeeded": false,
+  "permissionDenial": false,
+  "disposition": "Convert generated label rows to lists before serialization. Remove only the four just-created partial evidence files and their empty owned directory, then regenerate evidence from the unchanged fresh test receipts.",
+  "originalErrorPreserved": "Current execution output.jsonl tool call and this diagnostic; no original test/XML/build/sample receipts overwritten.",
+  "secondAttempt": "Same tuple/list round-trip issue also affected generated full dictionary inspection packet. Converted its tuples to lists; preserve failed reading packet as finite-source-reading-800-second-attempt.json. Remove only seven inspected partial contributor outputs, then regenerate. No test, content, source or permission failure.",
+  "semanticCountPreflight": "Finalizer caught a handwritten 25-word summary count; exact sampled IDs and the complete disposition both contain 26 words. Corrected count to 26 before archival/signing. No identity coverage or runtime defect; finalizer had not written any output."
+}

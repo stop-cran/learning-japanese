@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "batch": "104",
+  "execution": 800,
+  "snapshot": "e97682161e790fc8276162a1049d921a6503ec8e",
+  "actualModel": "gpt-6.1-sol",
+  "reviewerRole": "author/coordinator, not a new independent reviewer",
+  "status": "accepted-bounded-target-samples",
+  "scope": "64 actual production kanji target option sets across four recorded pools and 16 seeds, and 64 actual word target option sets across All/custom and both meaning directions. Target-relative semantics only; guard mechanics additionally cover both orientations and every co-offered pair.",
+  "evidence": [
+    "sampled-labels.json",
+    "sampled-source-selection.json",
+    "sampled-jmdict.xml",
+    "sampled-kanjidic2.xml",
+    "meaning-800-choices.json.gz",
+    "meaning-800-word-choices.json.gz",
+    "meaning-800-hypothesis-pairs.json.gz",
+    "../../n1-sources/batch-104-character-public-text.txt",
+    "../../n1-sources/batch-104-dangai-dictionary-public-text.txt",
+    "../batch-104-reconciliation.json"
+  ],
+  "readingDepth": {
+    "sampledKanjiLabelsIncludingTarget": 41,
+    "sampledWordsIncludingTarget": 26,
+    "fullRawCharacterRecordsInspectedForAllEnglishMeanings": 42,
+    "completeLexicalFamiliesInspectedForAllSensesAndRestrictions": 28,
+    "extraHypothesisCharacter": "偵",
+    "extraHypothesisLexicalTerm": "探偵",
+    "focusedExistingBodies": ["kanji/刑.md", "kanji/償.md", "kanji/免.md", "kanji/偵.md", "words/裁判.md", "words/叱る.md"],
+    "sourceAccess": "Fresh extraction from exact approved frozen compressed AND decompressed dictionary hashes; committed public dictionary text reused with provenance, not a fresh upstream retrieval.",
+    "outputLimit": "First combined 22-KiB source-summary output was truncated by tool output handling; all 42 raw meaning lists and all 28 complete family sense/restriction projections were then returned in two bounded calls without truncation. No claim to fresh rereading every sampled article body."
+  },
+  "kanjiDisposition": [
+    {
+      "ids": ["且", "丘", "丙", "亀", "享", "企", "倣", "僚", "僧", "儀", "儒", "充", "冠", "冶", "凝", "凹", "刃", "削", "剖", "剣", "劣", "奇", "桃", "桑", "猿", "畔", "畝", "穂", "芋", "虎", "蚊", "蛍", "鯨", "鶏"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Actual labels and full raw English meanings concern conjunction, shapes/land/plants/animals, ranks, receiving/planning/imitation, colleagues/religion/conduct, allocation, metallurgy, concentration or cutting. None establishes ordinary censure, impeachment or pursuit of wrongdoing. Broader raw senses such as 儀 case/matter, 僚 official, 享 undergo/answer and 虎 drunkard were inspected, not silently discarded."
+    },
+    {
+      "ids": ["刻", "効", "努"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Reviewed source packet preserves all applicable comparison families and full raw records: carving/time (including qualified older torment), efficacy and effort are not ordinary censure/impeachment. They remain N3/N2/N3 and are all outside the default N1 pool; actual N1 fallback, not curated choices, was exercised."
+    },
+    {
+      "ids": ["刑"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Criminal punishment/sentence is a penalty, not investigation or censure as such. Actual body also discloses older model/form senses. A legal topic or possible later punishment does not make the displayed criminal punishment answer the target censure/impeach."
+    },
+    {
+      "ids": ["償", "免"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Recompense/making amends and exemption/being spared remain distinct from making an accusation. Full raw meanings and bodies include reparation/redemption and dismissal from office: dismissal may follow impeachment, but an outcome is not the accusation/procedure itself. No guilt or removal is implied by 弾劾."
+    },
+    {
+      "ids": ["劾"],
+      "status": "target",
+      "reason": "Censure/impeach with the wrongdoing-investigation branch supported by the committed actual character entries, full raw record and compound family. Five direct guards remain unchanged."
+    }
+  ],
+  "wordDisposition": [
+    {
+      "ids": ["享受", "凌駕", "包帯", "対照", "持参", "推定", "改正", "模倣", "測定", "測量", "激励", "発売", "発射", "発揮", "空想", "等分", "統計", "編集", "追加", "録音", "防止"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "All applicable complete families were inspected, including alternate spellings and secondary senses. Benefits, surpassing, bandaging, comparison, carrying, assumption/estimation, revision, imitation, measurement/surveying, encouragement, sale/launching/display, fantasy, equal division, statistics, compilation, addition, recording and prevention do not mean impeachment or denunciation of wrongdoing. Measurement/inference can contribute to inquiry but are not an accusation. The reverse-direction Japanese labels include actual readings."
+    },
+    {
+      "ids": ["不正"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Wrongdoing/dishonesty/irregularity is what may be exposed, not the denunciation itself; all injustice/fraud/illegality senses inspected."
+    },
+    {
+      "ids": ["弾"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "The actual article/option is たま bullet, not the ダン component in 弾劾. Full families 1240530 and 2179300 preserve the other spellings/senses and counter reading without transferring them to the article's lexical identity. Existing article remains unchanged; no 弾 kanji card is inferred."
+    },
+    {
+      "ids": ["裁判"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Trial/judicial judgment, complete family1296120 and actual body, is not accusation/impeachment/denunciation. Some impeachment systems involve a trial; related stages do not make those labels interchangeable."
+    },
+    {
+      "ids": ["叱る"],
+      "status": "no-direct-ambiguity-established-low-risk-hypothesis-retained",
+      "reason": "Complete1319580 includes scold/chide/rebuke/reprimand, while1419430 includes impeachment and denunciation/accusation/censure/arraignment. The current displayed target label is impeachment; denunciation, not generic censure. The actual Japanese dictionary definition exposes wrongdoing and demands responsibility; the ordinary reprimand article does not establish that either displayed answer is interchangeable. This is not a categorical claim that rebuke and denunciation can never overlap.",
+      "independentDisagreement": "Claude's original unresolved low-risk hypothesis and GPT's no-established-direct-defect judgment remain intact. Pair-pool availability is mechanics, not a reason to force withdrawal or manufacture a new guard.",
+      "change": "none"
+    },
+    {
+      "ids": ["弾劾"],
+      "status": "target",
+      "reason": "Both legal impeachment and broader denunciation are taught; accusation is not proof of guilt or completed removal. Seven declared direct word guards remain unchanged."
+    }
+  ],
+  "additionalHypothesis": {
+    "pair": ["劾", "偵"],
+    "status": "no-direct-ambiguity-established-low-risk-hypothesis-retained",
+    "actualLabels": ["censure; impeach", "spy; covert investigation"],
+    "evidence": "Actual 偵 body, full raw record and complete1418380 distinguish covert detective work from exposing/accusing wrongdoing in the actual 劾 entries. An investigation can be covert, but the displayed censure/impeach answer does not ordinarily name covert spying. Conversely, spy/covert investigation does not entail accusation or censure.",
+    "limits": "Not a universal separation of all historical senses or all investigation contexts. Original Claude hypothesis remains unresolved as a low-risk hypothesis, not a proved consequential defect; GPT's differing assessment is preserved.",
+    "mechanics": "Both target orientations in 32 explicit unguarded pair-pool samples remain available; shared guards are not transitively expanded.",
+    "change": "none"
+  },
+  "limits": [
+    "No new independent review credit, native-speaker certification or measured learning-effectiveness claim.",
+    "Finite target-relative samples do not certify every future candidate pool, every target orientation or semantic uniqueness between every pair of wrong choices.",
+    "Raw dictionary recognition does not establish frequency or unconstrained substitution.",
+    "Mechanics validate every option pair against direct metadata, not language understanding.",
+    "Native Room transport, full-archive production ContentSync-ONCE, rendered/font checks and original-family rendered confirmation remain mandatory.",
+    "Physical-phone, general-release and whole-set acceptance remain outstanding."
+  ]
+}

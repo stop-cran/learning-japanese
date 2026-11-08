@@ -1,0 +1,339 @@
+"""Archive batch 104's bounded host acceptance and preserve live checkpoint history."""
+import copy
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+
+C = Path(__file__).resolve().parent
+R, A = C.parent / "learning-japanese", C.parent / "kanji-cards-android"
+L = C / "logs" / "f94cc6dc-5f1b-489c-9959-663315e3ca0c"
+D = R / "docs" / "n1-reviews" / "batch-104-host-800"
+E = R / "docs" / "n1-sources" / "execution-800.json"
+BASE = "e97682161e790fc8276162a1049d921a6503ec8e"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def save(p, value):
+    assert not p.exists(), p
+    p.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(p) == value
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").strip()
+
+
+def runtime():
+    m = load(R / "manifest.json")
+    hashes = {}
+    for section, entries in m.items():
+        if not isinstance(entries, dict):
+            continue
+        for path, digest in entries.items():
+            assert path not in hashes
+            data = (R / path).read_bytes()
+            if section not in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}:
+                data = data.replace(b"\r\n", b"\n")
+            assert hashlib.sha256(data).hexdigest() == digest, path
+            hashes[path] = digest
+    assert len(hashes) == 8466 and m["contentVersion"] == "a5bc9b199c7df334"
+    original = json.loads(git("show", f"{BASE}:manifest.json"))
+    assert m == original
+    return {"contentVersion": m["contentVersion"], "runtimeHashesVerified": len(hashes),
+            "manifestSha256": sha(R / "manifest.json"), "runtimeUnchanged": True}
+
+
+def context():
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["batch"], p["status"]) == (799, "104", "continue")
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 13320, L.name)
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    return p
+
+
+def archive():
+    p = context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    command = load(L / "host-800-command.json")
+    assert command["contentHead"] == BASE and command["androidHead"] == APP
+    start = datetime.fromisoformat(command["startedAt"])
+    assert (L / "host-800-exit.txt").read_text().strip() == "0"
+    output = (L / "host-800.txt").read_text(encoding="utf-8-sig")
+    assert "BUILD SUCCESSFUL" in output and "> Task :core:test\n" in output
+    assert "> Task :app:testDebugUnitTest\n" in output
+    assert load(L / "host-800-cleanup.json")["androidWhollyClean"]
+    D.mkdir()
+    reports = []
+    for module, task, name, cases in [
+        ("core", "test", "RealContentTest", {
+            "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+            "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+            "parsesRealContentRepoWhenPresent"}),
+        ("app", "testDebugUnitTest", "RareHanTest", {"contentRareCharactersAreCoveredByBundledFont"}),
+        ("core", "test", "Batch104MeaningAcceptance800", {
+            "actualContentMeaningGuardsReadingAndHypothesisPairs"}),
+    ]:
+        source = A / module / "build" / "test-results" / task / f"TEST-io.github.stopcran.kanji.core.{name}.xml"
+        tree = ET.parse(source).getroot()
+        assert int(tree.attrib["tests"]) == len(cases)
+        assert all(int(tree.attrib[k]) == 0 for k in ("failures", "errors", "skipped"))
+        actual = tree.findall("testcase")
+        assert {x.attrib["name"] for x in actual} == cases
+        assert all(not x.findall("failure") and not x.findall("error") and not x.findall("skipped") for x in actual)
+        assert datetime.fromisoformat(tree.attrib["timestamp"].replace("Z", "+00:00")) >= start
+        assert (A / module / ".." / ".." / "learning-japanese").resolve() == R
+        (D / source.name).write_bytes(source.read_bytes())
+        reports.append({"name": name, "tests": len(cases), "failures": 0, "errors": 0,
+                        "skipped": 0, "timestamp": tree.attrib["timestamp"], "caseNames": sorted(cases),
+                        "archive": (D / source.name).relative_to(R).as_posix(), "sha256": sha(source)})
+    samples = {n: load(L / f"meaning-800-{n}.json") for n in [
+        "pools", "word-pools", "choices", "direct-guards", "nontransitive",
+        "preexisting-neighbor-edges", "readings", "word-guards", "word-choices", "hypothesis-pairs"]}
+    counts = {n: len(samples[n]) for n in [
+        "choices", "direct-guards", "nontransitive", "readings", "word-guards", "word-choices", "hypothesis-pairs"]}
+    assert counts == {"choices": 64, "direct-guards": 1120, "nontransitive": 320,
+                      "readings": 16, "word-guards": 448, "word-choices": 64, "hypothesis-pairs": 96}
+    assert samples["preexisting-neighbor-edges"] == []
+    kanji_labels = [list(x) for x in sorted({
+        (o["kanji"], o["title"]) for row in samples["choices"] for o in row["options"]})]
+    word_labels = [list(x) for x in sorted({
+        (o["word"], o["label"]) for row in samples["word-choices"] for o in row["options"]})]
+    save(D / "sampled-labels.json", {"kanji": kanji_labels, "words": word_labels})
+    # Freeze all applicable lexical families, not just selected glosses, for the finite sample.
+    snapshot = load(R / "docs" / "n1-source-snapshot.json")
+    jm_path = C / "inputs" / "n1-implementation-JMdict_e.gz"
+    kd_path = C / "inputs" / "n1-planning-kanjidic2.xml.gz"
+    assert sha(jm_path) == snapshot["inputs"][jm_path.name]["sha256"]
+    assert sha(kd_path) == snapshot["inputs"][kd_path.name]["sha256"]
+    jm_raw, kd_raw = gzip.decompress(jm_path.read_bytes()), gzip.decompress(kd_path.read_bytes())
+    assert hashlib.sha256(jm_raw).hexdigest() == snapshot["jmdict"]["xmlSha256"]
+    assert hashlib.sha256(kd_raw).hexdigest() == snapshot["kanjidic2"]["xmlSha256"]
+    terms = {w for w, _ in word_labels} | {"叱る", "弾劾", "探偵"}
+    characters = {k for k, _ in kanji_labels} | {"偵"}
+    jsource, ksource = ET.fromstring(jm_raw), ET.fromstring(kd_raw)
+    jselected = ET.Element("JMdict")
+    term_ids = {t: [] for t in sorted(terms)}
+    for entry in jsource.findall("entry"):
+        matches = terms & {e.text for e in entry.findall("k_ele/keb")}
+        if matches:
+            jselected.append(entry)
+            for term in matches:
+                term_ids[term].append(entry.findtext("ent_seq"))
+    assert all(term_ids.values()), term_ids
+    kselected = ET.Element("kanjidic2")
+    for entry in ksource.findall("character"):
+        if entry.findtext("literal") in characters:
+            kselected.append(entry)
+    assert len(kselected) == len(characters)
+    for name, tree in [("sampled-jmdict.xml", jselected), ("sampled-kanjidic2.xml", kselected)]:
+        ET.indent(tree, space="  ")
+        (D / name).write_bytes(ET.tostring(tree, encoding="utf-8", xml_declaration=True) + b"\n")
+    save(D / "sampled-source-selection.json", {
+        "sourceSnapshot": "docs/n1-source-snapshot.json", "termEntryIds": term_ids,
+        "kanji": sorted(characters), "completeFamilies": len(jselected),
+        "fullCharacterRecords": len(kselected), "allSensesAndRestrictionsPreserved": True,
+        "limits": "Fresh author/coordinator finite-sample inspection, not independent review or unrestricted synonym certification."})
+    reading = []
+    for e in kselected:
+        reading.append({"kanji": e.findtext("literal"),
+                        "allEnglishMeanings": [m.text for m in e.findall("reading_meaning/rmgroup/meaning")
+                                               if not m.attrib]})
+    for e in jselected:
+        reading.append({"entry": e.findtext("ent_seq"),
+                        "spellings": [{x.tag: x.text for x in ke} for ke in e.findall("k_ele")],
+                        "readings": [[[x.tag, x.text] for x in re] for re in e.findall("r_ele")],
+                        "senses": [[[x.tag, x.text, x.attrib] for x in se] for se in e.findall("sense")]})
+    save(L / "finite-source-reading-800.json", reading)
+    provenance = []
+    paths = [
+        (C / "preflight-800.ps1", "preflight-800.ps1.txt"),
+        (C / "run-batch-104-host-800.ps1", "run-batch-104-host-800.ps1.txt"),
+        (Path(__file__), "checkpoint-host-800.py.txt"),
+        (C / "Batch104MeaningAcceptance800.kt", "Batch104MeaningAcceptance800.kt"),
+        (C / "batch-065-host-integration-heap.init.gradle", "host-only-2g.init.gradle.txt"),
+    ]
+    for n in ["preflight-800.json", "preflight-800-host.json", "host-800-command.json",
+              "host-800-cleanup.json", "host-800-exit.txt", "host-800-end.txt"]:
+        paths.append((L / n, n))
+    for relative in [
+        r"core\src\test\kotlin\io\github\stopcran\kanji\core\RealContentTest.kt",
+        r"core\src\test\kotlin\io\github\stopcran\kanji\core\PublishableContentFixture.kt",
+        r"app\src\test\java\io\github\stopcran\kanji\core\RareHanTest.kt",
+        r"core\src\main\kotlin\io\github\stopcran\kanji\core\quiz\QuizBuilder.kt",
+        r"core\src\main\kotlin\io\github\stopcran\kanji\core\words\Words.kt",
+        r"core\src\main\kotlin\io\github\stopcran\kanji\core\reading\KanjiReadings.kt",
+    ]:
+        paths.append((A / relative, Path(relative).name))
+    for source, name in paths:
+        target = D / name
+        assert not target.exists()
+        target.write_bytes(source.read_bytes())
+        provenance.append({"source": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+    assert sha(C / "Batch104MeaningAcceptance800.kt") == command["temporaryFixtureSha256"]
+    assert sha(C / "batch-065-host-integration-heap.init.gradle") == command["hostOnlyHeapInitSha256"]
+    compressed = []
+    for n in ["host-800.txt", "finite-source-reading-800.json"] + [f"meaning-800-{n}.json" for n in samples]:
+        source, target = L / n, D / (n + ".gz")
+        target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+        assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+        compressed.append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                           "rawSha256": sha(source), "sha256": sha(target)})
+    save(E, {
+        "schemaVersion": 1, "execution": 800, "batch": "104",
+        "stage": "fresh-host-passed-finite-semantic-disposition-pending",
+        "startingState": p["execution800StartingState"], "command": command,
+        "testedContentHead": BASE, "qualifiedAndroidHead": APP,
+        "result": next(x for x in output.splitlines() if "BUILD SUCCESSFUL" in x),
+        "taskSummary": next(x for x in output.splitlines() if "actionable tasks:" in x),
+        "tests": reports, "totalTests": 5, "failures": 0, "errors": 0, "skipped": 0,
+        "allTestsFreshAfterCommandStart": True, "rerunTasks": True, "oneWorker": True,
+        "parallel": False, "compilerInProcess": True, "hostOnlyHeapInitUnchanged": True,
+        "fixtureProof": "Unchanged publication-aware loader reads actual dedicated sibling checkout; actual production QuizBuilder, WordQuizBuilder and ReadingCard. Temporary acceptance fixture removed; Android wholly clean.",
+        "counts": counts, "sampledKanjiLabels": len(kanji_labels),
+        "sampledWords": len({w for w, _ in word_labels}), "pools": list(samples["pools"]),
+        "allOfferedOptionsPairwiseGuardChecked": True, "directKanjiPairs": 5,
+        "directWordPairs": 7, "bothTargetOrientationsChecked": True,
+        "wordDirections": ["JpToEn", "EnToJp"], "seedsPerPool": 16,
+        "targetOutsideKanjiPoolChecked": True, "preexistingDirectedNeighborEdges": [],
+        "N1CuratedAvailable": [], "outsideN1CuratedPreserved": {"刻": 3, "効": 2, "努": 3},
+        "reading": {"fullOn": ["ガイ"], "fullKun": [], "selectedOn": ["ガイ"],
+                    "selectedKun": [], "offeredOnKeys": ["がい"], "displayOn": ["ガイ"],
+                    "offeredKunKeys": [], "kunQuestionIsNull": True, "questionsChecked": 16},
+        "hypothesisPairs": [["劾", "偵"], ["弾劾", "叱る"]],
+        "hypothesisPairMechanics": "Both presently unguarded pairs remain available in exact pair pools, both orientations; word pair both meaning directions. 96 samples do not by themselves establish semantic interchangeability.",
+        "finiteSourceSelection": "docs/n1-reviews/batch-104-host-800/sampled-source-selection.json",
+        "completeFamilies": len(jselected), "fullCharacterRecords": len(kselected),
+        **runtime(), "provenance": provenance, "compressedEvidence": compressed,
+        "textualAcceptanceComplete": True, "textualEvidence": "docs/n1-sources/execution-799.json",
+        "freshHostTestsExecuted": True, "nativeExecuted": False, "renderedAcceptanceComplete": False,
+        "independentReviewersLaunched": 0, "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": p["lastPublishedCommit"], "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False,
+        "limits": "Bounded HOST mechanics and actual options, not native/Room/ContentSync transport, glyph rendering or universal semantic safety. All28Han including cmap-absent刂 still require actual four-font/default rendering. Original799 limitations and remaining gates preserved."
+    })
+    print(json.dumps({"tests": 5, "counts": counts, "completeFamilies": len(jselected),
+                      "fullCharacterRecords": len(kselected)}, indent=2))
+
+
+def finish():
+    current, before = context(), load(L / "progress-before-800.json")
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    paths = git("diff", "--name-only", BASE, head).splitlines()
+    assert paths and all(x.startswith("docs/n1-reviews/batch-104-host-800/")
+                         or x == "docs/n1-sources/execution-800.json" for x in paths)
+    e = load(E)
+    assert e["finiteSemanticAcceptance"]["status"] == "accepted-bounded-target-samples"
+    for r in e["provenance"] + e["compressedEvidence"] + e["tests"]:
+        assert sha(R / r["archive"]) == r["sha256"]
+    assert runtime()["manifestSha256"] == e["manifestSha256"]
+    posted, comment = load(L / "issue-800-posted.json"), load(L / "issue-800-reread.json")
+    body = C / "batch-104-host-800-issue-body.txt"
+    assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
+    assert comment["body"] == body.read_bytes().decode("utf-8") and sha(body) == posted["bodySha256"]
+    next_action = (
+        f"SAME104 HOST checkpoint800 signed LOCAL evidence {head}; tested content{BASE}/qualifiedAPP{APP}. "
+        "Fresh RealContent3/RareHan1+temporary actual-production acceptance1: FIVEtests0failures/errors/skips; "
+        "explicitXMLtimestamps afterstart;41tasksexecuted/maxworker1/noparallel/inprocess/reruntasks/unchangedHOST2g. "
+        "All8466runtimehashes/versiona5bc9b199c7df334 unchanged. Actual kanji64choices/defaultN1/All/custom/"
+        "randomN1subset;ALLTHREEcurated刻N3効N2努N3outsideN1, fallback genuinelyexercised. "
+        "FIVEdirectkanjiguards1120checks,320nontransitiveneighborchecks/zeroexistingdirectneighboredges; "
+        "everyofferpairwisechecked, targetoutsidepool. SEVENwordguards448bothorientation/bothmeaningdirection "
+        "pairchecks;64actualwordmeaningchoices All/custom;16actualreadingquestions keyがい/displayガイ, kunempty/null. "
+        "96explicit unguardedhypothesispairchecks 劾/偵 and弾劾/叱る, not proofsemanticinterchangeability. "
+        f"Fresh{e['fullCharacterRecords']}fullrawcharacterrecords/{e['completeFamilies']}completeJMdictfamilies/allrestrictions+ordinarysenses archived "
+        "alongwithactualpoolmembership/order/everylabel atdocs/n1-reviews/batch-104-host-800/. "
+        f"Coordinatorfinite sample{e['sampledKanjiLabels']}kanjilabels/{e['sampledWords']}words acceptedtargetdistractors, NOT universalpool safety, "
+        "independentnative/renderedacceptance or pairwiselinguisticcertificationamongallwrongoptions. "
+        "UnprovedLOWRISKtwohypotheses adjudicatednotestablisheddirectambiguity foractualdisplayedlabels/"
+        "ordinarysenses; preserveClaudeunresolved/GPTnoestablisheddefectdisagreement, notforcedwithdrawal. "
+        "No teaching/metadata/guards/manifest changed;temporaryfixturecleaned/bothworktreesclean. "
+        "NEXT SAME104 bounded fullgitarchive/productionContentSyncONCE nativefixture/APKPREPARATIONonly, "
+        "preservepriorartifacts/bindcurrentsignedheads/fullmanifest/exacthashes/budgets/safepaths/media; "
+        "thencheckpoint/yield. Actual nativeN1/All/meaning/solecuratedon/eightstrokeDrawing/article/Back/offline/"
+        "directsymmetricNONTRANSITIVEguardtransport/fourfonts-default/all28Han stillrequired, especially "
+        "actual刂U+5202fallback/readability ALLfour selected/defaultmodes. CmapabsenceNOTglyphfailure/acceptance. "
+        "Nativefreshownedport/device/terminalpercase0/unchanged2gguest192mheap/oneworker/scopedcleanup; "
+        "TWOserialoriginalfamilyrenderedconfirmations and combinedcurrentmain/fullPython/vocabulary/"
+        "baseline-membership-links/manifestbudget/normalsigning/ownerfastforward/terminalgreenCI/"
+        "EVERYimmutableZIPmanifesthash/unchanged18000entries42MiBcompressed80MiBinflated56MiBretained/"
+        "perfilemediasafepaths/verifiedownerissue remain. Original799reviews/confirmations/readdepth/"
+        "calibrateddisagreement/source/process/image/permission/OOMlimits allpreserved verbatim in "
+        "historicalExecution799Before800Host andexecution799records. Original103finite128optionset/native/"
+        "rendered bounded795/900x2000renditionsNOToriginalpixels/equalcomprehension/fallbackface/retention "
+        "certification/GPTcompletevisualcoverageUNVERIFIED retained; no new73image-loop/newblindcredit/"
+        "strongerpixelguarantees. Verifywhollyclean signedheads/freshmain/liveparentancestry/decodedlauncher/"
+        "exactsession;parent13320ownsrunner.lock:nochildacquire/delete/unlock/readprobe. "
+        "Approvedcontrol/committedsource/frozeninputs only, notoptionalhistoricalsessionrecipes;preserve/"
+        "report/yield actualnewdenial/signinghang/uncertainownership. No105/unreviewedpush/authoragents/"
+        "concurrentheavywork/secondrunner/signingretry/guardincrease. Published130/1228/remainder1098 "
+        "unchanged;draft1127kanji5078words includes unaccepted劾/ONEnecessarysupport,NOTN1vocabulary. "
+        "Sixseparate保案派第策結retainN2/noacceptedcredit/noduplicate/relevel. "
+        "CompatibleAndroid#125+#132required;oldclientsignore;qualifiedAPPguard+schemaonlyNOTlatestmain. "
+        "Physicalphone/generalrelease/whole-setoutstanding;projectincomplete."
+    )
+    selection = load(D / "sampled-source-selection.json")
+    assert selection["completeFamilies"] == e["completeFamilies"]
+    assert selection["fullCharacterRecords"] == e["fullCharacterRecords"]
+    checkpoint = {
+        "schemaVersion": 1, "execution": 800, "checkpoint": 800, "batch": "104",
+        "status": "continue", "stage": "batch-104-host-passed-awaiting-native-preparation",
+        "savedCommit": head, "signature": "G", "qualifiedAndroidHead": APP, "testedContentHead": BASE,
+        "evidence": "docs/n1-sources/execution-800.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True, "freshHostTestsExecuted": True,
+        "hostTests": 5, "failures": 0, "errors": 0, "skipped": 0, "counts": e["counts"],
+        "finiteSemanticAcceptance": e["finiteSemanticAcceptance"], **runtime(),
+        "nativeExecuted": False, "independentReviewersLaunched": 0, "textualAcceptanceComplete": True,
+        "reviewClosed": [], "published": [], "runtimeChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "renderedAcceptanceComplete": False, "dedicatedWorktreesClean": True,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": before["lastPublishedCommit"], "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": next_action, "blocker": None, "historicalRootKeysCompared": len(before),
+        "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    assert "execution800CoordinatorCheckpoint" not in after
+    after["historicalExecution799Before800Host"] = {
+        k: before[k] for k in ("checkpoint", "status", "stage", "nextAction", "blocker")}
+    after["execution800StartingState"]["status"] = "signed-local-host-checkpoint-complete"
+    after["execution800CoordinatorCheckpoint"] = checkpoint
+    after.update(checkpoint=800, status="continue", stage=checkpoint["stage"], nextAction=next_action, blocker=None)
+    for key, value in before.items():
+        if key not in {"checkpoint", "status", "stage", "nextAction", "blocker"}:
+            assert after[key] == value, key
+    save(L / "checkpoint-800.json", checkpoint)
+    temporary = C / "progress.json.800-final.tmp"
+    save(temporary, after)
+    assert load(C / "progress.json") == current
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == after
+    print(json.dumps({"checkpoint": 800, "savedCommit": head, "status": "continue",
+                      "issue": posted["url"], "historicalRootKeysPreserved": len(before)}, indent=2))
+
+
+if __name__ == "__main__":
+    {"archive": archive, "finish": finish}[sys.argv[1]]()

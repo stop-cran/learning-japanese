@@ -1,0 +1,57 @@
+"""Bind the coordinator's finite semantic disposition to unchanged HOST evidence."""
+import hashlib
+import json
+from pathlib import Path
+import shutil
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+L = C / "logs" / "f94cc6dc-5f1b-489c-9959-663315e3ca0c"
+D = R / "docs" / "n1-reviews" / "batch-104-host-800"
+E = R / "docs" / "n1-sources" / "execution-800.json"
+load = lambda p: json.loads(p.read_text(encoding="utf-8-sig"))
+sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+
+e = load(E)
+assert e["stage"] == "fresh-host-passed-finite-semantic-disposition-pending"
+semantic = load(D / "finite-semantic-disposition.json")
+assert semantic["snapshot"] == e["testedContentHead"]
+assert semantic["readingDepth"]["sampledKanjiLabelsIncludingTarget"] == e["sampledKanjiLabels"]
+assert semantic["readingDepth"]["sampledWordsIncludingTarget"] == e["sampledWords"]
+labels = load(D / "sampled-labels.json")
+for section, key, dispositions in [
+    ("kanji", "kanjiDisposition", semantic["kanjiDisposition"]),
+    ("words", "wordDisposition", semantic["wordDisposition"]),
+]:
+    ids = [i for row in dispositions for i in row["ids"]]
+    assert len(ids) == len(set(ids)) and set(ids) == {x[0] for x in labels[section]}, key
+for source, name in [
+    (L / "archive-800-first-attempt.json", "archive-800-diagnostics.json"),
+    (Path(__file__), "finalize-host-evidence-800.py.txt"),
+]:
+    target = D / name
+    assert not target.exists()
+    shutil.copyfile(source, target)
+    e["provenance"].append({"source": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+for name in ["sampled-source-selection.json", "sampled-labels.json",
+             "sampled-jmdict.xml", "sampled-kanjidic2.xml", "finite-semantic-disposition.json"]:
+    p = D / name
+    e["provenance"].append({"source": "generated/source-bound contributor evidence",
+                            "archive": p.relative_to(R).as_posix(), "sha256": sha(p)})
+e["finiteSemanticAcceptance"] = {
+    "status": semantic["status"], "role": semantic["reviewerRole"],
+    "snapshot": semantic["snapshot"], "sampledKanjiLabelsIncludingTarget": e["sampledKanjiLabels"],
+    "sampledWordsIncludingTarget": e["sampledWords"],
+    "disposition": (D / "finite-semantic-disposition.json").relative_to(R).as_posix(),
+    "twoOriginalHypotheses": "No direct ambiguity established in actual labels/ordinary senses; original low-risk unresolved disagreement preserved, not a reviewer withdrawal.",
+    "runtimeCorrectionNeeded": False,
+    "limits": semantic["limits"],
+}
+e["stage"] = "batch-104-host-passed-awaiting-native-preparation"
+e["archiveDiagnostics"] = "Two evidence-only tuple/list JSON round-trip assertions corrected. Original diagnostics and failed second reading packet preserved in control. No tests rerun, source substitutions, runtime edits or actual permission denials."
+e["nextAction"] = "SAME104 bounded full git archive, new production ContentSync-ONCE native fixture and APK preparation bound to current signed heads and exact manifest; preserve prior artifacts, then checkpoint/yield. Actual native/rendered/four-font fallback checks, two serial original-family rendered confirmations, integrated-current-main acceptance and all publication gates remain."
+E.write_text(json.dumps(e, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+assert load(E) == e
+for record in e["provenance"] + e["compressedEvidence"] + e["tests"]:
+    assert sha(R / record["archive"]) == record["sha256"]
+print("Finite semantic coverage complete; all evidence hashes verified; no runtime changes.")
