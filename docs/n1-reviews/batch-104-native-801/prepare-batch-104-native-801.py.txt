@@ -1,0 +1,646 @@
+"""Prepare and archive batch 104's full-import native fixture, without running a device."""
+import copy
+from datetime import datetime, timezone
+import difflib
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import zipfile
+
+C = Path(__file__).resolve().parent
+R, A = C.parent / "learning-japanese", C.parent / "kanji-cards-android"
+SESSION = "2c958e92-643d-4c05-b753-7cdf951d8e9d"
+L = C / "logs" / SESSION
+BASE = "2184e58ff1468b794054022792a42ccbf5e32173"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+W = C / "batch-104-native-801"
+D = R / "docs" / "n1-reviews" / "batch-104-native-801"
+OLD = R / "docs" / "n1-reviews" / "batch-103-native-790" / "N1Batch103Native790Test.kt.gz"
+ARCHIVE = C / "artifacts" / "n1-batch-104-2184e58f-lf-envelope.zip"
+FIXTURE = W / "N1Batch104Native801Test.kt"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").strip()
+
+
+def context():
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["batch"], p["status"]) == (800, "104", "continue")
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 13320)
+    for root, head in [(R, BASE), (A, APP)]:
+        assert git("rev-parse", "HEAD", root=root) == head
+        assert git("log", "-1", "--format=%G?", root=root) == "G"
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+    return p
+
+
+def replace_progress(current, after, phase):
+    temporary = C / f"progress.json.801-{phase}.tmp"
+    save(temporary, after)
+    assert load(C / "progress.json") == current
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == after
+
+
+def runtime():
+    m = load(R / "manifest.json")
+    assert m == json.loads(git("show", f"{BASE}:manifest.json"))
+    hashes = {}
+    for section, entries in m.items():
+        if not isinstance(entries, dict):
+            continue
+        for name, digest in entries.items():
+            assert name not in hashes
+            data = (R / name).read_bytes()
+            if section not in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}:
+                data = data.replace(b"\r\n", b"\n")
+            assert hashlib.sha256(data).hexdigest() == digest, name
+            hashes[name] = digest
+    assert len(hashes) == 8466 and m["contentVersion"] == "a5bc9b199c7df334"
+    return {"contentVersion": m["contentVersion"], "runtimeHashesVerified": len(hashes),
+            "manifestSha256": sha(R / "manifest.json")}
+
+
+def start():
+    p = context()
+    assert p == load(L / "checkpoint-full.json")
+    request = L / "request.txt"
+    text = request.read_text(encoding="utf-8-sig")
+    embedded = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    assert embedded["checkpoint"] == 800
+    assert embedded["execution800CoordinatorCheckpoint"]["savedCommit"] == BASE
+    save(L / "progress-before-801.json", p)
+    state = {
+        "execution": 801, "batch": "104", "startedAt": datetime.now(timezone.utc).isoformat(),
+        "startingHead": BASE, "androidHead": APP, "freshOriginMain": git("rev-parse", "origin/main"),
+        "scope": "SAME104 full git archive/productionContentSyncONCE native fixture and debug APK PREPARATION only; signed LOCAL evidence, no emulator/native/reviewer/publication/105.",
+        "request": {"sha256": sha(request), "bytes": request.stat().st_size,
+                    "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+                    "limits": "Entire request loaded/decoded and complete checkpoint parsed; operative contract, approved issue and final800 inspected directly. Historical middle parsed, not freshly semantically re-reviewed. Initial full-load summary hit console encoding error after loading; bounded final/root reads supplied operative state."},
+        "runnerPreflight": load(L / "preflight-801.json"),
+        "artifactPathPreflight": "Approved committed packets/frozen workspace inputs/control helpers only; optional historical-session recipes not accessed.",
+        "actualNewPermissionDenials": [], **runtime(),
+    }
+    save(L / "starting-state-801.json", state)
+    after = copy.deepcopy(p)
+    assert "execution801StartingState" not in after
+    after["execution801StartingState"] = state
+    after["stage"] = "batch-104-native-preparation-in-progress"
+    after["nextAction"] = "SAME104 execution801 full archive/new native fixture/debug APK preparation only; no native/reviewer/publication/105. Original800 nextAction/all remaining gates preserved."
+    for key in p:
+        if key not in {"stage", "nextAction"}:
+            assert after[key] == p[key]
+    replace_progress(p, after, "start")
+    print("Starting scope persisted with full history; all8466 runtime hashes unchanged.")
+
+
+def plain(text):
+    return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text).replace("**", "").replace("`", "")
+
+
+def ks(text):
+    return json.dumps(text, ensure_ascii=False)
+
+
+def kl(values):
+    return "listOf(" + ", ".join(map(ks, values)) + ")"
+
+
+def body(name):
+    return (R / name).read_text(encoding="utf-8").split("---", 2)[2].strip()
+
+
+def heading(name):
+    return plain(body(name).splitlines()[0][2:])
+
+
+def blocks(name):
+    return body(name).split("\n\n")
+
+
+def show_sections(name, prefix):
+    rows = []
+    for block in blocks(name):
+        if block.startswith("# "):
+            continue
+        if block.startswith("## "):
+            rows.append(f"            section({ks(block[3:].strip())})")
+            continue
+        for line in (block.splitlines() if block.startswith("|") or block.startswith("- ") else [block]):
+            if line.startswith("|"):
+                cells = [cell.strip() for cell in line.strip("|").split("|")]
+                if cells[0] == "Reading" or cells[0].startswith("---"):
+                    continue
+                for cell in (cells[0], cells[2]):
+                    rows.append(f"            show(readingExample({ks(plain(cell))}), \"{prefix}-{len(rows):02d}\")")
+            else:
+                text = plain(" ".join(line.removeprefix("- ").splitlines()))
+                rows.append(f"            show(articleBullet({ks(text)}), \"{prefix}-{len(rows):02d}\")")
+    return "\n".join(rows)
+
+
+def prepare():
+    context()
+    assert not W.exists() and not ARCHIVE.exists()
+    old_raw = gzip.decompress(OLD.read_bytes())
+    old_receipt = load(R / "docs" / "n1-sources" / "execution-790.json")["preparation"]
+    assert hashlib.sha256(old_raw).hexdigest() == old_receipt["fixtureSha256"]
+    old = old_raw.decode("utf-8")
+    sys.path.insert(0, str(R / "tools"))
+    from build_manifest import build_manifest
+    from check_content_budget import archive_names, check
+    import yaml
+    manifest = load(R / "manifest.json")
+    assert build_manifest(R) == manifest
+    current = runtime()
+    budget = check(R, archive_names(R))
+    diagnostic_archive = C / "artifacts" / "n1-batch-104-2184e58f-envelope.zip"
+    with zipfile.ZipFile(diagnostic_archive) as previous:
+        previous_manifest = previous.read("n1-batch-104/manifest.json")
+        committed_manifest = subprocess.check_output(["git", "show", f"{BASE}:manifest.json"], cwd=R)
+        assert previous_manifest != committed_manifest
+        assert previous_manifest.replace(b"\r\n", b"\n") == committed_manifest
+    subprocess.run(["git", "-c", "core.autocrlf=false", "archive", "--format=zip", "--prefix=n1-batch-104/",
+                    f"--output={ARCHIVE}", BASE], cwd=R, check=True)
+    with zipfile.ZipFile(ARCHIVE) as archive:
+        assert archive.comment == BASE.encode("ascii")
+        infos, names = archive.infolist(), archive.namelist()
+        assert len(names) == len(set(names)) <= 18000
+        assert all(n.startswith("n1-batch-104/") and "\\" not in n and ".." not in n.split("/")
+                   and not n.startswith("/") and not re.search(r"(^|/)[^/]*:", n) for n in names)
+        assert not any("/docs/" in n or "/tools/" in n for n in names)
+        assert archive.read("n1-batch-104/manifest.json") == (R / "manifest.json").read_bytes()
+        retained = len(archive.read("n1-batch-104/manifest.json"))
+        verified = task_media = 0
+        for section, entries in manifest.items():
+            if not isinstance(entries, dict):
+                continue
+            for name, digest in entries.items():
+                assert len(name.split("/")) == 2 and ".." not in name.split("/")
+                data = archive.read("n1-batch-104/" + name)
+                binary = section in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}
+                limit = 150 * 1024 if section in {"images", "listeningTaskImages"} else (
+                    512 * 1024 if section in {"audio", "listeningTaskAudio"} else 2 * 1024 * 1024)
+                assert len(data) <= limit, name
+                normalized = data if binary else data.replace(b"\r\n", b"\n")
+                assert hashlib.sha256(normalized).hexdigest() == digest, name
+                local = (R / name).read_bytes()
+                assert (local if binary else local.replace(b"\r\n", b"\n")) == normalized, name
+                retained += len(data)
+                verified += 1
+                if section in {"listeningTaskAudio", "listeningTaskImages"}:
+                    task_media += len(data)
+        inflated = sum(info.file_size for info in infos)
+        assert verified == 8466 and retained <= 56 * 1024 * 1024 and inflated <= 80 * 1024 * 1024
+        assert task_media <= 20 * 1024 * 1024 and ARCHIVE.stat().st_size <= 42 * 1024 * 1024
+    font_scope = load(R / "docs" / "n1-sources" / "batch-104-draft-font-audit.json")
+    files = ["kanji/劾.md", "words/弾劾.md"]
+    han = set()
+    for name in files:
+        han.update(re.findall(r"[\u3400-\u4dbf\u4e00-\u9fff]", plain((R / name).read_text(encoding="utf-8"))))
+    assert sorted(han) == font_scope["han"] and len(han) == 28
+    for font in font_scope["bundledFonts"]:
+        assert sha(Path(font["path"])) == font["sha256"]
+        assert font["missing"] == ["刂"]
+    meta = yaml.safe_load((R / files[0]).read_text(encoding="utf-8").split("---")[1])
+    word_meta = yaml.safe_load((R / files[1]).read_text(encoding="utf-8").split("---")[1])
+    counts = {"kanji": sum(n.startswith("kanji/") for n in manifest["files"]),
+              "words": sum(n.startswith("words/") for n in manifest["files"]),
+              "n1": sum("\njlpt: 1\n" in (R / n).read_text(encoding="utf-8")
+                        for n in manifest["files"] if n.startswith("kanji/"))}
+    assert counts == {"kanji": 1127, "words": 5078, "n1": 136}
+    text, replacements = old, []
+
+    def replace(before, after, count=None):
+        nonlocal text
+        actual = text.count(before)
+        assert actual and (count is None or actual == count), (before, actual, count)
+        text = text.replace(before, after)
+        replacements.append({"before": before, "after": after, "occurrences": actual})
+
+    for before, after in [
+        ("disposable103", "disposable104"), ("N1Batch103Glyph790", "N1Batch104Glyph801"),
+        ("N1Batch103Article790", "N1Batch104Article801"), ("n1-103-", "n1-104-"),
+        ("Batch 103:", "Batch 104:"), ("Random(790", "Random(801"), ("randomN1Subset790", "randomN1Subset801"),
+        ("encouragementAllFortySevenHanAndExplicitCliffFallbackAcrossFourFamilies",
+         "censureAllTwentyEightHanAndExplicitKnifeFallbackAcrossFourFamilies"),
+        ("fullSingleImportEncouragementDirectGuardsSharedStemThreePairsSevenStrokesOfflineAndBack",
+         "fullSingleImportCensureDirectGuardsSoleOnOnePairEightStrokesOfflineAndBack"),
+        ("fed59b164f3a68264bfc040cc9d413986728e40c", BASE),
+        ("n1-batch-103-fed59b16-envelope.zip", ARCHIVE.name),
+        ("38c32a8df5fd6063", manifest["contentVersion"]),
+        ("assertEquals(1126, updated.kanji)", "assertEquals(1127, updated.kanji)"),
+        ("assertEquals(5077, updated.words)", "assertEquals(5078, updated.words)"),
+        ("assertEquals(135, n1.size)", "assertEquals(136, n1.size)"),
+        ("N1 · 135 cards", "N1 · 136 cards"),
+    ]:
+        replace(before, after)
+    pages = [" ".join(sorted(han)[i:i + 10]) for i in range(0, len(han), 10)]
+    pages.append("劾 刻 効 努 亥 力 刂 弾劾")
+    begin, end = text.index("        val pages = "), text.index("\n        val page = ")
+    text = text[:begin] + "        val pages = " + kl(pages) + text[end:]
+    replace("encouragement / look-alikes / explicit 厂 fallback", "censure / look-alikes / explicit 刂 fallback")
+    replace("Inspect all 47 scoped Han. 厂 is absent from all three bundled cmaps: inspect real fallback in every family. Raster hashes are not readability.",
+            "Inspect all 28 scoped Han. 刂 is absent from all three bundled cmaps: inspect real fallback in every family. Raster hashes are not readability.")
+    begin = text.index("            for (char in listOf(")
+    end = text.index(" {", begin)
+    text = text[:begin] + "            for (char in " + kl(sorted(han)) + ")" + text[end:]
+    replace('listOf("激励", "励む", "励ます")', 'listOf("弾劾")')
+    replace("assertEquals(200, rows.length())", "assertEquals(116, rows.length())")
+    replace('put("individualGlyphProbes", 188)', 'put("individualGlyphProbes", 112)')
+    replace('put("wholeWordRasterProbes", 12)', 'put("wholeWordRasterProbes", 4)')
+    replace('put("panels", 6)', 'put("panels", 4)')
+    replace("47 actual scoped Han across four production families/default, six bounded Compose panels and twelve whole-word rasters. 厂 U+5382 is absent from all three bundled cmaps; this explicitly exercises actual native fallback, not acceptance by cmap.",
+            "28 actual scoped Han across four production families/default, four bounded Compose panels and four whole-word rasters. 刂 U+5202 is absent from all three bundled cmaps; this explicitly exercises actual native fallback, not acceptance by cmap.")
+    glyph, article = text.split("class N1Batch104Article801Test", 1)
+    article = article.replace('"励"', '"劾"').replace("encourage; be diligent", "censure; impeach")
+    text = glyph + "class N1Batch104Article801Test" + article
+    for before, after in [
+        ('listOf("努", "勉", "勤", "支")', kl(meta["quiz_exclusions"])),
+        ('listOf("劣", "万", "厚")', kl(meta["distractors"])),
+        ('listOf("レイ")', 'listOf("ガイ")'),
+        ('listOf("はげ.む", "はげ.ます")', 'emptyList<String>()'),
+        ('listOf("れい")', 'listOf("がい")'), ('listOf("はげむ")', 'emptyList<String>()'),
+        ('mapOf("劾" to "censure; impeach", "劣" to "inferior; worse",\n            "万" to "ten thousand", "厚" to "thick; cordial")',
+         'mapOf("劾" to "censure; impeach", "刻" to "carve; time",\n            "効" to "efficacy; effectiveness", "努" to "make an effort")'),
+        ('mapOf("劣" to 1, "万" to 5, "厚" to 2)', 'mapOf("刻" to 3, "効" to 2, "努" to 3)'),
+        ('setOf("劣")', 'emptySet<String>()'), ('setOf("万", "厚")', 'setOf("刻", "効", "努")'),
+        ('assertEquals(896, guardChecks.length())', 'assertEquals(1120, guardChecks.length())'),
+        ('assertEquals(192, nontransitiveChecks.length())', 'assertEquals(320, nontransitiveChecks.length())'),
+        ('only励 meaning andれい/はげむ due; three selected source entries yield two keys',
+         'only劾 meaning and soleがい on-reading due; kunyomi empty'),
+        ('JSONObject().put("劣", 1).put("万", 5).put("厚", 2)',
+         'JSONObject().put("刻", 3).put("効", 2).put("努", 3)'),
+        ('assertEquals(7, strokes.length())', 'assertEquals(8, strokes.length())'),
+        ('hasContentDescription("7 strokes drawn"', 'hasContentDescription("8 strokes drawn"'),
+    ]:
+        replace(before, after)
+    begin = text.index("        val preserved = mapOf(")
+    end = text.index("        val now = ", begin)
+    word_code = '        val preserved = mapOf("弾劾" to ' + kl(word_meta["quiz_exclusions"]) + ")\n"
+    old_start = text.index("        val wordChecks = JSONArray()", begin)
+    old_end = text.index("        assertEquals(1728, wordChecks.length())", old_start)
+    word_code += text[old_start:old_end] + "        assertEquals(448, wordChecks.length())\n"
+    text = text[:begin] + word_code + text[end:]
+    replace('\n            .put("wordNontransitiveChecks", wordNontransitive)', "", 1)
+    begin = text.index('            await("励 — censure; impeach")')
+    end = text.index('            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))', begin)
+    row = next(plain(line.removeprefix("- ")) for block in blocks(files[0])
+               for line in block.splitlines() if line.startswith("- [弾劾]"))
+    part = next(plain(" ".join(b.splitlines())) for b in blocks(files[1]) if "[劾](../kanji/劾.md)" in b)
+    route = [
+        f"            await({ks(heading(files[0]))})", show_sections(files[0], "article"),
+        '            section("Common words")',
+        f"            inline(await(articleBullet({ks(row)})), \"弾劾\", 0)",
+        f"            await({ks(heading(files[1]))})", show_sections(files[1], "word-0"),
+        '            section("How the kanji combine")',
+        f"            show(articleBullet({ks(part)}), \"pair-0-components\")",
+        f"            inline(await(articleBullet({ks(part)})), \"劾\", {part.index('劾')})",
+        f"            await({ks(heading(files[0]))})", '            back()',
+        f"            await(articleBullet({ks(part)})).assertIsDisplayed()", '            back()',
+        f"            await(articleBullet({ks(row)})).assertIsDisplayed()", '            back()',
+        '            await("Search kanji, meaning or reading")', '            back()', '            await("Meaning quiz")',
+        '            evidence.put("mappedReciprocalPairs", 1).put("directedLinkTransitions", 2)',
+        '                .put("activatedBaselinePairs", 0).put("changedReusedArticles", 0)',
+        '                .put("changedReusedNavigationTransitions", 0).put("reciprocalLinkAndSystemBack", true)',
+    ]
+    text = text[:begin] + "\n".join(route) + "\n" + text[end:]
+    replace('assertEquals(2, fallback.size)', 'assertEquals(3, fallback.size)', 1)
+    replace('.put("actualN1CuratedAvailable", 1).put("actualN1FallbackOptions", 2)',
+            '.put("actualN1CuratedAvailable", 0).put("actualN1FallbackOptions", 3)', 1)
+    begin = text.index('            val answeredKeys = mutableSetOf<String>()')
+    end = text.index('            capture("curated-two-keys-done")', begin)
+    reading = '''            val answeredKeys = mutableSetOf<String>()
+            rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+            val reading = model("kreading:") as KanjiReadingViewModel
+            val question = reading.ui as ReadingUi.Question
+            assertEquals("劾", question.card.kanji)
+            assertEquals(ReadingKind.On, question.question.kind)
+            assertEquals("がい", question.question.correctKey)
+            assertEquals(emptyList<String>(), question.card.kunyomi.splitSep())
+            assertEquals(emptyList<String>(), question.card.quizKunyomi?.splitSep())
+            assertTrue(answeredKeys.add("がい"))
+            assertEquals(1, question.question.options.count { it.key == "がい" })
+            assertEquals("ガイ", question.question.options.single { it.key == "がい" }.label)
+            evidence.put("exactOnReadingOptions", JSONArray().also { rows ->
+                question.question.options.forEach { rows.put(JSONObject().put("key", it.key).put("label", it.label)) }
+            })
+            capture("curated-on-question")
+            click("ガイ")
+            await("Correct! — on'yomi")
+            assertTrue((reading.ui as ReadingUi.Answer).correct)
+            capture("curated-on-feedback")
+            click("Next")
+            assertEquals(setOf("がい"), answeredKeys)
+            rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+            val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+            assertEquals(1, done.answered)
+            assertEquals(1, done.correct)
+            rule.waitUntil(30_000) { runBlocking {
+                app.db.reviews().allLog().count { log -> log.sourceId == source.id && log.kanji == "劾" &&
+                    log.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) && log.grade == 3 } == 1
+            } }
+            val logs = runBlocking { app.db.reviews().allLog().filter {
+                it.sourceId == source.id && it.kanji == "劾" &&
+                    it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name)
+            } }
+            assertEquals(1, logs.size)
+            assertEquals(setOf("がい"), logs.map { it.reading }.toSet())
+            assertTrue(logs.all { it.grade == 3 && it.mode == ReadingKind.On.mode.name })
+'''
+    text = text[:begin] + reading + text[end:]
+    replace('capture("curated-two-keys-done")', 'capture("curated-sole-on-done")', 1)
+    replace('put("twoCuratedKeysPersistedGoodAndDone", true)', 'put("soleCuratedOnPersistedGoodAndDone", true)', 1)
+    marker = '        assertEquals(emptyList<String>(), target.toReadingCard().quizKeys(ReadingKind.Kun))'
+    replace(marker, marker + '''
+        assertNull(io.github.stopcran.kanji.core.reading.KanjiReadingQuiz.question(
+            target.toReadingCard(), ReadingKind.Kun, all.map { it.toReadingCard() }, kotlin.random.Random(801)))
+        assertEquals(emptyList<String>(), full.kunyomi.splitSep())
+        assertEquals(emptyList<String>(), full.quizKunyomi?.splitSep())
+        assertEquals(listOf("ガイ"), full.onyomi.splitSep())
+        assertEquals(listOf("ガイ"), full.quizOnyomi?.splitSep())''', 1)
+    assert text.count("ContentSync(app.db, app.settings.sync, http).sync(") == 1
+    assert "ContentParser.parse" not in text and text.count("@Test fun") == 2
+    assert not any(token in text for token in ("励", "レイ", "れい", "はげ", "劣", "万", "厚", "厂",
+                                              "N1Batch103", "n1-103-", "disposable103", "790"))
+    W.mkdir()
+    save(W / "precompile-diagnostic.json", {
+        "firstPrepareResult": "Exact raw archive-manifest equality assertion stopped preparation before fixture/APK creation.",
+        "finding": "Inherited system Git core.autocrlf=true converted the LF committed manifest to CRLF in the first local git archive. Both JSON and normalized bytes match; no runtime content mismatch or permission denial.",
+        "originalArchive": str(diagnostic_archive), "originalArchiveSha256": sha(diagnostic_archive),
+        "originalArchiveManifestBytes": len(previous_manifest), "committedManifestBytes": len(committed_manifest),
+        "originalManifestCRLFCount": previous_manifest.count(b"\r\n"),
+        "disposition": "Preserve first archive unchanged; new explicitly named LF archive uses command-local git -c core.autocrlf=false. No Git configuration, policy, content, heap or guard changed. Exact raw manifest equality and all runtime normalized hashes reverified.",
+        "nativeExecuted": False, "runtimeChanged": False,
+    })
+    FIXTURE.write_text(text, encoding="utf-8", newline="\n")
+    diff = W / "fixture-from-preserved790.diff.gz"
+    diff.write_bytes(gzip.compress("".join(difflib.unified_diff(
+        old.splitlines(keepends=True), text.splitlines(keepends=True),
+        fromfile=OLD.name, tofile=FIXTURE.name)).encode("utf-8"), mtime=0))
+    save(W / "preparation.json", {
+        "schemaVersion": 1, "execution": 801, "batch": "104", "status": "prepared-not-compiled-not-executed",
+        "contentSnapshot": BASE, "androidSnapshot": APP, **current, "expectedCounts": counts,
+        "archive": str(ARCHIVE), "archiveSha256": sha(ARCHIVE),
+        "fixture": str(FIXTURE), "fixtureSha256": sha(FIXTURE),
+        "preservedOriginalFixture": OLD.relative_to(R).as_posix(),
+        "preservedOriginalArchiveSha256": sha(OLD), "preservedOriginalFixtureSha256": old_receipt["fixtureSha256"],
+        "fixtureDiffSha256": sha(diff), "exactReplacements": replacements,
+        "verifiedRuntimeHashes": verified, "zipEntries": len(names), "compressedBytes": ARCHIVE.stat().st_size,
+        "inflatedBytes": inflated, "retainedBytes": retained, "listeningTaskMediaBytes": task_media,
+        "originalBudgetsPassed": True, "workingTreeBudget": budget, "productionContentSyncCalls": 1,
+        "preparseCalls": 0, "actualHan": sorted(han), "allHanRecomputedFromSignedTeaching": True,
+        "fontProbesPlanned": 112, "wholeWordRasterProbesPlanned": 4, "fontPanelsPlanned": 4,
+        "explicitFallbackTarget": "刂 U+5202, absent from all three bundled cmaps; readability NOT yet accepted",
+        "kanjiDirectPairs": 5, "kanjiGuardChecksPlanned": 1120, "nontransitiveNeighborChecksPlanned": 320,
+        "wordGuardPairsPlanned": 7, "wordGuardChecksPlanned": 448, "choiceChecksPlanned": 64,
+        "allOfferedSetsPairwiseExclusionChecked": True, "actualN1CuratedAvailable": 0,
+        "actualN1FallbackOptions": 3, "curatedDistractorLevels": {"刻": 3, "効": 2, "努": 3},
+        "reciprocalPairsPlanned": 1, "directedLinkTransitionsPlanned": 2,
+        "activatedBaselinePairs": 0, "changedReusedArticles": 0,
+        "fullOnyomi": ["ガイ"], "fullKunyomi": [], "selectedEntries": 1, "selectedOnKey": "がい",
+        "selectedOnDisplay": "ガイ", "selectedKunKeys": [], "emptyKunQuestionExpectedNull": True,
+        "drawingStrokes": 8, "glyphClass": "io.github.stopcran.kanji.ui.N1Batch104Glyph801Test",
+        "glyphMethod": "censureAllTwentyEightHanAndExplicitKnifeFallbackAcrossFourFamilies",
+        "articleClass": "io.github.stopcran.kanji.ui.N1Batch104Article801Test",
+        "articleMethod": "fullSingleImportCensureDirectGuardsSoleOnOnePairEightStrokesOfflineAndBack",
+        "nativeCompiled": False, "nativeExecuted": False, "nativeOrVisualAccepted": False, "phoneEvidence": False,
+        "runnerPreflight": load(L / "preflight-801.json"),
+        "limits": "Preparation only; planned assertions are not execution evidence. Sampled fallback/word options require source-backed semantic review. Direct symmetric NONTRANSITIVE guards, no neighbor clique. Cmap/raster hashes not readability. Original fixture preserved. Debug APK is not owner-signed release.",
+    })
+    context()
+    print(f"Prepared NEW801 full archive: {verified} hashes/{len(names)} entries; native not executed.")
+
+
+def archive():
+    p = context()
+    preparation = load(W / "preparation.json")
+    assert sha(FIXTURE) == preparation["fixtureSha256"] and sha(ARCHIVE) == preparation["archiveSha256"]
+    output = (L / "native-compile-801.txt").read_text(encoding="utf-8-sig")
+    assert (L / "native-compile-801-exit.txt").read_text().strip() == "0"
+    assert "BUILD SUCCESSFUL" in output and "> Task :app:compileDebugAndroidTestKotlin\n" in output
+    command = load(L / "native-compile-801-command.json")
+    assert (command["contentHead"], command["androidHead"]) == (BASE, APP)
+    assert command["fixtureSha256"] == preparation["fixtureSha256"]
+    assert command["archiveSha256"] == preparation["archiveSha256"]
+    assert not command["heapOrGuardsChanged"] and not command["parentLockTouched"]
+    cleanup = load(L / "native-compile-801-cleanup.json")
+    assert cleanup["androidWhollyClean"] and cleanup["temporarySourceRemoved"] and cleanup["temporaryArchiveRemoved"]
+    app = C / "artifacts" / "n1-batch-104-801-app.apk"
+    test = C / "artifacts" / "n1-batch-104-801-test.apk"
+    with zipfile.ZipFile(test) as apk:
+        assert hashlib.sha256(apk.read("assets/" + ARCHIVE.name)).hexdigest() == sha(ARCHIVE)
+        dex = b"".join(apk.read(n) for n in apk.namelist() if n.endswith(".dex"))
+        for token in ("N1Batch104Glyph801Test", "N1Batch104Article801Test", preparation["glyphMethod"],
+                      preparation["articleMethod"], "meaningFallbackNeedsSemanticReview", "curatedDistractorLevels",
+                      "soleCuratedOnPersistedGoodAndDone", "exactOnReadingOptions"):
+            assert token.encode("utf-8") in dex, token
+    previous_app_hash = load(R / "docs" / "n1-sources" / "execution-790.json")["compilation"]["appApkSha256"]
+    assert sha(app) == previous_app_hash
+    assert runtime()["manifestSha256"] == preparation["manifestSha256"]
+    compiled = {
+        "schemaVersion": 1, "execution": 801, "status": "compiled-not-executed",
+        "contentSnapshot": BASE, "androidSnapshot": APP, "command": command, "exitCode": 0,
+        "result": next(line for line in output.splitlines() if "BUILD SUCCESSFUL" in line),
+        "taskSummary": next(line for line in output.splitlines() if "actionable tasks:" in line),
+        "kotlinFixtureCompilationExecuted": True, "packagedArchiveHashVerified": True,
+        "bothNamedClassesAndRouteMethodsPresentInDex": True,
+        "fixtureSha256": sha(FIXTURE), "archiveSha256": sha(ARCHIVE),
+        "appApk": str(app), "appApkSha256": sha(app), "testApk": str(test), "testApkSha256": sha(test),
+        "productionAppApkIdenticalToAccepted790": True,
+        "temporaryAndroidSourceAndAssetRemoved": True, "dedicatedAndroidWhollyClean": True,
+        "runtimeChanged": False, "manifestChanged": False, "nativeExecuted": False,
+        "nativeOrVisualAccepted": False, "phoneEvidence": False,
+        "limits": "Debug APK compilation/asset verification only; not device installation, terminal native cases, visual/semantic acceptance, owner-signed release or physical-phone evidence.",
+    }
+    save(W / "compilation.json", compiled)
+    save(W / "compiled-packet.json", {"preparation": preparation, "compilation": compiled})
+    D.mkdir()
+    paths = [(path, path.name + (".gz" if path.suffix == ".kt" else "")) for path in [
+        FIXTURE, W / "preparation.json", W / "compilation.json", W / "compiled-packet.json",
+        W / "precompile-diagnostic.json", W / "fixture-from-preserved790.diff.gz"]]
+    paths += [(path, path.name + ".txt") for path in [
+        Path(__file__), C / "preflight-801.ps1", C / "compile-batch-104-native-801.ps1"]]
+    paths += [(L / name, name + (".gz" if name.endswith(".txt") else "")) for name in [
+        "preflight-801.json", "preflight-801-compile.json", "native-compile-801-command.json",
+        "native-compile-801-exit.txt", "native-compile-801-end.txt", "native-compile-801.txt",
+        "native-compile-801-cleanup.json"]]
+    provenance = []
+    for source, name in paths:
+        target = D / name
+        assert not target.exists()
+        compressed = name.endswith(".gz") and not source.name.endswith(".gz")
+        data = source.read_bytes()
+        target.write_bytes(gzip.compress(data, mtime=0) if compressed else data)
+        assert (gzip.decompress(target.read_bytes()) if compressed else target.read_bytes()) == data
+        provenance.append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                           "sha256": sha(target), "sourceSha256": sha(source)})
+    evidence = {
+        "schemaVersion": 1, "execution": 801, "batch": "104",
+        "stage": "native-fixture-full-archive-prepared-compiled-not-executed",
+        "recordedAt": datetime.now(timezone.utc).isoformat(), "startingState": p["execution801StartingState"],
+        "preparation": preparation, "compilation": compiled, "provenance": provenance,
+        "textualAcceptanceComplete": True, "textualEvidence": "docs/n1-sources/execution-799.json",
+        "freshHostAcceptance": "docs/n1-sources/execution-800.json", "freshHostTestsExecutedThisExecution": False,
+        "finiteHostSemanticAcceptance": "Inherited800 bounded target-relative samples only; no universal pool certification. Actual new native fallback options still need exact source-backed rendered adjudication.",
+        "retainedReviewerHypotheses": "Unproved LOW-RISK 劾/偵 and 弾劾/叱る hypotheses remain preserved as unresolved reviewer disagreement, not established defects or forced withdrawals; HOST800 found no direct ambiguity in actual labels/ordinary senses.",
+        "nativeExecuted": False, "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [], "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": p["lastPublishedCommit"], "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "SAME104 actual owned native run of exact NEW801 APKs after fresh ownership/port/PID/read-only AVD/fingerprint/192m preflight; require both named terminal case0/no skips and actual PNG semantic/readability acceptance with TWO serial original-family rendered confirmations. Preserve all800 gates; no105/unreviewedpush.",
+        "limits": "No native cases or rendered reviewers ran. Planned assertion counts are not results. No heap/guard increase, publication, batch closure or full project acceptance. Original799 textual and800 HOST evidence inherited honestly. Actual native fallback semantic/readability acceptance remains pending.",
+    }
+    save(R / "docs" / "n1-sources" / "execution-801.json", evidence)
+    print("Archived compiled fixture, full archive and exact APK provenance; no native acceptance claimed.")
+
+
+def finish():
+    current, before = load(C / "progress.json"), load(L / "progress-before-801.json")
+    assert (current["checkpoint"], current["batch"], current["status"]) == (800, "104", "continue")
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 13320)
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    for root in (R, A):
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+    changed = git("diff", "--name-only", BASE, head).splitlines()
+    assert changed and all(name.startswith("docs/n1-reviews/batch-104-native-801/")
+                           or name == "docs/n1-sources/execution-801.json" for name in changed)
+    evidence = load(R / "docs" / "n1-sources" / "execution-801.json")
+    for entry in evidence["provenance"]:
+        assert sha(R / entry["archive"]) == entry["sha256"]
+    prep = evidence["preparation"]
+    assert sha(FIXTURE) == prep["fixtureSha256"] and sha(ARCHIVE) == prep["archiveSha256"]
+    for path, digest in [(evidence["compilation"]["appApk"], evidence["compilation"]["appApkSha256"]),
+                         (evidence["compilation"]["testApk"], evidence["compilation"]["testApkSha256"])]:
+        assert sha(Path(path)) == digest
+    assert runtime()["manifestSha256"] == prep["manifestSha256"]
+    posted, comment = load(L / "issue-801-posted.json"), load(L / "issue-801-reread.json")
+    body_path = C / "batch-104-native-preparation-801-issue-body.txt"
+    assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
+    assert comment["body"] == body_path.read_bytes().decode("utf-8") and sha(body_path) == posted["bodySha256"]
+    original_sessions = load(R / "docs" / "n1-reviews" / "batch-104-reconciliation.json")
+    next_action = (
+        f"SAME104 checkpoint801 signed LOCAL native-preparation HEAD{head}, qualifiedAndroid{APP}. "
+        "NEW801 full-archive productionContentSyncONCE fixture prepared AND COMPILED, NOT executed/accepted. "
+        "Read docs/n1-sources/execution-801.json and docs/n1-reviews/batch-104-native-801/compiled-packet.json. "
+        f"Archive signed{BASE}/version{prep['contentVersion']}/SHA256{prep['archiveSha256']}; "
+        f"all8466runtimehashes/{prep['zipEntries']}entries/{prep['compressedBytes']}compressed/"
+        f"{prep['inflatedBytes']}inflated/{prep['retainedBytes']}retained bytes within unchanged guards. "
+        "Exact debug app/test APK hashes, packaged archive and BOTH named classes/methods verified. "
+        "Production app APK byte-identical to accepted790 qualifiedbackport, not latestappmain. "
+        "First preparation rawmanifest assertion caught systemGit autocrlf=true archiveconversionLFtoCRLF; "
+        "originalarchive unchanged/preserved, normalizedbytes+JSONequal. NEW explicitlynamedLFarchive uses "
+        "commandlocal git -c core.autocrlf=false, no config/content/policy/heap/guard change; exactrawmanifest "
+        "and allruntimehashes verified. FirstGradlecompilePASSED1m40s/9executed65uptodate. "
+        "NEXT SAME104 execute exact NEW801 N1Batch104Glyph801Test#"
+        "censureAllTwentyEightHanAndExplicitKnifeFallbackAcrossFourFamilies and N1Batch104Article801Test#"
+        "fullSingleImportCensureDirectGuardsSoleOnOnePairEightStrokesOfflineAndBack "
+        "ONLY after fresh signedheads/checkpoint/whollyclean/liveparentancestry/decodedlauncher/exactsession and "
+        "device/local+remoteport includingTimeWait/PID/readonlyAVD/fingerprint/192m preflight. "
+        "Prove runtime equality to signed2184e58f; do NOT regenerate for docs-only evidence HEAD. "
+        "Parent13320runner.lock untouched, no child acquire/delete/unlock/readprobe. "
+        "1120planned directguardchecks/320planned NONTRANSITIVEneighborchecks/448planned paironlywordguards/"
+        "64planned builderchoices/allofferedsetspairwisechecked/112planned individualglyphs/4planned wordrasters/"
+        "4planned panels/28scopedHan are NOT executed results. Explicit刂U+5202 absentallTHREEbundledcmaps; "
+        "require actualfallback/readability allfourfamilies/default, not cmap/raster/compile proxy. "
+        "ZERO N1curated/THREE fallback; 刻N3効N2努N3unchanged. "
+        "Solefull/selectedガイ, actualkeyがい/displayガイ; kunempty/nonoffered/nullquestion. "
+        "Onlyone actualkey persistedgood/done, eightdrawingstrokes trace/recall, complete newkanji/ONEsupport/"
+        "onemappedpair/twodirections/zeroactivatedbaselinepairs/zeroreusedchanges/Back/offline. "
+        "弾hasnoKANJIcard: plain component/fullmetadata, existing弾たま unchanged/notcompoundreuse. "
+        "TWO SERIAL ORIGINAL-session family rendered confirmations required after terminalnativecase0 "
+        "and actual PNG readability/semantic inspection, not initial reviewer reruns. "
+        "Original799 textual and800 HOST5/finite targetrelative41kanji26words inherited, not repeated; "
+        "all original reports/readlimits/calibrateddisagreement/fouroptionalpolish preserved. "
+        "Retained unprovedLOWRISK 劾/偵 and弾劾/叱る hypotheses: no established directambiguity in actual "
+        "HOSTlabels/ordinarysenses, NOT forcedreviewerwithdrawal/universal safety. New actualnativefallback "
+        "options still require applicablecompletefrozendictionary evidence and renderedreview. "
+        "Originalfamilysessions and complete original reports in batch-104-reconciliation.json. "
+        "All prior gates/limitations retained verbatim in historicalExecution800Before801Preparation.nextAction. "
+        "Any new consequential ambiguity needs exact fullfrozen sources/labels/minimal correction/audits/manifest/"
+        "normal signednewfreeze/BOTH originalsessionconfirmations. Native unchanged2gguest/192mheap/oneworker, "
+        "exactownedport/device checks, terminalcase0/ownedhelpercleanup. No current native/rendered/physicalphone claim. "
+        "Combinedcurrentmain/nonrewritingmerge/changedteachingreview/allrequiredPython/vocabulary/normal signing/"
+        "ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/18000entries42MiBcompressed80MiBinflated"
+        "56MiBretained/perfilepathmedia/verifiedownerissue gates mandatory. No unreviewedpush/105/authoragents/"
+        "concurrentheavywork/secondrunner/signingretry/guardincrease. Approvedcontrol/committedsource/frozeninputs only, "
+        "not optional historicalsessionrecipes; preserve/report/yield actualnewdenial/signinghang/uncertainownership. "
+        "QualifiedAndroidapprovedpairguard+schemaonly NOT latestappmain. Published130/1228,1098acceptance remainder "
+        "unchanged;1127kanji5078words/136N1label includes unaccepted劾/ONEsupport, not deliveredN1vocabulary. "
+        "Six earlierN2placements separate; neverduplicate/relevel. CompatibleAndroid#125+#132 required; oldclientsignore. "
+        "Original103finite128optionset/native/renderedbounded795/900x2000renditionsNOToriginal1080x2400/"
+        "equalcomprehension/fallbackface/retention certification/GPTcompletevisualcoverageUNVERIFIED retained; "
+        "no new73image-loop/newblindcredit/strongerpixelguarantees. Physicalphone/generalrelease/whole-setoutstanding; "
+        "projectincomplete."
+    )
+    assert isinstance(original_sessions, dict)
+    checkpoint = {
+        "schemaVersion": 1, "execution": 801, "checkpoint": 801, "batch": "104", "status": "continue",
+        "stage": "batch-104-native-prepared-compiled-awaiting-owned-device",
+        "recordedAt": datetime.now(timezone.utc).isoformat(), "savedCommit": head, "signature": "G",
+        "qualifiedAndroidHead": APP, "contentArchiveSnapshot": BASE,
+        "evidence": "docs/n1-sources/execution-801.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True, "nativeCompiled": True, "nativeExecuted": False,
+        "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "dedicatedWorktreesClean": True, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [], **runtime(),
+        "publishedAdditions": 130, "remainingAdditions": 1098, "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False, "nextAction": next_action, "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    assert "execution801CoordinatorCheckpoint" not in after
+    after["historicalExecution800Before801Preparation"] = {
+        key: copy.deepcopy(before[key]) for key in ("checkpoint", "status", "stage", "nextAction", "blocker")}
+    after["execution801CoordinatorCheckpoint"] = checkpoint
+    after["execution801StartingState"]["status"] = "signed-local-native-preparation-checkpoint-complete"
+    after.update(checkpoint=801, status="continue", stage=checkpoint["stage"], nextAction=next_action, blocker=None)
+    for key, value in before.items():
+        if key not in {"checkpoint", "status", "stage", "nextAction", "blocker"}:
+            assert after[key] == value, key
+    save(L / "checkpoint-801-summary.json", checkpoint)
+    replace_progress(current, after, "finish")
+    save(L / "checkpoint-801-final-verification.json", {
+        "checkpoint": 801, "savedCommit": head, "signature": "G",
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+        "dedicatedWorktreesClean": True, "runtimeHashesVerified": 8466,
+        "nativeCompiled": True, "nativeExecuted": False, "runtimePublished": False,
+        "ownerIssueAuthorAndExactBodyVerified": True, "parentLockTouched": False,
+    })
+    print(json.dumps({"checkpoint": 801, "savedCommit": head, "status": "continue",
+                      "issue": posted["url"], "historicalRootKeysPreserved": len(before)}, indent=2))
+
+
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+    {"start": start, "prepare": prepare, "archive": archive, "finish": finish}[sys.argv[1]]()
