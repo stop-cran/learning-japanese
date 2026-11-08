@@ -1,0 +1,46 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\3c20e297-aae7-4653-9b55-0bd5bb918848"
+$bodyPath = "$control\batch-103-reconciliation-794-issue-body.txt"
+if ((Test-Path "$log\issue-794-posted.json") -or (Test-Path $bodyPath)) { throw 'Do not duplicate issue update' }
+$head = git -C "$control\..\learning-japanese" rev-parse HEAD
+if ($LASTEXITCODE -ne 0) { throw 'HEAD lookup failed' }
+& "$control\preflight-794.ps1" -ReceiptName 'preflight-794-before-issue.json' -ExpectedContentHead $head
+$body = @"
+Checkpoint794, SAME batch103: completed final bounded reconciliation of the original two-family text/rendered reports, their own transport clarifications, per-path delivery evidence and inherited native791 execution. Normally signed LOCAL evidence commit $head preserves docs/n1-sources/execution-794.json and docs/n1-reviews/batch-103-reconciliation-794/. No runtime changes, new reviewers, native/JVM rerun, publication or104.
+
+The bounded rendering gate is closed for the delivered900x2000 renditions only, NOT original1080x2400 pixels. Both original reviewers retain correctness/scoped coverage/comprehensibility CLEAN for four new articles, three exact reused passages,128 exact HOST/native option sets plus the live default, and delivered-scale47-Han/four-font/reading/drawing presentation. Actual API35 production rendering and route execution are inherited from791: two terminal case0, one ContentSync,1126kanji/5077words/135N1/zero problems, two persisted reading keys, six directed reciprocal links, drawing practice/failed recall, Back/offline. Fresh archive/hash checks verified the native evidence and exact reconstruction of original reviewer stdout.
+
+Original-pixel legibility, equal comprehension across scales, fallback face identity and independently reconstructable complete GPT visual inspection/every-request image retention remain explicitly UNVERIFIED. The issue's actual native-rendering and bounded review requirements do not imply those stronger claims. Automatic scaling and incomplete retention telemetry alone establish no consequential glyph/text defect; neither is being silently certified. No repeat all73-image loop or new blind-review credit. Full batch/publication acceptance is still pending.
+
+Original reports remain unchanged alongside their corrections: GPT125 successful image returns/73 paths/52 repeats, not52 failed reads; one request warning pruned25 images. Claude's unsupported larger-capture observation is withdrawn. The original minor English ambiguity is resolved while preserving the reviewers' disagreement about whether the original was defective; contextual particle and pep-talk hypotheses remain withdrawn. The shared app-wide drawing wording suggestion is optional/out of scope.
+
+Fresh checks passed:377 Python tests, validator0 errors, exact batch baseline/membership/three reading dispositions/two offered keys/three reciprocal pairs, vocabulary consistency (pilot2122/2431, not complete coverage), unchanged8463-file manifest version38c32a8df5fd6063, and archive budgets8485 entries/30308245 local ZIP bytes/44674131 inflated/44405793 retained plus existing path/media guards. Fresh origin/main a38f4cf is already an ancestor; no runtime integration change required at this check. HOST789 RealContent3/RareHan1 and production-builder acceptance remain non-skipped inherited results, not fresh tests.
+
+Next bounded SAME103 checkpoint is actionable acceptance-ledger reconciliation and publication: normal signed reviewed acceptance record, fresh main check/nonrewriting merge and changed-tree validation/review if needed, owner fast-forward push, remote SHA and terminal green relevant CI, EVERY immutable GitHub ZIP manifest entry/hash and all unchanged18000-entry/42MiBcompressed/80MiBinflated/56MiBretained/per-file/path/media guards, then verified owner issue and durable full-history checkpoint before104. Local reconciliation is not delivery.
+
+Parent runner13320 remains the sole lock owner; no child lock acquisition/deletion/unlock/read-probe, optional historical-session helper access, policy/signing workaround or new permission denial. Original792 denial and parent recovery remain preserved. Published129/1228, remaining1099 and last published a38f4cf554300ce34ee65aada79e87b7c9d0319e unchanged. Compatible reading-curation/kanji-exclusion-aware client required (stop-cran/kanji-cards-android#125 and stop-cran/kanji-cards-android#132); old clients ignore those fields. Physical-phone, general-release and whole-set acceptance outstanding; project incomplete.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-794-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-794-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}

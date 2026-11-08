@@ -1,0 +1,28 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\3c20e297-aae7-4653-9b55-0bd5bb918848"
+Set-Location "$control\..\learning-japanese"
+if ((git rev-parse HEAD) -ne '25fa6be700a42368427b93e13a8270dca8fbc7da' -or
+    (git log -1 '--format=%G?') -ne 'G') { throw 'Wrong signed content head' }
+if ((git -C "$control\..\kanji-cards-android" rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C "$control\..\kanji-cards-android" status --porcelain --untracked-files=all)) { throw 'Wrong or dirty Android checkout' }
+python -X utf8 -B tools\validate.py *> "$log\validate-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+git diff --exit-code -- manifest.json *> "$log\manifest-diff-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest changed' }
+python -X utf8 -B -m unittest discover -s tools -p 'test_*.py' *> "$log\tests-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Python suite failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 103 *> "$log\batch-audit-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Batch baseline/membership/reading/link audit failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Archive budget checks failed' }
+git diff --check *> "$log\whitespace-794.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+foreach ($name in @('validate', 'manifest', 'tests', 'batch-audit', 'vocabulary', 'budget')) {
+    Write-Output "=== $name ==="
+    Get-Content "$log\$name-794.txt" -Tail 8
+}
