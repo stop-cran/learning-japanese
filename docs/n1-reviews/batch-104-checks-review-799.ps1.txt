@@ -1,0 +1,40 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$session = 'a08608a3-a39e-47db-8d13-3c700e116d8e'
+$log = "$control\logs\$session"
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 13320 -or $runner.sessionId -ne $session) { throw 'Uncertain runner ownership' }
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+for ($i = 0; $process -and $process.ProcessId -ne $runner.pid -and $i -lt 12; $i++) {
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+if (-not $process -or $process.ProcessId -ne $runner.pid) { throw 'Live launcher ancestry missing' }
+Set-Location $root
+if ((git rev-parse HEAD) -ne '636b995e8cba91b5fde0d31369655a50fd8708ce' -or
+    (git log -1 '--format=%G?') -ne 'G') { throw 'Unexpected content signed head' }
+if ((git -C $android rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?') -ne 'G' -or
+    (git -C $android status --porcelain --untracked-files=all)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 798 -or $progress.batch -ne '104' -or $progress.status -ne 'continue') { throw 'Checkpoint changed' }
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\source-tests-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validation failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 104 *> "$log\batch-audit-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Batch audit failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Budget failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+git diff --check *> "$log\whitespace-799.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\source-tests-799.txt" -Tail 4
+Get-Content "$log\validate-799.txt" -Tail 2
+Get-Content "$log\budget-799.txt" -Tail 8
+Get-Content "$log\vocabulary-799.txt" -Tail 2

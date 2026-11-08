@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "batch": "104",
+  "execution": 799,
+  "snapshot": "636b995e8cba91b5fde0d31369655a50fd8708ce",
+  "status": "one-minor-clarification-awaiting-original-session-confirmations",
+  "initialExecutions": {
+    "claude": {
+      "launcherPid": 2552,
+      "sessionId": "2a96f7cf-4ed1-427d-90a8-e00e4bf1ef85",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "startedAt": "2026-11-08T08:44:39.262060+01:00",
+      "completedAt": "2026-11-08T08:46:25.235410+01:00",
+      "exitCode": 0,
+      "snapshot": "636b995e8cba91b5fde0d31369655a50fd8708ce",
+      "reportSha256": "c087dcba769d28afb12368df4bd589888ee2eb93a5c41dd445429cb58269b12a",
+      "rawExecutionSha256": "4ec2e72710afce62261a69c7737cb13da9911a38fae6ed6240db667ffffb8e76",
+      "fullPacketReturnedExactly": true,
+      "serialInternalToolCalls": true,
+      "report": "batch-104-initial-claude.md",
+      "rawArchive": "batch-104-initial-claude.jsonl.gz",
+      "archiveSha256": "1b836368229518e3cecc33de1dd1cfbfdac5eddff5bba6fef67fed5d22396f54"
+    },
+    "gpt": {
+      "launcherPid": 30148,
+      "sessionId": "40b1dab7-bea4-4403-810b-828fa28d53c7",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "startedAt": "2026-11-08T08:46:38.625556+01:00",
+      "completedAt": "2026-11-08T08:47:40.880694+01:00",
+      "exitCode": 0,
+      "snapshot": "636b995e8cba91b5fde0d31369655a50fd8708ce",
+      "reportSha256": "933e4c52c4a58473c469218baa3f1f75acf7d94bf2db2c3e6d5c5098baecaa36",
+      "rawExecutionSha256": "112c9962196ed5a2818ebd166825216fee881c3b7c3eced570589b1568a528ec",
+      "fullPacketReturnedExactly": true,
+      "serialInternalToolCalls": true,
+      "report": "batch-104-initial-gpt.md",
+      "rawArchive": "batch-104-initial-gpt.jsonl.gz",
+      "archiveSha256": "569f6f0ad07b948ee6b8eb6c229af9045d8c210a30609c9d8b6309dd8ea336a1"
+    }
+  },
+  "sharedFindings": [],
+  "uniqueVerifiedUsefulInitialFinding": {
+    "reviewer": "claude-opus-5.5",
+    "file": "words/弾劾.md:30",
+    "severity": "minor",
+    "facet": "comprehensibility",
+    "claim": "Grouping praise, acquittal and removal as not one interchangeable antonym obscures outcome versus opposite.",
+    "adjudication": "Accept a minimal clarification of contrast versus possible outcome; the original sentence did not affirm that removal was an antonym, so this is localized clarity, not incorrect Japanese/legal definition.",
+    "evidence": "Actual Digital Daijisen 弾劾 sense2, batch-104-dangai-dictionary-public-text.txt:5; original article:30,36.",
+    "proposedRemedy": "Praise can contrast with denunciation. Removal from office is a possible outcome of impeachment, not its opposite.",
+    "status": "unresolved",
+    "confidence": "high for awkward grouping; medium for demonstrated learner impact"
+  },
+  "hypotheses": [
+    {
+      "claim": "Add 弾劾/叱る word exclusion",
+      "source": "Claude hypothesis; GPT equivalent observation considered, not a unique discovery",
+      "status": "withdrawn",
+      "reason": "Actual word target label is impeachment; denunciation, not censure. Ordinary scold/reprimand does not establish that either displayed label answers the other. Shared protection through 責める is nontransitive; no direct ambiguity established. Retain scrutiny in later finite live-option acceptance."
+    },
+    {
+      "claim": "Add 劾/偵 kanji exclusion",
+      "source": "Both reports considered covert investigation",
+      "status": "withdrawn",
+      "reason": "Actual 偵 label spy; covert investigation and full raw senses identify covert spying, not censure/impeach. 劾's investigation branch concerns pursuing wrongdoing; no interchangeable displayed answer established. Actual future pool remains a later gate."
+    }
+  ],
+  "optional": [
+    {
+      "claim": "Explain がい as key versus ガイ display",
+      "status": "optional",
+      "reason": "Current practice wording does not assert hiragana display; actual implementation uses がい match key and ガイ display. No correctness defect established."
+    },
+    {
+      "claim": "Name KANJIDIC2 in no-kun sentence",
+      "status": "optional",
+      "reason": "Sentence directly follows sourced-metadata statement. Other dictionaries may record other readings; no universal no-kun claim intended or required."
+    },
+    {
+      "claim": "Replace standalone verb wording",
+      "status": "optional",
+      "reason": "Negative instruction prevents using 劾 as generic survey/lookup verb, not a positive claim that it is an ordinary independent verb."
+    },
+    {
+      "claim": "Tie mnemonic claim to visible shape",
+      "status": "optional",
+      "reason": "Explicit modern-shape memory aid, not origin/phonetic evidence. Unverified etymology is not introduced."
+    }
+  ],
+  "modelComparisonLimits": "Same scope/source access and exact returned packet, not equal sense-by-sense comprehension, native-speaker review or general model ranking. Equivalent observations compared across findings, hypotheses, optional and limits.",
+  "remainingGates": "Both original-session confirmations, qualified Android actual-pool/non-skipped tests, ContentSync ONCE/native/rendered/four-font 刂 fallback, current-main/full acceptance/CI/immutable ZIP/publication. No delivery credit.",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding"
+}
