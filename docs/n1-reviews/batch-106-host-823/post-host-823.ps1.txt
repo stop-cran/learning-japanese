@@ -1,0 +1,61 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\06027d98-bd35-45cc-9f18-503d35689fa1"
+$content = "$control\..\learning-japanese"
+$bodyPath = "$control\batch-106-host-823-issue-body.txt"
+if ((Test-Path "$log\issue-823-posted.json") -or (Test-Path $bodyPath)) {
+    throw 'Do not duplicate owner issue update'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0) { throw 'HEAD lookup failed' }
+& "$control\preflight-823.ps1" -ReceiptName 'preflight-823-before-issue.json' -ExpectedContentHead $head
+if (-not $?) { throw 'Final preflight failed' }
+if ((git -C $content rev-parse 'HEAD^') -ne '94f05fe5ef57f67ff90aa50137bf0e2e0784e3e6' -or
+    $LASTEXITCODE -ne 0) { throw 'Wrong evidence ancestry' }
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-823.json") | ConvertFrom-Json
+if ($e.totalTests -ne 5 -or $e.failures -ne 0 -or $e.errors -ne 0 -or $e.skipped -ne 0 -or
+    $e.contentVersion -ne '89809c00e1676979' -or $e.runtimeHashesVerified -ne 8472 -or
+    $e.counts.choices -ne 64 -or $e.counts.'direct-guards' -ne 448 -or
+    $e.counts.nontransitive -ne 32 -or $e.counts.'word-guards' -ne 384 -or
+    $e.counts.'word-choices' -ne 64 -or $e.counts.'hypothesis-pairs' -ne 32 -or
+    $e.reading.questionsChecked -ne 16 -or $e.sampledKanjiLabels -ne 41 -or
+    $e.sampledWords -ne 22 -or $e.completeFamilies -ne 32 -or $e.fullCharacterRecords -ne 44 -or
+    $e.finiteSemanticAcceptance.status -ne 'accepted-bounded-target-samples') {
+    throw 'HOST evidence mismatch'
+}
+$body = @"
+Checkpoint 823, SAME batch 106: qualified Android HOST checks and bounded target-relative semantic assessment passed. FIVE fresh cases: unchanged RealContentTest3 + RareHanTest1 + one temporary actual-production meaning/word/reading acceptance case; zero failures/errors/skips. Signed tested content94f05fe5ef57f67ff90aa50137bf0e2e0784e3e6; qualified signed Androidbf30cdead8515739bc0e671d57a54b9a3109dd46. Explicit fresh XML timestamps after command start, actual test/production sources, full build log, helpers, command and parent-runner provenance preserved at signed LOCAL evidence commit $head in docs/n1-sources/execution-823.json and docs/n1-reviews/batch-106-host-823/. BUILD SUCCESSFUL in4m13s; all41tasks executed, one worker, no parallel Gradle work, in-process Kotlin and unchanged qualified HOST-only2g heap. Temporary fixture removed; both dedicated worktrees wholly clean.
+
+Actual production builders produced64kanji target samples across default exactN1/All/custom/a recorded16-card randomN1subset,16seeds each. None of the three curated wrong choices belongs to N1: defaultN1 and randomN1subset genuinely exercise fallback; All/custom retain all three. TWO direct kanji guards passed448both-orientation checks, including pair-only, filtered and target-outside-pool cases.32neighbor checks preserve nontransitivity without inventing a direct edge. Every offer was mechanically pairwise checked against actual exclusions. SIX direct word guards passed384pair checks across both endpoint orientations and both meaning directions;64actual word target option sets cover All/custom. Full on/kun metadata and selected-on/empty-kun curation preserved:16actual reading questions use normalized hiragana key and katakana display, no kun question. Exact Japanese strings, complete pool membership/order and every offered label are archived.
+
+Coordinator finite target-relative assessment inspected all41sampled kanji labels,22sampled words,44full raw character English-meaning lists,32complete applicable JMdict families with all senses/restrictions,29complete word bodies plus the complete comparison-kanji body, and all grouped actual options. Exact frozen compressed/decompressed source hashes verified. Existing actual public dictionary texts reused, not freshly retrieved; no new independent-review credit. Government offices/officials, historical eras, systems of rule, duties and taxes are not an edict simply because an edict can affect them. Punishment/investigation, management/control and dismissal are not sovereign orders themselves. Full secondary senses and actual lexical identities/readings were considered. This is finite target-relative acceptance, not universal pool safety or linguistic certification of all wrong-choice pairs.
+
+The original822 weak instruction/precept comparison hypothesis remains explicitly UNRESOLVED and NONBLOCKING, not withdrawn or promoted to an established defect.32explicit unguarded pair samples prove actual availability only; no direct ambiguity requiring a new exclusion was established. The exact labels and complete sources must remain available for the mandatory later original-family rendered confirmation, including native fallback sets. No forced finding withdrawal, speculative guard, title distortion or universal safety claim.
+
+All8472runtime hashes/contentVersion89809c00e1676979 unchanged; no teaching/metadata/guards/manifest changed and no content pushed. Existing two-family textual acceptance remains tied to unchanged5fe224b. Next bounded checkpoint: NEW full git archive, production ContentSync-ONCE native fixture and APK PREPARATION tied to current signed heads, preserving prior artifacts. Actual fresh native N1/All/meaning/sole curated-on/nine-stroke drawing/articles/systemBack/offline/direct symmetric nontransitive guard transport/four-font/default-system rendering of all17scoped Han, full word, radical and look-alikes, plus two serial original-family rendered confirmations, remain mandatory. Cmap presence is not readability acceptance. Combined-current-main/fullPython/vocabulary/baseline-membership-links/manifest/per-file-media-safe-path checks, normal signed integration/publication, terminal green CI and EVERY immutable-ZIP runtime hash/budget check remain. Unchanged18000entries/42MiBcompressed/80MiBinflated/56MiBretained limits.
+
+Published additions remain132/1228, acceptance remainder1096; last published0c582f18b31f65a5e1a908d92e37dde3d34f81ee. Draft1129kanji/5080words/138N1labels includes the still-unaccepted one-kanji/one-necessary-support batch; NOT N1 vocabulary delivery. Compatible Android reading-curation/kanji-exclusion client required; old clients ignore those fields. Physical-phone, general-release and whole-set acceptance remain outstanding; project incomplete. Parent runner lock untouched; no optional historical-session helpers accessed or actual new permission denial. No next batch or second runner.
+"@
+[IO.File]::WriteAllText($bodyPath, ($body -replace "`r`n", "`n") + "`n", [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant()} |
+        ConvertTo-Json | Set-Content "$log\issue-823-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected URL; preserve receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-823-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}

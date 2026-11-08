@@ -1,0 +1,25 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\06027d98-bd35-45cc-9f18-503d35689fa1"
+& "$control\preflight-823.ps1" -ReceiptName 'preflight-823-checks.json' -EvidenceOnly
+if (-not $?) { throw 'Checks preflight failed' }
+Set-Location "$control\..\learning-japanese"
+$env:PYTHONUTF8 = '1'
+python -B tools\validate.py *> "$log\validate-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validation failed' }
+python -B tools\build_manifest.py *> "$log\manifest-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest failed' }
+git diff --exit-code HEAD -- manifest.json *> "$log\manifest-diff-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest changed despite unchanged runtime' }
+python -B tools\check_content_budget.py *> "$log\budget-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Budget failed' }
+python -B tools\grammar_vocabulary.py check *> "$log\vocabulary-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+python -B "$control\finish-host-823.py" audit *> "$log\host-audit-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Evidence/source/semantic audit failed' }
+git diff --check *> "$log\whitespace-823.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\validate-823.txt"
+Get-Content "$log\budget-823.txt"
+Get-Content "$log\vocabulary-823.txt"
+Get-Content "$log\host-audit-823.txt"

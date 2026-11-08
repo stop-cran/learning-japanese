@@ -1,0 +1,274 @@
+"""Verify bounded HOST evidence and preserve a complete history-bearing checkpoint."""
+import copy
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+C = Path(__file__).resolve().parent
+R, A = C.parent / "learning-japanese", C.parent / "kanji-cards-android"
+L = C / "logs" / "06027d98-bd35-45cc-9f18-503d35689fa1"
+D = R / "docs" / "n1-reviews" / "batch-106-host-823"
+E = R / "docs" / "n1-sources" / "execution-823.json"
+BASE = "94f05fe5ef57f67ff90aa50137bf0e2e0784e3e6"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+NEXT = (
+    "SAME106 bounded native PREPARATION only: create a NEW full git archive, production "
+    "ContentSync-ONCE fixture and APK tied to current normally signed content/qualified Android "
+    "bf30cdead8515739bc0e671d57a54b9a3109dd46; preserve prior artifacts, full manifest, exact "
+    "hashes/budgets/safe paths/per-file media checks, then checkpoint/yield. HOST823 passed "
+    "RealContent3/RareHan1/actual-production acceptance1, FIVE fresh tests zero failures/errors/"
+    "skips;64kanji target sets defaultN1/All/custom/randomN1Subset823,448directkanjiguardchecks,"
+    "32nontransitivechecks,384wordguardchecks BOTH directions/orientations,64wordtargetsets,"
+    "16readingquestions and32explicit unguarded 勅/訓 pair samples.41sampledkanjilabels/22words/"
+    "44fullrawcharacterEnglishmeaninglists/32completeJMdictfamilies/29completewordbodies+訓"
+    "kanjibody inspected by coordinator, NOT a new independent review or universal semantic "
+    "safety. Retain original822 weak訓hypothesis UNRESOLVED NONBLOCKING; no direct ambiguity "
+    "established/no forced withdrawal/no speculative new guard. Exact labels, every seed, "
+    "pool membership/order and full source families at docs/n1-reviews/batch-106-host-823/. "
+    "All8472runtimehashes/contentVersion89809c00e1676979 unchanged; no teaching/metadata/"
+    "manifest/guard correction. Fresh native actual ContentSyncONCE/Room direct symmetric "
+    "NONTRANSITIVEguardtransport/N1/All/meaning/solecuratedon/ninestrokedrawing/articles/"
+    "systemBack/offline/allfourfonts/defaultsystem/full勅令word/radical力/lookalikes/all17Han/"
+    "rendered acceptance remain MANDATORY. Fresh ownership/device-port/terminalpercase0/"
+    "unchanged2gGuest192mHeap/oneworker/scopedcleanup; TWO serial original-family rendered "
+    "confirmations including exact訓hypothesis source/labels and native fallback remain. "
+    "Fullon[チョク]/fullkun[いまし.める,みことのり] EXACTSOURCEORDER, selected[チョク]/[], "
+    "normalizedkeyちょく/displayチョク, modernwrittenいまし.めるUNVERIFIED; documentedみことのり "
+    "outsideJoyoREADINGlistNOTfrequency/invalidity. One necessary勅令 support NOinferredwordlevel, "
+    "sovereigngeneral+Meijilegalform; TWOdirectkanjiguards令命/SIXdirectwordguards命令命じる"
+    "命ずる法法律規則, TWO mappedpairs/FOURdirections/ZEROactivatedbaselinepairs/ONEexact令line "
+    "onlybaselinebodychange. Combinedcurrentmain/fullPython/vocabulary/baseline-membership-links/"
+    "manifest/perfilemedia-safepaths/unchanged18000entries42MiBcompressed80MiBinflated56MiBretained/"
+    "normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/verifiedownerissue "
+    "remain mandatory. ALL original822/source820/draft821 acceptance and historical source/review/"
+    "process/readdepth/permission/OOM/ANR/routing/phone limits preserved EXACT in "
+    "execution823Inherited822Gates/before823snapshot, not new823 runs/retroaccepted. Verify whollyclean "
+    "signedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent13320ownsrunner.lock:"
+    "NOchildacquire/delete/unlock/readprobe; approvedcontrol/committedsource/frozeninputs only, "
+    "nooptionalhistoricalsessionrecipes. Preserve/report/yield actualnewdenial/signinghang/"
+    "uncertainownership. No107/nativeEXECUTION/publication/unreviewedpush/authoragents/"
+    "concurrentheavywork/secondrunner/signingretry/guardincrease in NEXT preparation checkpoint. "
+    "Published132/1228/remainder1096 unchanged; draft1129kanji5080words138N1labels includes "
+    "stillunaccepted勅/necessarysupport勅令, NOTN1vocabulary. Six separatelyplaced保案派第策結 "
+    "retainN2/noacceptedcredit/noduplicate/relevel. CompatibleAndroid125+132required;oldclientsignore; "
+    "qualifiedAPP guard+schemaonlyNOTlatestmain. Originalpixels/equalcomprehension/fallbackface/"
+    "everyrequestretention/native-speaker/phone/effectiveness remainUNVERIFIED. "
+    "Physicalphone/generalrelease/whole-setoutstanding; projectincomplete."
+)
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args], encoding="utf-8").strip()
+
+
+def write(p, data, *, new=False):
+    if new:
+        assert not p.exists(), p
+    p.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(p) == data
+
+
+def context():
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["status"], p["batch"]) == (822, "continue", "106")
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 13320, L.name)
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    return p
+
+
+def runtime():
+    m = load(R / "manifest.json")
+    assert m == json.loads(git("show", f"{BASE}:manifest.json"))
+    hashes = {}
+    for section, entries in m.items():
+        if not isinstance(entries, dict):
+            continue
+        for path, digest in entries.items():
+            assert path not in hashes
+            data = (R / path).read_bytes()
+            if section not in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}:
+                data = data.replace(b"\r\n", b"\n")
+            assert hashlib.sha256(data).hexdigest() == digest, path
+            hashes[path] = digest
+    assert len(hashes) == 8472 and m["contentVersion"] == "89809c00e1676979"
+    return {"contentVersion": m["contentVersion"], "runtimeHashesVerified": len(hashes),
+            "manifestSha256": sha(R / "manifest.json"), "runtimeUnchanged": True}
+
+
+def audit():
+    context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    untracked = git("ls-files", "--others", "--exclude-standard").splitlines()
+    changed = git("diff", "--name-only", BASE).splitlines() + untracked
+    assert changed and all(x.startswith("docs/n1-reviews/batch-106-host-823/")
+                           or x == "docs/n1-sources/execution-823.json" for x in changed)
+    e, s, labels = load(E), load(D / "finite-semantic-disposition.json"), load(D / "sampled-labels.json")
+    assert s["snapshot"] == BASE and s["status"] == "accepted-bounded-target-samples"
+    for section, field in [("kanji", "kanjiDisposition"), ("words", "wordDisposition")]:
+        ids = [i for row in s[field] for i in row["ids"]]
+        assert len(ids) == len(set(ids)) and set(ids) == {x[0] for x in labels[section]}, field
+    assert s["readingDepth"]["sampledKanjiLabelsIncludingTarget"] == e["sampledKanjiLabels"] == 41
+    assert s["readingDepth"]["sampledWordsIncludingTarget"] == e["sampledWords"] == 22
+    assert s["readingDepth"]["completeLexicalFamiliesInspectedForAllSensesAndRestrictions"] == e["completeFamilies"] == 32
+    assert s["readingDepth"]["fullRawCharacterRecordsInspectedForAllEnglishMeanings"] == e["fullCharacterRecords"] == 44
+    assert len(e["completeWordArticlePacket"]) == 29
+    assert len((L / "finite-articles-823.txt").read_text(encoding="utf-8").splitlines()) == 1358
+    assert not s["runtimeCorrectionNeeded"]
+    assert s["additionalHypotheses"][0]["status"] == "unresolved-nonblocking-hypothesis-preserved"
+    assert e["totalTests"] == 5 and all(e[k] == 0 for k in ("failures", "errors", "skipped"))
+    assert sum(row["tests"] for row in e["tests"]) == 5
+    for record in e["provenance"] + e["compressedEvidence"] + e["tests"]:
+        assert sha(R / record["archive"]) == record["sha256"]
+        if "rawSha256" in record:
+            assert hashlib.sha256(gzip.decompress((R / record["archive"]).read_bytes())).hexdigest() == record["rawSha256"]
+    assert runtime()["manifestSha256"] == e["manifestSha256"]
+    print("All finite labels/dispositions, source families, fresh XML, evidence and8472runtime hashes verified.")
+
+
+def package():
+    audit()
+    e = load(E)
+    assert e["stage"] == "fresh-host-passed-finite-semantic-disposition-pending"
+    for name in ["sampled-labels.json", "sampled-source-selection.json", "sampled-jmdict.xml",
+                 "sampled-kanjidic2.xml", "finite-semantic-disposition.json"]:
+        target = D / name
+        e["provenance"].append({"source": "generated/source-bound contributor evidence",
+                                "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+    for source in [Path(__file__), C / "checks-host-823.ps1", C / "post-host-823.ps1",
+                   L / "preflight-823-checks.json"]:
+        target = D / (source.name + (".txt" if source.suffix in {".py", ".ps1"} else ""))
+        assert not target.exists()
+        target.write_bytes(source.read_bytes())
+        e["provenance"].append({"source": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+    for name in ["validate-823.txt", "manifest-823.txt", "manifest-diff-823.txt",
+                 "budget-823.txt", "vocabulary-823.txt", "host-audit-823.txt",
+                 "host-audit-823-retry.txt", "whitespace-823.txt"]:
+        source, target = L / name, D / (name + ".gz")
+        assert not target.exists()
+        target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+        e["compressedEvidence"].append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                                       "rawSha256": sha(source), "sha256": sha(target)})
+    for record in e["provenance"] + e["tests"]:
+        path = R / record["archive"]
+        raw = path.read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == record["sha256"]
+        data = raw.replace(b"\r\n", b"\n")
+        if raw == data:
+            continue
+        raw_path = path.with_name(path.name + ".original-bytes.gz")
+        assert not raw_path.exists()
+        raw_path.write_bytes(gzip.compress(raw, mtime=0))
+        path.write_bytes(data)
+        record.update(sourceRawSha256=hashlib.sha256(raw).hexdigest(),
+                      sourceRawArchive=raw_path.relative_to(R).as_posix(),
+                      sha256=hashlib.sha256(data).hexdigest())
+        e["compressedEvidence"].append({"source": "exact original captured bytes before text normalization",
+            "archive": raw_path.relative_to(R).as_posix(),
+            "rawSha256": hashlib.sha256(raw).hexdigest(), "sha256": sha(raw_path)})
+    e["archiveByteConventions"] = "Text hashes name LF-normalized committed bytes. Any differing original CRLF capture is preserved byte-exact in original-bytes.gz; compressed evidence remains exact. No Git attribute/configuration change."
+    e["finiteSemanticAcceptance"] = {
+        "status": "accepted-bounded-target-samples", "role": "author/coordinator, not independent review",
+        "snapshot": BASE, "disposition": (D / "finite-semantic-disposition.json").relative_to(R).as_posix(),
+        "sampledKanjiLabelsIncludingTarget": 41, "sampledWordsIncludingTarget": 22,
+        "weakKunHypothesis": "Original822 weak勅/訓hypothesis preserved unresolved and nonblocking. Explicit32pair samples prove availability only; no new guard/forced withdrawal/universal safety claim.",
+        "runtimeCorrectionNeeded": False, "limits": load(D / "finite-semantic-disposition.json")["limits"]}
+    e.update(stage="batch-106-host-passed-awaiting-native-preparation", nextAction=NEXT)
+    e["auditDiagnostic"] = {
+        "originalFailure": "The evidence-only article-line assertion used the view tool's1359newline-separated segment count, which includes the trailing empty segment. Python splitlines correctly returns1358physical lines. No unread article text or semantic/source/runtime mismatch.",
+        "correction": "Changed only the evidence line-count assertion and exact reading-depth description to1358, then reran only the failed audit and remaining whitespace check. Existing passed validator/manifest/budget/vocabulary and fresh five-case HOST were not repeated.",
+        "preservedOriginal": "host-audit-823.txt.gz",
+        "successfulConfirmation": "host-audit-823-retry.txt.gz",
+        "permissionDenial": False
+    }
+    e["limits"] = "Qualified bounded HOST/finite target-relative semantic checkpoint, not independent review, native transport/rendering/drawing, universal pool safety or phone acceptance. Every original822/inherited gate and limitation is preserved."
+    write(E, e)
+    audit()
+    print("Packaged complete HOST evidence with original-byte preservation and unchanged runtime.")
+
+
+def staged():
+    audit()
+    e = load(E)
+    for record in e["provenance"] + e["tests"] + e["compressedEvidence"]:
+        blob = subprocess.check_output(["git", "show", ":" + record["archive"]], cwd=R)
+        assert hashlib.sha256(blob).hexdigest() == record["sha256"], record["archive"]
+        if "rawSha256" in record:
+            assert hashlib.sha256(gzip.decompress(blob)).hexdigest() == record["rawSha256"]
+    print("Every staged evidence blob hash verified.")
+
+
+def checkpoint():
+    current, before = context(), load(L / "progress-before-823.json")
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    changed = git("diff", "--name-only", BASE, head).splitlines()
+    assert changed and all(x.startswith("docs/n1-reviews/batch-106-host-823/")
+                           or x == "docs/n1-sources/execution-823.json" for x in changed)
+    assert git("rev-parse", "origin/main") == before["lastPublishedCommit"]
+    e = load(E)
+    assert e["stage"] == "batch-106-host-passed-awaiting-native-preparation"
+    for record in e["provenance"] + e["tests"] + e["compressedEvidence"]:
+        blob = subprocess.check_output(["git", "show", head + ":" + record["archive"]], cwd=R)
+        assert hashlib.sha256(blob).hexdigest() == record["sha256"]
+        if "rawSha256" in record:
+            assert hashlib.sha256(gzip.decompress(blob)).hexdigest() == record["rawSha256"]
+    posted, comment = load(L / "issue-823-posted.json"), load(L / "issue-823-reread.json")
+    body = C / "batch-106-host-823-issue-body.txt"
+    assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
+    assert comment["body"] == body.read_bytes().decode("utf-8") and sha(body) == posted["bodySha256"]
+    preflight = load(L / "preflight-823-before-issue.json")
+    assert preflight["contentHead"] == head and not preflight["lockTouched"]
+    result = {
+        "schemaVersion": 1, "execution": 823, "checkpoint": 823, "batch": "106",
+        "status": "continue", "stage": e["stage"], "savedCommit": head, "signature": "G",
+        "qualifiedAndroidHead": APP, "testedContentHead": BASE, "evidence": "docs/n1-sources/execution-823.json",
+        "issueUpdate": posted["url"], "ownerIssueAuthorAndExactBodyVerified": True,
+        "freshHostTestsExecuted": True, "hostTests": 5, "failures": 0, "errors": 0, "skipped": 0,
+        "counts": e["counts"], "finiteSemanticAcceptance": e["finiteSemanticAcceptance"], **runtime(),
+        "nativeExecuted": False, "independentReviewersLaunched": 0, "textualAcceptanceComplete": True,
+        "reviewClosed": [], "published": [], "runtimeChangedThisExecution": False,
+        "runtimeAccepted": False, "runtimePublished": False, "renderedAcceptanceComplete": False,
+        "dedicatedWorktreesClean": True, "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [], "publishedAdditions": 132, "remainingAdditions": 1096,
+        "lastPublishedCommit": before["lastPublishedCommit"], "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False,
+        "finalRunnerPreflight": preflight, "nextAction": NEXT, "blocker": None,
+        "originalHistoricalRootValuesPreserved": True, "originalRootKeysCompared": len(before),
+    }
+    after = copy.deepcopy(current)
+    assert "execution823CoordinatorCheckpoint" not in after
+    after["execution823Inherited822Gates"] = {
+        "checkpoint": 822, "nextAction": before["nextAction"],
+        "invariant": "Preserve exact inherited gates and limitations; HOST823 does not rerun or retroaccept them."}
+    after["execution823CoordinatorCheckpoint"] = result
+    after.update(checkpoint=823, status="continue", stage=e["stage"], nextAction=NEXT, blocker=None)
+    for k, v in before.items():
+        if k not in {"checkpoint", "status", "stage", "nextAction", "blocker"}:
+            assert after[k] == v, k
+    write(L / "checkpoint-823.json", result, new=True)
+    tmp = C / "progress.json.823-final.tmp"
+    write(tmp, after, new=True)
+    assert load(C / "progress.json") == current
+    os.replace(tmp, C / "progress.json")
+    assert load(C / "progress.json") == after
+    print(json.dumps({"checkpoint": 823, "savedCommit": head, "status": "continue",
+                      "issue": posted["url"], "historicalRootKeysPreserved": len(before)}, indent=2))
+
+
+if __name__ == "__main__":
+    {"audit": audit, "package": package, "staged": staged, "checkpoint": checkpoint}[sys.argv[1]]()

@@ -1,0 +1,95 @@
+"""Prepare SAME106 bounded HOST acceptance from an approved workspace fixture."""
+import copy
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+L = C / "logs" / "06027d98-bd35-45cc-9f18-503d35689fa1"
+BASE = "94f05fe5ef57f67ff90aa50137bf0e2e0784e3e6"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def save(p, data):
+    assert not p.exists(), p
+    p.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+
+
+fixture = (C / "Batch105MeaningAcceptance811Retry1.kt").read_text(encoding="utf-8-sig")
+for old, new in [
+    ("Batch105MeaningAcceptance811Retry1", "Batch106MeaningAcceptance823"),
+    ("ece8be08-73ca-41e8-90d7-0696f855889b", L.name),
+    ("811r1", "823"), ("811", "823"),
+    ('"5572c6c467e6b73b"', '"89809c00e1676979"'),
+    ("1128", "1129"), ("5079", "5080"), ("137, n1Ids", "138, n1Ids"),
+    ('"勁"', '"勅"'),
+    ('listOf("強", "剛", "力", "勢")', 'listOf("令", "命")'),
+    ('listOf("功", "劾", "剖")', 'listOf("束", "効", "勤")'),
+    ('assertEquals(curated.toSet(), curated.filter { it in n1Ids }.toSet())',
+     'assertTrue(curated.none { it in n1Ids })'),
+    ('listOf("ケイ")', 'listOf("チョク")'),
+    ('listOf("つよ.い")', 'listOf("いまし.める", "みことのり")'),
+    ('"けい"', '"ちょく"'), ('"ケイ"', '"チョク"'),
+    ('"雄勁"', '"勅令"'),
+    ('listOf("強い", "強力", "力強い", "剛健", "力", "勢い")',
+     'listOf("命令", "命じる", "命ずる", "法", "法律", "規則")'),
+    ('assertFalse(byId.containsKey("雄"))', 'assertTrue(byId.containsKey("令"))'),
+    ('"ゆうけい"', '"ちょくれい"'),
+    ("assertEquals(896, direct.size)", "assertEquals(448, direct.size)"),
+    ("(12 - preexistingDirect.size)", "(2 - preexistingDirect.size)"),
+    ("        assertTrue(nontransitive.isNotEmpty())\n", ""),
+    ("assertEquals(128, hypothesis.size)", "assertEquals(32, hypothesis.size)"),
+]:
+    assert old in fixture, old
+    fixture = fixture.replace(old, new)
+start = fixture.index('        for (hypothesisId in listOf(')
+end = fixture.index("        assertEquals(64, choices.size)", start)
+fixture = fixture[:start] + """        val hypothesisPair = listOf(target, byId.getValue("訓"))
+        for (quizTarget in hypothesisPair) repeat(16) { seed ->
+            val options = QuizBuilder.options(quizTarget, hypothesisPair, Random(seed))
+            assertEquals(setOf("勅", "訓"), options.map { it.kanji }.toSet())
+            hypothesis += buildJsonObject {
+                put("type", "kanji"); put("target", quizTarget.kanji); put("seed", seed)
+                put("options", optionsJson(options))
+            }
+        }
+""" + fixture[end:]
+path = C / "Batch106MeaningAcceptance823.kt"
+assert not path.exists()
+path.write_text(fixture, encoding="utf-8")
+
+text = (L / "request.txt").read_text(encoding="utf-8-sig")
+embedded = json.loads(text.split(
+    "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+p = load(C / "progress.json")
+assert (p["checkpoint"], p["batch"], p["status"]) == (822, "106", "continue")
+assert embedded["checkpoint"] == p["checkpoint"]
+assert p["execution822CoordinatorCheckpoint"]["savedCommit"] == BASE
+preflight = load(L / "preflight-823.json")
+assert preflight["contentHead"] == BASE and not preflight["lockTouched"]
+save(L / "progress-before-823.json", p)
+q = copy.deepcopy(p)
+q["execution823StartingState"] = {
+    "execution": 823, "batch": "106", "startedAt": datetime.now(timezone.utc).isoformat(),
+    "startingHead": BASE, "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": preflight["freshOriginMain"], "runnerPreflight": preflight,
+    "scope": "SAME106 qualified HOST and finite actual-option semantic disposition, signed LOCAL evidence checkpoint only; no native, publication,107 or second runner.",
+    "request": {"sha256": hashlib.sha256((L / "request.txt").read_bytes()).hexdigest(),
+                "characters": len(text), "lines": len(text.splitlines()),
+                "completeFileLoadedAndCheckpointParsed": True,
+                "limits": "Entire request loaded/decoded and embedded checkpoint parsed; operative contract, entire approved issue and final822 directly inspected. Historical middle parsed, not freshly semantically re-reviewed."},
+    "artifactPathPreflight": "Approved committed source packets and durable control helpers only; no optional historical-session recipes accessed.",
+    "parentLockTouched": False, "actualNewPermissionDenials": [],
+}
+assert all(q[k] == v for k, v in p.items())
+tmp = C / "progress.json.823-start.tmp"
+save(tmp, q)
+assert load(C / "progress.json") == p
+os.replace(tmp, C / "progress.json")
+assert load(C / "progress.json") == q
+print("Prepared exact bounded fixture and preserved all historical progress.")

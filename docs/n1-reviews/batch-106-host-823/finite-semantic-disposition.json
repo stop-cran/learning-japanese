@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "batch": "106",
+  "execution": 823,
+  "snapshot": "94f05fe5ef57f67ff90aa50137bf0e2e0784e3e6",
+  "textualReviewSnapshot": "5fe224b5c611e8ca0c7c5a1fcbd5ea4a025e606a",
+  "actualModel": "gpt-6.1-sol",
+  "reviewerRole": "author/coordinator, not a new independent reviewer",
+  "status": "accepted-bounded-target-samples",
+  "scope": "64 actual production kanji target option sets across default exact N1, All, custom and recorded random N1 subset; 64 actual word target option sets across All/custom in both meaning directions, 16 seeds per pool/direction. Target-relative semantics only. Mechanical guard checks additionally cover both endpoint orientations, target outside the supplied pool and every co-offered pair.",
+  "evidence": [
+    "sampled-labels.json",
+    "sampled-source-selection.json",
+    "sampled-jmdict.xml",
+    "sampled-kanjidic2.xml",
+    "grouped-actual-options-823.json",
+    "meaning-823-choices.json.gz",
+    "meaning-823-word-choices.json.gz",
+    "meaning-823-hypothesis-pairs.json.gz",
+    "finite-source-reading-823.txt.gz",
+    "finite-articles-823.txt.gz",
+    "../../n1-sources/batch-106-character-public-text.txt",
+    "../../n1-sources/batch-106-chokurei-public-text.txt",
+    "../../n1-sources/batch-106-notation-public-text.txt",
+    "../batch-106-reconciliation.json"
+  ],
+  "readingDepth": {
+    "sampledKanjiLabelsIncludingTarget": 41,
+    "sampledWordsIncludingTarget": 22,
+    "fullRawCharacterRecordsInspectedForAllEnglishMeanings": 44,
+    "completeLexicalFamiliesInspectedForAllSensesAndRestrictions": 32,
+    "completeWordArticlesInspected": 29,
+    "additionalKanjiArticlesInspected": ["kanji/訓.md"],
+    "extraCharacterRecords": ["訓", "令", "命"],
+    "extraLexicalTerms": ["命令", "命じる", "命ずる", "法", "法律", "規則", "訓", "訓え"],
+    "sourceAccess": "Fresh extraction from exact approved frozen compressed AND decompressed dictionary hashes. Committed actual public dictionary texts reused, not fresh upstream retrieval.",
+    "outputLimit": "All76 compact source-projection lines returned in disjoint1-44/45-60/61-76 calls. All1358 physical article-packet lines returned across seven bounded ranges without truncation; the tool reports1359segments because of the final empty segment. Full XML families/raw character records archived; fresh semantic inspection of raw character records limited to every English meaning, not every nonsemantic metadata field.",
+    "actualOptionSets": "First combined grouped-output call exceeded the tool display limit; no full-read claim from that result or access to its optional temporary output. Two bounded follow-up calls returned all57 kanji ordered groups plus4 hypothesis groups, then all52 word ordered groups, with exact seed coverage. Ordered ungrouped samples remain archived."
+  },
+  "kanjiDisposition": [
+    {
+      "ids": ["稲", "猿", "凹", "怪", "桑", "蛍", "鯨", "剣", "蛇", "杉", "椎", "鶴", "桃", "豚", "弐", "畔", "丙", "乏", "繭"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Actual labels and every raw English meaning identify plants, animals, shapes, mystery/apparition, objects, numbers/ranks, a field boundary or lack. Secondary clock-hand, mallet/spine, hard-drinker and calendar senses were included. None supplies an imperial order or a sovereign's words."
+    },
+    {
+      "ids": ["享", "凝", "剛", "克", "剤", "准", "償", "冗", "刃", "僧", "倣", "俸", "冒", "免", "冶", "僚"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Receiving/enjoying/undergoing, congealing/absorption, strength, overcoming/kindness/skill, medicine, associate rank, recompense, redundancy, blades, clergy, imitation, salary, risking/assuming a name, exemption/dismissal, smelting and colleagues/officials are distinct from an imperial order. An edict can appoint, exempt or affect an official, but its possible subject, recipient or consequence is not its meaning."
+    },
+    {
+      "ids": ["刑", "劾"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Criminal punishment/sentencing and censure/criminal investigation concern punitive or investigative acts, not any sovereign's directive. A decree may concern punishment, but that relationship does not make these displayed answers interchangeable."
+    },
+    {
+      "ids": ["束", "効", "勤"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "The three curated labels are bundle, efficacy/effectiveness and employment/diligence. Full raw 束 also preserves govern/manage/control; that broader action is not itself an imperial order. Merit/benefit and serving do not change the other two labels into directives. Source820's full applicable lexical-family inspection remains inherited, not claimed freshly repeated here."
+    },
+    {
+      "ids": ["勅"],
+      "status": "target",
+      "reason": "Full raw character record gives imperial order; actual Daijisen character/noun headings separately support sovereign's words/orders and imperial association. The noun heading's additional尊貴command sense remains visible in the source; no absolute claim that every possible use is a Japanese constitutional edict. Two declared direct guards令/命 are unchanged."
+    }
+  ],
+  "wordDisposition": [
+    {
+      "ids": ["丞相", "役人", "知事", "領事"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Complete families and actual bodies identify an ancient chancellor/Chinese-style minister title, government official, prefectural governor and consul. These are people/offices, not an edict. The secondary Chinese-style minister sense of丞相 was considered, not dismissed solely as ancient-China vocabulary."
+    },
+    {
+      "ids": ["官庁", "庁", "県庁", "政府", "首都"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Offices/agencies/authorities, prefectural administration/premises, government/administration/ministry and a capital/metropolis are institutions or places, not their orders. Related government tags do not establish substitutable translations in either meaning direction."
+    },
+    {
+      "ids": ["中世", "近代", "原始", "文明"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Medieval and modern times, origin/primeval state and civilization/culture or the Bunmei era name do not name an edict. Full secondary periodization, beginning and proper-era senses were inspected. An edict can belong to one of these settings without meaning that setting."
+    },
+    {
+      "ids": ["専制", "自治", "公務", "税金"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Autocracy/despotism, self-government/local autonomy, official/public business and taxes/duties are different from an imperial edict. Arbitrary control may be exercised through edicts, public work can implement them and an edict can impose tax; none of those relations makes the displayed label an alternative definition of the target."
+    },
+    {
+      "ids": ["不正", "叱る", "弾", "日本刀"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Wrongdoing/illegality/fraud, scolding/reprimanding, the actualたまbullet identity and a Japanese sword do not name an edict. Complete弾families retain ball/jewel/coin and the separateだんcounter senses; spelling preferences and actual primary reading were considered, not an invented exclusive-kanji compartment. None creates target ambiguity."
+    },
+    {
+      "ids": ["勅令"],
+      "status": "target",
+      "reason": "Complete1430550 gives imperial edict; actual Daijisen separates sovereign/king orders from the particular Meiji constitutional legal form. Label imperial edict and reverse勅令(ちょくれい) fit both. Six conservative direct word guards remain unchanged; no inferred vocabulary level."
+    }
+  ],
+  "declaredGuardDisposition": {
+    "kanji": {
+      "ids": ["令", "命"],
+      "reason": "Full raw records preserve orders/command/decree; each broad displayed command meaning can describe an imperial order. Guard is direct and symmetric, not a claim that every sense is equivalent.",
+      "mechanics": "448 actual checks across both target orientations and seven pools; target-only output in guarded pair pools.32令/命neighbor samples remain available without inventing a transitive edge; no preexisting direct edge."
+    },
+    "words": {
+      "ids": ["命令", "命じる", "命ずる", "法", "法律", "規則"],
+      "reason": "Complete command/decree/directive, order/appoint and law/act/regulation senses support conservative broad-label protection. 法's other method/grammatical-mood/Buddhist andのりfamily senses do not make those legal associations disappear. Protection does not assert unrestricted Japanese equivalence or that every pair is indispensable.",
+      "mechanics": "384 guarded pair-pool samples across both endpoint orientations and both meaning directions; excluded endpoint never reintroduced to fill four choices."
+    }
+  },
+  "additionalHypotheses": [
+    {
+      "pair": ["勅", "訓"],
+      "status": "unresolved-nonblocking-hypothesis-preserved",
+      "actualLabels": ["imperial order", "instruction; kun reading"],
+      "mechanics": "32 explicit unguarded pair-pool samples cover both endpoint orientations. Actual N1/All/custom/random target samples did not offer訓; explicit pair fixture does show its possible availability.",
+      "evidence": "Actual訓article describes teaching/precepts and reading/explanation; complete1956150 gives native Japanese reading plus precept/lesson/one's teachings. Complete1236890 preserves teaching/instruction/precept/doctrine with rare訓えspelling. Actual勅entry covers sovereign's words/orders and, in an additional noun sense, commands from an exalted person. Broad English instruction alone is not evidence that訓names a sovereign's edict, but it does not prove a universal semantic boundary either.",
+      "decision": "No direct ambiguity established requiring a new exclusion in this bounded coordinator assessment. Preserve original822 unresolved weak hypothesis, without withdrawing it or declaring universal safety. Supply exact pair labels/sources to mandatory later original-family rendered confirmation, including any observed native fallback sets.",
+      "change": "none"
+    }
+  ],
+  "poolDisposition": "All/custom offer the three curated wrong choices. None is N1; default N1 and the recorded16-card randomN1Subset823 therefore genuinely exercise fallback. Exact pool membership/order and every offer are preserved, not reconstructed. Reduced pair and sampled filtered pools validate mechanical direct guards, not universal linguistic safety.",
+  "readingDisposition": "Actual productionReadingCard retains fullon[チョク]andkun[いまし.める,みことのり], selects[チョク]/[], yields keyちょく and displayedチョク in16actual questions, and no kun question. Modern writtenいまし.める remains UNVERIFIED, not newly approved by HOST. Outside-Joyo-reading notation for documentedみことのり is not invalidity/frequency evidence.",
+  "runtimeCorrectionNeeded": false,
+  "limits": [
+    "Coordinator finite target-relative assessment, not additional independent-review credit, native-speaker certification or measured learning effectiveness.",
+    "Every offer is mechanically checked against direct metadata, but that is not language understanding or semantic certification of every wrong-choice pair, old target or future pool.",
+    "Complete dictionary families and full raw character records are archived. Byte identity and returned ranges do not establish comprehension or equal fresh-read depth.",
+    "No native Room transport, full-archive production ContentSync-ONCE, drawing, article/Back/offline, four-font/default-system rendering or rendered reviewer acceptance was executed here.",
+    "All17scoped Han, radical力, full勅令word and look-alike comparisons still require native/rendered checks; cmap presence alone is not readability.",
+    "Physical-phone, general-release and whole-set acceptance remain outstanding; every inherited822/source820/draft821 and historical limitation remains intact."
+  ]
+}
