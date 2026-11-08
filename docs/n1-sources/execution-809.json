@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "execution": 809,
+  "checkpoint": 809,
+  "batch": "105",
+  "stage": "batch-105-local-unreviewed-runtime-draft",
+  "baseCommit": "ddd01d5fea912de7a3d43cd25bdc631b5e0ac0ed",
+  "publishedBase": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
+  "androidSignedHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+  "membership": [
+    "\u52c1"
+  ],
+  "sourceRows": [
+    116
+  ],
+  "draftAudit": "batch-105-draft-audit.json",
+  "validation": {
+    "validate": {
+      "archive": "batch-105-draft-validate-809.txt.gz",
+      "rawBytes": 12,
+      "rawSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "archiveSha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09"
+    },
+    "manifest": {
+      "archive": "batch-105-draft-manifest-809.txt.gz",
+      "rawBytes": 156,
+      "rawSha256": "bc0177ac4028661fc141248c07180f494f79489f91db65ed4c845b5705dcf6c0",
+      "archiveSha256": "9ab977b368dc20647bbd0cf6fe218c67429ece8ca3bef15d26c37e55bf4c239d"
+    },
+    "focused-tests": {
+      "archive": "batch-105-draft-focused-tests-809.txt.gz",
+      "rawBytes": 191,
+      "rawSha256": "734a18310bf71e360a65e1fb09568871350add3e544446491158323265e23ae0",
+      "archiveSha256": "e081f414153b224f8e2bc1ea66b99176ac99e169e389c977907d610ea7e55fe5"
+    },
+    "vocabulary": {
+      "archive": "batch-105-draft-vocabulary-809.txt.gz",
+      "rawBytes": 62,
+      "rawSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "archiveSha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969"
+    },
+    "budget": {
+      "archive": "batch-105-draft-budget-809.txt.gz",
+      "rawBytes": 151,
+      "rawSha256": "be39fef6b6d85996ddbd42a889599561194f192a9f7fc14938130ef1e7175e28",
+      "archiveSha256": "abd052e4b15cc5d43c499969c666764e5d7bf6162b43ba5112d331401d96c21c"
+    },
+    "audit": {
+      "archive": "batch-105-draft-audit-809.txt.gz",
+      "rawBytes": 3436,
+      "rawSha256": "d9e8fb1380b83059f64b85fe59e29644362ae7f8bf31e823a4c27b99e92e8f96",
+      "archiveSha256": "47ac1cd09d900967367d1965091e7253ab2767c219428ab8c4b61a0fd548ba1a"
+    },
+    "whitespace": {
+      "archive": "batch-105-draft-whitespace-809.txt.gz",
+      "rawBytes": 107,
+      "rawSha256": "c1ad3b21cfc148bd5b87f24fd77adb8978ff7dae482fa603ea075dd8e9e733c9",
+      "archiveSha256": "576c8bb171172af5f6b0c7be4f28c63924b76ba2b9564b02cd884e8faa7b336b"
+    }
+  },
+  "runnerPreflight": {
+    "chain": [
+      {
+        "pid": 16776,
+        "name": "pwsh.exe",
+        "parent": 14068
+      },
+      {
+        "pid": 14068,
+        "name": "python.exe",
+        "parent": 16272
+      },
+      {
+        "pid": 16272,
+        "name": "pwsh.exe",
+        "parent": 30184
+      },
+      {
+        "pid": 30184,
+        "name": "copilot.exe",
+        "parent": 13320
+      },
+      {
+        "pid": 13320,
+        "name": "pwsh.exe",
+        "parent": 7476
+      },
+      {
+        "pid": 7476,
+        "name": "pwsh.exe",
+        "parent": 9940
+      },
+      {
+        "pid": 9940,
+        "name": "copilot-runtime.exe",
+        "parent": 24716
+      }
+    ],
+    "decodedLauncher": "& { try { [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false) } catch {}; try { if (Microsoft.PowerShell.Utility\\Get-Variable -Name PSStyle -ErrorAction Ignore) { $PSStyle.OutputRendering = 'PlainText' } } catch {}; $global:LASTEXITCODE = 0; $__copilotCommandFinished = $false; $__copilotSuccess = $false; try { $global:LASTEXITCODE = 0\n& C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1 -ValidateOnly; if ($LASTEXITCODE -ne 0) { throw 'Runner input validation failed' }; & C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1\n$__copilotSuccess = $?\n$__copilotCommandFinished = $true\n } finally { if ($__copilotCommandFinished) { if (-not $__copilotSuccess -and $LASTEXITCODE -is [int] -and $LASTEXITCODE -ne 0) { $host.SetShouldExit($LASTEXITCODE) } elseif (-not $__copilotSuccess) { $host.SetShouldExit(1) } else { $host.SetShouldExit(0) } } } } *>&1 | Microsoft.PowerShell.Utility\\Out-File -LiteralPath 'C:\\Users\\stop-\\AppData\\Local\\Temp\\copilot-detached-n1-sequential-runner-v105-1794118903815-af1db93e-7c23-4507-9ecc-1dababcea28d.log' -Encoding utf8",
+    "sessionId": "1a8efc89-5c08-4ef4-8a51-6813b11bd676",
+    "liveParentPid": 13320,
+    "lockTouched": false,
+    "role": "Child inherits live parent protection; no lock acquisition/read/delete/unlock."
+  },
+  "runtimeDrafted": [
+    "\u52c1"
+  ],
+  "necessarySupportDrafted": [
+    "\u96c4\u52c1"
+  ],
+  "reviewClosed": [],
+  "published": [],
+  "runtimeChanged": true,
+  "runtimePublished": false,
+  "independentReviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "publishedAdditions": 131,
+  "remainingAdditions": 1097,
+  "lastPublishedCommit": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "actualNewPermissionDenials": [],
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "nextAction": "SAME105 two SERIAL blind different-model-family independent initial textual reviews on the SAME signed LOCAL UNREVIEWED draft; cover kanji/\u52c1.md and words/\u96c4\u52c1.md, all correctness/scoped coverage/phone comprehensibility facets with serial internal tools and full bounded source access. Persist complete original reports and actual model/process/read limits before reconciliation. No author adjudication/other report in initial prompts, no snapshot edits during review; confirm process exit before second family. Do not publish, start106, run Android/native or create a second runner in that review checkpoint. Source plan808 and draft audit809 preserve row116/full[\u30b1\u30a4]/[\u3064\u3088.\u3044], selected[\u30b1\u30a4]/[] key\u3051\u3044, search-only\u52c1\u3044, one support\u96c4\u52c1/no inferred vocabularylevel, four direct kanji/six direct word guards, one reciprocal pair/two directions/zero baseline edits. All original qualified Androidbf30cdead HOST+finite semantic defaultN1/All/custom and fresh native ContentSyncONCE/N1/All/meaning/reading/drawing/article/Back/offline/four-font/default rendering gates remain after textual reconciliation. Actual draft Han/font inventory is in batch-105-draft-audit.json; cmap absence is NOT glyph failure. Preserve original806/807/808 records and every historical source/review/process/readdepth/permission/OOM/ANR/routing/phone limit without retroacceptance. Then combined-current-main/fullPython/vocabulary/baseline-membership-links/manifest/per-file/media/safe-path/18000entry42MiBcompressed80MiBinflated56MiBretained budgets/normal signing/owner fastforward/greenCI/every immutableZIP runtimehash/verifiedownerissue. Verify clean signed heads/freshmain/liveparent13320 ancestry/decodedlauncher/exactsession; child must not touch runner.lock. Approved control/committed sources/frozen inputs only, no optional historical session recipes. Preserve/report/yield actual new denial, signing hang or uncertain ownership. Published131/1228,1097remaining unchanged; support words are NOT N1 vocabulary delivery. Compatible Android#125+#132 required; old clients ignore curation/guards. Physicalphone/generalrelease/whole-set outstanding; project incomplete.",
+  "limits": "Mechanical and author draft audits, not independent linguistic review, live quiz safety, Android/native/font/phone acceptance. Two serial blind families and every original downstream acceptance gate remain mandatory.",
+  "durableHelperHashes": {
+    "batch-105-draft-batch-105-809.py": "a81cc9a5dee799ee7eef90240e52cb6d2659d847e22f0c91d1b907026414a10d",
+    "batch-105-checks-batch-105-draft-809.ps1": "2b900868e2b46f1dc0485852917d46e93994726c57d55247964225033272456d",
+    "batch-105-post-batch-105-draft-809.ps1": "6c5cfb279e385171a4d093a28686fc96bb23062d9316e34c25d1b454f1cfee5a"
+  },
+  "focusedTestsPassed": 87,
+  "validatorErrors": 0,
+  "actualBuilderChecked": false,
+  "nativeDrawingAccepted": false,
+  "renderedAcceptance": false
+}
