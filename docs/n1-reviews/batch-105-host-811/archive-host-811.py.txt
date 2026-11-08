@@ -1,0 +1,230 @@
+"""Archive actual SAME105 host mechanics and frozen finite-sample source families."""
+from datetime import datetime
+import gzip
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import xml.etree.ElementTree as ET
+
+C = Path(__file__).resolve().parent
+R, A = C.parent / "learning-japanese", C.parent / "kanji-cards-android"
+L = C / "logs" / "ece8be08-73ca-41e8-90d7-0696f855889b"
+D = R / "docs" / "n1-reviews" / "batch-105-host-811"
+E = R / "docs" / "n1-sources" / "execution-811.json"
+BASE = "e89729feea9b5e851f50536c49e8418b2648fcbc"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def save(p, data):
+    assert not p.exists(), p
+    p.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(p) == data
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args], encoding="utf-8").strip()
+
+
+assert not D.exists() and not E.exists()
+progress = load(C / "progress.json")
+assert (progress["checkpoint"], progress["status"], progress["batch"]) == (810, "continue", "105")
+runner = load(C / "runner.json")
+assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 13320, L.name)
+for root, head in [(R, BASE), (A, APP)]:
+    assert git("rev-parse", "HEAD", root=root) == head
+    assert git("log", "-1", "--format=%G?", root=root) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+command = load(L / "host-811r1-command.json")
+assert command["contentHead"] == BASE and command["androidHead"] == APP
+start = datetime.fromisoformat(command["startedAt"])
+assert (L / "host-811r1-exit.txt").read_text().strip() == "0"
+output = (L / "host-811r1.txt").read_text(encoding="utf-8-sig")
+assert "BUILD SUCCESSFUL" in output and "41 actionable tasks: 41 executed" in output
+assert "> Task :core:test\n" in output and "> Task :app:testDebugUnitTest\n" in output
+assert load(L / "host-811r1-cleanup.json")["androidWhollyClean"]
+D.mkdir()
+reports = []
+for module, task, name, cases in [
+    ("core", "test", "RealContentTest", {
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"}),
+    ("app", "testDebugUnitTest", "RareHanTest", {"contentRareCharactersAreCoveredByBundledFont"}),
+    ("core", "test", "Batch105MeaningAcceptance811Retry1", {
+        "actualContentMeaningGuardsReadingAndHypothesisPairs"}),
+]:
+    path = A / module / "build" / "test-results" / task / f"TEST-io.github.stopcran.kanji.core.{name}.xml"
+    tree = ET.parse(path).getroot()
+    assert int(tree.attrib["tests"]) == len(cases)
+    assert all(int(tree.attrib[k]) == 0 for k in ("failures", "errors", "skipped"))
+    assert {x.attrib["name"] for x in tree.findall("testcase")} == cases
+    assert all(not list(x) for x in tree.findall("testcase"))
+    assert datetime.fromisoformat(tree.attrib["timestamp"].replace("Z", "+00:00")) >= start
+    assert (A / module / ".." / ".." / "learning-japanese").resolve() == R
+    (D / path.name).write_bytes(path.read_bytes())
+    reports.append({"name": name, "tests": len(cases), "failures": 0, "errors": 0, "skipped": 0,
+                    "timestamp": tree.attrib["timestamp"], "caseNames": sorted(cases),
+                    "archive": (D / path.name).relative_to(R).as_posix(), "sha256": sha(path)})
+samples = {n: load(L / f"meaning-811r1-{n}.json") for n in [
+    "pools", "word-pools", "choices", "direct-guards", "nontransitive",
+    "preexisting-neighbor-edges", "readings", "word-guards", "word-choices", "hypothesis-pairs"]}
+expected = {"choices": 64, "direct-guards": 896, "nontransitive": 192,
+            "readings": 16, "word-guards": 384, "word-choices": 64, "hypothesis-pairs": 128}
+assert {n: len(samples[n]) for n in expected} == expected
+assert not samples["preexisting-neighbor-edges"]
+kanji_labels = [list(x) for x in sorted({(x["kanji"], x["title"]) for row in samples["choices"] for x in row["options"]})]
+word_labels = [list(x) for x in sorted({(x["word"], x["label"]) for row in samples["word-choices"] for x in row["options"]})]
+save(D / "sampled-labels.json", {"kanji": kanji_labels, "words": word_labels})
+snapshot = load(R / "docs" / "n1-source-snapshot.json")
+jm_path, kd_path = C / "inputs" / "n1-implementation-JMdict_e.gz", C / "inputs" / "n1-planning-kanjidic2.xml.gz"
+for path in [jm_path, kd_path]:
+    assert sha(path) == snapshot["inputs"][path.name]["sha256"]
+jm_raw, kd_raw = gzip.decompress(jm_path.read_bytes()), gzip.decompress(kd_path.read_bytes())
+assert hashlib.sha256(jm_raw).hexdigest() == snapshot["jmdict"]["xmlSha256"]
+assert hashlib.sha256(kd_raw).hexdigest() == snapshot["kanjidic2"]["xmlSha256"]
+terms = {word for word, _ in word_labels} | {"活気", "もりもり"}
+characters = {k for k, _ in kanji_labels}
+jm, kd = ET.Element("JMdict"), ET.Element("kanjidic2")
+term_ids = {term: [] for term in sorted(terms)}
+for entry in ET.fromstring(jm_raw).findall("entry"):
+    matches = terms & {e.text for e in entry.findall("k_ele/keb") + entry.findall("r_ele/reb")}
+    if matches:
+        jm.append(entry)
+        for term in matches:
+            term_ids[term].append(entry.findtext("ent_seq"))
+assert all(term_ids.values()), term_ids
+for entry in ET.fromstring(kd_raw).findall("character"):
+    if entry.findtext("literal") in characters:
+        kd.append(entry)
+assert len(kd) == len(characters)
+for name, tree in [("sampled-jmdict.xml", jm), ("sampled-kanjidic2.xml", kd)]:
+    ET.indent(tree, space="  ")
+    (D / name).write_bytes(ET.tostring(tree, encoding="utf-8", xml_declaration=True) + b"\n")
+save(D / "sampled-source-selection.json", {
+    "sourceSnapshot": "docs/n1-source-snapshot.json", "termEntryIds": term_ids,
+    "kanji": sorted(characters), "completeFamilies": len(jm), "fullCharacterRecords": len(kd),
+    "allSensesAndRestrictionsPreserved": True,
+    "sourceHashesVerified": True,
+    "limits": "Coordinator finite target-relative acceptance, not independent review or unrestricted synonym certification."})
+packet = []
+for entry in kd:
+    packet.append(json.dumps({"kanji": entry.findtext("literal"),
+        "allEnglishMeanings": [m.text for m in entry.findall("reading_meaning/rmgroup/meaning") if not m.attrib]},
+        ensure_ascii=False))
+for entry in jm:
+    packet.append(json.dumps({"entry": entry.findtext("ent_seq"),
+        "spellings": [[(x.tag, x.text, x.attrib) for x in ke] for ke in entry.findall("k_ele")],
+        "readings": [[(x.tag, x.text, x.attrib) for x in re] for re in entry.findall("r_ele")],
+        "senses": [[(x.tag, x.text, x.attrib) for x in se] for se in entry.findall("sense")]}, ensure_ascii=False))
+write_packet = L / "finite-source-reading-811.txt"
+assert not write_packet.exists()
+write_packet.write_text("\n".join(packet) + "\n", encoding="utf-8")
+body_packet = L / "finite-articles-811.txt"
+assert not body_packet.exists()
+body_packet.write_text("\n\n".join(f"FILE words\\{term}.md\n" + (R / "words" / f"{term}.md").read_text(encoding="utf-8")
+                                   for term in sorted(terms)), encoding="utf-8")
+manifest = load(R / "manifest.json")
+assert manifest == json.loads(git("show", f"{BASE}:manifest.json"))
+runtime = {}
+for section, entries in manifest.items():
+    if not isinstance(entries, dict):
+        continue
+    for path, digest in entries.items():
+        assert path not in runtime
+        data = (R / path).read_bytes()
+        if section not in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}:
+            data = data.replace(b"\r\n", b"\n")
+        assert hashlib.sha256(data).hexdigest() == digest, path
+        runtime[path] = digest
+assert len(runtime) == 8469 and manifest["contentVersion"] == "5572c6c467e6b73b"
+provenance = []
+paths = [(C / name, name + (".txt" if name.endswith((".ps1", ".py")) else "")) for name in [
+    "prepare-host-811.py", "retry-host-811.py", "archive-host-811.py", "preflight-811.ps1",
+    "run-batch-105-host-811.ps1", "run-batch-105-host-811-retry1.ps1",
+    "Batch105MeaningAcceptance811.kt", "Batch105MeaningAcceptance811Retry1.kt"]]
+paths.append((C / "batch-065-host-integration-heap.init.gradle", "host-only-2g.init.gradle.txt"))
+for prefix in ["811", "811r1"]:
+    for name in ["command.json", "cleanup.json", "exit.txt", "end.txt"]:
+        paths.append((L / f"host-{prefix}-{name}", f"host-{prefix}-{name}"))
+for name in ["preflight-811.json", "preflight-811-host.json", "preflight-811-host-retry1.json",
+             "host-811-diagnostic.json"]:
+    paths.append((L / name, name))
+for path in sorted(L.glob("failed-811-TEST-*.xml")):
+    paths.append((path, path.name))
+for relative in [
+    r"core\src\test\kotlin\io\github\stopcran\kanji\core\RealContentTest.kt",
+    r"core\src\test\kotlin\io\github\stopcran\kanji\core\PublishableContentFixture.kt",
+    r"app\src\test\java\io\github\stopcran\kanji\core\RareHanTest.kt",
+    r"core\src\main\kotlin\io\github\stopcran\kanji\core\quiz\QuizBuilder.kt",
+    r"core\src\main\kotlin\io\github\stopcran\kanji\core\words\Words.kt",
+    r"core\src\main\kotlin\io\github\stopcran\kanji\core\reading\KanjiReadings.kt",
+]:
+    paths.append((A / relative, Path(relative).name))
+for source, name in paths:
+    target = D / name
+    assert not target.exists()
+    target.write_bytes(source.read_bytes())
+    provenance.append({"source": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+assert sha(C / "Batch105MeaningAcceptance811Retry1.kt") == command["temporaryFixtureSha256"]
+assert sha(C / "batch-065-host-integration-heap.init.gradle") == command["hostOnlyHeapInitSha256"]
+compressed = []
+for name in ["host-811.txt", "host-811r1.txt", "finite-source-reading-811.txt", "finite-articles-811.txt"
+             ] + [f"meaning-811r1-{n}.json" for n in samples]:
+    source, target = L / name, D / (name + ".gz")
+    target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+    assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+    compressed.append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                       "rawSha256": sha(source), "sha256": sha(target)})
+save(E, {
+    "schemaVersion": 1, "execution": 811, "batch": "105",
+    "stage": "fresh-host-passed-finite-semantic-disposition-pending",
+    "startingState": progress["execution811StartingState"], "command": command,
+    "testedContentHead": BASE, "qualifiedAndroidHead": APP,
+    "result": next(x for x in output.splitlines() if "BUILD SUCCESSFUL" in x),
+    "taskSummary": "41 actionable tasks: 41 executed", "tests": reports,
+    "totalTests": 5, "failures": 0, "errors": 0, "skipped": 0,
+    "allTestsFreshAfterCommandStart": True, "rerunTasks": True, "oneWorker": True,
+    "parallel": False, "compilerInProcess": True, "hostOnlyHeapInitUnchanged": True,
+    "fixtureProof": "Unchanged publication-aware loader reads actual dedicated sibling checkout; actual production QuizBuilder, WordQuizBuilder and ReadingCard. Both temporary acceptance fixtures removed; Android wholly clean.",
+    "originalFailure": load(L / "host-811-diagnostic.json"),
+    "counts": expected, "sampledKanjiLabels": len(kanji_labels),
+    "sampledWords": len({w for w, _ in word_labels}), "pools": list(samples["pools"]),
+    "allOfferedOptionsPairwiseGuardChecked": True, "directKanjiPairs": 4,
+    "directWordPairs": 6, "bothTargetOrientationsChecked": True,
+    "wordDirections": ["JpToEn", "EnToJp"], "seedsPerPool": 16,
+    "targetOutsideKanjiPoolChecked": True, "preexistingDirectedNeighborEdges": [],
+    "N1CuratedAvailable": ["功", "劾", "剖"],
+    "fallbackPool": {"name": "randomN1Subset811",
+                     "membershipInOrder": samples["pools"]["randomN1Subset811"],
+                     "curatedAvailable": []},
+    "reading": {"fullOn": ["ケイ"], "fullKun": ["つよ.い"], "selectedOn": ["ケイ"],
+                "selectedKun": [], "offeredOnKeys": ["けい"], "displayOn": ["ケイ"],
+                "offeredKunKeys": [], "kunQuestionIsNull": True, "questionsChecked": 16},
+    "hypothesisPairs": [["雄勁", "活気"], ["雄勁", "もりもり"]],
+    "hypothesisPairMechanics": "Both presently unguarded pairs remain available in exact pair pools, both orientations and meaning directions. 128 samples do not establish semantic interchangeability.",
+    "finiteSourceSelection": "docs/n1-reviews/batch-105-host-811/sampled-source-selection.json",
+    "completeFamilies": len(jm), "fullCharacterRecords": len(kd),
+    "contentVersion": manifest["contentVersion"], "runtimeHashesVerified": len(runtime),
+    "manifestSha256": sha(R / "manifest.json"), "runtimeUnchanged": True,
+    "provenance": provenance, "compressedEvidence": compressed,
+    "textualAcceptanceComplete": True, "textualEvidence": "docs/n1-reviews/batch-105-reconciliation.json",
+    "freshHostTestsExecuted": True, "nativeExecuted": False, "renderedAcceptanceComplete": False,
+    "independentReviewersLaunched": 0, "runtimeAccepted": False, "runtimePublished": False,
+    "reviewClosed": [], "published": [], "parentLockTouched": False,
+    "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+    "publishedAdditions": 131, "remainingAdditions": 1097,
+    "lastPublishedCommit": progress["lastPublishedCommit"], "physicalPhoneAcceptance": "outstanding",
+    "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False,
+    "limits": "Bounded HOST mechanics and actual options, not native/Room/ContentSync transport, glyph rendering or universal semantic safety. Actual14Han including勁/巠/刂 still require four-font/default rendering. Original810 limitations and all remaining gates preserved."
+})
+print(json.dumps({"tests": 5, "counts": expected, "completeFamilies": len(jm),
+                  "fullCharacterRecords": len(kd), "packetLines": len(packet)}, indent=2))

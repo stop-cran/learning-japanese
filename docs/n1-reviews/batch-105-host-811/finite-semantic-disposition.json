@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "batch": "105",
+  "execution": 811,
+  "snapshot": "e89729feea9b5e851f50536c49e8418b2648fcbc",
+  "actualModel": "gpt-6.1-sol",
+  "reviewerRole": "author/coordinator, not a new independent reviewer",
+  "status": "accepted-bounded-target-samples",
+  "scope": "64 actual production kanji target option sets across N1/All/custom/recorded random N1 subset and 16 seeds; 64 actual word target option sets across All/custom and both meaning directions. Target-relative semantics only; guard mechanics additionally cover both orientations and every co-offered pair.",
+  "evidence": [
+    "sampled-labels.json",
+    "sampled-source-selection.json",
+    "sampled-jmdict.xml",
+    "sampled-kanjidic2.xml",
+    "meaning-811r1-choices.json.gz",
+    "meaning-811r1-word-choices.json.gz",
+    "meaning-811r1-hypothesis-pairs.json.gz",
+    "finite-source-reading-811.txt.gz",
+    "finite-articles-811.txt.gz",
+    "../../n1-sources/batch-105-character-public-text.txt",
+    "../../n1-sources/batch-105-yuukei-public-text.txt",
+    "../batch-105-reconciliation.json"
+  ],
+  "readingDepth": {
+    "sampledKanjiLabelsIncludingTarget": 10,
+    "sampledWordsIncludingTarget": 22,
+    "fullRawCharacterRecordsInspectedForAllEnglishMeanings": 10,
+    "completeLexicalFamiliesInspectedForAllSensesAndRestrictions": 26,
+    "completeWordArticlesInspected": 24,
+    "extraHypothesisLexicalTerms": ["活気", "もりもり"],
+    "sourceAccess": "Fresh extraction from exact approved frozen compressed AND decompressed dictionary hashes; committed actual public dictionary texts reused, not fresh upstream retrieval.",
+    "outputLimit": "All36 compact source-projection lines returned in two bounded calls; all1093 article-packet lines returned across five bounded ranges without truncation. Complete XML families/raw character records are archived; fresh semantic inspection of the raw character records was limited to every English meaning, not every nonsemantic metadata field.",
+    "actualOptionSets": "All64 kanji and64 word samples were returned grouped by pool/direction/complete label set with exact seed coverage; ordered ungrouped samples remain archived."
+  },
+  "kanjiDisposition": [
+    {
+      "ids": ["乃", "寅", "栞", "猪", "莉"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Actual labels and full raw meanings identify a connective/possessive, zodiac/time, bookmark/guidebook, boar and jasmine. None means strong or taut."
+    },
+    {
+      "ids": ["功", "劾", "剖"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Achievement/merit, censure/impeachment/investigation and cutting/dividing are not strength or tautness. All THREE curated distractors are N1 and available in actual default N1/All/custom pools. Original failing test-only membership assertion is preserved, not rebranded as a production/source defect."
+    },
+    {
+      "ids": ["凌"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Raw endure/keep out/stave off/tide over/defy/slight/surpass senses were all inspected. Enduring or surpassing may involve strength but names a different relation/action; actual endure; surpass is not an alternative translation of strong; taut."
+    },
+    {
+      "ids": ["勁"],
+      "status": "target",
+      "reason": "Strong in the full raw character record, with taut/stretching qualification in the committed actual Daijisen entry. Four declared direct guards remain unchanged."
+    }
+  ],
+  "wordDisposition": [
+    {
+      "ids": ["下品", "不便", "不正", "別々", "叱る", "引用", "弾", "意地悪", "無数", "謙虚", "謙遜", "贅沢", "鳳凰"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "All applicable complete families and actual bodies were inspected. Vulgarity, inconvenience/pity, wrongdoing, separateness, reprimand, quotation, a bullet/counter, malice, abundance, humility, luxury and a mythical bird do not name vigorous artistic/prose style. Secondary senses include humorous or expanded uses and spelling-specific identity: 不便ふびん is a separate rare spelling of pitiful, and 弾たま is the actual bullet article, not counterだん. Neither creates target ambiguity."
+    },
+    {
+      "ids": ["傑作", "格別"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "A masterpiece or humorous absurdity and exceptional/special/especially evaluate quality or exceptionalness, not a work's force or vigor. A vigorous work need not be outstanding; the target body explicitly makes this distinction. Full secondary senses and actual labels were inspected."
+    },
+    {
+      "ids": ["制作", "執筆", "書道", "絵画"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Creative production, authoring, calligraphy and painting identify an activity, field or work/medium rather than its vigorous style. Related art/writing tags do not establish substitutable answers. Both meaning directions retain these distinctions."
+    },
+    {
+      "ids": ["強引", "乱暴"],
+      "status": "wrong-for-target-in-reviewed-samples",
+      "reason": "Pushy/coercive action and violent/rough/reckless behavior are not the style-qualified vigorous target. Forcefulness can coexist with coercion or roughness, but does not itself imply either. All rough-language/unreasonable-demand/wild-argument and assault senses were inspected rather than relying solely on physical violence or positive versus negative evaluation."
+    },
+    {
+      "ids": ["雄勁"],
+      "status": "target",
+      "reason": "Complete1839950 vigorous/powerful plus actual Daijisen 力強いこと/書画・詩文など/雄勁な筆跡 support the art/prose-qualified label. Six declared direct word guards remain unchanged; no inferred vocabulary level."
+    }
+  ],
+  "additionalHypotheses": [
+    {
+      "pair": ["雄勁", "活気"],
+      "status": "no-direct-ambiguity-established-withdrawn-hypothesis-preserved",
+      "actualLabels": ["vigorous style (art; prose)", "liveliness; vigor"],
+      "evidence": "Actual noun article and complete1208270 cover energy/vigor/liveliness/spirit/life/animation, while1839950 and actual Daijisen support the target's forceful expression. Shared vigor alone does not establish that liveliness is the displayed style-qualified target, or that the target names an energetic atmosphere.",
+      "limits": "Not an absolute atmosphere-only semantic boundary or a universal ban on lively art. Original810 withdrawn low-confidence concern remains preserved.",
+      "mechanics": "64 explicit unguarded pair-pool samples across both target orientations and meaning directions preserve actual availability.",
+      "change": "none"
+    },
+    {
+      "pair": ["雄勁", "もりもり"],
+      "status": "no-direct-ambiguity-established-withdrawn-hypothesis-preserved",
+      "actualLabels": ["vigorous style (art; prose)", "heartily; full of vigor"],
+      "evidence": "Complete1012700 includes energetic/vigorous work and strength/courage welling up, not just eating; the actual article teaches all three. No interchangeable answer for the style-qualified target is established. The different grammatical classes and leading eating sense alone are not the justification.",
+      "limits": "Not an absolute ban on figurative combinations or a claim that vigorous activity and vigorous expression never coexist. Original810 withdrawn low-confidence concern remains preserved.",
+      "mechanics": "64 explicit unguarded pair-pool samples across both target orientations and meaning directions preserve actual availability.",
+      "change": "none"
+    }
+  ],
+  "poolDisposition": "Default N1/All/custom retain all three curated wrong choices. The separately recorded16-card randomN1Subset811 contains none of those three, so all16 target samples genuinely exercise production fallback. This is finite pool evidence, not universal safety for every filtered pool.",
+  "runtimeCorrectionNeeded": false,
+  "limits": [
+    "No new independent-review credit, native-speaker certification or measured learning-effectiveness claim.",
+    "Finite target-relative samples do not certify every future pool, every target orientation or semantic uniqueness between every pair of wrong choices.",
+    "Mechanics check every offered pair against direct metadata, not language understanding; raw dictionary recognition does not establish frequency or unconstrained substitution.",
+    "Native Room transport, full-archive production ContentSync-ONCE, four-font/default rendering of actual14Han including勁/巠/刂, drawing and original-family rendered confirmation remain mandatory.",
+    "Physical-phone, general-release and whole-set acceptance remain outstanding; all original810 and historical limitations are preserved."
+  ]
+}

@@ -1,0 +1,222 @@
+"""Verify bounded evidence, then checkpoint without replacing historical progress."""
+import copy
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+C = Path(__file__).resolve().parent
+R, A = C.parent / "learning-japanese", C.parent / "kanji-cards-android"
+L = C / "logs" / "ece8be08-73ca-41e8-90d7-0696f855889b"
+D = R / "docs" / "n1-reviews" / "batch-105-host-811"
+E = R / "docs" / "n1-sources" / "execution-811.json"
+BASE = "e89729feea9b5e851f50536c49e8418b2648fcbc"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args], encoding="utf-8").strip()
+
+
+def save(p, data):
+    assert not p.exists(), p
+    p.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(p) == data
+
+
+def context():
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["status"], p["batch"]) == (810, "continue", "105")
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["pid"], runner["sessionId"]) == ("running", 13320, L.name)
+    assert git("rev-parse", "HEAD", root=A) == APP and git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    return p
+
+
+def runtime():
+    m = load(R / "manifest.json")
+    assert m == json.loads(git("show", f"{BASE}:manifest.json"))
+    hashes = {}
+    for section, entries in m.items():
+        if not isinstance(entries, dict):
+            continue
+        for path, digest in entries.items():
+            assert path not in hashes
+            data = (R / path).read_bytes()
+            if section not in {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}:
+                data = data.replace(b"\r\n", b"\n")
+            assert hashlib.sha256(data).hexdigest() == digest, path
+            hashes[path] = digest
+    assert len(hashes) == 8469 and m["contentVersion"] == "5572c6c467e6b73b"
+    return {"contentVersion": m["contentVersion"], "runtimeHashesVerified": len(hashes),
+            "manifestSha256": sha(R / "manifest.json"), "runtimeUnchanged": True}
+
+
+def evidence():
+    e = load(E)
+    s = load(D / "finite-semantic-disposition.json")
+    assert s["snapshot"] == BASE and s["status"] == "accepted-bounded-target-samples"
+    labels = load(D / "sampled-labels.json")
+    for section, field in [("kanji", "kanjiDisposition"), ("words", "wordDisposition")]:
+        ids = [i for row in s[field] for i in row["ids"]]
+        assert len(ids) == len(set(ids)) and set(ids) == {x[0] for x in labels[section]}
+    assert s["readingDepth"]["sampledKanjiLabelsIncludingTarget"] == e["sampledKanjiLabels"] == 10
+    assert s["readingDepth"]["sampledWordsIncludingTarget"] == e["sampledWords"] == 22
+    assert s["readingDepth"]["completeLexicalFamiliesInspectedForAllSensesAndRestrictions"] == e["completeFamilies"] == 26
+    assert s["readingDepth"]["fullRawCharacterRecordsInspectedForAllEnglishMeanings"] == e["fullCharacterRecords"] == 10
+    for record in e["provenance"] + e["compressedEvidence"] + e["tests"]:
+        assert sha(R / record["archive"]) == record["sha256"]
+    for record in e["compressedEvidence"]:
+        assert hashlib.sha256(gzip.decompress((R / record["archive"]).read_bytes())).hexdigest() == record["rawSha256"]
+    assert runtime()["manifestSha256"] == e["manifestSha256"]
+    return e, s
+
+
+def audit():
+    context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("diff", "--name-only", BASE)
+    untracked = git("ls-files", "--others", "--exclude-standard").splitlines()
+    assert untracked and all(x.startswith("docs/n1-reviews/batch-105-host-811/")
+                             or x == "docs/n1-sources/execution-811.json" for x in untracked)
+    e, s = evidence()
+    assert e["stage"] == "fresh-host-passed-finite-semantic-disposition-pending"
+    for source, name in [(Path(__file__), "finish-host-811.py.txt"),
+                         (C / "verify-host-811-final.ps1", "verify-host-811-final.ps1.txt"),
+                         (C / "post-batch-105-host-811.ps1", "post-batch-105-host-811.ps1.txt"),
+                         (L / "preflight-811-checks.json", "preflight-811-checks.json")]:
+        target = D / name
+        assert not target.exists()
+        target.write_bytes(source.read_bytes())
+        e["provenance"].append({"source": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+    for name in ["sampled-labels.json", "sampled-source-selection.json", "sampled-jmdict.xml",
+                 "sampled-kanjidic2.xml", "finite-semantic-disposition.json"]:
+        target = D / name
+        e["provenance"].append({"source": "generated/source-bound contributor evidence",
+                               "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+    for name in ["validate-811.txt", "manifest-811.txt", "manifest-diff-811.txt",
+                 "budget-811.txt", "vocabulary-811.txt", "whitespace-811.txt"]:
+        source, target = L / name, D / (name + ".gz")
+        assert not target.exists()
+        target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+        e["compressedEvidence"].append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                                       "rawSha256": sha(source), "sha256": sha(target)})
+    e["finiteSemanticAcceptance"] = {
+        "status": s["status"], "role": s["reviewerRole"], "snapshot": BASE,
+        "sampledKanjiLabelsIncludingTarget": 10, "sampledWordsIncludingTarget": 22,
+        "disposition": (D / "finite-semantic-disposition.json").relative_to(R).as_posix(),
+        "twoOriginalHypotheses": "No direct ambiguity established in actual style-qualified label/ordinary senses; original810 withdrawn dispositions retained without new review credit.",
+        "runtimeCorrectionNeeded": False, "limits": s["limits"]}
+    e["stage"] = "batch-105-host-passed-awaiting-native-preparation"
+    e["preparationDiagnostic"] = "First helper preparation asserted an absent optional wrapper-name replacement before any progress save or test launch. Existing generated preflight/fixture were verified byte-identical on resume; unnecessary replacement removed. No runtime/source change, overwritten evidence or actual permission denial."
+    e["nextAction"] = "SAME105 bounded full git archive/new production ContentSync-ONCE native fixture and APK preparation, preserving prior artifacts and all native/rendered/publication gates; no106."
+    E.write_text(json.dumps(e, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    evidence()
+    print("HOST evidence/source/semantic coverage/runtime hashes verified; no teaching changed.")
+
+
+def finish():
+    current, before = context(), load(L / "progress-before-811.json")
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    changed = git("diff", "--name-only", BASE, head).splitlines()
+    assert changed and all(x.startswith("docs/n1-reviews/batch-105-host-811/")
+                           or x == "docs/n1-sources/execution-811.json" for x in changed)
+    e, s = evidence()
+    assert e["stage"] == "batch-105-host-passed-awaiting-native-preparation"
+    posted, comment = load(L / "issue-811-posted.json"), load(L / "issue-811-reread.json")
+    body = C / "batch-105-host-811-issue-body.txt"
+    assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
+    assert comment["body"] == body.read_text(encoding="utf-8") and sha(body) == posted["bodySha256"]
+    preflight = load(L / "preflight-811-before-issue.json")
+    assert preflight["contentHead"] == head and not preflight["lockTouched"]
+    next_action = (
+        f"SAME105 HOST checkpoint811 signed LOCAL evidence{head}; tested content{BASE}/qualifiedAPP{APP}. "
+        "Fresh retry RealContent3/RareHan1+temporary actual-production acceptance1: FIVEtests0failures/errors/skips; "
+        "explicitXMLtimestamps afterstart;41tasksexecuted/maxworker1/noparallel/inprocess/reruntasks/unchangedHOST2g. "
+        "Original first fixture failed only incorrect expectation that功wasoutsideN1; actualallTHREEcurated功劾剖areN1. "
+        "Originalfixture/log/XML/threepassedRealContent preserved; originalRareHannotrun. Namedretrycorrectsassertiononly, "
+        "notteaching/production/metadata/guards/sources/heaps. All8469runtimehashes/version5572c6c467e6b73b unchanged. "
+        "Actual64kanjichoices/defaultN1/All/custom/randomN1subset811; defaultN1retainsallcurated, "
+        "16cardrandomsubsetcontainsnoneandgenuinelyexercisesfallback. FOURdirectkanjiguards896checks/"
+        "192nontransitiveneighborchecks/zeroexistingdirectneighboredges; everyofferpairwisechecked/targetoutsidepool. "
+        "SIXwordguards384bothorientation/bothmeaningdirection pairchecks;64actualwordmeaningchoicesAll/custom; "
+        "16actualreadingquestions keyけい/displayケイ, fullon[ケイ]/kun[つよ.い]preserved, selected[ケイ]/[], "
+        "search-only勁いNOToffered/kunquestionnull.128explicitunguardedhypothesispairchecks雄勁/活気and雄勁/もりもり. "
+        "Fresh10fullrawcharacterrecords/allEnglishmeanings+26completeJMdictfamilies/allrestrictionsandsenses/"
+        "24completewordbodies+allgroupedofferedsets inspected; exactfullfamilies/poolmembership/order/everylabelat "
+        "docs/n1-reviews/batch-105-host-811/. Coordinatorfinite10kanji/22wordtarget-relativeacceptance,NOT "
+        "independentreview/universalpool-safety/pairwiselinguisticcertificationamongallwrongoptions. "
+        "Noestablisheddirectambiguity foractualstylequalifiedlabelvsatmosphericvigor/wellingstrength; "
+        "preserveoriginal810withdrawnhypotheses/optional/dispositions/readdepth/actualfamilyreportswithoutretroacceptance. "
+        "No teaching/metadata/guards/manifest changed;temporaryfixturescleaned/bothworktreesclean. "
+        "NEXT SAME105 bounded fullgitarchive/productionContentSyncONCE nativefixture/APKPREPARATIONonly, "
+        "preservepriorartifacts/bindcurrentsignedheads/fullmanifest/exacthashes/budgets/safepaths/media; thencheckpoint/yield. "
+        "ActualfreshnativeN1/All/meaning/solecuratedon/ninestrokeDrawing/article/Back/offline/directsymmetricNONTRANSITIVE"
+        "guardtransport/fourfonts-default/all14Han including勁/巠/刂stillrequired. CmapabsenceNOTglyphfailure/acceptance. "
+        "Freshownedport/device/terminalpercase0/unchanged2gguest192mheap/oneworker/scopedcleanup; "
+        "TWOserialoriginalfamilyrenderedconfirmations and combinedcurrentmain/fullPython/vocabulary/"
+        "baseline-membership-links/manifestbudget/normalsigning/ownerfastforward/terminalgreenCI/"
+        "EVERYimmutableZIPmanifesthash/unchanged18000entries42MiBcompressed80MiBinflated56MiBretained/"
+        "perfilemediasafepaths/verifiedownerissue remain. Alloriginalsource/review/process/readdepth/permission/"
+        "OOM/ANR/routing/phone/historylimits preserved. Verifywhollyclean signedheads/freshmain/liveparentancestry/"
+        "decodedlauncher/exactsession;parent13320ownsrunner.lock:nochildacquire/delete/unlock/readprobe. "
+        "Approvedcontrol/committedsource/frozeninputs only, notoptionalhistoricalsessionrecipes;preserve/report/yield "
+        "actualnewdenial/signinghang/uncertainownership. No106/unreviewedpush/authoragents/concurrentheavywork/"
+        "secondrunner/signingretry/guardincrease. Published131/1228/remainder1097unchanged;draft1128kanji5079words "
+        "includesstillunaccepted勁/ONEnecessarysupport雄勁,NOTN1vocabulary. Row116/one reciprocalpair/twodirections/"
+        "zerobaselineedits preserved. CompatibleAndroid#125+#132required;oldclientsignore;qualifiedAPPguard+schemaonly"
+        "NOTlatestmain. Physicalphone/generalrelease/whole-setoutstanding;projectincomplete."
+    )
+    checkpoint = {
+        "schemaVersion": 1, "execution": 811, "checkpoint": 811, "batch": "105",
+        "status": "continue", "stage": e["stage"], "savedCommit": head, "signature": "G",
+        "qualifiedAndroidHead": APP, "testedContentHead": BASE, "evidence": "docs/n1-sources/execution-811.json",
+        "issueUpdate": posted["url"], "ownerIssueAuthorAndExactBodyVerified": True,
+        "freshHostTestsExecuted": True, "hostTests": 5, "failures": 0, "errors": 0, "skipped": 0,
+        "originalFixtureFailurePreserved": True, "assertionOnlyNamedRetry": True,
+        "counts": e["counts"], "finiteSemanticAcceptance": e["finiteSemanticAcceptance"], **runtime(),
+        "nativeExecuted": False, "independentReviewersLaunched": 0, "textualAcceptanceComplete": True,
+        "reviewClosed": [], "published": [], "runtimeChanged": False, "runtimeAccepted": False,
+        "runtimePublished": False, "renderedAcceptanceComplete": False, "dedicatedWorktreesClean": True,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 131, "remainingAdditions": 1097,
+        "lastPublishedCommit": before["lastPublishedCommit"], "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False,
+        "finalRunnerPreflight": preflight, "nextAction": next_action, "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    assert "execution811CoordinatorCheckpoint" not in after
+    after["historicalExecution810Before811Host"] = {
+        k: before[k] for k in ("checkpoint", "status", "stage", "nextAction", "blocker")}
+    after["execution811CoordinatorCheckpoint"] = checkpoint
+    after.update(checkpoint=811, status="continue", stage=e["stage"], nextAction=next_action, blocker=None)
+    for key, value in before.items():
+        if key not in {"checkpoint", "status", "stage", "nextAction", "blocker"}:
+            assert after[key] == value, key
+    save(L / "checkpoint-811.json", checkpoint)
+    tmp = C / "progress.json.811-final.tmp"
+    save(tmp, after)
+    assert load(C / "progress.json") == current
+    os.replace(tmp, C / "progress.json")
+    assert load(C / "progress.json") == after
+    print(json.dumps({"checkpoint": 811, "savedCommit": head, "status": "continue",
+                      "issue": posted["url"], "historicalRootKeysPreserved": len(before)}, indent=2))
+
+
+if __name__ == "__main__":
+    {"audit": audit, "finish": finish}[sys.argv[1]]()

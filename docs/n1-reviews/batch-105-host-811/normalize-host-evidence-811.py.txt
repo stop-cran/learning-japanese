@@ -1,0 +1,59 @@
+"""Preserve original bytes and make text evidence hashes match committed LF blobs."""
+import gzip
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+D = R / "docs" / "n1-reviews" / "batch-105-host-811"
+E = R / "docs" / "n1-sources" / "execution-811.json"
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+e = json.loads(E.read_text(encoding="utf-8-sig"))
+assert "archiveByteConventions" not in e
+normalized = {}
+for record in e["provenance"] + e["tests"]:
+    path = R / record["archive"]
+    raw = path.read_bytes()
+    assert digest(raw) == record["sha256"]
+    data = raw.replace(b"\r\n", b"\n")
+    if data == raw:
+        continue
+    raw_path = path.with_name(path.name + ".original-bytes.gz")
+    assert not raw_path.exists()
+    raw_path.write_bytes(gzip.compress(raw, mtime=0))
+    assert gzip.decompress(raw_path.read_bytes()) == raw
+    path.write_bytes(data)
+    record["sourceRawSha256"] = digest(raw)
+    record["sourceRawArchive"] = raw_path.relative_to(R).as_posix()
+    record["sha256"] = digest(data)
+    normalized[path.name] = {"raw": digest(raw), "committedLF": digest(data)}
+    e["compressedEvidence"].append({
+        "source": "exact original captured bytes before Git text normalization",
+        "archive": raw_path.relative_to(R).as_posix(),
+        "rawSha256": digest(raw), "sha256": digest(raw_path.read_bytes())})
+source = Path(__file__)
+target = D / (source.name + ".txt")
+assert not target.exists()
+target.write_bytes(source.read_bytes().replace(b"\r\n", b"\n"))
+e["provenance"].append({"source": str(source), "archive": target.relative_to(R).as_posix(),
+                        "sha256": digest(target.read_bytes()), "hashConvention": "LF-normalized helper text"})
+e["archiveByteConventions"] = {
+    "diagnostic": "Pre-signing staged-blob audit caught Windows CRLF checkout hashes differing from normalized Git blobs for text evidence. No source/runtime differences.",
+    "decision": "Each affected original raw capture is preserved byte-for-byte in an explicit original-bytes.gz. Plain-text evidence sha256 now names LF-normalized committed bytes; sourceRawSha256/sourceRawArchive retain exact original source bytes. Compressed evidence remains byte-exact. No .gitattributes or global Git configuration changed.",
+    "normalizedTextFiles": normalized,
+}
+E.write_bytes((json.dumps(e, ensure_ascii=True, indent=2) + "\n").encode("utf-8"))
+subprocess.run(["git", "add", "--", str(D), str(E)], cwd=R, check=True)
+for record in e["provenance"] + e["tests"] + e["compressedEvidence"]:
+    blob = subprocess.check_output(["git", "show", ":" + record["archive"]], cwd=R)
+    assert digest(blob) == record["sha256"], record["archive"]
+    if "rawSha256" in record:
+        assert digest(gzip.decompress(blob)) == record["rawSha256"], record["archive"]
+print(f"Verified every staged evidence hash; {len(normalized)} original CRLF captures preserved in exact gzip.")

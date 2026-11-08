@@ -1,0 +1,129 @@
+"""Prepare bounded SAME105 host fixtures from approved durable workspace recipes."""
+import copy
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+SESSION = "ece8be08-73ca-41e8-90d7-0696f855889b"
+L = C / "logs" / SESSION
+BASE = "e89729feea9b5e851f50536c49e8418b2648fcbc"
+OLD = "f94cc6dc-5f1b-489c-9959-663315e3ca0c"
+
+
+def load(p):
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def write(p, text):
+    if p.exists():
+        assert p.name in {"preflight-811.ps1", "Batch105MeaningAcceptance811.kt"}
+        assert p.read_text(encoding="utf-8") == text
+        return
+    p.write_text(text, encoding="utf-8")
+
+
+def replace(text, old, new):
+    assert old in text, old
+    return text.replace(old, new)
+
+
+preflight = (C / "preflight-800.ps1").read_text(encoding="utf-8-sig")
+for old, new in [
+    ("800", "811"), (OLD, SESSION),
+    ("e97682161e790fc8276162a1049d921a6503ec8e", BASE),
+    ("799", "810"), ("'104'", "'105'"),
+]:
+    preflight = replace(preflight, old, new)
+write(C / "preflight-811.ps1", preflight)
+
+fixture = (C / "Batch104MeaningAcceptance800.kt").read_text(encoding="utf-8-sig")
+for old, new in [
+    ("Batch104MeaningAcceptance800", "Batch105MeaningAcceptance811"),
+    ("800", "811"), (OLD, SESSION),
+    ('"a5bc9b199c7df334"', '"5572c6c467e6b73b"'),
+    ("1127", "1128"), ("5078", "5079"), ("136, n1Ids", "137, n1Ids"),
+    ('"劾"', '"勁"'),
+    ('listOf("責", "詰", "査", "調", "究")', 'listOf("強", "剛", "力", "勢")'),
+    ('listOf("刻", "効", "努")', 'listOf("功", "劾", "剖")'),
+    ("assertTrue(curated.none { it in n1Ids })",
+     'assertEquals(setOf("劾", "剖"), curated.filter { it in n1Ids }.toSet())'),
+    ('if (poolName == "All" || poolName == "boundedCustom")',
+     'if (poolName == "All" || poolName == "boundedCustom")'),
+    ('listOf("ガイ")', 'listOf("ケイ")'),
+    ('assertTrue(reading.kun.isEmpty())', 'assertEquals(listOf("つよ.い"), reading.kun)'),
+    ('assertEquals(reading.kun, reading.askKun)', 'assertTrue(reading.askKun.isEmpty())'),
+    ('"がい"', '"けい"'), ('"ガイ"', '"ケイ"'),
+    ('"弾劾"', '"雄勁"'),
+    ('listOf("批判", "批評", "評論", "責める", "攻撃", "叩く", "切る")',
+     'listOf("強い", "強力", "力強い", "剛健", "力", "勢い")'),
+    ('assertFalse(byId.containsKey("弾"))', 'assertFalse(byId.containsKey("雄"))'),
+    ('assertEquals("たま", words.getValue("弾").reading)',
+     'assertEquals("ゆうけい", wordTarget.reading)'),
+    ("assertEquals(1120, direct.size)", "assertEquals(896, direct.size)"),
+    ("(20 - preexistingDirect.size)", "(12 - preexistingDirect.size)"),
+    ("assertEquals(448, wordDirect.size)", "assertEquals(384, wordDirect.size)"),
+    ("assertEquals(96, hypothesis.size)", "assertEquals(128, hypothesis.size)"),
+]:
+    fixture = replace(fixture, old, new)
+start = fixture.index("        val kanjiPair = ")
+end = fixture.index("        assertEquals(64, choices.size)", start)
+fixture = fixture[:start] + """        for (hypothesisId in listOf("活気", "もりもり")) {
+            val wordPair = listOf(wordTarget, words.getValue(hypothesisId))
+            for (quizTarget in wordPair) for (direction in listOf(WordDirection.JpToEn, WordDirection.EnToJp)) {
+                repeat(16) { seed ->
+                    val options = WordQuizBuilder.options(quizTarget, wordPair, direction, Random(seed))
+                    assertEquals(setOf("雄勁", hypothesisId), options.map { it.word }.toSet())
+                    hypothesis += buildJsonObject {
+                        put("type", "word"); put("target", quizTarget.word); put("neighbor", hypothesisId)
+                        put("direction", direction.name); put("seed", seed)
+                        put("options", JsonArray(options.map { buildJsonObject {
+                            put("word", it.word); put("label", it.label)
+                        } }))
+                    }
+                }
+            }
+        }
+""" + fixture[end:]
+write(C / "Batch105MeaningAcceptance811.kt", fixture)
+
+wrapper = (C / "run-batch-104-host-800.ps1").read_text(encoding="utf-8-sig")
+for old, new in [
+    (OLD, SESSION), ("Batch104", "Batch105"),
+    ("800", "811"), ("e97682161e790fc8276162a1049d921a6503ec8e", BASE),
+]:
+    wrapper = replace(wrapper, old, new)
+write(C / "run-batch-105-host-811.ps1", wrapper)
+
+request = L / "request.txt"
+text = request.read_text(encoding="utf-8-sig")
+embedded = json.loads(text.split(
+    "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+assert embedded["checkpoint"] == 810
+p = load(C / "progress.json")
+assert (p["checkpoint"], p["batch"], p["status"]) == (810, "105", "continue")
+assert p["execution810CoordinatorCheckpoint"]["savedCommit"] == BASE
+write(L / "progress-before-811.json", json.dumps(p, ensure_ascii=True, indent=2) + "\n")
+q = copy.deepcopy(p)
+q["execution811StartingState"] = {
+    "execution": 811, "batch": "105", "startedAt": datetime.now(timezone.utc).isoformat(),
+    "startingHead": BASE, "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "047c2cef6b6a48b1738f2c5957de01be481c63e1",
+    "scope": "SAME105 qualified HOST plus finite actual-option semantic disposition and signed LOCAL evidence checkpoint only; no native, publication,106 or second runner.",
+    "request": {"sha256": hashlib.sha256(request.read_bytes()).hexdigest(),
+                "bytes": len(request.read_bytes()), "characters": len(text),
+                "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+                "limits": "Entire file read/decoded and checkpoint parsed; operative contract, complete approved issue and final810 directly inspected. Historical middle parsed, not freshly semantically re-reviewed."},
+    "artifactPathPreflight": "Approved committed source packets and durable control helpers only; no optional historical-session recipes accessed.",
+    "parentLockTouched": False, "actualNewPermissionDenials": [],
+}
+assert all(q[k] == v for k, v in p.items())
+tmp = C / "progress.json.811-start.tmp"
+write(tmp, json.dumps(q, ensure_ascii=True, indent=2) + "\n")
+assert load(C / "progress.json") == p
+os.replace(tmp, C / "progress.json")
+assert load(C / "progress.json") == q
+print("Prepared durable SAME105 fixture/preflight/wrapper; preserved all original progress fields.")
