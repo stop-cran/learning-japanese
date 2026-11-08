@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "execution": 806,
+  "batch": "104",
+  "startingState": {
+    "execution": 806,
+    "batch": "104",
+    "startedAt": "2026-11-08T09:11:54.102381+00:00",
+    "startingHead": "a135b7c6f08f62594fe4360b94f2c4485f36cfa7",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "2491799cffe960a7664a6135614b452e24dce459",
+    "scope": "SAME104 signed reviewed acceptance and normal owner fast-forward publication, terminal CI/public ZIP/verified owner issue and complete historical checkpoint; yield before105.",
+    "request": {
+      "sha256": "26859c3c63b242b8085d9beac1775b8b6a9730a23470d14c2121499169fba794",
+      "bytes": 5662728,
+      "characters": 5593714,
+      "lines": 75551,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and checkpoint parsed; operative contract, complete approved issue and final805 inspected directly. Historical middle parsed, not freshly semantically re-reviewed. Initial console encoding error and oversized output did not alter evidence."
+    },
+    "runnerPreflight": {
+      "execution": 806,
+      "sessionId": "1ded687c-ebea-479b-a5c3-b3656f302eaf",
+      "verifiedAt": "2026-11-08T09:10:24.4395871+00:00",
+      "ancestry": [
+        29560,
+        12568,
+        13320
+      ],
+      "liveParentPid": 13320,
+      "coordinatorPid": 12568,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 805,
+      "contentHead": "a135b7c6f08f62594fe4360b94f2c4485f36cfa7",
+      "taskChangesAllowed": false,
+      "exactSignedHeadsVerified": true,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe.",
+      "lockTouched": false
+    },
+    "runtime": {
+      "contentVersion": "a5bc9b199c7df334",
+      "runtimeHashesVerified": 8466,
+      "manifestSha256": "cf3c5af1ceb4ba6d2ff6bdb18bccb8307b26383eaeab1022498f666ead41b434",
+      "unchangedSinceTeaching": "089a60b2e7f94d57d24758777ba9d586d45209cf"
+    },
+    "artifactPathPreflight": "Approved committed packets/frozen workspace inputs/control helpers only; optional historical-session recipes not accessed.",
+    "parentLockTouched": false,
+    "actualNewPermissionDenials": []
+  },
+  "status": "published-verified-bounded-compatible-client-owner-testing",
+  "publicationRecord": "batch-104-publication.json",
+  "acceptedCommit": "3261625bb1523c737b03e0549a29b0431efa7515",
+  "runtimeBytesUnchanged": true,
+  "runtimeAccepted": true,
+  "runtimePublished": true,
+  "counts": {
+    "kanji": 1127,
+    "words": 5078,
+    "n1Labels": 136,
+    "namedSourceMembersPresent": 141,
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 131,
+    "remainingAdditions": 1097,
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 129,
+    "batchChangedReusedArticles": 0,
+    "allMappedReciprocalPairs": 1,
+    "mappedDirectedLinks": 2,
+    "activatedBaselinePairs": 0
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42466480094,
+    "headSha": "3261625bb1523c737b03e0549a29b0431efa7515",
+    "jobs": [
+      {
+        "completedAt": "2026-11-08T09:18:34Z",
+        "conclusion": "success",
+        "databaseId": 128687071094,
+        "name": "validate",
+        "startedAt": "2026-11-08T09:16:30Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-08T09:16:31Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-08T09:16:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:17:54Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-08T09:16:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:17:54Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-08T09:17:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:17:57Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-08T09:17:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:12Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-08T09:17:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:29Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-08T09:18:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:31Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-08T09:18:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:32Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-08T09:18:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:33Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-08T09:18:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:33Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-08T09:18:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:33Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-08T09:18:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-08T09:18:33Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-08T09:18:33Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42466480094/job/128687071094"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "3261625bb1523c737b03e0549a29b0431efa7515",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/3261625bb1523c737b03e0549a29b0431efa7515",
+    "sha256": "fb353cd66d9e071306b3cf53d493735d40894defead99a079bf9cbe73062dfee",
+    "manifestEqual": true,
+    "contentVersion": "a5bc9b199c7df334",
+    "verifiedRuntimeHashes": 8466,
+    "zipEntries": 8488,
+    "compressedBytes": 30885295,
+    "inflatedBytes": 44681736,
+    "retainedBytes": 44413398,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "newReviewerNativeHostRuns": 0,
+  "actualNewPermissionDenials": [],
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "executionDiagnostics": [
+    "Initial console encoding error occurred after complete request load/decode; repeated bounded UTF-8 output supplied the final checkpoint. No evidence mutation.",
+    "First source audit stopped on an incorrect helper assumption that the comparison packet alone contained15 records. Exact byte comparison proved14 matching comparisons; added the separate exact member record, total15.",
+    "Second source audit stopped on a stale helper field name. Used this batch's dedicated existing-article-snapshots articles array. Final exact source/baseline/link/geometry/font audit passed; no source or acceptance requirement changed.",
+    "Owner/CI shells clear any inherited tokens locally before using documented process-scoped owner credentials. No global authentication change or credential exposure."
+  ]
+}
