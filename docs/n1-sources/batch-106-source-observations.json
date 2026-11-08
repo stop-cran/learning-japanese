@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "batch": "106",
+  "baseCommit": "0c582f18b31f65a5e1a908d92e37dde3d34f81ee",
+  "membership": ["勅"],
+  "sourceRows": [117],
+  "status": "initial-source-observations-not-authoring-ready",
+  "authorInspection": {
+    "completeMemberFamilies": 44,
+    "fullFamilyEvidence": "batch-106-jmdict.xml",
+    "completeComparisonFamilies": 17,
+    "comparisonEvidence": "batch-106-comparisons.xml",
+    "completeRawCharacterRecords": 4,
+    "rawCharacterEvidence": ["batch-106-kanjidic2.xml", "batch-106-comparison-kanjidic2.xml"],
+    "existingArticlesReadCompletely": ["kanji/令.md", "kanji/命.md", "kanji/束.md", "words/命令.md", "words/天皇.md"],
+    "absentCandidatesChecked": ["kanji/勅.md", "kanji/敕.md", "kanji/詔.md", "words/勅令.md", "words/勅命.md", "words/勅.md", "words/詔.md", "words/戒める.md"],
+    "actualReturnedRanges": [
+      "All647 actual lines of the expanded44-family member packet returned in three disjoint ranges1-240,241-480 and481-EOF. The view boundary diagnostic counted648 including its terminal boundary. A fourth anticipated range beginning721 was beyond EOF and returned no content; it is not additional read coverage.",
+      "All467 actual lines of the expanded17-family supplement returned in three disjoint ranges1-220,221-440 and441-EOF.",
+      "The complete member raw character record and complete pinned SVG returned. Three complete comparison raw character records returned in ranges1-250 and251-EOF.",
+      "The actual Digital Daijisen character wrapper includes three headwords (characterチョク, nounちょく, nounみことのり); the 勅令 wrapper includes both numbered senses. These portions of web_fetch results and the exact locally extracted wrapper text were inspected; later aggregator sections were not adopted."
+    ],
+    "publicEvidence": "batch-106-public-source-receipts.json",
+    "limits": "Coordinator source inspection only, not independent review or native-speaker certification. Complete final quiz/comparison/usage/font evidence and a final support decision remain pending. A byte count or hash does not establish comprehension."
+  },
+  "readingObservations": [
+    {
+      "kind": "on",
+      "reading": "チョク",
+      "entryIds": ["1430550", "1604470"],
+      "proposedSelection": true,
+      "proposedKey": "ちょく",
+      "exampleCandidate": {
+        "word": "勅令",
+        "reading": "ちょくれい",
+        "proposedArticle": "words/勅令.md",
+        "newNecessarySupport": true,
+        "wordLevel": "not established; do not infer from constituent kanji"
+      },
+      "allocationEvidence": "The actual character dictionary gives 音チョク, its separate standalone noun entry is ちょく【勅】, and complete frozen1604470 restricts readingちょく to written勅. The 勅令 family1430550 and actualちょくれい heading establish the compound; the full raw令 record givesレイ. These are separate character and lexical facts, not a kana-substring heuristic.",
+      "usefulness": "Proposed recognition in historical/governmental reading, not an everyday-frequency claim. A concrete contextual example, final title and boundary against ordinary命令 remain to be verified before authoring.",
+      "qualification": "Daijisen's 勅令 sense1 includes sovereigns beyond the Japanese emperor; sense2 is a specific legal form under the Meiji Constitution. Do not equate every imperial utterance with that legal form or claim that all historical edicts are modern ordinary commands. Do not infer the word's JLPT level."
+    },
+    {
+      "kind": "kun",
+      "reading": "いまし.める",
+      "entryIds": [],
+      "comparisonEntryIds": ["1200650", "2230670"],
+      "proposedSelection": false,
+      "disposition": "Preserve the exact raw metadata reading and okurigana boundary. Provisional character-dictionary-only recognition, not a practice question or a newly invented 勅める support article.",
+      "evidence": "The complete frozen KANJIDIC2 record explicitly listsいまし.める. No complete member family supplies a written 勅める lexical example. The exact-reading supplement finds戒める/誡める/警める in1200650 and the distinct rope-binding verb縛める in2230670; neither family contains勅.",
+      "qualification": "An absence in this frozen lexical source is not proof that the documented character reading is invalid, obsolete or unattested everywhere. The inspected Daijisen character wrapper does not list this kun. Its exact modern written use/register remains UNVERIFIED; do not invent a frequency label, use an unrelated spelling's link as allocation proof, or transfer the rope-binding sense to勅. Resolve any consequential usage claim before drafting, or keep it explicitly source-only."
+    },
+    {
+      "kind": "kun",
+      "reading": "みことのり",
+      "entryIds": ["1604470"],
+      "proposedSelection": false,
+      "disposition": "Provisional reference recognition with proposed quizKunyomi[]; no decision that a documented reading is invalid or absent.",
+      "evidence": "Full1604470 contains詔/勅/御言宣 and unrestricted readingみことのり, plus spelling-specific on readingsちょく for勅 andしょう for詔. Daijisen gives the exactみことのり【詔／▽勅】headword, emperor's words and historical document senses.",
+      "qualification": "The ▽ marker requires the dictionary notation guide before an exact claim about its meaning. Do not call 勅 a search-only form: the frozen family has no such flag. Historical register does not by itself forbid practice. Final usefulness/curation should be decided with the full evidence and bounded support needs; no duplicate article or primary-reading change is authorized by this provisional nonselection."
+    }
+  ],
+  "fullFamilyRestrictionNotes": [
+    "All44 member entries retain complete spellings, readings, priorities, senses and flags, including noninitial勅. No absence of priority/register flags is used as proof of everyday frequency.",
+    "1351720詔勅,1430350勅意,1430360勅額,1430370勅勘,1430380勅願,1430390勅許,1430400勅語,1430410勅裁,1430420勅書,1430430勅宣,1430440勅撰,1430450勅選 and1430470勅題 are distinct lexical identities. Do not collapse nomination勅選 and compilation勅撰, or silently remove gemination inちょっかん/ちょっきょ. 勅裁's Meiji-constitution direct-rule sense has its own historical flag.",
+    "1430480勅答 retains both raw English reply glosses; speaker/direction would need exact clarification before using it as a support example. 1430490勅任 and1430500勅任官 distinguish appointment from the appointee. 1430510勅筆,1430520勅命,1430530勅問,1430540勅諭,1430550勅令,1430560勅諚/勅定 and1597670勅使 retain their different writing/order/question/instruction/envoy senses. Only勅令 is a proposed necessary support; others are evidence, not a requirement to add many articles.",
+    "1604470 retains all aliases and both reading restrictions exactly. Its spelling priorities do not establish which meaning or spelling is appropriate in every historical text. 勅ちょく and勅みことのり must not be conflated into a primary-reading change or duplicate filename.",
+    "1668470回勅 is an encyclical and1884100神勅 an oracle. These noninitial families show that not every compound should be glossed as an order from the Japanese emperor.",
+    "1761550教育勅語,2521290教育に関する勅語/教育ニ関スル勅語 and2521320軍人勅諭 refer to specifically named historical rescripts, not ordinary school or military instructions. No evaluation of their ideology or present legal status is supplied by these lexical records.",
+    "1789340勅撰集/勅選集 marks only the second spelling irregular and the sense historical;1789350勅願寺 concerns a temple built at imperial order. 2174650謹飭/謹勅 has deep modesty/discretion senses, not a synonym for imperial decree. Preserve that alternate spelling without deriving fixed modern semantic compartments from individual kanji.",
+    "2244610勅旨,2244620勅祭,2244630勅祭社 and2410430違勅 preserve will/order/festival/shrine/disobedience distinctions. 2713880勅使門 is explicitly architectural, and2779040勅撰和歌集 historical. Do not introduce dates, ritual details or architectural claims beyond the inspected evidence merely to demonstrate a reading.",
+    "2824980奉勅 retains receiving and obeying an imperial decree;2824990奉勅命令 is a sanctioned command. 2839312ミラノ勅令 concerns the Roman Empire, not the Japanese emperor. 2848068密勅 and2864501聖勅 concern secret and imperial rescripts respectively. 5139805英国勅許会計士協会 is an organization name, not a necessary personal-name or professional-title course.",
+    "The17 complete supplement families preserve all aliases and sense-local distinctions:1200650戒める-family warning/admonition/prohibition versus its archaic senses;2230670縛める rope-binding;1404450/1404460/2521420 separate束たば/つか/そく families;1531940命いのち versus1584630命めい;1604460尊/命みこと honorific suffix and archaic derogatory pronoun versus1694240御言/命 respectful spoken words;1531950/1531970命じる/命ずる;1532160命令 command and computing senses;1556150/2247410令れい/りょう;1582030 modern天皇てんのう and2837094/2837102 archaic alternate families.",
+    "The complete member raw character record has fullon[チョク] and fullkun[いまし.める,みことのり] in exact source order, nine strokes, canonical力radical/no.19 andgrade8. Its oldJLPT tag and nanori do not override the named community source or become extra practice readings. Reused令N2/命N3/束N3 and independently sourced word levels remain untouched.",
+    "The pinned SVG labels left束 and right力. This supports a visible modern-shape description, not a historical formation or phonetic derivation. Use structure-unclassified and an explicitly labelled modern-shape mnemonic unless separate exact evidence justifies more."
+  ],
+  "proposedSupport": {
+    "reused": [],
+    "newNecessaryCandidate": ["words/勅令.md"],
+    "alternativesNotSelected": ["勅ちょく", "勅みことのり", "勅命ちょくめい", "勅語ちょくご"],
+    "preserve": "No current article declares or spells勅, and no frozen activated word pair exists. All current metadata/bytes are frozen in the baseline plan. No vocabulary level is inferred. A same-entry alias or same-kana match would be navigation only, not verified support.",
+    "scope": "Final support, examples and quiz title remain pending; this is not a teaching commitment or independent acceptance."
+  },
+  "proposedAllMappedPairsIfChokureiSelected": [["勅", "words/勅令.md"], ["令", "words/勅令.md"]],
+  "proposedLinkScope": {
+    "directions": 4,
+    "activatedBaselinePairs": 0,
+    "newKanjiForwardLinks": ["勅/勅令"],
+    "newSupportComponentLinks": ["勅令/勅", "勅令/令"],
+    "potentialReusedChange": "令 currently has no勅令 example. If this support is selected and the all-mapped contract applies, add a narrowly sourced common-word line/link under令 and independently review that actual addition. It would be new example teaching, NOT a pre-existing-text navigation-only edit.",
+    "limits": "Proposed mapping only. Re-enumerate all selected mapped pairs, including reused kanji, after final support selection. No runtime links authored or accepted."
+  },
+  "quizNavigation": {
+    "proposedKanjiTitle": "imperial order",
+    "proposedWordTitle": "imperial edict",
+    "establishedComparisons": "Actual令 command;decree and命 life;command include potential broadly defensible command labels. Actual命令 order;command is a broader noun than the proposed勅令 support. These are comparison candidates, not accepted wrong choices or decided exclusions.",
+    "threeCuratedDistractors": "pending exact full-family/actual-article semantic audit",
+    "directGuards": "pending; direct symmetric NONTRANSITIVE pairs only, no transitive clique or metadata rewrite from title similarity alone",
+    "legacyFallbacks": "pending compatible-client finite actual option-set inspection; not closed by a title search or family extraction"
+  },
+  "pendingSourceCompletion": [
+    "Resolve final support and curation usefulness from exact character/word entries and the notation guide. Preserve all three metadata entries, source order and written attachment boundaries. Explain source-onlyいまし.める without inventing a contemporary lexical example or calling it invalid.",
+    "Complete final comparison families/actual relevant articles, three defensibly wrong existing distractors, ordinary secondary senses, proposed direct kanji/word safeguards and affected legacy fallback plan. Current comparison supplement is bounded navigation, not a complete quiz safety claim.",
+    "Verify natural contextual support example(s), meaning/register/sense boundaries, exact component allocation and actual displayed title. Do not turn the Meiji legal sense into a universal restriction or a claim that every old edict has lost legal effect.",
+    "Freeze exact necessary reused passage changes and all-mapped plus activated link requirements. A newly added令 common-word example would require source/teaching review; no unrelated easier-deck rewrite or out-of-batch kanji addition.",
+    "Finalize modern-shape/radical prose, exact proposed Han and four-font preparation. A cmap absence is not a glyph failure; native/rendered acceptance remains later work. Use only the unchanged pinned converter after source completion; no geometry converted here.",
+    "Then bounded LOCAL UNREVIEWED draft, followed by TWO serial blind different-family textual reviews, evidence reconciliation/original-session confirmations as needed, non-skipped qualified Android/native ContentSyncONCE/meaning/reading/drawing/articles/Back/offline/fonts/rendered gates, combined-main validation/signing/owner fast-forward/terminalCI/EVERY immutable ZIP hash and unchanged archive limits. None is waived by this initial packet."
+  ],
+  "runtimeDrafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourcePreparationComplete": false,
+  "independentReviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "diagnostics": [
+    "Initial request-output attempt failed on Windows cp1252 console encoding after loading/decoding/parsing the complete file. UTF-8 output correction returned the final checkpoint; not a permission denial or missing evidence.",
+    "An anticipated member-packet range began beyond EOF and returned no content; the first three returned ranges already covered every647actual line. Python splitlines supplies the persisted exact line counts, not the view tool's terminal boundary count.",
+    "First generated character extraction took three dictionary wrappers rather than three headwords and included unrelated later sections. The exact-wrapper inspection identified this; corrected to the first Daijisen wrapper only, regenerated receipts, and retained this diagnostic. The original tool output remains in the execution log; no later wrapper supplies an adopted claim."
+  ]
+}
