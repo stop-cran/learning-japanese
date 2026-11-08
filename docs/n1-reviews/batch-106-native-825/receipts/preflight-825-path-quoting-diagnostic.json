@@ -1,0 +1,13 @@
+{
+  "execution": 825,
+  "phase": "before-evidence-commit",
+  "exactError": "Exception: preflight-825.ps1:47 Unexpected worktree changes",
+  "cause": "Git status quotes a path containing the reused Japanese character by default, so the wrapper's plain-prefix allowlist did not recognize the already-authorized evidence filename. Read-only git -c core.quotepath=false status showed only bounded batch106native825 contributor evidence. No runtime or Android differences.",
+  "correction": "Command-local core.quotepath=false for status and filename-producing helper calls. Same exact allowed directory/file checks and wholly-clean native/publication checks retained; no Git configuration change.",
+  "originalPreflightPreserved": "docs/n1-reviews/batch-106-native-825/receipts/preflight-825.ps1.gz",
+  "permissionDenial": false,
+  "ownershipUncertain": false,
+  "testsRepeated": false,
+  "runtimeChanged": false,
+  "parentLockTouched": false
+}
