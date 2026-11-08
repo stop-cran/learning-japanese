@@ -6389,6 +6389,7 @@ checks direct exclusions and regenerates strokes from the SVG and converter
 identified in the frozen source index (requires `svgpathtools==1.8.0`), with
 stroke-order variants unchanged from the base. A CRLF checkout is accepted only
 when LF-normalized SVG bytes reproduce the pinned source blob and evidence.
+Baseline manifest schema and language metadata must also remain unchanged.
 It does not independently re-extract dictionary packets. Unsupported or
 incomplete plans, reused support words, and other baseline-edit shapes fail
 explicitly rather than inventing missing ledger evidence; use a complete

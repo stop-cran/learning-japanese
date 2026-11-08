@@ -10,7 +10,7 @@ from unittest.mock import patch
 import yaml
 
 import generate_strokes
-from audit_n1_batch import audit
+from audit_n1_batch import audit, runtime_delta
 from build_manifest import build_manifest
 from freeze_n1_sources import KVG_REVISION
 
@@ -302,6 +302,28 @@ class N1SourcePlanAuditTest(unittest.TestCase):
         self.sync_runtime()
         with self.assertRaisesRegex(ValueError, "Changed baseline"):
             self.run_audit()
+
+    def test_rejects_unrecorded_runtime_language_change(self):
+        self.make_fixture("current")
+        self.write_json(self.root / "content-language.json",
+                        {"baseLanguage": "ru", "targetLanguage": "ja"})
+        self.sync_runtime()
+        with self.assertRaisesRegex(ValueError, "Baseline runtime metadata changed"):
+            self.run_audit()
+
+    def test_runtime_delta_preserves_nonversion_manifest_fields(self):
+        before = {"schemaVersion": 1, "baseLanguage": "en", "targetLanguage": "ja",
+                  "contentVersion": "old", "files": {}}
+        after = {**before, "contentVersion": "new"}
+        runtime_delta(before, after, set(), set())
+        for field, value in (("schemaVersion", 2), ("baseLanguage", "ru"),
+                             ("targetLanguage", "ko"), ("newField", True)):
+            with self.subTest(field=field):
+                with self.assertRaisesRegex(ValueError, "Baseline runtime metadata changed"):
+                    runtime_delta(before, {**after, field: value}, set(), set())
+        with self.assertRaisesRegex(ValueError, "Baseline runtime metadata changed"):
+            runtime_delta(before, {key: value for key, value in after.items()
+                                   if key != "baseLanguage"}, set(), set())
 
     def test_rejects_extra_text_in_recorded_baseline_edit(self):
         self.make_fixture("current")

@@ -19,11 +19,17 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def runtime_delta(before, after, additions, changed):
+    def metadata_fields(manifest):
+        return {key: value for key, value in manifest.items()
+                if key != "contentVersion" and not isinstance(value, dict)}
+
     def payload(manifest):
         return {(section, name): value
                 for section, entries in manifest.items() if isinstance(entries, dict)
                 for name, value in entries.items()}
 
+    require(metadata_fields(before) == metadata_fields(after),
+            "Baseline runtime metadata changed")
     old, new = payload(before), payload(after)
     require(not old.keys() - new.keys(), "Baseline runtime payload removed")
     require(new.keys() - old.keys() == {("files", name) for name in additions},
