@@ -1,0 +1,36 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$session = 'a08608a3-a39e-47db-8d13-3c700e116d8e'
+$log = "$control\logs\$session"
+$root = "$control\..\learning-japanese"
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 798 -or $progress.batch -ne '104' -or
+    $runner.pid -ne 13320 -or $runner.status -ne 'running' -or
+    $runner.sessionId -ne $session) { throw 'Checkpoint/session changed' }
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+for ($i = 0; $process -and $process.ProcessId -ne $runner.pid -and $i -lt 12; $i++) {
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+if (-not $process -or $process.ProcessId -ne $runner.pid) { throw 'Live launcher ancestry missing' }
+if ((git -C $root status --porcelain --untracked-files=all) -or
+    (git -C $root log -1 '--format=%G?') -ne 'G' -or
+    (git -C $root rev-parse 'HEAD^') -ne '089a60b2e7f94d57d24758777ba9d586d45209cf') { throw 'Expected wholly clean signed textual evidence checkpoint' }
+if (Test-Path "$log\issue-799-posted.json") { throw 'Do not post duplicate issue receipt' }
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner token unavailable' }
+    $owner = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $owner -ne 'stop-cran') { throw 'Wrong process identity' }
+    gh api --method POST repos/stop-cran/learning-japanese/issues/60/comments --input "$control\issue-request-799.json" > "$log\issue-799-posted.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Owner issue update failed' }
+    $posted = [IO.File]::ReadAllText("$log\issue-799-posted.json") | ConvertFrom-Json
+    gh api "repos/stop-cran/learning-japanese/issues/comments/$($posted.id)" > "$log\issue-799-verified.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Issue reread failed' }
+    $verified = [IO.File]::ReadAllText("$log\issue-799-verified.json") | ConvertFrom-Json
+    $expected = [IO.File]::ReadAllText("$control\issue-request-799.json") | ConvertFrom-Json
+    if ($verified.user.login -ne 'stop-cran' -or $verified.body -cne $expected.body) { throw 'Issue identity/body mismatch' }
+    Write-Output $verified.html_url
+} finally {
+    Remove-Item Env:\GH_TOKEN -ErrorAction SilentlyContinue
+}
