@@ -1,0 +1,24 @@
+Runner lock ownership and child wrappers, 2026-11-06
+
+The sole launcher runner.ps1 holds runner.lock exclusively for its entire life,
+including every coordinator and test/build/native child it invokes.
+The read-only publication observer supervise.ps1 is NOT that lock owner.
+
+Execution571 copied a parent-only recovery wrapper's exclusive lock acquisition
+into a child. File.Open correctly failed with a Windows sharing violation before
+Gradle; zero tests ran. This is not a permission denial, test failure or reason
+to remove/recreate the lock, stop another process or weaken exclusivity.
+
+Parent-only recovery helpers may acquire the lock only after the known runner
+has exited and exclusive availability is verified. Do not copy their outer lock
+acquisition into child test/build wrappers.
+
+Normal coordinator children inherit the protection of the still-live parent
+launcher; they must not reacquire its exclusive lock. Retain their checkpoint,
+exact signed-head, wholly-clean-worktree, environment and acceptance checks.
+If ownership or execution context is uncertain, preserve/report/yield rather
+than treating a sharing failure as proof of the expected owner.
+
+The launcher prompt repeats this role distinction on every coordinator launch.
+The actual lock acquisition/lifetime, flags, policies and one-writer rule are
+unchanged. Keep original571wrapper and diagnostic immutable as evidence.
