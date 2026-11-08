@@ -1,0 +1,381 @@
+"""Preserve original reports, exact execution bytes and full-history checkpoint."""
+import base64
+import copy
+import gzip
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import shutil
+import sys
+
+C = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location("rendered804", C / "review-rendered-804.py")
+m = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(m)
+R, A, W, L = m.R, m.A, m.W, m.L
+D = R / "docs" / "n1-reviews" / "batch-104-rendered-804"
+E = R / "docs" / "n1-sources" / "execution-804.json"
+LABELS = ["claude", "claude-repair03", "claude-repair04", "gpt"]
+
+
+def digest(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def verify_runtime():
+    sys.path.insert(0, str(R / "tools"))
+    from build_manifest import build_manifest, sha256
+    manifest = m.load(R / "manifest.json")
+    assert manifest == build_manifest(R)
+    assert manifest["contentVersion"] == "a5bc9b199c7df334"
+    count = 0
+    for section, entries in manifest.items():
+        if not isinstance(entries, dict):
+            continue
+        for name, expected in entries.items():
+            path = R / Path(*name.split("/"))
+            actual = m.sha(path) if section in {
+                "images", "audio", "listeningTaskAudio", "listeningTaskImages"} else sha256(path)
+            assert actual == expected, name
+            count += 1
+    assert count == 8466
+    assert not m.git("diff", m.HEAD, "--", "kanji", "words", "articles",
+                     "strokes", "manifest.json", "tools")
+    return count
+
+
+def archive():
+    m.frozen()
+    assert not D.exists() and not E.exists()
+    executions = [m.load(W / f"{label}-execution.json") for label in LABELS]
+    for label, record in zip(LABELS, executions):
+        family = label.split("-")[0]
+        assert record["exitCode"] == 0 and record["processExited"] and m.absent(record["launcherPid"])
+        assert record["actualModels"] == [m.MODELS[family]]
+        assert record["usageCurrentModel"] == m.MODELS[family]
+        assert record["allAssignedTextReturned"] and not record["missingImages"]
+        assert not record["unfinishedTools"]
+        assert all(call["name"] == "view" and call["success"] for call in record["toolCalls"])
+        assert m.sha(W / f"{label}.md") == record["reportSha256"]
+        assert m.sha(W / f"{label}.jsonl") == record["rawExecutionSha256"]
+        assert (W / f"{label}-preserved.json").exists()
+        if label == "claude":
+            assert record["multiToolResponseCount"] == 1 and len(record["observedToolOverlaps"]) == 1
+        else:
+            assert record["multiToolResponseCount"] == 0 and not record["observedToolOverlaps"]
+        if "repair" in label:
+            assert len(record["toolCalls"]) == 1 and not record["successfulImageOpens"]
+        else:
+            assert len(record["successfulImageOpens"]) == 22
+            assert len({image["path"] for image in record["successfulImageOpens"]}) == 22
+            assert all(payload["pngDimensions"] == [900, 2000]
+                       and payload["originalPngDimensions"] == [1080, 2400]
+                       and not payload["equalsOriginalBytes"]
+                       for image in record["successfulImageOpens"] for payload in image["payloads"])
+    for prior, current in zip(executions, executions[1:]):
+        assert prior["completedAt"] < current["startedAt"]
+    count = verify_runtime()
+    D.mkdir()
+    payload_directory = D / "image-payloads"
+    payload_directory.mkdir()
+    archives = []
+    for source in sorted(W.iterdir()):
+        if source.is_dir() or source.suffix == ".gz":
+            continue
+        raw = source.read_bytes()
+        if source.suffix != ".jsonl":
+            target = D / (source.name + ".gz")
+            target.write_bytes(gzip.compress(raw, compresslevel=9, mtime=0))
+            assert gzip.decompress(target.read_bytes()) == raw
+            archives.append({"archive": target.name, "archiveSha256": m.sha(target),
+                             "rawSha256": digest(raw), "rawBytes": len(raw)})
+            continue
+        transformed, replacements = [], {}
+        for line in raw.splitlines(keepends=True):
+            event = json.loads(line)
+            if event["type"] == "tool.execution_complete":
+                for item in event.get("data", {}).get("result", {}).get("binaryResultsForLlm", []):
+                    if item.get("type") == "image" and isinstance(item.get("data"), str):
+                        encoded = item["data"].encode("ascii")
+                        image = base64.b64decode(encoded, validate=True)
+                        assert base64.b64encode(image) == encoded
+                        image_hash = digest(image)
+                        marker = ("__N1_IMAGE_PAYLOAD_SHA256_" + image_hash + "__").encode("ascii")
+                        assert marker not in raw and encoded in line
+                        target = payload_directory / (image_hash + ".png")
+                        if target.exists():
+                            assert target.read_bytes() == image
+                        else:
+                            target.write_bytes(image)
+                        replacements[marker] = encoded
+                        line = line.replace(encoded, marker)
+            transformed.append(line)
+        factored = b"".join(transformed)
+        target = D / (source.name + ".factored.gz")
+        target.write_bytes(gzip.compress(factored, compresslevel=9, mtime=0))
+        restored = gzip.decompress(target.read_bytes())
+        for marker, encoded in replacements.items():
+            restored = restored.replace(marker, encoded)
+        assert restored == raw
+        archives.append({"archive": target.name, "archiveSha256": m.sha(target),
+                         "factoredSha256": digest(factored), "rawSha256": digest(raw),
+                         "rawBytes": len(raw), "distinctPayloadsUsed": len(replacements),
+                         "payloadMarker": "__N1_IMAGE_PAYLOAD_SHA256_<sha256>__",
+                         "reconstruction": "Decompress; replace markers with canonical base64 of named PNG. EVERY original stdout byte/hash round-tripped exactly, including all events and tool results."})
+    m.save(D / "archive-integrity.json", archives)
+    payloads = [{"file": str(path.relative_to(D)), "sha256": m.sha(path),
+                 "bytes": path.stat().st_size} for path in sorted(payload_directory.glob("*.png"))]
+    m.save(D / "image-payload-index.json", payloads)
+    for name in ["review-rendered-804.py", "preflight-804.ps1", "checkpoint-rendered-804.py"]:
+        shutil.copyfile(C / name, D / (name + ".txt"))
+    for source in sorted(L.glob("preflight-804*.json")):
+        shutil.copyfile(source, D / source.name)
+    m.save(D / "process-order.json", [
+        {"label": label, **{key: record[key] for key in ["sessionId", "actualModels", "launcherPid",
+         "startedAt", "completedAt", "exitCode", "processExited", "multiToolResponseCount"]}}
+        for label, record in zip(LABELS, executions)])
+    evidence = {
+        "schemaVersion": 1, "execution": 804, "batch": "104", "recordedAt": m.now(),
+        "stage": "original-family-rendered-confirmations-preserved-awaiting-final-acceptance-reconciliation",
+        "startingState": m.load(W / "starting-state.json"),
+        "sourceSnapshot": m.HEAD, "unchangedTeachingSnapshot": m.TEACHING,
+        "qualifiedAndroidHead": m.APP, "evidenceDirectory": str(D.relative_to(R)),
+        "originalSessionConfirmationsExecuted": 2, "oneResourceSerialRecoveriesExecuted": 2,
+        "newBlindInitialReviewCredit": 0, "allFourProcessesSerialAndExited": True,
+        "actualModels": m.MODELS, "originalSessions": m.SESSIONS,
+        "commonResources": m.load(W / "resources.json"),
+        "sourceProvenance": m.load(W / "source-provenance.json"),
+        "bothAssignedTextScopesReturnedExactly": True,
+        "nativeImageScope": m.load(W / "image-scope.json"),
+        "actualImageDelivery": {
+            "originalSourceDimensions": [1080, 2400], "deliveredDimensions": [900, 2000],
+            "successfulCallsPerFamily": 22, "repeatedImageCalls": 0,
+            "originalNativePathsRepresentedByExactByteAliases": 36,
+            "coordinatorResizedSubstitutes": False, "originalPixelPayloadsDelivered": 0,
+            "distinctActualDeliveredPayloadHashes": len(payloads),
+            "warnings": {label: record["warnings"] for label, record in zip(LABELS, executions)},
+            "compactions": {label: record["compactions"] for label, record in zip(LABELS, executions)},
+            "limits": "Actual payload return is not equal comprehension, guaranteed retention in every model request, original-pixel/native-font-face/physical-phone certification. No repeated all-image loop."
+        },
+        "protocolDisposition": {
+            "originalClaudeExecution": "NONCOMPLIANT one assistant response opened resources03/04 concurrently; one actual overlap. Original complete report/execution preserved verbatim, not retroaccepted or described as all-serial.",
+            "recovery": "After actual exit/archive, SAME original session made two separate NEW one-resource serial confirmations: resource03 then resource04. Each process exactly ONE view call, full exact resource returned, no overlap/multitool response, actual exit/archive before next process. Other five source reads and ALL22 image reads were serial in original execution and not repeated.",
+            "originalGPTExecution": "ZERO overlap/multi-tool responses. Seven full resources plus TWO unnecessary small boundary rereads (resource01:1860-1947, resource05:1250-1256), all serial;22images exactly once. Preserve reported inefficiency, not missing coverage or tool failure. One context compaction/no image-pruning warning; uninterrupted model-request retention not certified.",
+            "historical733": "Original733/734 Claude serialization deviation and all prior receipts remain unchanged; this recovery makes no retroactive claim about them."
+        },
+        "reviewDisposition": {
+            "twoNewArticles": "Both retain correctness/scoped coverage/text comprehensibility CLEAN in bounded unchanged teaching and actual delivered-scale scope; zero changed reused passages.",
+            "minorOutcomeClarification": "Original799 words/弾劾.md:30 remains resolved; exact clarified sentence is rendered.",
+            "finiteSemantics": "Reports preserve target-relative verdicts for64HOSTkanji+64HOSTword+64nativekanji exact sets plus LIVEdefault; not arbitrary/future-pool or every-pair semantic certification.",
+            "originalHypotheses": "Claude retains unresolved LOW/LOW-MODERATE unproved 劾/偵 and 弾劾/叱る concerns. GPT retains no established direct ambiguity and had no unresolved original hypotheses; preserve both without forced withdrawal, majority vote or new guard inferred from shared neighbors.",
+            "optional": "Claude's original four wording/mnemonic/source-name/display-key polish items remain optional; GPT did not originate those four suggestions and correctly disclaims that attribution. No teaching edit.",
+            "appWideDrawingWording": {
+                "reviewer": "gpt-6.1-sol",
+                "severity": "low",
+                "facet": "shared UI presentation, not article correctness",
+                "evidence": "n1-104-drawing-feedback.png: Practice only: this attempt is not graded versus Graded by stroke shapes only.",
+                "reportVerdict": "NEEDS FIX for wording only; article facets and shape/trace/reveal mechanics CLEAN.",
+                "coordinatorDisposition": "Verified duplicate of the app-wide practice/shape-feedback wording already recorded as OPTIONAL by both original103 reviews in execution793. Preserve current GPT low-severity assessment separately, not silently convert its reported verdict to CLEAN. Trace remains explicitly ungraded/noDrawlog; shape comparison wording can confuse but does not demonstrate content or scheduling corruption. Outside this kanji-only content checkpoint; no unrelated Android edit or new prerequisite invented. Final batch reconciliation must explicitly retain this bounded nonblocking/deferred UI disposition.",
+                "priorEvidence": "docs/n1-sources/execution-793.json reviewDispositions app-wide Practice not graded versus Graded by stroke shapes wording; optional, no app changes authorized.",
+                "status": "optional-out-of-scope-shared-ui-followup",
+                "confidence": "high for visible wording; limited demonstrated learning impact"
+            },
+            "fallbackFaceCorrection": "Claude original report inferred one fallback face from equal raster hashes; BOTH own one-resource recovery reports explicitly correct that inference. Face remainsUNVERIFIED; delivered-scale glyph distinguishability is separate.",
+            "captureCondition": "Claude notes soft keyboard over lower article00 as capture condition, not established teaching defect. Other scroll captures preserved; no claim every column/section visible simultaneously.",
+            "compactionLimit": "Actual originalClaude THREE context compactions; GPT ONE; both ZERO session.warning image-pruning events. Each22 successful image returns/report does not independently reconstruct uninterrupted visual retention or every subsequent model request. Original complete scope claims retained with this execution-level limitation.",
+            "limits": "Original reports, repairs and actual execution are authoritative; no equal read-depth/comprehension, fresh independent upstream/native/native-speaker, handwriting mastery, retention or general model benchmark claim."
+        },
+        "ordinarySenseFallbackSemanticAcceptance": "Bounded report verdicts preserved; final batch acceptance reconciliation pending.",
+        "independentRenderedReviewClosed": False, "fullBatchAcceptanceComplete": False,
+        "runtimeAccepted": False, "runtimePublished": False,
+        "runtimeChanged": False, "manifestChanged": False, "freshNativeExecuted": False,
+        "runtimeHashesVerified": count, "contentVersion": "a5bc9b199c7df334",
+        "rawExecutionPackaging": {
+            "mode": "Lossless exact-byte image-payload factoring; not event omission or source-image reconstruction.",
+            "archiveIndex": "archive-integrity.json", "payloadIndex": "image-payload-index.json",
+            "allOriginalRawBytesReconstructedExactly": True,
+            "originalRawStdout": str(W),
+            "limits": "Delivered900x2000 payloads archive actual transport, NOT replacement1080x2400 native images or fresh reviews."
+        },
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [], "reviewClosed": [], "published": [],
+        "publishedAdditions": 130, "remainingAdditions": 1098, "lastPublishedCommit": m.MAIN,
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "SAME104 bounded final acceptance reconciliation of BOTH original rendered reports, TWO new serial source recoveries, exact source/image/process delivery and inherited HOST800/native802/label803 evidence. Do not retroaccept originalClaude overlap, infer font identity from hashes, force withdrawal of unproved low-risk hypotheses or equate900x2000renditions with original pixels/equal comprehension. No new blindinitial credit or repeated22/36/73image loop. Then all original combinedcurrentmain/nonrewritingmerge/changedteachingreview/fullrequiredPython/vocabulary/baseline-membership-links/manifestbudget/normal signing/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifesthash/perfilepathmedia/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/publicissue gates before publication. No105. Physicalphone/generalrelease/whole-set outstanding."
+    }
+    m.save(E, evidence)
+    print(json.dumps({"evidence": str(E), "runtimeHashes": count, "losslessArchives": len(archives),
+                      "actualDeliveredPayloadHashes": len(payloads), "runtimeChanged": False}))
+
+
+def finish():
+    before, current = m.load(L / "progress-before-804.json"), m.load(C / "progress.json")
+    assert all(current[key] == value for key, value in before.items())
+    assert set(current) == set(before) | {"execution804StartingState"}
+    assert (current["checkpoint"], current["batch"], current["status"]) == (803, "104", "continue")
+    head = m.git("rev-parse", "HEAD")
+    assert m.git("rev-parse", "HEAD^") == m.HEAD and m.git("log", "-1", "--format=%G?") == "G"
+    for repo in [R, A]:
+        assert not m.git("status", "--porcelain", "--untracked-files=all", repo=repo)
+    assert m.git("rev-parse", "HEAD", repo=A) == m.APP
+    assert m.git("log", "-1", "--format=%G?", repo=A) == "G"
+    assert m.git("rev-parse", "origin/main") == m.MAIN
+    changed = m.git("diff", "--name-only", m.HEAD, head).splitlines()
+    assert all(name.startswith("docs/n1-reviews/batch-104-rendered-804/") or
+               name == "docs/n1-sources/execution-804.json" for name in changed)
+    count = verify_runtime()
+    posted, reread = m.load(L / "issue-804-posted.json"), m.load(L / "issue-804-reread.json")
+    body = (C / "batch-104-rendered-804-issue-body.txt").read_bytes()
+    assert posted["author"] == reread["user"]["login"] == "stop-cran"
+    assert digest(body) == posted["bodySha256"] and body.decode("utf-8") == reread["body"]
+    assert posted["url"] == reread["html_url"]
+    role = m.load(L / "preflight-804-before-issue.json")
+    assert role["contentHead"] == head and not role["lockTouched"]
+    e = m.load(E)
+    next_action = (
+        f"SAME104 checkpoint804 signed LOCAL original-family rendered evidence HEAD{head}, qualifiedAndroid{m.APP}. "
+        "Read docs/n1-sources/execution-804.json and docs/n1-reviews/batch-104-rendered-804/ plus source803/native802/HOST800/"
+        "original799reconciliation. TWO original-session rendered confirmations executed sequentially ClaudeOpus5.5 "
+        "2a96f7cf-4ed1-427d-90a8-e00e4bf1ef85 then GPT6.1Sol40b1dab7-bea4-4403-810b-828fa28d53c7, "
+        "withTWO separate originalClaude one-resource SERIAL recovery processes between families. AllFOURprocesses "
+        "terminal0/actualmodels verified/exited/archived before nextlaunch. IMPORTANT ORIGINALCLAUDE NOT ALLSERIAL: "
+        "one response/overlap resources03+04 preserved verbatim and NOT retroaccepted. Recovery03 then04 each "
+        "exactlyONEview/fullresource/nooverlap; otherFIVEsource+ALL22image reads originally serial/notrepeated. "
+        "GPTactual process/tool evidence in archivedreport; no model-vote reasoning. SameSEVENresources653035bytes/"
+        "96completearticlebodies/fullHOST800+original27families+native4characters21familysupplement; "
+        "both full exact assigned text returned. Each family22originalPNGpathsONCE representALL36nativePNGpaths "
+        "via exactbyteidenticalaliases, no invented uniquevisualstates/no73loop; actualview900x2000 NOT "
+        "1080x2400originalpixels, no coordinator resizedsubstitutes. Raw execution archive factored losslessly/"
+        "EVERYstdoutbytehash verified. Both retain new劾/弾劾 textual/finitesamples/deliveredrendering bounded "
+        "verdicts; finalacceptance reconciliation STILLrequired. Claude keptLOW/LOW-MODERATEunproved劾/偵and弾劾/叱る "
+        "hypotheses; GPTretainsnoestablisheddirectambiguity/nooriginalunresolvedhypotheses. FOURoptionalpolishareCLAUDE's, "
+        "NOTGPT's; preserveattribution/calibrateddisagreement/noforcedwithdrawal/newguard. GPTnewreport flagsLOW "
+        "drawing-feedback wordingNEEDSFIX: Practiceonlynotgraded versusGradedbystrokeshapesonly; sameappwide "
+        "observation already OPTIONAL in793, not newarticle/schedulingdefect. PreserveGPTverdict separately and "
+        "explicitnonblocking/outofscopeUI disposition; no unrelatedAndroidedit/newprerequisite. "
+        "GPTtoolsallSERIAL butTWOboundaryrereads resource01:1860-1947/resource05:1250-1256 unnecessary/"
+        "preserved, noimage repeats; ClaudeTHREE/GPTONEcompactions/ZEROimagepruningwarnings, "
+        "NOTproofeveryrequestretention/equalcomprehension. "
+        "Claude original samehash=>onefallbackface overclaim corrected inBOTH own recoveryreports; faceUNVERIFIED. "
+        "All28Han/fourfonts/刂versus力 atdeliveredscale, soleonガイ/keyがい/gooddone/kunnonoffered, "
+        "eightreferenceinjectedtraceUNGRADED/noDrawlog anddeliberaterecallgrade1 NOTmastery; ONEpairTWOdirections "
+        "ZERObaselinepairs/ZEROreusedchanges inheritednative802. Source803native43seededlabels+LIVE剤44union/"
+        "4exactnewlabels克剤菊鶴 fullsources, HOST41kanji26words, 64HOSTkanji+64HOSTword+64nativekanji finite "
+        "samples+LIVEdefault only, NOTeveryfuturepool/pair. Originalpixels/equalcomprehension/fallbackface/"
+        "everymodelrequestretention/native-speaker/phone/learningeffectivenessUNVERIFIED. "
+        "NEXT SAME104 bounded FINAL acceptance reconciliation of originalreports/serialrecoveries/actualcoverage/"
+        "inheritedmechanicalnativeevidence; doNOTrepeatallimages/newblindinitials. Any demonstrated consequential "
+        "defect needs minimalfix/audits/manifest/newnormallysignedfreeze/BOTHoriginal-familyconfirmations. "
+        "ALL original803gates+nextAction preservedVERBATIM in historicalExecution803Before804Rendered.nextAction: "
+        "combinedcurrentmain/nonrewritingmerge/changedteachingreview/fullrequiredPython/vocabulary/"
+        "baseline-membership-links/manifestbudget/normal signing/ownerfastforward/terminalgreenCI/"
+        "EVERYimmutableZIPmanifesthash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/"
+        "perfilepathmedia/verifiedownerissue remainMANDATORY. No newAndroid/native/runtimeedit/push/105 thischeckpoint. "
+        "All8466runtimehashes/contentVersiona5bc9b199c7df334/manifest unchanged. Fresh signedheads/whollyclean/"
+        "fetchedmain/checkpoint/liveparentancestry/decodedlauncher/exactsession required next. Parent13320owns"
+        "runner.lock:nochildacquire/delete/unlock/readprobe; approvedcontrol/committedsource/frozeninputs only. "
+        "Nooptionalhistoricalrecipe/newpermissiondenial. Preserve/report/yield actualnewdenial/signinghang/"
+        "uncertainownership. Original733/734and799/802/103process/source/rendition/ANR/routing/phone limits "
+        "unchanged, not retroaccepted. QualifiedAndroidapprovedpairguard+schemaonly, NOTlatestappmain. "
+        "Published130/1228/remainder1098/lastpublished2491799cffe960a7664a6135614b452e24dce459 unchanged; "
+        "batch104unaccepted/unpublished; compatibleAndroid#125+#132required;oldclientsignore. "
+        "Physicalphone/generalrelease/whole-setoutstanding; projectincomplete."
+    )
+    checkpoint = {
+        "schemaVersion": 1, "execution": 804, "checkpoint": 804, "batch": "104",
+        "status": "continue",
+        "stage": "batch-104-original-family-rendered-confirmations-preserved-awaiting-final-acceptance-reconciliation",
+        "savedCommit": head, "signature": "G", "qualifiedAndroidHead": m.APP,
+        "recordedAt": m.now(), "evidence": str(E.relative_to(R)),
+        "issueUpdate": posted["url"], "ownerIssueAuthorAndExactBodyVerified": True,
+        "originalSessionConfirmationsExecuted": 2, "oneResourceSerialRecoveriesExecuted": 2,
+        "allFourProcessesSerialAndExited": True, "actualModels": m.MODELS,
+        "originalClaudeToolSerializationCompliant": False,
+        "originalClaudeDeviationPreservedNotRetroaccepted": True,
+        "bothAffectedResourcesNewSerialConfirmationsComplete": True,
+        "bothAssignedTextScopesReturnedExactly": True,
+        "distinctOriginalPngsOpenedPerFamily": 22, "nativePngPathsRepresented": 36,
+        "deliveredImageDimensions": [900, 2000], "originalImageDimensions": [1080, 2400],
+        "originalPixelAndEqualComprehensionAcceptance": "UNVERIFIED",
+        "actualFallbackFace": "UNVERIFIED",
+        "independentRenderedReviewClosed": False, "fullBatchAcceptanceComplete": False,
+        "runtimeAccepted": False, "runtimePublished": False,
+        "runtimeChanged": False, "manifestChanged": False, "freshNativeExecuted": False,
+        "runtimeHashesVerified": count, "contentVersion": "a5bc9b199c7df334",
+        "dedicatedWorktreesClean": True, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "reviewClosed": [], "published": [], "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": m.MAIN, "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False,
+        "nextBatchStarted": False, "nextAction": next_action, "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    updated = copy.deepcopy(current)
+    allowed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    updated["historicalExecution803Before804Rendered"] = {
+        key: copy.deepcopy(before[key]) for key in allowed}
+    updated["execution804CoordinatorCheckpoint"] = checkpoint
+    for key in allowed:
+        updated[key] = checkpoint[key]
+    assert all(updated[key] == value for key, value in before.items() if key not in allowed)
+    tmp = C / "progress.json.804-finish.tmp"
+    assert not tmp.exists()
+    m.save(tmp, updated)
+    assert m.load(tmp) == updated
+    os.replace(tmp, C / "progress.json")
+    saved = m.load(C / "progress.json")
+    assert saved == updated
+    assert all(saved[key] == value for key, value in before.items() if key not in allowed)
+    m.save(L / "checkpoint-804-verification.json", checkpoint)
+    print(json.dumps({key: checkpoint[key] for key in ["checkpoint", "status", "savedCommit",
+        "issueUpdate", "historicalRootKeysCompared", "allOriginalHistoricalValuesPreserved"]}, indent=2))
+
+
+def seal():
+    assert m.git("rev-parse", "HEAD") == m.HEAD
+    for row in m.load(D / "archive-integrity.json"):
+        packed = D / row["archive"]
+        assert m.sha(packed) == row["archiveSha256"]
+        restored = gzip.decompress(packed.read_bytes())
+        if "factoredSha256" in row:
+            assert digest(restored) == row["factoredSha256"]
+            for payload in m.load(D / "image-payload-index.json"):
+                image = (D / payload["file"]).read_bytes()
+                assert digest(image) == payload["sha256"]
+                marker = ("__N1_IMAGE_PAYLOAD_SHA256_" + payload["sha256"] + "__").encode("ascii")
+                restored = restored.replace(marker, base64.b64encode(image))
+        assert len(restored) == row["rawBytes"] and digest(restored) == row["rawSha256"]
+    count = verify_runtime()
+    validation = L / "validate-804.txt"
+    assert validation.read_text(encoding="utf-8-sig").rstrip().endswith("0 error(s)")
+    target = D / "validate-804.txt.gz"
+    assert not target.exists()
+    target.write_bytes(gzip.compress(validation.read_bytes(), mtime=0))
+    assert gzip.decompress(target.read_bytes()) == validation.read_bytes()
+    e = m.load(E)
+    e["validation"] = {
+        "commands": ["python -B tools\\validate.py", "python -B tools\\build_manifest.py",
+                     "git diff --exit-code -- manifest.json", "git diff --check"],
+        "observedTerminalExitCode": 0, "validatorErrors": 0, "manifestUnchanged": True,
+        "runtimeHashesVerified": count, "contentVersion": "a5bc9b199c7df334",
+        "allArchivedRawEventsReportsAndResourcesReconstructedExactly": True,
+        "fullPythonOrAndroidOrNativeRerun": False,
+        "limits": "Unchanged runtime evidence checkpoint only; all full required combined-main/publication gates remain pending."
+    }
+    e["coordinatorFreshVisualInspection"] = {
+        "role": "author/coordinator adjudication, not independent review",
+        "actualModel": "gpt-6.1-sol",
+        "originalPngPathsViewed": ["docs\\n1-reviews\\batch-104-native-802\\native\\n1-104-drawing-feedback.png"],
+        "observation": "Both practice-not-graded and graded-by-stroke-shapes wording are visible in one delivered900x2000rendition. Matches existing793 shared UI observation; currentGPT low-severity verdict preserved, no article/scheduling defect established or unrelated app edit.",
+        "limits": "ONE capture only, not a new whole-rendered/native/phone/fallbackface acceptance."
+    }
+    m.save(E, e)
+    shutil.copyfile(Path(__file__), D / "checkpoint-rendered-804.py.txt")
+    print("Every archived raw event/report/resource byte reconstructed; all8466 runtime hashes and unchanged manifest verified.")
+
+
+if __name__ == "__main__":
+    {"archive": archive, "finish": finish, "seal": seal}[sys.argv[1]]()
