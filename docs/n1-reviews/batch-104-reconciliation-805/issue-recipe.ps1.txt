@@ -1,0 +1,45 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\22e13902-1eb0-4c55-9dff-c0ffc1cd4248"
+$content = "$control\..\learning-japanese"
+$bodyPath = "$control\batch-104-reconciliation-805-issue-body.txt"
+if ((Test-Path "$log\issue-805-posted.json") -or (Test-Path $bodyPath)) {
+    throw 'Do not duplicate issue update'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0) { throw 'HEAD lookup failed' }
+& "$control\preflight-805.ps1" -ReceiptName 'preflight-805-before-issue.json' -ExpectedContentHead $head
+if ((git -C $content rev-parse 'HEAD^') -ne '67453d22e57739af8f9355d39fba7e251e60e544' -or
+    $LASTEXITCODE -ne 0) { throw 'Wrong evidence ancestry' }
+$e = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-805.json") | ConvertFrom-Json
+if (-not $e.independentRenderedReviewClosed -or -not $e.nativeRouteExecutionAccepted -or
+    $e.runtimeHashesVerified -ne 8466 -or $e.pythonTests -ne 377 -or $e.runtimeChanged -or
+    $e.runtimePublished -or $e.fullBatchAcceptanceComplete) { throw 'Evidence mismatch' }
+$template = [IO.File]::ReadAllText("$control\batch-104-reconciliation-805-issue-template.txt")
+if ([regex]::Matches($template, '\{SIGNED_HEAD\}').Count -ne 1) { throw 'Ambiguous issue template' }
+$body = $template.Replace('{SIGNED_HEAD}', $head)
+[IO.File]::WriteAllText($bodyPath, $body, [Text.UTF8Encoding]::new($false))
+$priorToken = $env:GH_TOKEN
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran)
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant()} |
+        ConvertTo-Json | Set-Content "$log\issue-805-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-805-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or
+        $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or $comment.html_url -cne $url) {
+        throw 'Exact owner/body verification failed'
+    }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $priorToken
+}

@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "execution": 805,
+  "batch": "104",
+  "recordedAt": "2026-11-08T09:07:09.947490+00:00",
+  "stage": "bounded-rendered-native-reconciliation-closed-publication-pending",
+  "startingState": {
+    "execution": 805,
+    "batch": "104",
+    "startedAt": "2026-11-08T08:59:28.460920+00:00",
+    "startingHead": "67453d22e57739af8f9355d39fba7e251e60e544",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "2491799cffe960a7664a6135614b452e24dce459",
+    "scope": "SAME104 bounded final source/rendered/native reconciliation and fresh content checks; signed LOCAL evidence only. No reviewer/native/JVM rerun, runtime edit, publication,105 or second runner.",
+    "request": {
+      "sha256": "c15b47011a5a05f9c4dec25d99913be7b40f9346d785a7ed208fdc58d16edf0c",
+      "bytes": 5655811,
+      "characters": 5586805,
+      "lines": 75465,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and complete persisted checkpoint parsed; operative contract, complete approved issue and final804 directly inspected. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerPreflight": {
+      "execution": 805,
+      "sessionId": "22e13902-1eb0-4c55-9dff-c0ffc1cd4248",
+      "verifiedAt": "2026-11-08T08:58:47.9785586+00:00",
+      "ancestry": [
+        15128,
+        26800,
+        13320
+      ],
+      "liveParentPid": 13320,
+      "coordinatorPid": 26800,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 804,
+      "contentHead": "67453d22e57739af8f9355d39fba7e251e60e544",
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe.",
+      "lockTouched": false
+    },
+    "artifactPathPreflight": "Approved committed source packets/frozen workspace inputs/control helpers only; optional historical-session recipes not accessed.",
+    "status": "acceptance-reconciliation-in-progress",
+    "actualNewPermissionDenials": []
+  },
+  "sourceSnapshot": "67453d22e57739af8f9355d39fba7e251e60e544",
+  "teachingSnapshot": "089a60b2e7f94d57d24758777ba9d586d45209cf",
+  "qualifiedAndroidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+  "freshOriginMain": "2491799cffe960a7664a6135614b452e24dce459",
+  "mainAlreadyAncestor": true,
+  "integrationMergeNecessaryAtCheck": false,
+  "evidenceDirectory": "docs\\n1-reviews\\batch-104-reconciliation-805",
+  "reconciliation": "docs\\n1-reviews\\batch-104-reconciliation-805\\disposition.json",
+  "checks": {
+    "validate": {
+      "archive": "validate.txt.gz",
+      "rawSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "archiveSha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09",
+      "program": "python",
+      "arguments": [
+        "-B",
+        "tools\\validate.py"
+      ],
+      "startedAt": "2026-11-08T09:00:25.4846522+00:00",
+      "completedAt": "2026-11-08T09:01:55.4082232+00:00",
+      "exitCode": 0
+    },
+    "manifest": {
+      "archive": "manifest.txt.gz",
+      "rawSha256": "f2ff30afa81cd4636d04e15a45fb86a4d7e06df9ff60bf491da47fe3f706fd7e",
+      "archiveSha256": "f3d120b0d7afb944a3820c1ec92153125acd974ea7ca1946002c8c36c7423b9f",
+      "program": "python",
+      "arguments": [
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "startedAt": "2026-11-08T09:01:55.4283637+00:00",
+      "completedAt": "2026-11-08T09:02:12.6622940+00:00",
+      "exitCode": 0
+    },
+    "manifest-diff": {
+      "archive": "manifest-diff.txt.gz",
+      "rawSha256": "c1ad3b21cfc148bd5b87f24fd77adb8978ff7dae482fa603ea075dd8e9e733c9",
+      "archiveSha256": "576c8bb171172af5f6b0c7be4f28c63924b76ba2b9564b02cd884e8faa7b336b",
+      "program": "git",
+      "arguments": [
+        "--no-pager",
+        "diff",
+        "--exit-code",
+        "--",
+        "manifest.json"
+      ],
+      "startedAt": "2026-11-08T09:02:12.6720129+00:00",
+      "completedAt": "2026-11-08T09:02:13.4337281+00:00",
+      "exitCode": 0
+    },
+    "tests": {
+      "archive": "tests.txt.gz",
+      "rawSha256": "fe7f145c2e55cf346fbe6a32bd4e13905c30b86ce5dd147aede88bda6f02b9dc",
+      "archiveSha256": "8ce9587f6fc1d19afa59591125ea6f1d1221f4ce4cbdd44f8a28656c71a84334",
+      "program": "python",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py"
+      ],
+      "startedAt": "2026-11-08T09:02:13.4549804+00:00",
+      "completedAt": "2026-11-08T09:04:45.9441518+00:00",
+      "exitCode": 0
+    },
+    "batch-audit": {
+      "archive": "batch-audit.txt.gz",
+      "rawSha256": "9a9e986d09048c717f738f1fe775643ce3e46c812fd1cb4f75e418ff930f8cb3",
+      "archiveSha256": "82626b52c52973e202ae2a68318b43c57347bbeedb844925431f2d4b7e3e0f89",
+      "program": "python",
+      "arguments": [
+        "-B",
+        "tools\\audit_n1_batch.py",
+        "--batch",
+        "104"
+      ],
+      "startedAt": "2026-11-08T09:04:45.9563151+00:00",
+      "completedAt": "2026-11-08T09:04:53.6566176+00:00",
+      "exitCode": 0
+    },
+    "vocabulary": {
+      "archive": "vocabulary.txt.gz",
+      "rawSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "archiveSha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969",
+      "program": "python",
+      "arguments": [
+        "-B",
+        "tools\\grammar_vocabulary.py",
+        "check"
+      ],
+      "startedAt": "2026-11-08T09:04:53.6592245+00:00",
+      "completedAt": "2026-11-08T09:04:54.3735876+00:00",
+      "exitCode": 0
+    },
+    "budget": {
+      "archive": "budget.txt.gz",
+      "rawSha256": "1254df27355fb8a259df7dd97afe860d4b7ce37942f74052aa9e41400e43cd92",
+      "archiveSha256": "c9f2af93d4500f677d678121ed06c9e41d907ef79ae6095fff1bba04d65fa741",
+      "program": "python",
+      "arguments": [
+        "-B",
+        "tools\\check_content_budget.py"
+      ],
+      "startedAt": "2026-11-08T09:04:54.3768276+00:00",
+      "completedAt": "2026-11-08T09:05:06.5551668+00:00",
+      "exitCode": 0
+    },
+    "whitespace": {
+      "archive": "whitespace.txt.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "program": "git",
+      "arguments": [
+        "--no-pager",
+        "diff",
+        "--check"
+      ],
+      "startedAt": "2026-11-08T09:05:06.5576294+00:00",
+      "completedAt": "2026-11-08T09:05:06.6801948+00:00",
+      "exitCode": 0
+    }
+  },
+  "pythonTests": 377,
+  "validatorErrors": 0,
+  "batchAudit": {
+    "batch": "104",
+    "baseCommit": "2491799cffe960a7664a6135614b452e24dce459",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 0,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 1,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 27,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "a5bc9b199c7df334",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "vocabularyCoverage": "2122/2431 reviewed prompts; stage=pilot, not corpus-completeness approval",
+  "localBudget": {
+    "files": 8473,
+    "entries": 8488,
+    "retainedBytes": 44413483,
+    "inflatedBytes": 44681821,
+    "localZipBytes": 30312477,
+    "listeningTaskMediaBytes": 5893602,
+    "limits": "Fresh local working-tree budget, not the later exact immutable GitHub ZIP."
+  },
+  "runtimeHashesVerified": 8466,
+  "contentVersion": "a5bc9b199c7df334",
+  "manifestChanged": false,
+  "independentRenderedReviewClosed": true,
+  "independentRenderedReviewClosedScope": "Delivered900x2000 rendition only; recovered serial source confirmations with original protocol deviation preserved. No original-pixel/equal-comprehension/retention/fallback-face certification.",
+  "nativeRouteExecutionAccepted": true,
+  "nativeEvidenceExecution": 802,
+  "nonSkippedHostAcceptanceInheritedFrom": 800,
+  "newReviewerProcesses": 0,
+  "freshNativeOrJvmExecuted": false,
+  "fullBatchAcceptanceComplete": false,
+  "runtimeAcceptedForPublication": false,
+  "runtimeChanged": false,
+  "runtimePublished": false,
+  "reviewClosed": [],
+  "published": [],
+  "publishedAdditions": 130,
+  "remainingAdditions": 1098,
+  "lastPublishedCommit": "2491799cffe960a7664a6135614b452e24dce459",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "nextAction": "SAME104 reviewed signed acceptance/publication ledger reconciliation, then fresh-current-main gate and normal signed owner fast-forward publication. Read execution805 and final disposition; inherit unchanged HOST800/native802 and source803/serial recovered original804 confirmations without rerunning unchanged evidence. Preserve original overlap, low-risk hypotheses, GPT shared-UI wording NEEDS FIX and nonblocking out-of-scope disposition, delivered-scale/retention/fallback-face/phone limits. Merge current main nonrewriting if needed, regenerate/revalidate combined content and independently confirm changed substantive teaching. All original Python/vocabulary/baseline-membership-links/manifest-budget/signing/owner-identity/CI/exact immutable ZIP every-runtime-hash/per-file/path/media/18000entries42MiBcompressed80MiBinflated56MiBretained gates remain. No105 or delivery credit until verified publication and durable checkpoint. Project incomplete."
+}

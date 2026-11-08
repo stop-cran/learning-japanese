@@ -1,0 +1,31 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\22e13902-1eb0-4c55-9dff-c0ffc1cd4248"
+& "$control\preflight-805.ps1" -ReceiptName 'preflight-805-before-checks.json'
+Set-Location "$control\..\learning-japanese"
+$checks = @(
+    @{Name='validate'; Program='python'; Arguments=@('-B', 'tools\validate.py')},
+    @{Name='manifest'; Program='python'; Arguments=@('-B', 'tools\build_manifest.py')},
+    @{Name='manifest-diff'; Program='git'; Arguments=@('--no-pager', 'diff', '--exit-code', '--', 'manifest.json')},
+    @{Name='tests'; Program='python'; Arguments=@('-B', '-m', 'unittest', 'discover', '-s', 'tools', '-p', 'test_*.py')},
+    @{Name='batch-audit'; Program='python'; Arguments=@('-B', 'tools\audit_n1_batch.py', '--batch', '104')},
+    @{Name='vocabulary'; Program='python'; Arguments=@('-B', 'tools\grammar_vocabulary.py', 'check')},
+    @{Name='budget'; Program='python'; Arguments=@('-B', 'tools\check_content_budget.py')},
+    @{Name='whitespace'; Program='git'; Arguments=@('--no-pager', 'diff', '--check')}
+)
+$results = @()
+foreach ($check in $checks) {
+    $target = "$log\805-$($check.Name).txt"
+    if (Test-Path $target) { throw 'Do not overwrite check evidence' }
+    $start = [DateTimeOffset]::UtcNow.ToString('o')
+    & $check.Program @($check.Arguments) *> $target
+    $code = $LASTEXITCODE
+    $results += [ordered]@{
+        name=$check.Name; program=$check.Program; arguments=$check.Arguments
+        startedAt=$start; completedAt=[DateTimeOffset]::UtcNow.ToString('o')
+        exitCode=$code; output=$target
+    }
+    $results | ConvertTo-Json -Depth 6 | Set-Content "$log\checks-805.json" -Encoding utf8NoBOM
+    Write-Output "$($check.Name): exit $code"
+    if ($code -ne 0) { throw "Required check failed: $($check.Name); preserve and inspect." }
+}

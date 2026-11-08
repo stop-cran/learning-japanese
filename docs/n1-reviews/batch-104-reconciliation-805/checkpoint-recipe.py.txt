@@ -1,0 +1,482 @@
+"""Reconcile preserved batch104 evidence without changing runtime content."""
+import base64
+import copy
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+L = C / "logs" / "22e13902-1eb0-4c55-9dff-c0ffc1cd4248"
+D = R / "docs" / "n1-reviews" / "batch-104-reconciliation-805"
+HEAD = "67453d22e57739af8f9355d39fba7e251e60e544"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+MAIN = "2491799cffe960a7664a6135614b452e24dce459"
+VERSION = "a5bc9b199c7df334"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def save(path, value):
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def git(*args, repo=R):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(repo), *args], encoding="utf-8").strip()
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def replace_progress(value, suffix):
+    tmp = C / f"progress.json.805-{suffix}.tmp"
+    assert not tmp.exists()
+    save(tmp, value)
+    assert load(tmp) == value
+    os.replace(tmp, C / "progress.json")
+    assert load(C / "progress.json") == value
+
+
+def prepare():
+    assert git("rev-parse", "HEAD") == HEAD
+    assert git("rev-parse", "origin/main") == MAIN
+    for repo in [R, A]:
+        assert not git("status", "--porcelain", "--untracked-files=all", repo=repo)
+        assert git("log", "-1", "--format=%G?", repo=repo) == "G"
+    assert git("rev-parse", "HEAD", repo=A) == APP
+    before_path = L / "progress-before-805.json"
+    assert not before_path.exists()
+    raw = (C / "progress.json").read_bytes()
+    p = json.loads(raw.decode("utf-8-sig"))
+    assert (p["checkpoint"], p["status"], p["batch"]) == (804, "continue", "104")
+    request_raw = (L / "request.txt").read_bytes()
+    text = request_raw.decode("utf-8-sig")
+    marker = "Current execution checkpoint (complete historical state remains at checkpointHistory paths):"
+    snapshot = json.loads(text.split(marker, 1)[1])
+    assert snapshot["execution804CoordinatorCheckpoint"]["savedCommit"] == HEAD
+    assert snapshot["checkpoint"] == p["checkpoint"]
+    before_path.write_bytes(raw)
+    state = {
+        "execution": 805, "batch": "104", "startedAt": now(),
+        "startingHead": HEAD, "androidHead": APP, "freshOriginMain": MAIN,
+        "scope": "SAME104 bounded final source/rendered/native reconciliation and fresh content checks; signed LOCAL evidence only. No reviewer/native/JVM rerun, runtime edit, publication,105 or second runner.",
+        "request": {
+            "sha256": sha(request_raw), "bytes": len(request_raw),
+            "characters": len(text), "lines": len(text.splitlines()),
+            "completeFileLoadedAndCheckpointParsed": True,
+            "limits": "Entire request loaded/decoded and complete persisted checkpoint parsed; operative contract, complete approved issue and final804 directly inspected. Historical middle parsed, not freshly semantically re-reviewed."
+        },
+        "runnerPreflight": load(L / "preflight-805.json"),
+        "artifactPathPreflight": "Approved committed source packets/frozen workspace inputs/control helpers only; optional historical-session recipes not accessed.",
+        "status": "acceptance-reconciliation-in-progress",
+        "actualNewPermissionDenials": []
+    }
+    assert "execution805StartingState" not in p
+    updated = copy.deepcopy(p)
+    updated["execution805StartingState"] = state
+    assert all(updated[k] == v for k, v in p.items())
+    save(L / "starting-state-805.json", state)
+    replace_progress(updated, "start")
+    print("Starting scope saved; every original historical value preserved.")
+
+
+def runtime():
+    sys.path.insert(0, str(R / "tools"))
+    from build_manifest import build_manifest, sha256
+    manifest = load(R / "manifest.json")
+    assert manifest == build_manifest(R)
+    assert manifest["contentVersion"] == VERSION
+    count = 0
+    for section, entries in manifest.items():
+        if not isinstance(entries, dict):
+            continue
+        for name, expected in entries.items():
+            path = R / Path(*name.split("/"))
+            actual = sha(path.read_bytes()) if section in {
+                "images", "audio", "listeningTaskAudio", "listeningTaskImages"} else sha256(path)
+            assert actual == expected, name
+            count += 1
+    assert count == 8466
+    assert not git("diff", HEAD, "--", "kanji", "words", "articles", "strokes", "manifest.json", "tools")
+    return count
+
+
+def audit():
+    assert git("rev-parse", "HEAD") == HEAD
+    count = runtime()
+    directory = R / "docs" / "n1-reviews" / "batch-104-rendered-804"
+    payloads = load(directory / "image-payload-index.json")
+    archive_rows = load(directory / "archive-integrity.json")
+    restored_events = {}
+    for row in archive_rows:
+        packed = (directory / row["archive"]).read_bytes()
+        assert sha(packed) == row["archiveSha256"]
+        raw = gzip.decompress(packed)
+        if "factoredSha256" in row:
+            assert sha(raw) == row["factoredSha256"]
+            for item in payloads:
+                image = (directory / item["file"]).read_bytes()
+                assert sha(image) == item["sha256"]
+                raw = raw.replace(
+                    ("__N1_IMAGE_PAYLOAD_SHA256_" + item["sha256"] + "__").encode("ascii"),
+                    base64.b64encode(image))
+            label = row["archive"].removesuffix(".jsonl.factored.gz")
+            restored_events[label] = [json.loads(line) for line in raw.splitlines()]
+        assert len(raw) == row["rawBytes"] and sha(raw) == row["rawSha256"]
+    order = load(directory / "process-order.json")
+    process_checks = []
+    for index, row in enumerate(order):
+        label = row["label"]
+        e = json.loads(gzip.decompress((directory / f"{label}-execution.json.gz").read_bytes()))
+        assert row["exitCode"] == 0 and row["processExited"]
+        assert e["allAssignedTextReturned"] and not e["unfinishedTools"] and not e["missingImages"]
+        assert e["actualModels"] == row["actualModels"]
+        assert all(t["success"] and t["name"] == "view" for t in e["toolCalls"])
+        if index:
+            assert datetime.fromisoformat(order[index-1]["completedAt"]) < datetime.fromisoformat(row["startedAt"])
+        if label == "claude":
+            assert e["multiToolResponseCount"] == 1 and len(e["observedToolOverlaps"]) == 1
+        else:
+            assert e["multiToolResponseCount"] == 0 and not e["observedToolOverlaps"]
+        if "repair" in label:
+            assert len(e["toolCalls"]) == 1 and not e["successfulImageOpens"]
+        else:
+            assert len(e["successfulImageOpens"]) == 22
+            assert len({x["path"] for x in e["successfulImageOpens"]}) == 22
+            assert all(p["pngDimensions"] == [900, 2000]
+                       and p["originalPngDimensions"] == [1080, 2400]
+                       and not p["equalsOriginalBytes"]
+                       for image in e["successfulImageOpens"] for p in image["payloads"])
+        events = restored_events[label]
+        assert events
+        process_checks.append({
+            "label": label, "actualModels": e["actualModels"],
+            "terminalExitCode": row["exitCode"], "processExitedAsRecorded": row["processExited"],
+            "allAssignedTextReturned": e["allAssignedTextReturned"],
+            "multiToolResponseCount": e["multiToolResponseCount"],
+            "observedToolOverlaps": e["observedToolOverlaps"],
+            "successfulImageCalls": len(e["successfulImageOpens"]),
+            "eventCount": len(events),
+            "limits": "Fresh mechanical reconstruction of archived execution evidence; not fresh reviewer comprehension or native execution."
+        })
+    host = load(R / "docs" / "n1-sources" / "execution-800.json")
+    assert host["totalTests"] == 5 and host["failures"] == host["errors"] == host["skipped"] == 0
+    import xml.etree.ElementTree as ET
+    host_test_checks = []
+    for test in host["tests"]:
+        raw = (R / test["archive"]).read_bytes()
+        assert sha(raw) == test["sha256"]
+        suite = ET.fromstring(raw)
+        assert int(suite.attrib["tests"]) == test["tests"]
+        assert all(int(suite.attrib[k]) == 0 for k in ["failures", "errors", "skipped"])
+        host_test_checks.append({"name": test["name"], "tests": test["tests"], "sha256": sha(raw)})
+    native = load(R / "docs" / "n1-sources" / "execution-802.json")
+    assert native["nativeAttempt"]["passed"] and native["nativeAttempt"]["terminalSuccessCases"] == 2
+    assert native["nativeAttempt"]["ownedHelperStopped"] and native["nativeAttempt"]["ownedQemuStopped"]
+    assert native["runtime"]["contentVersion"] == VERSION
+    assert native["runtime"]["manifestSha256"] == sha((R / "manifest.json").read_bytes())
+    native_dir = R / "docs" / "n1-reviews" / "batch-104-native-802"
+    native_index = load(native_dir / "artifact-index.json")
+    for row in native_index:
+        packed = (native_dir / Path(*row["file"].split("/"))).read_bytes()
+        assert sha(packed) == row["storedSha256"], row["file"]
+        raw = gzip.decompress(packed) if row["file"].endswith(".gz") else packed
+        assert len(raw) == row["sourceBytes"] and sha(raw) == row["sourceSha256"], row["file"]
+    terminal = gzip.decompress((native_dir / "native" / "instrumentation.txt.gz").read_bytes()).decode("utf-8")
+    assert terminal.count("INSTRUMENTATION_STATUS_CODE: 0") == 2
+    assert terminal.count("INSTRUMENTATION_STATUS_CODE: 1") == 2
+    assert "OK (2 tests)" in terminal and "INSTRUMENTATION_CODE: -1" in terminal
+    route = json.loads(gzip.decompress(
+        (native_dir / "native" / "n1-104-article-route.json.gz").read_bytes()))
+    assert route["passed"] and route["archiveRequests"] == 1
+    assert [route[k] for k in ["importedKanji", "importedWords", "n1Cards", "problems"]] == [1127, 5078, 136, 0]
+    assert route["contentVersion"] == VERSION
+    assert len(route["productionBuilderN1AndAllExactChoices"]) == 64
+    assert len(route["kanjiDirectGuardChecks"]) == 1120
+    assert len(route["nontransitiveNeighborChecks"]) == 320
+    assert len(route["preservedWordGuardChecks"]) == 448
+    assert route["fullOnyomi"] == ["ガイ"] and route["fullKunyomi"] == []
+    assert route["quizOnKeys"] == ["がい"] and route["quizKunKeys"] == []
+    assert route["mappedReciprocalPairs"] == 1 and route["directedLinkTransitions"] == 2
+    assert route["activatedBaselinePairs"] == route["changedReusedArticles"] == 0
+    assert route["soleCuratedOnPersistedGoodAndDone"] and route["reciprocalLinkAndSystemBack"]
+    assert route["touchInjectedReferenceStrokes"] == 8
+    assert route["drawingTraceThenRecall"] and route["drawingGradeRecordedOnNext"] and route["offline"]
+    image_scope = json.loads(gzip.decompress((directory / "image-scope.json.gz").read_bytes()))
+    represented = set()
+    for image in image_scope["images"]:
+        original = Path(image["path"])
+        original.relative_to(native_dir)
+        raw = original.read_bytes()
+        assert sha(raw) == image["sha256"]
+        assert len(raw) == image["bytes"]
+        for path in [image["path"], *image["byteIdenticalAliases"]]:
+            path = Path(path)
+            path.relative_to(native_dir)
+            assert path.read_bytes() == raw
+            assert path not in represented
+            represented.add(path)
+    assert len(represented) == image_scope["originalNativePngPaths"] == 36
+    assert len(image_scope["images"]) == image_scope["distinctByteHashes"] == 22
+    out = {
+        "schemaVersion": 1, "execution": 805, "batch": "104", "recordedAt": now(),
+        "renderedArchiveRowsReconstructedExactly": len(archive_rows),
+        "allOriginalRawBytesAndHashesVerified": True,
+        "processes": process_checks, "allFourProcessesSerialByRecordedTimes": True,
+        "originalClaudeNoncompliancePreserved": True,
+        "newSerialResource03And04ConfirmationsVerified": True,
+        "hostTestXmlFreshlyVerified": host_test_checks,
+        "nativeReceiptTwoTerminalSuccesses": True,
+        "nativeArtifactRowsStoredAndRawHashesVerified": len(native_index),
+        "nativeRawTerminalCase0Count": 2,
+        "nativeActualRouteAssertionsVerified": True,
+        "nativePngAliasPathsVerified": len(represented),
+        "distinctNativePngByteHashes": 22,
+        "runtimeHashesVerified": count, "contentVersion": VERSION,
+        "runtimeChanged": False, "manifestChanged": False,
+        "newReviewerProcesses": 0, "freshAndroidOrNativeExecuted": False,
+        "parentLockTouched": False,
+        "limits": "Hashes establish byte identity, not comprehension. Full batch/publication acceptance is not established by this mechanical audit alone."
+    }
+    save(L / "audit-805.json", out)
+    print(json.dumps({"runtimeHashes": count, "losslessArchiveRows": len(archive_rows),
+                      "hostTests": sum(t["tests"] for t in host_test_checks)}))
+
+
+def seal():
+    assert git("rev-parse", "HEAD") == HEAD
+    assert git("rev-parse", "origin/main") == MAIN
+    subprocess.run(["git", "-C", str(R), "merge-base", "--is-ancestor", MAIN, HEAD], check=True)
+    checks = load(L / "checks-805.json")
+    assert [row["name"] for row in checks] == [
+        "validate", "manifest", "manifest-diff", "tests", "batch-audit",
+        "vocabulary", "budget", "whitespace"]
+    assert all(row["exitCode"] == 0 for row in checks)
+    archived = {}
+    for row in checks:
+        raw = Path(row["output"]).read_bytes()
+        target = D / (row["name"] + ".txt.gz")
+        assert not target.exists()
+        packed = gzip.compress(raw, mtime=0)
+        target.write_bytes(packed)
+        assert gzip.decompress(packed) == raw
+        archived[row["name"]] = {
+            "archive": target.name, "rawSha256": sha(raw), "archiveSha256": sha(packed),
+            "program": row["program"], "arguments": row["arguments"],
+            "startedAt": row["startedAt"], "completedAt": row["completedAt"],
+            "exitCode": row["exitCode"]
+        }
+    test_text = (L / "805-tests.txt").read_text(encoding="utf-8-sig")
+    assert re.search(r"Ran 377 tests in [\d.]+s", test_text) and "\nOK\n" in test_text
+    assert (L / "805-validate.txt").read_text(encoding="utf-8-sig").rstrip().endswith("0 error(s)")
+    batch_audit = load(L / "805-batch-audit.txt")
+    assert batch_audit["exactBaseRuntimePreservedOutsideRecordedChanges"]
+    assert batch_audit["contentVersion"] == VERSION and batch_audit["manifestFresh"]
+    assert batch_audit["requiredReciprocalPairs"] == 1 and batch_audit["changedReusedArticles"] == 0
+    integrity = load(L / "audit-805.json")
+    assert integrity["nativeRawTerminalCase0Count"] == 2 and integrity["nativeActualRouteAssertionsVerified"]
+    assert integrity["nativePngAliasPathsVerified"] == 36
+    assert integrity["allOriginalRawBytesAndHashesVerified"]
+    save(D / "integrity-audit.json", integrity)
+    shutil.copyfile(L / "preflight-805.json", D / "runner-preflight.json")
+    for source, target in [
+        (Path(__file__), D / "checkpoint-recipe.py.txt"),
+        (C / "preflight-805.ps1", D / "preflight-recipe.ps1.txt"),
+        (C / "checks-batch-104-805.ps1", D / "checks-recipe.ps1.txt"),
+        (C / "post-reconciliation-805.ps1", D / "issue-recipe.ps1.txt"),
+        (C / "batch-104-reconciliation-805-issue-template.txt", D / "issue-template.txt")
+    ]:
+        shutil.copyfile(source, target)
+    disposition = load(D / "disposition.json")
+    assert not disposition["acceptanceDecision"]["consequentialUnresolvedTeachingDefects"]
+    assert disposition["acceptanceDecision"]["independentRenderedReviewClosed"]
+    assert not disposition["acceptanceDecision"]["fullBatchAcceptanceComplete"]
+    ledger_path = R / "docs" / "n1-sources" / "batch-104-progress.json"
+    ledger = load(ledger_path)
+    assert ledger["status"] == "batch-104-textual-review-closed-runtime-acceptance-pending"
+    assert ledger["published"] == ledger["reviewClosed"] == []
+    assert "historicalBefore805Reconciliation" not in ledger
+    ledger["historicalBefore805Reconciliation"] = {
+        key: copy.deepcopy(ledger[key]) for key in ["status", "nextAction", "limits", "supportMappings"]}
+    ledger["status"] = "batch-104-bounded-rendered-native-reconciliation-closed-publication-pending"
+    ledger["textualAcceptanceComplete"] = True
+    ledger["independentRenderedReviewClosed"] = True
+    ledger["nativeRouteExecutionAccepted"] = True
+    ledger["finiteSampleSemanticAcceptance"] = "192 exact target-relative sets and live default only"
+    ledger["finalReconciliation"] = "docs/n1-reviews/batch-104-reconciliation-805/disposition.json"
+    ledger["fullBatchAcceptanceComplete"] = False
+    ledger["limits"] = [
+        "Textual799, HOST800, native802, source803 and original-family rendered804 evidence reconciled805; no fresh native/JVM/reviewer run.",
+        "Original Claude804 overlap remains noncompliant; NEW serial resource03/04 confirmations supply affected source coverage, not retroactive acceptance.",
+        "Unproved low-risk hypotheses and calibrated disagreement preserved; shared drawing-feedback UI wording deferred outside content scope.",
+        "Delivered900x2000 readability only; original pixels/equal comprehension/fallback-face/every-request retention UNVERIFIED.",
+        "Current-main signed acceptance/publication record, owner fast-forward push, CI and exact immutable ZIP gates remain mandatory.",
+        "No reviewed/published row credit yet. Physical-phone/general-release and whole-set acceptance outstanding."
+    ]
+    for mapping in ledger["supportMappings"]:
+        mapping["status"] = "textual-and-bounded-rendered-review-closed-publication-pending"
+    ledger["nextAction"] = (
+        "SAME104 reviewed signed acceptance/publication ledger reconciliation, then fresh-current-main gate "
+        "and normal signed owner fast-forward publication. Read execution805 and final disposition; inherit "
+        "unchanged HOST800/native802 and source803/serial recovered original804 confirmations without rerunning "
+        "unchanged evidence. Preserve original overlap, low-risk hypotheses, GPT shared-UI wording NEEDS FIX "
+        "and nonblocking out-of-scope disposition, delivered-scale/retention/fallback-face/phone limits. "
+        "Merge current main nonrewriting if needed, regenerate/revalidate combined content and independently "
+        "confirm changed substantive teaching. All original Python/vocabulary/baseline-membership-links/"
+        "manifest-budget/signing/owner-identity/CI/exact immutable ZIP every-runtime-hash/per-file/path/media/"
+        "18000entries42MiBcompressed80MiBinflated56MiBretained gates remain. No105 or delivery credit until "
+        "verified publication and durable checkpoint. Project incomplete.")
+    save(ledger_path, ledger)
+    count = runtime()
+    evidence = {
+        "schemaVersion": 1, "execution": 805, "batch": "104", "recordedAt": now(),
+        "stage": "bounded-rendered-native-reconciliation-closed-publication-pending",
+        "startingState": load(L / "starting-state-805.json"),
+        "sourceSnapshot": HEAD, "teachingSnapshot": "089a60b2e7f94d57d24758777ba9d586d45209cf",
+        "qualifiedAndroidHead": APP, "freshOriginMain": MAIN,
+        "mainAlreadyAncestor": True, "integrationMergeNecessaryAtCheck": False,
+        "evidenceDirectory": str(D.relative_to(R)), "reconciliation": str((D / "disposition.json").relative_to(R)),
+        "checks": archived, "pythonTests": 377, "validatorErrors": 0, "batchAudit": batch_audit,
+        "vocabularyCoverage": "2122/2431 reviewed prompts; stage=pilot, not corpus-completeness approval",
+        "localBudget": {
+            "files": 8473, "entries": 8488, "retainedBytes": 44413483,
+            "inflatedBytes": 44681821, "localZipBytes": 30312477,
+            "listeningTaskMediaBytes": 5893602,
+            "limits": "Fresh local working-tree budget, not the later exact immutable GitHub ZIP."
+        },
+        "runtimeHashesVerified": count, "contentVersion": VERSION, "manifestChanged": False,
+        "independentRenderedReviewClosed": True,
+        "independentRenderedReviewClosedScope": disposition["acceptanceDecision"]["independentRenderedReviewClosedScope"],
+        "nativeRouteExecutionAccepted": True, "nativeEvidenceExecution": 802,
+        "nonSkippedHostAcceptanceInheritedFrom": 800, "newReviewerProcesses": 0,
+        "freshNativeOrJvmExecuted": False, "fullBatchAcceptanceComplete": False,
+        "runtimeAcceptedForPublication": False, "runtimeChanged": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": MAIN, "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False,
+        "nextBatchStarted": False, "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "nextAction": ledger["nextAction"]
+    }
+    save(R / "docs" / "n1-sources" / "execution-805.json", evidence)
+    print("Bounded reconciliation closed and checks archived; full batch/publication remains pending.")
+
+
+def finish():
+    before = load(L / "progress-before-805.json")
+    current = load(C / "progress.json")
+    assert all(current[key] == value for key, value in before.items())
+    assert set(current) == set(before) | {"execution805StartingState"}
+    assert (current["checkpoint"], current["status"], current["batch"]) == (804, "continue", "104")
+    head = git("rev-parse", "HEAD")
+    assert git("rev-parse", "HEAD^") == HEAD and git("log", "-1", "--format=%G?") == "G"
+    for repo in [R, A]:
+        assert not git("status", "--porcelain", "--untracked-files=all", repo=repo)
+    assert git("rev-parse", "HEAD", repo=A) == APP and git("log", "-1", "--format=%G?", repo=A) == "G"
+    assert git("rev-parse", "origin/main") == MAIN
+    changed = git("diff", "--name-only", HEAD, head).splitlines()
+    assert all(name.startswith("docs/n1-reviews/batch-104-reconciliation-805/") or
+               name in {"docs/n1-sources/execution-805.json", "docs/n1-sources/batch-104-progress.json"}
+               for name in changed)
+    count = runtime()
+    posted, reread = load(L / "issue-805-posted.json"), load(L / "issue-805-reread.json")
+    body = (C / "batch-104-reconciliation-805-issue-body.txt").read_bytes()
+    assert posted["author"] == reread["user"]["login"] == "stop-cran"
+    assert sha(body) == posted["bodySha256"] and body.decode("utf-8") == reread["body"]
+    assert posted["url"] == reread["html_url"]
+    role = load(L / "preflight-805-before-issue.json")
+    assert role["contentHead"] == head and not role["lockTouched"]
+    evidence = load(R / "docs" / "n1-sources" / "execution-805.json")
+    native_rows = load(D / "integrity-audit.json")["nativeArtifactRowsStoredAndRawHashesVerified"]
+    next_action = (
+        f"SAME104 checkpoint805 signed LOCAL final bounded reconciliation HEAD{head}, qualifiedAndroid{APP}. "
+        "Read docs/n1-sources/execution-805.json and docs/n1-reviews/batch-104-reconciliation-805/disposition.json. "
+        "Text799/HOST800/native802/source803/original-family rendered804 reconciled; both new articles CLEAN "
+        "within scope, 192 exact target-relative option sets+LIVEdefault accepted, delivered900x2000/28Han/"
+        "fourfonts/刂versus力/soleガイkeyがい/readings/drawing/articles/onepairtwo directions/Back/offline closed "
+        "BOUNDEDLY. Actual raw native802 TWOcase0/ContentSyncONCE1127kanji5078words136N1zero problems, "
+        "HOST800 non-skipped3RealContent+1RareHan+1focused inherited NOT rerun. OriginalClaude804 resources03+04 "
+        "overlap preservedNONCOMPLIANT; NEW separate original-session serial one-resource03 then04 confirmations "
+        "supply affected scope, NOT retroaccepted. Other5source+22image reads serial; GPTserial2unnecessaryboundary"
+        f"rereads preserved. All52archive rows/EVERYrawstdout bytehash reconstructed, native{native_rows}artifact rows/raw"
+        "terminal/routes/36PNGpaths22exactbytealiases freshly checked805. No image repeats/newblindcredit or "
+        "equal-comprehension claim. OriginalClaude3/GPT1compactions/zero pruningwarnings NOTeveryrequestretention. "
+        "ClaudeLOWunproved劾/偵andLOW-MODERATE弾劾/叱る hypotheses remainunresolved/nonblocking; GPTnoestablished"
+        "directambiguity preserved, no forcedwithdrawal/newguard/modelvotes. FouroptionalpolishareCLAUDE's. "
+        "GPTsharedUIPracticeonlynotgraded/Gradedbystrokeshapes wordingNEEDSFIX low preserved; duplicate793, "
+        "explicitnonblocking/outofscopeUI followup, no unrelatedAndroidedit/inventedprerequisite. "
+        "Fallbackface/original1080x2400pixels/equalcomprehension/everyrequestretention/native-speaker/phone/"
+        "learningeffectivenessUNVERIFIED. Fresh805 validate0/377Python tests/batch104baseline-membership-links/"
+        "vocabulary2122of2431pilot/manifestfresh/budget/whitespacePASS; all8466runtimehashes/contentVersion"
+        "a5bc9b199c7df334/manifest unchanged. Local8488entries/30312477compressed/44681821inflated/44413483retained"
+        " NOT laterimmutableGitHubZIP. NEXT SAME104 reviewed signed acceptance/publication source-row/inventory/"
+        "ledger reconciliation and fresh-current-main publication gate; do not start105. Inherit unchanged "
+        "HOST800/native802/review804, do not repeat allimages or native merely for evidence commits. Fetch "
+        "latest main, nonrewritingmerge if needed, regenerate/revalidate actual combinedtree, original-family "
+        "confirmation for changed substantive teaching. Normal signing/owner command-scoped identity/"
+        "fastforwardpush/remoteSHA/terminalgreenCI/EVERYexactimmutableZIP runtime manifest entryhash/"
+        "18000entries42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue/durable "
+        "fullhistory checkpoint remainMANDATORY before deliverycredit/105. ALL historical804nextAction preserved "
+        "VERBATIM in historicalExecution804Before805Reconciliation; no weakened gate. Fresh signedheads/"
+        "whollyclean/fetchedmain/checkpoint/liveparentancestry/decodedlauncher/exactsession required next. "
+        "Parent13320ownsrunner.lock:nochildacquire/delete/unlock/readprobe; committedsources/frozeninputs/"
+        "approvedcontrolhelpers only; no optionalhistoricalsessionrecipe/newdenial. Preserve/report/yield "
+        "actualnewdenial/signinghang/uncertainownership. Original733/734and799/802/103process/source/rendition/"
+        "ANR/routing/phone limits intact. QualifiedAndroidapprovedpairguard+schemaonly, NOTlatestappmain. "
+        f"Published130/1228/remainder1098/lastpublished{MAIN} unchanged; batch104UNPUBLISHED/fullbatchacceptance"
+        "pending, reviewClosed/published arrays empty. CompatibleAndroid#125+#132required;oldclientsignore. "
+        "Physicalphone/generalrelease/whole-setoutstanding; projectincomplete.")
+    checkpoint = {
+        "schemaVersion": 1, "execution": 805, "checkpoint": 805, "batch": "104",
+        "status": "continue", "stage": "batch-104-bounded-rendered-native-reconciliation-closed-publication-pending",
+        "savedCommit": head, "signature": "G", "qualifiedAndroidHead": APP, "recordedAt": now(),
+        "evidence": "docs/n1-sources/execution-805.json", "issueUpdate": posted["url"],
+        "ownerIssueAuthorAndExactBodyVerified": True, "independentRenderedReviewClosed": True,
+        "independentRenderedReviewClosedScope": evidence["independentRenderedReviewClosedScope"],
+        "nativeRouteExecutionAccepted": True, "pythonTests": 377, "validatorErrors": 0,
+        "runtimeHashesVerified": count, "contentVersion": VERSION,
+        "runtimeChanged": False, "manifestChanged": False, "newReviewerProcesses": 0,
+        "freshNativeOrJvmExecuted": False, "fullBatchAcceptanceComplete": False,
+        "runtimeAcceptedForPublication": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "publishedAdditions": 130, "remainingAdditions": 1098,
+        "lastPublishedCommit": MAIN, "dedicatedWorktreesClean": True,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [], "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False,
+        "nextBatchStarted": False, "nextAction": next_action, "blocker": None,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True
+    }
+    updated = copy.deepcopy(current)
+    allowed = {"checkpoint", "status", "stage", "nextAction", "blocker"}
+    updated["historicalExecution804Before805Reconciliation"] = {k: copy.deepcopy(before[k]) for k in allowed}
+    updated["execution805CoordinatorCheckpoint"] = checkpoint
+    for key in allowed:
+        updated[key] = checkpoint[key]
+    assert all(updated[k] == v for k, v in before.items() if k not in allowed)
+    replace_progress(updated, "finish")
+    saved = load(C / "progress.json")
+    assert all(saved[k] == v for k, v in before.items() if k not in allowed)
+    save(L / "checkpoint-805-verification.json", checkpoint)
+    print(json.dumps({k: checkpoint[k] for k in [
+        "checkpoint", "status", "savedCommit", "issueUpdate",
+        "historicalRootKeysCompared", "allOriginalHistoricalValuesPreserved"]}, indent=2))
+
+
+if __name__ == "__main__":
+    {"prepare": prepare, "audit": audit, "seal": seal, "finish": finish}[sys.argv[1]]()
