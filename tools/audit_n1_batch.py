@@ -30,6 +30,9 @@ def runtime_delta(before, after, additions, changed):
 
     require(metadata_fields(before) == metadata_fields(after),
             "Baseline runtime metadata changed")
+    require({key for key, value in before.items() if isinstance(value, dict)}
+            == {key for key, value in after.items() if isinstance(value, dict)},
+            "Baseline runtime sections changed")
     old, new = payload(before), payload(after)
     require(not old.keys() - new.keys(), "Baseline runtime payload removed")
     require(new.keys() - old.keys() == {("files", name) for name in additions},
@@ -95,6 +98,14 @@ def recorded_pairs(value, label):
 def safe_identifier(value):
     return (isinstance(value, str) and bool(value) and value not in {".", ".."}
             and not any(char in value for char in "/\\:\0"))
+
+
+def activated_baseline_pairs(before, members, candidates):
+    frozen = {(row["kanji"], row["article"]) for row in candidates if row["kanji"] in members}
+    written = {(c, name) for name in before["files"]
+               if name.startswith("words/") and name.endswith(".md")
+               for c in members if c in name[len("words/"):-len(".md")]}
+    return frozen | written
 
 
 def source_plan_packets(folder, batch, plan, source_audit, variant):
@@ -241,7 +252,7 @@ def audit_pinned_strokes(root, folder, batch, c, meta, source_row, snapshot, pla
             f"Stroke geometry differs from pinned converter output: {c}")
 
 
-def audit_source_plan(root, batch, ledger, frozen, members, commit, source, before, current):
+def audit_source_plan(root, batch, ledger, frozen, members, commit, source, before, current, candidates):
     folder = root / "docs" / "n1-sources"
     required_fields(frozen, {"sourceRows"}, "Source-plan frozen membership")
     require(len(members) == 1 and safe_identifier(members[0]) and len(members[0]) == 1,
@@ -417,6 +428,7 @@ def audit_source_plan(root, batch, ledger, frozen, members, commit, source, befo
             and isinstance(word_meta["kanji"], list)
             and all(isinstance(item, str) and len(item) == 1 for item in word_meta["kanji"])
             and len(word_meta["kanji"]) == len(set(word_meta["kanji"]))
+            and all(item in word_meta["word"] for item in word_meta["kanji"])
             and "jlpt" not in word_meta, "Support word identity or exclusions differ")
     if variant == "current":
         selected_ids = [word_plan["entryId"]]
@@ -432,8 +444,11 @@ def audit_source_plan(root, batch, ledger, frozen, members, commit, source, befo
     pairs = recorded_pairs(plan_pairs, "source-plan reciprocal pairs")
     require(pairs == recorded_pairs(draft["allMappedPairs"], "draft reciprocal pairs"),
             "Reciprocal mappings differ")
-    component_pairs = {(component, word_article) for component in word_meta["kanji"]
-                       if f"kanji/{component}.md" in current["files"]}
+    written_cards = {component for component in word_meta["word"]
+                     if f"kanji/{component}.md" in current["files"]}
+    require(c in written_cards and written_cards <= set(word_meta["kanji"]),
+            f"Support word metadata omits a written kanji card: {word_article}")
+    component_pairs = {(component, word_article) for component in written_cards}
     require(set(pairs) == component_pairs
             and all(component in members or f"kanji/{component}.md" in before["files"]
                     for component, _ in pairs), "Reciprocal mappings do not cover existing components")
@@ -458,8 +473,7 @@ def audit_source_plan(root, batch, ledger, frozen, members, commit, source, befo
             and set(actual_directions) == expected_directions
             and draft.get("requiredLinkDirectionsVerified") == len(expected_directions),
             "Required reciprocal link directions differ")
-    candidates = json.loads((folder / "baseline-word-candidates.json").read_text(encoding="utf-8"))
-    activated = {(row["kanji"], row["article"]) for row in candidates if row["kanji"] in members}
+    activated = activated_baseline_pairs(before, members, candidates)
     require(activated <= set(pairs)
             and set(recorded_pairs(planned_activated, "planned activated pairs")) == activated
             and set(recorded_pairs(draft["activatedBaselinePairs"], "draft activated pairs")) == activated,
@@ -630,12 +644,18 @@ def audit(root, batch):
     for row in frozen["members"]:
         require(source[row["kanji"]]["sourceRow"] == row["sourceRow"],
                 "Frozen source-row identity changed")
+    candidates_name = "docs/n1-sources/baseline-word-candidates.json"
+    candidates_text = (root / candidates_name).read_text(encoding="utf-8")
+    require(candidates_text == base_file(root, commit, candidates_name).replace("\r\n", "\n"),
+            "Immutable baseline word candidates changed")
+    candidates = json.loads(candidates_text)
     current = build_manifest(root)
     require(json.loads((root / "manifest.json").read_text(encoding="utf-8")) == current,
             "Manifest is stale")
     before = json.loads(base_file(root, commit, "manifest.json"))
     if "supportMappings" not in ledger:
-        return audit_source_plan(root, batch, ledger, frozen, members, commit, source, before, current)
+        return audit_source_plan(root, batch, ledger, frozen, members, commit, source, before, current,
+                                 candidates)
     mappings = ledger["supportMappings"]
     pairs = {(r["kanji"], r["article"]) for r in mappings}
     recorded_pairs = [tuple(p) for p in ledger["requiredReciprocalPairs"]]
@@ -675,8 +695,7 @@ def audit(root, batch):
         require(f"(../kanji/{c}.md)" in (root / name).read_text(encoding="utf-8")
                 and f"(../{name})" in (root / f"kanji/{c}.md").read_text(encoding="utf-8"),
                 f"Missing reciprocal link: {c} / {name}")
-    candidates = json.loads((folder / "baseline-word-candidates.json").read_text(encoding="utf-8"))
-    activated = {(r["kanji"], r["article"]) for r in candidates if r["kanji"] in members}
+    activated = activated_baseline_pairs(before, members, candidates)
     require(activated <= pairs, "Activated baseline pair missing from mappings")
     decisions = ledger["readingDispositions"]
     identities = [(r["kanji"], r["kind"], r["reading"]) for r in decisions]

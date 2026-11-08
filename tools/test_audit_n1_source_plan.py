@@ -10,7 +10,7 @@ from unittest.mock import patch
 import yaml
 
 import generate_strokes
-from audit_n1_batch import audit, runtime_delta
+from audit_n1_batch import activated_baseline_pairs, audit, runtime_delta
 from build_manifest import build_manifest
 from freeze_n1_sources import KVG_REVISION
 
@@ -89,6 +89,8 @@ class N1SourcePlanAuditTest(unittest.TestCase):
             "manifest.json": json.dumps(before),
             source_name: (self.root / source_name).read_text(encoding="utf-8"),
             snapshot_name: (self.root / snapshot_name).read_text(encoding="utf-8"),
+            "docs/n1-sources/baseline-word-candidates.json": (
+                self.folder / "baseline-word-candidates.json").read_text(encoding="utf-8"),
             "tools/order_variants.json": (self.root / "tools" / "order_variants.json").read_text(
                 encoding="utf-8"),
             "kanji/乙.md": (self.root / "kanji" / "乙.md").read_text(encoding="utf-8"),
@@ -325,6 +327,14 @@ class N1SourcePlanAuditTest(unittest.TestCase):
             runtime_delta(before, {key: value for key, value in after.items()
                                    if key != "baseLanguage"}, set(), set())
 
+    def test_runtime_delta_rejects_empty_section_additions_and_removals(self):
+        before = {"schemaVersion": 1, "contentVersion": "old", "files": {}}
+        after = {**before, "contentVersion": "new"}
+        with self.assertRaisesRegex(ValueError, "Baseline runtime sections changed"):
+            runtime_delta(before, {**after, "unexpectedSection": {}}, set(), set())
+        with self.assertRaisesRegex(ValueError, "Baseline runtime sections changed"):
+            runtime_delta({**before, "emptySection": {}}, after, set(), set())
+
     def test_rejects_extra_text_in_recorded_baseline_edit(self):
         self.make_fixture("current")
         path = self.root / "kanji" / "乙.md"
@@ -365,6 +375,26 @@ class N1SourcePlanAuditTest(unittest.TestCase):
         self.write_json(plan_path, plan)
         self.write_json(draft_path, draft)
         with self.assertRaisesRegex(ValueError, "do not cover existing components"):
+            self.run_audit()
+
+    def test_rejects_omitted_written_component_and_reciprocal_link(self):
+        self.make_fixture("current")
+        self.edit_meta(self.word_article, {"kanji": [self.kanji]})
+        path = self.root / self.word_article
+        path.write_text(path.read_text(encoding="utf-8").replace(
+            "[乙](../kanji/乙.md)", "乙"), encoding="utf-8")
+        plan_path, draft_path = self.file("source-completion-plan"), self.file("draft-audit")
+        plan = json.loads(plan_path.read_text(encoding="utf-8"))
+        draft = json.loads(draft_path.read_text(encoding="utf-8"))
+        plan["supportPlan"]["newNecessary"][0]["kanji"] = [self.kanji]
+        plan["linkPlan"]["allMappedPairs"] = plan["linkPlan"]["allMappedPairs"][:1]
+        plan["linkPlan"]["requiredDirections"] = plan["linkPlan"]["requiredDirections"][:2]
+        draft["allMappedPairs"] = draft["allMappedPairs"][:1]
+        draft["requiredLinkDirectionsVerified"] = 2
+        self.write_json(plan_path, plan)
+        self.write_json(draft_path, draft)
+        self.sync_runtime()
+        with self.assertRaisesRegex(ValueError, "Support word metadata omits a written kanji card"):
             self.run_audit()
 
     def test_rejects_restricted_spelling_reading_pair(self):
@@ -511,8 +541,42 @@ class N1SourcePlanAuditTest(unittest.TestCase):
 
     def test_rejects_missing_activated_baseline_pair(self):
         self.make_fixture("current")
-        self.write_json(self.folder / "baseline-word-candidates.json",
+        path = self.folder / "baseline-word-candidates.json"
+        self.write_json(path,
                         [{"kanji": "甲", "article": "words/既存.md"}])
+        self.base_files["docs/n1-sources/baseline-word-candidates.json"] = path.read_text(
+            encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Activated baseline pair missing"):
+            self.run_audit()
+
+    def test_rejects_altered_frozen_candidate_inventory(self):
+        self.make_fixture("current")
+        self.base_files["docs/n1-sources/baseline-word-candidates.json"] = json.dumps(
+            [{"kanji": self.kanji, "article": "words/既存.md"}], ensure_ascii=False)
+        with self.assertRaisesRegex(ValueError, "Immutable baseline word candidates changed"):
+            self.run_audit()
+
+    def test_accepts_crlf_frozen_candidate_blob(self):
+        self.make_fixture("current")
+        name = "docs/n1-sources/baseline-word-candidates.json"
+        self.base_files[name] = self.base_files[name].replace("\n", "\r\n")
+        self.assertEqual(self.run_audit()["activatedBaselinePairs"], 0)
+
+    def test_prior_support_words_and_frozen_candidates_are_both_activated(self):
+        before = {"files": {"words/甲別.md": "a", "words/別.md": "b", "kanji/甲.md": "c"}}
+        candidates = [{"kanji": "甲", "article": "words/既存.md"},
+                      {"kanji": "乙", "article": "words/別.md"}]
+        self.assertEqual(activated_baseline_pairs(before, ["甲"], candidates),
+                         {("甲", "words/既存.md"), ("甲", "words/甲別.md")})
+
+    def test_rejects_unregistered_previously_added_support_word(self):
+        self.make_fixture("current")
+        name = "words/甲別.md"
+        self.article(name, {"word": "甲別", "kanji": ["甲", "別"]}, "Existing support.\n")
+        before = json.loads(self.base_files["manifest.json"])
+        before["files"][name] = build_manifest(self.root)["files"][name]
+        self.base_files["manifest.json"] = json.dumps(before)
+        self.sync_runtime()
         with self.assertRaisesRegex(ValueError, "Activated baseline pair missing"):
             self.run_audit()
 
