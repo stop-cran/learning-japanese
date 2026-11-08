@@ -1,0 +1,32 @@
+{
+  "execution": 810,
+  "sessionId": "595bb5b4-8cc4-4f57-bcb1-4b31d3c6e957",
+  "verifiedAt": "2026-11-08T09:53:37.2332928+00:00",
+  "chain": [
+    {
+      "pid": 5280,
+      "parent": 26092,
+      "name": "pwsh.exe"
+    },
+    {
+      "pid": 26092,
+      "parent": 13320,
+      "name": "copilot.exe"
+    },
+    {
+      "pid": 13320,
+      "parent": 7476,
+      "name": "pwsh.exe"
+    }
+  ],
+  "liveParentPid": 13320,
+  "coordinatorPid": 26092,
+  "decodedLauncher": "& { try { [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false) } catch {}; try { if (Microsoft.PowerShell.Utility\\Get-Variable -Name PSStyle -ErrorAction Ignore) { $PSStyle.OutputRendering = 'PlainText' } } catch {}; $global:LASTEXITCODE = 0; $__copilotCommandFinished = $false; $__copilotSuccess = $false; try { $global:LASTEXITCODE = 0\n& C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1 -ValidateOnly; if ($LASTEXITCODE -ne 0) { throw 'Runner input validation failed' }; & C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1\n$__copilotSuccess = $?\n$__copilotCommandFinished = $true\n } finally { if ($__copilotCommandFinished) { if (-not $__copilotSuccess -and $LASTEXITCODE -is [int] -and $LASTEXITCODE -ne 0) { $host.SetShouldExit($LASTEXITCODE) } elseif (-not $__copilotSuccess) { $host.SetShouldExit(1) } else { $host.SetShouldExit(0) } } } } *>&1 | Microsoft.PowerShell.Utility\\Out-File -LiteralPath 'C:\\Users\\stop-\\AppData\\Local\\Temp\\copilot-detached-n1-sequential-runner-v105-1794118903815-af1db93e-7c23-4507-9ecc-1dababcea28d.log' -Encoding utf8",
+  "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+  "checkpoint": 809,
+  "contentHead": "27e252daa091e21c907ff6799818f6b2da74c7aa",
+  "exactSignedHeadsVerified": true,
+  "worktreeCheck": "Initially wholly clean; only accounted batch105 review evidence permitted thereafter; runtime and Android clean.",
+  "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe.",
+  "lockTouched": false
+}
