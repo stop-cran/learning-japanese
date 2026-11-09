@@ -27,14 +27,29 @@
     "beforeText": "quiz_exclusions: [計算, 支払う, 給与, 払う, 代金]",
     "afterText": "quiz_exclusions: [計算, 支払う, 給与, 払う, 代金, 料金]",
     "reason": "The preserved reviewer disagreement concerns whether the displayed bill and charge labels can both describe an amount owed. JMdict 1210750 sense 2 supplies bill/check/account/payment; 1554280 sense 1 supplies fee/charge/fare. Given the context-free prompts and actual reduced-pool reachability, the coordinator adopts the direct pair conservatively without claiming full synonymy or using a transitive relationship through 代金.",
-    "reviewStatus": "The narrow final correction and its evidence require confirmation by both original reviewers."
+    "reviewStatus": "Both original reviewers confirmed this narrow final correction on signed checkpoint 0b6be1de66c9681b208ee2d27f0253baed4052cc."
   },
   "otherUnresolvedFindings": [
     "定 and 違 have pre-existing raw-reading explanation gaps; 違 offers an unexplained distinct たが.う stem. Neither gap is claimed fixed or CLEAN.",
     "The pre-existing 支払う/支払 pay/payment pairing is unchanged. The reviewers disagree on whether its context-free ambiguity merits a direct guard; it is not represented as newly introduced or fixed."
   ],
   "compatibility": "Direct exclusions are symmetric and non-transitive on compatible Android clients. Older clients ignore these metadata fields. Reduced pools may return fewer options; no global semantic-uniqueness claim is made.",
-  "reviewerConfirmationsOfFinalCorrection": "pending",
+  "reviewerConfirmationsOfFinalCorrection": {
+    "snapshot": "0b6be1de66c9681b208ee2d27f0253baed4052cc",
+    "commonPacketSha256": "f34afd2db7b4e523f9a8cce2694ec6f90afa844f9e2dd43ac028b7eb90861f4f",
+    "provenance": "confirmation-provenance.json",
+    "claude": {
+      "report": "confirmation-claude.md",
+      "sha256": "104deff0e2cba6d3a9cbb10f0ec9ea25434848beb25adcb49703d767c7881ee3",
+      "disposition": "Acceptable conservative safeguard, medium-high confidence. The prior judgment that the guard was optional remains unchanged; losing a hard-but-fair contrast is an editorial cost, not a defect."
+    },
+    "gpt": {
+      "report": "confirmation-gpt.md",
+      "sha256": "f2a91743033b9f00a13f12a362403ef61707260c0dfe8f93ef14622405f975ef",
+      "disposition": "Acceptable conservative safeguard, medium-high confidence; the previously identified fee-pair finding is resolved."
+    },
+    "coordinatorDisposition": "Accept the direct pair as a precaution against a contextual bill/charge overlap, not as unrestricted synonymy or a transitive inference. Both confirmations preserve the earlier disagreement about necessity and report no material omission in this bounded correction."
+  },
   "nativeAndPublicationAcceptance": "pending",
   "published": false
 }
