@@ -1,0 +1,40 @@
+{
+  "batch": "107",
+  "contentVersion": "f7fbaaa4b8e78194",
+  "androidSnapshot": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+  "fullHost847": {
+    "realContentTests": 3,
+    "batchSpecificTests": 1,
+    "rareHanTests": 1,
+    "skipped": 0,
+    "commandReceiptSha256": "9cf8d21c480397a73447cfd54bcb4969c34a0091534dd79c0d11d2d3152a9156",
+    "successReceiptSha256": "53c580354c9b132c939387a426d126f9deab7da4b387c9eb8994c0ee41a0adbf",
+    "realContentXmlSha256": "042bc0f9c2cc6a583d002ffdda0fc2558b30e75a3bd10149e915a34423a1cd39",
+    "batchSpecificXmlSha256": "927767a3457a3fc6d7352877780807d866889bef5826ed8ad05aa8968a81299c",
+    "rareHanXmlSha256": "68dcc2739d1fcbfb66220784b977aeeb977be0fa59e5b2853fa06ce02cf979a4"
+  },
+  "targetedHost848": {
+    "reason": "The already passing evidence test was refactored to run legacy checks once rather than redundantly inside unrelated loops; production content was unchanged.",
+    "batchSpecificTests": 1,
+    "skipped": 0,
+    "testSourceWorkingCopySha256": "f14f28fd68e7f9326e5de7e4b6534f59cfe1953a8ed7a9c41ccb115cc8778dfe",
+    "testSourceLfNormalizedSha256": "37eb13915e399b58ffcea08cbc8302b0c5d1b127a5752de1873a72c10f78d765",
+    "injectWorkingCopySha256": "304d5e7eb8341f3b9f5142fe353a8e71e856b22d3587d53895d0277c08e04394",
+    "injectLfNormalizedSha256": "570dcc361a132eb0e4c36bcb70ae00fb215cd23d6bf68456aa622677a0fc1182",
+    "commandReceiptSha256": "b5327a19601babfd299fa3b4b50b7e1d82ea21010400d80ea266285d5e98f27d",
+    "successReceiptSha256": "d6bfcd0dd5f66d8c1336f925de8abc8ce8d4601cea0321461f23c4b8e8f407be",
+    "batchSpecificXmlSha256": "69031dac510510f4e73a400c0f4a63568c2478fff630e3bf69bc3c55ff025c17"
+  },
+  "testedBehavior": {
+    "wordPairs": ["勘/感覚", "勘定/支払う", "勘定/給与"],
+    "wordPools": ["all", "custom", "reduced", "unguarded control"],
+    "wordDirections": ["Japanese to English", "English to Japanese"],
+    "kanjiPools": ["N1", "all", "custom", "reduced"],
+    "legacyIncomingFallbacks": ["人", "休", "何", "入", "出", "口", "女", "日", "月", "男", "買"],
+    "legacyFallbackObservation": "In the printed seed-0 examples, 勘's intuition; hunch label is distinct from the eleven legacy target labels; this is a bounded sample, not proof of global semantic uniqueness.",
+    "legacyPaymentControl": "At seed 0, 支払う and 支払 appear together in both directions with exactly the same options before and after the batch guards. This pre-existing potential noun/verb ambiguity is not represented as fixed or newly introduced.",
+    "legacyOfferedKunReadings": {"定": ["さだ.める"], "違": ["ちが.う", "たが.う"]}
+  },
+  "rawEvidence": "Full host logs, command receipts and XML remain local by the hashes above. The evidence test and injection script are included here for reproduction; staged LF-normalized bytes equal the tested working copies after CRLF-to-LF normalization.",
+  "limits": "Host tests and bounded option sampling only. Independent correction confirmation, native/rendered behavior, physical-phone acceptance, merged-tree verification, publication and global semantic safety remain separate."
+}

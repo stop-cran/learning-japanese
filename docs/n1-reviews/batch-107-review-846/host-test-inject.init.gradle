@@ -1,0 +1,9 @@
+gradle.projectsEvaluated {
+    def core = gradle.rootProject.findProject(':core')
+    if (core == null) throw new GradleException('Missing Android core project')
+    def source = System.getenv('BATCH107_TEST_SOURCE')
+    if (source == null || !new File(source).isDirectory()) {
+        throw new GradleException('Missing batch 107 external test source directory')
+    }
+    core.extensions.getByName('kotlin').sourceSets.getByName('test').kotlin.srcDir(new File(source))
+}

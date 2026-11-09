@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "batch": "107",
+  "reviewedSnapshot": "6614e06e602f1cec6b894052812178b57c8890cb",
+  "signedSourceSnapshot": "dfed2c150d7fe921aacdb1d616ff527df1935f3b",
+  "preReconciliationEvidenceCommit": "9d2827257c38e556404d5b585a1911bb5c596e37",
+  "originalSnapshotReauditSha256": "4df7e8bcfb0056da62f8f21fce19af8eb445e04a9d3f3befdbf231cbdd134b1a",
+  "initialPostReviewAuditAttempt": "The first incremental audit stopped before writing a receipt because the coordinator omitted one hexadecimal digit when transcribing the fresh original-audit hash. After correcting that typo, the next attempt stopped because the audit incorrectly rejected the already signed execution-845 denial-evidence addition. The audit now permits only that exact addition, checks it against its signed evidence commit and still rejects other source changes. The original receipt and source evidence were not changed; the six focused negative tests passed on both attempts.",
+  "initialReviews": {
+    "commonPacketSha256": "8511ec0650e0cac7c9993997a3c40d5182611511d34bfaf042d0a583d8afacca",
+    "commonPacketUtf8Bytes": 355211,
+    "promptSha256": "05939b565afedac6a15e1b29f6739ced40017bb561b38010648170621370648c",
+    "claude": {
+      "model": "claude-opus-5.5",
+      "report": "initial-claude.md",
+      "reportSha256": "cbdb51646a4b873c361b8b67170ea63b42ee508069b51693ddd943ab6c8da1b2",
+      "readScope": "Authenticated the detached snapshot and read the complete common packet using serial view calls; initial verdicts and limits are in the original report."
+    },
+    "gpt": {
+      "model": "gpt-6.1-sol",
+      "report": "initial-gpt.md",
+      "reportSha256": "ed0a3ca65d402eb7e02031be9268a5c5ed09fc1f8176b3f49d0a9ad7884da18d",
+      "readScope": "Authenticated the same detached snapshot and read the same complete common packet using serial view calls; findings and limits are in the original report.",
+      "canceledFirstAttempt": "The coordinator canceled an earlier HEAD permission prompt because of an incorrect interpretation of its scope. The CLI recorded a rejection, but the owner did not personally reject it; that attempt read no packet and produced no review. The same reviewer was resumed after the coordinator verified the existing read-only grant and the approve-once semantics. No remembered or directory-wide permission was granted."
+    },
+    "rawEvidencePrivacy": "Exact original prompt, packet, event logs and path-bearing provenance are retained locally by their recorded hashes; raw session events are not published. The explicitly labeled, reversibly path-redacted prompt and compressed packet copies are described in sanitized-inputs-provenance.json and were not the bytes the reviewers read."
+  },
+  "postReviewExclusionExceptions": [
+    {
+      "article": "words/勘.md",
+      "otherArticles": ["words/感覚.md"],
+      "before": [],
+      "after": ["感覚"],
+      "beforeText": "tags: [kango, noun, thinking]\n---",
+      "afterText": "tags: [kango, noun, thinking]\nquiz_exclusions: [感覚]\n---",
+      "reason": "JMdict 1210590 sense 1 includes perception and intuition; 1212330 sense 1 includes sense, sensation, feeling and intuition. The displayed choices intuition; hunch and sense; sensation can both describe intuitive sense. Both initial reviewers identified this risk; the compatible production builder applies a direct pair symmetrically.",
+      "reviewStatus": "Initial reviewers identified the risk; confirmation of the exact correction is pending."
+    },
+    {
+      "article": "words/勘定.md",
+      "otherArticles": ["words/支払う.md", "words/給与.md"],
+      "before": ["計算"],
+      "after": ["計算", "支払う", "給与"],
+      "beforeText": "quiz_exclusions: [計算]",
+      "afterText": "quiz_exclusions: [計算, 支払う, 給与]",
+      "reason": "JMdict 1210750 sense 2 includes payment of a bill and settlement of an account with noun/suru-verb and transitive uses; 1310300 sense 1 is to pay. Pay is a defensible alternative for the payment use of 勘定する. This supersedes the original source-plan conclusion that no payment guard was needed; the signed source plan is retained unchanged. A real production-builder sample also presented 給与's label pay; provision of money or goods alongside 勘定. Frozen JMdict 1230350 sense 1 gives pay, salary and wages; sense 2 gives allowance, grant, supply and providing with. The added direct guard conservatively avoids a context-free pay ambiguity without claiming that salary and a restaurant bill are synonyms. The existing 給与 article already directly excludes 支払 and 支払う.",
+      "reviewStatus": "The 支払う risk was identified in the initial GPT review; 給与 was observed during production checks. Confirmation of both exact safeguards by the original reviewers is pending."
+    }
+  ],
+  "legacyReadingFindings": [
+    {
+      "article": "kanji/定.md",
+      "status": "pre-existing authoring-guidance gap; unresolved outside this batch",
+      "disposition": "The raw reading さだ.か has no individual table row. The authoring instructions say every kunyomi should be explained; the separate linked-word-row check applies only to explicit curated selections and the broader validator currently ratchets N5/N4. The production legacy reader deduplicates by stem and offers さだ.める rather than separately offering さだ.か. That limits the observed quiz effect but does not satisfy the broader authoring guidance. No new batch-107 teaching or metadata caused the omission; it is not represented as fixed."
+    },
+    {
+      "article": "kanji/違.md",
+      "status": "pre-existing pedagogical gap; unresolved outside this batch",
+      "disposition": "The legacy list contains ちが.える, -ちが.える, たが.う and たが.える without separate explanations; the article's selective-table notice does not explain them. The production legacy reader offers the distinct たが.う stem alongside ちが.う. Frozen JMdict 2109290 supports 違う たがう as differ or run counter to, but the other omitted allocations still need source review. The batch adds only a sourced 勘違い component example, not these older readings. Further explanation requires separately scoped source review; this gap is not claimed fixed or CLEAN."
+    }
+  ],
+  "preservation": "The original source plan, runtime-draft evidence, initial audit and original reports are not rewritten. Existing word identities, readings, JLPT levels, body text and exclusions remain unchanged except for the three exact additive pair guards on the two reused words above.",
+  "postReviewAudit": {
+    "receiptSha256": "552ccf040bc97100ad3b08a8168741dc6e7f3672b75fa94aac7eeb651cd5f586",
+    "contentVersion": "f7fbaaa4b8e78194",
+    "runtimeHashesVerified": 8474,
+    "negativeAuditTestsPassed": 7,
+    "privacyRedactionTestsPassed": 4,
+    "limits": "Preservation and manifest checks are not independent review or publication."
+  },
+  "compatibility": "Direct exclusions are symmetric and non-transitive on compatible Android clients. Older clients ignore these metadata fields. Reduced pools may return fewer options; no global semantic-uniqueness claim is made.",
+  "hostVerification": "host-verification.json",
+  "contentVerification": "content-verification.json",
+  "originalReviewerConfirmations": "pending",
+  "productionAndNativeAcceptance": "pending",
+  "published": false
+}
