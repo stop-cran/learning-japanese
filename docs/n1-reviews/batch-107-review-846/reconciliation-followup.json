@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "batch": "107",
+  "reviewedTeachingSnapshot": "6614e06e602f1cec6b894052812178b57c8890cb",
+  "previousSignedCorrectionSnapshot": "03f68e8e796f497576e87337c557dcf6681a1a2f",
+  "previousContentVersion": "f7fbaaa4b8e78194",
+  "contentVersion": "db93cd80ee101b73",
+  "previousCorrectionEvidence": "reconciliation.json",
+  "firstClaudeConfirmation": {
+    "reportSha256": "3bbedcbc779aeed9ebab4abcbb688234bccf2a282bcb5519a5b2f33cdb31fcfc",
+    "reportBytes": 8059,
+    "status": "Mechanically unaccepted: the correction packet and the reviewer's original report were actually read in overlapping tool calls, contrary to the required serial-read contract. The report's claim of serial reads is contradicted by the preserved events.",
+    "localEvidence": "The original report and full event archive are retained locally under their recorded hashes; they contain local paths and are not published verbatim.",
+    "use": "The report's substantive hypotheses prompted a fresh, pinned-source inspection; they are not represented as an accepted reviewer confirmation."
+  },
+  "additionalException": {
+    "article": "words/勘定.md",
+    "otherArticles": ["words/払う.md", "words/代金.md"],
+    "before": ["計算", "支払う", "給与"],
+    "after": ["計算", "支払う", "給与", "払う", "代金"],
+    "beforeText": "quiz_exclusions: [計算, 支払う, 給与]",
+    "afterText": "quiz_exclusions: [計算, 支払う, 給与, 払う, 代金]",
+    "reason": "JMdict 1210750 sense 2 includes bill and payment of a bill, with suru-verb and transitive uses. The displayed title for 払う is pay; JMdict 1501620 sense 1 is to pay money or a bill, and its displayed title is identical to the already guarded 支払う. The displayed title for 代金 is price; payment due, and JMdict 1411790 explicitly includes both payment and bill. These two direct guards avoid defensible alternatives without assuming that pairwise similarity is transitive.",
+    "reviewStatus": "Source inspection and production checks are not independent review; confirmation of these two additional guards and the earlier three remains pending."
+  },
+  "unresolvedComparison": {
+    "article": "words/料金.md",
+    "title": "fee; charge; fare",
+    "source": "JMdict 1554280 sense 1 gives fee, charge and fare, but not bill. Unlike 代金, the current evidence does not establish a direct identical gloss with 勘定.",
+    "disposition": "No direct 勘定/料金 guard has been added solely through the transitive 代金 relationship. Ask both original reviewers to evaluate the actual displayed labels and full source entries independently."
+  },
+  "additionalSourceEvidence": "followup-payment-jmdict-provenance.json",
+  "priorEvidencePreservation": "The original reviewer reports, initial source plan, prior correction packet, reconciliation, audit, test and verification receipts remain unchanged at the previous signed checkpoint.",
+  "compatibility": "Direct exclusions are symmetric and non-transitive on compatible Android clients. Older clients ignore these metadata fields. Reduced pools may return fewer options; no global semantic-uniqueness claim is made.",
+  "originalReviewerConfirmations": "pending",
+  "productionAndNativeAcceptance": "pending",
+  "published": false
+}
