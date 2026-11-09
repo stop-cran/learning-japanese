@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "batch": "107",
+  "previousSignedCorrectionSnapshot": "bfd617ab00c75b9f7a74decd865f1f813b0eabed",
+  "previousContentVersion": "db93cd80ee101b73",
+  "contentVersion": "d19ddd349a584532",
+  "previousCommonPacketSha256": "315fb0821206f8318f37b0cc129bc17967d60b02644c65546f74551842db793b",
+  "reviewerReports": {
+    "claude": {
+      "report": "../followup-849/confirmation-claude.md",
+      "sha256": "b8247ee375985a8f282c6075c563ced227ae10ced0e69f0a0b1a39bdabff1887",
+      "disposition": "All five existing safeguards are justified. A 勘定/料金 guard is optional, not needed, at medium confidence: the reviewer distinguishes a service fee from a bill or reckoning."
+    },
+    "gpt": {
+      "report": "../followup-849/confirmation-gpt.md",
+      "sha256": "fdd46b7ad7e4218fb4b16b61d7945cd4ec75c39aa717ab782f0a1f9ab36ce5ee",
+      "disposition": "All five existing safeguards are justified. A 勘定/料金 guard is needed at medium-high confidence: bill and charge can both denote an amount owed in a context-free service transaction."
+    },
+    "mechanicalProvenance": "../followup-849/confirmation-provenance.json",
+    "limits": "Both reports are complete and byte-exact. Their conclusions differ; their original wording is preserved. Mechanical verification of sequential reads is not independent linguistic proof."
+  },
+  "additionalException": {
+    "article": "words/勘定.md",
+    "otherArticles": ["words/料金.md"],
+    "before": ["計算", "支払う", "給与", "払う", "代金"],
+    "after": ["計算", "支払う", "給与", "払う", "代金", "料金"],
+    "beforeText": "quiz_exclusions: [計算, 支払う, 給与, 払う, 代金]",
+    "afterText": "quiz_exclusions: [計算, 支払う, 給与, 払う, 代金, 料金]",
+    "reason": "The preserved reviewer disagreement concerns whether the displayed bill and charge labels can both describe an amount owed. JMdict 1210750 sense 2 supplies bill/check/account/payment; 1554280 sense 1 supplies fee/charge/fare. Given the context-free prompts and actual reduced-pool reachability, the coordinator adopts the direct pair conservatively without claiming full synonymy or using a transitive relationship through 代金.",
+    "reviewStatus": "The narrow final correction and its evidence require confirmation by both original reviewers."
+  },
+  "otherUnresolvedFindings": [
+    "定 and 違 have pre-existing raw-reading explanation gaps; 違 offers an unexplained distinct たが.う stem. Neither gap is claimed fixed or CLEAN.",
+    "The pre-existing 支払う/支払 pay/payment pairing is unchanged. The reviewers disagree on whether its context-free ambiguity merits a direct guard; it is not represented as newly introduced or fixed."
+  ],
+  "compatibility": "Direct exclusions are symmetric and non-transitive on compatible Android clients. Older clients ignore these metadata fields. Reduced pools may return fewer options; no global semantic-uniqueness claim is made.",
+  "reviewerConfirmationsOfFinalCorrection": "pending",
+  "nativeAndPublicationAcceptance": "pending",
+  "published": false
+}
