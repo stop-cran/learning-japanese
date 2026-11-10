@@ -1077,6 +1077,27 @@ For the event viewpoint in **着くとき／着いたとき**, including future 
 modifier, continue to [relative event order](japanese-actions-states-and-time.md#とき-and-relative-event-order).
 That article also connects the existing interval practice with simultaneous ながら and deadline transfer.
 
+### Suffix neighbors, not formal nouns: ～だらけ and ～まみれ
+
+**～だらけ** and **～まみれ** are noun-attaching suffixes, **not formal nouns**.
+Attach them directly, without の: **泥だらけ／泥まみれ（どろだらけ／どろまみれ）**, "covered in mud."
+Before a following noun, use の: **泥まみれの服**, "clothes covered in mud."
+
+**～だらけ** means "full of / with lots of ... all over" and is broader than a substance on a surface:
+**間違いだらけの作文（まちがいだらけのさくぶん）**, "an essay full of mistakes."
+まみれ is not normally used for mistakes there. **～まみれ** typically means "covered/smeared in" a substance
+such as mud, sweat, oil, blood or dust. It often suggests thorough coating, but there is no fixed threshold:
+the same muddy clothes can be described with either suffix. Figurative uses also occur:
+**借金まみれ（しゃっきんまみれ）**, "deep in debt."
+
+Both usually describe something undesirable or messy, not necessarily an unhappy situation:
+children can happily play **泥まみれ**, "covered in mud."
+
+One word-form connection can be verified: **まみれ** is the **連用形**, or continuative form,
+of **まみれる（塗れる）**, "be/get covered in." Compare **泥にまみれた服** (verb)
+with **泥まみれの服** (suffix): both mean "clothes covered in mud."
+This does not establish an origin for **だらけ**; do not treat it as a form of **だらける**, "slack off."
+
 ### A particularly important neighbor: の
 
 の is another major nominalizer:
@@ -1684,6 +1705,8 @@ The five mixed sets complete the bounded expansion described here, not every con
 - [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.
 - [Wasabi: Explanatory わけだ](https://wasabi-jpn.com/magazine/japanese-grammar/explanatory/?lang=ja) - conclusions, explanations, restatements, and negative constructions.
 - [Kotobank: 頃](https://kotobank.jp/word/頃-488090) - the approximate-time noun ころ and the suffix ごろ.
+- [絵でわかる日本語: ～だらけ vs ～まみれ](https://www.edewakaru.com/archives/9683806.html) and [N1et: まみれ](https://jn1et.com/mamire/) - noun attachment, overlapping substance uses, mistakes versus coating, and figurative 借金まみれ. Negative associations and coating density are tendencies, not universal bans or a fixed threshold.
+- Japanese Wiktionary: [まみれ](https://ja.wiktionary.org/wiki/まみれ) and [まみれる](https://ja.wiktionary.org/wiki/まみれる) - the continuative form and physical/figurative senses. [NINJAL's record of 陳世娟 (2015)](https://bibdb.ninjal.ac.jp/bunken/ja/article/102020002605) identifies a study of the verb form's suffixation; the bibliographic record alone is not evidence for a detailed historical derivation.
 - Kotobank's entries for [前](https://kotobank.jp/word/前-544359), [後](https://kotobank.jp/word/後-425801), [度](https://kotobank.jp/word/度-102903), and [折](https://kotobank.jp/word/折-455195) - the relevant **まえ／あと／たび／おり** noun senses, not every reading of these kanji.
 - [Bunpro: 際に](https://bunpro.jp/grammar_points/際に) and [Kotobank: 場合](https://kotobank.jp/word/場合-597838) - occasions and situations.
 - [Kotobank: 御蔭](https://kotobank.jp/word/御蔭-451207), [Bunpro: せいで](https://bunpro.jp/grammar_points/せいで), [代わりに](https://bunpro.jp/grammar_points/代わりに), and [Kotobank: 序で](https://kotobank.jp/word/序で-570321) - attribution, substitution, and accompanying opportunities.

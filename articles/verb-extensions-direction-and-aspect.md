@@ -193,6 +193,23 @@ This presents finishing as something to get done. Compare an unwanted developmen
 
 The last sentence does not mean "I finished sleeping." It illustrates why "finish" alone is not an adequate definition of ～てしまう.
 
+For an **exhaustive** action, compare **～尽くす（つくす）**. It takes the **ます-stem**, as in
+**食べ + 尽くす → 食べ尽くす**, and emphasizes exhausting the relevant supply or possibilities,
+leaving nothing within that scope. Learn established combinations rather than attaching it to any verb.
+
+> 冷蔵庫の中のものを食べ尽くした。  
+> れいぞうこのなかのものをたべつくした。  
+> I ate up everything in the fridge.
+>
+> 妹のケーキを食べてしまった。  
+> いもうとのケーキをたべてしまった。  
+> I ended up eating my little sister's cake.
+
+**食べ尽くす** emphasizes leaving none of the relevant food; **食べてしまう** uses the **て-form**
+and presents the eating as completed or as something one ended up doing. In the cake example,
+an "oops" reaction is natural if it was not yours to eat, but that comes from the situation.
+～てしまう itself does not mean "everything available" or always express regret.
+
 In casual speech, **～てしまう → ～ちゃう** and **～でしまう → ～じゃう**: **食べちゃった**, "ate it up / ended up eating it"; **読んじゃった**, "finished reading it / ended up reading it." Context still determines the nuance.
 
 Likewise, not every ～切る compound describes completing a task: **疲れ切る（つかれきる）** means "be completely exhausted." Learn the applicable sense, not a universal instruction to attach 切る to anything.

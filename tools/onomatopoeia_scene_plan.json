@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "baseContentCommit": "df01062fb3cca7c32e9a751b639820635cca2dbf",
-  "additionScope": "After the original 200-card inventory below, individually requested additions are included with their own basisCommit and article hash. On 2026-10-20 this adds ぶかぶか, illustrated only for clothing and footwear fit; its other dictionary side notes are not expanded into taught scenes.",
+  "additionScope": "After the original 200-card inventory below, individually requested additions are included with their own basisCommit and article hash. On 2026-10-20 this adds ぶかぶか, illustrated only for clothing and footwear fit; its other dictionary side notes are not expanded into taught scenes. On 2026-11-10, みっちり adds intensive self-study and thorough instruction as contextual article illustrations, not distinct dictionary senses or uniquely discriminable picture-quiz answers.",
   "scope": "Bounded scene inventory for Android issue #45: all 200 currently tagged onomatopoeia word cards, based on reading their complete current article bodies. Cover the distinct learner uses actually taught, not all retained JMdict senses, every example, synonym comparison, separate homophone or incidental object noun. coverageNotes identify grouped uses and deliberately unexpanded dictionary side notes. Preserve all 120 existing primary assets byte-for-byte, their exact legacy image_scene descriptions and established quiz eligibility; add 80 missing primary targets and bounded secondary targets owned only by their own word. Existing lexical exclusions and owner acceptance remain unchanged. New image eligibility is provisional intent unless accompanied by a hash-pinned advisoryReview of the actual output. Those observations are not owner approval or measured learning effectiveness. quizEligible=false explicitly means article-only, not a uniquely correct picture-quiz answer. Sound, sensation, mental state, time and figurative scenes are intended associations, not sensory proof. New scenarios use tools/image_prompts.json's shared original, text-free square editorial style; prompts omit that shared style. Use unlabelled generic objects, no letters, labels, kana, kanji, numbers, watermarks, named-artist imitation, copied media or graphic distress. This is the authoring inventory with advisory output observations, not a runtime scenes catalog or owner approval record.",
   "words": {
     "あっさり": {
@@ -5329,6 +5329,49 @@
             "model": "gpt-6-astra",
             "note": "Dissatisfaction is clear, but silent impatience remains as plausible as voiced grumbling. Retain article-only."
           }
+        }
+      ]
+    },
+    "みっちり": {
+      "basisCommit": "e18017ca2b7eb5ae3ad1d70b241a10333d0b7064",
+      "articleSha256": "75b33f05430ef7190f74780270097a4ac71552151c64ee1dca661105945daff6",
+      "coverageNotes": "Two contextual illustrations of the taught intensive/thorough-action sense: self-study and instruction by someone else. These are not independent senses. A still picture cannot establish exhaustive coverage, duration or rigorous teaching, and related effort words also fit; keep both article-only. The JMdict packing gloss and scolding example are not expanded into additional scenes.",
+      "scenes": [
+        {
+          "id": "intensive-study",
+          "sense": "Intensive study",
+          "image": "images/みっちり--intensive-study-adult-plans.webp",
+          "description": "A learner studies detailed floor plans in an open workbook, with architectural reference books and a stack of related drawings nearby.",
+          "quizEligible": false,
+          "eligibilityReason": "Article-only: visible study activity can suggest concentrated work but cannot uniquely establish intensity or thoroughness rather than steady effort or ordinary study.",
+          "prompt": "User-authorized retry of the failed study-illustration edit. Edit the supplied existing image: preserve the same adult woman, face, attentive study pose, pencil and hands, room, furniture, warm daylight, composition and soft modern Japanese editorial-illustration style. Change ONLY the study materials on EVERY visible open book and loose worksheet. Remove ALL the giant colored circles, triangles and squares, which look like preschool exercises. Replace them with believable adult architectural-drafting study material: detailed fine-line, unlabeled small-house floor plans with coherent room partitions, wall thicknesses, door-opening arcs, windows and a stair run, plus a small associated building elevation on one reference page. Use restrained charcoal and muted blue technical linework on off-white pages, natural perspective and realistic print density. The active workbook should show a moderately detailed plan beneath the learner's pencil; the two reference books and sheet stack should contain distinct related architectural diagrams, not repeated simple shapes. No legible or fake text, writing-like scribbles, letters, kana, kanji, digits, dimensions, equations, labels, logos or watermark. These are non-labelled diagrams, not engineering specifications. Avoid impossible decorative tangles. Keep everything else as close as possible to the supplied picture. Square composition.",
+          "basis": "The card's grammar-review example and intensive practice pattern illustrate thorough work; neither duration nor success can be inferred from this picture.",
+          "advisoryReview": {
+            "verdict": "ARTICLE_ONLY",
+            "imageSha256": "81ee21e1e3324a27f0a173445404600cd4c61aef00482f44a09ca72d65af42d9",
+            "model": "gpt-6.1-sol",
+            "note": "Inspected the actual edited PNG and final 512x512 WebP. The same adult learner, desk, pencil pose, books, daylight and editorial style remain. All formerly large colored shapes on the active workbook, both reference books and loose sheets are replaced by fine-line floor plans and small building elevations. Room partitions, openings, stair-like runs and furniture outlines make the materials adult-appropriate; no visible writing, digits, equations or watermark. Plans are illustrative study material, not certified architectural designs. The picture still cannot establish intensity, duration or exhaustive coverage, so retain article-only. Author advisory inspection is not independent review or owner acceptance of the revision."
+          },
+          "generationMethod": "image_generation reference edit; not the Azure text-only generation request",
+          "referencePngSha256": "a6b0a5c573ff89f369d3d1df01a45d6fb101e8f63f2d7ce82b19dcb2ef789216"
+        },
+        {
+          "id": "thorough-instruction",
+          "sense": "Thorough instruction",
+          "image": "images/みっちり--thorough-instruction-adult-plans.webp",
+          "description": "An instructor points at a detailed floor plan in an open workbook while a learner follows with a pencil over a related drawing.",
+          "quizEligible": false,
+          "eligibilityReason": "Article-only: attentive teaching is visible, but a still picture cannot demonstrate comprehensive instruction or exclude ordinary guidance and other effort descriptions.",
+          "prompt": "Edit this existing tutoring illustration, preserving the same two adult people, their faces and clothes, the left instructor pointing, the right learner holding a pencil, coherent hands, table, room, warm daylight, composition and soft modern Japanese editorial-illustration style. Change ONLY the material printed on EVERY visible workbook page and loose practice sheet. The current giant colored circles, triangles and squares resemble preschool worksheets; remove ALL of them. Replace them with believable adult architectural-drafting exercises: moderately detailed unlabeled small-house floor plans in fine charcoal and muted blue lines, with coherent room partitions, wall thicknesses, windows, door-opening arcs and a short stair run. The instructor should point at a particular part of a detailed plan in the open workbook, and the learner's sheet should contain a related realistic plan for working through it step by step. The stack at lower left should also show adult technical plans rather than big colored shapes. Keep print density, page perspective and diagram scale plausible, restrained and readable as technical study at thumbnail size. No legible or fake text, no writing-like scribbles, letters, kana, kanji, digits, dimension labels, equations, logos or watermark. Do not invent dense decorative tangles. Preserve all non-paper details as closely as possible to the reference. Square composition.",
+          "basis": "The card's example of being taught thoroughly supports instruction by someone else, without claiming that the pictured geometric task is pronunciation training.",
+          "advisoryReview": {
+            "verdict": "ARTICLE_ONLY",
+            "imageSha256": "881c07ec35052e8086a63774863f03c1c9920f3d74a1b38006d54d6cbf60d7ed",
+            "model": "gpt-6.1-sol",
+            "note": "Inspected the actual edited PNG and final 512x512 WebP. The same two adults, clothing, pointing and pencil roles, table, lighting and soft editorial style remain. The workbook, learner sheet and visible sheet stack now show detailed floor plans with room partitions, openings, stair-like runs and furniture outlines instead of preschool shapes. No visible writing, digits, equations, speech bubbles or watermark. These are illustrative plans, not engineering-accuracy evidence. Guided practice is clear, but comprehensive instruction, strictness and duration remain unprovable; retain article-only. This is author advisory inspection, not independent review or owner acceptance of the revision."
+          },
+          "generationMethod": "image_generation reference edit; not the Azure text-only generation request",
+          "referencePngSha256": "524098c137f45e940ac8a487409a58a6cb336f6cdd4de55cf6666cb51298ef57"
         }
       ]
     },
