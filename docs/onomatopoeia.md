@@ -66,7 +66,11 @@ gloss rather than treating an unattested original packed-container sentence as a
 its container comparison uses ぎっしり. No universal incompatibility or relative frequency is claimed.
 The examples in the separate Weblio usage-example section are not attributed to Daijisen;
 that section warns of mechanically generated examples and was not treated as independent corpus certification.
-No upstream JMdict release date, native acceptance, image or JLPT level is claimed for this addition.
+No upstream JMdict release date, native acceptance or JLPT level is claimed for this addition.
+The later owner-requested illustrations show study and guided practice, not the packing gloss.
+Both are article-only: the visible activities do not establish exhaustive coverage or uniquely distinguish
+みっちり from other effort descriptions. Prompts, output hashes and author visual observations are in the
+[named-scene record](onomatopoeia-scene-images.json); owner visual acceptance and phone testing remain unrecorded.
 
 Examples are original teaching sentences selected for ordinary usage, with English translations
 and kana support. They are not quotations or claims of attestation in a particular manga,

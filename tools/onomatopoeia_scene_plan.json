@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "baseContentCommit": "df01062fb3cca7c32e9a751b639820635cca2dbf",
-  "additionScope": "After the original 200-card inventory below, individually requested additions are included with their own basisCommit and article hash. On 2026-10-20 this adds ぶかぶか, illustrated only for clothing and footwear fit; its other dictionary side notes are not expanded into taught scenes.",
+  "additionScope": "After the original 200-card inventory below, individually requested additions are included with their own basisCommit and article hash. On 2026-10-20 this adds ぶかぶか, illustrated only for clothing and footwear fit; its other dictionary side notes are not expanded into taught scenes. On 2026-11-10, みっちり adds intensive self-study and thorough instruction as contextual article illustrations, not distinct dictionary senses or uniquely discriminable picture-quiz answers.",
   "scope": "Bounded scene inventory for Android issue #45: all 200 currently tagged onomatopoeia word cards, based on reading their complete current article bodies. Cover the distinct learner uses actually taught, not all retained JMdict senses, every example, synonym comparison, separate homophone or incidental object noun. coverageNotes identify grouped uses and deliberately unexpanded dictionary side notes. Preserve all 120 existing primary assets byte-for-byte, their exact legacy image_scene descriptions and established quiz eligibility; add 80 missing primary targets and bounded secondary targets owned only by their own word. Existing lexical exclusions and owner acceptance remain unchanged. New image eligibility is provisional intent unless accompanied by a hash-pinned advisoryReview of the actual output. Those observations are not owner approval or measured learning effectiveness. quizEligible=false explicitly means article-only, not a uniquely correct picture-quiz answer. Sound, sensation, mental state, time and figurative scenes are intended associations, not sensory proof. New scenarios use tools/image_prompts.json's shared original, text-free square editorial style; prompts omit that shared style. Use unlabelled generic objects, no letters, labels, kana, kanji, numbers, watermarks, named-artist imitation, copied media or graphic distress. This is the authoring inventory with advisory output observations, not a runtime scenes catalog or owner approval record.",
   "words": {
     "あっさり": {
@@ -5328,6 +5328,45 @@
             "imageSha256": "42d91c0d32349acb480d28cdafdb1505812c872a0f3ac6f09f2ce272d732bd57",
             "model": "gpt-6-astra",
             "note": "Dissatisfaction is clear, but silent impatience remains as plausible as voiced grumbling. Retain article-only."
+          }
+        }
+      ]
+    },
+    "みっちり": {
+      "basisCommit": "e18017ca2b7eb5ae3ad1d70b241a10333d0b7064",
+      "articleSha256": "75b33f05430ef7190f74780270097a4ac71552151c64ee1dca661105945daff6",
+      "coverageNotes": "Two contextual illustrations of the taught intensive/thorough-action sense: self-study and instruction by someone else. These are not independent senses. A still picture cannot establish exhaustive coverage, duration or rigorous teaching, and related effort words also fit; keep both article-only. The JMdict packing gloss and scolding example are not expanded into additional scenes.",
+      "scenes": [
+        {
+          "id": "intensive-study",
+          "sense": "Intensive study",
+          "image": "images/みっちり--intensive-study.webp",
+          "description": "A learner holds a pencil over an open book of colored shapes, with two more open books and a stack of practice sheets nearby.",
+          "quizEligible": false,
+          "eligibilityReason": "Article-only: visible study activity can suggest concentrated work but cannot uniquely establish intensity or thoroughness rather than steady effort or ordinary study.",
+          "prompt": "One adult learner at a tidy wooden desk, leaning forward attentively over an open practice book, holding a pencil naturally in the right hand while the left hand steadies the page. A small stack of completed practice sheets lies to one side and two open reference books lie within reach, suggesting sustained concentrated work rather than a casual glance. The pages contain only simple abstract coloured geometric shapes: no writing, characters, digits, equations or letter-like marks. Show the learner's face, both coherent hands and the working surface clearly. Calm determined expression, comfortable daylight, ordinary uncluttered room. No clocks, devices, coffee, exhaustion, distress or decorative symbols.",
+          "basis": "The card's grammar-review example and intensive practice pattern illustrate thorough work; neither duration nor success can be inferred from this picture.",
+          "advisoryReview": {
+            "verdict": "ARTICLE_ONLY",
+            "imageSha256": "bd9b2d780944dc8234dbd69ddc87a81c4f3f99f775753079772189b5e14ae5b8",
+            "model": "gpt-6.1-sol",
+            "note": "Inspected the actual 512x512 output. One attentive learner holds a pencil over a shape exercise, with two additional open books and a stack of sheets. Coherent hands, clear working surface, and no visible writing, digits, answer text or watermark. The scene supports a study association but does not establish intensity, elapsed time, completed work or thoroughness; geometric materials do not depict the card's grammar review literally. Ordinary study, concentration and other effort descriptions remain possible. Keep article-only; this is author advisory inspection, not independent review or owner acceptance."
+          }
+        },
+        {
+          "id": "thorough-instruction",
+          "sense": "Thorough instruction",
+          "image": "images/みっちり--thorough-instruction.webp",
+          "description": "An instructor points at colored shapes in an open workbook while a learner holds a pencil over a separate exercise sheet.",
+          "quizEligible": false,
+          "eligibilityReason": "Article-only: attentive teaching is visible, but a still picture cannot demonstrate comprehensive instruction or exclude ordinary guidance and other effort descriptions.",
+          "prompt": "Two adults at a small study table in a calm tutoring room: an instructor seated on the left attentively points with one index finger to the next exercise in a plain open workbook; an adult learner seated on the right follows closely and holds a pencil ready over a separate practice sheet. Several used exercise sheets are neatly arranged in a small stack beside the workbook, conveying careful step-by-step instruction and repeated practice. Pages show only simple abstract coloured geometric shapes, with no writing, letters, digits, phonetic marks or equations. Make the instructor and learner distinct, show coherent hands and a clearly shared focus on the exercise. Supportive serious concentration, not anger or celebration. No blackboard, speech bubbles, clocks, screens or decorative symbols.",
+          "basis": "The card's example of being taught thoroughly supports instruction by someone else, without claiming that the pictured geometric task is pronunciation training.",
+          "advisoryReview": {
+            "verdict": "ARTICLE_ONLY",
+            "imageSha256": "7e9c88a740afc74cd363671a0ff7dd496972a5c81c05a390be63b2e3daa096c0",
+            "model": "gpt-6.1-sol",
+            "note": "Inspected the actual 512x512 output. Two distinct adults share a table: the instructor on the left points into an open shape workbook, while the learner on the right holds a pencil above a matching sheet. Clear roles, coherent hands, a small stack of practice sheets and no visible writing, digits, speech bubbles or watermark. The image suggests guided practice, not specifically pronunciation, comprehensive instruction, strictness or a duration. Ordinary guidance and other effort words can fit. Keep article-only; author advisory inspection is not independent review or owner acceptance."
           }
         }
       ]
