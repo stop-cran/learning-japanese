@@ -5,14 +5,16 @@ content-only thematic selection of 100 word cards and four linked learner guides
 The second content batch expands the collection to **200 tagged cards** and seven guides:
 97 new cards plus the enriched existing さっぱり, がっかり, and びっくり cards.
 The subsequent ぶかぶか addition brought the collection to **201 tagged cards**.
-Later N2 additions どっと and ぶつぶつ bring the actual collection to **203 tagged cards**;
+Later N2 additions どっと and ぶつぶつ brought the collection to **203 tagged cards**;
 the expansion inventory at `af451575` reconciles both without changing their identities or levels.
+The subsequent みっちり card brings the collection to **204 tagged cards**, without adding Grammar exercises.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
 reuses the twelve-word pilot. Its [historical ledger](grammar-onomatopoeia-sources.json) retains
 the original bounded acceptance. Owner-authorized [collection expansion #59](grammar-onomatopoeia-expansion-sources.json)
 adds selected sentence operations for the remaining 191 cards through nine focused sets and guides.
+That Grammar practice set remains 203 words; the later みっちり card is outside its coverage.
 No word identities or schedules change. The [owner-trial protocol](grammar-onomatopoeia-trial.md)
 still requires actual feedback: expansion authorization is not evidence of learning effectiveness.
 
@@ -46,12 +48,25 @@ The later どっと and ぶつぶつ cards use entries 1009210 and 1011200 respe
 families and selected Grammar uses are preserved in the expansion ledger; the unrelated
 loanword ドット is not substituted for the sudden-burst identity.
 
-They identify the inspected local JMdict snapshot by file hashes. Its upstream release date
+The original batch records identify the inspected local JMdict snapshot by file hashes. Its upstream release date
 has not been established; it is not asserted to be the same snapshot as the earlier
 [N3 vocabulary work](n3-vocabulary-snapshot.json).
 Dictionary-derived information is attributed and licensed as stated in [NOTICE](../NOTICE.md).
 The source records and individual cards should be read together: an entry may contain
 additional senses not taught by the starter card.
+
+For みっちり, JMdict entry **2015520** was inspected online on **2026-11-10** via
+[Jisho](https://jisho.org/search/みっちり), including both senses and the optional-と adverb labels.
+The entry identity is also exposed by Jisho's “Edit in JMdict” link.
+Sense 1 includes intensive, earnest and strict action; sense 2 lists “tightly; compactly; closely.”
+[Digital Daijisen via Weblio](https://www.weblio.jp/content/みっちり), inspected on the same date,
+defines thorough action without skimping, illustrates optional と, and cross-refers to みっしり.
+Its definition does not supply the second JMdict sense. The card therefore quotes that secondary
+gloss rather than treating an unattested original packed-container sentence as a model for みっちり;
+its container comparison uses ぎっしり. No universal incompatibility or relative frequency is claimed.
+The examples in the separate Weblio usage-example section are not attributed to Daijisen;
+that section warns of mechanically generated examples and was not treated as independent corpus certification.
+No upstream JMdict release date, native acceptance, image or JLPT level is claimed for this addition.
 
 Examples are original teaching sentences selected for ordinary usage, with English translations
 and kana support. They are not quotations or claims of attestation in a particular manga,
@@ -72,7 +87,7 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 203 tagged cards, retaining the two historical 100-word groups
+The overview links to all 204 tagged cards, retaining the two historical 100-word groups
 and listing later additions separately. The focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.

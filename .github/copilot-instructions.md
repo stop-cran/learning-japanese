@@ -75,9 +75,16 @@ are part of the exercise, not interchangeable decoration.
 ## Independent review and reconciliation
 
 - When multi-model review is requested, use different model families on the same identified snapshot. Keep initial reviewers independent of one another's findings and the author's prior review rationale. Record the models actually used rather than pinning versions in this guide.
-- Cover correctness, scoped coverage, and comprehensibility. A small article normally fits one reviewer per model; a large card batch
-  may use bounded facet-specific reviewers to avoid context overload. State each reviewer's files and facet, so no unassigned area is
-  accidentally reported as reviewed. Do not require multi-model review for every small edit.
+- For a **new word card or learner article** (a new app-facing file under `words/` or `articles/`), obtain blind,
+  facet-split review before publication: use three separate reviewers, each from a different model family, for **correctness**,
+  **consistency and quiz safety**, and **comprehensibility**. Include scoped coverage in these assignments and retain its separate report verdict;
+  consistency includes related counts, navigation, source records and manifest integration, not just the new file.
+  Give all reviewers the same identified snapshot, rubric and source access, and the complete new card/article as a shared sample.
+  Verify and record the actual reviewer models; if a required independent family cannot be provided or verified,
+  disclose the limit and ask the user rather than claiming the requirement passed.
+- For edits to existing cards/articles, keep review proportional: one reviewer per selected model can cover correctness, scoped coverage and comprehensibility
+  for a small edit; multi-model review is not mandatory unless requested. Large batches may use bounded facet assignments.
+  State each reviewer's files and facet so no unassigned area is accidentally reported as reviewed.
 - Keep initial findings blind to other reviewers' reports and the author's rationale. If comparing model contributions, give the models
   a common snapshot, scope, rubric, and source access for at least one shared sample; do not rank models from disjoint facet assignments.
   Deduplicate by underlying defect, not wording. Record verified useful findings unique to each model, shared findings, unsupported
@@ -198,6 +205,14 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-10 - New-card facet review (add/resolve conflict):** Review of [みっちり](../words/みっちり.md)
+  identified a missing direct `密` quiz exclusion, a secondary dictionary gloss promoted into an insufficiently supported
+  model example, and live collection counts needing separation from the historical 203-word practice set.
+  The corrected card and [collection notes](../docs/onomatopoeia.md) preserve the sense/source boundary and current membership.
+  The owner requested blind, separate correctness, consistency/quiz-safety and comprehensibility reviewers from different
+  model families for new word cards/articles. Scope that requirement to newly created learner files, replacing the former
+  small-article exception there while retaining proportional review for edits. This records observed findings and the approved
+  workflow, not a model benchmark, verified frequency ranking or native-speaker certification.
 - **2026-11-03 - Localized reading evidence (resolve conflict):** C1's Russian fixture exposed a literal `Readings`
   selector in `check_body` despite localized section acceptance. The localized-row regression in
   `tools/test_content_language.py` retains the own-linked-example requirement under `Чтения`; acceptance of
