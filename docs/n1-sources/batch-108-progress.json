@@ -16,7 +16,7 @@
     }
   ],
   "selectionReason": "Next absent frozen row after published row118; recommendation/encouragement spellings and secondary on-reading require a single-character bounded family audit.",
-  "status": "local-unreviewed-runtime-draft",
+  "status": "textual-review-closed-gates-green-pending-publication",
   "sourcePreparationComplete": true,
   "sourceReadingOrder": {
     "onyomi": [
@@ -30,16 +30,59 @@
   "drafted": [
     "\u52e7"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "\u52e7"
+  ],
   "published": [],
   "runtimeChanged": true,
   "runtimePublished": false,
   "publishedAdditions": 134,
   "remainingAdditions": 1094,
-  "limits": "Local unreviewed draft only. Both independent families, HOST/native/rendered/integration/publication gates remain; no accepted coverage.",
+  "limits": "Textual review closed by three distinct model families on the final teaching bytes (see reviewClosure). Host content gates and Android JVM gates pass on the integrated tree. No native, rendered, phone, CI or archive credit; unpublished until the remote SHA, CI run and exact GitHub ZIP are verified.",
   "sourceCompletionPlan": "batch-108-source-completion-plan.json",
   "sourceCompletionAudit": "batch-108-source-completion-audit.json",
   "runtimeDraftAudit": "batch-108-runtime-draft-audit-861.json",
   "runtimeFontAudit": "batch-108-runtime-font-audit-861.json",
-  "draftRecord": "batch-108-runtime-draft-861.json"
+  "draftRecord": "batch-108-runtime-draft-861.json",
+  "reviewedSnapshot": "6547715cc6fc28057ab35d83c50fc033f2bf14d1",
+  "reviewClosure": "../n1-reviews/batch-108-closure/provenance.json",
+  "gatedHead": "60d7892ae221dc4a8daf9755e251d756bb15d274",
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 3
+    },
+    "unitTests": 431,
+    "validateErrors": 0,
+    "budget": {
+      "entries": 8503,
+      "retainedBytes": 44944819,
+      "inflatedBytes": 45216129,
+      "localZipBytes": 30466248
+    },
+    "vocabularyCheck": "2122/2431",
+    "manifestRebuildDiff": false,
+    "androidJvm": {
+      "RealContentTest": 3,
+      "RareHanTest": 1,
+      "skipped": 0
+    },
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch"
+  },
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "n1DeliveriesBeforeThisBatch": 134,
+    "n1DeliveriesAfterThisBatch": 135,
+    "n2PlacementsAlreadyInTree": [
+      "\u4fdd",
+      "\u6848",
+      "\u6d3e",
+      "\u7b2c",
+      "\u7b56",
+      "\u7d50"
+    ],
+    "pendingRecordsWithCardsAfterThisBatch": 141,
+    "pendingRecordsAbsentAfterThisBatch": 1087,
+    "note": "Recounted from source-index.json against kanji/. Earlier ledgers reported 134 published and 1094 remaining; the 1094 also counted the six N2 placements that already have cards. 135 + 6 + 1087 = 1228."
+  }
 }

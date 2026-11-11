@@ -1,0 +1,7 @@
+*.json text eol=lf
+*.md text eol=lf
+*.gz binary
+# Prompts, read-scope audits and prior-runner records keep their original captured bytes (partly CRLF, some without a final newline) so the SHA-256 values in provenance.json stay verifiable.
+prompts/*.txt -text whitespace=cr-at-eol
+scope-audits/initial-*.json -text whitespace=cr-at-eol
+records/*.json -text whitespace=cr-at-eol
