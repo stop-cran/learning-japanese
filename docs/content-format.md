@@ -1411,7 +1411,7 @@ The corrections clarify negation, predicate-specific が roles and identifying c
 ## Tools
 
 ```
-pip install pyyaml svgpathtools
+pip install pyyaml svgpathtools==1.8.0
 python tools/generate_strokes.py     # creates missing strokes/*.json
 python -m unittest discover -s tools -p "test_*.py"  # validator regression tests
 python tools/validate.py             # checks front matter, links, stroke counts
