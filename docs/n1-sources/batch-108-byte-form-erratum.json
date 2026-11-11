@@ -1,0 +1,60 @@
+{
+  "schema": "batch108-pinned-byte-forms-v1",
+  "evidenceCommit": "9d4af5cc2974b108d4aea87463c5cab644fd6f1a",
+  "baselineCommit": "eb7eb038e5bcff21754e158a2393c1b89b978757",
+  "expectedCounts": {
+    "baseline": 6210,
+    "baselineCommittedRaw": 699,
+    "baselineCrlfReconstruction": 5511,
+    "comparisonSnapshots": 42,
+    "existingSnapshots": 1,
+    "publicSources": 2
+  },
+  "finding": "Historical article inventories, saved snapshots and public-source extracts use captured Windows raw-byte hashes. Git contains different byte envelopes for some of the same text. The original raw assertions are not portable to an LF checkout.",
+  "disposition": "Additive provenance and exact byte-form verification only. Preserve every original hash, script, review and receipt. Do not silently substitute normalized hashing in historical validators. This verifier does not rerun or replace the historical audit.",
+  "bytePolicy": [
+    "Read original metadata and source bytes from the exact evidence commit; read baseline article objects from the exact baseline commit. Never substitute current working articles for the historical baseline.",
+    "Require exact equality between the 6,210 saved inventory paths and the complete recursive kanji/words Git tree at the baseline commit, including each blob identity. A matching count or subset is insufficient.",
+    "Preserve committed raw bytes. Derive LF only by replacing CRLF pairs, rejecting lone CR; derive CRLF only by replacing LF in that LF form. Two explicitly pinned raw-only baseline exceptions contain one lone CR each: accept their exact committed/captured bytes only, with no derived byte form. Do not trim, normalize Unicode, repair encoding, insert newlines or change other bytes.",
+    "Each original baseline raw digest must equal either its committed raw bytes or the explicitly derived CRLF bytes. Saved snapshot raw digests must equal their explicit CRLF reconstruction, and their LF bytes must exactly equal the LF form of the baseline article.",
+    "An observed public extract must exactly equal its pinned committed bytes, LF reconstruction or CRLF reconstruction. Equality after arbitrary normalization is not sufficient. Every other byte sequence is rejected.",
+    "Reconstructed bytes are deterministic reconstructions, not fresh captures, proof of historical filesystem identity or a Linux rerun."
+  ],
+  "limits": [
+    "The original batch-108-draft-861.py raw receipt assertion remains unchanged and still fails for the two committed LF extracts. This is an additive evidence gate, not a global compatibility patch.",
+    "This checks byte provenance and the stated saved-text/base-content relation only; it does not rerun article metadata, teaching, source-selection, quiz, reading, semantic, external-source or independent-review checks.",
+    "The 6,210 baseline entries include two raw-only exceptions. Their exact committed/captured bytes match; no LF/CRLF portability or reconstructed byte acceptance is established for those two paths. A CRLF-pair-replacement diagnostic still contains a lone CR and must not be described as a pure LF file.",
+    "Compressed source HTML and decompressed raw HTML remain checked against their original receipt hashes; source-selection scope and review independence do not expand.",
+    "The 875 archive contains mixed raw text line endings. Archive-member raw hashes and ContentParser text-normalized hashes are distinct and are not changed here.",
+    "No frozen 875 snapshot, archive, fixture or APK is changed. No guest, native, rendered, publication, count or whole-set acceptance is granted.",
+    "Adoption requires separate review and a decision about any additive signed successor and consequent snapshot rebinding; this host-only candidate does not authorize either."
+  ],
+  "rawOnlyBaselineExceptions": {
+    "kanji/\u6bce.md": {
+      "gitBlobOid": "facbb8f31ae06e214390fbac5d7b5b98b6b7cd00",
+      "rawSha256": "947b976544f8aae5ad31c45298c70ce3654a700f90d6c68ff0cfd6e510d3d865"
+    },
+    "words/\u884c\u304f.md": {
+      "gitBlobOid": "c8eba36a8b28bfdaea14e68363c6610fc20a68b5",
+      "rawSha256": "5e1f49a0a0dcd0052030147123fba71fad6636359b25c148c54845847cdeb300"
+    }
+  },
+  "committedEvidenceFiles": {
+    "docs/n1-sources/batch-108-baseline-plan.json": "b5a104a34c52400ab9535e73419e36aac2067b37b7962d4b6109f20d4d75edf5",
+    "docs/n1-sources/batch-108-comparison-article-snapshots.json": "f6988aada87b6dc9f2be3476644b6411b097bf63f4509617e4cd89629dc061d1",
+    "docs/n1-sources/batch-108-existing-article-snapshots.json": "34f8cbce8c72490f771917e021aa263b31f1e641ac8f0cb65d8c865a7c5fd2d4",
+    "docs/n1-sources/batch-108-public-source-receipts.json": "cc239689ce09846ff3cfec629841a5c2fecbf255399b4e6297e85199378a6475",
+    "docs/n1-sources/batch-108-support-public-source-receipt.json": "bc0e1a74c9bda16abcc2eeaf93f4a0fa0c0ff0b24d5a058e55302320f5893511",
+    "docs/n1-sources/batch-108-draft-861.py": "dfba812ff36b3a6a4268f57bc19de5ebbdad5020c016dce570e3f5016e797bb0",
+    "docs/n1-sources/batch-108-character-public-text.txt": "60e9cdbbbd4c1322342d7e1366b66d2c94ad55210d762c0f6c610acfada6a586",
+    "docs/n1-sources/batch-108-support-public-text.txt": "6141d358b1828ca26d9eda8615a76714efa15811684276f910acd09672a2924a",
+    "docs/n1-sources/batch-108-character.html.gz": "acd5f2b3bfaf9ca1fc7d76aac503cd6a85e43e3c85ce62dd026c9ffeb87dc198",
+    "docs/n1-sources/batch-108-support-public.html.gz": "fa990a6a94f7fe92b3e5421259235407ba9b915aead142d17bef2444063c19e5"
+  },
+  "usage": {
+    "verify": "python -B batch-108-verify-byte-forms.py --repo <recovered-content-root> --output <new-report.json>",
+    "optionalCurrentExtractCheck": "Add --extract-directory <directory-containing-the-two-extract-basenames>; this does not verify current article files.",
+    "tests": "python -B batch-108-test-byte-forms.py --repo <recovered-content-root>",
+    "output": "A new, exclusively created per-path proof report. Existing output paths are never overwritten."
+  }
+}
