@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "batch": "108",
+  "membership": [
+    "\u52e7"
+  ],
+  "status": "published-verified-textual-review-closed",
+  "recordedAt": "2026-11-11T17:16:00+00:00",
+  "baseCommit": "eb7eb038e5bcff21754e158a2393c1b89b978757",
+  "reviewedSnapshot": "6547715cc6fc28057ab35d83c50fc033f2bf14d1",
+  "gatedHead": "60d7892ae221dc4a8daf9755e251d756bb15d274",
+  "latestMainIntegrated": "21a22764b2f3989e68ee0caf09d86eabdb9a8f89",
+  "publishedCommit": "8310cffdc367ec7becb32567b6c537b6b9b811ed",
+  "remoteVerified": true,
+  "reviewClosure": "../n1-reviews/batch-108-closure/provenance.json",
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 43065293178,
+    "event": "push",
+    "headSha": "8310cffdc367ec7becb32567b6c537b6b9b811ed",
+    "jobs": [
+      {
+        "name": "validate",
+        "conclusion": "success",
+        "startedAt": "2026-11-11T17:09:06Z",
+        "completedAt": "2026-11-11T17:11:17Z",
+        "stepsPassed": 12,
+        "stepsTotal": 12
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content",
+    "evidence": "../n1-reviews/batch-108-publication/ci-run.json"
+  },
+  "archive": {
+    "commit": "8310cffdc367ec7becb32567b6c537b6b9b811ed",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/8310cffdc367ec7becb32567b6c537b6b9b811ed",
+    "sha256": "688f5e405641128ff6d0ff75c82bdd2ddb1a000f05abe8935c501835a0de47c1",
+    "manifestEqual": true,
+    "contentVersion": "baf07138f3468ac9",
+    "verifiedRuntimeHashes": 8481,
+    "zipEntries": 8503,
+    "zipFiles": 8488,
+    "compressedBytes": 30968962,
+    "inflatedBytes": 44783680,
+    "retainedBytes": 44515342,
+    "listeningTaskMediaBytes": 5893602,
+    "zipNamesEqualExportedTree": true,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true,
+    "evidence": "../n1-reviews/batch-108-publication/zip-receipt.json",
+    "verifier": "../n1-reviews/batch-108-publication/verify-zip.py"
+  },
+  "runtime": {
+    "contentVersion": "baf07138f3468ac9",
+    "runtimeHashesVerified": 8481,
+    "manifestSha256": "c9434a746bb528ab31b8fa5b5d3dafdaa44f1e8cc7782e0b03c5c334c51d00ca",
+    "teachingFiles": [
+      "kanji/\u52e7.md",
+      "strokes/\u52e7.json",
+      "words/\u52e7\u544a.md",
+      "words/\u52e7\u3081\u308b.md",
+      "kanji/\u544a.md"
+    ],
+    "teachingBlobsIdenticalAt": [
+      "6547715cc6fc28057ab35d83c50fc033f2bf14d1",
+      "60d7892ae221dc4a8daf9755e251d756bb15d274",
+      "8310cffdc367ec7becb32567b6c537b6b9b811ed"
+    ]
+  },
+  "runtimePublished": true,
+  "reviewClosed": [
+    "\u52e7"
+  ],
+  "published": [
+    "\u52e7"
+  ],
+  "counts": {
+    "kanji": 1131,
+    "words": 5082,
+    "batchPublishedAdditions": 1,
+    "batchNewWords": 1,
+    "batchChangedExistingArticles": 2,
+    "projectPublishedAdditions": 135,
+    "n2PlacementsAlreadyInTree": 6,
+    "pendingRecordsWithCards": 141,
+    "frozenPendingRecords": 1228,
+    "remainingAdditions": 1087
+  },
+  "projectPublishedAdditions": 135,
+  "remainingAdditions": 1087,
+  "physicalPhoneAcceptance": "outstanding",
+  "nativeRenderedAcceptance": "not run for this batch; the issue-60 batch cycle does not require it per batch, so it is planned once at a milestone or final acceptance",
+  "wholeProjectComplete": false,
+  "limits": [
+    "Textual review: claude-opus-5.5, gpt-6.1-sol and grok-4.7 (three distinct families) on the final teaching bytes, with a confirmation round on the corrected text; see the closure provenance for the original reports, the one adopted fix and the optional notes that were not adopted.",
+    "The exact-ZIP check proves archive integrity (entry set equals the exported tree, every runtime hash equals manifest.json, safe paths, per-file limits, budgets, contributor evidence excluded). It does not certify pedagogy, rendering or on-device behaviour.",
+    "GitHub archive text bytes are LF; the local CRLF working-tree budget run reported larger retained/inflated figures (44,944,819 / 45,216,129). Both are far below the caps, and the listening-task media bytes are identical.",
+    "Host content gates and Android JVM RealContentTest/RareHanTest passed on the integrated tree; no native, rendered or phone run is claimed."
+  ],
+  "nextAction": "Choose the next multi-kanji batch with survey/dossier scoring (earlier batches were not in strict source-row order); do not assume the next absent row.",
+  "normalSignatureStatus": "G locally; GitHub reports verified=true reason=valid; normal fast-forward push, no bypass, amendment or force push.",
+  "publicationIdentity": "stop-cran process-scoped token only; global romanko-ms credential unchanged."
+}

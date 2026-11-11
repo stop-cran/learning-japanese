@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 108: textual review closed; publication pending
+## Batch 108: published (textual review closed)
 
 The batch adds **勧**, source row 119, and the necessary new word **勧告**
 (かんこく), with no vocabulary level inferred from its kanji. 勧める gains a
@@ -80,8 +80,7 @@ limits. The reviewed teaching blobs are identical at the integrated head
 
 Host content gates (lint, 431 unit tests, validation, budget, vocabulary,
 manifest rebuild) and the Android JVM `RealContentTest` and `RareHanTest` pass
-on the integrated tree. **No native, rendered, phone, CI or archive credit is
-claimed.** The issue-60 batch cycle does not require a native run per batch, so
+on the integrated tree. **No native, rendered or phone credit is claimed.** The issue-60 batch cycle does not require a native run per batch, so
 one native smoke is planned for a milestone or the final acceptance. The budget
 stands at 8,503 of 18,000 entries, 42.9 of 56 MiB retained and 29.1 of 42 MiB
 for the local ZIP.
@@ -91,9 +90,18 @@ corrects the earlier accounting: of the 1,228 pending additions, **141 have
 cards** (135 N1 deliveries including 勧, plus the six earlier N2 placements) and
 **1,087 are absent**. Earlier ledgers listed 1,094 remaining because they also
 counted the six N2 placements. The ledger is
-[batch-108-progress.json](n1-sources/batch-108-progress.json); published
-coverage stays **134 additions** until the remote SHA, CI run and exact GitHub
-ZIP are verified.
+[batch-108-progress.json](n1-sources/batch-108-progress.json).
+
+**Published** as `8310cffd` by a normal signed fast-forward push (GitHub shows it
+verified). The `Validate content` run 43065293178 passed, and the exact GitHub
+ZIP for that commit was downloaded and verified: 8,503 entries, all 8,481
+runtime hashes equal to `manifest.json` (content version `baf07138f3468ac9`),
+safe paths and per-file limits, budgets within the caps and no contributor
+evidence. See
+[batch-108-publication.json](n1-sources/batch-108-publication.json) and its
+[evidence](n1-reviews/batch-108-publication/zip-receipt.json). Published
+coverage is **135 N1 deliveries** plus the six N2 placements: 141 of 1,228
+pending records have cards and **1,087 remain**.
 
 ## Batch 106: local unreviewed draft (historical)
 
