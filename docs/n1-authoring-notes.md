@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 109: textual review closed; publication pending
+## Batch 109: published (textual review closed)
 
 The batch adds fifteen kanji, **催 促 摩 擦 括 弧 抵 抗 撮 影 攻 撃 掲 批 択**
 (source rows 71, 49, 457, 464, 427, 329, 416, 413, 460, 339, 466, 458, 443,
@@ -99,9 +99,18 @@ Recounting the [source index](n1-sources/source-index.json) against the tree
 gives, of the 1,228 pending additions, **156 with cards** (150 N1 deliveries
 including this batch, plus the six earlier N2 placements) and **1,072 absent**.
 The ledger is [batch-109-progress.json](n1-sources/batch-109-progress.json).
-Published coverage stays **135 N1 deliveries** (141 of 1,228 with the N2
-placements, 1,087 remaining) until the remote SHA, the CI run and the exact
-GitHub ZIP are verified.
+
+**Published** as `e0e7e85f` (after the freeze `0a20f4bf` and the reconciliation
+`a3e0610a`) by a normal signed fast-forward push onto main `308ab608`; GitHub
+shows all three commits verified. The `Validate content` run 43094202425 passed,
+and the exact GitHub ZIP for that commit was downloaded and verified: 8,533
+entries, all 8,511 runtime hashes equal to `manifest.json` (content version
+`fe02221511f427e5`), safe paths and per-file limits, budgets within the caps and
+no contributor evidence. See
+[batch-109-publication.json](n1-sources/batch-109-publication.json) and its
+[evidence](n1-reviews/batch-109-publication/zip-receipt.json). Published
+coverage is **150 N1 deliveries** plus the six N2 placements: 156 of 1,228
+pending records have cards and **1,072 remain**.
 
 ## Batch 108: published (textual review closed)
 
