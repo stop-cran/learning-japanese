@@ -1,0 +1,228 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "e53139c6-890a-478c-9343-c90d020172b5",
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-11T19:28:21.864Z",
+  "last": "2026-11-11T19:38:19.629Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-11T19:28:21.880Z",
+   "chars": 2069,
+   "sha256": "30ed39887fc1bab96e4ab580a5501cfbfc1ac2d590367f619149fd00b10af2ea"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 67
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 9932463,
+  "outputTokens": 19453,
+  "cacheReadTokens": 9548870,
+  "cacheWriteTokens": 383392,
+  "reasoningTokens": 11992,
+  "costMultiplierSum": 67.0
+ },
+ "toolCalls": {
+  "total": 67,
+  "byTool": {
+   "view": 46,
+   "web_fetch": 14,
+   "powershell": 3,
+   "rg": 2,
+   "apply_patch": 1,
+   "task_complete": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-109-a3e0610a-gpt\\checks"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full": 15,
+   "notFullyRead": []
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full": 1,
+   "full (ranges)": 1,
+   "none": 1,
+   "notFullyRead": [
+    "diffs/changed-files.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 3,
+   "full": 1,
+   "full (ranges)": 2,
+   "notFullyRead": []
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full"
+ },
+ "outsidePaths": [],
+ "alsoReadAllowed": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-109-gpt\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\evidence\\kanjidic2-records.xml",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\mechanical-checks.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\repo\\docs\\content-format.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\repo\\kanji\\英.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\repo\\words\\たいてい.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\repo\\words\\責める.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\rubric\\copilot-instructions.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\snapshot\\kanji\\撃.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-109-0a20f4bf\\titles\\kanji-titles.tsv",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-109-gpt\\initial-gpt.md"
+ ],
+ "alsoReadCount": 10,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-109-gpt\\confirm-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nimport sys, io, hashlib, urllib.request\nimport pdfplumber\nsys.stdout.reconfigure(encoding='utf-8')\nu='https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf'\ndata=urllib.request.urlopen(u,timeout=60).read()\nprint('Official PDF SHA256:', hashlib.sha256(data).hexdigest())\nwith pdfplumber.open(io.BytesIO(data)) as pdf:\n    print('PDF page 62:')\n    prin...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport sys, io, urllib.request\nimport pdfplumber\nsys.stdout.reconfigure(encoding='utf-8')\nu='https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf'\ndata=urllib.request.urlopen(u,timeout=60).read()\nwith pdfplumber.open(io.BytesIO(data)) as pdf:\n    print('Official PDF page 144:')\n    print(pdf.pages[143].extract_text())\n'@ | python -",
+   "writeLike": false
+  },
+  {
+   "command": "Get-ChildItem -LiteralPath 'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-109-a3e0610a-gpt\\checks' -File | Select-Object Name, Length",
+   "writeLike": false
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://raw.githubusercontent.com/KanjiVG/kanjivg/70a0b7ae0c18ceb5cb358274b029cce0234a43bc/kanji/063b2.svg",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%82%AC?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%BC%A7?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%92%AE?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%94%BB?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%99%AF?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%99%AF?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%91%A9%E3%81%99%E3%82%8B?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://raw.githubusercontent.com/KanjiVG/kanjivg/70a0b7ae0c18ceb5cb358274b029cce0234a43bc/kanji/064ae.svg",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://raw.githubusercontent.com/KanjiVG/kanjivg/70a0b7ae0c18ceb5cb358274b029cce0234a43bc/kanji/06700.svg",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%BD%B1?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%92%83?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%95%97?edc=SGKDJ",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E8%8B%B1?edc=SGKDJ",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 64,
+  "reportFile": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-109-gpt\\confirm-gpt.md",
+  "reportExists": true,
+  "reportChars": 11273,
+  "reportSha256": "ed240afc5fdf309a8532a9533a5c1ae956f3142ef645e4580a1a863d507cd33a",
+  "finalSource": "task_complete.summary",
+  "finalEqualsReport": false,
+  "finalContainsReport": false,
+  "similarity": 0.0113
+ },
+ "flags": []
+}

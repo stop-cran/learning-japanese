@@ -59,6 +59,50 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 109: textual review closed; publication pending
+
+The batch adds fifteen kanji, **催 促 摩 擦 括 弧 抵 抗 撮 影 攻 撃 掲 批 択**
+(source rows 71, 49, 457, 464, 427, 329, 416, 413, 460, 339, 466, 458, 443,
+409 and 414), with their stroke files and no new word article. Eighteen
+existing word articles gain 24 links to the new cards, so every card activates
+a kanji-word pair that an article had already declared. The fifteen were
+chosen from the survey of absent rows, not in source order. Six compounds (催促,
+摩擦, 括弧, 抵抗, 撮影, 攻撃) have both kanji absent, so both halves are
+authored together. Earlier deferred rows remain pending.
+
+Two model families reviewed the frozen draft `0a20f4bf`, Claude
+(claude-opus-5.5) and GPT (gpt-6.1-sol), one at a time and each on all four
+facets without seeing the other's work. Both independently reported the same
+major quiz-safety defect: the wrong answer 形 on the 影 card is a defensible
+meaning of 影. GPT also reported 13 missing direct quiz exclusions, five of
+which Claude had found independently, and both reported smaller wording and
+evidence defects. All of it was reconciled in `a3e0610a`, the only commit after
+the freeze that changes teaching content, and both original reviewers then
+confirmed that text with no findings. The
+[closure record](n1-reviews/batch-109-closure/README.md) keeps the verbatim
+reports, prompts, read-scope audits and the reviewers' own limits. It also
+discloses that the Claude runs overlapped a few tool calls, so strictly serial
+work is claimed only for the two GPT runs. `a3e0610a` descends directly from
+main `308ab608`, so no integration merge was needed; the commit that records
+this closure changes only `docs/`, so the teaching content, `manifest.json` and
+the budgets are those that were reviewed, confirmed and gated.
+
+Host content gates (lint, 431 unit tests, validation, budget, vocabulary,
+manifest rebuild) and the Android JVM `RealContentTest` and `RareHanTest` pass
+on the reviewed tree. **No native, rendered or phone credit is claimed.** The
+issue-60 batch cycle does not require a native run per batch, so one native
+smoke is planned for a milestone or the final acceptance. The budget stands at
+8,533 of 18,000 entries, 43.0 of 56 MiB retained and 29.1 of 42 MiB for the
+local ZIP.
+
+Recounting the [source index](n1-sources/source-index.json) against the tree
+gives, of the 1,228 pending additions, **156 with cards** (150 N1 deliveries
+including this batch, plus the six earlier N2 placements) and **1,072 absent**.
+The ledger is [batch-109-progress.json](n1-sources/batch-109-progress.json).
+Published coverage stays **135 N1 deliveries** (141 of 1,228 with the N2
+placements, 1,087 remaining) until the remote SHA, the CI run and the exact
+GitHub ZIP are verified.
+
 ## Batch 108: published (textual review closed)
 
 The batch adds **勧**, source row 119, and the necessary new word **勧告**
