@@ -59,6 +59,83 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 111: textual review closed; publication pending
+
+The batch adds fifteen kanji, **修 句 房 授 敷 旬 標 独 率 節 義 製 評 養 鏡**
+(source rows 53, 142, 404, 437, 474, 489, 576, 687, 699, 809, 871, 989, 1008,
+1195 and 1137), with their stroke files and no new word article. Sixty existing
+word articles each gain one link to a new card (four for every kanji), so each
+card activates kanji-word pairs that articles had already declared. The fifteen
+are fifteen of the sixteen absent rows that exactly four existing word articles
+declare; 従 is deferred because no existing article uses its reading ジュウ, and
+no other absent row is declared by more than three. Three files drop a stale
+"has no card" remark: the cards 価 (for 評) and 暖 (for 房) and the article
+句読点 (for 句). Earlier deferred rows remain pending.
+
+Two model families reviewed the frozen draft `3b30803e`, Claude
+(claude-opus-5.5) and GPT (gpt-6.1-sol), one at a time and each on all four
+facets without seeing the other's work; both received the same packet and the
+same supplement. Claude reported two low findings and four optional notes: 敷
+filed 敷地 under the suffix reading -しき while defining the leading dash as a
+"bound form", and the 鏡 title "mirror; lens" has no KANJIDIC2 sense for "lens".
+GPT reported two minor findings and two optional points: 節 lacked exclusions
+with 句 and 旬, and 義 excluded 税 ("tax; fiscal duty") as if it overlapped 役
+and 務. The two reports share no finding. The author changed six cards
+(房 敷 節 義 評 鏡) in `bf9ee962`, kept the 鏡 title for a documented reason
+(Kanjipedia's second sense is 「めがね。レンズ。」, and Claude's alternative
+"instrument" would collide with 器) and answered the other optional points with
+reasons. Claude then returned CONFIRMED for that commit with no findings. The
+GPT confirmation resolved both findings and its optional point on 評判,
+accepted the author's answer to the other and found no new defect, but it
+returned **UNVERIFIED** with findings none, because its limit L1 stayed
+partially resolved: the quiz audits are supplied Python ports, not an executed
+Android client, and the supplied builders do not show how a caller builds
+custom or Starter-session pools or how an installed build behaves. The author
+accepts L1 as a disclosed, non-blocking, bounded evidence limit, as batch 110
+accepted its L3, and ran no further round. There is therefore no joint
+CONFIRMED.
+
+The [closure record](n1-reviews/batch-111-closure/README.md) keeps the verbatim
+reports, prompts, read-scope audits, packets and the reviewers' own limits. It
+also discloses that each Claude run once had two tool calls in flight (both GPT
+runs were strictly serial), that no reviewer rendered the official Joyo table
+(only text extracts of its pages), and that the audits behind the quiz claims
+are the author's Python ports. The last phone APK delivered to the owner (app
+commit `5c000bd`; installation not verified) predates the app's support for
+kanji `quiz_exclusions`, so it does not enforce this batch's pair exclusions,
+including the new ones on 節. `bf9ee962` descends from main `f40a1391` through
+the freeze, so no integration merge was needed; the commit that records this
+closure changes only `docs/`, so the teaching content, `manifest.json` and the
+budgets are those that were reviewed, confirmed and gated.
+
+The author's reading-exposure audit checks the readings that KANJIDIC2,
+JMdict's single-kanji entries and the card texts attest for each kanji against
+the N1, All and Starter pools the app builds, including the cards borrowed to
+pad a short Starter session. For the fifteen cards it finds no production or
+padded-session hit, and six latent collisions (attested readings that another
+card offers but no pool the app builds can draw): 房 お and わ, 節 よ under two
+prompts, 養 や and 鏡 あき. Neither reviewer raised them as a finding, and the
+zero hits are conditional on the pool assumptions of the audit.
+
+Host content gates pass on the reviewed tree `bf9ee962`: lint (0 errors, 13
+warnings, none on a new card), 431 unit tests, validation, budget, vocabulary
+(2122/2431) and manifest rebuild (no diff). **The Android JVM tests
+`RealContentTest`, `RareHanTest` and `KanjiReadingsTest` were not run for this
+batch**, because no JVM slot was available to this workstream, so no JVM result
+is claimed; they should run on the then-current tree at the next JVM window.
+**No native, rendered or phone credit is claimed.** The issue-60 batch cycle
+does not require a native run per batch, so one native smoke is planned for a
+milestone or the final acceptance. The budget stands at 8,593 of 18,000 entries,
+43.2 of 56 MiB retained and 29.2 of 42 MiB for the local ZIP.
+
+Recounting the [source index](n1-sources/source-index.json) against the tree
+gives, of the 1,228 pending additions, **186 with cards** (180 N1 deliveries
+including this batch, plus the six earlier N2 placements) and **1,042 absent**.
+The ledger is [batch-111-progress.json](n1-sources/batch-111-progress.json).
+Published coverage stays **165 N1 deliveries** (171 of 1,228 with the N2
+placements, 1,057 remaining) until the remote SHA, the CI run and the exact
+GitHub ZIP are verified.
+
 ## Batch 110: published (textual review closed)
 
 The batch adds fifteen kanji, **張 器 素 応 仮 基 価 激 嫌 縮 騒 統 級 整 暖**

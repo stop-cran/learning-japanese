@@ -1,0 +1,16 @@
+Batch 111 CONFIRMATION round for you, the reviewer of the original snapshot. Please confirm the author's revision independently.
+
+Revised snapshot: commit bf9ee9622723078438a021d54cac5ce8252f95d8, a child of the snapshot you reviewed (3b30803e33438dab7a1071aea34ceb7764189c1f). Six cards changed (房 敷 節 義 評 鏡); the other nine cards (修 句 授 旬 標 独 率 製 養) and every word article are unchanged.
+
+Start here: C:\Users\stop-\n1-kanji-workspace\review-packets\confirm-111-bf9ee962-claude\INSTRUCTIONS.md (then CHANGES.md and RESPONSE.md in the same folder).
+Write your report to exactly ONE path: C:\Users\stop-\n1-kanji-workspace\review-packets\reports-111\confirm-claude.md, in the report shape given in INSTRUCTIONS.md.
+
+Rules, unchanged from your first round:
+- Read-only. The only write is that one report file.
+- Make exactly ONE tool call per response and wait for its result before the next call. No batched or parallel calls. No recursive listings.
+- Allowed local reads: (1) the confirmation packet above; (2) the original packet C:\Users\stop-\n1-kanji-workspace\review-packets\batch-111-3b30803e (read-only; it holds the OLD text of the changed cards); (3) your own initial report C:\Users\stop-\n1-kanji-workspace\review-packets\reports-111\initial-claude.md. Open no other local path, no repository checkout and no other report. Public web sources are allowed. The supplement folder of your first round is not needed: the confirmation packet carries the post-fix quiz simulation, the reading-prompt audits and the Joyo page extracts of the six changed cards.
+- RESPONSE.md is the author's claims about your earlier points, not evidence. Verify each claim yourself against the revised cards, diffs\fix.patch and independent sources.
+
+Task: (1) give a disposition for every ID in RESPONSE.md (F1, F2, O1, O2(a), O2(b), O2(c), O3, O4, L1; the "other limits" need none); (2) read the six changed cards in full, and check every changed hunk on all four facets, including contradictions with untouched text; (3) check the post-fix quiz options in checks\quiz-safety.txt and evidence\QuizBuilder.kt for all 15 cards, in both directions, and the reading prompts in checks\reading-options.txt and checks\reading-exposure.txt against evidence\KanjiReadings.kt and evidence\Words.kt; (4) report only new, established findings.
+
+When the report is written, reply with one short line only.
