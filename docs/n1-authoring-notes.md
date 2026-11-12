@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 110: textual review closed; publication pending
+## Batch 110: published (textual review closed)
 
 The batch adds fifteen kanji, **張 器 素 応 仮 基 価 激 嫌 縮 騒 統 級 整 暖**
 (source rows 330, 173, 828, 353, 25, 185, 45, 660, 238, 860, 1203, 840, 826,
@@ -129,9 +129,21 @@ Recounting the [source index](n1-sources/source-index.json) against the tree
 gives, of the 1,228 pending additions, **171 with cards** (165 N1 deliveries
 including this batch, plus the six earlier N2 placements) and **1,057 absent**.
 The ledger is [batch-110-progress.json](n1-sources/batch-110-progress.json).
-Published coverage stays **150 N1 deliveries** (156 of 1,228 with the N2
-placements, 1,072 remaining) until the remote SHA, the CI run and the exact
-GitHub ZIP are verified.
+
+**Published** as `047d4c5e` (after the freeze `453af714` and the
+reconciliations `10d79652` and `30f2bd7c`) by a normal signed fast-forward push
+onto main `20f0db4c`; GitHub shows all four commits verified. The
+`Validate content` run 43185549270 passed, and the exact GitHub ZIP for that
+commit was downloaded and verified: 8,563 entries, all 8,541 runtime hashes
+equal to `manifest.json` (content version `18d0f3df4071aa30`), safe paths and
+per-file limits, budgets within the caps and no contributor evidence. The
+GitHub archive itself measures 42.7 MiB retained and 29.6 MiB compressed; the
+43.1 and 29.2 MiB above come from the local run on the CRLF working tree and
+differ from those archive figures. See
+[batch-110-publication.json](n1-sources/batch-110-publication.json) and its
+[evidence](n1-reviews/batch-110-publication/zip-receipt.json). Published
+coverage is **165 N1 deliveries** plus the six N2 placements: 171 of 1,228
+pending records have cards and **1,057 remain**.
 
 ## Batch 109: published (textual review closed)
 
