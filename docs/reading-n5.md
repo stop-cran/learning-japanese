@@ -16,7 +16,7 @@ Empty `distribution.reviewed` means no jurisdiction has been reviewed. It is not
 ## Package
 
 - Schema 1, id `momotaro-n5`, integer JLPT 5.
-- Eight sections, 575 Unicode code points. The N5 band is 400-1000, with a target of 480-800.
+- Eight sections, 581 Unicode code points. The N5 band is 400-1000, with a target of 480-800.
 - Seven questions: two tier 1, two tier 2, two tier 3, one tier 4.
 - No question images.
 - Teaching-language fields are English. Japanese fields are the title, provenance title, section text,
@@ -36,7 +36,7 @@ The oni's weakness is an authored cause in this wording so the tier-3 question h
 It is not a claim about the motive in every traditional telling. There is no battle sentence.
 
 `いいももです` is a simplified learner evaluation, not a claim that the collocation is a literary idiom.
-The naming sentence uses 「この子供の名前は桃太郎です」 rather than XをYと呼ぶ, because the 呼ぶ card
+He leaves home with the dumplings. The animals meet him on the road to the island, and the party reaches the island once. 途中 is N4, so the road is 道. The naming sentence uses 「この子供の名前は桃太郎です」 rather than XをYと呼ぶ, because the 呼ぶ card
 teaches calling a name aloud or summoning, not that naming construction. The return names the three
 animals instead of introducing unexplained 友達.
 
@@ -59,4 +59,4 @@ Linked cards at N5 are not listed. These are the exceptions:
 
 Tier 1 asks where the peach was seen and what came out of it. Tier 2 asks event order and what
 「これを持ってください」 refers to. Tier 3 asks the two stated から causes. Tier 4 asks which
-summary matches the journey. Distractors contradict the passage rather than depending on outside plot knowledge.
+summary matches the journey. Distractors are not supported by the passage. They do not depend on outside plot knowledge. One tier-3 option, that the old man ordered the animals to go, is unstated rather than directly contradicted.
