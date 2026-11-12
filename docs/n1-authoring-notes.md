@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 111: textual review closed; publication pending
+## Batch 111: published (textual review closed)
 
 The batch adds fifteen kanji, **修 句 房 授 敷 旬 標 独 率 節 義 製 評 養 鏡**
 (source rows 53, 142, 404, 437, 474, 489, 576, 687, 699, 809, 871, 989, 1008,
@@ -132,9 +132,21 @@ Recounting the [source index](n1-sources/source-index.json) against the tree
 gives, of the 1,228 pending additions, **186 with cards** (180 N1 deliveries
 including this batch, plus the six earlier N2 placements) and **1,042 absent**.
 The ledger is [batch-111-progress.json](n1-sources/batch-111-progress.json).
-Published coverage stays **165 N1 deliveries** (171 of 1,228 with the N2
-placements, 1,057 remaining) until the remote SHA, the CI run and the exact
-GitHub ZIP are verified.
+**Published** as `c244ad6b` (after freeze `3b30803e` and reconciliation
+`bf9ee962`) by a normal signed fast-forward push onto main `f40a1391`;
+GitHub shows all three commits verified as `stop-cran`. The
+[`Validate content` run 43275800822](https://github.com/stop-cran/learning-japanese/actions/runs/43275800822)
+passed (12/12 steps). The exact GitHub ZIP for `c244ad6b` was downloaded and
+verified: 8,593 entries, all 8,571 runtime hashes equal to `manifest.json`
+(content version `0c3d8f4a2c6bcb19`), safe paths, per-file limits and publishing
+budgets passed, contributor evidence excluded. Its retained/inflated bytes are
+44,874,140 / 45,142,478 and compressed bytes 31,143,951 (42.8 / 43.1 / 29.7
+MiB); the LF archive differs from the CRLF working-tree figures above.
+See [batch-111-publication.json](n1-sources/batch-111-publication.json) and
+[its evidence](n1-reviews/batch-111-publication/). Published coverage is now
+**180 N1 deliveries**, or 186 of 1,228 with the N2 placements, with **1,042
+remaining**. This changes neither the GPT L1 disposition nor the unrun
+JVM/native/rendered/phone acceptance.
 
 ## Batch 110: published (textual review closed)
 

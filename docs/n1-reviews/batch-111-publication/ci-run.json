@@ -1,0 +1,127 @@
+{
+  "attempt": 1,
+  "conclusion": "success",
+  "createdAt": "2026-11-12T18:03:13Z",
+  "databaseId": 43275800822,
+  "displayTitle": "Close N1 batch 111 textual review and record gates",
+  "event": "push",
+  "headBranch": "main",
+  "headSha": "c244ad6b445ceb72209fe100223b72f7e334f1ec",
+  "jobs": [
+    {
+      "completedAt": "2026-11-12T18:05:49Z",
+      "conclusion": "success",
+      "databaseId": 131383732352,
+      "name": "validate",
+      "startedAt": "2026-11-12T18:03:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-12T18:03:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-12T18:03:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-12T18:03:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:05Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-11-12T18:05:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:19Z",
+          "conclusion": "success",
+          "name": "Run pip install pyyaml pillow requests fonttools svgpathtools==1.8.0",
+          "number": 4,
+          "startedAt": "2026-11-12T18:05:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:32Z",
+          "conclusion": "success",
+          "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+          "number": 5,
+          "startedAt": "2026-11-12T18:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:44Z",
+          "conclusion": "success",
+          "name": "Run python tools/validate.py",
+          "number": 6,
+          "startedAt": "2026-11-12T18:05:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:46Z",
+          "conclusion": "success",
+          "name": "Run python tools/check_content_budget.py",
+          "number": 7,
+          "startedAt": "2026-11-12T18:05:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:47Z",
+          "conclusion": "success",
+          "name": "Run python tools/grammar_vocabulary.py check",
+          "number": 8,
+          "startedAt": "2026-11-12T18:05:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:47Z",
+          "conclusion": "success",
+          "name": "Run python tools/build_manifest.py",
+          "number": 9,
+          "startedAt": "2026-11-12T18:05:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 17,
+          "startedAt": "2026-11-12T18:05:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 18,
+          "startedAt": "2026-11-12T18:05:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T18:05:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-12T18:05:48Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/stop-cran/learning-japanese/actions/runs/43275800822/job/131383732352"
+    }
+  ],
+  "name": "Validate content",
+  "number": 362,
+  "startedAt": "2026-11-12T18:03:13Z",
+  "status": "completed",
+  "updatedAt": "2026-11-12T18:05:50Z",
+  "url": "https://github.com/stop-cran/learning-japanese/actions/runs/43275800822",
+  "workflowDatabaseId": 378446878,
+  "workflowName": "Validate content"
+}
