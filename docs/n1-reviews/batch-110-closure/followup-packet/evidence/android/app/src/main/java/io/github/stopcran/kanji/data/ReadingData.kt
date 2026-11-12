@@ -1,0 +1,54 @@
+package io.github.stopcran.kanji.data
+
+import io.github.stopcran.kanji.core.reading.KanjiReadingQueue
+import io.github.stopcran.kanji.core.reading.ReadingCard
+import io.github.stopcran.kanji.core.reading.ReadingItem
+import io.github.stopcran.kanji.core.reading.ReadingKind
+import io.github.stopcran.kanji.core.srs.SrsState
+import io.github.stopcran.kanji.core.srs.Stacks
+import java.time.Instant
+import java.time.LocalDate
+import java.time.ZoneId
+
+fun KanjiEntity.toReadingCard() = ReadingCard(
+    kanji, onyomi.splitSep(), kunyomi.splitSep(),
+    askOn = (quizOnyomi ?: onyomi).splitSep(),
+    askKun = (quizKunyomi ?: kunyomi).splitSep(),
+    distractors = distractors.splitSep(),
+)
+
+/** Everything the readings quiz and reminders need for one stack: scheduling state per kind and the resulting queue. */
+class ReadingData(val cards: List<ReadingCard>, val states: Map<ReadingKind, Map<String, SrsState>>, val items: List<ReadingItem>)
+
+/** Which stack the readings are built for, how many new cards may start, and whether this is the extra "practice more" queue. */
+/** Which stack the readings are built for, how many new cards may start, and whether this is the extra "practice more" queue (up to [extraLimit] cards). */
+data class ReadingRequest(
+    val sourceId: String, val stack: String, val newRemaining: Int, val now: Instant,
+    val extra: Boolean = false, val extraLimit: Int = KanjiReadingQueue.EXTRA_LIMIT,
+)
+
+suspend fun AppDatabase.readingData(settings: Settings, kanji: List<KanjiEntity>, request: ReadingRequest): ReadingData {
+    val sourceId = request.sourceId
+    val stack = request.stack
+    val newRemaining = request.newRemaining
+    val now = request.now
+    val extra = request.extra
+    val cards = kanji.map { it.toReadingCard() }
+    val stateStack = Stacks.stateId(stack)
+    val states = ReadingKind.entries.associateWith { kind -> reviews().states(sourceId, stateStack, kind.mode.name).toReadingStates() }
+    val startOfDay = now.atZone(ZoneId.systemDefault()).toLocalDate().atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
+    val introducedToday = reviews().readingCardsIntroducedSince(sourceId, stateStack, startOfDay)
+    val newEligible = kanji.newKanjiInStack(stack)
+    val items = if (extra) {
+        KanjiReadingQueue.extraQueue(cards, states, meaningLearned(settings, sourceId, stack), now, request.extraLimit, newEligible)
+    } else {
+        KanjiReadingQueue.build(
+            cards, states,
+            unlocked = meaningLearned(settings, sourceId, stack),
+            introducedToday = introducedToday,
+            // The queue subtracts the reading cards already started today; the shared allowance has already accounted for them.
+            dailyNew = newRemaining + introducedToday, now = now, newEligible = newEligible,
+        )
+    }
+    return ReadingData(cards, states, items)
+}

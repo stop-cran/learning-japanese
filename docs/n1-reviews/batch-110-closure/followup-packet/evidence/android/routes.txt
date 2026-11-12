@@ -1,0 +1,11 @@
+git grep -n kreading 10d98d0db61dcde621463460e6a1e59941b4042b -- '*.kt'
+(paths relative to the repository root)
+
+app/src/androidTest/java/io/github/stopcran/kanji/ui/KanjiReadingFlowTest.kt:60:        val route = "kreading:${UUID.randomUUID()}"
+app/src/main/java/io/github/stopcran/kanji/MainActivity.kt:91:    "quiz:", "wquiz:", "cquiz:", "grammarquiz:", "draw:", "kreading:", "kana-study:", "session-doc:",
+app/src/main/java/io/github/stopcran/kanji/MainActivity.kt:215:    val sourceBoundExercise = listOf("quiz:", "wquiz:", "cquiz:", "grammarquiz:", "kreading:").any(route::startsWith)
+app/src/main/java/io/github/stopcran/kanji/MainActivity.kt:221:    listOf("quiz:", "wquiz:", "cquiz:", "grammarquiz:", "kreading:").any(route::startsWith)
+app/src/main/java/io/github/stopcran/kanji/MainActivity.kt:366:        } else if (route.startsWith("kreading:")) {
+app/src/main/java/io/github/stopcran/kanji/MainActivity.kt:371:                onPracticeMore = { pop(); push("kreading:${System.currentTimeMillis()}:extra") },
+app/src/main/java/io/github/stopcran/kanji/MainActivity.kt:409:                    onReadings = { extra -> push("kreading:${System.currentTimeMillis()}" + if (extra) ":extra" else "") },
+app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingScreen.kt:33:/** Session key: "kreading:<timestamp>[:extra]". */

@@ -59,6 +59,80 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 110: textual review closed; publication pending
+
+The batch adds fifteen kanji, **張 器 素 応 仮 基 価 激 嫌 縮 騒 統 級 整 暖**
+(source rows 330, 173, 828, 353, 25, 185, 45, 660, 238, 860, 1203, 840, 826,
+472 and 509), with their stroke files and no new word article. Ninety-three
+existing word articles each gain one link to a new card, so every card
+activates kanji-word pairs that articles had already declared (eight for 張,
+seven each for 器 素 応 仮 基, six each for 価 激 嫌 縮 騒 and five each for
+統 級 整 暖). The fifteen are exactly the absent rows that five or more
+existing word articles declare; no other absent row is declared by more than
+four. Three articles (応援, 整備, 物騒) also correct or drop a stale "has no
+card" remark. Earlier deferred rows remain pending.
+
+Two model families reviewed the frozen draft `453af714`, Claude
+(claude-opus-5.5) and GPT (gpt-6.1-sol), one at a time and each on all four
+facets without seeing the other's work. Claude reported one major defect (the
+器 mnemonic put 犬 "dog" at the centre of the character, where the modern form
+has 大) and four minor ones; GPT reported five minor findings. Both
+independently reported that the sentence on 価格 contradicted itself and that
+嫌 lacked an exclusion for 怪. All of it was reconciled in `10d79652`, and
+Claude then confirmed that commit with no findings. The GPT confirmation
+resolved its five findings and raised one new minor one: the contraction や of
+いや, attested by JMdict and Digital Daijisen, could be offered as a wrong
+option when 嫌 asks for いや. The author first answered with a documented
+limitation; a GPT-only follow-up rejected that answer, and `30f2bd7c` withdraws
+いや from the 嫌 reading quiz (the reading, its table row and its words stay on
+the card). GPT confirmed that one-card change with no findings; Claude did not
+see it.
+
+The [closure record](n1-reviews/batch-110-closure/README.md) keeps the verbatim
+reports, prompts, read-scope audits, packets and the reviewers' own limits. It
+also discloses that the two initial reviewers did not receive identical
+evidence (only GPT had the complete quiz simulation and the Joyo extracts; both
+confirmations did), that the initial Claude run started two tool calls at once,
+and that the final GPT round did not independently verify the gate results at
+`30f2bd7c`. The last phone APK delivered to the owner (app commit
+`5c000bd`; installation not verified) predates the app's support for kanji
+`quiz_exclusions`, so it does not enforce this batch's pair exclusions.
+`30f2bd7c` descends directly from main `20f0db4c`, so no integration merge was
+needed; the commit that records this closure changes only `docs/`, so the
+teaching content, `manifest.json` and the budgets are those that were
+reviewed, confirmed and gated.
+
+The author's reading-exposure audit, built in the follow-up, checks the
+readings that KANJIDIC2, JMdict's single-kanji entries and the card texts attest
+for each kanji against the N1, All and Starter pools the app builds, including
+the cards borrowed to pad a short Starter session. After the 嫌 change it finds
+no production or padded-session hit on the fifteen cards, and five latent
+collisions (attested readings that another card offers but no pool the app
+builds can draw). Run over every card (305 have JMdict single-kanji readings
+beyond their own; 887 prompts), the same scan lists 19 whole-stack hits (nine
+distinct prompts on eight cards, by GPT's recount) and 12 more that occur only
+when a Starter session borrows the card, for example 前 まえ→さき, 寝 い.ぬ→い and
+神 かみ→み. These are untriaged leads on cards outside this batch, not
+findings; none of those cards is changed, and the two client-side changes that
+the author proposed are not implemented.
+
+Host content gates (lint, 431 unit tests, validation, budget, vocabulary,
+manifest rebuild) and the Android JVM `RealContentTest`, `RareHanTest` and
+`KanjiReadingsTest` pass on the reviewed tree; the Gradle logs record no test
+counts, so none is claimed. **No native, rendered or phone credit is claimed.**
+The issue-60 batch cycle does not require a native run per batch, so one native
+smoke is planned for a milestone or the final acceptance. The budget stands at
+8,563 of 18,000 entries, 43.1 of 56 MiB retained and 29.2 of 42 MiB for the
+local ZIP.
+
+Recounting the [source index](n1-sources/source-index.json) against the tree
+gives, of the 1,228 pending additions, **171 with cards** (165 N1 deliveries
+including this batch, plus the six earlier N2 placements) and **1,057 absent**.
+The ledger is [batch-110-progress.json](n1-sources/batch-110-progress.json).
+Published coverage stays **150 N1 deliveries** (156 of 1,228 with the N2
+placements, 1,072 remaining) until the remote SHA, the CI run and the exact
+GitHub ZIP are verified.
+
 ## Batch 109: published (textual review closed)
 
 The batch adds fifteen kanji, **催 促 摩 擦 括 弧 抵 抗 撮 影 攻 撃 掲 批 択**

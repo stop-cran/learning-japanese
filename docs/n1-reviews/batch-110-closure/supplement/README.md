@@ -1,0 +1,6 @@
+# Supplement to the batch-110 review packet (read-only evidence)
+
+These files are extra evidence for the same snapshot, commit 453af714d56aa573204d477ff863cb4da756b4c3. They are not part of the frozen packet and contain no author or reviewer commentary.
+
+- `quiz-safety-full.txt`: the complete output of the quiz-safety simulation for all 15 cards (the answer options the quiz would show for each card and each quiz reading). `mechanical-checks.md` in the packet keeps only the last 4000 characters of each automatic check, so the start of this simulation is cut off there; this file is the whole output.
+- `joyo\pN.txt` (14 files): text extracted with pdfplumber from page N of the official Joyo kanji table (Ministry of Education, Culture, Sports, Science and Technology, 2010-11-30). N is the page that the card's "Usage evidence" line links to: 応 18, 仮 20, 価 20, 基 32, 器 33, 級 36, 激 45, 嫌 47, 縮 76, 整 91, 素 96, 騒 99, 暖 106, 張 109, 統 118. The first line of each file gives the source URL with `#page=N`, and the second gives the PDF sha256. The table's own legend (page 1, item 6) says that entries in round brackets are the 康熙字典体 (Kangxi dictionary) forms. The extraction is a convenience, not a primary source: verify against the PDF when it matters.

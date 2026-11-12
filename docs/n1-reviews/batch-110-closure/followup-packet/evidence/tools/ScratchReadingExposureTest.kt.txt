@@ -1,0 +1,101 @@
+package io.github.stopcran.kanji.core
+
+import io.github.stopcran.kanji.core.content.ContentParser
+import io.github.stopcran.kanji.core.reading.KanjiReadingQuiz
+import io.github.stopcran.kanji.core.reading.ReadingCard
+import io.github.stopcran.kanji.core.reading.ReadingKind
+import io.github.stopcran.kanji.core.srs.Stacks
+import org.junit.Assume.assumeTrue
+import org.junit.Test
+import java.io.File
+import kotlin.random.Random
+
+/**
+ * Scratch (never committed): runs the real KanjiReadingQuiz.question over the real content and writes what it can draw.
+ * N1_OUT = result file, N1_BATCH = target kanji, N1_SEEDS = samples per prompt and pool (default 4000),
+ * N1_POOLS = "stacks,starter" (default): "stacks" = the N1 and All stack pools (the whole content of the stack, as
+ * KanjiReadingViewModel.start builds it); "starter" = a Starter "Practice more" session that borrows only the target
+ * (every card the Starter stack contains plus the borrowed card, as KanjiReadingViewModel.pad adds it),
+ * N1_SMALL = "kanji:holder,holder;kanji:holder" for pools made of the target and one other card.
+ */
+class ScratchReadingExposureTest {
+    private class Parsed(val card: ReadingCard, val tags: List<String>)
+
+    private fun kinds() = ReadingKind.entries
+
+    private fun histogram(card: ReadingCard, kind: ReadingKind, reading: String, pool: List<ReadingCard>, seeds: Int): String {
+        val wrong = HashMap<String, Int>()
+        val sizes = HashMap<Int, Int>()
+        var nulls = 0
+        var badCorrect = 0
+        for (seed in 0 until seeds) {
+            val q = KanjiReadingQuiz.question(card, kind, pool, Random(seed), reading = reading)
+            if (q == null) { nulls++; continue }
+            sizes[q.options.size] = (sizes[q.options.size] ?: 0) + 1
+            if (q.correctKey != reading || q.options.count { it.key == q.correctKey } != 1) badCorrect++
+            for (o in q.options) if (o.key != q.correctKey) wrong[o.key] = (wrong[o.key] ?: 0) + 1
+        }
+        val w = wrong.entries.sortedWith(compareByDescending<Map.Entry<String, Int>> { it.value }.thenBy { it.key }).joinToString(" ") { "${it.key}:${it.value}" }
+        val s = sizes.entries.sortedBy { it.key }.joinToString(",") { "${it.key}:${it.value}" }
+        return "seeds=$seeds|null=$nulls|badCorrect=$badCorrect|sizes=$s|wrong=$w"
+    }
+
+    @Test
+    fun dumpReadingOptionExposure() {
+        val out = System.getenv("N1_OUT")
+        val batch = System.getenv("N1_BATCH")
+        assumeTrue(!out.isNullOrEmpty() && !batch.isNullOrEmpty())
+        val seeds = System.getenv("N1_SEEDS")?.toIntOrNull() ?: 4000
+        val which = (System.getenv("N1_POOLS") ?: "stacks,starter").split(',')
+        val dir = File("../../learning-japanese/kanji")
+        assumeTrue(dir.exists())
+        val parsed = dir.listFiles { f -> f.extension == "md" }!!.sorted().map { f ->
+            val c = ContentParser.parseKanji("kanji/${f.name}", f.readText())
+            Parsed(ReadingCard(c.kanji, c.onyomi, c.kunyomi, c.quizOnyomi ?: c.onyomi, c.quizKunyomi ?: c.kunyomi, c.distractors), c.tags)
+        }
+        val byKanji = parsed.associateBy { it.card.kanji }
+        val n1 = Stacks.find("jlpt-n1", Stacks.jlpt)
+        val stackPools = linkedMapOf<String, List<ReadingCard>>()
+        if ("stacks" in which) {
+            stackPools["N1 stack"] = parsed.filter { Stacks.includes(n1, it.tags) }.map { it.card }
+            stackPools["All stack"] = parsed.filter { Stacks.includes(Stacks.everything, it.tags) }.map { it.card }
+        }
+        val starterStack = Stacks.find("starter", Stacks.available(parsed.map { it.tags }))
+        check(starterStack.id == "starter")
+        val starter = parsed.filter { Stacks.includes(starterStack, it.tags) }.map { it.card }
+        val sb = StringBuilder()
+        sb.appendLine("POOLS|" + stackPools.entries.joinToString("") { "${it.key}=${it.value.size}|" } + "$STARTER=${starter.size}|cards=${parsed.size}")
+        val targets = batch!!.codePoints().toArray().map { String(Character.toChars(it)) }
+        var prompts = 0
+        for (t in targets) {
+            val p = byKanji[t] ?: error("missing card $t")
+            val pools = LinkedHashMap(stackPools)
+            if ("starter" in which) pools[STARTER] = if (starter.any { it.kanji == t }) starter else starter + p.card
+            sb.appendLine("TARGET|$t|tags=${p.tags.joinToString(" ")}|distractors=${p.card.distractors.joinToString(" ")}|" +
+                "present=" + p.card.distractors.joinToString(" ") { d -> d + pools.entries.joinToString("") { (n, pool) -> if (pool.any { it.kanji == d }) "+" + n.first() else "-" + n.first() } })
+            sb.appendLine("EXCLUDED|$t|" + KanjiReadingQuiz.excludedKeys(p.card).sorted().joinToString(" "))
+            for (kind in kinds()) {
+                for (reading in p.card.quizKeys(kind)) {
+                    prompts++
+                    for ((name, pool) in pools) sb.appendLine("PROMPT|$name|$t|${kind.name}|$reading|" + histogram(p.card, kind, reading, pool, seeds))
+                }
+            }
+        }
+        sb.appendLine("PROMPTS|$prompts")
+        for (spec in (System.getenv("N1_SMALL") ?: "").split(';').filter { it.contains(':') }) {
+            val t = spec.substringBefore(':')
+            val p = byKanji[t] ?: error("missing card $t")
+            for (holder in spec.substringAfter(':').split(',').filter { it.isNotEmpty() }) {
+                val h = byKanji[holder] ?: error("missing card $holder")
+                val pool = listOf(p.card, h.card)
+                for (kind in kinds()) for (reading in p.card.quizKeys(kind))
+                    sb.appendLine("SMALL|$t+$holder|$t|${kind.name}|$reading|" + histogram(p.card, kind, reading, pool, 400))
+            }
+        }
+        File(out!!).writeText(sb.toString(), Charsets.UTF_8)
+    }
+
+    private companion object {
+        const val STARTER = "Starter practice session"
+    }
+}

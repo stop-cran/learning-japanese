@@ -1,0 +1,46 @@
+git grep -n -E 'KanjiReadingQuiz\.|ReadingOptions\.|padCandidates\(|\.borrowable\(|toReadingCard\(\)' 10d98d0db61dcde621463460e6a1e59941b4042b -- '*.kt'
+(paths relative to the repository root)
+
+app/src/main/java/io/github/stopcran/kanji/data/HomeRepository.kt:90:            db.padCandidates(source, inventory.stack.id, mode, pool, inventory.inStack.mapTo(HashSet()) { it.kanji }).isNotEmpty()
+app/src/main/java/io/github/stopcran/kanji/data/KanjiReviews.kt:114:                val card = target.toReadingCard()
+app/src/main/java/io/github/stopcran/kanji/data/KanjiReviews.kt:118:                    cards.filter { Stacks.includes(stack, it.tags.splitSep()) }.map { it.toReadingCard() }
+app/src/main/java/io/github/stopcran/kanji/data/KanjiReviews.kt:120:                KanjiReadingQuiz.question(card, kind, pool, Random(0), reading = reading) != null
+app/src/main/java/io/github/stopcran/kanji/data/Padding.kt:18:suspend fun AppDatabase.padCandidates(sourceId: String, stack: String, mode: StudyMode, content: List<KanjiEntity>, inStack: Set<String>): List<PadCandidate> {
+app/src/main/java/io/github/stopcran/kanji/data/Padding.kt:22:    return reviews().borrowable(sourceId, mode.name, stack)
+app/src/main/java/io/github/stopcran/kanji/data/Padding.kt:33:    reviews().borrowable(sourceId, mode.name, stack)
+app/src/main/java/io/github/stopcran/kanji/data/ReadingData.kt:13:fun KanjiEntity.toReadingCard() = ReadingCard(
+app/src/main/java/io/github/stopcran/kanji/data/ReadingData.kt:36:    val cards = kanji.map { it.toReadingCard() }
+app/src/main/java/io/github/stopcran/kanji/data/Unlock.kt:42:    val cards = kanji.map { it.toReadingCard() }
+app/src/main/java/io/github/stopcran/kanji/ui/DrawViewModel.kt:205:        val candidates = app.db.padCandidates(sourceId, stack, StudyMode.Draw, content.filter { it.strokesJson != null }, inStack.mapTo(HashSet()) { it.kanji })
+app/src/main/java/io/github/stopcran/kanji/ui/HomeData.kt:219:    val cards = inStack.map { it.toReadingCard() }
+app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt:114:            app.db.padCandidates(sourceId, stack, kind.mode, content, inStackKanji).filter { c ->
+app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt:115:                byKanji[c.kanji]?.toReadingCard()?.quizKeys(kind)?.contains(ReadingId.key(c.id)) == true
+app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt:127:                readingCards = readingCards + k.toReadingCard()
+app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt:151:            val q = KanjiReadingQuiz.question(target, item.kind, readingCards, random, reading = item.reading) ?: continue
+app/src/main/java/io/github/stopcran/kanji/ui/QuizViewModel.kt:130:        val candidates = app.db.padCandidates(sourceId, stack, StudyMode.Quiz, content, inStack.mapTo(HashSet()) { it.kanji })
+app/src/test/java/io/github/stopcran/kanji/data/ContentSyncTest.kt:689:        assertEquals(emptyList<String>(), card.toReadingCard().askOn)
+app/src/test/java/io/github/stopcran/kanji/data/ContentSyncTest.kt:690:        assertEquals(listOf("ひ"), card.toReadingCard().askKun)
+app/src/test/java/io/github/stopcran/kanji/data/ContentSyncTest.kt:691:        assertEquals(listOf("ニチ"), card.toReadingCard().on)
+app/src/test/java/io/github/stopcran/kanji/data/ContentSyncTest.kt:692:        assertEquals(card.toReadingCard(), db.content().kanjiLite(source.id).single().toReadingCard())
+app/src/test/java/io/github/stopcran/kanji/data/ContentSyncTest.kt:693:        assertEquals(card.toReadingCard(), db.content().observeKanjiLite(source.id).first().single().toReadingCard())
+app/src/test/java/io/github/stopcran/kanji/data/CumulativeJlptDataTest.kt:263:        assertFalse(db.padCandidates(source, "jlpt-n4", StudyMode.Quiz, cards, emptySet()).isNotEmpty())
+app/src/test/java/io/github/stopcran/kanji/data/DatabaseMigrationTest.kt:202:                assertEquals(listOf("ニチ"), card.toReadingCard().askOn)
+app/src/test/java/io/github/stopcran/kanji/data/DatabaseMigrationTest.kt:210:            assertEquals(emptyList<String>(), first.toReadingCard().askOn)
+app/src/test/java/io/github/stopcran/kanji/data/DatabaseMigrationTest.kt:211:            assertEquals(listOf("ひ"), first.toReadingCard().askKun)
+core/src/main/kotlin/io/github/stopcran/kanji/core/focus/FocusBatch.kt:25:            if (KanjiReadingQuiz.question(card, kind, all, Random(0), reading = key) == null) break
+core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt:85:            out += ReadingOptions.mutations(k)
+core/src/main/kotlin/io/github/stopcran/kanji/core/words/Words.kt:164:        if (direction == WordDirection.Reading) return ReadingOptions.build(target, all, random, count)
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:55:                val q = KanjiReadingQuiz.question(target, kind, cards, Random(seed)) ?: continue
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:68:            val q = KanjiReadingQuiz.question(target, ReadingKind.Kun, others + target, Random(seed))!!
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:77:        assertNull(KanjiReadingQuiz.question(lonely, ReadingKind.On, listOf(lonely), Random(1)))
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:78:        assertNull(KanjiReadingQuiz.question(card("々", emptyList(), emptyList()), ReadingKind.On, cards, Random(1)))
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:79:        val two = KanjiReadingQuiz.question(lonely, ReadingKind.On, listOf(lonely, card("二", listOf("ニ"), listOf("ふた"))), Random(1))
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:112:            val q = KanjiReadingQuiz.question(target, ReadingKind.Kun, pool, Random(seed))!!
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:115:            assertNull(KanjiReadingQuiz.question(target, ReadingKind.On, pool, Random(seed)))
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:186:            val q = KanjiReadingQuiz.question(sei, ReadingKind.On, cards, Random(seed), reading = "しょう")!!
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:219:                val q = KanjiReadingQuiz.question(c, kind, all, Random(seed), reading = reading)
+core/src/test/kotlin/io/github/stopcran/kanji/core/KanjiReadingsTest.kt:223:                val excluded = KanjiReadingQuiz.excludedKeys(c)
+core/src/test/kotlin/io/github/stopcran/kanji/core/WordsTest.kt:331:            assertTrue(o.count { it.word in ReadingOptions.mutations("がっこう") } >= 2)
+core/src/test/kotlin/io/github/stopcran/kanji/core/WordsTest.kt:356:        val m = ReadingOptions.mutations("がっこう")
+core/src/test/kotlin/io/github/stopcran/kanji/core/WordsTest.kt:361:        assertTrue("きょ" in ReadingOptions.mutations("きょう"))
+core/src/test/kotlin/io/github/stopcran/kanji/core/WordsTest.kt:362:        assertTrue(ReadingOptions.mutations("あ").isEmpty())

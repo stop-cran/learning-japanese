@@ -1,0 +1,203 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "f10f8ee7-3a09-4166-97b5-e52d06db6a2f",
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-12T03:09:38.349Z",
+  "last": "2026-11-12T03:27:29.088Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-12T03:09:38.374Z",
+   "chars": 2509,
+   "sha256": "2f3b70a4547b1dab0b1ac87b27070380ea758f2eb62a0db2a64f13fd37192926"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 68
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 11209828,
+  "outputTokens": 36805,
+  "cacheReadTokens": 10876584,
+  "cacheWriteTokens": 333040,
+  "reasoningTokens": 22678,
+  "costMultiplierSum": 68.0
+ },
+ "toolCalls": {
+  "total": 68,
+  "byTool": {
+   "view": 53,
+   "powershell": 5,
+   "web_fetch": 5,
+   "rg": 3,
+   "apply_patch": 1,
+   "task_complete": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\followup-110-10d79652-gpt"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full": 1,
+   "none": 14,
+   "notFullyRead": [
+    "snapshot/kanji/仮.md",
+    "snapshot/kanji/価.md",
+    "snapshot/kanji/器.md",
+    "snapshot/kanji/基.md",
+    "snapshot/kanji/張.md",
+    "snapshot/kanji/応.md",
+    "snapshot/kanji/整.md",
+    "snapshot/kanji/暖.md",
+    "snapshot/kanji/激.md",
+    "snapshot/kanji/級.md",
+    "snapshot/kanji/素.md",
+    "snapshot/kanji/統.md",
+    "snapshot/kanji/縮.md",
+    "snapshot/kanji/騒.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence (top level)": {
+   "files": 3,
+   "full": 1,
+   "full (ranges)": 1,
+   "partial": 1,
+   "notFullyRead": [
+    "evidence/cards-reading-metadata.tsv"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full"
+ },
+ "outsidePaths": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets"
+ ],
+ "alsoReadAllowed": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-110-453af714",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-110-10d79652-gpt",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-110-gpt\\confirm-gpt.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-110-gpt\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-110-453af714\\evidence\\public-source\\weblio-嫌.txt",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-110-gpt\\confirm-gpt.md"
+ ],
+ "alsoReadCount": 2,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-110-gpt\\followup-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nfrom pathlib import Path\nimport hashlib, urllib.request\np=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\followup-110-10d79652-gpt\\evidence\\android\\app\\src\\main\\java\\io\\github\\stopcran\\kanji\\ui\\KanjiReadingViewModel.kt')\nu='https://raw.githubusercontent.com/stop-cran/kanji-cards-android/10d98d0db61dcde621463460e6a1e59941b4042b/app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingV...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport csv,io,re,itertools,collections,sys\nsys.stdout.reconfigure(encoding='utf-8')\nb=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets'); f=b/'followup-110-10d79652-gpt'\nrows=list(csv.DictReader(io.StringIO((f/'evidence'/'cards-reading-metadata.tsv').read_text(encoding='utf-8-sig')),delimiter='\\t'))\ncards={r['kanji']:{k:v.split() for k,v in r.items() if k!='kanji...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport csv,io,collections,sys\nsys.stdout.reconfigure(encoding='utf-8')\nf=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\followup-110-10d79652-gpt')\nrs=list(csv.DictReader(io.StringIO((f/'evidence'/'cards-reading-metadata.tsv').read_text(encoding='utf-8-sig')),delimiter='\\t'))\ndef key(s):return ''.join(chr(ord(c)-0x60) if '\\u30a1'<=c<='\\u30f6' else c for c in s ...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport csv,io,sys,hashlib,urllib.request\nsys.stdout.reconfigure(encoding='utf-8')\nf=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\followup-110-10d79652-gpt')\np='core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt'\npublic=urllib.request.urlopen('https://raw.githubusercontent.com/stop-cran/kanji-cards-android/10d98d0db61dcde621463460e6a1e...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport csv,io,re,itertools,collections,sys\nsys.stdout.reconfigure(encoding='utf-8')\nf=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\followup-110-10d79652-gpt')\nrows=list(csv.DictReader(io.StringIO((f/'evidence'/'cards-reading-metadata.tsv').read_text(encoding='utf-8-sig')),delimiter='\\t'))\ncards={r['kanji']:{k:v.split() for k,v in r.items() if k!='kanji'} for ...",
+   "writeLike": false
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v1.9.0/libraries/stdlib/src/kotlin/random/XorWowRandom.kt",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v1.9.0/libraries/stdlib/src/kotlin/random/Random.kt",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v1.9.0/libraries/stdlib/src/kotlin/random/Random.kt",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%AB%8C",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%AB%8C",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 101,
+  "reportFile": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-110-gpt\\followup-gpt.md",
+  "reportExists": true,
+  "reportChars": 17980,
+  "reportSha256": "7525696be259f0f6e6810ecaf9925465011f76dcddf859c8a3864d9bcc14edce",
+  "finalSource": "task_complete.summary",
+  "finalEqualsReport": false,
+  "finalContainsReport": false,
+  "similarity": 0.0112
+ },
+ "flags": [
+  "paths outside the packet and report: 1"
+ ]
+}

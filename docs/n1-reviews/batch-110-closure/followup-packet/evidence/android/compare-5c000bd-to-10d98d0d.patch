@@ -1,0 +1,751 @@
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/Database.kt b/app/src/main/java/io/github/stopcran/kanji/data/Database.kt
+index b44b64f..40adc18 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/data/Database.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/data/Database.kt
+@@ -40,6 +40,7 @@ data class KanjiEntity(
+     val position: Int,
+     val quizOnyomi: String? = null,
+     val quizKunyomi: String? = null,
++    @ColumnInfo(defaultValue = "''") val quizExclusions: String = "",
+ )
+ 
+ @Entity(tableName = "words", primaryKeys = ["sourceId", "word"])
+@@ -144,6 +145,25 @@ data class ReviewLogEntity(
+     val atMs: Long,
+     @ColumnInfo(defaultValue = "''") val reading: String = "",
+     val sessionId: String? = null,
++    /** Null for historical or non-reading events; otherwise the prior per-reading state at recording time. */
++    val previousReadingStarted: Boolean? = null,
++)
++
++@Entity(
++    tableName = "jlpt_transition_checks",
++    indices = [Index(value = ["sourceId", "dueMs"]), Index(value = ["sourceId", "kanji", "mode", "reading"])],
++)
++data class JlptTransitionCheckEntity(
++    @PrimaryKey(autoGenerate = true) val id: Long = 0,
++    val sourceId: String,
++    val triggerKanji: String,
++    val kanji: String,
++    val mode: String,
++    val reading: String,
++    val dueMs: Long,
++    val originalDueMs: Long,
++    val completedAtMs: Long? = null,
++    val cancelledAtMs: Long? = null,
+ )
+ 
+ @Entity(tableName = "study_sessions")
+@@ -173,6 +193,7 @@ data class SyncMetaEntity(
+     @ColumnInfo(defaultValue = "0") val kanjiReadingParserEpoch: Int = 0,
+     @ColumnInfo(defaultValue = "'en'") val baseLanguage: String = "en",
+     @ColumnInfo(defaultValue = "'ja'") val targetLanguage: String = "ja",
++    @ColumnInfo(defaultValue = "0") val kanjiMeaningParserEpoch: Int = 0,
+ )
+ 
+ /** Durable source authority for the last accepted candidate or intentional built-in selection. */
+@@ -222,7 +243,7 @@ interface ContentDao {
+     /** Home-screen variant: no article body; strokesJson is only '' (present) or NULL (absent). */
+     @Query(
+         "SELECT sourceId, kanji, title, jlpt, tags, strokeCount, radical, phonetic, onyomi, kunyomi, distractors, " +
+-            "'' AS body, CASE WHEN strokesJson IS NULL THEN NULL ELSE '' END AS strokesJson, position, quizOnyomi, quizKunyomi " +
++            "'' AS body, CASE WHEN strokesJson IS NULL THEN NULL ELSE '' END AS strokesJson, position, quizOnyomi, quizKunyomi, quizExclusions " +
+             "FROM kanji WHERE sourceId = :sourceId ORDER BY position"
+     )
+     fun observeKanjiLite(sourceId: String): Flow<List<KanjiEntity>>
+@@ -242,7 +263,7 @@ interface ContentDao {
+     /** Same as [kanji] without the article body or stroke data (used by background work). */
+     @Query(
+         "SELECT sourceId, kanji, title, jlpt, tags, strokeCount, radical, phonetic, onyomi, kunyomi, distractors, " +
+-            "'' AS body, CASE WHEN strokesJson IS NULL THEN NULL ELSE '' END AS strokesJson, position, quizOnyomi, quizKunyomi " +
++            "'' AS body, CASE WHEN strokesJson IS NULL THEN NULL ELSE '' END AS strokesJson, position, quizOnyomi, quizKunyomi, quizExclusions " +
+             "FROM kanji WHERE sourceId = :sourceId ORDER BY position",
+     )
+     suspend fun kanjiLite(sourceId: String): List<KanjiEntity>
+@@ -489,6 +510,44 @@ interface ReviewDao {
+     @Query("SELECT * FROM review_state WHERE sourceId = :sourceId AND stack = :stack AND mode = :mode")
+     suspend fun states(sourceId: String, stack: String, mode: String): List<ReviewStateEntity>
+ 
++    @Query(
++        "UPDATE review_state SET dueMs = :dueMs WHERE sourceId = :sourceId AND stack = :stack AND kanji = :kanji " +
++            "AND mode = :mode AND reading = :reading AND phase != 'New' AND dueMs > :dueMs",
++    )
++    @Suppress("LongParameterList")
++    suspend fun advanceDue(sourceId: String, stack: String, kanji: String, mode: String, reading: String, dueMs: Long): Int
++
++    @Query("SELECT * FROM jlpt_transition_checks WHERE sourceId = :sourceId AND cancelledAtMs IS NULL " +
++        "AND (completedAtMs IS NULL OR dueMs >= :sinceMs)")
++    suspend fun transitionChecks(sourceId: String, sinceMs: Long): List<JlptTransitionCheckEntity>
++
++    @Query("SELECT * FROM jlpt_transition_checks WHERE sourceId = :sourceId AND completedAtMs IS NULL AND cancelledAtMs IS NULL")
++    suspend fun pendingTransitionChecks(sourceId: String): List<JlptTransitionCheckEntity>
++
++    @Query("SELECT * FROM jlpt_transition_checks ORDER BY id")
++    suspend fun allTransitionChecks(): List<JlptTransitionCheckEntity>
++
++    @Insert
++    suspend fun insertTransitionCheck(check: JlptTransitionCheckEntity)
++
++    @Query(
++        "UPDATE jlpt_transition_checks SET completedAtMs = :atMs WHERE sourceId = :sourceId AND kanji = :kanji " +
++            "AND mode = :mode AND reading = :reading AND completedAtMs IS NULL AND cancelledAtMs IS NULL",
++    )
++    suspend fun completeTransitionCheck(sourceId: String, kanji: String, mode: String, reading: String, atMs: Long)
++
++    @Query(
++        "UPDATE review_state SET dueMs = :originalDueMs WHERE sourceId = :sourceId AND stack = 'kanji-jlpt' " +
++            "AND kanji = :kanji AND mode = :mode AND reading = :reading AND dueMs = :reservedDueMs",
++    )
++    @Suppress("LongParameterList")
++    suspend fun restoreTransitionDue(
++        sourceId: String, kanji: String, mode: String, reading: String, reservedDueMs: Long, originalDueMs: Long,
++    ): Int
++
++    @Query("UPDATE jlpt_transition_checks SET cancelledAtMs = :atMs WHERE id = :id AND completedAtMs IS NULL AND cancelledAtMs IS NULL")
++    suspend fun cancelTransitionCheck(id: Long, atMs: Long): Int
++
+     @Query("SELECT * FROM review_state WHERE sourceId = :sourceId AND mode = :mode")
+     suspend fun statesAcrossStacks(sourceId: String, mode: String): List<ReviewStateEntity>
+ 
+@@ -530,8 +589,12 @@ interface ReviewDao {
+     suspend fun newCardsIntroducedSince(sourceId: String, stack: String, mode: String, sinceMs: Long): Int
+ 
+     /** First-ever introductions in the shared pool: Kana skills and reading cards count separately per mode. */
+-    @Query("SELECT COUNT(*) FROM (SELECT 1 FROM review_log WHERE sourceId = :sourceId GROUP BY stack, kanji, reading, " +
+-        "CASE WHEN sourceId = '$KANA_SOURCE_ID' OR reading != '' THEN mode ELSE '' END HAVING MIN(atMs) >= :sinceMs)")
++    @Query("SELECT COUNT(*) FROM (SELECT MIN(id) AS firstId, MIN(atMs) AS firstAt FROM review_log WHERE sourceId = :sourceId GROUP BY " +
++        "CASE WHEN stack IN ('kanji-jlpt', 'jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1') " +
++        "AND mode IN ('Quiz', 'Draw', 'KanjiOn', 'KanjiKun') THEN 'kanji-jlpt' ELSE stack END, kanji, reading, " +
++        "CASE WHEN sourceId = '$KANA_SOURCE_ID' OR reading != '' THEN mode ELSE '' END) intro " +
++        "JOIN review_log initial_log ON initial_log.id = intro.firstId WHERE intro.firstAt >= :sinceMs AND " +
++        "(initial_log.mode NOT IN ('KanjiOn', 'KanjiKun') OR initial_log.reading = '' OR COALESCE(initial_log.previousReadingStarted, 0) = 0)")
+     suspend fun itemsIntroducedSince(sourceId: String, sinceMs: Long): Int
+ 
+     /** Cards that were reviewed before and are due at [nowMs], in any mode. */
+@@ -549,15 +612,23 @@ interface ReviewDao {
+     suspend fun reviewTimes(sourceIds: List<String>, sinceMs: Long, untilMs: Long): List<Long>
+ 
+     /** Reading cards (kanji + reading) whose first review happened since [sinceMs]; each used a unit of the daily budget. */
+-    @Query("SELECT COUNT(*) FROM (SELECT 1 FROM review_log WHERE sourceId = :sourceId AND stack = :stack AND mode IN ('KanjiOn', 'KanjiKun') AND reading != '' GROUP BY mode, kanji, reading HAVING MIN(atMs) >= :sinceMs)")
++    @Query("SELECT COUNT(*) FROM (SELECT MIN(id) AS firstId, MIN(atMs) AS firstAt FROM review_log WHERE sourceId = :sourceId AND " +
++        "(stack = :stack OR (:stack = 'kanji-jlpt' AND stack IN ('jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1'))) " +
++        "AND mode IN ('KanjiOn', 'KanjiKun') AND reading != '' GROUP BY mode, kanji, reading) intro " +
++        "JOIN review_log initial_log ON initial_log.id = intro.firstId WHERE intro.firstAt >= :sinceMs AND " +
++        "COALESCE(initial_log.previousReadingStarted, 0) = 0")
+     suspend fun readingCardsIntroducedSince(sourceId: String, stack: String, sinceMs: Long): Int
+ 
+     /** Every answer of one source and stack in any mode, oldest first: the input of [io.github.stopcran.kanji.core.unlock.MeaningUnlock]. */
+-    @Query("SELECT id, atMs, kanji, mode, grade FROM review_log WHERE sourceId = :sourceId AND stack = :stack ORDER BY atMs, id")
++    @Query("SELECT id, atMs, kanji, mode, grade FROM review_log WHERE sourceId = :sourceId AND " +
++        "(stack = :stack OR (:stack = 'kanji-jlpt' AND stack IN ('jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1') " +
++        "AND mode IN ('Quiz', 'Draw', 'KanjiOn', 'KanjiKun'))) ORDER BY atMs, id")
+     suspend fun unlockLog(sourceId: String, stack: String): List<io.github.stopcran.kanji.core.unlock.LogEvent>
+ 
+     /** Kanji whose first meaning answer (any grade) was logged at or after [sinceMs]: the ones a focus batch counts. */
+-    @Query("SELECT kanji FROM review_log WHERE sourceId = :sourceId AND stack = :stack AND mode = 'Quiz' GROUP BY kanji HAVING MIN(atMs) >= :sinceMs")
++    @Query("SELECT kanji FROM review_log WHERE sourceId = :sourceId AND " +
++        "(stack = :stack OR (:stack = 'kanji-jlpt' AND stack IN ('jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1'))) " +
++        "AND mode = 'Quiz' GROUP BY kanji HAVING MIN(atMs) >= :sinceMs")
+     suspend fun meaningIntroducedSince(sourceId: String, stack: String, sinceMs: Long): List<String>
+ 
+     @Transaction
+@@ -584,10 +655,10 @@ interface ReviewDao {
+         ListeningTaskEntity::class, ListeningTaskAssetEntity::class, ListeningAssetPinEntity::class,
+         ListeningTaskIdentityEntity::class, ListeningExposureEntity::class, ListeningTaskSyncEntity::class,
+         ListeningTaskEncounterEntity::class, ListeningAssessmentEntity::class,
+-        ReviewStateEntity::class, ReviewLogEntity::class, StudySessionEntity::class, SyncMetaEntity::class,
++        ReviewStateEntity::class, ReviewLogEntity::class, JlptTransitionCheckEntity::class, StudySessionEntity::class, SyncMetaEntity::class,
+         AcceptedSourceEntity::class,
+     ],
+-    version = 19,
++    version = 21,
+     exportSchema = true,
+ )
+ abstract class AppDatabase : RoomDatabase() {
+@@ -598,6 +669,47 @@ abstract class AppDatabase : RoomDatabase() {
+     abstract fun sourceAcceptance(): SourceAcceptanceDao
+ }
+ 
++val MIGRATION_20_21 = object : androidx.room.migration.Migration(20, 21) {
++    override fun migrate(db: androidx.sqlite.db.SupportSQLiteDatabase) {
++        db.execSQL("ALTER TABLE review_log ADD COLUMN previousReadingStarted INTEGER")
++        db.execSQL(
++            "CREATE TABLE IF NOT EXISTS jlpt_transition_checks (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
++                "sourceId TEXT NOT NULL, triggerKanji TEXT NOT NULL, kanji TEXT NOT NULL, mode TEXT NOT NULL, " +
++                "reading TEXT NOT NULL, dueMs INTEGER NOT NULL, originalDueMs INTEGER NOT NULL, " +
++                "completedAtMs INTEGER, cancelledAtMs INTEGER)",
++        )
++        db.execSQL("CREATE INDEX IF NOT EXISTS index_jlpt_transition_checks_sourceId_dueMs ON jlpt_transition_checks (sourceId, dueMs)")
++        db.execSQL(
++            "CREATE INDEX IF NOT EXISTS index_jlpt_transition_checks_sourceId_kanji_mode_reading " +
++                "ON jlpt_transition_checks (sourceId, kanji, mode, reading)",
++        )
++        db.execSQL(
++            "INSERT INTO review_state (sourceId, stack, kanji, mode, phase, stability, difficulty, dueMs, lastReviewMs, reps, lapses, reading) " +
++                "SELECT s.sourceId, 'kanji-jlpt', s.kanji, s.mode, s.phase, s.stability, s.difficulty, s.dueMs, s.lastReviewMs, s.reps, s.lapses, s.reading " +
++                "FROM review_state s WHERE s.stack IN ('jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1') " +
++                "AND s.mode IN ('Quiz', 'Draw', 'KanjiOn', 'KanjiKun') AND NOT EXISTS (" +
++                "SELECT 1 FROM review_state t WHERE t.sourceId = s.sourceId AND t.kanji = s.kanji AND t.mode = s.mode AND t.reading = s.reading " +
++                "AND t.stack IN ('jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1') AND (" +
++                "COALESCE(t.lastReviewMs, -1) > COALESCE(s.lastReviewMs, -1) OR " +
++                "(COALESCE(t.lastReviewMs, -1) = COALESCE(s.lastReviewMs, -1) AND (" +
++                "(CASE WHEN t.phase = 'New' THEN 0 ELSE 1 END) > (CASE WHEN s.phase = 'New' THEN 0 ELSE 1 END) OR " +
++                "((CASE WHEN t.phase = 'New' THEN 0 ELSE 1 END) = (CASE WHEN s.phase = 'New' THEN 0 ELSE 1 END) AND " +
++                "(t.reps > s.reps OR (t.reps = s.reps AND t.stack < s.stack)))))))",
++        )
++        db.execSQL(
++            "DELETE FROM review_state WHERE stack IN ('jlpt-n5', 'jlpt-n4', 'jlpt-n3', 'jlpt-n2', 'jlpt-n1') " +
++                "AND mode IN ('Quiz', 'Draw', 'KanjiOn', 'KanjiKun')",
++        )
++    }
++}
++
++val MIGRATION_19_20 = object : androidx.room.migration.Migration(19, 20) {
++    override fun migrate(db: androidx.sqlite.db.SupportSQLiteDatabase) {
++        db.execSQL("ALTER TABLE kanji ADD COLUMN quizExclusions TEXT NOT NULL DEFAULT ''")
++        db.execSQL("ALTER TABLE sync_meta ADD COLUMN kanjiMeaningParserEpoch INTEGER NOT NULL DEFAULT 0")
++    }
++}
++
+ val MIGRATION_18_19 = object : androidx.room.migration.Migration(18, 19) {
+     override fun migrate(db: androidx.sqlite.db.SupportSQLiteDatabase) {
+         db.execSQL(
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/HomeRepository.kt b/app/src/main/java/io/github/stopcran/kanji/data/HomeRepository.kt
+index 9c76a69..0cc14d3 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/data/HomeRepository.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/data/HomeRepository.kt
+@@ -80,7 +80,7 @@ internal class RoomHomeRepository(private val db: AppDatabase, private val setti
+         val reviews = db.reviews()
+         val kanjiModes = listOf(StudyMode.Quiz, StudyMode.Draw, StudyMode.KanjiOn, StudyMode.KanjiKun)
+         val states = (kanjiModes + WordDirection.entries.map { it.mode }).associateWith { mode ->
+-            val stack = if (mode in kanjiModes) inventory.stack.id else inventory.wordStack.id
++            val stack = if (mode in kanjiModes) Stacks.stateId(inventory.stack.id) else inventory.wordStack.id
+             val rows = reviews.states(source, stack, mode.name)
+             if (mode == StudyMode.KanjiOn || mode == StudyMode.KanjiKun) rows.toReadingStates()
+             else rows.associate { it.kanji to it.toSrs() }
+@@ -104,8 +104,10 @@ internal class RoomHomeRepository(private val db: AppDatabase, private val setti
+             inventory, states,
+             db.newAllowance(source, now, zone, preferences.dailyNew, preferences.weekPlan),
+             db.weekProgress(source, now, zone, preferences.weekPlan),
+-            MeaningUnlock.learned(reviews.unlockLog(source, inventory.stack.id), preferences.unlockRule, zone),
+-            reviews.readingCardsIntroducedSince(source, inventory.stack.id, now.atZone(zone).toLocalDate().atStartOfDay(zone).toInstant().toEpochMilli()),
++            MeaningUnlock.learned(reviews.unlockLog(source, Stacks.stateId(inventory.stack.id)), preferences.unlockRule, zone),
++            reviews.readingCardsIntroducedSince(
++                source, Stacks.stateId(inventory.stack.id), now.atZone(zone).toLocalDate().atStartOfDay(zone).toInstant().toEpochMilli(),
++            ),
+             pad, focus,
+         )
+     }
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/KanjiReviews.kt b/app/src/main/java/io/github/stopcran/kanji/data/KanjiReviews.kt
+new file mode 100644
+index 0000000..b3cdce0
+--- /dev/null
++++ b/app/src/main/java/io/github/stopcran/kanji/data/KanjiReviews.kt
+@@ -0,0 +1,125 @@
++package io.github.stopcran.kanji.data
++
++import androidx.room.withTransaction
++import io.github.stopcran.kanji.core.reading.KanjiReadingQuiz
++import io.github.stopcran.kanji.core.reading.ReadingCard
++import io.github.stopcran.kanji.core.reading.ReadingId
++import io.github.stopcran.kanji.core.reading.ReadingKind
++import io.github.stopcran.kanji.core.srs.CardPhase
++import io.github.stopcran.kanji.core.srs.Fsrs
++import io.github.stopcran.kanji.core.srs.Grade
++import io.github.stopcran.kanji.core.srs.KanjiTransitionChecks
++import io.github.stopcran.kanji.core.srs.SrsState
++import io.github.stopcran.kanji.core.srs.Stacks
++import io.github.stopcran.kanji.core.srs.StudyMode
++import java.time.Instant
++import kotlin.random.Random
++
++/** A review, its log, and any transition check commit together. */
++suspend fun AppDatabase.recordKanjiReview(state: ReviewStateEntity, log: ReviewLogEntity) {
++    require(state.matches(log)) { "Review state and log identities differ" }
++    val isReading = state.mode == StudyMode.KanjiOn.name || state.mode == StudyMode.KanjiKun.name
++    if (state.stack != Stacks.JLPT_STATE && !isReading) {
++        reviews().record(state, log)
++        return
++    }
++    withTransaction {
++        val dao = reviews()
++        val previous = dao.states(state.sourceId, state.stack, state.mode)
++        val alreadyStarted = previous.any { it.kanji == state.kanji && it.phase != "New" }
++        val current = previous.firstOrNull { it.kanji == state.kanji && it.reading == state.reading }?.toSrs() ?: SrsState()
++        val recordedLog = if (isReading) log.copy(previousReadingStarted = current.phase != CardPhase.New) else log
++        val updated = nextKanjiState(state, log, current)
++        dao.record(updated, recordedLog)
++        if (state.stack == Stacks.JLPT_STATE) {
++            dao.completeTransitionCheck(state.sourceId, state.kanji, state.mode, state.reading, log.atMs)
++            if (!alreadyStarted && updated.phase != "New") scheduleTransitionCheck(updated, log.atMs, previous)
++        }
++    }
++}
++
++private fun ReviewStateEntity.matches(log: ReviewLogEntity): Boolean =
++    sourceId == log.sourceId && stack == log.stack && kanji == log.kanji && mode == log.mode && reading == log.reading
++
++private fun nextKanjiState(state: ReviewStateEntity, log: ReviewLogEntity, current: SrsState): ReviewStateEntity {
++    val mode = StudyMode.entries.single { it.name == log.mode }
++    val grade = Grade.entries.single { it.value == log.grade }
++    val id = if (state.reading.isEmpty()) state.kanji else ReadingId.of(state.kanji, state.reading)
++    val cap = if (mode == StudyMode.Quiz || mode == StudyMode.KanjiOn || mode == StudyMode.KanjiKun) {
++        Fsrs.GUESSABLE_FIRST_SUCCESS_DAYS
++    } else null
++    return Fsrs().review(current, grade, Instant.ofEpochMilli(log.atMs), cap, Fsrs.seed(id, mode.name, current.reps))
++        .toEntity(state.sourceId, state.stack, state.kanji, mode, state.reading)
++}
++
++private suspend fun AppDatabase.scheduleTransitionCheck(trigger: ReviewStateEntity, nowMs: Long, states: List<ReviewStateEntity>) {
++    if (trigger.mode !in setOf(StudyMode.Quiz.name, StudyMode.Draw.name, StudyMode.KanjiOn.name, StudyMode.KanjiKun.name)) return
++    val related = KanjiTransitionChecks.related(trigger.kanji)
++    if (related.isEmpty()) return
++    val targets = TransitionTargets(content().kanjiLite(trigger.sourceId))
++    val checks = reviews().transitionChecks(trigger.sourceId, nowMs)
++    val pending = checks.filter { it.completedAtMs == null }.mapTo(HashSet()) { Triple(it.kanji, it.mode, it.reading) }
++    val candidates = states.filter { candidate ->
++        candidate.kanji in related && candidate.phase != "New" &&
++            targets.available(trigger.kanji, candidate.kanji, candidate.mode, candidate.reading) &&
++            Triple(candidate.kanji, candidate.mode, candidate.reading) !in pending
++    }.sortedWith(compareBy<ReviewStateEntity> { it.dueMs }.thenBy { it.kanji }.thenBy { it.reading })
++    val reservations = checks.map { it.dueMs }
++    val (candidate, due) = candidates.firstNotNullOfOrNull { candidate ->
++        KanjiTransitionChecks.nextDue(nowMs, candidate.dueMs, reservations)?.let { candidate to it }
++    } ?: return
++    check(reviews().advanceDue(candidate.sourceId, candidate.stack, candidate.kanji, candidate.mode, candidate.reading, due) == 1)
++    reviews().insertTransitionCheck(
++        JlptTransitionCheckEntity(
++            sourceId = candidate.sourceId, triggerKanji = trigger.kanji, kanji = candidate.kanji,
++            mode = candidate.mode, reading = candidate.reading, dueMs = due, originalDueMs = candidate.dueMs,
++        ),
++    )
++}
++
++/** Call inside the same transaction that installs a new content snapshot. */
++internal suspend fun AppDatabase.cancelUnavailableTransitionChecks(sourceId: String, nowMs: Long) {
++    val pending = reviews().pendingTransitionChecks(sourceId)
++    if (pending.isEmpty()) return
++    val targets = TransitionTargets(content().kanjiLite(sourceId))
++    val states = pending.map { it.mode }.distinct().associateWith { mode ->
++        reviews().states(sourceId, Stacks.JLPT_STATE, mode).associateBy { it.kanji to it.reading }
++    }
++    for (reservation in pending) {
++        val state = states[reservation.mode]?.get(reservation.kanji to reservation.reading)
++        if (state != null && state.phase != "New" &&
++            targets.available(reservation.triggerKanji, reservation.kanji, reservation.mode, reservation.reading)
++        ) continue
++        reviews().restoreTransitionDue(
++            sourceId, reservation.kanji, reservation.mode, reservation.reading, reservation.dueMs, reservation.originalDueMs,
++        )
++        check(reviews().cancelTransitionCheck(reservation.id, nowMs) == 1)
++    }
++}
++
++private class TransitionTargets(private val cards: List<KanjiEntity>) {
++    private val byKanji = cards.associateBy { it.kanji }
++    private val readingPools = mutableMapOf<Int, List<ReadingCard>>()
++
++    fun available(trigger: String, kanji: String, mode: String, reading: String): Boolean {
++        val triggerLevel = byKanji[trigger]?.let { Stacks.jlptLevel(it.tags.splitSep()) } ?: return false
++        val target = byKanji[kanji] ?: return false
++        val targetLevel = Stacks.jlptLevel(target.tags.splitSep()) ?: return false
++        if (targetLevel <= triggerLevel || kanji !in KanjiTransitionChecks.related(trigger)) return false
++        return when (mode) {
++            StudyMode.Quiz.name -> reading.isEmpty()
++            StudyMode.Draw.name -> reading.isEmpty() && target.strokesJson != null
++            StudyMode.KanjiOn.name, StudyMode.KanjiKun.name -> {
++                val kind = if (mode == StudyMode.KanjiOn.name) ReadingKind.On else ReadingKind.Kun
++                val card = target.toReadingCard()
++                if (reading !in card.quizKeys(kind)) return false
++                val pool = readingPools.getOrPut(triggerLevel) {
++                    val stack = Stacks.jlpt.single { Stacks.jlptLevel(it.id) == triggerLevel }
++                    cards.filter { Stacks.includes(stack, it.tags.splitSep()) }.map { it.toReadingCard() }
++                }
++                KanjiReadingQuiz.question(card, kind, pool, Random(0), reading = reading) != null
++            }
++            else -> false
++        }
++    }
++}
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/Padding.kt b/app/src/main/java/io/github/stopcran/kanji/data/Padding.kt
+index 6111afc..b59995d 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/data/Padding.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/data/Padding.kt
+@@ -16,7 +16,7 @@ private const val PRACTICE_BASE = 10
+  * Kanji that belong to the current stack are left out so its unlock rules are never bypassed; the "all" stack borrows nothing.
+  */
+ suspend fun AppDatabase.padCandidates(sourceId: String, stack: String, mode: StudyMode, content: List<KanjiEntity>, inStack: Set<String>): List<PadCandidate> {
+-    if (stack == Stacks.ALL) return emptyList()
++    if (stack == Stacks.ALL || Stacks.jlptLevel(stack) != null) return emptyList()
+     val known = content.mapTo(HashSet()) { it.kanji }
+     val reading = mode == StudyMode.KanjiOn || mode == StudyMode.KanjiKun
+     return reviews().borrowable(sourceId, mode.name, stack)
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/ReadingData.kt b/app/src/main/java/io/github/stopcran/kanji/data/ReadingData.kt
+index 3a36d60..97089c4 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/data/ReadingData.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/data/ReadingData.kt
+@@ -5,6 +5,7 @@ import io.github.stopcran.kanji.core.reading.ReadingCard
+ import io.github.stopcran.kanji.core.reading.ReadingItem
+ import io.github.stopcran.kanji.core.reading.ReadingKind
+ import io.github.stopcran.kanji.core.srs.SrsState
++import io.github.stopcran.kanji.core.srs.Stacks
+ import java.time.Instant
+ import java.time.LocalDate
+ import java.time.ZoneId
+@@ -33,18 +34,20 @@ suspend fun AppDatabase.readingData(settings: Settings, kanji: List<KanjiEntity>
+     val now = request.now
+     val extra = request.extra
+     val cards = kanji.map { it.toReadingCard() }
+-    val states = ReadingKind.entries.associateWith { kind -> reviews().states(sourceId, stack, kind.mode.name).toReadingStates() }
+-    val startOfDay = LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
+-    val introducedToday = reviews().readingCardsIntroducedSince(sourceId, stack, startOfDay)
++    val stateStack = Stacks.stateId(stack)
++    val states = ReadingKind.entries.associateWith { kind -> reviews().states(sourceId, stateStack, kind.mode.name).toReadingStates() }
++    val startOfDay = now.atZone(ZoneId.systemDefault()).toLocalDate().atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
++    val introducedToday = reviews().readingCardsIntroducedSince(sourceId, stateStack, startOfDay)
++    val newEligible = kanji.newKanjiInStack(stack)
+     val items = if (extra) {
+-        KanjiReadingQueue.extraQueue(cards, states, meaningLearned(settings, sourceId, stack), now, request.extraLimit)
++        KanjiReadingQueue.extraQueue(cards, states, meaningLearned(settings, sourceId, stack), now, request.extraLimit, newEligible)
+     } else {
+         KanjiReadingQueue.build(
+             cards, states,
+             unlocked = meaningLearned(settings, sourceId, stack),
+             introducedToday = introducedToday,
+             // The queue subtracts the reading cards already started today; the shared allowance has already accounted for them.
+-            dailyNew = newRemaining + introducedToday, now = now,
++            dailyNew = newRemaining + introducedToday, now = now, newEligible = newEligible,
+         )
+     }
+     return ReadingData(cards, states, items)
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/SrsMapping.kt b/app/src/main/java/io/github/stopcran/kanji/data/SrsMapping.kt
+index 307a309..7c3bc63 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/data/SrsMapping.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/data/SrsMapping.kt
+@@ -2,6 +2,7 @@ package io.github.stopcran.kanji.data
+ 
+ import io.github.stopcran.kanji.core.content.WordArticle
+ import io.github.stopcran.kanji.core.content.WordScene
++import io.github.stopcran.kanji.core.quiz.QuizCard
+ import io.github.stopcran.kanji.core.reading.ReadingId
+ import io.github.stopcran.kanji.core.srs.CardPhase
+ import io.github.stopcran.kanji.core.srs.SrsState
+@@ -33,11 +34,17 @@ fun List<KanjiEntity>.stacks(): List<Stack> = Stacks.available(map { it.tags.spl
+ /** The cards of [stackId]; an unknown or empty stack falls back to all cards. */
+ fun List<KanjiEntity>.inStack(stackId: String): List<KanjiEntity> {
+     val stack = Stacks.find(stackId, stacks())
+-    return filter { stack.contains(it.tags.splitSep()) }
++    return filter { Stacks.includes(stack, it.tags.splitSep()) }
+ }
+ 
++/** A JLPT selection reviews an inclusive range but introduces only its own level. */
++fun List<KanjiEntity>.newKanjiInStack(stackId: String): Set<String>? =
++    if (Stacks.jlptLevel(stackId) == null) null else filter { stackId in it.tags.splitSep() }.mapTo(HashSet()) { it.kanji }
++
+ fun List<KanjiEntity>.levels(): Map<String, Int?> = associate { it.kanji to it.jlpt }
+ 
++fun KanjiEntity.toQuizCard() = QuizCard(kanji, title, tags.splitSep(), distractors.splitSep(), quizExclusions.splitSep())
++
+ fun WordArticle.toEntity(sourceId: String) = WordEntity(
+     sourceId, word, reading, title, type, kanji.joinSep(), tags.joinSep(), body, jlpt,
+     quizExclusions.joinSep(), quizDistractors.joinSep(), image, imageScene, quizImage,
+diff --git a/app/src/main/java/io/github/stopcran/kanji/data/Unlock.kt b/app/src/main/java/io/github/stopcran/kanji/data/Unlock.kt
+index 078acee..2a1f6a9 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/data/Unlock.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/data/Unlock.kt
+@@ -1,7 +1,10 @@
+ package io.github.stopcran.kanji.data
+ 
+ import io.github.stopcran.kanji.core.focus.FocusBatch
++import io.github.stopcran.kanji.core.reading.ReadingId
+ import io.github.stopcran.kanji.core.reading.ReadingKind
++import io.github.stopcran.kanji.core.srs.CardPhase
++import io.github.stopcran.kanji.core.srs.Stacks
+ import io.github.stopcran.kanji.core.srs.StudyMode
+ import io.github.stopcran.kanji.core.unlock.MeaningUnlock
+ 
+@@ -10,7 +13,7 @@ import io.github.stopcran.kanji.core.unlock.MeaningUnlock
+  * unlock rule applies identically everywhere. Home recomputes when review states change, which are written with the log in one transaction.
+  */
+ suspend fun AppDatabase.meaningLearned(settings: Settings, sourceId: String, stack: String): Set<String> =
+-    MeaningUnlock.learned(reviews().unlockLog(sourceId, stack), settings.unlockRule.value)
++    MeaningUnlock.learned(reviews().unlockLog(sourceId, Stacks.stateId(stack)), settings.unlockRule.value)
+ 
+ /**
+  * Stroke data is stored only when it parsed at import (`ContentSync` writes `StrokeData` it decoded), so presence means drawable.
+@@ -33,17 +36,26 @@ suspend fun AppDatabase.focusStatus(settings: Settings, sourceId: String, stack:
+ }
+ 
+ internal suspend fun AppDatabase.focusStatus(sourceId: String, stack: String, kanji: List<KanjiEntity>, size: Int, since: Long): FocusStatus {
+-    val introduced = reviews().meaningIntroducedSince(sourceId, stack, since).toSet()
++    val stateStack = Stacks.stateId(stack)
++    val introduced = reviews().meaningIntroducedSince(sourceId, stateStack, since).toSet()
+     if (introduced.isEmpty()) return FocusStatus(size, 0)
+     val cards = kanji.map { it.toReadingCard() }
+-    val requirements = FocusBatch.requirements(cards.filter { it.kanji in introduced }, kanji.drawableKanji(), cards)
+     val reviews = reviews()
+-    suspend fun states(mode: StudyMode) = reviews.states(sourceId, stack, mode.name)
++    suspend fun states(mode: StudyMode) = reviews.states(sourceId, stateStack, mode.name)
++    val quiz = states(StudyMode.Quiz).associate { it.kanji to it.toSrs() }
++    val draw = states(StudyMode.Draw).associate { it.kanji to it.toSrs() }
++    val readings = ReadingKind.entries.associateWith { states(it.mode).toReadingStates() }
++    val newEligible = kanji.newKanjiInStack(stack)
++    val requirements = FocusBatch.requirements(cards.filter { it.kanji in introduced }, kanji.drawableKanji(), cards).mapValues { (id, r) ->
++        if (newEligible == null || id in newEligible) r else r.copy(
++            drawable = r.drawable && draw[id]?.phase?.let { it != CardPhase.New } == true,
++            readingKeys = r.readingKeys.mapValues { (kind, keys) ->
++                keys.filter { key -> readings[kind]?.get(ReadingId.of(id, key))?.phase?.let { it != CardPhase.New } == true }
++            },
++        )
++    }
+     val inLearning = FocusBatch.inLearning(
+-        introduced, requirements,
+-        states(StudyMode.Quiz).associate { it.kanji to it.toSrs() },
+-        states(StudyMode.Draw).associate { it.kanji to it.toSrs() },
+-        ReadingKind.entries.associateWith { states(it.mode).toReadingStates() },
++        introduced, requirements, quiz, draw, readings,
+     )
+     return FocusStatus(size, inLearning.size)
+ }
+diff --git a/app/src/main/java/io/github/stopcran/kanji/ui/HomeData.kt b/app/src/main/java/io/github/stopcran/kanji/ui/HomeData.kt
+index bb98ca2..e2840f9 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/ui/HomeData.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/ui/HomeData.kt
+@@ -23,6 +23,7 @@ import io.github.stopcran.kanji.data.KanjiEntity
+ import io.github.stopcran.kanji.data.HomeSnapshot
+ import io.github.stopcran.kanji.data.forDirection
+ import io.github.stopcran.kanji.data.inWordStack
++import io.github.stopcran.kanji.data.newKanjiInStack
+ import io.github.stopcran.kanji.data.toReadingCard
+ import java.time.Instant
+ 
+@@ -107,7 +108,7 @@ private class Unlocks(
+ 
+ private class Extras(
+     val allowance: NewAllowance, val unlocks: Unlocks,
+-    val focus: io.github.stopcran.kanji.data.FocusStatus?,
++    val focus: io.github.stopcran.kanji.data.FocusStatus?, val newEligible: Set<String>?,
+ )
+ 
+ /** All seven scheduling-state maps, each non-null; exists so loading is decided once instead of with !! at each use. */
+@@ -157,6 +158,7 @@ internal fun projectHome(snapshot: HomeSnapshot, now: Instant): HomeData {
+     val extras = Extras(
+         snapshot.allowance,
+         Unlocks(snapshot.learned, selection.study.unlockRule, snapshot.introducedReadings, snapshot.padModes, states), snapshot.focus,
++        inventory.inStack.newKanjiInStack(inventory.stack.id),
+     )
+     val projection = computeModes(inventory.inStack, inventory.wordsInStack, extras, now, stateSet)
+     val n4Offer = shouldOfferN4(
+@@ -173,18 +175,37 @@ internal fun projectHome(snapshot: HomeSnapshot, now: Instant): HomeData {
+     )
+ }
+ 
++private fun meaningMode(inStack: List<KanjiEntity>, quiz: Map<String, SrsState>, ex: Extras, now: Instant): ModeState {
++    val ids = inStack.map { it.kanji }
++    val newLeft = ex.allowance.remaining
++    val meaningNew = ex.focus?.let { minOf(newLeft, it.capacity) } ?: newLeft
++    val q = QueueBuilder.build(ids, quiz, now, meaningNew, noise = 0.0, newEligible = ex.newEligible)
++    val extra = QueueBuilder.extra(
++        ids, quiz, now, limit = 1, noise = 0.0, newEligible = ex.newEligible,
++        newCardsLimit = ex.focus?.capacity ?: Int.MAX_VALUE,
++    )
++    val reason = if (ex.focus?.capacity == 0) "Kanji focus full"
++        else "Nothing is due. Come back later or raise the daily new-card limit in ⚙ settings."
++    return ModeState.of(
++        inStack.size >= 2, "Needs at least 2 kanji in this stack", q.count { !it.isNew }, q.count { it.isNew },
++        extra.isNotEmpty() || StudyMode.Quiz in ex.unlocks.padModes, reason,
++    )
++}
++
+ /** Counts use strict (noise-free) queues so the numbers are stable; sessions build their own randomised queues. */
+ private fun computeModes(
+     inStack: List<KanjiEntity>, words: List<io.github.stopcran.kanji.data.WordEntity>, ex: Extras, now: Instant, states: StateSet,
+ ): HomeModes {
+     val (quiz, draw, on, kun, jp, en, rd) = states
+     val newLeft = ex.allowance.remaining
++    val newEligible = ex.newEligible
+     val readiness = mutableMapOf<WordDirection, WordReadiness>()
+     fun plain(
+         ids: List<String>, states: Map<String, SrsState>, min: Int, what: String, locked: String = "", pool: Int = ids.size, pad: Boolean = false,
+     ): ModeState {
+-        val q = QueueBuilder.build(ids, states, now, newLeft, noise = 0.0)
+-        return ModeState.of(pool >= min, "Needs at least $min $what", q.count { !it.isNew }, q.count { it.isNew }, ids.size >= min || pad, locked)
++        val q = QueueBuilder.build(ids, states, now, newLeft, noise = 0.0, newEligible = newEligible)
++        val extra = QueueBuilder.extra(ids, states, now, limit = 1, noise = 0.0, newEligible = newEligible)
++        return ModeState.of(pool >= min, "Needs at least $min $what", q.count { !it.isNew }, q.count { it.isNew }, extra.isNotEmpty() || pad, locked)
+     }
+     fun word(d: WordDirection, own: Map<String, SrsState>, other: Map<String, SrsState>, locked: String): ModeState {
+         val ids = words.forDirection(d).map { it.word }
+@@ -197,16 +218,14 @@ private fun computeModes(
+     }
+     val cards = inStack.map { it.toReadingCard() }
+     val readingStates = mapOf(ReadingKind.On to on, ReadingKind.Kun to kun)
+-    fun readings(extra: Boolean) = KanjiReadingQueue.build(cards, readingStates, ex.unlocks.learned, ex.unlocks.introducedReadings, newLeft + ex.unlocks.introducedReadings, now, extra, noise = 0.0)
++    fun readings(extra: Boolean) = KanjiReadingQueue.build(
++        cards, readingStates, ex.unlocks.learned, ex.unlocks.introducedReadings,
++        newLeft + ex.unlocks.introducedReadings, now, extra, noise = 0.0, newEligible = newEligible,
++    )
+     val rq = readings(false)
+     val locked = ex.unlocks.rule.hint
+-    val meaningNew = ex.focus?.let { minOf(newLeft, it.capacity) } ?: newLeft
+-    val meaning = run {
+-        val q = QueueBuilder.build(inStack.map { it.kanji }, quiz, now, meaningNew, noise = 0.0)
+-        ModeState.of(inStack.size >= 2, "Needs at least 2 kanji in this stack", q.count { !it.isNew }, q.count { it.isNew }, inStack.size >= 2, "")
+-    }
+     val modes = mapOf(
+-        HomeMode.Meaning to meaning,
++        HomeMode.Meaning to meaningMode(inStack, quiz, ex, now),
+         HomeMode.Drawing to inStack.filter { it.strokesJson != null }.map { it.kanji }.let { strokeIds ->
+             plain(
+                 DrawGate.eligible(strokeIds, draw, ex.unlocks.learned), draw, 1, "kanji with stroke data", locked,
+diff --git a/app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt b/app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt
+index 2ff4f0c..1801c9f 100644
+--- a/app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt
++++ b/app/src/main/java/io/github/stopcran/kanji/ui/KanjiReadingViewModel.kt
+@@ -23,6 +23,8 @@ import io.github.stopcran.kanji.core.srs.Stacks
+ import io.github.stopcran.kanji.data.KanjiEntity
+ import io.github.stopcran.kanji.data.ReviewLogEntity
+ import io.github.stopcran.kanji.data.inStack
++import io.github.stopcran.kanji.data.recordKanjiReview
++import io.github.stopcran.kanji.data.stacks
+ import io.github.stopcran.kanji.data.newAllowance
+ import io.github.stopcran.kanji.data.ReadingRequest
+ import io.github.stopcran.kanji.data.readingData
+@@ -51,7 +53,7 @@ sealed interface ReadingUi {
+ enum class ReadingEmptyReason { NoCards, UnlockBlocked }
+ 
+ /** Kanji readings session over on'yomi and kun'yomi; each (kanji, kind, reading) has its own scheduling state. */
+-class KanjiReadingViewModel(private val app: Services) : StudyViewModel(app.sessionStore) {
++class KanjiReadingViewModel(private val app: Services) : StudyViewModel(app.sessionStore, app.kanjiWrites) {
+     private val fsrs = Fsrs()
+     private val random = Random.Default
+ 
+@@ -76,9 +78,11 @@ class KanjiReadingViewModel(private val app: Services) : StudyViewModel(app.sess
+     }
+ 
+     private suspend fun start(extra: Boolean) {
++        app.kanjiWrites.awaitPending()
+         sourceId = app.settings.source.value.id
+-        stack = app.settings.stack.value
+-        val all = app.db.content().kanji(sourceId).inStack(stack)
++        val content = app.db.content().kanji(sourceId)
++        stack = Stacks.find(app.settings.stack.value, content.stacks()).id
++        val all = content.inStack(stack)
+         if (all.isEmpty()) {
+             ui = ReadingUi.Empty(ReadingEmptyReason.NoCards)
+             return
+@@ -176,10 +180,10 @@ class KanjiReadingViewModel(private val app: Services) : StudyViewModel(app.sess
+                 firstSuccessCapDays = Fsrs.GUESSABLE_FIRST_SUCCESS_DAYS, fuzzSeed = Fsrs.seed(id, kind.mode.name, states.getValue(kind)[id]?.reps ?: 0),
+             )
+             states.getValue(kind)[id] = updated
+-            val owner = owners[padKey(kind, id)] ?: stack
++            val owner = owners[padKey(kind, id)] ?: Stacks.stateId(stack)
+             recordSession {
+                 val log = ReviewLogEntity(0, sourceId, owner, kanji, kind.mode.name, grade.value, now.toEpochMilli(), a.question.correctKey, reviewSessionId)
+-                app.db.reviews().record(updated.toEntity(sourceId, owner, kanji, kind.mode, a.question.correctKey), log)
++                app.db.recordKanjiReview(updated.toEntity(sourceId, owner, kanji, kind.mode, a.question.correctKey), log)
+             }
+         }
+         showNext()
+diff --git a/core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt b/core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt
+index 7fd4762..492a43c 100644
+--- a/core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt
++++ b/core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt
+@@ -146,12 +146,15 @@ object KanjiReadingQueue {
+     }
+ 
+     /** "Practice more": overdue, unseen and upcoming cards of both kinds, [limit] in total. */
++    @Suppress("LongParameterList")
+     fun extraQueue(
+         cards: List<ReadingCard>, states: Map<ReadingKind, Map<String, SrsState>>, unlocked: Set<String>, now: Instant, limit: Int = EXTRA_LIMIT,
++        newEligible: Set<String>? = null,
+     ): List<ReadingItem> {
+         val rnd = Random.Default
+         val lists = ReadingKind.entries.map { kind ->
+-            val ids = cards.flatMap { eligible(it, kind, states[kind].orEmpty(), it.kanji in unlocked) }.map { it.id }
++            val ids = cards.flatMap { eligible(it, kind, states[kind].orEmpty(), it.kanji in unlocked) }
++                .filter { !it.isNew || newEligible == null || it.kanji in newEligible }.map { it.id }
+             QueueBuilder.extra(ids, states[kind].orEmpty(), now, limit, rnd = rnd).map {
+                 ReadingItem(ReadingId.kanji(it.kanji), kind, ReadingId.key(it.kanji), it.isNew)
+             }
+@@ -159,6 +162,7 @@ object KanjiReadingQueue {
+         return interleave(merge(lists, rnd, true).take(limit))
+     }
+ 
++    @Suppress("LongParameterList")
+     fun build(
+         cards: List<ReadingCard>,
+         states: Map<ReadingKind, Map<String, SrsState>>,
+@@ -169,10 +173,11 @@ object KanjiReadingQueue {
+         extra: Boolean = false,
+         noise: Double = QueueBuilder.DEFAULT_NOISE,
+         rnd: Random = Random.Default,
++        newEligible: Set<String>? = null,
+     ): List<ReadingItem> {
+         val kinds = ReadingKind.entries
+         val shuffle = noise > 0
+-        if (extra) return extraQueue(cards, states, unlocked, now)
++        if (extra) return extraQueue(cards, states, unlocked, now, newEligible = newEligible)
+         fun eligible(kind: ReadingKind) = cards.flatMap { eligible(it, kind, states[kind].orEmpty(), it.kanji in unlocked) }
+         val due = rankDue(
+             kinds.flatMap { kind ->
+@@ -181,7 +186,8 @@ object KanjiReadingQueue {
+             },
+             now, noise, rnd,
+         )
+-        val candidates = kinds.flatMap { kind -> eligible(kind).filter { it.isNew } }.let { if (shuffle) it.shuffled(rnd) else it }
++        val candidates = kinds.flatMap { kind -> eligible(kind).filter { it.isNew && (newEligible == null || it.kanji in newEligible) } }
++            .let { if (shuffle) it.shuffled(rnd) else it }
+         val fresh = candidates.take(maxOf(0, dailyNew - introducedToday))
+         return interleave(merge(listOf(due, fresh), rnd, shuffle))
+     }
+diff --git a/core/src/main/kotlin/io/github/stopcran/kanji/core/srs/Stacks.kt b/core/src/main/kotlin/io/github/stopcran/kanji/core/srs/Stacks.kt
+index abcf1f3..a8f2ef9 100644
+--- a/core/src/main/kotlin/io/github/stopcran/kanji/core/srs/Stacks.kt
++++ b/core/src/main/kotlin/io/github/stopcran/kanji/core/srs/Stacks.kt
+@@ -1,27 +1,40 @@
+ package io.github.stopcran.kanji.core.srs
+ 
+-/**
+- * A stack is a tag filter over the cards. Every stack keeps its own scheduling state, so a kanji learned within a small
+- * set is scheduled afresh when it is studied among many (where it may get confused with look-alikes).
+- */
++/** A named tag filter; JLPT selections additionally include started cards from easier levels. */
+ data class Stack(val id: String, val label: String, val tag: String?) {
+     fun contains(tags: List<String>) = tag == null || tag in tags
+ }
+ 
+ object Stacks {
+     const val ALL = "all"
++    const val JLPT_STATE = "kanji-jlpt"
+     val everything = Stack(ALL, "All", null)
+ 
+-    private val known = listOf(
++    val jlpt = listOf(
+         Stack("jlpt-n5", "N5", "jlpt-n5"),
+         Stack("jlpt-n4", "N4", "jlpt-n4"),
+         Stack("jlpt-n3", "N3", "jlpt-n3"),
+         Stack("jlpt-n2", "N2", "jlpt-n2"),
+         Stack("jlpt-n1", "N1", "jlpt-n1"),
++    )
++    private val known = jlpt + listOf(
+         everything,
+         Stack("starter", "Starter", "starter"),
+     )
+ 
++    fun jlptLevel(id: String): Int? = jlpt.indexOfFirst { it.id == id }.takeIf { it >= 0 }?.let { 5 - it }
++
++    /** A card with conflicting level tags is not a reliable cross-level transition target. */
++    fun jlptLevel(tags: List<String>): Int? = jlpt.mapNotNull { s -> jlptLevel(s.id)?.takeIf { s.contains(tags) } }.singleOrNull()
++
++    fun stateId(stackId: String): String = if (jlptLevel(stackId) != null) JLPT_STATE else stackId
++
++    /** The full review and answer-option range; [Stack.contains] remains the exact new-card filter. */
++    fun includes(stack: Stack, tags: List<String>): Boolean {
++        val ceiling = jlptLevel(stack.id) ?: return stack.contains(tags)
++        return (ceiling..5).any { "jlpt-n$it" in tags }
++    }
++
+     /** Available levels, All (even without cards), then thematic stacks. */
+     fun available(cardTags: List<List<String>>): List<Stack> =
+         known.filter { s -> s.tag == null || cardTags.any { s.contains(it) } }

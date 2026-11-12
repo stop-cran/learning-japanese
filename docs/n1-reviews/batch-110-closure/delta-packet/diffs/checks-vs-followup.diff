@@ -1,0 +1,187 @@
+--- followup-packet/checks/reading-exposure.txt
++++ checks/reading-exposure.txt
+@@ -166,10 +166,10 @@
+    curated 好: tags jlpt-n3 grade-4 structure-unclassified; in pools: N1 stack, All stack; on コウ | kun この.む す.く よ.い い.い
+    JMdict single-kanji entries: 1587610: disliking, not wanting, unwilling (to do) -> いや・や・イヤ
+-   unlisted readings attested for 嫌: や (JMdict 1587610)
++   unlisted readings attested for 嫌: や (card text, JMdict 1587610)
+    on prompt ゲン (key げん)
+        N1 stack: curated 兼 験 好 -> 2 outcomes; deficit 2: the fallback fills the open slots; 55 drawable wrong options (1 curated, 54 fallback)
+        All stack: curated 兼 験 好 -> 2 outcomes; deficit 2: the fallback fills the open slots; 55 drawable wrong options (1 curated, 54 fallback)
+        Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 24 drawable wrong options (0 curated, 24 fallback)
+-       attested reading や (JMdict 1587610) is offered by 冶 夜 野; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
++       attested reading や (card text, JMdict 1587610) is offered by 冶 夜 野; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+        risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [嫌 冶] -> や; [嫌 夜] -> や
+        Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (3 holders tried)
+@@ -181,5 +181,5 @@
+        All stack: curated 兼 験 好 -> 16 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 9 drawable wrong options (9 curated, 0 fallback)
+        Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 10 drawable wrong options (0 curated, 10 fallback)
+-       attested reading や (JMdict 1587610) is offered by 八 家 屋; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
++       attested reading や (card text, JMdict 1587610) is offered by 八 家 屋; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+        risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [嫌 八] -> や やっつ やつ よう; [嫌 家] -> いえ うち や
+        Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (3 holders tried)
+@@ -187,12 +187,4 @@
+        sampling All stack: 2000 seeds, 9 of 9 drawable wrong options seen
+        sampling Starter practice session: 2000 seeds, 10 of 10 drawable wrong options seen
+-   kun prompt いや (key いや)
+-       N1 stack: curated 兼 験 好 -> 16 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 9 drawable wrong options (9 curated, 0 fallback)
+-       All stack: curated 兼 験 好 -> 16 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 9 drawable wrong options (9 curated, 0 fallback)
+-       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 9 drawable wrong options (0 curated, 9 fallback)
+-       PAD-HIT: attested reading や (JMdict 1587610) can be drawn as a wrong option only in a Starter practice session (the target borrowed to pad a short Starter "Practice more" session); offered by 八 家 屋
+-       sampling N1 stack: 2000 seeds, 9 of 9 drawable wrong options seen
+-       sampling All stack: 2000 seeds, 9 of 9 drawable wrong options seen
+-       sampling Starter practice session: 2000 seeds, 9 of 9 drawable wrong options seen
+ 
+ == 縮 (shrink; contract)   curated option cards: 宿 績 組   tags: jlpt-n1 grade-6 structure-unclassified
+@@ -313,7 +305,7 @@
+        sampling Starter practice session: 2000 seeds, 7 of 7 drawable wrong options seen
+ 
+-0 production hit(s) (N1 / All stack pools); 1 padded-session hit(s) (Starter practice session only); 5 latent collision(s) (attested reading offered by another card, not drawable in any of these pools)
+-
+-Scan of every card: 305 cards have JMdict single-kanji readings beyond their own; 888 prompts checked in the N1, All and Starter pools; 331 attested-reading/other-card collisions by kind; 19 hit(s) in whole-stack pools (N1, All, Starter stack); 13 hit(s) only in a Starter practice session that borrows the card.
++0 production hit(s) (N1 / All stack pools); 0 padded-session hit(s) (Starter practice session only); 5 latent collision(s) (attested reading offered by another card, not drawable in any of these pools)
++
++Scan of every card: 305 cards have JMdict single-kanji readings beyond their own; 887 prompts checked in the N1, All and Starter pools; 330 attested-reading/other-card collisions by kind; 19 hit(s) in whole-stack pools (N1, All, Starter stack); 12 hit(s) only in a Starter practice session that borrows the card.
+    HIT 冠 kun prompt かんむり in N1 stack: かぶり (JMdict 2238280: [archaic] order, rank)
+    HIT 冠 kun prompt かんむり in All stack: かぶり (JMdict 2238280: [archaic] order, rank)
+@@ -336,5 +328,4 @@
+    HIT 酒 kun prompt さけ in All stack: ささ (JMdict 2862891: [dated term] alcohol, sake)
+    PAD-HIT 主 kun prompt ぬし in Starter practice session: にし (JMdict 2427530: [archaic, familiar language] you)
+-   PAD-HIT 嫌 kun prompt いや in Starter practice session: や (JMdict 1587610: disliking, not wanting, unwilling (to do))
+    PAD-HIT 家 kun prompt や in Starter practice session: ち (JMdict 2858378: [colloquial, word usually written using kana alone] 's house, 's home)
+    PAD-HIT 家 kun prompt うち in Starter practice session: ち (JMdict 2858378: [colloquial, word usually written using kana alone] 's house, 's home)
+--- followup-packet/checks/kotlin-reading-run.txt
++++ checks/kotlin-reading-run.txt
+@@ -1,3 +1,3 @@
+-POOLS|N1 stack=1161|All stack=1161|cards=1161
++POOLS|N1 stack=1161|All stack=1161|Starter practice session=118|cards=1161
+ TARGET|張|tags=jlpt-n1 grade-5 structure-unclassified|distractors=長 弧 弱|present=長+N+A 弧+N+A 弱+N+A
+ EXCLUDED|張|じょう ちょ ちょう はり はる ばり ばる ぱり ぱる
+@@ -48,6 +48,4 @@
+ PROMPT|N1 stack|嫌|Kun|きらう|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=かねる:4000 しるし:1001 ためす:1001 よい:1001 このむ:1000 すく:1000 ためし:1000 いい:999 あかし:998
+ PROMPT|All stack|嫌|Kun|きらう|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=かねる:4000 しるし:1001 ためす:1001 よい:1001 このむ:1000 すく:1000 ためし:1000 いい:999 あかし:998
+-PROMPT|N1 stack|嫌|Kun|いや|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=かねる:4000 しるし:1001 ためす:1001 よい:1001 このむ:1000 すく:1000 ためし:1000 いい:999 あかし:998
+-PROMPT|All stack|嫌|Kun|いや|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=かねる:4000 しるし:1001 ためす:1001 よい:1001 このむ:1000 すく:1000 ためし:1000 いい:999 あかし:998
+ TARGET|縮|tags=jlpt-n1 grade-6 structure-unclassified|distractors=宿 績 組|present=宿+N+A 績+N+A 組+N+A
+ EXCLUDED|縮|しゅく しゅぐ じぢまる じぢむ じぢめる じぢらす じぢれる じゅく ちぢまる ちぢむ ちぢめる ちぢらす ちぢらず ちぢれる
+@@ -82,23 +80,17 @@
+ PROMPT|N1 stack|暖|Kun|あたたかい|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=あやしい:3184 あたらしい:1614 あかるい:1605 あぶない:1597 くらい:1383 くれる:1310 くらむ:1307
+ PROMPT|All stack|暖|Kun|あたたかい|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=あやしい:3184 あたらしい:1614 あかるい:1605 あぶない:1597 くらい:1383 くれる:1310 くらむ:1307
+-PROMPTS|26
++PROMPTS|25
+ SMALL|嫌+屋|嫌|On|げん|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=おく:400
+ SMALL|嫌+屋|嫌|Kun|きらう|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=や:400
+-SMALL|嫌+屋|嫌|Kun|いや|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=や:400
+ SMALL|嫌+家|嫌|On|げん|seeds=400|null=0|badCorrect=0|sizes=3:400|wrong=か:400 け:400
+ SMALL|嫌+家|嫌|Kun|きらう|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=いえ:400 うち:400 や:400
+-SMALL|嫌+家|嫌|Kun|いや|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=いえ:400 うち:400 や:400
+ SMALL|嫌+八|嫌|On|げん|seeds=400|null=0|badCorrect=0|sizes=3:400|wrong=はち:400 はつ:400
+ SMALL|嫌+八|嫌|Kun|きらう|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=や:400 やつ:400 よう:400
+-SMALL|嫌+八|嫌|Kun|いや|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=や:400 やっつ:400 やつ:400
+ SMALL|嫌+夜|嫌|On|げん|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=や:400
+ SMALL|嫌+夜|嫌|Kun|きらう|seeds=400|null=0|badCorrect=0|sizes=3:400|wrong=よ:400 よる:400
+-SMALL|嫌+夜|嫌|Kun|いや|seeds=400|null=0|badCorrect=0|sizes=3:400|wrong=よ:400 よる:400
+ SMALL|嫌+冶|嫌|On|げん|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=や:400
+ SMALL|嫌+冶|嫌|Kun|きらう|seeds=400|null=400|badCorrect=0|sizes=|wrong=
+-SMALL|嫌+冶|嫌|Kun|いや|seeds=400|null=400|badCorrect=0|sizes=|wrong=
+ SMALL|嫌+野|嫌|On|げん|seeds=400|null=0|badCorrect=0|sizes=3:400|wrong=しょ:400 や:400
+ SMALL|嫌+野|嫌|Kun|きらう|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=の:400
+-SMALL|嫌+野|嫌|Kun|いや|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=の:400
+ SMALL|騒+催|騒|On|そう|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=さい:400
+ SMALL|騒+催|騒|Kun|さわぐ|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=もよおす:400
+@@ -107,6 +99,4 @@
+ SMALL|騒+西|騒|On|そう|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=さい:400 す:400 せい:400
+ SMALL|騒+西|騒|Kun|さわぐ|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=にし:400
+-SMALL|張+割|張|On|ちょう|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=かつ:400
+-SMALL|張+割|張|Kun|はる|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=わり:400 わる:400 われる:400
+ SMALL|基+供|基|On|き|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=きょう:400 く:400 くう:400
+ SMALL|基+供|基|Kun|もと|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=そなえる:400 とも:400 ども:400
+@@ -115,2 +105,4 @@
+ SMALL|基+友|基|On|き|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=ゆう:400
+ SMALL|基+友|基|Kun|もと|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=とも:400
++SMALL|張+割|張|On|ちょう|seeds=400|null=0|badCorrect=0|sizes=2:400|wrong=かつ:400
++SMALL|張+割|張|Kun|はる|seeds=400|null=0|badCorrect=0|sizes=4:400|wrong=わり:400 わる:400 われる:400
+--- followup-packet/checks/kotlin-starter-run.txt
++++ checks/kotlin-starter-run.txt
+@@ -33,5 +33,4 @@
+ PROMPT|Starter practice session|嫌|On|げん|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=せん:1031 ぶん:777 さん:726 てん:712 あん:711 げ:708 でん:681 きん:678 たん:420 ぎん:407 まん:387 ねん:384 かん:381 いん:375 ぜん:370 はん:370 えん:367 げつ:366 しん:364 じん:362 だん:362 こん:359 ほん:354 なん:348
+ PROMPT|Starter practice session|嫌|Kun|きらう|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=きく:1246 くう:1225 きた:1224 あう:1214 おこなう:1198 おう:1194 よう:1191 かたらう:1181 きたる:1181 かう:1146
+-PROMPT|Starter practice session|嫌|Kun|いや|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=いぬ:1366 いきる:1339 いく:1337 いま:1336 いでる:1334 いる:1334 いつ:1323 いき:1321 や:1310
+ TARGET|縮|tags=jlpt-n1 grade-6 structure-unclassified|distractors=宿 績 組|present=宿-S 績-S 組-S
+ EXCLUDED|縮|しゅく しゅぐ じぢまる じぢむ じぢめる じぢらす じぢれる じゅく ちぢまる ちぢむ ちぢめる ちぢらす ちぢらず ちぢれる
+@@ -56,3 +55,3 @@
+ PROMPT|Starter practice session|暖|On|だん|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=せん:1015 ぶん:785 てん:730 あん:720 さん:719 けん:710 だい:710 きん:691 でん:685 ぎん:407 まん:392 だ:386 ねん:381 えん:375 はん:375 いん:374 しん:374 ぜん:372 じん:369 かん:363 こん:360 ほん:354 なん:353
+ PROMPT|Starter practice session|暖|Kun|あたたかい|seeds=4000|null=0|badCorrect=0|sizes=4:4000|wrong=あたらしい:4000 ちいさい:1384 あからむ:1364 すくない:1334 おおきい:1317 みじかい:1307 あわせる:1294
+-PROMPTS|26
++PROMPTS|25
+--- followup-packet/checks/kotlin-vs-exact.txt
++++ checks/kotlin-vs-exact.txt
+@@ -1,4 +1,4 @@
+-== C:\Users\stop-\n1-kanji-workspace\scratch-110\kotlin-reading-run.txt
+-pools: Kotlin {'N1 stack': 1161, 'All stack': 1161} of 1161 cards; Python {'N1 stack': 1161, 'All stack': 1161} of 1161 cards -> match
++== C:\Users\stop-\n1-kanji-workspace\review-packets\_checks-110-fix3\kotlin-reading-run.txt
++pools: Kotlin {'N1 stack': 1161, 'All stack': 1161, 'Starter practice session': 118} of 1161 cards; Python {'N1 stack': 1161, 'All stack': 1161, 'Starter practice session': 118} of 1161 cards -> match
+ prompt N1 stack 張 on ちょう: 4000 seeds, sizes 4:4000, 3 of 3 reachable wrong options drawn
+ prompt All stack 張 on ちょう: 4000 seeds, sizes 4:4000, 3 of 3 reachable wrong options drawn
+@@ -31,6 +31,4 @@
+ prompt N1 stack 嫌 kun きらう: 4000 seeds, sizes 4:4000, 9 of 9 reachable wrong options drawn
+ prompt All stack 嫌 kun きらう: 4000 seeds, sizes 4:4000, 9 of 9 reachable wrong options drawn
+-prompt N1 stack 嫌 kun いや: 4000 seeds, sizes 4:4000, 9 of 9 reachable wrong options drawn
+-prompt All stack 嫌 kun いや: 4000 seeds, sizes 4:4000, 9 of 9 reachable wrong options drawn
+ prompt N1 stack 縮 on しゅく: 4000 seeds, sizes 4:4000, 4 of 4 reachable wrong options drawn
+ prompt All stack 縮 on しゅく: 4000 seeds, sizes 4:4000, 4 of 4 reachable wrong options drawn
+@@ -54,21 +52,15 @@
+ prompt All stack 暖 kun あたたかい: 4000 seeds, sizes 4:4000, 7 of 7 reachable wrong options drawn
+ small 嫌+屋 嫌 on げん: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+-small 嫌+屋 嫌 kun きらう: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
+-small 嫌+屋 嫌 kun いや: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
++small 嫌+屋 嫌 kun きらう: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (card text/JMdict 1587610)
+ small 嫌+家 嫌 on げん: 400 seeds, sizes 3:400, 2 of 2 reachable wrong options drawn
+-small 嫌+家 嫌 kun きらう: 400 seeds, sizes 4:400, 3 of 3 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
+-small 嫌+家 嫌 kun いや: 400 seeds, sizes 4:400, 3 of 3 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
++small 嫌+家 嫌 kun きらう: 400 seeds, sizes 4:400, 3 of 3 reachable wrong options drawn; risk class attested drawn: や x400 (card text/JMdict 1587610)
+ small 嫌+八 嫌 on げん: 400 seeds, sizes 3:400, 2 of 2 reachable wrong options drawn
+-small 嫌+八 嫌 kun きらう: 400 seeds, sizes 4:400, 3 of 4 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610); NOTE reachable but never drawn: やっつ
+-small 嫌+八 嫌 kun いや: 400 seeds, sizes 4:400, 3 of 4 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610); NOTE reachable but never drawn: よう
+-small 嫌+夜 嫌 on げん: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
++small 嫌+八 嫌 kun きらう: 400 seeds, sizes 4:400, 3 of 4 reachable wrong options drawn; risk class attested drawn: や x400 (card text/JMdict 1587610); NOTE reachable but never drawn: やっつ
++small 嫌+夜 嫌 on げん: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (card text/JMdict 1587610)
+ small 嫌+夜 嫌 kun きらう: 400 seeds, sizes 3:400, 2 of 2 reachable wrong options drawn
+-small 嫌+夜 嫌 kun いや: 400 seeds, sizes 3:400, 2 of 2 reachable wrong options drawn
+-small 嫌+冶 嫌 on げん: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
++small 嫌+冶 嫌 on げん: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: や x400 (card text/JMdict 1587610)
+ small 嫌+冶 嫌 kun きらう: 400 seeds, sizes , 0 of 0 reachable wrong options drawn
+-small 嫌+冶 嫌 kun いや: 400 seeds, sizes , 0 of 0 reachable wrong options drawn
+-small 嫌+野 嫌 on げん: 400 seeds, sizes 3:400, 2 of 2 reachable wrong options drawn; risk class attested drawn: や x400 (JMdict 1587610)
++small 嫌+野 嫌 on げん: 400 seeds, sizes 3:400, 2 of 2 reachable wrong options drawn; risk class attested drawn: や x400 (card text/JMdict 1587610)
+ small 嫌+野 嫌 kun きらう: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+-small 嫌+野 嫌 kun いや: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+ small 騒+催 騒 on そう: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; risk class attested drawn: さい x400 (card text)
+ small 騒+催 騒 kun さわぐ: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+@@ -77,6 +69,4 @@
+ small 騒+西 騒 on そう: 400 seeds, sizes 4:400, 3 of 3 reachable wrong options drawn; risk class attested drawn: さい x400 (card text)
+ small 騒+西 騒 kun さわぐ: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+-small 張+割 張 on ちょう: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+-small 張+割 張 kun はる: 400 seeds, sizes 4:400, 3 of 4 reachable wrong options drawn; name-only drawn (info): わり x400; NOTE reachable but never drawn: さく
+ small 基+供 基 on き: 400 seeds, sizes 4:400, 3 of 4 reachable wrong options drawn; NOTE reachable but never drawn: ぐ
+ small 基+供 基 kun もと: 400 seeds, sizes 4:400, 3 of 3 reachable wrong options drawn; name-only drawn (info): とも x400
+@@ -85,5 +75,7 @@
+ small 基+友 基 on き: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
+ small 基+友 基 kun もと: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn; name-only drawn (info): とも x400
+-== C:\Users\stop-\n1-kanji-workspace\scratch-110\kotlin-starter-run.txt
++small 張+割 張 on ちょう: 400 seeds, sizes 2:400, 1 of 1 reachable wrong options drawn
++small 張+割 張 kun はる: 400 seeds, sizes 4:400, 3 of 4 reachable wrong options drawn; name-only drawn (info): わり x400; NOTE reachable but never drawn: さく
++== C:\Users\stop-\n1-kanji-workspace\review-packets\_checks-110-fix3\kotlin-starter-run.txt
+ pools: Kotlin {'Starter practice session': 118} of 1161 cards; Python {'Starter practice session': 118} of 1161 cards -> match
+ prompt Starter practice session 張 on ちょう: 4000 seeds, sizes 4:4000, 13 of 13 reachable wrong options drawn
+@@ -102,5 +94,4 @@
+ prompt Starter practice session 嫌 on げん: 4000 seeds, sizes 4:4000, 24 of 24 reachable wrong options drawn
+ prompt Starter practice session 嫌 kun きらう: 4000 seeds, sizes 4:4000, 10 of 10 reachable wrong options drawn
+-prompt Starter practice session 嫌 kun いや: 4000 seeds, sizes 4:4000, 9 of 9 reachable wrong options drawn; PAD-HIT attested drawn: や x1310 (JMdict 1587610)
+ prompt Starter practice session 縮 on しゅく: 4000 seeds, sizes 4:4000, 20 of 20 reachable wrong options drawn
+ prompt Starter practice session 縮 kun ちぢむ: 4000 seeds, sizes 4:4000, 10 of 10 reachable wrong options drawn
+@@ -114,3 +105,3 @@
+ prompt Starter practice session 暖 kun あたたかい: 4000 seeds, sizes 4:4000, 7 of 7 reachable wrong options drawn
+ 
+-52 whole-stack-pool prompts, 26 Starter-session prompts and 32 small-pool prompts checked; 0 problem(s); 0 whole-stack prompt(s) drew an attested unlisted reading (HIT); 1 Starter-session prompt(s) drew one (PAD-HIT); 4 prompt(s) with reachable options never drawn (NOTE)
++50 whole-stack-pool prompts, 25 Starter-session prompts and 26 small-pool prompts checked; 0 problem(s); 0 whole-stack prompt(s) drew an attested unlisted reading (HIT); 0 Starter-session prompt(s) drew one (PAD-HIT); 3 prompt(s) with reachable options never drawn (NOTE)

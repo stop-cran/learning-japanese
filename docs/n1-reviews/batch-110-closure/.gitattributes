@@ -1,0 +1,11 @@
+*.json text eol=lf
+*.md text eol=lf
+*.gz binary
+# Prompts, diffs and confirmation-packet files keep their captured bytes so the SHA-256 values in the
+# provenance records stay verifiable.
+prompts/*.txt -text
+packet/diffs/*.diff -text
+confirm-packet/** -text
+followup-packet/** -text
+delta-packet/** -text
+supplement/** -text
