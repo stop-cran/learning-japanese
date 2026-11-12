@@ -8,7 +8,8 @@ an official JLPT certification, or a claim that every traditional version uses t
 `tools/build_manifest.py` omits `reading` and `readingImages` unless `publish_reading=True`.
 Do not enable that flag until the Android renderer accepts the package. The current app at
 `10d98d0` does not list `reading/` in `SafeZip.allowedFolders`, so a source ZIP that contains
-the file does not import it. Validation still checks the file. Do not put it in `manifest.files`.
+the file does not import it. Validation still checks the file and rejects CR. `.gitattributes` keeps `reading/*.json` as LF
+because Windows `autocrlf` would otherwise break that check. Do not put it in `manifest.files`.
 
 Empty `distribution.reviewed` means no jurisdiction has been reviewed. It is not worldwide permission.
 
