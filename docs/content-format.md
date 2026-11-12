@@ -71,6 +71,9 @@ An empty `distribution.reviewed` list means no jurisdiction has been reviewed, n
 Offsets are half-open Unicode code points into plain section text. A missing `word` still carries
 its gloss; a present `word` must be an existing card id. Questions must stay fair if the passage
 is hidden, because each quiz can be open-book or closed-book.
+The agreed N5 pilot target is 1,000–1,500 Japanese characters, eight sections, and at least
+four questions in each tier. Transport validation allows up to 100 sections and 128 questions;
+those caps are not a reason to add weak items.
 
 ## Numbers & counters
 

@@ -17,9 +17,10 @@ IMAGE_PATH = re.compile(r"reading-images/[a-z0-9]+(?:-[a-z0-9]+)*\.webp")
 QUOTE = re.compile(r"「([^」]+)」")
 BASES = {"original", "traditional-plot", "public-domain-text"}
 ROLES = {"plot-check", "wording-source"}
-N5_MIN_CHARS = 400
-N5_MAX_CHARS = 1000
+N5_MIN_CHARS = 1000
+N5_MAX_CHARS = 1500
 N5_SECTIONS = 8
+N5_MIN_PER_TIER = 4
 
 PACKAGE_KEYS = {
     "schemaVersion", "id", "jlpt", "title", "japaneseTitle", "levelRationale",
@@ -173,7 +174,7 @@ def _provenance(value: dict) -> None:
 
 
 def _questions(document: dict, sections: dict[str, str]) -> list[int]:
-    questions = _records(document["questions"], "questions", 1, 12)
+    questions = _records(document["questions"], "questions", 1, 128)
     ids = [_id(question.get("id"), "question ID") for question in questions]
     _require(len(ids) == len(set(ids)), "duplicate question ID")
     tiers = []
@@ -220,8 +221,8 @@ def _literary(document: dict, tiers: list[int]) -> None:
     total = sum(len(section["text"]) for section in sections)
     _require(N5_MIN_CHARS <= total <= N5_MAX_CHARS, f"N5 passage length {total} is outside {N5_MIN_CHARS}-{N5_MAX_CHARS}")
     counts = {tier: tiers.count(tier) for tier in range(1, 5)}
-    _require(counts[1] >= 2 and all(counts[tier] >= 1 for tier in range(2, 5)),
-             "N5 questions need two tier-1 items and one item for each higher tier")
+    _require(all(counts[tier] >= N5_MIN_PER_TIER for tier in range(1, 5)),
+             "N5 questions need at least four items in each tier")
 
 
 def validate_document(document: dict, path: str, *, known_words: set[str] | None = None, literary: bool = False) -> None:
@@ -236,7 +237,7 @@ def validate_document(document: dict, path: str, *, known_words: set[str] | None
     _plain(package["japaneseTitle"], "japaneseTitle", 200)
     _plain(package["levelRationale"], "levelRationale", 2000)
     _provenance(package["provenance"])
-    sections = _records(package["sections"], "sections", 1, 12)
+    sections = _records(package["sections"], "sections", 1, 100)
     section_ids = []
     section_text = {}
     for section in sections:

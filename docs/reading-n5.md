@@ -16,14 +16,14 @@ Empty `distribution.reviewed` means no jurisdiction has been reviewed. It is not
 ## Package
 
 - Schema 1, id `momotaro-n5`, integer JLPT 5.
-- Eight sections, 581 Unicode code points. The N5 band is 400-1000, with a target of 480-800.
-- Seven questions: two tier 1, two tier 2, two tier 3, one tier 4.
+- Eight sections, 1,154 Unicode code points. The agreed N5 target is 1,000-1,500 characters, counting punctuation but not translations or metadata.
+- Twenty questions: five in each tier. Transport validation allows up to 100 sections and 128 questions. Extra grounded items are for session variation, not a parser minimum.
 - No question images.
 - Teaching-language fields are English. Japanese fields are the title, provenance title, section text,
   and span text/reading/headword.
 - Each quiz may be open-book or closed-book. Prompts include any Japanese quote they test.
   Cause questions ask about a reason the passage states with から. Evidence is feedback, not a required hint.
-- Unlock thresholds and progression sharing are not content fields.
+- Progression is not a content field. The current user choice is app policy: one shared per-text score, where one completed quiz at 75% on the highest unlocked tier unlocks the next, and both quiz modes contribute.
 
 ## Wording and rights
 
@@ -32,13 +32,14 @@ Ishizuka Hiroyuki. Aozora card 18376 (楠山正雄, 桃太郎) was consulted on 
 That card records his death as 1950-11-26. [Aozora card 56878](https://www.aozora.gr.jp/cards/001813/card56878.html) is marked 著作権存続 and was not used.
 The millet-dumpling name is omitted; the passage says だんご.
 
-The oni's weakness is an authored cause in this wording so the tier-3 question has an explicit から.
-It is not a claim about the motive in every traditional telling. There is no battle sentence.
+Authored causes, each stated with から, are the good peach, the oni's badness, the dog's request, the dumplings Momotaro had given out, and the oni's weakness.
+They are not claims about every traditional telling. There is no battle sentence. The dog's request and offer to go are one utterance; から attaches to that utterance, not to a second request.
+`空から` and `家から` mark a source, not a reason.
 
 `いいももです` is a simplified learner evaluation, not a claim that the collocation is a literary idiom.
-He leaves home with the dumplings. The animals meet him on the road to the island, and the party reaches the island once. 途中 is N4, so the road is 道. The naming sentence uses 「この子供の名前は桃太郎です」 rather than XをYと呼ぶ, because the 呼ぶ card
+He leaves home with the dumplings. On the road he meets the dog, then the monkey, then the pheasant. The going sentence has Momotaro go with the three animals, and the party reaches the island once. 途中 is N4, so the road is 道. The naming sentence uses 「この子供の名前は桃太郎です」 rather than XをYと呼ぶ, because the 呼ぶ card
 teaches calling a name aloud or summoning, not that naming construction. The return names the three
-animals instead of introducing unexplained 友達.
+animals instead of introducing unexplained 友達. ある日 has no card. The same four who carry the treasure also put it down at home.
 
 ## Level exceptions
 
@@ -57,6 +58,4 @@ Linked cards at N5 are not listed. These are the exceptions:
 
 ## Quiz scope
 
-Tier 1 asks where the peach was seen and what came out of it. Tier 2 asks event order and what
-「これを持ってください」 refers to. Tier 3 asks the two stated から causes. Tier 4 asks which
-summary matches the journey. Distractors are not supported by the passage. They do not depend on outside plot knowledge. One tier-3 option, that the old man ordered the animals to go, is unstated rather than directly contradicted.
+Tier 1 asks where the peach was seen, what came out of it, what was made in the morning, where the pheasant came from, and what the village people say the oni takes. Tier 2 asks event order, what 「これを持ってください」 and 「これは何ですか」 refer to, which animal came first, and what Momotaro did before the dog came. Tier 3 asks the five stated から causes. Tier 4 asks which summary matches the journey, who does not travel, what happens to the dumplings, where the treasure ends up, and how Momotaro changes before he leaves. Distractors are not supported by the passage. They do not depend on outside plot knowledge. One tier-3 option, that the old man ordered the animals to go, is unstated rather than directly contradicted.

@@ -51,8 +51,12 @@ class ReadingTests(unittest.TestCase):
         document = load_package(path)
         validate_document(document, "reading/momotaro-n5.json", known_words=word_ids(ROOT), literary=True)
         total = sum(len(section["text"]) for section in document["sections"])
-        self.assertGreaterEqual(total, 400)
-        self.assertLessEqual(total, 1000)
+        self.assertGreaterEqual(total, 1000)
+        self.assertLessEqual(total, 1500)
+        counts = {}
+        for question in document["questions"]:
+            counts[question["tier"]] = counts.get(question["tier"], 0) + 1
+        self.assertTrue(all(counts.get(tier, 0) >= 4 for tier in range(1, 5)))
         self.assertEqual(document["provenance"]["distribution"]["reviewed"], [])
 
     def test_schema_accepts_a_short_fixture_and_rejects_bad_packages(self):
