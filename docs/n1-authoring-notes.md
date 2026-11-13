@@ -59,6 +59,72 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 112: textual review closed; publication pending
+
+The batch adds fifteen kanji, **健 妙 射 就 展 微 態 盤 看 至 診 酸 障 離 響**
+(source rows 64, 224, 264, 269, 276, 346, 381, 739, 743, 909, 1004, 1113, 1160,
+1169 and 1181), with their stroke files and no new word article. Each was
+declared by exactly three existing word articles, so 44 articles gain 45 links
+(微妙 serves both 妙 and 微). Three cards, 基, 素 and 鏡, drop stale remarks
+now that the linked cards exist. Earlier deferred rows, including 従, remain
+pending.
+
+Two model families reviewed the frozen draft `d6ad96eb`, Claude
+(claude-opus-5.5) and GPT (gpt-6.1-sol), one at a time and blind to each other.
+Both returned NEEDS FIX for missing meaning-quiz exclusions; neither found a
+failure of the default questions, which already use three curated distractors.
+Claude reported 微 versus 分 (English "minute"), 就 versus 企 and 承
+("undertake"), and a polish point on 態's alternative dictionary spellings.
+GPT reported six moderate findings covering eleven direct pairs on 妙, 就, 展,
+微, 診 and 障. Six pairs were shared across the reports. The author added
+sixteen direct exclusions with explanatory notes on eight cards
+(妙 就 展 微 態 盤 診 障) and corrected the 態 wording in `737cb020`, adding 盤
+versus 乗 (English "board") on its own initiative and declining an optional
+grammatical-voice expansion for 態. No title, reading or distractor changed.
+
+Both confirmations found every finding resolved and no new defect, and both
+returned **UNVERIFIED** solely because limit L1 stayed partially resolved: the
+supplied `QuizBuilder.kt` shows by static reading that each pair is filtered in
+both directions for any caller-supplied pool, but importer propagation, pool
+construction, executed Kotlin draws, custom or multi-borrow reading pools and
+installed-build behaviour were not executed. The author accepts L1 as a
+disclosed, non-blocking evidence limit and ran no further round; there is no
+joint CONFIRMED. The first Claude confirmation was **rejected** because it
+scanned all original kanji, which was out of scope, and returned only the
+Notes of the revised cards. A separately reserved corrective pass read all
+eight revised cards in full and changed nothing. Both runs and a manual audit
+of the breach are preserved.
+
+The [closure record](n1-reviews/batch-112-closure/README.md) keeps the verbatim
+reports, received prompts, read-scope audits, packets and reconciliation. The
+initial Claude run once had two tool calls in flight; every other run was
+strictly serial. The last phone APK delivered to the owner (app commit
+`5c000bd`) predates kanji `quiz_exclusions`, so it does not enforce these
+exclusions. `737cb020` descends from main `0320ba4a` through the freeze, so
+no integration merge was needed; the closure commit changes only `docs/`.
+
+The reading-exposure audit (a Python port, not Android execution) finds no
+modeled full-pool or single-borrow Starter hit and eleven latent entries: eight
+nanori-only readings and 微 み, 態 てい and 酸 す. The zero hits are conditional
+on its pool assumptions.
+
+Host content gates pass on `737cb020`: lint (0 errors, 8 warnings on reused
+word articles), 431 unit tests, validation, meaning-quiz audit, budget,
+vocabulary (2122/2431) and manifest rebuild (no diff, content version
+`b81044aafa8b5a07`). Tests, validation, budget, vocabulary and manifest
+rebuild were re-run with the closure files in place, with identical results.
+**The Android JVM tests
+were not run for this batch** (separate JVM/emulator hold), and **no native,
+rendered or phone credit is claimed.** The budget stands at 8,623 of 18,000
+entries, 43.3 of 56 MiB retained and 29.3 of 42 MiB for the local ZIP.
+
+Of the 1,228 pending additions, the tree now has **201 with cards** (195 N1
+deliveries including this batch, plus six N2 placements) and **1,027 absent**.
+The ledger is [batch-112-progress.json](n1-sources/batch-112-progress.json).
+Published coverage stays **180 N1 deliveries** (186 of 1,228, 1,042
+remaining) until the remote SHA, the CI run and the exact GitHub ZIP are
+verified.
+
 ## Batch 111: published (textual review closed)
 
 The batch adds fifteen kanji, **修 句 房 授 敷 旬 標 独 率 節 義 製 評 養 鏡**

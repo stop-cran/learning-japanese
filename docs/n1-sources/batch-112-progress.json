@@ -100,7 +100,7 @@
     }
   ],
   "selectionReason": "Fifteen absent frozen rows, each declared by three existing word articles. There are 45 mapped pairs across 44 distinct articles because 微妙 serves 妙 and 微. No word/article file is added. Earlier deferred rows, including 従, remain pending.",
-  "status": "drafted-host-gated-awaiting-independent-review",
+  "status": "textual-review-closed-host-gates-green-pending-publication",
   "drafted": [
     "健",
     "妙",
@@ -118,7 +118,23 @@
     "離",
     "響"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "健",
+    "妙",
+    "射",
+    "就",
+    "展",
+    "微",
+    "態",
+    "盤",
+    "看",
+    "至",
+    "診",
+    "酸",
+    "障",
+    "離",
+    "響"
+  ],
   "published": [],
   "runtimeChanged": true,
   "runtimePublished": false,
@@ -133,7 +149,7 @@
     "workingTreePendingRecordsAbsent": 1027,
     "kanjiArticlesInWorkingTree": 1191,
     "wordArticlesInWorkingTree": 5082,
-    "note": "The 15 drafts are not review-closed or published deliveries. Published counts remain at B111."
+    "note": "The 15 cards are review-closed but not published. Published coverage fields stay at the B111 figures (180 deliveries, 1042 remaining) until the remote SHA, CI run and exact GitHub ZIP are verified."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1138,15 +1154,15 @@
     },
     "vocabularyCheck": "2122/2431 reviewed prompts; pilot",
     "manifestRebuildDiff": "none",
-    "contentVersion": "11887d8b66991361",
+    "contentVersion": "b81044aafa8b5a07",
     "manifestFiles": 7747,
-    "manifestSha256": "0353c57389a5712aa77578b0f9b897157f22e8c0e6ba9e14da8b873c76be229d",
+    "manifestSha256": "ab01e94fa5ffa384ff05bcb8184f67004c998e97fc2c9907d503198d14cefda2",
     "budget": {
       "files": 8608,
       "entries": 8623,
-      "retainedBytes": 45406122,
-      "inflatedBytes": 45677432,
-      "localZipBytes": 30684836,
+      "retainedBytes": 45408039,
+      "inflatedBytes": 45679349,
+      "localZipBytes": 30685740,
       "listeningTaskMediaBytes": 5893602
     },
     "readingExposure": {
@@ -1159,13 +1175,40 @@
       "limits": "Raw helper prose about actual app pools and unreachable custom pools is not established by this run. Caller-built/custom and multi-borrow Starter behavior, Kotlin random draws, native execution and installed-build compatibility remain unverified. No universal reading-safety claim."
     },
     "androidJvm": "NOT RUN; separate JVM/emulator HOLD",
-    "nativeRenderedPhone": "NOT RUN; last delivered 5c000bd APK predates kanji quiz_exclusions support"
+    "nativeRenderedPhone": "NOT RUN; last delivered 5c000bd APK predates kanji quiz_exclusions support",
+    "manifestRuntimeEntries": 8601,
+    "manifestCountNote": "manifestFiles counts the manifest's files dictionary; manifestRuntimeEntries sums all nine runtime sections.",
+    "meaningExclusionsAddedByFix": 16,
+    "closureTreeRerun": "Unit tests (431), validate (0 errors), content budget, vocabulary check and manifest rebuild re-run with the closure files in place; all exit 0, budget and manifest identical to the fix values."
   },
   "review": {
-    "status": "not-started",
+    "status": "closed",
     "required": "two independent model families on the same bounded snapshot, serially",
-    "reports": [],
-    "reviewerSlot": "RU owns it; a fresh packet-specific handoff is required"
+    "initial": {
+      "claude": "NEEDS FIX (2 findings + 1 polish)",
+      "gpt": "NEEDS FIX (6 moderate findings, 11 direct pairs)"
+    },
+    "fix": "737cb020: 16 direct meaning exclusions on 8 cards and one 態 wording correction; no title, reading or distractor change",
+    "confirmation": {
+      "claude": "all resolved, no new findings; UNVERIFIED (L1 only). The first confirmation run was rejected as incomplete and out of scope; a corrective full-card pass completed it",
+      "gpt": "F1-F6 RESOLVED, no findings; UNVERIFIED (L1 only)"
+    },
+    "jointVerdict": "not CONFIRMED; no outstanding content finding; L1 accepted as a disclosed, non-blocking evidence limit with no further round",
+    "reports": [
+      "reports/initial-claude.md",
+      "reports/initial-gpt.md",
+      "reports/confirm-claude.md",
+      "reports/confirm-claude-coverage.md",
+      "reports/confirm-gpt.md"
+    ]
   },
-  "limits": "Author/host gates are not independent linguistic review. This batch is not authorized for publication until review and reconciliation. No JVM allocation, native/phone acceptance or compatibility of the older installed APK is implied."
+  "limits": "Textual review by two distinct model families (claude-opus-5.5 and gpt-6.1-sol) on one fixed freeze with independent blind initial findings. Both confirmations of the reconciled text of 737cb020 found every finding resolved and returned UNVERIFIED with no findings, solely because limit L1 (importer/field propagation, caller-built pools, Kotlin execution and random draws, custom or multi-borrow reading pools, installed-build compatibility) stayed partially resolved; the author accepts L1 as a disclosed, non-blocking evidence limit and ran no extra round (see reviewClosure). The first Claude confirmation was rejected for an out-of-scope scan and incomplete card coverage and is preserved with a manual audit. Host content gates pass on the reviewed and closure trees; Android JVM tests were not run (separate JVM/emulator HOLD). The delivered 5c000bd APK predates kanji quiz_exclusions and does not enforce the new exclusions. No native, rendered, phone, CI or archive credit; unpublished until the remote SHA, CI run and exact GitHub ZIP are verified.",
+  "freezeSnapshot": "d6ad96ebf7d0352d54184ed44a382f70e4497f7b",
+  "reviewedSnapshot": "737cb0201bb3ca76b327504d95b17e64f1a79869",
+  "reviewFamilies": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "reviewClosure": "../n1-reviews/batch-112-closure/provenance.json",
+  "gatedHead": "737cb0201bb3ca76b327504d95b17e64f1a79869"
 }
