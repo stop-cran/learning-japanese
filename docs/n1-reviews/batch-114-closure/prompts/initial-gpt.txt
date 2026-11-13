@@ -1,0 +1,317 @@
+Perform ONE complete, independent first content review of B114 under run N1-B114-GPT-001, in TWO PHASES that together form one pass. Do not implement fixes, edit content or perform a confirmation round. Establish every conclusion from evidence you open in this pass.
+
+Context: the repository owner's direction for this batch is, verbatim: "Continue the existing full-scope N1 work with B114 from the published main, respecting the necessary review, validation and resource gates." Your assignment is only the read-only independent review described here.
+
+Original packet (authoritative, immutable): C:\Users\stop-\n1-kanji-workspace\review-packets\batch-114-8c2bdc27
+Snapshot: 8c2bdc27e5d556e639a4d0e9239ae5f2009c400f
+Base: 0485c873d2ac636373c7bdf739df97ff66f9160f
+Packet SHA256SUMS.json: eb6b1042060f561cd6ff49054d0e11533c15008ea0f6bbc064b07614b1701e15
+Sole report destination: C:\Users\stop-\n1-kanji-workspace\reports-114\initial-gpt.md (absent at preflight)
+Coordinator session: 2451b10d-02a9-46ab-82d5-d90993f0cb8b
+
+HOW YOU RECEIVE THE PACKET: read chains only. You never open packet files directly.
+- REQUIRED CHAIN (phase 1): read all 40 segments of the B114 core chain. Each part header states the source path, the source SHA-256 and which segment lines equal which source lines; cite findings by source path and source line numbers. The last line of each segment gives the exact path of the next segment; segment 40 ends with "END OF CHAIN". Segment 1 is:
+C:\Users\stop-\n1-kanji-workspace\review-chains\b114-initial-v1\01-1bbd53539110477ca3e956921fca24ab.txt
+- EXTENSION CHAIN (phase 2): the coordinator will mechanically build, in the same format, byte-exact copies of the D and E cards you request in phase 1, in your order, and send you its first-segment path.
+Read segments in order, each with one view of the exact path printed at the end of the previous segment. Never use view_range; forceReadLargeFiles: true is permitted. Segments are under 16 KB and are returned whole. You may re-view a segment you have already reached.
+
+Do not open, request or search for any review report, observation or audit record, author rationale, changed checkout, other packet, session history, or any summary of earlier work.
+
+ACCESS RULES. These narrower rules govern any wider packet wording, including REVIEW.md's general access text. Any breach, wherever it falls in the run, voids the whole pass: its report and observations are quarantined and not used. There is no retry. If you notice you have breached a rule, stop immediately and tell the coordinator exactly what happened.
+1. EXACTLY ONE TOOL CALL PER RESPONSE. Wait for its result before the next response. Never place two or more tool calls in one response, even for independent files, and use no parallel wrapper or batch.
+2. Read local inputs only with view of one explicitly named file by absolute path, never a directory and never with view_range. The only allowed local inputs are (a) core-chain segments, reached as described above, (b) extension-chain segments, reached from the first-segment path the coordinator sends in phase 2, and (c) one readback of your report with forceReadLargeFiles: true. The sole delivery exception is the kickoff's initial full view of this instruction file, C:\Users\stop-\n1-kanji-workspace\scratch-114\prompts-114\initial-gpt-114-001.txt, with forceReadLargeFiles: true and no view_range; do not read this file again. No other local path: in particular NOT any file under review-packets (including repo\kanji cards; D and E cards reach you only through the extension chain) and not the chain directories.
+3. No shell/PowerShell/cmd, Python/scripts, search/grep/rg/glob, enumeration/listing/wildcards/recursion, corpus scans, agents, background jobs, browser/webview, JVM/Gradle/emulator/ADB, builds or temporary files.
+4. Up to three optional web_fetch calls IN TOTAL across both phases, to directly named public https reference URLs; no web search or browser. In the same response as each fetch, BEFORE the call, publicly state the URL and the reason in ordinary response text. Private reasoning and retrospective report text do not count.
+5. The only write is the one report at the destination above, in phase 2, after every core and extension segment has been read. Use one create call if available; otherwise one apply_patch call containing exactly one Add File for that path is authorized. Do not revise or append it later. One readback view of the report is authorized.
+6. Exactly two messages to the coordinator in total, each a send_session_message to session 2451b10d-02a9-46ab-82d5-d90993f0cb8b with only session_id and message: the phase-1 list message and the phase-2 completion message described below. The second message contains only the report path and a one-line verdict. No findings, requests, hash or tool output in that message. Contact no other session.
+7. After the phase-2 message, stop. A single task_complete call is the only tool call permitted after it; none is permitted before it.
+8. If required work cannot be completed within these bounds, report the limitation truthfully and stop. No extra prompt, retry or further pass is authorized.
+
+REQUIRED READS: all 40 core segments, in full. They contain, in this order:
+A. Core: REVIEW.md and packet.json (read REVIEW.md first; it is the start of segment 1); rubric\copilot-instructions.md and rubric\content-structure.instructions.md; repo\docs\content-format.md lines 1-139 only (kanji, quiz authoring and curated reading-question contracts; later lines are not part of the chain by design); repo\docs\jlpt-levels.md; snapshot\kanji cards for the fifteen new kanji (娯 寮 廊 栓 汽 症 砲 碁 磁 穀 穫 糖 紺 雰 魅); snapshot\strokes JSON for the fifteen new kanji; diffs\existing.diff; the 15 changed snapshot\words articles; all ten checks (lint, quiz-safety, linkplan, reading-exposure-final, unittest, validate, manifest, manifest-rebuild, budget, vocabulary); evidence source-metadata.json, kanjidic2-records.xml, jmdict-families.xml, dictionary-index.json, joyo-rows.json, shape-evidence.json and provenance.json.
+B. The neutral title index, evidence\title-index.txt (SHA-256 7241a3ea93227a7298b51d6a4d14753302594c83e59e7455533b6d8956d99d8f): one KANJI-title line for each of the 1221 same-commit cards in code-point order; a mechanically extracted index, not analysis or candidate suggestions. Confirm in the report that you read source lines 1-1221, that line 1 is "一 one" and line 1221 is "齢 age; years lived".
+C. All 45 curated distractor slots (41 distinct repo\kanji copies; a card shared by several new cards appears once): 娯: 誤 妹 妙 / 寮: 察 寧 案 / 廊: 庭 床 府 / 栓: 全 松 村 / 汽: 河 池 海 / 症: 正 政 床 / 砲: 包 砂 硬 / 碁: 目 日 田 / 磁: 硬 研 砂 / 穀: 殿 投 段 / 穫: 程 秋 科 / 糖: 米 数 類 / 紺: 紅 給 結 / 雰: 分 雪 晴 / 魅: 未 妹 末.
+The raw stroke SVGs, the binary Joyo PDF and every other packet asset not in the chains are outside the permitted local inputs for this pass. Disclose them as unread.
+
+PHASE 1 (selection). Read all 40 core segments in full. Then select:
+D. At most 40 collision-candidate cards, each neither a C distractor, a new card, nor an existing quiz_exclusions target of a new card. For each, name the new card(s) and the overlapping sense.
+E. At most 10 cards that are existing quiz_exclusions targets of a new card whose text a conclusion relies on, each with the reason. 府 米 are C cards (already in the required chain), not E. Targets that are themselves new cards (汽) are read from the required chain.
+Request only cards by kanji character; the coordinator includes only entries that exist as repo\kanji\<character>.md in the original packet and reports any nonexistent entry back verbatim, with no substitutes or hints.
+ELIGIBILITY REFERENCE (exact bytes of the packet's eligibility-reference.json: mechanically extracted original frontmatter, in card order):
+{
+  "newCards": [
+    "娯",
+    "寮",
+    "廊",
+    "栓",
+    "汽",
+    "症",
+    "砲",
+    "碁",
+    "磁",
+    "穀",
+    "穫",
+    "糖",
+    "紺",
+    "雰",
+    "魅"
+  ],
+  "otherRequiredCards": [],
+  "cards": [
+    {
+      "card": "娯",
+      "source": "snapshot/kanji/娯.md",
+      "sha256": "5f2e91701c834ea9da99cb3337de35f8d4ea9a36131cc2868f9cfd6d1f6254c9",
+      "distractors": [
+        "誤",
+        "妹",
+        "妙"
+      ],
+      "quiz_exclusions": [
+        "楽",
+        "遊",
+        "享",
+        "喜",
+        "快",
+        "幸"
+      ]
+    },
+    {
+      "card": "寮",
+      "source": "snapshot/kanji/寮.md",
+      "sha256": "4ae4f1663249be5fb8d75aca50606efab8461d4138ce78c5c9e6bc4b5107651c",
+      "distractors": [
+        "察",
+        "寧",
+        "案"
+      ],
+      "quiz_exclusions": [
+        "宿",
+        "宅",
+        "住",
+        "家",
+        "室",
+        "館",
+        "亭",
+        "官",
+        "局",
+        "署",
+        "府"
+      ]
+    },
+    {
+      "card": "廊",
+      "source": "snapshot/kanji/廊.md",
+      "sha256": "334e1e055ee577b62dadd009d7befeec1faa938e7d6dd78ee7b22484b82a4bbd",
+      "distractors": [
+        "庭",
+        "床",
+        "府"
+      ],
+      "quiz_exclusions": [
+        "堂",
+        "館",
+        "路",
+        "道",
+        "通",
+        "塔"
+      ]
+    },
+    {
+      "card": "栓",
+      "source": "snapshot/kanji/栓.md",
+      "sha256": "7ebd316ec9eeeee5f67ec81ad423684cce1b9e5646cfb2ef248e022d4c074218",
+      "distractors": [
+        "全",
+        "松",
+        "村"
+      ],
+      "quiz_exclusions": [
+        "封",
+        "閉",
+        "詰",
+        "止",
+        "判"
+      ]
+    },
+    {
+      "card": "汽",
+      "source": "snapshot/kanji/汽.md",
+      "sha256": "29dc5cbc0b903d6cc01bcc0f9c58dbbd522ef6c746d9a6cf834b1a407cc0ae79",
+      "distractors": [
+        "河",
+        "池",
+        "海"
+      ],
+      "quiz_exclusions": [
+        "蒸",
+        "気"
+      ]
+    },
+    {
+      "card": "症",
+      "source": "snapshot/kanji/症.md",
+      "sha256": "ab605c507cf4be084f1ac2cb64d7fb231689e5782f0450931046b28b518070ba",
+      "distractors": [
+        "正",
+        "政",
+        "床"
+      ],
+      "quiz_exclusions": [
+        "病",
+        "患",
+        "状",
+        "態"
+      ]
+    },
+    {
+      "card": "砲",
+      "source": "snapshot/kanji/砲.md",
+      "sha256": "50fd78a351fb8ca19c101ea348757898175fb4a35a91677fd26e4c0cf99c459e",
+      "distractors": [
+        "包",
+        "砂",
+        "硬"
+      ],
+      "quiz_exclusions": []
+    },
+    {
+      "card": "碁",
+      "source": "snapshot/kanji/碁.md",
+      "sha256": "ff3b6e620696e2b59db96eaed69bbc20a0ecdb010644bb517f1e9c2e11966d31",
+      "distractors": [
+        "目",
+        "日",
+        "田"
+      ],
+      "quiz_exclusions": []
+    },
+    {
+      "card": "磁",
+      "source": "snapshot/kanji/磁.md",
+      "sha256": "082394d2d7e2e8c69cd16b853f40d22d89384183897e7989ebffdb94c66103df",
+      "distractors": [
+        "硬",
+        "研",
+        "砂"
+      ],
+      "quiz_exclusions": []
+    },
+    {
+      "card": "穀",
+      "source": "snapshot/kanji/穀.md",
+      "sha256": "73ac7c9ad496b6fa96eb2cd1154a3e119a9db8e6576920fff75651bea7292fd2",
+      "distractors": [
+        "殿",
+        "投",
+        "段"
+      ],
+      "quiz_exclusions": [
+        "米",
+        "麦",
+        "稲",
+        "種",
+        "粒",
+        "実"
+      ]
+    },
+    {
+      "card": "穫",
+      "source": "snapshot/kanji/穫.md",
+      "sha256": "a80290aa581289cf4c87511bc428783454e63f73b090715a28681fd0bc6721f0",
+      "distractors": [
+        "程",
+        "秋",
+        "科"
+      ],
+      "quiz_exclusions": [
+        "刈",
+        "収",
+        "採",
+        "取",
+        "得",
+        "捕",
+        "果",
+        "実"
+      ]
+    },
+    {
+      "card": "糖",
+      "source": "snapshot/kanji/糖.md",
+      "sha256": "566a9e6ab0b1471fe077de571a5f8d017e15bb85790fd1c6463c9f797e68f5ab",
+      "distractors": [
+        "米",
+        "数",
+        "類"
+      ],
+      "quiz_exclusions": []
+    },
+    {
+      "card": "紺",
+      "source": "snapshot/kanji/紺.md",
+      "sha256": "6ec4edb8ca57179c26a2654994462e54ad159a00c1d6ad5463293bc682885f88",
+      "distractors": [
+        "紅",
+        "給",
+        "結"
+      ],
+      "quiz_exclusions": [
+        "青",
+        "濃",
+        "暗"
+      ]
+    },
+    {
+      "card": "雰",
+      "source": "snapshot/kanji/雰.md",
+      "sha256": "3e337fa187ec26d5b552428cc369a8ff5d13944d80df84a913a5e202aa52f1be",
+      "distractors": [
+        "分",
+        "雪",
+        "晴"
+      ],
+      "quiz_exclusions": [
+        "気",
+        "汽"
+      ]
+    },
+    {
+      "card": "魅",
+      "source": "snapshot/kanji/魅.md",
+      "sha256": "a95b7dd28288fc571e695df1f07a86475e4e4c4bee7c672f589303aac467a604",
+      "distractors": [
+        "未",
+        "妹",
+        "末"
+      ],
+      "quiz_exclusions": [
+        "妖",
+        "符"
+      ]
+    }
+  ]
+}
+END ELIGIBILITY REFERENCE
+
+Before sending your final D/E lists, check every entry against this reference. D must contain no new card, distractor, or quiz_exclusions target from any new card. E must contain only quiz_exclusions targets, and no new card or distractor. Each D line must name at least one actual new card and a nonempty overlapping sense after the colon.
+
+Phase 1 ends with EXACTLY ONE send_session_message to the coordinator whose message contains ONLY the full numbered lists, one item per line, in this form and nothing else:
+D1 <character> - <new card(s)>: <overlapping sense>
+...
+E1 <character> - <reason>
+...
+Write "D: none" or "E: none" if a list is empty. Number each list consecutively starting at 1. Then end your turn and wait; make no further tool call (including task_complete) until the coordinator's phase-2 message arrives. The lists are final: phase 2 cannot add any D or E entry. Disclose later-discovered unread candidates as limits.
+
+PHASE 2 (review). The coordinator's single phase-2 message contains exactly: line 1, the extension first-segment path; then either "Missing entries: none", or "Missing entries:" followed by your request lines, verbatim, that have no repo\kanji card in the packet. Missing entries get no substitute; disclose them as limits. Read the whole extension chain serially (an empty selection yields one segment without source parts), then analyse and write the report.
+
+ANALYSIS AND REPORT:
+Follow REVIEW.md's four facets and report contract: correctness, scoped coverage, consistency/quiz safety, comprehensibility. Number findings F1 onward, optional points O1 onward, limits L1 onward. Distinguish CLEAN, NEEDS FIX and UNVERIFIED. Identify consequential unverified claims; automated checks are not linguistic proof.
+For each new card, compare each displayed title sense and ordinary secondary sense with the full index, including shared English head words/stems. Independently determine which direct exclusion pairs the contract requires. Exclusions are symmetric, not transitive.
+For each C card, check its title against the index, meaning defensibility as an option, and reading overlap. For every D/E read, decide collision-needing-exclusion, already handled, or harmless; give evidence.
+Check the fifteen link-only word-article changes in diffs\existing.diff and the changed articles for correct targets and no unintended change. Review the stroke JSON only against the card, evidence and contract text you read; make no fresh visual geometry claim.
+Include: the list of core-chain and extension-chain segment numbers you read (and any re-views); your phase-1 D/E lists, any nonexistent entries, and a table of EVERY D/E card actually read (character, displayed title, related new card, reason, disposition); per-card results for all fifteen new cards; and all identified but unread candidates with reasons in Limits.
+Preserve dictionary entry/sense restrictions, spelling and register distinctions. Do not invent etymology or constituent readings, demand unrelated vocabulary, or treat historical completeness as the scope.
+Reading audits model limited pools only: not custom/caller-built or multi-borrow Starter behavior, Kotlin execution, native/phone acceptance, or compatibility with installed APK 5c000bd (predates quiz_exclusions). JVM/emulator work remains on hold.
+Identify your actual model only if verifiable; otherwise disclose that execution-model identity is unverified.
+
+Finish with exactly one report write, then one complete view readback (forceReadLargeFiles: true). Do not hash it: the coordinator will. Send ONE phase-2 message to the coordinator containing exactly two lines: the report's absolute path, then a one-line verdict stating CLEAN, NEEDS FIX or UNVERIFIED. No findings, requests, hash or tool output in that message. Then stop; do not start further work.

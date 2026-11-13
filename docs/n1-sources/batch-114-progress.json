@@ -100,7 +100,7 @@
     }
   ],
   "selectionReason": "Fifteen one-on-reading members with one existing declaring word each; complete applicable dictionary families and actual comparison cards inspected. No new word articles.",
-  "status": "drafted-validated-awaiting-independent-review",
+  "status": "review-closed-awaiting-publication",
   "drafted": [
     "娯",
     "寮",
@@ -118,7 +118,23 @@
     "雰",
     "魅"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "娯",
+    "寮",
+    "廊",
+    "栓",
+    "汽",
+    "症",
+    "砲",
+    "碁",
+    "磁",
+    "穀",
+    "穫",
+    "糖",
+    "紺",
+    "雰",
+    "魅"
+  ],
   "published": [],
   "runtimeChanged": true,
   "runtimePublished": false,
@@ -133,10 +149,10 @@
     "workingTreePendingRecordsAbsent": 997,
     "kanjiArticlesInWorkingTree": 1221,
     "wordArticlesInWorkingTree": 5083,
-    "localDoneIncludingN2Placements": 216,
-    "localInProgress": 15,
+    "localDoneIncludingN2Placements": 231,
+    "localInProgress": 0,
     "localNotStarted": 997,
-    "note": "The fifteen draft cards are not review-closed or published. Published totals remain 210 N1 additions plus six N2 placements, with 1,012 not delivered."
+    "note": "All fifteen B114 cards are textually review-closed. Publication remains pending; published totals remain 210 N1 additions plus six N2 placements, 1,012 not delivered."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1739,23 +1755,123 @@
     "archiveBudget": "Passed local complete-working-tree estimate."
   },
   "runtimeCandidate": {
+    "contentVersion": "1531e050487c8a64",
+    "runtimeEntries": 8664,
+    "manifestSha256": "7cedb115026972ce4e5c27a539825585ef2d9ed0ac8a6c9a19f9fae32d0d17f3",
+    "representation": "Working bytes after the fresh manifest rebuild; Git JSON content matches."
+  },
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "initialSnapshot": "8c2bdc27e5d556e639a4d0e9239ae5f2009c400f",
+    "reviewedSnapshot": "1c2b2c6a6658fa968f724657868ccae1eb61b198",
+    "reports": [
+      {
+        "id": "initial-claude",
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "snapshot": "8c2bdc27e5d556e639a4d0e9239ae5f2009c400f",
+        "reportSha256": "c021b162371ff4276f2ca3ec3da754f62cbacb4e924b0e9f1abbaa100b92dbfa",
+        "report": "../n1-reviews/batch-114-closure/reports/initial-claude.md",
+        "confirmationVerdict": null
+      },
+      {
+        "id": "confirm-claude",
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "snapshot": "ac38b8e4427afc2c10a957871c5ec99e9cb92bda",
+        "reportSha256": "38b1dafbc5c38aac29462091f4e0032f65a461bd95034dd5c1a9395f759ee156",
+        "report": "../n1-reviews/batch-114-closure/reports/confirm-claude.md",
+        "confirmationVerdict": "CONFIRMED"
+      },
+      {
+        "id": "delta-claude",
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "snapshot": "1c2b2c6a6658fa968f724657868ccae1eb61b198",
+        "reportSha256": "593820a05dee8337757763230a7404e9f7576f72a963cecc6eb0622edc89cd66",
+        "report": "../n1-reviews/batch-114-closure/reports/delta-claude.md",
+        "confirmationVerdict": "CONFIRMED"
+      },
+      {
+        "id": "initial-gpt",
+        "actualModels": [
+          "gpt-6.1-sol"
+        ],
+        "snapshot": "8c2bdc27e5d556e639a4d0e9239ae5f2009c400f",
+        "reportSha256": "aa409e26a4ef70ff11d76988b5b45fec01e567aff04d65fdff5d371f13bd35be",
+        "report": "../n1-reviews/batch-114-closure/reports/initial-gpt.md",
+        "confirmationVerdict": null
+      },
+      {
+        "id": "confirm-gpt",
+        "actualModels": [
+          "gpt-6.1-sol"
+        ],
+        "snapshot": "ac38b8e4427afc2c10a957871c5ec99e9cb92bda",
+        "reportSha256": "86f74178010b1c3bc14c7fdace10317933b5bfd9748c0af1bc00381971cd060e",
+        "report": "../n1-reviews/batch-114-closure/reports/confirm-gpt.md",
+        "confirmationVerdict": "NEEDS FIX"
+      },
+      {
+        "id": "delta-gpt",
+        "actualModels": [
+          "gpt-6.1-sol"
+        ],
+        "snapshot": "1c2b2c6a6658fa968f724657868ccae1eb61b198",
+        "reportSha256": "4b32ada1c40215bfce62cb62fe6615409994bd302b25e92c56fb4aaf31e69843",
+        "report": "../n1-reviews/batch-114-closure/reports/delta-gpt.md",
+        "confirmationVerdict": "CONFIRMED"
+      }
+    ],
+    "reconciliation": {
+      "commit": "1c2b2c6a6658fa968f724657868ccae1eb61b198",
+      "firstFix": "ac38b8e4427afc2c10a957871c5ec99e9cb92bda",
+      "newDirectExclusionPairs": 9,
+      "cardsChanged": [
+        "寮",
+        "症",
+        "碁",
+        "穀",
+        "穫",
+        "魅"
+      ],
+      "readingsTitlesDistractorsWordsStrokesUnchanged": true,
+      "remainingActionableFindings": [],
+      "record": "../n1-reviews/batch-114-closure/README.md"
+    },
+    "independence": "Two serial blind initial reviews on one freeze; each original reviewer then received only its own report plus the same revision and diff.",
+    "voidEvidenceUsed": false
+  },
+  "limits": [
+    "CLEAN/CONFIRMED are bounded textual-review judgments, not exhaustive correctness or native certification.",
+    "No later B113 fix is included; its UNVERIFIED verdict and missing Claude confirmation remain historical.",
+    "No current Kotlin execution, custom/caller-built or multi-borrow Starter pool acceptance, native or phone test.",
+    "The exposure helper is a Python model: zero N1/All and padded hits, one latent 碁/き collision in smaller pools.",
+    "Supplemental dictionary claims and wider unread comparison candidates retain the reviewers' explicit limits.",
+    "No fresh visual Joyo PDF-glyph or stroke-geometry review in confirmation.",
+    "The installed 5c000bd APK predates kanji quiz_exclusions and is not upgraded by content publication.",
+    "Exact served ZIP and CI acceptance are pending publication, not established by local closure."
+  ],
+  "draftRuntimeCandidate": {
     "contentVersion": "20f92e77ce1686f0",
     "runtimeEntries": 8664,
     "manifestSha256": "2360a5b4ff4d82ada8a9c5555365195556b1fd613026e412488bb84205eb2d24"
   },
-  "review": {
-    "status": "not-started",
-    "reports": [],
-    "reconciliation": null
-  },
-  "limits": [
-    "Author inspection and static/host checks are not independent linguistic review.",
-    "No new word article or later B113 fix is included; B113 closure and caveats remain unchanged.",
-    "No current Kotlin execution, custom/caller-built pool audit, native/device acceptance, or phone test.",
-    "The exposure helper's legacy production terminology is a model label, not a live-app guarantee.",
-    "No fresh visual Joyo PDF-glyph or stroke-geometry review; pinned paths/counts/component trees were checked.",
-    "No exhaustive all-corpus semantic fallback audit or historical etymology claim.",
-    "The old delivered 5c000bd APK predates kanji quiz_exclusions; compatibility is not claimed.",
-    "No exact published GitHub ZIP exists for this uncommitted draft."
-  ]
+  "closureValidation": {
+    "gates": "../n1-reviews/batch-114-closure/gates",
+    "unitTests": 431,
+    "validationErrors": 0,
+    "scopedLintErrors": 0,
+    "scopedLintJmdictMode": "No full JMdict cache load; pinned complete source-family evidence and earlier source inspection retained separately.",
+    "requiredWordLinkPairs": 15,
+    "wordLinkProblems": 0,
+    "quizSafetyErrors": 0,
+    "manifestReproducible": true,
+    "baselineRuntimePreserved": true,
+    "vocabulary": "2122/2431 reviewed prompts, unchanged pilot status",
+    "nativeJvmEmulatorPhone": "NOT RUN"
+  }
 }

@@ -59,6 +59,29 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 114: textually closed, publication pending
+
+The fifteen cards are **娯 寮 廊 栓 汽 症 砲 碁 磁 穀 穫 糖 紺 雰 魅**, with stroke files and
+fifteen links in fifteen existing word articles; no word article is added.
+Two serial independent initial reviews covered freeze `8c2bdc27`.
+Reconciliation `ac38b8e4` added eleven pairs and narrowed the 重症 gloss.
+After a valid GPT confirmation finding, `1c2b2c6a` removed two unsupported
+part/equipment guards (穀-穂, 碁-盤) while retaining the useful comparisons.
+Nine net new direct pairs remain. Claude explicitly accepted the full-label
+adjudication in the bounded delta; final delta verdicts are Claude
+**CONFIRMED**, GPT **CONFIRMED**.
+
+The [closure record](n1-reviews/batch-114-closure/README.md) preserves all six reports,
+including the earlier conflicting confirmation judgments and their supersession,
+complete bounded-read provenance, dispositions and evidence limits. No B113 void
+material or later B113 fix is included. Native/phone, old-APK, broader reading-pool,
+supplemental-source and visual-asset limits remain explicit.
+
+Local source accounting is **231 done / 0 in progress / 997 not started**.
+Publication remains pending: **216 delivered / 1,012 not delivered**.
+The final runtime candidate is `1531e050487c8a64`, 8,664 entries.
+See the [B114 ledger](n1-sources/batch-114-progress.json).
+
 ## Batch 113: published (textual review closed with limits)
 
 The fifteen new kanji are **慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援**,

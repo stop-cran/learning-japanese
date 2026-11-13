@@ -1,0 +1,53 @@
+Perform ONE independent confirmation of your own B114 initial review under run N1-B114-GPT-CONFIRM-001. This is not a new first review or an implementation task; do not begin any other round. Establish every conclusion from evidence you open in this pass. Your initial report reaches you again through the chain below and is the record of your earlier points: do not rely on remembered observations from your earlier review instead of evidence read now.
+
+Context: the repository owner's direction for this batch is, verbatim: "Continue the existing full-scope N1 work with B114 from the published main, respecting the necessary review, validation and resource gates." Your assignment is only the read-only confirmation described here.
+
+Revised snapshot (fix): ac38b8e4427afc2c10a957871c5ec99e9cb92bda
+Reviewed freeze: 8c2bdc27e5d556e639a4d0e9239ae5f2009c400f
+Confirmation packet: C:\Users\stop-\n1-kanji-workspace\review-packets\confirm-114-ac38b8e4-gpt
+Its packet-manifest.json SHA-256: 64a114e8abfa3f2a743abb8b8c6b7b6432c0bc01b91bdde1350595a9cec0b779
+Original packet: C:\Users\stop-\n1-kanji-workspace\review-packets\batch-114-8c2bdc27
+Its SHA256SUMS.json SHA-256: eb6b1042060f561cd6ff49054d0e11533c15008ea0f6bbc064b07614b1701e15
+Your initial report: C:\Users\stop-\n1-kanji-workspace\reports-114\initial-gpt.md
+Its SHA-256: aa409e26a4ef70ff11d76988b5b45fec01e567aff04d65fdff5d371f13bd35be
+Sole report destination: C:\Users\stop-\n1-kanji-workspace\reports-114\confirm-gpt.md (absent at preflight)
+Coordinator session: 2451b10d-02a9-46ab-82d5-d90993f0cb8b
+
+HOW YOU RECEIVE THE INPUTS: read the chain only. You never open packet or report files directly. The coordinator verified every bound input against these hashes before building the chain; do not hash anything yourself.
+Read all 29 segments of the B114 GPT confirmation chain. Each part header states the source path (prefixed confirm-packet/, initial-report/ or original-packet/), the source SHA-256 and which segment lines equal which source lines; cite by source path and source line numbers. The last line of each segment gives the exact path of the next segment. Segment 29 ends with "END OF CHAIN. Follow the run instruction's phase boundary.": this pass has one phase, so that line means the chain is complete and you proceed to analysis and the report. Segment 1 is:
+C:\Users\stop-\n1-kanji-workspace\review-chains\b114-confirm-gpt-v1\01-603dae169c9f4a3a8df1264e99c1aad7.txt
+Read segments in order, each with one view of the exact path printed at the end of the previous segment. Never use view_range; forceReadLargeFiles: true is permitted. Segments are under 16 KB and are returned whole. You may re-view a segment you have already reached.
+
+THE CHAIN CONTAINS, in this order (53 sources):
+1. confirm-packet/INSTRUCTIONS.md: the confirmation tasks and report contract (the start of segment 1).
+2. initial-report/initial-gpt.md: your complete initial report.
+3. confirm-packet/RESPONSE.md, then confirm-packet/CHANGES.md.
+4. confirm-packet/diffs/fix.patch, diffs/changed-lines.txt and diffs/changed-files.txt.
+5. All 15 revised cards, confirm-packet/snapshot/kanji/<card>.md: 娯 寮 廊 栓 汽 症 砲 碁 磁 穀 穫 糖 紺 雰 魅. Six changed (寮 症 碁 穀 穫 魅), together with repository manifest.json; the other nine did not.
+6. Counterpart cards from the original packet, original-packet/repo/kanji/<card>.md, unchanged at the revised snapshot: 房 庁 部 課 集 拾 利 績 怪 穂 盤 板.
+7. All ten confirmation checks, confirm-packet/checks/: budget.txt, link-targets.tsv, lint.txt, manifest.txt, quiz-safety.txt, reading-exposure.txt, reading-options.txt, unittest.txt, validate.txt, vocabulary.txt.
+8. confirm-packet/evidence/README.md, evidence/jmdict-cited-entries.xml and evidence/QuizBuilder.kt.
+9. Original-packet context: rubric/copilot-instructions.md (the review contract), rubric/content-structure.instructions.md, repo/docs/content-format.md lines 1-139 only (kanji, quiz authoring and curated reading-question contracts; later lines are not part of the chain by design), evidence/kanjidic2-records.xml, evidence/jmdict-families.xml and evidence/title-index.txt (one KANJI-title line for each of the 1221 same-commit cards in code-point order; line 1 is "一 one" and line 1221 is "齢 age; years lived").
+The OLD text of the six changed cards is not included as separate files: diffs/fix.patch shows every removed and added line with context. Every other original-packet file (other cards, word articles, stroke data, the Joyo PDF and raw SVGs, other checks and evidence) is outside the permitted local inputs for this pass; disclose any you would have needed as a limit.
+
+ACCESS RULES. These narrower rules govern any wider packet wording. In particular they replace INSTRUCTIONS.md's "Allowed local reads", its advice to read large files in ranges and its encouragement of public web sources. Any breach, wherever it falls in the run, voids the whole pass: its report is quarantined and not used. There is no retry. If you notice you have breached a rule, stop immediately and tell the coordinator exactly what happened.
+1. EXACTLY ONE TOOL CALL PER RESPONSE. Wait for its result before the next response. Never place two or more tool calls in one response, even for independent files, and use no parallel wrapper or batch; a tool hint that you may batch view calls does not apply here.
+2. The only tools you may call are view (rule 3), web_fetch (rule 5), one create or apply_patch (rule 6), send_session_message (rule 7) and, last, task_complete (rule 8). No other tool, including web search, todo or SQL trackers, memory, skills, ask-the-user and sub-agent tools.
+3. Read local inputs only with view of one explicitly named file by absolute path, never a directory and never with view_range. The only allowed local inputs are (a) the chain segments, reached as described above, and (b) one readback of your report with forceReadLargeFiles: true. The sole delivery exception is the kickoff's initial full view of this instruction file, C:\Users\stop-\n1-kanji-workspace\scratch-114\confirm\prompts\confirm-gpt-114-001.txt, with forceReadLargeFiles: true and no view_range; do not read this file again. No other local path: in particular NOT any file under review-packets or reports-114 (not even the files the chain copies) and not the chain directory.
+4. No shell/PowerShell/cmd, Python/scripts, search/grep/rg/glob, enumeration/listing/wildcards/recursion, corpus scans, agents, background jobs, browser/webview, JVM/Gradle/emulator/ADB, builds or temporary files. Open no other report, observation record, author ledger, audit record, session history, scratch file or live checkout, and no summary of any other reviewer's findings; do not look for them.
+5. Up to three optional web_fetch calls IN TOTAL, to directly named public https reference URLs; no web search or browser. In the same response as each fetch, BEFORE the call, publicly state the URL and the reason in ordinary response text. Private reasoning and retrospective report text do not count.
+6. The only write is the one report at the destination above, after every chain segment has been read. Use one create call if available; otherwise one apply_patch call containing exactly one Add File for that path is authorized. Do not revise or append it later. After the write, one complete readback view of the report (forceReadLargeFiles: true) is authorized.
+7. Exactly ONE message to the coordinator in total: after the readback, one send_session_message to session 2451b10d-02a9-46ab-82d5-d90993f0cb8b with only session_id and message. The message has exactly two lines: line 1, the report's absolute path; line 2, "Confirmation: " followed by exactly one of CONFIRMED, NEEDS FIX or UNVERIFIED (the verdict of your report's Confirmation line) and nothing else. No findings, requests, hash or tool output in that message. Contact no other session.
+8. After that message, stop. A single task_complete call is the only tool call permitted after it; none is permitted before it.
+9. If required work cannot be completed within these bounds, report the limitation truthfully and stop. No extra prompt, retry or further pass is authorized.
+
+TASKS. Follow INSTRUCTIONS.md's tasks and report contract within these rules.
+- Dispositions: give one for each of F1, F2 and F3, as RESPONSE.md requests, after verifying each yourself. RESPONSE.md and CHANGES.md are author claims to verify, not evidence. O1 (none) and L1 to L6 need no disposition: record in Limits what remains unverified for the limits, without treating the absence of a code change as resolution.
+- Read every changed card in full and check every changed hunk against all four facets: correctness, scoped coverage, consistency and quiz safety, comprehensibility. That includes the changes RESPONSE.md lists under "Changes that do not answer a point in your report". For every quiz_exclusions pair added in this revision, use the counterpart card and the title index to judge whether it is a real direct pair and not also a distractor, and whether each linked descriptive phrase matches the linked card's real title.
+- Check the post-fix meaning options in checks/quiz-safety.txt and the mechanics in evidence/QuizBuilder.kt for every card of the batch, and the reading prompts in checks/reading-options.txt; say what these audits cannot show. They model limited pools only: not custom/caller-built or multi-borrow Starter behavior, Kotlin execution, native/phone acceptance, or compatibility with installed APK 5c000bd (predates quiz_exclusions). No Kotlin/JVM/emulator/phone execution occurred; do not turn host models or static code into native acceptance.
+- Report new established defects only, without a quota. Do not re-raise a point you have dispositioned unless the revision itself is wrong. Do not force a CONFIRMED verdict: CONFIRMED only if every requested item is RESOLVED, DECLINE ACCEPTED or DISPUTE ACCEPTED and you established no new actionable defect. Disclose unresolved consequential claims accurately.
+- Preserve dictionary entry/sense restrictions, spelling and register distinctions. Do not invent etymology or constituent readings, demand unrelated vocabulary, or treat historical completeness as the scope.
+- In Scope, list the chain segment numbers you read (and any re-views) and every web_fetch URL with its purpose.
+- Identify your actual model only if verifiable; otherwise disclose that execution-model identity is unverified.
+
+Finish with exactly one report write, then one complete view readback (forceReadLargeFiles: true). Do not hash it: the coordinator will. Then send the one two-line message of rule 7 and stop; do not start further work.
