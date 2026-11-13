@@ -46,7 +46,7 @@ For focused sentence practice, continue with [Onomatopoeia in sentences](onomato
 Its twelve-word core and focused companion sets supply familiar words and practise selected
 constructions for the first 203 cards, separately from the vocabulary-card schedules.
 This covers representative uses of each card, not every dictionary sense or possible attachment.
-[みっちり](../words/みっちり.md) is not included in these exercises.
+[みっちり](../words/みっちり.md) and [のびのび](../words/のびのび.md) are not included in these exercises.
 
 Common patterns include an adverb before a verb, an adverb with と, and a state expressed
 with する. Some words also work with な or に. These patterns are **word-specific**:
@@ -134,8 +134,8 @@ The second batch was first published as text-only; illustrations followed separa
 
 ## Further word cards
 
-The collection now contains **204 tagged word cards**. The ぶかぶか addition brought it to 201;
-later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり. They are listed here without
+The collection now contains **205 tagged word cards**. The ぶかぶか addition brought it to 201;
+later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり and のびのび. They are listed here without
 changing the original two 100-word groups or their existing card identities.
 
 | Scene | Card |
@@ -144,6 +144,7 @@ changing the original two 100-word groups or their existing card identities.
 | A sudden burst or rush | [どっと](../words/どっと.md) — bursting out, surging in, or happening suddenly |
 | Muttering or small bumps | [ぶつぶつ](../words/ぶつぶつ.md) — different constructions select muttering or bumps/spots; see the card for further uses |
 | Intensive work or instruction | [みっちり](../words/みっちり.md) — doing something thoroughly and intensively |
+| Acting freely and at ease | [のびのび](../words/のびのび.md) — without constraint; also distinguish the postponement use |
 
 ## Sources and limits
 
