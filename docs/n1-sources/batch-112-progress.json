@@ -100,7 +100,7 @@
     }
   ],
   "selectionReason": "Fifteen absent frozen rows, each declared by three existing word articles. There are 45 mapped pairs across 44 distinct articles because 微妙 serves 妙 and 微. No word/article file is added. Earlier deferred rows, including 従, remain pending.",
-  "status": "textual-review-closed-host-gates-green-pending-publication",
+  "status": "published-verified-textual-review-closed",
   "drafted": [
     "健",
     "妙",
@@ -135,11 +135,29 @@
     "離",
     "響"
   ],
-  "published": [],
+  "published": [
+    "健",
+    "妙",
+    "射",
+    "就",
+    "展",
+    "微",
+    "態",
+    "盤",
+    "看",
+    "至",
+    "診",
+    "酸",
+    "障",
+    "離",
+    "響"
+  ],
   "runtimeChanged": true,
-  "runtimePublished": false,
-  "publishedAdditions": 180,
-  "remainingAdditions": 1042,
+  "runtimePublished": true,
+  "publishedCommit": "daa540d41db375129da62102e79d31224e6e155d",
+  "publicationRecord": "batch-112-publication.json",
+  "publishedAdditions": 195,
+  "remainingAdditions": 1027,
   "accounting": {
     "frozenPendingRecords": 1228,
     "n1DeliveriesBeforeThisBatch": 180,
@@ -149,7 +167,7 @@
     "workingTreePendingRecordsAbsent": 1027,
     "kanjiArticlesInWorkingTree": 1191,
     "wordArticlesInWorkingTree": 5082,
-    "note": "The 15 cards are review-closed but not published. Published coverage fields stay at the B111 figures (180 deliveries, 1042 remaining) until the remote SHA, CI run and exact GitHub ZIP are verified."
+    "note": "Recounted from source-index.json against kanji/ at the reviewed snapshot. 195 + 6 + 1027 = 1228. The published coverage fields above equal this recount now that the remote SHA, CI run and exact GitHub ZIP are verified (see publicationRecord)."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1202,7 +1220,7 @@
       "reports/confirm-gpt.md"
     ]
   },
-  "limits": "Textual review by two distinct model families (claude-opus-5.5 and gpt-6.1-sol) on one fixed freeze with independent blind initial findings. Both confirmations of the reconciled text of 737cb020 found every finding resolved and returned UNVERIFIED with no findings, solely because limit L1 (importer/field propagation, caller-built pools, Kotlin execution and random draws, custom or multi-borrow reading pools, installed-build compatibility) stayed partially resolved; the author accepts L1 as a disclosed, non-blocking evidence limit and ran no extra round (see reviewClosure). The first Claude confirmation was rejected for an out-of-scope scan and incomplete card coverage and is preserved with a manual audit. Host content gates pass on the reviewed and closure trees; Android JVM tests were not run (separate JVM/emulator HOLD). The delivered 5c000bd APK predates kanji quiz_exclusions and does not enforce the new exclusions. No native, rendered, phone, CI or archive credit; unpublished until the remote SHA, CI run and exact GitHub ZIP are verified.",
+  "limits": "Textual review by two distinct model families (claude-opus-5.5 and gpt-6.1-sol) on one fixed freeze with independent blind initial findings. Both confirmations of the reconciled text of 737cb020 found every finding resolved and returned UNVERIFIED with no findings, solely because limit L1 (importer/field propagation, caller-built pools, Kotlin execution and random draws, custom or multi-borrow reading pools, installed-build compatibility) stayed partially resolved; the author accepts L1 as a disclosed, non-blocking evidence limit and ran no extra round (see reviewClosure). The first Claude confirmation was rejected for an out-of-scope scan and incomplete card coverage and is preserved with a manual audit. Host content gates pass on the reviewed and closure trees; Android JVM tests were not run (separate JVM/emulator HOLD). The delivered 5c000bd APK predates kanji quiz_exclusions and does not enforce the new exclusions. Published by a normal fast-forward push; the remote SHA, green CI run and exact GitHub ZIP are verified in the publication record. No native, rendered or phone credit.",
   "freezeSnapshot": "d6ad96ebf7d0352d54184ed44a382f70e4497f7b",
   "reviewedSnapshot": "737cb0201bb3ca76b327504d95b17e64f1a79869",
   "reviewFamilies": [

@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 112: textual review closed; publication pending
+## Batch 112: published (textual review closed)
 
 The batch adds fifteen kanji, **健 妙 射 就 展 微 態 盤 看 至 診 酸 障 離 響**
 (source rows 64, 224, 264, 269, 276, 346, 381, 739, 743, 909, 1004, 1113, 1160,
@@ -121,9 +121,21 @@ entries, 43.3 of 56 MiB retained and 29.3 of 42 MiB for the local ZIP.
 Of the 1,228 pending additions, the tree now has **201 with cards** (195 N1
 deliveries including this batch, plus six N2 placements) and **1,027 absent**.
 The ledger is [batch-112-progress.json](n1-sources/batch-112-progress.json).
-Published coverage stays **180 N1 deliveries** (186 of 1,228, 1,042
-remaining) until the remote SHA, the CI run and the exact GitHub ZIP are
-verified.
+**Published** as `daa540d4` (after freeze `d6ad96eb` and reconciliation
+`737cb020`) by a normal signed fast-forward push onto main `0320ba4a`;
+GitHub shows all three commits verified as `stop-cran`. The
+[`Validate content` run 43381232043](https://github.com/stop-cran/learning-japanese/actions/runs/43381232043)
+passed (12/12 steps). The exact GitHub ZIP for `daa540d4` was downloaded and
+verified: 8,623 entries, all 8,601 runtime hashes equal to `manifest.json`
+(content version `b81044aafa8b5a07`), safe paths, per-file limits and publishing
+budgets passed, contributor evidence excluded. Its retained/inflated bytes are
+44,974,888 / 45,243,226 and compressed bytes 31,195,681 (42.9 / 43.1 / 29.8
+MiB); the LF archive differs from the CRLF working-tree figures above.
+See [batch-112-publication.json](n1-sources/batch-112-publication.json) and
+[its evidence](n1-reviews/batch-112-publication/). Published coverage is now
+**195 N1 deliveries**, or 201 of 1,228 with the N2 placements, with **1,027
+remaining**. This changes neither the L1 disposition nor the unrun
+JVM/native/rendered/phone acceptance.
 
 ## Batch 111: published (textual review closed)
 
