@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 114: textually closed, publication pending
+## Batch 114: published (textual review closed with limits)
 
 The fifteen cards are **娯 寮 廊 栓 汽 症 砲 碁 磁 穀 穫 糖 紺 雰 魅**, with stroke files and
 fifteen links in fifteen existing word articles; no word article is added.
@@ -77,10 +77,19 @@ complete bounded-read provenance, dispositions and evidence limits. No B113 void
 material or later B113 fix is included. Native/phone, old-APK, broader reading-pool,
 supplemental-source and visual-asset limits remain explicit.
 
-Local source accounting is **231 done / 0 in progress / 997 not started**.
-Publication remains pending: **216 delivered / 1,012 not delivered**.
-The final runtime candidate is `1531e050487c8a64`, 8,664 entries.
-See the [B114 ledger](n1-sources/batch-114-progress.json).
+Source accounting is **231 done / 0 in progress / 997 not started**:
+**225 N1 additions plus six N2 placements delivered**. These are textual/source
+counts, not device acceptance. The published runtime is `1531e050487c8a64`,
+8,664 entries. See the [B114 ledger](n1-sources/batch-114-progress.json).
+
+Published by signed, non-force fast-forward at `1a69edc3`, with prior main
+`0485c873` already an ancestor. [CI passed](https://github.com/stop-cran/learning-japanese/actions/runs/43509531759),
+and the exact served ZIP passed all 8,664 runtime hashes, exported-path equality
+and packaging limits. The [publication record](n1-reviews/batch-114-publication/provenance.json)
+binds that commit and download. Its later contributor-only receipt/ledger commit
+must retain identical exports; it is not a second ZIP download or new linguistic,
+native, emulator or phone acceptance. The immutable closure's publication-pending
+wording records its earlier state.
 
 ## Batch 113: published (textual review closed with limits)
 
