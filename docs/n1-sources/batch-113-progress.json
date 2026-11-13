@@ -100,7 +100,7 @@
     }
   ],
   "selectionReason": "Alignment-verified (n1lib.align) rows with two existing declaring word articles, every metadata reading supported by a declaring word, no new word articles, and few gloss overlaps with existing cards. 恵 deferred (gloss twin of 恩); 救 deferred (gloss twin of 援); 姿/致/筋/履/駄 deferred for heavier gloss overlap. Thirty mapped pairs across 30 distinct articles (two declaring articles per kanji). No word/article file is added. Three stale statements that a kanji card is absent are fixed in 応.md, 統.md and 応援.md. The deferred rows remain pending.",
-  "status": "textual-review-closed-publication-held",
+  "status": "published-verified-textual-review-closed-with-limits",
   "drafted": [
     "慢",
     "縫",
@@ -135,16 +135,33 @@
     "寧",
     "援"
   ],
-  "published": [],
+  "published": [
+    "慢",
+    "縫",
+    "飢",
+    "恩",
+    "盆",
+    "誕",
+    "隊",
+    "需",
+    "系",
+    "徹",
+    "討",
+    "謝",
+    "握",
+    "寧",
+    "援"
+  ],
   "runtimeChanged": true,
-  "runtimePublished": false,
-  "publishedAdditions": 195,
-  "remainingAdditions": 1027,
+  "runtimePublished": true,
+  "publishedAdditions": 210,
+  "remainingAdditions": 1012,
   "accounting": {
     "frozenPendingRecords": 1228,
     "n1DeliveriesBeforeThisBatch": 195,
     "n2PlacementsAlreadyInTree": 6,
     "publishedPendingRecordsWithCardsBeforeBatch": 201,
+    "publishedPendingRecordsWithCards": 216,
     "workingTreePendingRecordsWithCards": 216,
     "workingTreePendingRecordsAbsent": 1012,
     "kanjiArticlesInWorkingTree": 1206,
@@ -153,7 +170,7 @@
     "localDoneIncludingN2Placements": 216,
     "localInProgress": 0,
     "localNotStarted": 1012,
-    "note": "The 15 cards are locally textually review-closed with explicit evidence limits, not published deliveries or native/phone acceptance. Published counts remain at B112: 195 N1 additions plus six N2 placements, with 1,027 not delivered. The local done/in-progress/not-started accounting is 216/0/1,012."
+    "note": "The 15 cards are textually review-closed and published with explicit evidence limits, not native/phone acceptance. Published counts are 210 N1 additions plus six N2 placements, with 1,012 not delivered. The source done/in-progress/not-started accounting is 216/0/1,012; no later batch has started."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1479,8 +1496,9 @@
   "reviewClosure": {
     "fullyConfirmed": false,
     "claudeConfirmed": false,
-    "publicationHeld": true,
-    "githubWritesAuthorized": false,
+    "publicationHeldAtClosure": true,
+    "publicationHeld": false,
+    "githubWritesAuthorized": true,
     "voidFindingsUsed": false,
     "remainingGaps": [
       "GPT L1 remains partially resolved: static meaning-pair behavior only, not parser propagation, caller pool construction or executed Kotlin.",
@@ -1489,7 +1507,7 @@
       "No fresh confirmation of stroke geometry, SVG/Joyo PDF fidelity or fonts; Claude initial omitted the optional SVG appendix.",
       "GPT reviewed the manifest check output/version, not all derived manifest bytes; fix.patch intentionally excludes manifest.json.",
       "Claude's optional dispositions and author declines were not confirmed by Claude.",
-      "The direct-human provenance of issue-60 publication authorization and B108-B112 pushes remains unverified; publication hold is unchanged."
+      "The earlier issue-60 publication-authorization attribution and B108-B112 push provenance remain unverified. A new direct-human approval independently verified for B113 supersedes the current hold, without retroactive permission claims."
     ],
     "byteQualifier": "All 15 accepted GPT full-card view results byte-equal the frozen/current CRLF files. They equal the b750f350 LF Git blobs only after CRLF-to-LF conversion; the teaching patch equals the Git diff byte-for-byte.",
     "closureGates": {
@@ -1522,12 +1540,23 @@
     }
   },
   "localIntegration": {
-    "status": "locally-integrated-publication-held",
+    "status": "integrated-without-teaching-changes",
     "closureCommit": "c6d1515d1539f14eca6d7928c0d230a12344726a",
     "upstreamCommit": "13eee25c96fb8defc081f90b423fbf84d3c052e6",
     "evidence": "../n1-reviews/batch-113-integration/provenance.json",
     "contentVersion": "07e76fd6a4cb2748",
-    "scope": "The only overlap was manifest.json, regenerated from both parents. B113 teaching bytes and review limits are unchanged; upstream adds one unrelated word. Host gates passed. Publication remains held, including the later exact GitHub archive check."
+    "scope": "The only overlap was manifest.json, regenerated from both parents. B113 teaching bytes and review limits are unchanged; upstream adds one unrelated word. Host gates passed. The linked integration record preserves the then-active hold; its later release and exact GitHub archive check are recorded separately below."
   },
-  "limits": "Local textual closure is not full confirmation, publication or native/phone acceptance. GPT remains UNVERIFIED with explicit limits; no compliant Claude confirmation exists. All void output remains quarantined. No GitHub writes, emulator, JVM or old-APK compatibility credit is implied."
+  "publication": {
+    "commit": "9cb463cd2a5aa58313236d4a35ebdaed6e995721",
+    "record": "../n1-reviews/batch-113-publication/provenance.json",
+    "ciRun": 43479174439,
+    "ciConclusion": "success",
+    "exactGithubArchiveVerified": true,
+    "verifiedRuntimeHashes": 8634,
+    "contentVersion": "07e76fd6a4cb2748",
+    "runtimeUnchangedByReceiptFollowUp": true,
+    "laterFixesSeparate": true
+  },
+  "limits": "Publication and archive verification do not establish full confirmation or native/phone acceptance. GPT remains UNVERIFIED with explicit limits; no compliant Claude confirmation exists. All void output remains quarantined. No emulator, JVM or old-APK compatibility credit is implied."
 }

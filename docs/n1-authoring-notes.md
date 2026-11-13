@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 113: locally closed; publication held
+## Batch 113: published (textual review closed with limits)
 
 The fifteen new kanji are **慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援**,
 with stroke files, thirty links across thirty reused word articles, and
@@ -109,15 +109,24 @@ native, rendered or phone acceptance is claimed.
 Local source accounting is **216 done / 0 in progress / 1,012 not started**
 out of the 1,228 frozen pending members: 210 locally review-closed N1
 additions plus the six N2 placements. "Done" here is textual/source
-accounting, not delivery or device acceptance. Published accounting stays at
-**201 present / 1,027 not delivered**. See the
+accounting, not device acceptance. Published source accounting is now
+**216 present / 1,012 not delivered**. See the
 [B113 ledger](n1-sources/batch-113-progress.json).
 
-**Publication is held.** No push, PR, remote merge or issue-60 comment is
-authorized by this local closure. The investigation did not verify the
-direct-human source for issue-60's publication-authorization attribution or
-the B108-B112 pushes; their historical publication receipts are not
-retroactive permission evidence. No further Claude attempt is planned.
+Published by a signed, non-force fast-forward at `9cb463cd`, integrating
+current main `13eee25c` without changing the B113 teaching bytes. CI passed,
+and the exact GitHub ZIP passed all 8,634 runtime hash checks, safe-path and
+packaging limits using a separately identified bounded-memory verifier.
+The [publication record](n1-reviews/batch-113-publication/provenance.json)
+preserves the approval, CI, ZIP and memory receipts. No second archive run
+or new linguistic review is implied by the contributor-only receipt update.
+
+A newly verified direct-human instruction approved publication after the
+necessary review and required later fixes to remain separate. This supersedes
+the historical local-closure hold, not the review caveats. The investigation
+still did not verify the earlier issue-60 authorization attribution or the
+B108-B112 push provenance; current approval is not retroactive permission
+evidence. No further B113 Claude attempt is planned.
 
 ## Batch 112: published (textual review closed)
 
