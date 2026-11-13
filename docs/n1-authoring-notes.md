@@ -59,6 +59,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 115: drafted and validated (independent review pending)
+
+The eight cards are **卓 厄 宙 寸 康 漠 票 魔**, with canonical stroke files,
+eight link-only edits in eight existing word articles, and the narrow removal
+of 標's now-false statement that 票 has no card. No word article is added.
+The original fifteen-member selection was split by comparison complexity;
+**憲 監 督 紀 索 維 賃** remain queued with their gathered evidence preserved.
+The unchanged source extraction contains 75 complete JMdict families; author
+comparison inspection covered 91 complete baseline kanji cards.
+
+Host/static checks passed, including 431 tests, exact sourced metadata,
+backlink and choice checks, reproducible manifest generation and archive limits.
+The first reading model exposed a valid ショク offered incorrectly for 卓 in
+Starter padding. Revised curated choices fill all three slots in every modeled
+N1/All/Starter outcome while retaining full sourced readings. The final model
+has zero exposed supplemental-reading hits in those pools and four latent
+readings outside them; it is not native or arbitrary-pool acceptance.
+
+Source accounting is **231 done / 8 in progress / 989 not started**.
+Published delivery remains **225 N1 additions plus six N2 placements**;
+**997 members remain undelivered**, including these eight drafts.
+The working tree contains 1,229 kanji and 5,083 words, with candidate runtime
+`8c5b266340bd34bc` and 8,680 entries. The [B115 ledger](n1-sources/batch-115-progress.json)
+records the source bindings, precise baseline delta and check receipts.
+Independent review, reconciliation and publication remain outstanding.
+No later B113/B114 fix, emulator, native or phone acceptance is included.
+
 ## Batch 114: published (textual review closed with limits)
 
 The fifteen cards are **娯 寮 廊 栓 汽 症 砲 碁 磁 穀 穫 糖 紺 雰 魅**, with stroke files and
