@@ -1,0 +1,458 @@
+Perform ONE complete, independent first content review of B113 under run N1-B113-CLAUDE-009, in TWO PHASES that together form one pass. Do not implement fixes, edit content or perform a confirmation round. Establish every conclusion from evidence you open in this pass.
+
+Original packet (authoritative, immutable): C:\Users\stop-\n1-kanji-workspace\review-packets\batch-113-fdec1c02
+Snapshot: fdec1c02f9b02f29659b56551cd0a1fd927cced1
+Base: c42d80306926e99ec6436c80c0574e3a858a4286
+Packet SHA256SUMS.json: aea68d97bfc52944dc6e63fc309e47d08c328990c997cc73fb651ab6b73554d0
+Sole report destination: C:\Users\stop-\n1-kanji-workspace\reports-113\initial-claude-m5.md (absent at preflight)
+
+HOW YOU RECEIVE THE PACKET: read chains only. You never open packet files directly.
+- REQUIRED CHAIN (phase 1): read the 49 required segments of the existing v4 chain. The seven appendix segments 50-56 are not part of this pass; do not follow the appendix link after segment 49. Each part header states the source path, the source SHA-256 and which segment lines equal which source lines; cite findings by source path and source line numbers. The last lines of each segment give the exact path of the next segment. Segment 1 is:
+C:\Users\stop-\n1-kanji-workspace\review-chains\b113-claude-v4\01-ceaaa1d74c8065195c6e54292ea16df2.txt
+- EXTENSION CHAIN (phase 2): the coordinator will mechanically build, in the same format, byte-exact copies of the D and E cards you request in phase 1, in your order, and send you its first-segment path.
+Read segments in order, each with one view of the exact path printed at the end of the previous segment. You may re-view a segment you have already reached. Segments are under 16 KB; if a view output is nevertheless truncated, view the remaining range before continuing.
+
+Do not open, request or search for any review report, observation or audit record, author rationale, changed checkout, other packet, session history, or any summary of earlier work.
+
+ACCESS RULES. These narrower rules govern any wider packet wording, including REVIEW.md's general access text. Any breach, wherever it falls in the run, voids the whole pass: its report and observations are quarantined and not used. There is no retry. If you notice you have breached a rule, stop immediately and tell the coordinator exactly what happened.
+1. EXACTLY ONE TOOL CALL PER RESPONSE. Wait for its result before the next response. Never place two or more tool calls in one response, even for independent files, and use no parallel wrapper or batch.
+2. Read local inputs only with view of one explicitly named file by absolute path, never a directory. The only allowed local inputs are (a) required-chain segments, reached as described above, (b) extension-chain segments, reached from the first-segment path the coordinator sends in phase 2, and (c) one readback of your report. The sole delivery exception is the kickoff's initial full view of this instruction file, C:\Users\stop-\n1-kanji-workspace\scratch-113\prompts-113\initial-claude-113-009.txt, with forceReadLargeFiles: true and no view_range; do not read this file again. No other local path: in particular NOT any file under review-packets (including repo\kanji cards; D and E cards reach you only through the extension chain) and not the chain directories.
+3. No shell/PowerShell/cmd, Python/scripts, search/grep/rg/glob, enumeration/listing/wildcards/recursion, corpus scans, agents, background jobs, browser/webview, JVM/Gradle/emulator/ADB, builds or temporary files.
+4. Up to three optional web_fetch calls IN TOTAL across both phases, to directly named public reference URLs; no web search or browser. In the same response as each fetch, BEFORE the call, publicly state the URL and the reason in ordinary response text. Private reasoning and retrospective report text do not count.
+5. The only write is the one report at the destination above, in phase 2. Use one create call if available; otherwise one apply_patch call containing exactly one Add File for that path is authorized. Do not revise or append it later. One readback view of the report is authorized.
+6. Exactly two messages to the coordinator in total: the phase-1 list message and the phase-2 completion message described below. The second message contains only the report path and a one-line verdict. No findings, requests, hash or tool output in that message. Contact no other session.
+7. If required work cannot be completed within these bounds, report the limitation truthfully and stop. No extra prompt, retry or further pass is authorized.
+
+REQUIRED READS: all 49 required segments, in full. They contain, in this order:
+A. Core: REVIEW.md and packet.json (read REVIEW.md first; it is the start of segment 1); rubric\copilot-instructions.md and rubric\content-structure.instructions.md; repo\docs\content-format.md lines 1-139 only (kanji, quiz authoring and curated reading-question contracts; later lines are not part of the chain by design); snapshot\kanji cards for the fifteen new kanji (慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援) and for 応 and 統; snapshot\strokes JSON for the fifteen new kanji; diffs\existing.diff; the 30 changed snapshot\words articles; all eleven checks (budget, linkplan-verify, lint, manifest-rebuild, manifest, quiz-safety, reading-exposure, reading-exposure-noextra, unittest, validate, vocabulary); evidence source-metadata.json, kanjidic2-records.xml, jmdict-families.xml, dictionary-index.json, joyo-rows.json and provenance.json.
+B. The neutral title index (supplement outside the packet, SHA-256 db2bdb13227ca6bef0a7c0d43160ae566e1c10ff6918f9f55eb7816093d71054): one KANJI-title line for each of the 1206 same-commit cards in code-point order; a mechanically extracted index, not analysis or candidate suggestions. Confirm in the report that you read source lines 1-1206, that line 1 is "一 one" and line 1206 is "齢 age; years lived".
+C. All 45 curated distractor cards (repo\kanji copies): 慢: 慣 憎 怪 / 縫: 縮 練 緒 / 飢: 凡 処 館 / 恩: 因 思 患 / 盆: 分 盗 貧 / 誕: 延 談 誌 / 隊: 除 象 陽 / 需: 震 零 雲 / 系: 糸 約 絶 / 徹: 微 育 御 / 討: 計 村 寺 / 謝: 診 訪 守 / 握: 屋 掘 掲 / 寧: 寝 宝 寒 / 援: 暖 授 担.
+The SVG appendix (segments 50-56) and binary Joyo PDF are outside the permitted local inputs for this pass. Disclose them as unread.
+
+PHASE 1 (selection). Read all 49 required segments in full; do not read appendix segments 50-56. Then select:
+D. At most 40 collision-candidate cards, each neither a C distractor, a new card, 応/統, nor an existing quiz_exclusions target of a new card. For each, name the new card(s) and the overlapping sense.
+E. At most 10 cards that are existing quiz_exclusions targets of a new card whose text a conclusion relies on, each with the reason. 寝 御 診 談 貧 are C cards (already in the required chain), not E; targets that are themselves new cards (謝 隊 討 寧) are read from the required chain.
+Request only cards by kanji character; the coordinator includes only entries that exist as repo\kanji\<character>.md in the original packet and reports any nonexistent entry back verbatim, with no substitutes or hints.
+ELIGIBILITY REFERENCE (mechanically extracted original frontmatter, in card order):
+{
+  "packetManifestSha256": "aea68d97bfc52944dc6e63fc309e47d08c328990c997cc73fb651ab6b73554d0",
+  "newCards": [
+    "慢",
+    "縫",
+    "飢",
+    "恩",
+    "盆",
+    "誕",
+    "隊",
+    "需",
+    "系",
+    "徹",
+    "討",
+    "謝",
+    "握",
+    "寧",
+    "援"
+  ],
+  "otherRequiredCards": [
+    "応",
+    "統"
+  ],
+  "cards": [
+    {
+      "card": "慢",
+      "source": "snapshot\\kanji\\慢.md",
+      "sha256": "9764bb3ba4e7b9a822c381e645c61f16c3e5849386cb164ed43ecced5a18a398",
+      "distractors": [
+        "慣",
+        "憎",
+        "怪"
+      ],
+      "quiz_exclusions": [
+        "遅",
+        "鈍",
+        "凌",
+        "負",
+        "節",
+        "永"
+      ]
+    },
+    {
+      "card": "縫",
+      "source": "snapshot\\kanji\\縫.md",
+      "sha256": "3b4729dfc8038753448d3f0dd319ec8758373419b4b2210a6a7789c11046329a",
+      "distractors": [
+        "縮",
+        "練",
+        "緒"
+      ],
+      "quiz_exclusions": [
+        "針",
+        "経",
+        "通"
+      ]
+    },
+    {
+      "card": "飢",
+      "source": "snapshot\\kanji\\飢.md",
+      "sha256": "9eab355d8bc38a5f1710c3d55a3d418426657914a9b62633e03b913e5da502cb",
+      "distractors": [
+        "凡",
+        "処",
+        "館"
+      ],
+      "quiz_exclusions": [
+        "乏",
+        "欠",
+        "貧",
+        "敗",
+        "欲",
+        "恋"
+      ]
+    },
+    {
+      "card": "恩",
+      "source": "snapshot\\kanji\\恩.md",
+      "sha256": "3025bfe9127c8682fe343db76bee5ff34657e35859571f3ba92dc2ee447b9219",
+      "distractors": [
+        "因",
+        "思",
+        "患"
+      ],
+      "quiz_exclusions": [
+        "利",
+        "享",
+        "福",
+        "幸",
+        "好",
+        "良",
+        "礼",
+        "謝",
+        "義",
+        "役"
+      ]
+    },
+    {
+      "card": "盆",
+      "source": "snapshot\\kanji\\盆.md",
+      "sha256": "f2e3b3b9f09080570e5e3cedfb7179e4b2e3f58751c9cfcb009ce474a61867d9",
+      "distractors": [
+        "分",
+        "盗",
+        "貧"
+      ],
+      "quiz_exclusions": [
+        "皿",
+        "器",
+        "凹",
+        "谷",
+        "祭",
+        "家",
+        "戸",
+        "族",
+        "氏",
+        "姓"
+      ]
+    },
+    {
+      "card": "誕",
+      "source": "snapshot\\kanji\\誕.md",
+      "sha256": "6c0efef84176fa5e0d1d52a21288b3163136847d9c025a700babdadb793dc125",
+      "distractors": [
+        "延",
+        "談",
+        "誌"
+      ],
+      "quiz_exclusions": [
+        "生",
+        "産",
+        "創",
+        "作",
+        "元",
+        "本",
+        "原",
+        "寝"
+      ]
+    },
+    {
+      "card": "隊",
+      "source": "snapshot\\kanji\\隊.md",
+      "sha256": "62fcb782725c6157223cabdf82ba01b1440af11d6974951d787f30ed744ae0dc",
+      "distractors": [
+        "除",
+        "象",
+        "陽"
+      ],
+      "quiz_exclusions": [
+        "軍",
+        "兵",
+        "武",
+        "士",
+        "団",
+        "組",
+        "党",
+        "社",
+        "族",
+        "群",
+        "体",
+        "身",
+        "秒",
+        "勢",
+        "協",
+        "員",
+        "部",
+        "科",
+        "課"
+      ]
+    },
+    {
+      "card": "需",
+      "source": "snapshot\\kanji\\需.md",
+      "sha256": "efd48803846ca3bb3abaf684631ad55b5c7957454bde2d96242210a6398d7d45",
+      "distractors": [
+        "震",
+        "零",
+        "雲"
+      ],
+      "quiz_exclusions": [
+        "要",
+        "求",
+        "頼",
+        "欲"
+      ]
+    },
+    {
+      "card": "系",
+      "source": "snapshot\\kanji\\系.md",
+      "sha256": "ff18c1bd2423879549d38748c7d06722e314f2945de748140dadfb1302cb658f",
+      "distractors": [
+        "糸",
+        "約",
+        "絶"
+      ],
+      "quiz_exclusions": [
+        "統",
+        "制",
+        "孫",
+        "祖",
+        "族",
+        "派",
+        "党",
+        "団",
+        "組",
+        "隊",
+        "類",
+        "係",
+        "型",
+        "番",
+        "線",
+        "並",
+        "弧",
+        "校",
+        "級",
+        "課",
+        "仲",
+        "姓",
+        "氏",
+        "親",
+        "封",
+        "総",
+        "全",
+        "連",
+        "順"
+      ]
+    },
+    {
+      "card": "徹",
+      "source": "snapshot\\kanji\\徹.md",
+      "sha256": "2bc41757d4917911102360a06c99ef88f81c2db63197a440703d6053e3cd89e0",
+      "distractors": [
+        "微",
+        "育",
+        "御"
+      ],
+      "quiz_exclusions": [
+        "究",
+        "刺",
+        "通",
+        "経",
+        "夜",
+        "晩",
+        "完",
+        "全",
+        "了",
+        "冴",
+        "明",
+        "晴",
+        "打",
+        "撃",
+        "座",
+        "家",
+        "帰",
+        "泊",
+        "留",
+        "討",
+        "寧",
+        "至",
+        "届",
+        "達"
+      ]
+    },
+    {
+      "card": "討",
+      "source": "snapshot\\kanji\\討.md",
+      "sha256": "c661440d165c3543a54b1aef5a422307d06e77f38fb898c2b407de05a9c15f8c",
+      "distractors": [
+        "計",
+        "村",
+        "寺"
+      ],
+      "quiz_exclusions": [
+        "攻",
+        "敗",
+        "撃",
+        "打",
+        "克",
+        "殺",
+        "責",
+        "刑",
+        "勝",
+        "批",
+        "議",
+        "論",
+        "談",
+        "査",
+        "調",
+        "究",
+        "診",
+        "研",
+        "考",
+        "学",
+        "偵",
+        "戦"
+      ]
+    },
+    {
+      "card": "謝",
+      "source": "snapshot\\kanji\\謝.md",
+      "sha256": "6e7bf9f50dae7e920ccc245ce062ac63173e9278da39779f099c524cb158b0e5",
+      "distractors": [
+        "診",
+        "訪",
+        "守"
+      ],
+      "quiz_exclusions": [
+        "礼",
+        "断",
+        "償",
+        "代",
+        "換",
+        "替",
+        "更",
+        "賞",
+        "料",
+        "敗",
+        "負",
+        "失",
+        "損"
+      ]
+    },
+    {
+      "card": "握",
+      "source": "snapshot\\kanji\\握.md",
+      "sha256": "37ddbe114f93a4ac2cbac3562fa2799f6dcdc9644006d725b7721cabd7d4ac49",
+      "distractors": [
+        "屋",
+        "掘",
+        "掲"
+      ],
+      "quiz_exclusions": [
+        "持",
+        "挟",
+        "責",
+        "抱",
+        "取",
+        "捕",
+        "御",
+        "治",
+        "型",
+        "形",
+        "詰",
+        "圧",
+        "作"
+      ]
+    },
+    {
+      "card": "寧",
+      "source": "snapshot\\kanji\\寧.md",
+      "sha256": "fe0bf56f67305a299c3b8be75d55b233504d43cbbf78d3c19e183a77ab2fa894",
+      "distractors": [
+        "寝",
+        "宝",
+        "寒"
+      ],
+      "quiz_exclusions": [
+        "安",
+        "平",
+        "静",
+        "凪",
+        "敬",
+        "厚",
+        "儀",
+        "礼",
+        "細",
+        "親",
+        "封",
+        "研",
+        "究"
+      ]
+    },
+    {
+      "card": "援",
+      "source": "snapshot\\kanji\\援.md",
+      "sha256": "c3937e791ce4b9a04f9688c0b8d223354848575e49084253581c42961a651e71",
+      "distractors": [
+        "暖",
+        "授",
+        "担"
+      ],
+      "quiz_exclusions": [
+        "助",
+        "丞",
+        "支",
+        "励",
+        "勧",
+        "協",
+        "保",
+        "補",
+        "貯",
+        "根",
+        "例",
+        "典",
+        "引"
+      ]
+    }
+  ]
+}
+END ELIGIBILITY REFERENCE
+
+Before sending your final D/E lists, check every entry against this reference. D must contain no new card, otherRequiredCards entry, distractor, or quiz_exclusions target from any new card. E must contain only quiz_exclusions targets, and no new card or distractor. Keep the existing list caps, numbering, reasons and final-list rules.
+
+Phase 1 ends with EXACTLY ONE send_session_message to the coordinator whose message contains ONLY the full numbered lists, one item per line, in this form and nothing else:
+D1 <character> - <new card(s)>: <overlapping sense>
+...
+E1 <character> - <reason>
+...
+Write "D: none" or "E: none" if a list is empty. Number each list consecutively starting at 1. Then end your turn and wait; make no further tool call (including task_complete) until the coordinator's phase-2 message arrives. The lists are final: phase 2 cannot add any D or E entry. Disclose later-discovered unread candidates as limits.
+
+PHASE 2 (review). The coordinator's single message gives only the extension first-segment path and the list of requested entries that do not exist. Read the whole extension chain serially, then analyse and write the report.
+
+ANALYSIS AND REPORT:
+Follow REVIEW.md's four facets and report contract: correctness, scoped coverage, consistency/quiz safety, comprehensibility. Number findings F1 onward, optional points O1 onward, limits L1 onward. Distinguish CLEAN, NEEDS FIX and UNVERIFIED. Identify consequential unverified claims; automated checks are not linguistic proof.
+For each new card, compare each displayed title sense and ordinary secondary sense with the full index, including shared English head words/stems. Independently determine which direct exclusion pairs the contract requires. Exclusions are symmetric, not transitive.
+For each C card, check its title against the index, meaning defensibility as an option, and reading overlap. For every D/E read, decide collision-needing-exclusion, already handled, or harmless; give evidence.
+Include: the list of required-chain and extension-chain segment numbers you read (and any re-views); your phase-1 D/E lists, any nonexistent entries, and a table of EVERY D/E card actually read (character, displayed title, related new card, reason, disposition); per-card results for all fifteen new cards; and all identified but unread candidates with reasons in Limits.
+Preserve dictionary entry/sense restrictions, spelling and register distinctions. Do not invent etymology or constituent readings, demand unrelated vocabulary, or treat historical completeness as the scope.
+Reading audits model limited pools only: not custom/caller-built or multi-borrow Starter behavior, Kotlin execution, native/phone acceptance, or compatibility with installed APK 5c000bd (predates quiz_exclusions). JVM/emulator work remains on hold.
+Identify your actual model only if verifiable; otherwise disclose that execution-model identity is unverified.
+
+Finish with exactly one report write, then one complete view readback (forceReadLargeFiles: true). Do not hash it: the coordinator will. Send ONE phase-2 message to the coordinator containing exactly two lines: the report's absolute path, then a one-line verdict. No findings, requests, hash or tool output in that message. Then stop; do not start further work.

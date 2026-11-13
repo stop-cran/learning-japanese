@@ -100,7 +100,7 @@
     }
   ],
   "selectionReason": "Alignment-verified (n1lib.align) rows with two existing declaring word articles, every metadata reading supported by a declaring word, no new word articles, and few gloss overlaps with existing cards. 恵 deferred (gloss twin of 恩); 救 deferred (gloss twin of 援); 姿/致/筋/履/駄 deferred for heavier gloss overlap. Thirty mapped pairs across 30 distinct articles (two declaring articles per kanji). No word/article file is added. Three stale statements that a kanji card is absent are fixed in 応.md, 統.md and 応援.md. The deferred rows remain pending.",
-  "status": "drafted-host-gated-awaiting-independent-review",
+  "status": "textual-review-closed-publication-held",
   "drafted": [
     "慢",
     "縫",
@@ -118,7 +118,23 @@
     "寧",
     "援"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "慢",
+    "縫",
+    "飢",
+    "恩",
+    "盆",
+    "誕",
+    "隊",
+    "需",
+    "系",
+    "徹",
+    "討",
+    "謝",
+    "握",
+    "寧",
+    "援"
+  ],
   "published": [],
   "runtimeChanged": true,
   "runtimePublished": false,
@@ -133,7 +149,11 @@
     "workingTreePendingRecordsAbsent": 1012,
     "kanjiArticlesInWorkingTree": 1206,
     "wordArticlesInWorkingTree": 5082,
-    "note": "The 15 drafts are not review-closed or published deliveries. Published counts remain at B112."
+    "locallyReviewClosedN1Additions": 210,
+    "localDoneIncludingN2Placements": 216,
+    "localInProgress": 0,
+    "localNotStarted": 1012,
+    "note": "The 15 cards are locally textually review-closed with explicit evidence limits, not published deliveries or native/phone acceptance. Published counts remain at B112: 195 N1 additions plus six N2 placements, with 1,027 not delivered. The local done/in-progress/not-started accounting is 216/0/1,012."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1173,6 +1193,8 @@
     ]
   },
   "gates": {
+    "snapshot": "fdec1c02f9b02f29659b56551cd0a1fd927cced1",
+    "historicalNote": "These are the frozen-draft gates. Fix and closure gates are separately recorded below and in the closure packet; do not treat this original contentVersion as the revised manifest.",
     "lint": {
       "errors": 0,
       "warnings": 10,
@@ -1423,10 +1445,81 @@
     "checks-final/linkplan-verify.txt": "ee860dc127add5e8ef5ded85f2528caaa7deb09ac4a317567ef0327da7668fd7"
   },
   "review": {
-    "status": "not-started",
+    "status": "locally-closed-with-disclosed-limits",
     "required": "two independent model families on the same bounded snapshot, serially",
-    "reports": [],
-    "reviewerSlot": "RU owns it; a fresh packet-specific handoff is required"
+    "initialSnapshot": "fdec1c02f9b02f29659b56551cd0a1fd927cced1",
+    "reconciledSnapshot": "b750f3509ed8bff0a0a2ee1e1ad73f33f6798946",
+    "reports": [
+      {
+        "id": "initial-gpt",
+        "family": "GPT",
+        "verdict": "NEEDS FIX",
+        "sha256": "608d4ee7a2074000e48b68feab5b00f42a828f00d0588ce5d6b797af01f35c45"
+      },
+      {
+        "id": "confirm-gpt-005",
+        "family": "GPT",
+        "verdict": "UNVERIFIED",
+        "sha256": "05a9f963943f3fc2d5e753b58fba6e3182a8369bfcfb11e6e2758ab68cb6bba8",
+        "dispositions": "F1-F3 RESOLVED; O1 deferral accepted; L1 PARTIALLY RESOLVED; L2-L4 retained; no new established teaching defect"
+      },
+      {
+        "id": "initial-claude-009",
+        "family": "Claude",
+        "verdict": "NEEDS FIX (minor)",
+        "sha256": "17ebdb97b17b6a57427da5e8a82f1595dbb79dd1409a8c3298653820062a9acf",
+        "dispositions": "F1's two pairs are present in b750f350 and independently checked by GPT 005; optional dispositions remain author decisions, not Claude-confirmed"
+      }
+    ],
+    "claudeConfirmation": "Attempted and not obtained. No compliant Claude confirmation exists; runs 010 and 011 are VOID and their findings are not used.",
+    "closure": "../n1-reviews/batch-113-closure/README.md",
+    "decision": "Project coordinator selected local option (iii) under the original-reviewers-where-possible policy and explicitly revised its earlier no-fallback condition. This is coordinator-origin, not a direct-human publication authorization.",
+    "logicalReservations": []
   },
-  "limits": "Author/host gates are not independent linguistic review. This batch is not authorized for publication until review and reconciliation. No JVM allocation, native/phone acceptance or compatibility of the older installed APK is implied."
+  "reviewClosure": {
+    "fullyConfirmed": false,
+    "claudeConfirmed": false,
+    "publicationHeld": true,
+    "githubWritesAuthorized": false,
+    "voidFindingsUsed": false,
+    "remainingGaps": [
+      "GPT L1 remains partially resolved: static meaning-pair behavior only, not parser propagation, caller pool construction or executed Kotlin.",
+      "GPT L2-L4 remain retained, including supplemental character sources, the broader candidate survey and original integrity/model limits with coordinator-side byte/model checks recorded separately.",
+      "Native, rendered and phone behavior; arbitrary reading pools and multi-borrow Starter behavior; old APK 5c000bd does not enforce kanji quiz_exclusions.",
+      "No fresh confirmation of stroke geometry, SVG/Joyo PDF fidelity or fonts; Claude initial omitted the optional SVG appendix.",
+      "GPT reviewed the manifest check output/version, not all derived manifest bytes; fix.patch intentionally excludes manifest.json.",
+      "Claude's optional dispositions and author declines were not confirmed by Claude.",
+      "The direct-human provenance of issue-60 publication authorization and B108-B112 pushes remains unverified; publication hold is unchanged."
+    ],
+    "byteQualifier": "All 15 accepted GPT full-card view results byte-equal the frozen/current CRLF files. They equal the b750f350 LF Git blobs only after CRLF-to-LF conversion; the teaching patch equals the Git diff byte-for-byte.",
+    "closureGates": {
+      "runtimeSnapshot": "b750f3509ed8bff0a0a2ee1e1ad73f33f6798946",
+      "scope": "Contributor-only closure documents present; no runtime content diff",
+      "unitTests": 431,
+      "validateErrors": 0,
+      "vocabulary": "2122/2431; pilot",
+      "manifestRebuildDiff": "none",
+      "contentVersion": "8fe45e2ba015abcc",
+      "budgetFiles": 8638,
+      "retainedBytes": 45522905,
+      "inflatedBytes": 45794215,
+      "localZipBytes": 30741797,
+      "evidence": "../n1-reviews/batch-113-closure/gates/",
+      "androidJvm": "NOT RUN",
+      "nativeRenderedPhone": "NOT RUN"
+    },
+    "fixGates": {
+      "snapshot": "b750f3509ed8bff0a0a2ee1e1ad73f33f6798946",
+      "unitTests": 431,
+      "validateErrors": 0,
+      "lintErrors": 0,
+      "lintWarnings": 10,
+      "quizSafetyErrors": 0,
+      "budgetFiles": 8638,
+      "manifestRuntimeEntries": 8631,
+      "contentVersion": "8fe45e2ba015abcc",
+      "evidence": "../n1-reviews/batch-113-closure/confirm-packet/"
+    }
+  },
+  "limits": "Local textual closure is not full confirmation, publication or native/phone acceptance. GPT remains UNVERIFIED with explicit limits; no compliant Claude confirmation exists. All void output remains quarantined. No GitHub writes, emulator, JVM or old-APK compatibility credit is implied."
 }

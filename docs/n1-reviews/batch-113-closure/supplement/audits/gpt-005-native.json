@@ -1,0 +1,76 @@
+{
+  "grant": "RU-N1-B113-REVIEW-20261113-005",
+  "reviewer_session": "9603a29a-3213-4410-a195-7983e08f4132",
+  "model_recorded": "gpt-6.1-sol",
+  "fix_commit": "b750f3509ed8bff0a0a2ee1e1ad73f33f6798946",
+  "packet": "review-packets/confirm-113-b750f350-gpt",
+  "prompt": {
+    "authored": "scratch-113/prompts-113/confirm-gpt-113-005.txt",
+    "authored_sha256": "d8be1a45fbad02b142935d7e459a68a374ed54f494a88f2de393f27bba68f9cd",
+    "received_copy_sha256": "6e95bf7cf65a8fa3a7c6259da15e64f26cf5e5ed22a109e1777ab1a9d0af6f07",
+    "received_equals_authored_after_eol_normalization": true
+  },
+  "events_start_line": 4170,
+  "seriality": {
+    "responses_with_tools": 108,
+    "tool_calls": 108,
+    "multi_call_responses": 0,
+    "note": "Ten empty assistant messages in turn 104 are reasoning parts of one single-call response; serverTools only {provider:openai-responses}."
+  },
+  "calls": {
+    "view": 102,
+    "web_fetch": 3,
+    "apply_patch": 1,
+    "send_session_message": 1,
+    "task_complete": 1,
+    "failed": 0,
+    "out_of_scope": 0
+  },
+  "reads": {
+    "confirmation_packet_files": 35,
+    "own_initial_report": "initial-gpt.md (1-120,121-260; 236 lines)",
+    "original_packet_distinct_files": 49,
+    "original_packet_views": 50,
+    "claude_material": 0,
+    "title_index": 0,
+    "enumeration_or_search": 0
+  },
+  "fetches": [
+    "weblio 恩 (めぐみ/いつくしみ present)",
+    "weblio 盤 (皿 present)",
+    "weblio 慢 (みくびって present)"
+  ],
+  "fetches_announced_before_call": true,
+  "write": {
+    "path": "reports-113/confirm-gpt.md",
+    "operations": "single Add File",
+    "patch_equals_file": true,
+    "sha256": "05a9f963943f3fc2d5e753b58fba6e3182a8369bfcfb11e6e2758ab68cb6bba8",
+    "readback": "one full view, 23,873 chars = file chars"
+  },
+  "compaction": "Background compaction started 11:23:52Z, applied 11:28:48Z after the report-writing response was generated; readback post-compaction.",
+  "report_claims_checked": [
+    "49-file original ledger equals execution record",
+    "3 public fetches equals record",
+    "model claim matches record",
+    "QuizBuilder line citations 26/28-32/34-36 accurate",
+    "quiz-safety.txt prints target meaning + three wrong options: reviewer correct; packet INSTRUCTIONS.md 38-39 and CHANGES.md 66 prose (first of four options) inaccurate - packet-prose issue, not a fix defect; correct n1_confirm_packet.py wording for future packets"
+  ],
+  "audit_tool_false_positives": "Truncation regex flags content containing the word truncated (incl. confirm-gpt.md readback); content-format.md 1-139 partial coverage is as claimed.",
+  "coverage_json": {
+    "path": "reports-113/coverage-confirm-gpt-005.json",
+    "sha256": "ac8ddd22d94a021d55c472413adb5a5c15e3ad2b17d34beee5c1c3479251f0ad"
+  },
+  "verdict_reported": "UNVERIFIED: F1-F3 RESOLVED; O1 deferral accepted; L1 PARTIALLY RESOLVED; L2-L4 retained; six added pairs accepted; no new established defects",
+  "compliance": "COMPLIANT",
+  "post_run": {
+    "confirm_manifest": "9ad39ecf38236602f91d2300a2f8f38d5c75edaab4b22b0ceb2a12b84e982bfb (35/35, no extras)",
+    "original_sha256sums": "aea68d97bfc52944dc6e63fc309e47d08c328990c997cc73fb651ab6b73554d0 (6393/6393, no extras)",
+    "initial_gpt": "608d4ee7a2074000e48b68feab5b00f42a828f00d0588ce5d6b797af01f35c45",
+    "initial_claude": "ea6d932a76e519c28ef27b4338470736346ba1a76b010b03d91df7e68c9e17ed",
+    "initial_claude_coverage": "b9f863eb55f25afbaa1a56db0f9640c356c99a81993cd5e6d6643faeef02094b",
+    "v3_observations": "2f9db3c19ccf5c2b7a8e32d1eec5c662fa2d23a21de93c940e66cc748a58d318",
+    "title_index": "db2bdb13227ca6bef0a7c0d43160ae566e1c10ff6918f9f55eb7816093d71054",
+    "initial_claude_v3_md_exists": false
+  }
+}

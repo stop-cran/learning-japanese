@@ -1,0 +1,165 @@
+B113 CLAUDE FIRST-REVIEW READ CHAIN | segment 2 of 56 (required)
+Byte-exact copies of files from the original packet batch-113-fdec1c02 (plus the title-index supplement). In each part,
+the stated segment lines equal the stated source lines; cite findings by source path and source line numbers.
+
+=== PART 2.1 | rubric\copilot-instructions.md ===
+source sha256 cd0f9c09d21a94fbc3731e8f4ea19b798ab627ac87cc97d44b4ac45ef067de8e | 27157 bytes | 274 lines | part 1 of 2
+segment lines 9-160 = source lines 1-152
+<<<BEGIN PAYLOAD>>>
+# Writing and reviewing Japanese-learning articles
+
+Follow the [README's audience, scope, and approach](../README.md#approach): standalone English explanations, Japanese examples with English translations, and practical rather than exhaustive coverage.
+Reviews are read-only unless the user requests edits. A review request alone does not authorize commits, pushes, or issue creation.
+
+## Review report
+
+For substantive article reviews written in chat or the CLI, use this compact contract:
+
+```text
+Snapshot: <commit; identify any uncommitted changes included>
+Scope: <articles/sections reviewed; reviewers and actual models if used>
+Verdicts: <for each article: correctness, scoped coverage, comprehensibility>
+Findings: <severity; facet; file:lines; claim and impact; remedy; evidence; confidence>
+Optional: <nonblocking expansion or polish, or none>
+Limits: <unverified claims and review limitations, or none>
+```
+
+Assess the three facets separately. Use **CLEAN**, **NEEDS FIX**, or **UNVERIFIED** for each: CLEAN means no actionable defect established within the reviewed scope, not exhaustive correctness. Do not label a consequential unresolved claim CLEAN. No finding quota is required.
+
+Enforcement is self-attended: the reviewing agent checks its report against this contract before responding; the requester adjudicates recommendations. This is not an automated linguistic-correctness gate.
+
+Native PR reviews keep their platform's supported format. Do not assume support for custom report formatting or following external links; see [GitHub's review limitations](https://docs.github.com/en/copilot/tutorials/customize-code-review#unsupported-instruction-types). Apply the substantive checks below and disclose unavailable evidence.
+
+## Article checks
+
+- **Correctness:** Check whole constructions, including attachment forms, tense, polarity, register, and translations. An isolated correct example may still leave a necessary rule unexplained.
+- **Scoped coverage:** Check prerequisites and distinctions needed to answer the article's stated question. Do not demand every related word, historical development, or grammatical framework.
+- **Comprehensibility:** Prefer contrastive examples that actually demonstrate the claimed distinction. Supply selective kana readings for unfamiliar words, ambiguous spellings, and classical forms; explain technical terms when needed.
+- **Qualified claims:** Separate strict rules from tendencies, learning shortcuts, and context-dependent translations. Acknowledge meaningful differences between grammatical frameworks instead of treating a classification as universal.
+- **Linguistic layers:** Distinguish grammatical function, lexical identity, spelling, pronunciation, contraction, register, historical usage, and present-day naturalness. Another reading of the same kanji does not invalidate a documented reading. Kanji associations are not by themselves etymology or evidence of fixed semantic compartments.
+- **Natural examples:** Dictionary recognition of a rare spelling does not establish the idiomaticity of an invented collocation. Use attested rare expressions or clearly qualify the uncertainty; do not invent examples to manufacture a distinction.
+
+## Evidence and severity
+
+For grammar authoring, consult the [source guide](../docs/grammar-authoring-sources.md) and existing batch records before
+searching afresh. Use the guide for navigation; keep exact evidence and qualifications in the per-batch source records.
+
+- Prefer reputable dictionaries and established teaching sources for consequential claims. Inspect the actual entry, heading, reading, sense, and register; a search summary, plausible URL, or successful but irrelevant page fetch is not verification.
+- Match evidence to the claim: a dictionary spelling list supports recognition, not frequency; a grammatical example supports that use, not an unrestricted substitution rule. Link relevant sources so readers can check the reasoning.
+- Treat reviewer findings as hypotheses. Resolve disagreements using the precise claim and evidence, not majority vote, model reputation, or whichever criticism sounds strongest. Preserve unresolved disagreements explicitly.
+- Separate defects from optional expansion and editorial preference. Severity reflects demonstrated impact on learning; confidence reflects the strength of evidence. A localized omission can be minor even when the reviewer is highly confident.
+
+## Grammar exercises and companion articles
+
+Use the [exercise/group/vocabulary contract](../docs/content-format.md#grammar-exercises), the
+[source guide](../docs/grammar-authoring-sources.md), and the
+[reusable review lessons](../REVIEW.md#reusable-grammar-review-lessons) together. Review the complete learner-visible
+task, not just the Japanese sentence or intended key:
+
+- Check typed alternatives and fixed choices against the visible operation and register. Conversational contractions
+  can retain polite endings; a fitting alternative is not wrong merely because it is not the teaching model.
+- Read every completed option and feedback branch against that scenario's actual roles, polarity and event stage.
+  Shared templates must not import another example's facts.
+- Check lexical boundaries and senses by occurrence. Correct offsets and hashes do not prove that a matched substring
+  is a word, or that its gloss fits this prompt.
+- Count genuinely different contexts, not item IDs or noun substitutions. Paired forms and interpretations share keys;
+  useful repetition is not independent transfer evidence or demonstrated mastery.
+- For group/dependency/chapter changes, follow the [shared curriculum contract](../docs/content-format.md#prerequisites-and-roadmap-chapters).
+  Review the actual prerequisite operation, incoming/outgoing edges, both leaf and collapsed chapter cycles, partial availability,
+  unmapped versus unowned content, stable identities and old-reader compatibility. Keep reasons and exact ownership in the
+  [curriculum ledger](../docs/grammar-curriculum-sources.json); chapter placement must not create a whole-chapter lock.
+
+These regroup existing checks, not a new review layer. A clean bounded review needs no manufactured finding or rule.
+
+## Listening exercises
+
+Follow the [listening authoring instructions](instructions/listening-authoring.instructions.md)
+and the [practical authoring sequence](../docs/listening-tasks.md#practical-authoring-sequence).
+Review the complete heard/seen task, including every spoken alternative and feedback branch,
+not only the transcript. Keep owner acceptance, exact media bindings, spending authorization
+and actual native/phone evidence distinct. The selected illustration style and role markers
+are part of the exercise, not interchangeable decoration.
+
+## Independent review and reconciliation
+
+- When multi-model review is requested, use different model families on the same identified snapshot. Keep initial reviewers independent of one another's findings and the author's prior review rationale. Record the models actually used rather than pinning versions in this guide.
+- For a **new word card or learner article** (a new app-facing file under `words/` or `articles/`), obtain blind,
+  facet-split review before publication: use three separate reviewers, each from a different model family, for **correctness**,
+  **consistency and quiz safety**, and **comprehensibility**. Include scoped coverage in these assignments and retain its separate report verdict;
+  consistency includes related counts, navigation, source records and manifest integration, not just the new file.
+  Give all reviewers the same identified snapshot, rubric and source access, and the complete new card/article as a shared sample.
+  Verify and record the actual reviewer models; if a required independent family cannot be provided or verified,
+  disclose the limit and ask the user rather than claiming the requirement passed.
+- For edits to existing cards/articles, keep review proportional: one reviewer per selected model can cover correctness, scoped coverage and comprehensibility
+  for a small edit; multi-model review is not mandatory unless requested. Large batches may use bounded facet assignments.
+  State each reviewer's files and facet so no unassigned area is accidentally reported as reviewed.
+- Keep initial findings blind to other reviewers' reports and the author's rationale. If comparing model contributions, give the models
+  a common snapshot, scope, rubric, and source access for at least one shared sample; do not rank models from disjoint facet assignments.
+  Deduplicate by underlying defect, not wording. Record verified useful findings unique to each model, shared findings, unsupported
+  suggestions, and coverage limitations. This is evidence about the reviewed sample, not a general model benchmark.
+  When identifying unique contributions, compare equivalent observations anywhere in a report, including findings, optional suggestions,
+  limits, tentative hypotheses, and per-file notes; a different label or severity does not make the same observation a new discovery.
+- After authorized fixes, reuse the original reviewers where possible. Give them their original findings, the revised snapshot, and the actual diff.
+- Reconcile each finding as **resolved**, **partially resolved**, **unresolved**, **withdrawn**, or **optional**. Reassess severity when the evidence changes, and check changed passages for regressions.
+- Stop when no actionable defect or consequential unresolved claim remains in scope. Do not expand the assignment just to prolong the review or force agreement.
+
+## Large card expansions
+
+These are self-attended author/reviewer checks, not an automated linguistic gate. The
+[N2 project retrospective](../docs/n2-vocabulary-notes.md#n2-project-retrospective) records the cases behind them;
+the [content format](../docs/content-format.md) remains canonical.
+
+- Pin source versions/hashes and the baseline before authoring. Map each source row to the actual article,
+  spelling, reading and selected senses; preserve raw fields separately from justified teaching corrections.
+  An existing filename or shared dictionary ID is a candidate, not verified coverage.
+- Inspect complete applicable dictionary families and actual reused/comparison articles, including restrictions
+  and sense-local flags. Audit every new kanji's metadata readings against its reading table or qualified
+  source-only explanation, even where the validator does not enforce that level.
+- Preserve stable identities, readings, easier sourced levels and original exclusions; document narrow exceptions.
+  Judge quiz ambiguity from actual displayed labels and ordinary secondary senses. Exclusions are direct pairs,
+  not transitive cliques; different titles or shared topics alone do not decide them.
+- When reciprocal links are in scope, enumerate required pairs across **all mapped articles**, including baseline
+  reuses, and check both relative links with the actual word reading. Do not broaden this to every incidental
+  mention or invent a constituent reading for an irregular whole word.
+- Bound batches and evidence packets by review complexity, not just row count. Respect requested concurrency
+  limits for reviewer processes and their tool calls; verify exit before starting the next serial reviewer.
+  Stop repeated-read loops and narrow the confirmation dossier instead of keeping a live reviewer pool.
+- Record actual models, snapshots, complete reports and evidence limitations. Where execution records are available,
+  check actual returned ranges and process behavior before claiming full reads or serial execution.
+  Preserve interrupted runs and original reports; distinguish fresh reads, supplied evidence and later confirmations.
+- Close rows only after evidence-based reconciliation. Audit exact source membership, baseline preservation,
+  required links and report coverage; keep source-row, distinct-article and link-pair counts separate.
+  Archive hashes establish byte consistency, not comprehension or a fresh linguistic review.
+- Validate the combined current-main tree before publication, not just each expansion branch.
+  The N2 merge passed content checks but exceeded archive limits. Follow the
+  [archive packaging contract](../README.md#app-archive-packaging), run the CI budget check and verify
+  the exact GitHub ZIP preserves every runtime manifest entry/hash; keep authoring evidence in Git.
+
+## Worked example: an attachment rule left implicit
+
+This is an illustrative rendering of a resolved issue, not a new review or a verbatim archived report. The [original construction explanation](https://github.com/stop-cran/learning-japanese/blob/3e80a29aaf02434a4b4fffacf6840f05cad7c142/articles/koto-wake-and-formal-nouns.md#L64-L95) used "clause + わけだ" and the correct example 日本語が上手なわけだ without explicitly explaining the connector.
+
+```text
+Snapshot: 3e80a29 (committed content only)
+Scope: koto-wake-and-formal-nouns.md, attachment guidance only; illustrative walkthrough
+Verdicts: correctness CLEAN; scoped coverage NEEDS FIX; comprehensibility NEEDS FIX
+Findings: Minor; coverage/comprehensibility; articles/koto-wake-and-formal-nouns.md:66,71,93;
+  "clause + わけだ" leaves attachment implicit, so a learner may omit な.
+  Remedy: add a qualified attachment chart, distinguishing preceding predicate types.
+  Evidence: compare the general construction label with 上手なわけ in the cited passage.
+  Confidence: high that the connector is unexplained; this is not an incorrect example.
+Optional: None in this example.
+Limits: This walkthrough does not review other constructions or the entire article.
+```
+
+The review itself makes no edits. After the user authorized fixes, the [revised article added scoped attachment guidance](https://github.com/stop-cran/learning-japanese/blob/0a813d9d1e3c180edd7c9691cfeffc93806711d8/articles/koto-wake-and-formal-nouns.md#L83-L100), including past/negative qualifications. Reconciliation: **resolved** at `0a813d9`.
+
+The example identifies its snapshot and limited scope, separates the three facets, cites an observable omission, calibrates severity to that omission, and closes the finding against the actual change.
+
+## Source handling
+
+<<<END PAYLOAD>>>
+
+=== END OF SEGMENT 2 of 56 ===
+NEXT SEGMENT (view exactly this one path next, as the only tool call of that response):
+C:\Users\stop-\n1-kanji-workspace\review-chains\b113-claude-v4\03-20eddad28888a76fb54aaf80a407e76b.txt

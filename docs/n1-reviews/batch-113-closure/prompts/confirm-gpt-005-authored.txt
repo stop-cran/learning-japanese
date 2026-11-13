@@ -1,0 +1,38 @@
+Perform ONE independent confirmation of your own B113 initial review under shared content-reviewer grant RU-N1-B113-REVIEW-20261113-005 (read bounds identical to the RU-N1-B113-REVIEW-20261113-004 pass-(2) clarification). This is not a new first review or an implementation task. Do not begin any other round.
+
+Fix: b750f3509ed8bff0a0a2ee1e1ad73f33f6798946
+Reviewed freeze: fdec1c02f9b02f29659b56551cd0a1fd927cced1
+Confirmation packet: C:\Users\stop-\n1-kanji-workspace\review-packets\confirm-113-b750f350-gpt
+Its packet-manifest.json SHA256: 9ad39ecf38236602f91d2300a2f8f38d5c75edaab4b22b0ceb2a12b84e982bfb
+Original packet: C:\Users\stop-\n1-kanji-workspace\review-packets\batch-113-fdec1c02
+Its SHA256SUMS.json SHA256: aea68d97bfc52944dc6e63fc309e47d08c328990c997cc73fb651ab6b73554d0
+Your initial report: C:\Users\stop-\n1-kanji-workspace\reports-113\initial-gpt.md
+Its SHA256: 608d4ee7a2074000e48b68feab5b00f42a828f00d0588ce5d6b797af01f35c45
+Sole output: C:\Users\stop-\n1-kanji-workspace\reports-113\confirm-gpt.md
+Coordinator: 2451b10d-02a9-46ab-82d5-d90993f0cb8b
+
+Read the confirmation packet's INSTRUCTIONS.md first, then your own initial report completely. The coordinator has verified the bound inputs before this pass; do not hash them yourself. Follow the packet's confirmation tasks and report contract, subject to these narrower access rules:
+
+1. EXACTLY ONE TOOL CALL PER RESPONSE; wait for its result. No parallel wrapper or batch, even for independent reads.
+2. Read local inputs only with view: one explicitly named absolute file per call, never a directory. Only these inputs are allowed:
+   - files bound by the confirmation packet's packet-manifest.json;
+   - your initial report at the exact path above;
+   - named files from the original packet that INSTRUCTIONS.md references: old changed-card text and unchanged word articles, titles, counterpart cards, evidence, rubric and referenced content-format contract. Each is bound by the original SHA256SUMS.json. Read only context needed to verify the revision, not an unrestricted original-packet survey.
+3. Before EACH original-packet view, publicly state its named path and why it is needed in ordinary response text with the one tool call. In your report list EVERY original-packet file actually read and its reason.
+4. No other report (including any Claude report), observations JSON, title index, Claude-run material, author-progress ledger, session history, scratch file, live checkout, other packet or summary of another reviewer's findings. Do not look for any of them or rely on remembered observations instead of evidence read now.
+5. No shell/PowerShell/cmd, Python/scripts, search/grep/rg/glob, enumeration/listing/wildcards/recursion, corpus scans, agents, background jobs, browser/webview, JVM/Gradle/emulator/ADB or builds. Do not contact other sessions except one final report to the coordinator.
+6. Up to THREE optional web_fetch calls to directly named public reference URLs. No web search or browser. Immediately BEFORE EACH fetch, publicly name the URL and reason in ordinary response text accompanying the call. Private reasoning or retrospective report text is not an announcement. If more is necessary, record the unresolved limit rather than exceeding the cap.
+7. The only write is your one report at the sole output path. Use one create call if available, otherwise one apply_patch call with exactly one Add File for that path. No later edits/appends. One complete report readback is authorized.
+8. No retry, additional prompt or further pass is granted. If you cannot complete the required review within these bounds, state the limitation and stop without expanding access.
+
+Read CHANGES.md and RESPONSE.md as author claims to verify, not independent evidence. Review diffs\fix.patch and diffs\changed-lines.txt completely; diffs\changed-files.txt defines the affected files.
+Read all 15 snapshot\kanji cards fully: 慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援. Thirteen changed; 隊 and 需 did not. Check every changed line in context for correctness, scoped coverage, consistency/quiz safety and comprehensibility.
+Read all confirmation checks: budget.txt, link-targets.tsv, lint.txt, manifest.txt, quiz-safety.txt, reading-exposure.txt, reading-options.txt, reading-options-freeze.txt, unittest.txt, validate.txt, vocabulary.txt.
+Read evidence\README.md, evidence\jmdict-cited-entries.xml and evidence\QuizBuilder.kt. Use the original evidence/contract and exact counterpart cards as needed to independently verify the new Notes, direct pairs, links and quoted titles. The original copies of changed cards are OLD, not the revision.
+Use bounded view ranges for large files, especially your initial report, reading audits and XML; finish every necessary continuation before claiming completeness. forceReadLargeFiles is available for the one final report readback.
+
+Give reasoned dispositions for F1, F2, F3, O1 and L1; for L2-L4 record what remains unverified without treating the absence of a code change as resolution. Independently review all six author-added pairs and every other new hunk. Assess the meaning-quiz source separately from the limits it cannot settle. No Kotlin/JVM/emulator/phone execution occurred, and installed APK 5c000bd predates quiz_exclusions. Do not turn host models or static code into native acceptance.
+Do not force a CONFIRMED verdict: use the packet's contract and disclose unresolved consequential claims, deferred optional work and runtime limits accurately. Report new established defects only, without a quota.
+Identify your actual model only if verifiable; otherwise disclose that execution-model identity is unverified.
+
+Finish by writing the one report, viewing it once completely (forceReadLargeFiles: true if needed), then sending ONE concise coordinator message with path, snapshot, confirmation verdict, findings/disposition summary, original-context file count and fetch count. Do not hash the report, release the shared slot, implement changes or begin further work.

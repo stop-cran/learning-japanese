@@ -59,6 +59,66 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 113: locally closed; publication held
+
+The fifteen new kanji are **慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援**,
+with stroke files, thirty links across thirty reused word articles, and
+narrow stale-absence corrections in 応, 統 and 応援. No word article is
+added. The freeze is `fdec1c02`; the signed reconciliation is `b750f350`.
+Thirteen cards gain 36 direct meaning exclusions and supporting notes, and
+飢's hunger range and ichidan-stem wording are corrected. 隊 and 需 are
+unchanged; no title, reading selection or distractor changes.
+
+The [closure record](n1-reviews/batch-113-closure/README.md) preserves the
+accepted GPT initial review, GPT confirmation 005 and independent Claude
+initial 009, with execution-model identities, byte provenance and read
+inventories. GPT confirmed its three teaching fixes and independently
+checked both 討/話 and 討/争, the only defect later raised by Claude 009.
+Its actual confirmation verdict remains **UNVERIFIED**: L1 is partially
+resolved and L2-L4 remain. This is not a joint CONFIRMED result.
+
+**No compliant Claude confirmation exists.** Attempts 010 and 011 are VOID
+for missing public announcements of original-packet views (010 also had
+an unannounced fetch). Their outputs remain quarantined and are not used.
+The project coordinator selected local closure under the policy of reusing
+original reviewers "where possible"; the exact coordinator-origin decisions
+are recorded, not represented as direct-human instructions. Claude's optional
+dispositions and declines remain author decisions, not Claude-confirmed.
+
+The author retained the existing conservative shared-English-word and
+dated-sense exclusions discussed in Claude O2. They are direct pairs, not
+transitive cliques or exhaustive synonym discovery. Uneven coverage and the
+declined optional pairs remain disclosed, not declared safe. Full default
+meaning triples are unchanged. Static `QuizBuilder.kt` filtering does not
+establish parser propagation, caller-built or reading-pool behavior, executed
+Kotlin, native/phone acceptance or protection by installed APK `5c000bd`,
+which predates kanji `quiz_exclusions`. Supplemental source claims, broader
+candidate coverage, geometry/PDF checks and derived-manifest review limits
+also remain explicit in the closure.
+
+All fifteen actual GPT full-card returns byte-equal the frozen/current CRLF
+files; CRLF-to-LF conversion alone reproduces their `b750f350` Git blobs.
+The complete teaching patch matches Git byte-for-byte, with the derived
+manifest intentionally excluded. Hash agreement is not a linguistic verdict.
+
+The supplied fix gates pass: 431 host tests, zero validation/lint/quiz-safety
+errors, ten pre-existing word lint warnings, 8,638 budgeted files and 8,631
+runtime manifest entries, version `8fe45e2ba015abcc`. No JVM, emulator,
+native, rendered or phone acceptance is claimed.
+
+Local source accounting is **216 done / 0 in progress / 1,012 not started**
+out of the 1,228 frozen pending members: 210 locally review-closed N1
+additions plus the six N2 placements. "Done" here is textual/source
+accounting, not delivery or device acceptance. Published accounting stays at
+**201 present / 1,027 not delivered**. See the
+[B113 ledger](n1-sources/batch-113-progress.json).
+
+**Publication is held.** No push, PR, remote merge or issue-60 comment is
+authorized by this local closure. The investigation did not verify the
+direct-human source for issue-60's publication-authorization attribution or
+the B108-B112 pushes; their historical publication receipts are not
+retroactive permission evidence. No further Claude attempt is planned.
+
 ## Batch 112: published (textual review closed)
 
 The batch adds fifteen kanji, **健 妙 射 就 展 微 態 盤 看 至 診 酸 障 離 響**
