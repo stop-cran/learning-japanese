@@ -1,0 +1,67 @@
+# Evidence added for the confirmation round
+
+- `jmdict-cited-entries.xml`: complete JMdict entries (1042520, 1158900, 1213610, 1213680, 1213720, 1257580, 1257590, 1292200, 1383160, 1401750, 1455390, 1455400, 1551630, 1590860, 2580300) cited by the revised text. Pinned input
+  `n1-implementation-JMdict_e.gz` (sha256 2dbbfe0b1214911766bbc128a0935618b925be917e7d1c50f3536a89b0e8786d). Today's online JMdict may differ slightly.
+- `QuizBuilder.kt`: the app's answer-option builder (how `distractors` and `quiz_exclusions` are used).
+- character-definition-理.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-権.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-令.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-勅.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-治.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-管.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-御.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-統.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-政.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-警.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-訓.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-命.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-府.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-守.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-指.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-授.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-練.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-育.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-支.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-経.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-担.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-任.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-役.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-番.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-偵.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-要.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-招.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-呼.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-急.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-追.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-強.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-激.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-号.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-注.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-引.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-頭.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-首.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-知.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-総.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-説.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-防.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-勉.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-進.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-保.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-公.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-規.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-則.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-処.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-望.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-握.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- character-definition-看.txt: Bounded complete character-entry meaning text with retrieval and response hash. Primary source facts, not a verdict or reading-selection change.
+- kanjipedia-扱.txt: Kanjipedia meaning section only, not Digital Daijisen. No formation or reading section is reproduced.
+- comparison-english-meanings.json: All English meanings for the 114 explicitly listed characters from the pinned KANJIDIC2; no title-derived subset.
+- supplemental-families.xml: Complete matching JMdict families, reserialized after entity expansion; preserve all sense, spelling and register restrictions.
+- supplemental-provenance.json: Exact source hash, queries, entry IDs and serialization scope; not a reviewer conclusion.
+- encouragement-families.xml: Complete matching JMdict families, reserialized after entity expansion; preserve all sense, spelling and register restrictions.
+- encouragement-provenance.json: Exact source hash, queries, entry IDs and serialization scope; not a reviewer conclusion.
+- retained-comparison-families.xml: Complete matching JMdict families, reserialized after entity expansion; preserve all sense, spelling and register restrictions.
+- retained-comparison-provenance.json: Exact source hash, queries, entry IDs and serialization scope; not a reviewer conclusion.
+- baseline-content-format.txt: Exact 139-line original core excerpt, with its full-source hash and original-line mapping. No rule was rewritten.
+- Pinned KANJIDIC2 input: `n1-planning-kanjidic2.xml.gz` (sha256 af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed). The 3 KANJIDIC2 records are in the original packet
+  (`evidence\kanjidic2-records.xml`), with the actual bb1d3856 baseline snapshots and target dictionaries. Only this reviewer's own report is supplied. Supplementary source facts were not supplied to its blind run..

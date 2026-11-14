@@ -1,0 +1,72 @@
+{
+  "run": "N1-B116-GPT004-CONFIRM-004",
+  "session": "8ae1150e-ba39-44c2-ac43-79ebb9ee4d95",
+  "candidate": "2b81b65b52ef8daa2c8690bd240371656545d1ef",
+  "scope": [
+    "憲",
+    "監",
+    "督"
+  ],
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": false,
+  "verdict": "NEEDS FIX",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-116\\confirm-gpt004-004.md",
+    "sha256": "ac1d14783abecc020360fed4ce198d414da3cbe2b9d01bfe88b7eb69892272b4"
+  },
+  "finalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-004\\audit-20261114T215132155716\\audit.json",
+    "sha256": "b6f582f4c04bdd0bf700ce0e9b25e6d9808673bae4b380d2f1daf856913a98e7",
+    "eventsSha256": "ebaa8848b457196631de68c601b61b6e8450f6fddfeebc740fa72c80571b63d7",
+    "sliceSha256": "dd956114354b6d781c000907e62a186af2defd906ba0f349e2aabbe0b33e242f",
+    "chainRead": 75,
+    "chainRequired": 75,
+    "fetches": 0,
+    "writes": 1,
+    "readbacks": 1,
+    "actualResponseModels": [
+      "gpt-6.1-sol"
+    ]
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-004-context.json",
+    "sha256": "d6b98654defcb0e8c57e681bbf7b57d21416f2e2996f847d3b838204cd3363c7"
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-004-structure.json",
+    "sha256": "04781aa4f6f9ae2580efb754a5f5da9fffd02c9814273ebc289bfabf2034cc23"
+  },
+  "originalDispositions": {
+    "F1": "RESOLVED"
+  },
+  "acceptedNewFindings": {
+    "F1": {
+      "status": "ACCEPTED_NEEDS_FIX",
+      "severity": "minor",
+      "pairs": [
+        "憲/僚"
+      ],
+      "verification": "Daijisen 憲:3 gives 取り締まる。役人 and Daijisen 僚:2 independently gives 役人。つかさ (官僚). The 僚 card itself teaches 官僚 bureaucrat. Neither endpoint declares 憲/僚; 監/僚 and 憲/監 do not transfer because exclusions are direct.",
+      "runtimeLimit": "No current curated wrong answer is demonstrated; the missing guard affects eligible fallback/custom meaning choices. Readings stay unchanged."
+    }
+  },
+  "remainingUnverifiedNotAdopted": {
+    "pairs": [
+      "憲/権",
+      "憲/任",
+      "憲/係",
+      "憲/士",
+      "監/士",
+      "監/員",
+      "督/員",
+      "憲/数"
+    ],
+    "reviewerStatus": "Explicitly not established defects or automatic exclusion requests (L2).",
+    "coordinatorDisposition": "Not guarded in this revision. 権/任/係 positively describe power, duty or a person in charge rather than an official designation; 士's official sense is the restricted ancient-Chinese rank below 大夫; 員 is defined by Daijisen as organization member/worker; 数's KANJIDIC2 law gloss lacks a legal-enactment branch in Daijisen. Kept as bounded limits for the next same-reviewer confirmation, not cleared from titles."
+  },
+  "reconciliationDirection": {
+    "required": "Add direct 憲/僚 on either endpoint, preserving 僚's colleague-versus-official distinction and all existing exclusions and readings.",
+    "sequence": "Revision 007 changes only kanji/憲.md and the generated manifest. Reconfirm the changed 憲 card with its original Claude reviewer and this original GPT reviewer, serially. 監 and 督 bytes are unchanged, so their accepted confirmations remain bound to identical card content."
+  },
+  "acceptanceLimit": "Accepted actionable confirmation evidence, not a confirmed candidate or publication approval. L1-L10 remain bounded as reported. No native/device acceptance."
+}

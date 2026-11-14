@@ -1,0 +1,61 @@
+# Evidence added for the confirmation round
+
+- `jmdict-cited-entries.xml`: complete JMdict entries (1042520, 1158900, 1213610, 1213680, 1213720, 1257580, 1257590, 1292200, 1383160, 1401750, 1455390, 1455400, 1551630, 1590860, 2580300) cited by the revised text. Pinned input
+  `n1-implementation-JMdict_e.gz` (sha256 2dbbfe0b1214911766bbc128a0935618b925be917e7d1c50f3536a89b0e8786d). Today's online JMdict may differ slightly.
+- `QuizBuilder.kt`: the app's answer-option builder (how `distractors` and `quiz_exclusions` are used).
+- daijisen-臣.txt: unchanged bounded coordinator source, not a reviewer report.
+- daijisen-禁.txt: unchanged bounded coordinator source, not a reviewer report.
+- character-definition-例.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-式.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-格.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-度.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-程.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-約.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-定.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-章.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-理.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-基.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-権.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-体.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-質.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-性.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-構.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-兵.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-刑.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-党.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-令.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-勅.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-治.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-管.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-御.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-統.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-政.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-警.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-訓.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-命.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-府.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-庁.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-署.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-省.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-守.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-系.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-義.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-正.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-標.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-案.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-議.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-罪.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-犯.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-判.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-軍.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-民.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-局.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-公.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-規.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-則.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-法.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- character-definition-数.txt: bounded character-entry text with its retrieval and response hash; not an author verdict, and not a new reading selection.
+- baseline-content-format.txt: exact 139-line excerpt read in this reviewer's uncompacted initial run, with full-source hash and line mapping.
+- comparison-english-meanings.json: all English meanings for the exact listed target and counterpart characters from the pinned KANJIDIC2; no title-derived subset.
+- Pinned KANJIDIC2 input: `n1-planning-kanjidic2.xml.gz` (sha256 af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed). The 3 KANJIDIC2 records are in the original packet
+  (`evidence\kanjidic2-records.xml`), with the frozen target Daijisen extracts under evidence/external-snapshots/. The source packet contains the actual prior be498245 snapshots..

@@ -34,13 +34,17 @@
     "維",
     "賃"
   ],
-  "status": "drafted-validated-awaiting-independent-review",
+  "status": "textual-review-closed-publication-pending",
   "drafted": [
     "憲",
     "監",
     "督"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "憲",
+    "監",
+    "督"
+  ],
   "published": [],
   "runtimeChanged": true,
   "runtimePublished": false,
@@ -55,10 +59,10 @@
     "workingTreePendingRecordsAbsent": 986,
     "kanjiArticlesInWorkingTree": 1232,
     "wordArticlesInWorkingTree": 5083,
-    "localDoneIncludingN2Placements": 239,
-    "localInProgress": 3,
+    "localDoneIncludingN2Placements": 242,
+    "localInProgress": 0,
     "localNotStarted": 986,
-    "note": "Three drafts are neither review-closed nor published. Published totals remain 233 N1 additions plus six earlier N2 placements: 239 delivered and 989 undelivered."
+    "note": "B116's three cards are textually review-closed, not yet delivered. Published totals remain 239/1228; 989 undelivered includes these three. Local review closure is 242; 986 not started. No device acceptance."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1123,16 +1127,93 @@
     }
   },
   "runtimeCandidate": {
-    "contentVersion": "1fe723085cb24bb0",
+    "contentVersion": "95e36aeb75b69306",
     "runtimeEntries": 8686,
-    "manifestSha256": "d249e89afa2fc0f2b872e6838ed1d34d40f3f733597ea2b5fcac742bd50b6456"
+    "manifestSha256": "fed42da5953fb4ba02f5ff98f938b0e7b9e589809dfd40b30c150c4be9684898",
+    "representation": "Exact committed LF manifest bytes"
   },
   "review": {
+    "status": "closed-with-disclosed-limits",
+    "reviewedSnapshot": "34687354b531a32fea9c10b745e80ac963ac1d4b",
+    "reports": [
+      {
+        "id": "N1-B116-CONSTITUTION-CONFIRM-004",
+        "snapshot": "34687354b531a32fea9c10b745e80ac963ac1d4b",
+        "scope": [
+          "憲"
+        ],
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "reportSha256": "3d5b9ff9fe7b7b85adbdfe801e5f35a02e816e1e006493785d1097737f738997",
+        "report": "../n1-reviews/batch-116-closure/runs/N1-B116-CONSTITUTION-CONFIRM-004/report.md"
+      },
+      {
+        "id": "N1-B116-MONITORING-CONFIRM-004",
+        "snapshot": "34687354b531a32fea9c10b745e80ac963ac1d4b",
+        "scope": [
+          "監"
+        ],
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "reportSha256": "6a5f4081002c8a2833eb3a293690ef4af801806a2bb506f1eeacb8df24c81f54",
+        "report": "../n1-reviews/batch-116-closure/runs/N1-B116-MONITORING-CONFIRM-004/report.md"
+      },
+      {
+        "id": "N1-B116-SUPERVISION-CONFIRM-004",
+        "snapshot": "34687354b531a32fea9c10b745e80ac963ac1d4b",
+        "scope": [
+          "督"
+        ],
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "reportSha256": "e00a5b7ef48c9af98e03822a83be249b8acb7a7f99621a91d5176907a28f80d8",
+        "report": "../n1-reviews/batch-116-closure/runs/N1-B116-SUPERVISION-CONFIRM-004/report.md"
+      },
+      {
+        "id": "N1-B116-GPT004-CONFIRM-005",
+        "snapshot": "34687354b531a32fea9c10b745e80ac963ac1d4b",
+        "scope": [
+          "憲",
+          "監",
+          "督"
+        ],
+        "actualModels": [
+          "gpt-6.1-sol"
+        ],
+        "reportSha256": "a4baa724fafee109345536afcb92d63939cf11e1f122cd0389bc934497698f1f",
+        "report": "../n1-reviews/batch-116-closure/runs/N1-B116-GPT004-CONFIRM-005/report.md"
+      }
+    ],
+    "reconciliation": {
+      "remainingActionableFindings": [],
+      "remainingConsequentialClaims": [],
+      "record": "../n1-reviews/batch-116-closure/README.md"
+    },
+    "closureProvenanceSha256": "43bd24f70cccfca745a5b7023c825fbfddf85f2af14e73f9b6400dcaf8f0b6d8",
+    "voidEvidenceUsed": false,
+    "historicalVerdictsPreserved": true
+  },
+  "limits": [
+    "Acceptance is bounded textual review, not exhaustive linguistic correctness, historical completeness or device certification.",
+    "All historical holds, raw reports and their qualifications remain unchanged in the review lineage; only the four final confirmations accept this candidate.",
+    "Monitoring's wording 'only' about Daijisen 員 is limited to its person-related sense 2; number and circumference senses are expressly retained in the coordinator adjudication.",
+    "No current Kotlin/JVM, native, emulator, phone, old-APK compatibility or fresh PDF/SVG visual acceptance. Host models do not prove arbitrary/custom or multi-borrow pools.",
+    "Publication, CI and exact served-ZIP verification remain pending. Local review closure is not delivery."
+  ],
+  "draftReview": {
     "status": "not-started",
     "reports": [],
     "reconciliation": null
   },
-  "limits": [
+  "draftRuntimeCandidate": {
+    "contentVersion": "1fe723085cb24bb0",
+    "runtimeEntries": 8686,
+    "manifestSha256": "d249e89afa2fc0f2b872e6838ed1d34d40f3f733597ea2b5fcac742bd50b6456"
+  },
+  "draftLimits": [
     "Author source/comparison interpretation and host checks are not independent linguistic review.",
     "No new word article; all earlier closures, quarantines and qualifications remain historical and unchanged.",
     "B116 scoped zero-warning lint is not evidence against B115's four pre-existing warnings or its unreproducible historical zero-warning log.",
@@ -1143,5 +1224,47 @@
     "Installed APK 5c000bd predates quiz_exclusions; compatibility is not claimed.",
     "No exact published GitHub ZIP exists for this local draft.",
     "Author rationale, initial exposure observations and unused candidate probes stay outside blind initial-review inputs."
-  ]
+  ],
+  "closureValidation": {
+    "status": "PASS",
+    "candidate": "34687354b531a32fea9c10b745e80ac963ac1d4b",
+    "refreshedPublishedBase": "8f35f34ccb10f166fbf6700c6c95d67f953026e3",
+    "sourceRows": [
+      394,
+      738,
+      748
+    ],
+    "members": [
+      "憲",
+      "監",
+      "督"
+    ],
+    "newRuntimeFiles": [
+      "kanji/憲.md",
+      "kanji/監.md",
+      "kanji/督.md",
+      "strokes/憲.json",
+      "strokes/監.json",
+      "strokes/督.json"
+    ],
+    "changedBaselineRuntimeFiles": [
+      "words/憲法.md",
+      "words/監督.md"
+    ],
+    "allOtherBaselineRuntimeHashesPreserved": true,
+    "wordMetadataAndNonLinkTextPreserved": true,
+    "sourceMetadataN2PlacementsAndInitialFrontmatterPreserved": true,
+    "requiredLinkPairs": 3,
+    "distinctMappedWords": 2,
+    "newWordArticles": 0,
+    "manifestSha256": "fed42da5953fb4ba02f5ff98f938b0e7b9e589809dfd40b30c150c4be9684898",
+    "manifestRepresentation": "Committed LF bytes",
+    "runtimeEntries": 8686,
+    "gateSummarySha256": "6703acfc460f464aee729e242cd7d56575820ff59d264dd3c32580498121c16f",
+    "publishedSourceMembers": 239,
+    "reviewClosedSourceMembers": 242,
+    "undelivered": 989,
+    "notStarted": 986,
+    "nativeOrPhoneAcceptance": false
+  }
 }
