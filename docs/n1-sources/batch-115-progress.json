@@ -67,7 +67,7 @@
     "維",
     "賃"
   ],
-  "status": "drafted-validated-awaiting-independent-review",
+  "status": "textual-review-closed-publication-pending",
   "drafted": [
     "卓",
     "厄",
@@ -78,7 +78,16 @@
     "票",
     "魔"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "卓",
+    "厄",
+    "宙",
+    "寸",
+    "康",
+    "漠",
+    "票",
+    "魔"
+  ],
   "published": [],
   "runtimeChanged": true,
   "runtimePublished": false,
@@ -93,10 +102,10 @@
     "workingTreePendingRecordsAbsent": 989,
     "kanjiArticlesInWorkingTree": 1229,
     "wordArticlesInWorkingTree": 5083,
-    "localDoneIncludingN2Placements": 231,
-    "localInProgress": 8,
+    "localDoneIncludingN2Placements": 239,
+    "localInProgress": 0,
     "localNotStarted": 989,
-    "note": "The eight drafts are not review-closed or published. Published totals remain 225 N1 additions plus six N2 placements, with 997 not delivered."
+    "note": "All eight B115 cards are textually review-closed, not yet published. Published totals remain 225 N1 additions plus six N2 placements, 997 undelivered. Local source closure is 239, with 989 not started; this is not native/phone acceptance."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1598,6 +1607,130 @@
   },
   "checkSummary": {
     "scopedLintErrors": 0,
+    "scopedLintWarnings": 4,
+    "quizSafetyErrors": 0,
+    "quizSafetyWarnings": 0,
+    "backlinkProblems": 0,
+    "hostUnitTests": 431,
+    "hostValidationErrors": 0,
+    "readingExposure": "Python model: zero N1/All hits, zero Starter-padding hits and four latent readings outside those pools. Initial 卓 Starter-padding collision was reproduced and removed by curated Starter-compatible choices; full sourced readings retained.",
+    "vocabulary": "Vocabulary coverage: 2122/2431 reviewed prompts; stage=pilot; unchanged by this batch.",
+    "manifestReproducible": true,
+    "runtimeHashesVerified": 8680,
+    "runtimeHashRule": "Repository build_manifest: CRLF-normalized text and byte-exact binary hashes.",
+    "baselineRuntimeDelta": [
+      "kanji/標.md",
+      "words/健康.md",
+      "words/厄介.md",
+      "words/宇宙.md",
+      "words/寸法.md",
+      "words/悪魔.md",
+      "words/投票.md",
+      "words/砂漠.md",
+      "words/食卓.md"
+    ],
+    "archiveBudget": {
+      "files": 8687,
+      "entries": 8702,
+      "retainedBytes": 45728926,
+      "inflatedBytes": 46000236,
+      "localZipBytes": 30879435,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "lintDisclosure": "Zero errors/four unchanged pre-existing warnings. The frozen zero-warning result cannot be reproduced and is not relied upon; original check receipts and draft summary are retained."
+  },
+  "runtimeCandidate": {
+    "contentVersion": "8a1b246322fb62d9",
+    "runtimeEntries": 8680,
+    "manifestSha256": "a62d339c17d5f6c21249b98054cf732e98dab5ecb8db82d2f41045b96ee3c19c",
+    "representation": "Exact committed LF manifest bytes, independently reproduced by the official generator; raw CRLF checkout bytes differ."
+  },
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "initialSnapshot": "f36cd819dcf6ac8b4a3ee8ee29b6e750cd6f09ab",
+    "reviewedSnapshot": "206f98936307a77937fb38346299af11044af761",
+    "reports": [
+      {
+        "id": "initial-claude",
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "snapshot": "f36cd819dcf6ac8b4a3ee8ee29b6e750cd6f09ab",
+        "reportSha256": "9c39cd8442a58f1bf67cf9714b5c3e0adb1efdf8abd8bf0babe2b7f79fc2adf9",
+        "report": "../n1-reviews/batch-115-closure/reports/initial-claude-coordinator-normalized.md",
+        "confirmationVerdict": null
+      },
+      {
+        "id": "initial-gpt",
+        "actualModels": [
+          "gpt-6-astra"
+        ],
+        "snapshot": "f36cd819dcf6ac8b4a3ee8ee29b6e750cd6f09ab",
+        "reportSha256": "191cb7d68c667b27c506d15761b5b0d37387bd0ceb79900cd5e914ce02d1a934",
+        "report": "../n1-reviews/batch-115-closure/reports/initial-gpt-coordinator-normalized.md",
+        "confirmationVerdict": null
+      },
+      {
+        "id": "confirm-claude-002",
+        "actualModels": [
+          "claude-opus-5-5"
+        ],
+        "snapshot": "206f98936307a77937fb38346299af11044af761",
+        "reportSha256": "b2570707b8e88408dfabdddd180dec62727f37acff11f649ec04ee1a76f466b7",
+        "report": "../n1-reviews/batch-115-closure/reports/confirm-claude-002.md",
+        "confirmationVerdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "actualModels": [
+          "gpt-6-astra"
+        ],
+        "snapshot": "206f98936307a77937fb38346299af11044af761",
+        "reportSha256": "dcb5fc9932b1ebb0c2476cdb654a46837397b34a137da796f21986aa108cf5fd",
+        "report": "../n1-reviews/batch-115-closure/reports/confirm-gpt.md",
+        "confirmationVerdict": "CONFIRMED"
+      }
+    ],
+    "reconciliation": {
+      "commit": "206f98936307a77937fb38346299af11044af761",
+      "newDirectExclusionPairs": 11,
+      "cardsChanged": [
+        "卓",
+        "厄",
+        "宙",
+        "寸",
+        "票",
+        "魔"
+      ],
+      "readingsTitlesDistractorsWordsStrokesUnchanged": true,
+      "remainingActionableFindings": [],
+      "record": "../n1-reviews/batch-115-closure/README.md"
+    },
+    "independence": "Serial blind initial reviews on one freeze; each confirmation received its own initial report and exact revision/diff. GPT received no Claude confirmation or locator mapping.",
+    "voidEvidenceUsed": false,
+    "originalInitialStructureFailuresPreserved": true,
+    "claudeConfirmationLocatorErrors": 8,
+    "claudeConfirmationReportUnchanged": true,
+    "closureProvenanceSha256": "7579ce6b5804fd99ac62cc6b1bdb8e1817b47958055735eb42ca801a0ae5e493"
+  },
+  "limits": [
+    "CLEAN/CONFIRMED are bounded textual judgments, not exhaustive correctness or native certification.",
+    "Initial raw structure failures and authorized format-only derivatives remain unchanged. Claude confirmation has eight separately adjudicated locator errors and no normalized derivative.",
+    "Claude CONFIRM-002's Daijisen 寸/宙 limit remains unverified by that confirmation. GPT's later independent returned-source checks resolve its own uncertainty, not Claude's evidence history.",
+    "All seven Claude and ten GPT confirmation limits remain verbatim in their acceptance records; the closure preserves their separate source, host/native, custom/caller-built and multi-borrow boundaries.",
+    "Zero lint errors/four unchanged warnings are non-blocking. The frozen zero-warning log cannot be reproduced and is not relied upon.",
+    "No new word or later B113/B114 fix. B113's UNVERIFIED verdict and missing compliant Claude confirmation remain historical; no void observations are used.",
+    "No fresh visual Joyo PDF-glyph or stroke-geometry acceptance. No current Kotlin/JVM, Gradle, native, emulator, phone or installed-APK compatibility acceptance.",
+    "The installed 5c000bd APK predates quiz_exclusions. Host reading models and 100-seed samples do not establish arbitrary/custom or multi-borrow pool safety.",
+    "Publication, CI and exact served-ZIP verification remain pending; local source closure is not delivery."
+  ],
+  "draftRuntimeCandidate": {
+    "contentVersion": "8c5b266340bd34bc",
+    "runtimeEntries": 8680,
+    "manifestSha256": "dcd4a750c99fd3c8dd1515c2dd6f7c1661b7bab87d2ef7361f29f34f1aab5926"
+  },
+  "draftCheckSummary": {
+    "scopedLintErrors": 0,
     "scopedLintWarnings": 0,
     "quizSafetyErrors": 0,
     "quizSafetyWarnings": 0,
@@ -1629,17 +1762,7 @@
       "listeningTaskMediaBytes": 5893602
     }
   },
-  "runtimeCandidate": {
-    "contentVersion": "8c5b266340bd34bc",
-    "runtimeEntries": 8680,
-    "manifestSha256": "dcd4a750c99fd3c8dd1515c2dd6f7c1661b7bab87d2ef7361f29f34f1aab5926"
-  },
-  "review": {
-    "status": "not-started",
-    "reports": [],
-    "reconciliation": null
-  },
-  "limits": [
+  "draftLimits": [
     "Author inspection and static/host checks are not independent linguistic review.",
     "No new word or later B113/B114 fix; earlier closures and caveats remain unchanged.",
     "No current Kotlin execution, arbitrary/custom-pool audit, native/device acceptance or phone test.",
@@ -1649,5 +1772,20 @@
     "The old delivered 5c000bd APK predates quiz_exclusions; compatibility is not claimed.",
     "No exact published GitHub ZIP exists for this uncommitted draft.",
     "Author rationale and deferred-member observations must not enter the blind initial-review packet."
-  ]
+  ],
+  "closureValidation": {
+    "gates": "../n1-reviews/batch-115-closure/gates",
+    "unitTests": 431,
+    "validationErrors": 0,
+    "scopedLintErrors": 0,
+    "scopedLintWarnings": 4,
+    "frozenZeroWarningResultReproducible": false,
+    "requiredWordLinkPairs": 8,
+    "wordLinkProblems": 0,
+    "quizSafetyErrors": 0,
+    "manifestReproducible": true,
+    "baselineRuntimePreservedOutsideDeclaredDelta": true,
+    "vocabulary": "2122/2431, unchanged pilot",
+    "nativeJvmEmulatorPhone": "NOT RUN"
+  }
 }

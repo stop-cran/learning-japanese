@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 115: drafted and validated (independent review pending)
+## Batch 115: textual review closed (publication pending)
 
 The eight cards are **卓 厄 宙 寸 康 漠 票 魔**, with canonical stroke files,
 eight link-only edits in eight existing word articles, and the narrow removal
@@ -69,21 +69,29 @@ The original fifteen-member selection was split by comparison complexity;
 The unchanged source extraction contains 75 complete JMdict families; author
 comparison inspection covered 91 complete baseline kanji cards.
 
-Host/static checks passed, including 431 tests, exact sourced metadata,
-backlink and choice checks, reproducible manifest generation and archive limits.
-The first reading model exposed a valid ショク offered incorrectly for 卓 in
-Starter padding. Revised curated choices fill all three slots in every modeled
-N1/All/Starter outcome while retaining full sourced readings. The final model
-has zero exposed supplemental-reading hits in those pools and four latent
-readings outside them; it is not native or arbitrary-pool acceptance.
+Independent Claude/GPT initial reviews covered freeze `f36cd819`.
+Reconciliation `206f9893` adds eleven direct meaning-exclusion pairs across six
+cards and clarifies the ancient 寸 suffix and JMdict's religious labels for 悪魔.
+Final confirmations are both **CONFIRMED**, with their original limits retained.
+The [closure](n1-reviews/batch-115-closure/README.md) preserves both initial raw
+structure failures and their authorized format-only derivatives. Claude
+CONFIRM-002 remains unchanged with eight separately adjudicated locator errors;
+GPT stayed blind to that report and mapping. All voids remain quarantined.
 
-Source accounting is **231 done / 8 in progress / 989 not started**.
+Claude's Daijisen 寸/宙 limit remains unverified by that confirmation; GPT's
+separate fresh fetches support those claims without rewriting Claude's record.
+Host/static gates passed with **zero lint errors and four unchanged warnings**;
+the original zero-warning log cannot be reproduced and is not relied upon.
+The bounded reading model has zero N1/All/restricted Starter hits and four latent
+collisions, not native, arbitrary/custom-pool or multi-borrow acceptance.
+
+Local source accounting is **239 done / 0 in progress / 989 not started**.
 Published delivery remains **225 N1 additions plus six N2 placements**;
-**997 members remain undelivered**, including these eight drafts.
+**997 members remain undelivered**, including these eight reviewed cards.
 The working tree contains 1,229 kanji and 5,083 words, with candidate runtime
-`8c5b266340bd34bc` and 8,680 entries. The [B115 ledger](n1-sources/batch-115-progress.json)
+`8a1b246322fb62d9` and 8,680 entries. The [B115 ledger](n1-sources/batch-115-progress.json)
 records the source bindings, precise baseline delta and check receipts.
-Independent review, reconciliation and publication remain outstanding.
+Signed publication, CI and exact served-ZIP verification remain outstanding.
 No later B113/B114 fix, emulator, native or phone acceptance is included.
 
 ## Batch 114: published (textual review closed with limits)
