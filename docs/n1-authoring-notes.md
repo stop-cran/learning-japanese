@@ -59,6 +59,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 116: drafted, independent review pending
+
+The three draft cards are **憲 監 督**, with canonical stroke files and exactly
+three link wrappers in two existing word articles: 憲法 and 監督. The latter
+receives both kanji links; all other word text and metadata remain unchanged.
+No word article or unrelated existing-kanji edit is added. **紀 索 維 賃**
+remain queued from the earlier survey.
+
+The [source/progress ledger](n1-sources/batch-116-progress.json) binds twelve
+complete base JMdict families, three separate supplemental families, complete
+character records, cached Joyo rows and canonical KanjiVG shapes. Author
+comparison inspection covered 71 complete baseline cards. Supplemental
+character readings are distinguished from the unchanged KANJIDIC2 metadata;
+the complete-word reading of 基督 is not split into a new reading of 督.
+
+The initial reading model exposed valid 監 ケン as a wrong answer in a
+Starter-padding session. Starter-compatible curated choices remove that
+collision without changing the full reading list. The final bounded model
+has zero N1/All or restricted Starter hits and two latent collisions in
+hypothetical pools lacking the curated cards. Native/custom-pool limits remain.
+
+Scoped lint, quiz/link checks, content validation, 431 host tests, manifest
+reproduction and local archive budgets passed. B116's scoped zero-warning
+result does not supersede B115's four unchanged warnings or its historical
+unreproducible zero-warning log. Independent reviews, reconciliation,
+confirmation and publication remain pending.
+
+Published totals remain **239 delivered** (233 N1 additions plus six earlier
+N2 placements) and **989 undelivered**. The three local drafts are not counted
+as delivered; they leave 986 other undelivered members.
+
 ## Batch 115: published (textual review closed with limits)
 
 The eight cards are **卓 厄 宙 寸 康 漠 票 魔**, with canonical stroke files,
