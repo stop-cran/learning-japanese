@@ -59,7 +59,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 115: textual review closed (publication pending)
+## Batch 115: published (textual review closed with limits)
 
 The eight cards are **卓 厄 宙 寸 康 漠 票 魔**, with canonical stroke files,
 eight link-only edits in eight existing word articles, and the narrow removal
@@ -85,13 +85,14 @@ the original zero-warning log cannot be reproduced and is not relied upon.
 The bounded reading model has zero N1/All/restricted Starter hits and four latent
 collisions, not native, arbitrary/custom-pool or multi-borrow acceptance.
 
-Local source accounting is **239 done / 0 in progress / 989 not started**.
-Published delivery remains **225 N1 additions plus six N2 placements**;
-**997 members remain undelivered**, including these eight reviewed cards.
-The working tree contains 1,229 kanji and 5,083 words, with candidate runtime
+Source accounting is **239 done / 0 in progress / 989 not started**.
+Published delivery is **233 N1 additions plus six N2 placements**;
+**989 members remain undelivered**.
+The working tree contains 1,229 kanji and 5,083 words, with published runtime
 `8a1b246322fb62d9` and 8,680 entries. The [B115 ledger](n1-sources/batch-115-progress.json)
 records the source bindings, precise baseline delta and check receipts.
-Signed publication, CI and exact served-ZIP verification remain outstanding.
+Signed publication `3529ff14`, CI and all 8,680 hashes in its exact served ZIP
+are verified in the [publication receipt](n1-reviews/batch-115-publication/provenance.json).
 No later B113/B114 fix, emulator, native or phone acceptance is included.
 
 ## Batch 114: published (textual review closed with limits)

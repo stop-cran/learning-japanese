@@ -67,7 +67,7 @@
     "維",
     "賃"
   ],
-  "status": "textual-review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "drafted": [
     "卓",
     "厄",
@@ -88,16 +88,25 @@
     "票",
     "魔"
   ],
-  "published": [],
+  "published": [
+    "卓",
+    "厄",
+    "宙",
+    "寸",
+    "康",
+    "漠",
+    "票",
+    "魔"
+  ],
   "runtimeChanged": true,
-  "runtimePublished": false,
-  "publishedAdditions": 225,
-  "remainingAdditions": 997,
+  "runtimePublished": true,
+  "publishedAdditions": 233,
+  "remainingAdditions": 989,
   "accounting": {
     "frozenPendingRecords": 1228,
     "n1DeliveriesBeforeThisBatch": 225,
     "n2PlacementsAlreadyInTree": 6,
-    "publishedPendingRecordsWithCards": 231,
+    "publishedPendingRecordsWithCards": 239,
     "workingTreePendingRecordsWithCards": 239,
     "workingTreePendingRecordsAbsent": 989,
     "kanjiArticlesInWorkingTree": 1229,
@@ -105,7 +114,7 @@
     "localDoneIncludingN2Placements": 239,
     "localInProgress": 0,
     "localNotStarted": 989,
-    "note": "All eight B115 cards are textually review-closed, not yet published. Published totals remain 225 N1 additions plus six N2 placements, 997 undelivered. Local source closure is 239, with 989 not started; this is not native/phone acceptance."
+    "note": "All eight B115 cards are textually review-closed and published after exact remote, CI and served-ZIP verification. Totals: 233 N1 additions plus six N2 placements, 239 delivered and 989 undelivered. This is not native or phone acceptance."
   },
   "sourceEvidence": {
     "frozenSourceRecord": "../n1-source-snapshot.json",
@@ -1722,7 +1731,7 @@
     "No new word or later B113/B114 fix. B113's UNVERIFIED verdict and missing compliant Claude confirmation remain historical; no void observations are used.",
     "No fresh visual Joyo PDF-glyph or stroke-geometry acceptance. No current Kotlin/JVM, Gradle, native, emulator, phone or installed-APK compatibility acceptance.",
     "The installed 5c000bd APK predates quiz_exclusions. Host reading models and 100-seed samples do not establish arbitrary/custom or multi-borrow pool safety.",
-    "Publication, CI and exact served-ZIP verification remain pending; local source closure is not delivery."
+    "Exact served ZIP and CI acceptance are established for publication 3529ff14ec7e518b8e879ce2bdb82bb6ff6eebb1 only. The later contributor-only receipt commit is checked for identical exports, not represented as another ZIP download."
   ],
   "draftRuntimeCandidate": {
     "contentVersion": "8c5b266340bd34bc",
@@ -1787,5 +1796,20 @@
     "baselineRuntimePreservedOutsideDeclaredDelta": true,
     "vocabulary": "2122/2431, unchanged pilot",
     "nativeJvmEmulatorPhone": "NOT RUN"
+  },
+  "publication": {
+    "commit": "3529ff14ec7e518b8e879ce2bdb82bb6ff6eebb1",
+    "closureCommit": "3529ff14ec7e518b8e879ce2bdb82bb6ff6eebb1",
+    "finalRuntimeCommit": "206f98936307a77937fb38346299af11044af761",
+    "previousMain": "c7a7c8a75eec766d4d66ee172763e119075726ee",
+    "record": "../n1-reviews/batch-115-publication/provenance.json",
+    "remoteRefVerified": true,
+    "ciRunId": 43546726824,
+    "ciUrl": "https://github.com/stop-cran/learning-japanese/actions/runs/43546726824",
+    "ciConclusion": "success",
+    "zipSha256": "afb5989d788e75043af48f9284aa6fc1211d947e1ec420d84f87f4f5b1b1460c",
+    "verifiedRuntimeHashes": 8680,
+    "pendingChecks": [],
+    "overallN1TaskComplete": false
   }
 }
