@@ -59,6 +59,16 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 117: local authored candidate; independent review pending
+
+The four cards are **紀・索・維・賃**, from source rows 821, 830, 844 and 1045. Each has one generated KanjiVG stroke file and one required reciprocal link wrapper in its existing support word: 世紀, 索引, 維持 and 家賃. No word articles were added; the four existing articles retain their metadata and non-link prose. The source and authoring receipts and exact changed-file inventory are in [batch-117](n1-sources/batch-117/).
+
+The source rows retain all KANJIDIC2 on/kun metadata; each has one on reading and no kun reading. Practice selects キ・サク・イ・チン. The cards qualify KANJIDIC2 nanori and JMdict-only special readings rather than promoting them to practice. Modern-shape mnemonics are explicitly not etymologies. The source inspections keep 世紀's century meaning on the compound, 索隠 and mahjong readings restricted, 維持's maintenance sense at the word level, and the distinctions among 賃金・賃貸・賃借.
+
+The B117 source/article baseline is the clean, refreshed `179103ea53d027cca6e6fd0aea4ad741a44d5b76`, which records B116's publication at `c9d87f9d3b7d9e00f7f5f8c2d27453815b84dd80`. At that baseline, 242 source members are delivered (236 N1 additions and six earlier N2 placements), with 986 remaining. After authoring, `origin/main` advanced to `589f782aca02815f129f327e95131892b0a171f4` with three B116 publication-receipt evidence files; the candidate worktree was fast-forwarded to that parent without editing those files. This four-card local candidate is not included in delivered totals. The historical Batch 116 subsection below is its authoring-time checkpoint; the later publication receipt is not edited here.
+
+Independent review, owner confirmation, native acceptance, CI/integration and publication remain pending; this local record does not claim them.
+
 ## Batch 116: drafted, independent review pending
 
 The three draft cards are **憲 監 督**, with canonical stroke files and exactly
