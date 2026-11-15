@@ -59,6 +59,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 124: local authoring candidate
+
+The one-card local candidate is **裕**, frozen source row 986, with a generated KanjiVG stroke file and one link-only wrapper in the existing N3 余裕 article. No word article is added. The [source packet](n1-sources/batch-124/) records the complete dictionary records, the 1,243-card baseline gloss scan, the 厚 and 財 overlap dispositions, and the reading and quiz-safety rationale. The latest author audit is `author-audit-002.json`; earlier decisions remain preserved. This is an authoring candidate only; independent review and acceptance/publication remain pending. Published accounting is unchanged at 253 delivered and 975 undelivered.
+
 ## Batch 123: local authoring candidate
 
 The bounded candidate is **範**, frozen source row 810, with a generated KanjiVG stroke file and a link-only wrapper in the existing N3 範囲 article. No word article is added. The [source packet](n1-sources/batch-123/) records complete selected dictionary families, baseline comparison cards, the dictionary-only のり reading and bounded font/reading limitations. This candidate is not review-closed or published; published accounting remains 252 delivered and 976 undelivered.
