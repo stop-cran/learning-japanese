@@ -1,0 +1,31 @@
+{
+  "status": "PASS_PREPARATION_ONLY",
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\confirm\\N1-B123-CLAUDE-CONFIRM-004-spec.json",
+    "sha256": "70117cd248a7d9d3f5da5e8755027066f871e27b4d512e55ca26138d943aae23"
+  },
+  "builder": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_b123_context_replacement.py",
+    "sha256": "0769357f58309e97483b747db86378d74b8fa6bf8a7ada42c34858c36023835d"
+  },
+  "helper": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b123_unavailable_context.py",
+    "sha256": "e4e2e752df3e31766d5081dd864cfeb099836614fddaf123ec6fb0e5e38e972f"
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b123_context_replacement.py",
+    "sha256": "50c783945d08da6ed1e8957843be4b01d7b8584572e8b78c59e72583ac787fc7"
+  },
+  "unavailable": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\confirm\\N1-B123-CLAUDE-CONFIRM-004-unavailable.json",
+    "sha256": "970e9ad5567563ef19395f9bec356e92cd19514a7ef7ec49be1e2c082c68eff8",
+    "bytes": 1402
+  },
+  "priorRun": "N1-B123-CLAUDE-CONFIRM-002",
+  "priorVerdict": "CONFIRMED",
+  "voidRunAccepted": false,
+  "originalContextCompactionReproduced": true,
+  "reportOwnershipCorrected": true,
+  "reviewerCreated": false,
+  "recovery": "First producer wrote the exclusive builder then refused mutable outer admission receipts. Matching refusal bytes were captured ReadOnly afterwards; the remaining metadata was generated here without overwriting prior output. No execution-time ReadOnly claim."
+}

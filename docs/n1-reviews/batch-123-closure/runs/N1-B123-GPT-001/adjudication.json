@@ -1,0 +1,63 @@
+{
+  "run": "N1-B123-GPT-001",
+  "candidate": "3bda01ae9baec4b25f80a46c8f1ea6ba5642ea93",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-123\\initial-gpt-001.md",
+    "sha256": "216f031815b75d1ef1ed72f36484b684f0947a1fe778ce7d1b6eeca0723dd204"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\N1-B123-GPT-001-final.json",
+    "sha256": "5592b1aa1f6184a69aae93d5f551ac5957b4614e92eb77dba7dda9da85b344ea"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\N1-B123-GPT-001-evidence-check.json",
+    "sha256": "6c5b9887b261133f546b01808bbbaf759b4782a5900f6bfb9eef73cb17ec3a00",
+    "mechanicalCitationIssues": 0,
+    "formalCitations": 12,
+    "comparisonRows": 30
+  },
+  "verdict": "NEEDS FIX",
+  "verdictScope": "Unchanged raw verdict. Accept bounded independent findings, not every confidence adjective or an assertion of ordinary spelling frequency. This is not revision or publication approval.",
+  "acceptedFindings": ["F1", "F2"],
+  "findingAdjudication": {
+    "F1": {
+      "decision": "accepted-with-frequency-qualification",
+      "basis": "Read the complete JMdict 2713240 entry at evidence/jmdict-families.xml:3549-3569: the spelling 様 accompanies 例, reading ためし, with precedent/example; the irregular-okurigana flag belongs to 例し, not 様. Daijisen 範 at evidence/external-snapshots/01-extract.txt:16-25 independently gives a standard template/model and example. The actual 様 title is manner; honorific suffix, but the reverse direction can offer 範's model; standard label for its attested example sense. Both frontmatters lack the pair. This is direct lexical evidence, not transfer from the existing 範/例 guard.",
+      "qualification": "Absence of rarity or spelling restrictions does not prove usage frequency, nor does membership in a shared entry make every spelling equally natural. Retain that limitation and do not promote ためし into either card's frozen reading metadata. The evidence justifies the narrow protective meaning pair without a frequency claim.",
+      "required": "Add a direct 範/様 meaning exclusion on the new 範 card with qualified source attribution and explanation. Preserve its three curated choices, metadata, existing guards and the unchanged 様 card."
+    },
+    "F2": {
+      "decision": "accepted",
+      "basis": "Read the complete JMdict 格/かく entry 1205270 at evidence/jmdict-families.xml:1533-1576. Rule/regulation/law is an unfielded sense, separate from the explicitly grammar and logic senses. JMdict 1438050 at :188-236 and Daijisen 範 at 01-extract.txt:7-8,19 support the normative/model branch. The actual 格 title rank; character does not preclude a reverse-direction model; standard alternative for its rule/standard sense. Both endpoints lack the pair.",
+      "qualification": "Entry priority does not prove frequency of every sense. This is not a claim that rank, personality, grammatical case and a model are interchangeable, or that third-card guards are transitive. KANJIDIC2's 格 record lists rank/status/character/case but does not itself provide the normative rule proof; the complete JMdict entry does.",
+      "required": "Add the direct 範/格 meaning exclusion on 範 and explain the bounded normative-standard comparison without changing either card's metadata or broadening its title.",
+      "crossReviewResolution": "This supersedes only the earlier coordinator's optional/not-required disposition for 格 under Claude O4. The more specific complete-entry evidence and reverse prompt/label direction support the pair. Claude's original report and adjudication remain untouched; this is source-based reconciliation, not a vote."
+    }
+  },
+  "correctnessUncertainty": {
+    "claim": "範 note that 師 has a model/exemplar character-dictionary sense",
+    "decision": "source-resolved-outside-reviewer-chain",
+    "basis": "The coordinator reread b123-worktree/docs/n1-sources/batch-123/kanjidic2-comparison-records.xml:829-900, including English model and exemplar at :886-887. File SHA-256 e7d30ce5ef6ca3d7037f4c8a7cad800a2f598ed5f18629e7b6d711ef4983dc69; its complete-record provenance was previously verified. The report is correct that its own supplied 師 word family did not prove this constituent claim.",
+    "requiredForConfirmation": "Name KANJIDIC2 explicitly in the revised note and include the complete 師 record in each bounded confirmation's source evidence. Do not relabel the original UNVERIFIED verdict or pretend the reviewer saw this record."
+  },
+  "comparisonDispositions": {
+    "D1": "Accepted F2 above.",
+    "D3": "Accepted F1 above.",
+    "D2": "標 remains independently-source-limited in this GPT pass; reconcile with the separately accepted Claude F1 and supply the necessary source basis.",
+    "D4-D20": "GPT's remaining 17 rows, together with D2, are accepted as explicitly unresolved bounded evidence, NOT harmlessness findings or automatic demands for 18 new exclusions. The exact unresolved characters are 標, 形, 本, 倣, 像, 囲, 限, 境, 界, 広, 方, 度, 道, 計, 測, 量, 坂, 理.",
+    "requiredDisposition": "The author must address every listed unresolved direct pair in neutral evidence, preserving secondary senses, spelling/field restrictions and both prompt/label directions. Supply complete applicable independent records for consequential claims, add a justified guard or explain the bounded distinction, and label any residual uncertainty rather than silently certifying it as harmless. In particular retain bounds/widespread, normative conduct, measurement and qualified technical-slope branches instead of dismissing them by part of speech or the current curated pool.",
+    "E1-E7": "Existing direct guards are mechanically verified and retained; this does not independently validate every sentence on those comparison cards.",
+    "E8": "Retain 師; constituent model/exemplar claim is resolved by the complete KANJIDIC2 record above.",
+    "E9": "Retain 象. Complete KANJIDIC2 includes pattern after/imitate/image/shape; the model-as-action versus normative-object distinction remains qualified, not erased.",
+    "E10": "Retain 儀 conservatively. KANJIDIC2 lists ceremony/rule/affair/case/a matter, not model. 儀範 and 地球儀 are whole words and must not be used alone as proof of a constituent model sense.",
+    "unreadCandidates": "L10-L12 remain bounded unread-candidate limits. No title-only finding or blanket exclusion is imposed on those characters."
+  },
+  "otherFacets": {
+    "coverageAndComprehensibility": "Accepted as bounded CLEAN evidence for the initial slice. The full report was read, including all 30 D/E rows, per-card discussion, current curated options, reciprocal wrapper and L1-L15.",
+    "mechanicalAgreement": "The reported metadata, stroke identity/count, preserved word wrapper and existing curated options agree with the independently verified candidate. This does not convert host logs into linguistic, native/device or delivered-ZIP proof.",
+    "sources": "All formal finding citations were checked against their complete entries, actual endpoint cards and content-format.md:93-113. External Daijisen was kept separate from other Weblio sections. No successful capture was refetched."
+  },
+  "reviewLimits": "21 core plus 7 extension segments, exactly two expected messages, one report write and verified readback, zero fetches, no mechanical breaches, long_context without compaction and actual response model gpt-6.1-sol. Raw report, all uncertainties, source bytes and execution evidence remain unchanged. No arbitrary/custom-pool, multi-borrow, Kotlin/native, physical-phone, installed-APK, whole-set or publication acceptance.",
+  "next": "After accepting this bounded evidence and fresh scoped/RAM admission, send one combined reconciliation to the original B123 author. No reviewer confirmation until the signed revision, complete source selections and all ten committed gates have been independently verified.",
+  "publicationAccepted": false
+}
