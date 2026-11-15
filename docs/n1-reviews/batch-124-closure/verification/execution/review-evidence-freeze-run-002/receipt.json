@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T21:10:16.569750+00:00",
+  "finished": "2026-11-15T21:10:16.744137+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nfrom common import WS, freeze_json, require, sha\nroot = WS / 'scratch-124' / 'review'\nnames = ['local-source-retention-tests-001', 'local-source-retention-check-001', 'claude-final-verification-001', 'claude-evidence-acceptance-001', 'gpt-scoped-admission-001', 'gpt-launch-verification-001', 'comparison-gloss-observation-001', 'gpt-phase1-verification-001', 'additional-jmdict-observation-run-001', 'gpt-final-verification-001', 'gpt-evidence-acceptance-001', 'reconciliation-author-admission-run-001', 'reconciliation-author-admission-run-002', 'reconciliation-author-admission-run-003', 'closure-retention-derivation-001', 'closure-retention-tests-001']\nfailures = {'reconciliation-author-admission-run-001': 'Unmatched parenthesis; no admission side effect.', 'reconciliation-author-admission-run-002': 'Incomplete adapter config lacked candidate; no admission side effect.'}\nrows = []\nfor name in names:\n    directory = root / name\n    rp, lp = directory / 'receipt.json', directory / 'output.log'\n    raw, log = rp.read_bytes(), lp.read_bytes()\n    receipt = json.loads(raw)\n    expected = 1 if name in failures else 0\n    require(receipt['exitCode'] == receipt['childExitCodeAfterCleanup'] == expected and receipt['memory']['breach'] is None and receipt['logSha256'] == sha(log), f'Invalid preserved run {name}')\n    rp.chmod(0o444)\n    lp.chmod(0o444)\n    rows.append({'run': name, 'exitCode': expected, 'receiptSha256': sha(raw), 'logSha256': sha(log), 'failure': failures.get(name)})\nprint(json.dumps(freeze_json(root / 'coordinator-review-evidence-freeze-002.json', {'batch': 124, 'runs': rows, 'method': 'Post-run validation and ReadOnly capture, not retroactive immutability.', 'limits': 'Includes two preserved preparation failures and their successful recovery. Original reviews and the author correction brief are separately frozen. No assertion about the author revision now in progress or publication acceptance.'})))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 17552,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "16dc3f3fe981d92d4031bbc4bc88389d95c7499c95295874d7a7c0efe9f8b3d8",
+  "memory": {
+    "freeRamBeforeBytes": 6513266688,
+    "freeRamAfterBytes": 6504116224,
+    "minimumObservedFreeRamBytes": 6504116224,
+    "peakWorkingSetBytes": 23126016,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T20:48:12.241678+00:00",
+  "finished": "2026-11-15T20:48:12.336442+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nfrom pathlib import Path\nfrom common import WS, freeze_json, frozen, require, sha\nfrom archive_b124_chains import prepare\nroot = WS / 'scratch-124' / 'review'\nraw = frozen(root / 'core-chain.json', 'ab48edf849ec3f7cd1ad09a09f39189da9c16336d663ec62f0f8fa20237401c6')\nmanifest = json.loads(raw)\nfiles, retention = prepare(raw, {s['path']: frozen(Path(s['path']), s['sha256']) for s in manifest['segments']})\nrequire(retention['archivedSegmentIndices'] == list(range(1, 27)), 'Unexpected public segment indices')\nrequire([s['index'] for s in retention['localOnlySegments']] == [27], 'Unexpected local-only segments')\nrequire(retention['localOnlySegments'][0]['sources'][0]['sha256'] == '6b04f0659911199f8553e154456753e4a17a3289f4dce7f1bdb1935ed1b4111f', 'External extract differs')\nrequire(files['manifest.json'] == raw and len(files) == 28, 'Unexpected in-memory archive layout')\nproof = {'status': 'PASS_PREPARATION_ONLY', 'batch': 124, 'candidate': 'c8db34902d1a478d2d1de4b761dd3cdbb4585896', 'retention': retention, 'inMemoryFileSha256': {name: sha(content) for name, content in files.items()}, 'toolSha256': sha(frozen(WS / 'review-tools' / 'archive_b124_chains.py')), 'testsSha256': sha(frozen(WS / 'review-tools' / 'test_archive_b124_chains.py')), 'limits': 'No repository or original chain bytes changed. Actual closure must integrate this retention helper and disclose omitted segments. This is not a closure, review or publication acceptance.'}\nprint(json.dumps(freeze_json(root / 'local-source-retention-preparation-001.json', proof)))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 9552,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "1e23b8d27a7d978728a4ab569046fdd3c2efd387fb85dcab55ebca63a602b828",
+  "memory": {
+    "freeRamBeforeBytes": 6477152256,
+    "freeRamAfterBytes": 6477783040,
+    "minimumObservedFreeRamBytes": 6477152256,
+    "peakWorkingSetBytes": 23044096,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

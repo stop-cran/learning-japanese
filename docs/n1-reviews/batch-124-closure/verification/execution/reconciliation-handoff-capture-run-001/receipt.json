@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T21:34:29.694552+00:00",
+  "finished": "2026-11-15T21:34:29.810762+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import datetime, json\nfrom pathlib import Path\nfrom common import WS, freeze_json, frozen, readonly, require, sha, write_frozen\nreview = WS / 'scratch-124' / 'review'\nstatus_path = Path(r'C:\\Users\\stop-\\AppData\\Local\\Temp\\1794778425505-copilot-tool-output-e99cb4e4508849bf9e5c669cba45e71b.txt')\nrequire(abs(datetime.datetime.now().timestamp() - status_path.stat().st_mtime) < 180, 'Status is stale')\nstatus_raw = status_path.read_bytes()\nstatus = json.loads(status_raw)\nauthor = next(s for s in status['sessions'] if s['id'] == '968b727f-61e7-4abf-bf6a-a144903ab93a')\nrequire((author.get('activity') or {}).get('status') == 'idle' and not author.get('is_running') and not author.get('awaiting_user_input'), 'Author is not idle for handoff capture')\nhandoff_path = WS / 'scratch-124' / 'reconciliation-001-handoff.json'\nhandoff_raw = handoff_path.read_bytes()\nhandoff = json.loads(handoff_raw)\nrequire(handoff['commit']['sha'] == 'fa394d237e28df96319495a003718cc9c880a069', 'Wrong handoff candidate')\npaths = [(handoff_path, sha(handoff_raw)), (WS / 'scratch-124' / 'run-reconciliation-checks.py', '1c6878b4830f8301cdfd1fd9382c4a8117692f085f9abe2e208f92a069e08612')]\nfor mode, expected_dir in [('author', 'reconciliation-author-gates-002'), ('committed', 'reconciliation-committed-gates-001')]:\n    gate_set = handoff['gates'][mode]\n    directory = WS / 'scratch-124' / expected_dir\n    require(Path(gate_set['directory']) == directory, 'Unexpected gate directory')\n    paths.append((directory / 'summary.json', gate_set['summarySha256']))\n    for gate in gate_set['gates']:\n        for kind, suffix in [('receipt', 'json'), ('log', 'log')]:\n            path = Path(gate[kind + 'Path'])\n            require(path == directory / (gate['gate'] + '.' + suffix), 'Unexpected gate artifact path')\n            paths.append((path, gate[kind + 'Sha256']))\nobservations = []\nfor path, digest in paths:\n    require(sha(path.read_bytes()) == digest, f'Changed handoff artifact: {path}')\n    was_readonly = readonly(path)\n    path.chmod(0o444)\n    frozen(path, digest)\n    observations.append({'path': str(path), 'sha256': digest, 'previouslyReadOnly': was_readonly})\nfailed = review / 'reconciliation-verification-run-001'\nrp, lp = failed / 'receipt.json', failed / 'output.log'\nr = json.loads(rp.read_bytes())\nrequire(r['exitCode'] == r['childExitCodeAfterCleanup'] == 1 and r['memory']['breach'] is None and sha(lp.read_bytes()) == r['logSha256'], 'Unexpected failed run')\nrp.chmod(0o444); lp.chmod(0o444)\nstatus_binding = write_frozen(review / 'reconciliation-handoff-capture-status-001.json', status_raw)\nprint(json.dumps(freeze_json(review / 'reconciliation-handoff-capture-001.json', {'candidate': handoff['commit']['sha'], 'authorIdle': True, 'status': status_binding, 'files': observations, 'preservedFailure': {'receiptSha256': sha(frozen(rp)), 'logSha256': sha(frozen(lp)), 'reason': 'Verifier refused the writable handoff before examining the source or gate evidence.'}, 'method': 'Post-handoff byte validation and ReadOnly capture after fresh author-idle observation; not retroactive immutability or semantic acceptance.'})))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 22196,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "68568ec86d1e9ede0a164e31c63e5072debbd174140afa7b0b35be4f7012f0f4",
+  "memory": {
+    "freeRamBeforeBytes": 6554169344,
+    "freeRamAfterBytes": 6553432064,
+    "minimumObservedFreeRamBytes": 6553427968,
+    "peakWorkingSetBytes": 23085056,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

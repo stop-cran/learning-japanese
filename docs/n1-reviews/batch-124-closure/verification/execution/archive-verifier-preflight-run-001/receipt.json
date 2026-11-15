@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T21:17:24.733657+00:00",
+  "finished": "2026-11-15T21:17:24.846203+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nfrom pathlib import Path\nfrom common import WS, freeze_json, frozen, require, sha\nfrom archive_b124_chains import prepare\nimport verify_b124_archive as verifier\nreview = WS / 'scratch-124' / 'review'\nmanifest_raw = frozen(review / 'core-chain.json', 'ab48edf849ec3f7cd1ad09a09f39189da9c16336d663ec62f0f8fa20237401c6')\nmanifest = json.loads(manifest_raw)\nfiles, retention = prepare(manifest_raw, {row['path']: frozen(row['path'], row['sha256']) for row in manifest['segments']})\nbinding = {'segments': len(manifest['segments']), 'manifestSha256': sha(manifest_raw), 'retentionSha256': sha(files['retention.json']), 'archivedSegmentIndices': retention['archivedSegmentIndices'], 'localOnlySegmentIndices': [row['index'] for row in retention['localOnlySegments']]}\nresult = verifier.verify_chain(files, binding)\nrequire(result['originalSegments'] == 27 and result['archivedSegments'] == 26 and result['localOnlySegments'] == 1, 'Unexpected actual core retention')\nrun = review / 'archive-verifier-tests-001'\nreceipt_path, log_path = run / 'receipt.json', run / 'output.log'\nreceipt = json.loads(receipt_path.read_bytes())\nrequire(receipt['exitCode'] == receipt['childExitCodeAfterCleanup'] == 0 and receipt['memory']['breach'] is None and sha(log_path.read_bytes()) == receipt['logSha256'], 'Test receipt failed')\nreceipt_path.chmod(0o444)\nlog_path.chmod(0o444)\nprint(json.dumps(freeze_json(review / 'archive-verifier-preflight-001.json', {'status': 'PASS_PREPARATION_ONLY', 'batch': 124, 'actualCore': result, 'binding': binding, 'verifier': {'path': verifier.__file__, 'sha256': sha(frozen(verifier.__file__))}, 'testReceiptSha256': sha(frozen(receipt_path)), 'testLogSha256': sha(frozen(log_path)), 'limits': 'Actual original chain checked in memory. No closure directory has been generated or verified; run the verifier on the actual accepted closure before publication. Other full-capture source labels still require explicit inspection.'})))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 22244,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "9c1f2e05dcb1cee7f2b4545d9961266c905a802f9a9fee0f6aa9f1d72f405683",
+  "memory": {
+    "freeRamBeforeBytes": 6352920576,
+    "freeRamAfterBytes": 6339964928,
+    "minimumObservedFreeRamBytes": 6339964928,
+    "peakWorkingSetBytes": 23257088,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

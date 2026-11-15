@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T21:03:03.950153+00:00",
+  "finished": "2026-11-15T21:03:04.001842+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nfrom pathlib import Path\nfrom common import WS, GUARD, GUARD_SHA, freeze_json, frozen, load_module, require, sha, write_frozen\nfrom scoped_admission import assess_status\nfrom confirm_v2 import clean\nroot = WS / 'scratch-124' / 'review'\nsource = Path(r'C:\\Users\\stop-\\AppData\\Local\\Temp\\1794776528747-copilot-tool-output-63a59e35d2e444d7904325b094e8bcc9.txt')\nraw = source.read_bytes()\nstatus = json.loads(raw)\nfrozen(GUARD, GUARD_SHA)\nram = load_module('b124_resume_ram', GUARD).available_ram()\nauthor = '968b727f-61e7-4abf-bf6a-a144903ab93a'\nreviewers = ['a917da6c-69eb-4637-b35c-fd163682be12', '9b629a17-7dc2-4a85-a8d4-fc0cc70c507d']\nassessment = assess_status(status, 'B124 kanji authoring', ram)\nrequire(assessment['startupFloorMet'] and not assessment['blockingSessions'], 'Shared N1/resource admission refused')\nfor sid in [author, *reviewers]:\n    rows = [s for s in status['sessions'] if s['id'] == sid]\n    require(len(rows) == 1 and rows[0]['activity']['status'] == 'idle' and not rows[0].get('is_running'), 'Author or reviewer not idle')\nbrief = Path(r'C:\\Users\\stop-\\.copilot\\session-state\\2451b10d-02a9-46ab-82d5-d90993f0cb8b\\files\\b124-reconciliation-001-brief.txt')\nfrozen(brief, '8b8bc497560f68045fd399bc6ead2c522b5b9cdefb845f19c04b096356d01c6f')\naccepted = {}\nfor family in ('CLAUDE', 'GPT'):\n    path = root / f'N1-B124-{family}-001-acceptance.json'\n    item_raw = frozen(path)\n    item = json.loads(item_raw)\n    require(item['reviewAccepted'] and item['candidate'] == 'c8db34902d1a478d2d1de4b761dd3cdbb4585896', 'Initial evidence missing')\n    accepted[family] = {'path': str(path), 'sha256': sha(item_raw)}\nclean({'repo': str(WS / 'b124-worktree')}, 'c8db34902d1a478d2d1de4b761dd3cdbb4585896')\nprint(json.dumps(freeze_json(root / 'reconciliation-001-author-admission.json', {'status': 'RESUME_EXISTING_IDLE_AUTHOR_ALLOWED', 'author': author, 'freeRamBytes': ram, 'scope': assessment['scope'], 'blockingSessions': assessment['blockingSessions'], 'unrelatedActiveSessions': assessment['unrelatedActiveSessions'], 'statusSnapshot': write_frozen(root / 'reconciliation-001-author-status.json', raw), 'initialAcceptances': accepted, 'briefSha256': sha(frozen(brief)), 'limits': 'One existing author resumes; no new or duplicate session is created. Both initial reviewers are idle. This observation does not relax the continuing RAM guards or approve publication.'}))))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 1,
+  "childPid": 3988,
+  "childExitCodeAfterCleanup": 1,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "ed47c0b2c643c4d13f9818caef756c5ffbbe39c02db3ee34fb680bc4f9f80286",
+  "memory": {
+    "freeRamBeforeBytes": 6473261056,
+    "freeRamAfterBytes": 6467096576,
+    "minimumObservedFreeRamBytes": 6467092480,
+    "peakWorkingSetBytes": 23187456,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

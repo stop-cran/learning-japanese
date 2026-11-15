@@ -1,0 +1,27 @@
+Checking all KANJIDIC2 nanori as non-quiz readings without changing sourced on/kun metadata.
+Reading-exposure audit: pools as built by the app (content.inStack): N1 stack = 1244 cards; All stack = 1244 cards.
+N1 stack = every card tagged jlpt-n1 .. jlpt-n5 (Stacks.includes); All = every card in kanji/. The pool is the whole shipped content of the stack.
+Starter practice session = the 118 cards tagged starter plus the borrowed target (the Starter stack borrows started cards of other stacks to pad a short "Practice more" session; the All and JLPT stacks borrow nothing).
+
+== 裕 (abundant; rich; fertile)   curated option cards: 容 補 複   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 容: tags jlpt-n3 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ヨウ | kun い.れる
+   curated 補: tags jlpt-n2 grade-6 structure-unclassified; in pools: N1 stack, All stack; on ホ | kun おぎな.う
+   curated 複: tags jlpt-n2 grade-5 structure-unclassified; in pools: N1 stack, All stack; on フク | kun -
+   JMdict single-kanji entries: none
+   unlisted readings attested for 裕: すけ (KANJIDIC2 name reading, card text)  のり (KANJIDIC2 name reading, card text)  ひろ (KANJIDIC2 name reading, card text)  ひろし (KANJIDIC2 name reading, card text)  やす (KANJIDIC2 name reading, card text)  ゆ (KANJIDIC2 name reading, card text)  ゆたか (KANJIDIC2 name reading, card text)
+   on prompt ユウ (key ゆう)
+       N1 stack: curated 容 補 複 -> 1 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 3 drawable wrong options (3 curated, 0 fallback)
+       All stack: curated 容 補 複 -> 1 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 3 drawable wrong options (3 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 15 drawable wrong options (0 curated, 15 fallback)
+       attested reading ゆ (KANJIDIC2 name reading, card text) is offered by 油 由 輸 遊; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [裕 油] -> ゆ; [裕 由] -> ゆ ゆい
+       Starter practice session that also borrows one holder card (the pool grows by that card): drawable with 1 of 4 holders: 輸
+       sampling N1 stack: 100 seeds, 3 of 3 drawable wrong options seen
+       sampling All stack: 100 seeds, 3 of 3 drawable wrong options seen
+       sampling Starter practice session: 100 seeds, 15 of 15 drawable wrong options seen
+   kun: no reading prompts
+
+0 production hit(s) (N1 / All stack pools); 0 padded-session hit(s) (Starter practice session only); 1 latent collision(s) (attested reading offered by another card, not drawable in any of these pools)
+All KANJIDIC2 nanori remain outside quiz metadata; the production and padded-session pools had no exposed nanori.
+The model reports one latent ゆ collision only for a hypothetical pool that includes 輸; arbitrary/custom-pool acceptance is not claimed.
+Bounded host model only; not arbitrary-pool, multiple-borrow, Kotlin/native/device, or whole-set acceptance.

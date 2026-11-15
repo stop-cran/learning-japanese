@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T21:25:35.156223+00:00",
+  "finished": "2026-11-15T21:25:35.315256+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nfrom common import WS, freeze_json, frozen, require, sha\nfrom archive_b124_chains import prepare as previous_prepare\nfrom archive_b124_chains_v2 import prepare\nfrom verify_b124_archive_v2 import verify_chain\nreview = WS / 'scratch-124' / 'review'\nruns = {}\nfor name in ('retention-wrapper-derivation-001', 'retention-wrapper-tests-001', 'confirmation-tool-derivation-001', 'confirmation-fixture-recovery-001', 'confirmation-tool-tests-002'):\n    directory = review / name\n    receipt_path, log_path = directory / 'receipt.json', directory / 'output.log'\n    raw, log = receipt_path.read_bytes(), log_path.read_bytes()\n    receipt = json.loads(raw)\n    expected = 1 if name == 'confirmation-tool-derivation-001' else 0\n    require(receipt['exitCode'] == receipt['childExitCodeAfterCleanup'] == expected and receipt['memory']['breach'] is None and sha(log) == receipt['logSha256'], f'Unverified run {name}')\n    receipt_path.chmod(0o444)\n    log_path.chmod(0o444)\n    runs[name] = {'exitCode': expected, 'receiptSha256': sha(raw), 'logSha256': sha(log)}\noriginal = json.loads(frozen(review / 'confirm' / 'tooling-preflight.json'))\nfor derivation in original['derivations']:\n    frozen(derivation['source']['path'], derivation['source']['sha256'])\n    frozen(derivation['output']['path'], derivation['output']['sha256'])\nrecovery = freeze_json(review / 'confirm' / 'tooling-preflight-recovery-001.json', {'status': 'PASS_PREPARATION_ONLY', 'batch': 124, 'originalPreflightSha256': sha(frozen(review / 'confirm' / 'tooling-preflight.json')), 'fixtureDerivationSha256': sha(frozen(review / 'confirm' / 'test-fixture-derivation-001.json')), 'testCount': 21, 'rendererChecks': original['rendererChecks'], 'testRun': runs['confirmation-tool-tests-002'], 'productionOutputs': [item['output'] for item in original['derivations'] if not item['output']['path'].split('\\\\')[-1].startswith('test-')], 'limits': 'Original failed preflight retained. Only per-invocation test output roots changed; all assertions and production gates remain byte-exact. No confirmation spec, reviewer launch or candidate acceptance.'})\nmanifest_raw = frozen(review / 'core-chain.json', 'ab48edf849ec3f7cd1ad09a09f39189da9c16336d663ec62f0f8fa20237401c6')\nmanifest = json.loads(manifest_raw)\nsegments = {row['path']: frozen(row['path'], row['sha256']) for row in manifest['segments']}\nfiles, retention = prepare(manifest_raw, segments)\nrequire(files == previous_prepare(manifest_raw, segments)[0], 'Canonical initial archive changed')\nbinding = {'segments': len(manifest['segments']), 'manifestSha256': sha(manifest_raw), 'retentionSha256': sha(files['retention.json']), 'archivedSegmentIndices': retention['archivedSegmentIndices'], 'localOnlySegmentIndices': [row['index'] for row in retention['localOnlySegments']]}\nresult = verify_chain(files, binding)\nrequire(result['archivedSegments'] == 26 and result['localOnlySegments'] == 1, 'Unexpected canonical retention')\nretained = freeze_json(review / 'retention-wrapper-preflight-001.json', {'status': 'PASS_PREPARATION_ONLY', 'batch': 124, 'derivationSha256': sha(frozen(WS / 'review-tools' / 'b124-retention-v2-derivation.json', '64d2c41f17524315efd4734e7af8eb9954478316b8704aa3c3ab90ac431b1c94')), 'canonicalCore': result, 'canonicalPreparedFilesUnchanged': True, 'tests': 13, 'preservedRuns': runs, 'limits': 'The documented confirmation source wrapper is now protected and its regression cases pass. Actual closure and future confirmation-chain source inventories still require verification. No publication or review acceptance.'})\nprint(json.dumps({'confirmationRecovery': recovery, 'retentionPreflight': retained}))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 6228,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "d998e82e87b976b124d6f6504ba845a9ac1a25a35fdc407fcda740dce97604eb",
+  "memory": {
+    "freeRamBeforeBytes": 6557040640,
+    "freeRamAfterBytes": 6569222144,
+    "minimumObservedFreeRamBytes": 6556864512,
+    "peakWorkingSetBytes": 23105536,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}
