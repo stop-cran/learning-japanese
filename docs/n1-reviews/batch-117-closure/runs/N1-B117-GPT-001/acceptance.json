@@ -1,0 +1,58 @@
+{
+  "run": "N1-B117-GPT-001",
+  "batch": 117,
+  "candidate": "93c6e09770a5272529ce2b324873768c36a94f71",
+  "createdAt": "2026-11-14T23:31:28.845163+00:00",
+  "preflightSha256": "82c75d56f845ea10d9e04c31325a8182da8222fdd0f3742a9ce16c8fff6600d9",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step.py",
+    "sha256": "a5a2a9c45bb0de68cf3baa8056267ddd3649375e8b06bd0ad520beb31b672544"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "Complete Daijisen character senses 1-6 expressly support rule/code, ordered recording and chronological/geological meanings. The actual labels and secondary senses support the requested direct guards. Omitting a sense from the chosen title or from KANJIDIC2 English glosses does not establish harmlessness.",
+      "fix": "Declare 紀 pairs with 歴,書,規,律,則,整,年,期,代 while preserving the initial 史,記,誌,録. Preserve century/geology qualifications."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted",
+      "basis": "The supplied Daijisen definition 探し求める and the KANJIDIC2 searching/inquiring senses positively support the actual search, seek and question labels.",
+      "fix": "Declare 索 pairs with 捜,探,求,問 while preserving 緒."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted",
+      "basis": "The full character definition supplies つな,糸すじ and つなぎとめる, not merely the whole-word English gloss of 維持. These support the requested cord, thread, binding and hold-fast comparisons.",
+      "fix": "Declare 維 pairs with 索,緒,糸,結,括,保,持,留. Keep physical-cord and broader hold-fast uses distinct; pairs are guards, not unrestricted synonym claims."
+    },
+    {
+      "id": "F4",
+      "disposition": "accepted",
+      "basis": "Complete 賃 entries give fee, charge, wages, payment and monetary consideration. Actual comparison titles include pay/price/expense, and 代 explicitly teaches fee. No transitive protection can be inferred.",
+      "fix": "Declare 賃 pairs with 代,俸,給,費,価,値,払 while preserving 借,料."
+    },
+    {
+      "id": "F5",
+      "disposition": "accepted-and-reproduced",
+      "basis": "The unchanged source log explicitly permits 由's ゆい in N1/All. The coordinator independently reproduced one production hit using the unchanged model plus source-attested --extra 維=ゆい. Daijisen positively attests ユイ as an on-reading even though KANJIDIC2 classifies ゆい under nanori.",
+      "fix": "Remove the false nondrawability claim, explain the source distinction without changing preserved reading metadata, and remove the demonstrated fallback-slot deficit with a reviewed on-capable curated option. Verify the supplemental reading explicitly in the revised audit."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-117\\initial-gpt-001.md",
+    "sha256": "702bc49f60ca059ec6f0f7d4efcc2c445ffed83571908a7eb8f8a4ef0f2cdae6"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-GPT-001-final.json",
+    "sha256": "00d470a0e0dc5d729c7937df189a23236fd685d6d54a245603b4d4b0c02d4a8d"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-GPT-001-adjudication.json",
+    "sha256": "e3bf0870183734943a5e05aad290922012d314553e92586de91402e5cd62f0c5"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}
