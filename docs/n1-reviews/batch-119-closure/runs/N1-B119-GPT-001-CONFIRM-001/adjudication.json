@@ -1,0 +1,84 @@
+{
+  "run": "N1-B119-GPT-001-CONFIRM-001",
+  "batch": 119,
+  "family": "gpt",
+  "session": "4f722d54-37d8-4727-9e14-9c05283a2913",
+  "candidate": "14662814559b9cb969bcb5768643748758cefffe",
+  "status": "ACCEPTED_EVIDENCE_REQUIRES_CORRECTION",
+  "verdict": "NEEDS FIX",
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": false,
+  "publicationAccepted": false,
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\confirm\\N1-B119-GPT-001-CONFIRM-001-final.json",
+    "sha256": "6a543299446ca08fe5038b5edbbd61209553d9f0f0a44441b6b31264dc58e3b0"
+  },
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-119\\N1-B119-GPT-001-CONFIRM-001.md",
+    "sha256": "b7edac35a738c865adebf299a3bce80a901f989295aa3e0259ecb78d4d256a4f"
+  },
+  "audit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\confirm\\N1-B119-GPT-001-CONFIRM-001\\audit-20261115T095959905633\\audit.json",
+    "sha256": "36212f2a30f00daf46b44287ec8e8b401dd52dfdb8332b9c8fc2744faf8e7ec5"
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\confirm\\N1-B119-GPT-001-CONFIRM-001-context.json",
+    "sha256": "670b5b978f273edd5f6999471d6fbcd01a7c5fadebf0b4e2746eb38b6d201a1a",
+    "bytes": 383
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\confirm\\N1-B119-GPT-001-CONFIRM-001-structure.json",
+    "sha256": "5e8492616b1e7edcaf8c8bdf29f6e9b5cd9dfefc029f472179ff46f4eb440787",
+    "bytes": 502
+  },
+  "actualResponseModels": [
+    "gpt-6.1-sol"
+  ],
+  "executionNotes": [
+    "Report on disk equals its single write after CRLF normalization"
+  ],
+  "eventsSha256": "ea94e6196baa5fa77f6cf20ff89843d4f1ba7175e09c73f206283323aa221256",
+  "dispositions": {
+    "F1": "RESOLVED",
+    "F2": "RESOLVED",
+    "F3": "RESOLVED"
+  },
+  "acceptedNewFindings": [
+    "F1"
+  ],
+  "openClaimIds": [
+    "F1"
+  ],
+  "findingDisposition": {
+    "F1": {
+      "status": "unresolved",
+      "severity": "minor",
+      "confidence": "high",
+      "pair": [
+        "妥",
+        "丸"
+      ],
+      "basis": "Inspected complete JMdict 1604230 lists both 丸い and 円い. Its harmonious/calm/peaceful third sense has no spelling restriction or rare/literary flag. The first-sense ball/disc tendency does not restrict that third sense. The exact captured 丸 card teaches まる.い and has no quiz_exclusions; 妥 guards 円 but not 丸. 妥's Daijisen entry independently supplies peaceful settlement. The target's settled label is thus defensible in the comparison's secondary sense.",
+      "remedy": "Append 丸 directly to 妥's meaning exclusions. If the existing 円 comparison note is adjusted, restrict it to the shared adjective's calm/peaceful sense; preserve all legitimate senses and old guards.",
+      "limits": "No present curated/default-pool exposure is asserted. The direct pair is not supplied transitively by 妥/円."
+    }
+  },
+  "sourceEvidence": [
+    "Signed reconciliation-002/jmdict-records.xml, complete entry 1604230.",
+    "Signed reconciliation-002/comparison-cards/丸.md, SHA256 84a04083fe46063ebbcdd116512c3e80450b5990cb35eed57e8e9c312f97d053; coordinator verified equality with the initial candidate's exact 丸 blob.",
+    "Current signed kanji/妥.md and original source-receipt.json's named Daijisen excerpt."
+  ],
+  "limitDispositions": {
+    "L1-L3": "Retain bounded scope. Unprovided screening leads are neither harmless certifications nor established defects; no broader corpus sweep is assigned.",
+    "L4-L5": "Retain host-model, shape-derivative and cmap-only limits. No Kotlin, native, device, geometry or fresh PDF acceptance.",
+    "L6": "Retain source-specific legacy discrepancies and uncertainty; no unsupported new meanings or generated-example naturalness claim is imported.",
+    "L7": "Publication remains blocked; host receipts are not served-ZIP acceptance.",
+    "L8": "The execution audit verifies gpt-6.1-sol and long context. Preserve the reviewer's narrower self-verification limit in the unchanged raw report."
+  },
+  "priorFindings": "All three original GPT findings are resolved on this snapshot. The new confirmation F1 is distinct from original F1.",
+  "acceptanceLimit": "Accept this as bounded NEEDS FIX evidence, not final approval. Preserve Claude's earlier acceptance on 14662814; both original reviewers must check the subsequent actual delta.",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\confirm\\record-gpt-001-confirm-001-adjudication.py",
+    "sha256": "f1d9a70f49959481be7bbf65747a5e61046e52a6dfd3a8bd8710c278ce808e6e"
+  }
+}

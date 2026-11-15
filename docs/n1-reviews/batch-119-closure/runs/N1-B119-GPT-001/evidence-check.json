@@ -1,0 +1,788 @@
+{
+  "run": "N1-B119-GPT-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-119\\initial-gpt-001.md",
+    "sha256": "3b42172760e7dea49c1d93fa2efb1b1f125c826465ddebfa5b57634eae68adcd"
+  },
+  "verdict": "NEEDS FIX",
+  "formalCitations": [
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "snapshot/kanji/妥.md:3-14",
+      "opened": true,
+      "exactSourceText": "title: appropriate; settled\njlpt: 1\ntags: [jlpt-n1, grade-8, structure-unclassified]\nstrokes: 7\nradical: 女\nradicalNumber: 38\nonyomi: [ダ]\nkunyomi: []\nquizOnyomi: [ダ]\nquizKunyomi: []\ndistractors: [女, 母, 子]\nquiz_exclusions: [適, 当, 安, 和, 平, 良, 正, 温, 静]"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "evidence/kanjidic2-records.xml:52-56",
+      "opened": true,
+      "exactSourceText": "        <reading r_type=\"ja_on\">ダ</reading>\n        <meaning>gentle</meaning>\n        <meaning>peace</meaning>\n        <meaning>satisfactory</meaning>\n        <meaning>appropriate</meaning>"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "evidence/external-snapshots/01-extract.txt:4-8",
+      "opened": true,
+      "exactSourceText": "だ【妥】\n読み方：だ\n［常用漢字］　［音］ダ（慣）\nおだやかに落ち着く。事がおさまる。「妥協・妥結・妥当」\n［名のり］やす"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "repo/kanji/優.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 優\ntitle: gentle; superior\njlpt: 3\ntags: [jlpt-n3, grade-6, structure-unclassified]\nstrokes: 17\nradical: 人\nradicalNumber: 9\nonyomi: [ユウ, ウ]\nkunyomi: [やさ.しい, すぐ.れる, まさ.る]\ndistractors: [夏, 借, 側]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "repo/kanji/寧.md:1-15",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 寧\ntitle: polite; peaceful\njlpt: 1\ntags: [jlpt-n1, grade-8, structure-unclassified]\nstrokes: 14\nradical: 宀\nradicalNumber: 40\nonyomi: [ネイ]\nkunyomi: [むし.ろ]\nquizOnyomi: [ネイ]\nquizKunyomi: []\ndistractors: [寝, 宝, 寒]\nquiz_exclusions: [安, 平, 静, 凪, 和, 敬, 厚, 儀, 礼, 御, 様, 尊, 拝, 細, 親, 封, 研, 究, 念]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "repo/kanji/定.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 定\ntitle: determine; settle\njlpt: 3\ntags: [jlpt-n3, grade-3, structure-unclassified]\nstrokes: 8\nradical: 宀\nradicalNumber: 40\nonyomi: [テイ, ジョウ]\nkunyomi: [さだ.める, さだ.まる, さだ.か]\ndistractors: [足, 走, 室]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "repo/kanji/済.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 済\ntitle: settle; finish\njlpt: 3\ntags: [jlpt-n3, grade-6, structure-unclassified]\nstrokes: 11\nradical: 水\nradicalNumber: 85\nonyomi: [サイ, セイ]\nkunyomi: [す.む, -ず.み, -ずみ, す.まない, す.ます, -す.ます, すく.う, な.す, わたし, わた.る]\ndistractors: [深, 洗, 活]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "repo/kanji/了.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 了\ntitle: completion; settling\njlpt: 2\ntags: [jlpt-n2, grade-8, structure-unclassified]\nstrokes: 2\nradical: 亅\nradicalNumber: 6\nonyomi: [リョウ]\nkunyomi: []\ndistractors: [子, 予, 才]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 154,
+      "citation": "repo/docs/content-format.md:97-119",
+      "opened": true,
+      "exactSourceText": "distinct wrong options for the default four-choice quiz. Two remain structurally valid for older cards, but the app fills missing\nchoices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:\ndifferent English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when\nthey are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n\nEditorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.\nThis behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);\nlarger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.\n\n### Curated reading questions\n"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "snapshot/kanji/循.md:3-14",
+      "opened": true,
+      "exactSourceText": "title: follow; cycle\njlpt: 1\ntags: [jlpt-n1, grade-8, structure-unclassified]\nstrokes: 12\nradical: 彳\nradicalNumber: 60\nonyomi: [ジュン]\nkunyomi: []\nquizOnyomi: [ジュン]\nquizKunyomi: []\ndistractors: [休, 人, 本]\nquiz_exclusions: [順, 追, 守, 回, 周, 後]"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "evidence/kanjidic2-records.xml:122-129",
+      "opened": true,
+      "exactSourceText": "        <meaning>sequential</meaning>\n        <meaning>follow</meaning>\n        <meaning m_lang=\"fr\">cycle</meaning>\n        <meaning m_lang=\"fr\">circulation</meaning>\n        <meaning m_lang=\"fr\">camarade</meaning>\n        <meaning m_lang=\"es\">girar</meaning>\n        <meaning m_lang=\"es\">dar vueltas</meaning>\n        <meaning m_lang=\"pt\">sequencial</meaning>"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "evidence/external-snapshots/02-extract.txt:4-9",
+      "opened": true,
+      "exactSourceText": "じゅん【循】\n読み方：じゅん\n［常用漢字］　［音］ジュン（呉）　［訓］したがう\n１ 決まったルールにしたがう。よる。「循守・循吏／因循」\n２ あちこちとめぐる。「循環」\n［名のり］みつ・ゆき・よし"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "repo/kanji/則.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 則\ntitle: rule; follow a model\njlpt: 2\ntags: [jlpt-n2, grade-5, structure-unclassified]\nstrokes: 9\nradical: 刀\nradicalNumber: 18\nonyomi: [ソク]\nkunyomi: [のっと.る, のり, すなわち]\ndistractors: [側, 財, 刷]\n---"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "repo/kanji/準.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 準\ntitle: standard, conform\njlpt: 2\ntags: [jlpt-n2, grade-5, structure-unclassified]\nstrokes: 13\nradical: 水\nradicalNumber: 85\nonyomi: [ジュン]\nkunyomi: [じゅん.じる, じゅん.ずる, なぞら.える, のり, ひと.しい, みずもり]\ndistractors: [集, 清, 卒]\n---"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "repo/kanji/応.md:1-15",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 応\ntitle: respond; comply\njlpt: 1\ntags: [jlpt-n1, grade-5, structure-unclassified]\nstrokes: 7\nradical: 心\nradicalNumber: 61\nonyomi: [オウ, ヨウ, -ノウ]\nkunyomi: [あた.る, まさに, こた.える]\nquizOnyomi: [オウ]\nquizKunyomi: []\ndistractors: [広, 庁, 欧]\nquiz_exclusions: [答, 承, 受, 適, 対]\n---"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "repo/kanji/転.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 転\ntitle: turn; roll\njlpt: 4\ntags: [jlpt-n4, grade-3, structure-unclassified]\nstrokes: 11\nradical: 車\nradicalNumber: 159\nonyomi: [テン]\nkunyomi: [ころ.がる, ころ.げる, ころ.がす, ころ.ぶ, まろ.ぶ, うたた, うつ.る, くる.めく]\ndistractors: [車, 運, 朝]\n---"
+    },
+    {
+      "item": "F2",
+      "reportLine": 162,
+      "citation": "repo/docs/content-format.md:97-119",
+      "opened": true,
+      "exactSourceText": "distinct wrong options for the default four-choice quiz. Two remain structurally valid for older cards, but the app fills missing\nchoices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:\ndifferent English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when\nthey are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n\nEditorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.\nThis behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);\nlarger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.\n\n### Curated reading questions\n"
+    },
+    {
+      "item": "F3",
+      "reportLine": 170,
+      "citation": "rubric/content-structure.instructions.md:47-56",
+      "opened": true,
+      "exactSourceText": "   disables that kind. Each selected entry needs its own reading row and linked word example, plus editorial dictionary/allocation/usefulness\n   verification. Links alone do not prove readings. See the format contract; older APKs ignore curation and must be upgraded first.\n3. Body sections in order: heading `# 字 — title` and a facts line (strokes, key, JLPT, and phonetic only when a verified component is known); `## Meaning and origin`; `## Readings`\n   (table: reading, on/kun, typical words with kana); `## Common words`; `## Notes` (look-alikes, differences, special readings).\n4. Origin: name the components and the idea of their composition. Hedge with \"commonly explained\" or \"debated\" where scholars disagree;\n   mnemonic associations are not etymology and must be labelled as mnemonics. Cite a source for substantive historical or phonetic claims.\n   When the history is unverified, give an explicitly labelled modern-shape mnemonic instead of inventing an origin. Use\n   `structure-unclassified` if the structural type has not been established, and omit the Phonetic item from the facts line (no placeholder);\n   absence of a `phonetic` field does not prove that no phonetic component exists.\n   If the canonical indexing radical looks different in the character, explain its visible form in the facts line or body"
+    },
+    {
+      "item": "F3",
+      "reportLine": 170,
+      "citation": "snapshot/kanji/妥.md:19-25",
+      "opened": true,
+      "exactSourceText": "**Strokes:** 7 · **Key (radical):** 女 (no. 38), below · **JLPT:** N1 (community list)\n\n## Meaning and origin\n\n妥 is associated with being appropriate, satisfactory, or settled. In [妥当](../words/妥当.md) だとう, the whole word evaluates something as reasonable or fitting the circumstances.\n\n**Modern-shape mnemonic, not etymology:** notice the upper strokes above 女; imagine checking that the two parts sit comfortably together. This is a memory aid, not a claim about historical formation."
+    },
+    {
+      "item": "F3",
+      "reportLine": 170,
+      "citation": "snapshot/kanji/循.md:19-25",
+      "opened": true,
+      "exactSourceText": "**Strokes:** 12 · **Key (radical):** 彳 (no. 60), at the left · **JLPT:** N1 (community list)\n\n## Meaning and origin\n\n循 is associated with following a course or sequence. In [循環](../words/循環.md) じゅんかん, the whole word means circulation or a repeating cycle.\n\n**Modern-shape mnemonic, not etymology:** notice 彳 on the left and the layered strokes on the right; imagine following the layers around a circuit. This is a memory aid, not a claim about historical formation."
+    },
+    {
+      "item": "F3",
+      "reportLine": 170,
+      "citation": "evidence/shape-evidence.json:18-30",
+      "opened": true,
+      "exactSourceText": "      {\n        \"id\": \"kvg:059a5-g1\",\n        \"{http://kanjivg.tagaini.net}element\": \"⺤\",\n        \"{http://kanjivg.tagaini.net}variant\": \"true\",\n        \"{http://kanjivg.tagaini.net}original\": \"爪\",\n        \"{http://kanjivg.tagaini.net}position\": \"top\",\n        \"{http://kanjivg.tagaini.net}radical\": \"nelson\"\n      },\n      {\n        \"id\": \"kvg:059a5-g2\",\n        \"{http://kanjivg.tagaini.net}element\": \"女\",\n        \"{http://kanjivg.tagaini.net}position\": \"bottom\",\n        \"{http://kanjivg.tagaini.net}radical\": \"tradit\""
+    },
+    {
+      "item": "F3",
+      "reportLine": 170,
+      "citation": "evidence/shape-evidence.json:66-83",
+      "opened": true,
+      "exactSourceText": "      },\n      {\n        \"id\": \"kvg:05faa-g3\",\n        \"{http://kanjivg.tagaini.net}element\": \"盾\",\n        \"{http://kanjivg.tagaini.net}position\": \"right\",\n        \"{http://kanjivg.tagaini.net}phon\": \"盾\"\n      },\n      {\n        \"id\": \"kvg:05faa-g4\",\n        \"{http://kanjivg.tagaini.net}element\": \"厂\",\n        \"{http://kanjivg.tagaini.net}variant\": \"true\",\n        \"{http://kanjivg.tagaini.net}position\": \"kamae\"\n      },\n      {\n        \"id\": \"kvg:05faa-g5\",\n        \"{http://kanjivg.tagaini.net}element\": \"十\"\n      },\n      {"
+    }
+  ],
+  "issues": [],
+  "comparisons": [
+    {
+      "id": "D1",
+      "card": "優",
+      "reportLine": 83,
+      "displayedTitle": "gentle; superior",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed gentle sense matches independently recorded gentle for 妥, irrespective of 優's separate excellence and performer uses: repo/kanji/優.md:3; repo/kanji/優.md:20-22; evidence/kanjidic2-records.xml:53-56.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 妥/優. F1. Not a current target-curated option."
+    },
+    {
+      "id": "D2",
+      "card": "寧",
+      "reportLine": 84,
+      "displayedTitle": "polite; peaceful",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Peaceful matches independently recorded peace for 妥. The calm/settled account reinforces, rather than removes, that ambiguity; courtesy, carefulness and むしろ are separate uses: repo/kanji/寧.md:3; repo/kanji/寧.md:23-34; evidence/kanjidic2-records.xml:53-56.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 妥/寧. 寧's exclusions with 安, 平, 静, 凪 and 和 are not transitive protection. F1. Not currently curated for 妥."
+    },
+    {
+      "id": "D3",
+      "card": "凪",
+      "reportLine": 85,
+      "displayedTitle": "calm seas; lull",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Calm could overlap 妥's tranquil settling. The article positively describes wind/sea calm and warns against generalizing it, but the underlying comparison dictionary families are not supplied: repo/kanji/凪.md:22-25; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "UNVERIFIED semantic disposition. Weather-specific examples do not alone prove that 妥 can never make this label defensible. Neither endpoint declares 妥/凪; no current target-curated exposure."
+    },
+    {
+      "id": "D4",
+      "card": "定",
+      "reportLine": 86,
+      "displayedTitle": "determine; settle",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Settle shares the independently attested matter-settling sense of 妥. The article includes both establishing and becoming settled, not just an act of deciding: repo/kanji/定.md:3; repo/kanji/定.md:20-24; repo/kanji/定.md:38-45; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 妥/定. F1. Not currently curated for 妥."
+    },
+    {
+      "id": "D5",
+      "card": "済",
+      "reportLine": 87,
+      "displayedTitle": "settle; finish",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Settle overlaps 妥's 事がおさまる. Completion, taking care of a matter and settling payment must all be considered; economy does not negate the settling label: repo/kanji/済.md:3; repo/kanji/済.md:20-23; repo/kanji/済.md:38-44; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 妥/済. F1. Not currently curated for 妥."
+    },
+    {
+      "id": "D6",
+      "card": "了",
+      "reportLine": 88,
+      "displayedTitle": "completion; settling",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Settling shares the independently sourced settled-matter meaning of 妥. The article includes understanding/acknowledgment as well as completed tasks, so this is not dismissed as exclusively physical completion: repo/kanji/了.md:3; repo/kanji/了.md:20; repo/kanji/了.md:34-40; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 妥/了. F1. Not currently curated for 妥."
+    },
+    {
+      "id": "D7",
+      "card": "治",
+      "reportLine": 89,
+      "displayedTitle": "govern; heal",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The strongest lead is the secondary settling-affairs account, not healing alone: repo/kanji/治.md:20-22; repo/kanji/治.md:37-40. 妥's matter-settling is independently supported by evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "UNVERIFIED whether the secondary governing/settling sense makes the direct pair ambiguous. The relevant 治 dictionary entries were not supplied. Neither endpoint declares 妥/治; no current target-curated exposure."
+    },
+    {
+      "id": "D8",
+      "card": "柔",
+      "reportLine": 90,
+      "displayedTitle": "soft; supple",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Gentleness and 柔和's gentle/mild use are explicitly present, beyond physical softness: repo/kanji/柔.md:20; repo/kanji/柔.md:29-32; repo/kanji/柔.md:39. 妥 independently has gentle: evidence/kanjidic2-records.xml:53.",
+      "disposition": "UNVERIFIED ordinary-secondary-sense collision; a strong candidate for a direct guard, not established harmlessness. The comparison's character/word dictionary records are absent. Neither endpoint declares 妥/柔; no current target-curated exposure."
+    },
+    {
+      "id": "D9",
+      "card": "軟",
+      "reportLine": 91,
+      "displayedTitle": "soft; pliant",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes softening, tender/pliant and an unrestricted shared spelling family with 柔, expressly denying a rigid physical/figurative partition: repo/kanji/軟.md:20; repo/kanji/軟.md:29-30; repo/kanji/軟.md:40-41. Compare 妥's gentle in evidence/kanjidic2-records.xml:53.",
+      "disposition": "UNVERIFIED whether gentle/mild and this full secondary family collide. Neither endpoint declares 妥/軟; no current target-curated exposure. It is not dismissed as only physical softness."
+    },
+    {
+      "id": "D10",
+      "card": "快",
+      "reportLine": 92,
+      "displayedTitle": "pleasant; agreeable",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Pleasant feeling, comfort, enjoyment and refreshment are all taught: repo/kanji/快.md:20; repo/kanji/快.md:34-37. 妥 independently has satisfactory, while the changed 妥当 article distinguishes evaluation from personal liking: evidence/kanjidic2-records.xml:55; snapshot/words/妥当.md:42-47.",
+      "disposition": "UNVERIFIED whether the distinction settles every ordinary character-level satisfactory/agreeable reading. Whole-word evaluation is useful contrast, not an exhaustive character restriction. Neither endpoint declares 妥/快; no current target-curated exposure."
+    },
+    {
+      "id": "D11",
+      "card": "満",
+      "reportLine": 93,
+      "displayedTitle": "full; satisfy",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The shared satisfy stem is substantive: the comparison includes satisfaction/contentment, not just occupancy: repo/kanji/満.md:20-22; repo/kanji/満.md:35-38; evidence/kanjidic2-records.xml:55.",
+      "disposition": "UNVERIFIED collision versus harmless distinction between satisfaction and satisfactory condition. Action versus state, or full-train examples, do not settle it. Neither endpoint declares 妥/満; no current target-curated exposure."
+    },
+    {
+      "id": "D12",
+      "card": "合",
+      "reportLine": 94,
+      "displayedTitle": "fit together",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The comparison includes joining, matching, fitting and suiting sizes or tastes, not only assembling objects: repo/kanji/合.md:20-21; repo/kanji/合.md:36-43. 妥's appropriate is independently supported: evidence/kanjidic2-records.xml:56.",
+      "disposition": "UNVERIFIED whether the full fitting/suiting range creates a direct ambiguity. The comparison's lexical records are absent. Neither endpoint declares 妥/合; no current target-curated exposure."
+    },
+    {
+      "id": "D13",
+      "card": "整",
+      "reportLine": 95,
+      "displayedTitle": "put in order; adjust",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The strongest overlap is explicit be settled in 整う, plus adjustment/reconciliation/fixing, not merely tidying: repo/kanji/整.md:23-25; repo/kanji/整.md:34; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "UNVERIFIED secondary-sense collision. The article's cited complete 整う/調整 records were not supplied, so no exclusively physical restriction or harmless verdict is inferred. Neither endpoint declares 妥/整; its 正/順 guards are nontransitive. No current target-curated exposure."
+    },
+    {
+      "id": "D14",
+      "card": "決",
+      "reportLine": 96,
+      "displayedTitle": "decide",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article explicitly includes settling and becoming settled beyond deciding: repo/kanji/決.md:20-22; repo/kanji/決.md:39-41; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "UNVERIFIED necessity of a direct pair because the secondary lexical evidence for 決 is absent. Neither endpoint declares 妥/決; no current target-curated exposure. Different decide/settled labels are not proof of safety."
+    },
+    {
+      "id": "D15",
+      "card": "則",
+      "reportLine": 97,
+      "displayedTitle": "rule; follow a model",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed following sense matches independent 循 follow and its rule-following sense. The article explicitly includes precedent/model and the rule noun: repo/kanji/則.md:3; repo/kanji/則.md:20; evidence/kanjidic2-records.xml:123-124; evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 循/則. F2. Not currently curated for 循."
+    },
+    {
+      "id": "D16",
+      "card": "準",
+      "reportLine": 98,
+      "displayedTitle": "standard, conform",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed conform sense and conformity to a model overlap independently sourced rule-following for 循. Standards, quasi-status, corresponding treatment and likening are separate comparison uses, not reasons to remove conform: repo/kanji/準.md:3; repo/kanji/準.md:20; repo/kanji/準.md:31-38; evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 循/準. F2. No current target-curated meaning exposure; shared ジュン is not a defect in the curated reading slots."
+    },
+    {
+      "id": "D17",
+      "card": "律",
+      "reportLine": 99,
+      "displayedTitle": "law; rhythm",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Rules/regulation, conscientiousness and articulation are all present: repo/kanji/律.md:20; repo/kanji/律.md:28-30; repo/kanji/律.md:40-41. 循 follows rules: evidence/external-snapshots/02-extract.txt:7. The rule is not automatically the act of following it.",
+      "disposition": "UNVERIFIED full secondary-sense disposition. The nominal/action contrast alone cannot prove harmlessness, and the comparison's character entry is absent. Neither endpoint declares 循/律; no current target-curated exposure."
+    },
+    {
+      "id": "D18",
+      "card": "規",
+      "reportLine": 100,
+      "displayedTitle": "standard; rule",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "A standard or measuring tool and a rule/regulation are explicitly distinguished: repo/kanji/規.md:20-22; repo/kanji/規.md:36-38. Compare rule-following in evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "UNVERIFIED whether any ordinary secondary following/conformity sense creates a collision. Shared rule subject matter alone does not require a pair, but the object/action distinction alone does not certify safety. Neither endpoint declares 循/規; no current target-curated exposure."
+    },
+    {
+      "id": "D19",
+      "card": "法",
+      "reportLine": 101,
+      "displayedTitle": "law; method",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Conduct-governing rules and ordinary methods are both included, without equating methods to legal obligations: repo/kanji/法.md:20-22; repo/kanji/法.md:37-39. 循's follow-rules sense is independently supplied: evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "UNVERIFIED secondary-sense disposition, not a collision established merely by legal subject matter. Neither endpoint declares 循/法; no current target-curated exposure."
+    },
+    {
+      "id": "D20",
+      "card": "倣",
+      "reportLine": 102,
+      "displayedTitle": "imitate; emulate",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The strongest possible overlap is following an existing example or precedent, explicitly distinguished from learning with a teacher: repo/kanji/倣.md:21-24; repo/kanji/倣.md:44-53. Compare independent following rules/よる for 循: evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "UNVERIFIED whether the ordinary model-following senses demand the pair. The underlying 倣う and character entries are absent; neither copying alone nor different displayed titles settle the matter. Neither endpoint declares 循/倣; no current target-curated exposure."
+    },
+    {
+      "id": "D21",
+      "card": "応",
+      "reportLine": 103,
+      "displayedTitle": "respond; comply",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Comply is a displayed action in line with a demand; answering, consent, response and suitability are separately taught: repo/kanji/応.md:3; repo/kanji/応.md:23-25. Independent 循 includes following rules: evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "Collision needing exclusion for the comply/follow-rule pair; neither endpoint declares 循/応. 応/適 does not protect this pair. F2. No current target-curated exposure. The newly noticed suitability comparison with 妥 is separately limited in L5."
+    },
+    {
+      "id": "D22",
+      "card": "復",
+      "reportLine": 104,
+      "displayedTitle": "restore; repeat",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Return to an earlier condition, repetition and the round-trip example all matter: repo/kanji/復.md:20; repo/kanji/復.md:34-36. Compare independently supplied 循 going around and 循環 cycle/loop: evidence/external-snapshots/02-extract.txt:8; evidence/jmdict-families.xml:24-27.",
+      "disposition": "UNVERIFIED whether ordinary cyclic return overlaps this pair. A single repetition is not automatically a cycle, but the round-trip secondary example prevents dismissing it on that basis alone. Neither endpoint declares 循/復; no current target-curated exposure."
+    },
+    {
+      "id": "D23",
+      "card": "再",
+      "reportLine": 105,
+      "displayedTitle": "again; repeat",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Second occurrence, repeated occurrence and the after-next compounds are all present: repo/kanji/再.md:20; repo/kanji/再.md:35-40. Compare the cycle/loop word family in evidence/jmdict-families.xml:24-27 and character going-around in evidence/external-snapshots/02-extract.txt:8.",
+      "disposition": "UNVERIFIED whether the ordinary recurrence ranges actually make either label defensible for the other character. Shared repetition alone does not establish a required pair. Neither endpoint declares 循/再; no current target-curated exposure."
+    },
+    {
+      "id": "D24",
+      "card": "転",
+      "reportLine": 106,
+      "displayedTitle": "turn; roll",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed turn sense overlaps independent 循 going around; the KANJIDIC2 Spanish senses also include girar and dar vueltas. Rolling, position changes and school changes do not erase turn: repo/kanji/転.md:3; repo/kanji/転.md:20-21; evidence/external-snapshots/02-extract.txt:8; evidence/kanjidic2-records.xml:128-129.",
+      "disposition": "Collision needing exclusion; neither endpoint declares 循/転. This is not inferred solely from the whole word 循環's rotation gloss. F2. No current target-curated exposure."
+    },
+    {
+      "id": "D25",
+      "card": "丸",
+      "reportLine": 107,
+      "displayedTitle": "round; circle",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The full article includes circular marks, intact units, pills/ship names and making round or rolling up: repo/kanji/丸.md:20; repo/kanji/丸.md:29-31; repo/kanji/丸.md:39-40. Compare 循 going around in evidence/external-snapshots/02-extract.txt:8.",
+      "disposition": "UNVERIFIED whether these ordinary circle/rounding senses overlap cyclical going around. Shape versus movement is a useful contrast, not sufficient proof by itself. Neither endpoint declares 循/丸; no current target-curated exposure."
+    },
+    {
+      "id": "D26",
+      "card": "円",
+      "reportLine": 108,
+      "displayedTitle": "yen, circle",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Circle/round and yen are not the only taught senses: 円か is calm/perfect and literary, 円やか mellow, and geometric versus physical roundness is explicitly only a tendency: repo/kanji/円.md:21; repo/kanji/円.md:28-30; repo/kanji/円.md:40. Compare 循 going around: evidence/external-snapshots/02-extract.txt:8.",
+      "disposition": "UNVERIFIED circle versus circuit ambiguity for 循; no universal geometry/action restriction is inferred. Neither endpoint declares 循/円; no current target-curated exposure. The literary calm lead involving 妥 is limited in L5, not promoted to an ordinary-sense finding."
+    },
+    {
+      "id": "D27",
+      "card": "通",
+      "reportLine": 109,
+      "displayedTitle": "pass through; commute",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes passage, connection, repeated trips, going along and manner/serial affixes. The changed 循環 article additionally asserts 通う's circulation sense: repo/kanji/通.md:20-21; repo/kanji/通.md:35-37; snapshot/words/循環.md:29.",
+      "disposition": "UNVERIFIED direct semantic necessity. The independent 通う family is not supplied; a candidate assertion of circulation cannot establish that secondary sense by itself. Neither endpoint declares 循/通; no current target-curated exposure."
+    },
+    {
+      "id": "D28",
+      "card": "流",
+      "reportLine": 110,
+      "displayedTitle": "flow",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Flow/current, letting flow, drainage and exchange/interaction are all included: repo/kanji/流.md:20-22; repo/kanji/流.md:35-37. Independent 循 has going around and its word family circulation: evidence/external-snapshots/02-extract.txt:8; evidence/jmdict-families.xml:24-27.",
+      "disposition": "UNVERIFIED whether character-level flow/circulation makes this direct pair ambiguous. Shared moving-liquid subject matter or a compound translation alone is insufficient. Neither endpoint declares 循/流; no current target-curated exposure."
+    },
+    {
+      "id": "D29",
+      "card": "続",
+      "reportLine": 111,
+      "displayedTitle": "continue",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The strongest lead is following on/forming a series, not merely persisting: repo/kanji/続.md:20-22; repo/kanji/続.md:33; repo/kanji/続.md:37-39. Independent 循 has sequential/follow: evidence/kanjidic2-records.xml:123-124.",
+      "disposition": "UNVERIFIED secondary-sense collision. No complete independent 続/続く/連続 evidence is supplied to settle the relationship. Neither endpoint declares 循/続; no current target-curated exposure."
+    },
+    {
+      "id": "D30",
+      "card": "経",
+      "reportLine": 112,
+      "displayedTitle": "pass through; sutra",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Passing through experience/time, going through and sutra are all taught; the article's examples do not prove an exclusively temporal restriction: repo/kanji/経.md:20-22; repo/kanji/経.md:30-32; repo/kanji/経.md:40-46. Compare independently sourced 循 sequential/follow: evidence/kanjidic2-records.xml:123-124.",
+      "disposition": "UNVERIFIED whether broader ordinary passage/course senses overlap following. Neither endpoint declares 循/経; no current target-curated exposure. Sutra and economy examples do not dispose of the passage sense."
+    },
+    {
+      "id": "D31",
+      "card": "巻",
+      "reportLine": 113,
+      "displayedTitle": "roll; book volume",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Winding/coiling/rolling, noun winding, book volume, sweeping across and alternate nightclothes spellings all appear: repo/kanji/巻.md:20; repo/kanji/巻.md:28-32; repo/kanji/巻.md:36-39. Compare independently sourced 循 going around: evidence/external-snapshots/02-extract.txt:8.",
+      "disposition": "UNVERIFIED whether ordinary winding versus cyclic traversal is sufficiently distinct. Different book/action labels or an object/action contrast cannot settle all senses. Neither endpoint declares 循/巻; no current target-curated exposure."
+    },
+    {
+      "id": "E1",
+      "card": "適",
+      "reportLine": 114,
+      "displayedTitle": "suitable",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Suitable and the article's appropriate sense match independent appropriate for 妥; the comfort sense of 快適 is explicitly not universal substitution: repo/kanji/適.md:3; repo/kanji/適.md:20-21; repo/kanji/適.md:42-43; evidence/kanjidic2-records.xml:56.",
+      "disposition": "Already handled: collision needing a direct exclusion, declared on 妥 at snapshot/kanji/妥.md:14, not on 適. Not currently curated for 妥."
+    },
+    {
+      "id": "E2",
+      "card": "当",
+      "reportLine": 115,
+      "displayedTitle": "hit; be on target",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes right/appropriate and prediction success beyond physical hitting: repo/kanji/当.md:20-23; repo/kanji/当.md:40-42. Compare independently sourced appropriate for 妥: evidence/kanjidic2-records.xml:56.",
+      "disposition": "Already handled conservatively by 妥's direct declaration at snapshot/kanji/妥.md:14; 当 does not declare it. Exact necessity through 当's secondary meanings remains UNVERIFIED without the comparison entries. No current target-curated exposure."
+    },
+    {
+      "id": "E3",
+      "card": "安",
+      "reportLine": 116,
+      "displayedTitle": "cheap, peaceful",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Peaceful matches independently sourced peace. The article also includes safe, at ease and low price; the cheap sense does not remove the shared peace sense: repo/kanji/安.md:3; repo/kanji/安.md:20-21; evidence/kanjidic2-records.xml:54.",
+      "disposition": "Already handled: a direct semantic collision, declared on 妥 at snapshot/kanji/妥.md:14, not on 安. No current target-curated exposure."
+    },
+    {
+      "id": "E4",
+      "card": "温",
+      "reportLine": 117,
+      "displayedTitle": "warm, mild",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Mild can express a kind manner rather than just temperature, matching independent gentle for 妥: repo/kanji/温.md:3; repo/kanji/温.md:20; repo/kanji/温.md:30-31; evidence/kanjidic2-records.xml:53. Archaic derogatory ぬく is expressly not ordinary warmth: repo/kanji/温.md:35; repo/kanji/温.md:51-53.",
+      "disposition": "Already handled: direct gentle/mild ambiguity is declared on 妥 at snapshot/kanji/妥.md:14, not on 温. No current target-curated exposure."
+    },
+    {
+      "id": "E5",
+      "card": "静",
+      "reportLine": 118,
+      "displayedTitle": "quiet",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "妥": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Quietness includes stillness and quieting down, not just sound. Compare 妥's independently sourced tranquil settling: repo/kanji/静.md:20-22; repo/kanji/静.md:32-33; evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "Already handled: the calm/quiet direct pair is declared on 妥 at snapshot/kanji/妥.md:14, not on 静. No current target-curated exposure."
+    },
+    {
+      "id": "E6",
+      "card": "順",
+      "reportLine": 119,
+      "displayedTitle": "order; sequence",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Sequence matches independently recorded sequential for 循. The comparison additionally reports an obedient/docile secondary sense that is not independently supplied in this packet: repo/kanji/順.md:3; repo/kanji/順.md:20; repo/kanji/順.md:43; evidence/kanjidic2-records.xml:123.",
+      "disposition": "Already handled on the verified sequence overlap: declared on 循 at snapshot/kanji/循.md:14, not on 順. The separate obedience assertion remains UNVERIFIED, not required to justify this guard. No current target-curated exposure."
+    },
+    {
+      "id": "E7",
+      "card": "追",
+      "reportLine": 120,
+      "displayedTitle": "chase; pursue",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes following after and adding afterward, not only pursuit: repo/kanji/追.md:20-22; repo/kanji/追.md:30-31; repo/kanji/追.md:35-37. Independent 循 includes follow: evidence/kanjidic2-records.xml:124.",
+      "disposition": "Already handled conservatively by 循's direct declaration at snapshot/kanji/循.md:14; 追 does not declare it. Exact secondary-sense necessity remains UNVERIFIED without the comparison's dictionary entries. No current target-curated exposure."
+    },
+    {
+      "id": "E8",
+      "card": "守",
+      "reportLine": 121,
+      "displayedTitle": "guard; obey",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Obey matches independently sourced following a rule for 循. Protection, keeping promises and 留守's absence/house-sitting uses are distinct secondary contexts: repo/kanji/守.md:3; repo/kanji/守.md:20-21; repo/kanji/守.md:35-37; evidence/external-snapshots/02-extract.txt:7.",
+      "disposition": "Already handled: a direct rule-following collision is declared on 循 at snapshot/kanji/循.md:14, not on 守. No current target-curated exposure."
+    },
+    {
+      "id": "E9",
+      "card": "回",
+      "reportLine": 122,
+      "displayedTitle": "revolve; times",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Revolve/turn matches independent 循 going around. The counter-occurrence and once-more senses are also read, not conflated with degrees or assumed to make all repetition cyclic: repo/kanji/回.md:3; repo/kanji/回.md:20-21; repo/kanji/回.md:41-45; evidence/external-snapshots/02-extract.txt:8.",
+      "disposition": "Already handled: direct going-around collision is declared on 循 at snapshot/kanji/循.md:14, not on 回. No current target-curated exposure."
+    },
+    {
+      "id": "E10",
+      "card": "周",
+      "reportLine": 123,
+      "displayedTitle": "circumference; circuit",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "循": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Circuit/going around overlaps independent 循 めぐる; the article also teaches circumference, surroundings and periphery, not just a static outline: repo/kanji/周.md:3; repo/kanji/周.md:20; repo/kanji/周.md:34-37; evidence/external-snapshots/02-extract.txt:8.",
+      "disposition": "Already handled: the direct circuit pair is declared on 循 at snapshot/kanji/循.md:14, not on 周. The noun/action distinction does not negate it. No current target-curated exposure."
+    }
+  ],
+  "sourceFilesRehashed": 81,
+  "newTitles": {
+    "妥": "appropriate; settled",
+    "循": "follow; cycle"
+  },
+  "acceptanceLimit": "Mechanics and factual source bindings only; no linguistic verdict is inferred."
+}

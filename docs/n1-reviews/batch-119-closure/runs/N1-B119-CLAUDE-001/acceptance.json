@@ -1,0 +1,61 @@
+{
+  "run": "N1-B119-CLAUDE-001",
+  "batch": 119,
+  "candidate": "8a30e1729c270f025c186ff71d41f1153a276bfa",
+  "createdAt": "2026-11-15T09:14:13.479315+00:00",
+  "preflightSha256": "447c8f875e96a361b6ccca0c3911a983c94312d4077d24d82967067a5f298731",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step.py",
+    "sha256": "a5a2a9c45bb0de68cf3baa8056267ddd3649375e8b06bd0ad520beb31b672544"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted-with-citation-caveat",
+      "basis": "Daijisen defines 妥 at character level as calmly settling and a matter becoming settled (01-extract.txt:7), consistent with its displayed settled title. 了, 定 and 済 display settling/settle; their cited bodies support this sense. 決's complete cited meaning paragraph explicitly describes deciding or settling and becoming settled. Neither endpoint declares any of the four direct pairs. The shared substantive settlement sense, not an exclusion inherited through a third card, justifies these guards.",
+      "fix": "Append 了, 定, 済 and 決 to 妥's exclusions, preserving the original nine and the sourced settled sense. Briefly distinguish the relevant settlement senses without claiming word interchangeability.",
+      "scope": "Bounded semantic safeguards, not a reproduced default-pool collision or arbitrary-pool/native acceptance."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted",
+      "basis": "Daijisen 循 sense 1 is following a set rule (02-extract.txt:7). 則 explicitly displays follow a model and teaches following a rule, precedent or model. 倣 teaches following an existing model or precedent; 準 teaches conformity to a model and glosses 準じる/準ずる as conform to. The title follow is therefore defensible for these comparison prompts. The audit verifies that none of the three direct pairs is declared.",
+      "fix": "Append 則, 倣 and 準 to 循's exclusions, preserving the original six; explain the particular rule/model-following overlap. Do not infer these pairs merely from existing 守 or 追 exclusions.",
+      "scope": "The safeguard does not identify following a rule with every act of imitation or every meaning of 準."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted-with-citation-caveat",
+      "basis": "The actual English KANJIDIC2 peace gloss for 妥 is present at line 54. 妥's note teaches it, while 寧 displays peaceful and explicitly teaches calm, settled peace. 妥's Daijisen settled definition independently supports the overlap. Neither endpoint declares the pair; shared exclusions with other peace cards do not resolve it.",
+      "fix": "Append 寧 to 妥's exclusions and include it in the qualified peace comparison."
+    },
+    {
+      "id": "F4",
+      "disposition": "accepted",
+      "basis": "The complete frozen 応 card explicitly attributes being suitable or well matched to the Daijisen character entry (line 25), not merely to a substring inference from 相応. This makes 妥's displayed appropriate a plausible meaning answer for 応. The pair is absent on both endpoints. Existing 適 declarations are corroborating author context, not transitive proof.",
+      "fix": "Append 応 to 妥's exclusions with a qualified appropriateness comparison. Preserve the exact 応 comparison card and applicable dictionary evidence in reconciliation; do not rewrite the earlier card."
+    },
+    {
+      "id": "F5",
+      "disposition": "accepted-as-conservative-direct-safeguard",
+      "basis": "KANJIDIC2 explicitly gives 妥 the English gloss gentle (line 53; source-metadata.json:19), and the new card teaches this. 優 displays gentle and supplies kind/gentle examples. Calmness and kindness are not identical Japanese senses, but the unqualified displayed gentle label remains defensible from the taught gloss. Neither endpoint declares the pair.",
+      "fix": "Append 優 to 妥's exclusions and qualify the calm-versus-kindness distinction. Do not erase or suppress the pinned gentle metadata or its disclosure merely to avoid the overlap.",
+      "confidence": "medium; a cautious displayed-label safeguard, not a universal lexical-equivalence claim"
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-119\\initial-claude-001.md",
+    "sha256": "a4e440f16ba49ebfc3cb9e8c496aaef67b39bd095dd78e2d58b4faab74d8b0c6"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-CLAUDE-001-final.json",
+    "sha256": "4cfbe6ae0d766499abfc26ac9b8ab11487f7ad6d2fa2aff30bd52cb0b97c1b11"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-CLAUDE-001-adjudication.json",
+    "sha256": "62a9ef9a9137e98eaa86f314d5293304ebf7e8b68eda80c99ab1f834865c147d"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}
