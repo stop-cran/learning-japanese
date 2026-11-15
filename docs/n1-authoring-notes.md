@@ -59,6 +59,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 123: local authoring candidate
+
+The bounded candidate is **範**, frozen source row 810, with a generated KanjiVG stroke file and a link-only wrapper in the existing N3 範囲 article. No word article is added. The [source packet](n1-sources/batch-123/) records complete selected dictionary families, baseline comparison cards, the dictionary-only のり reading and bounded font/reading limitations. This candidate is not review-closed or published; published accounting remains 252 delivered and 976 undelivered.
+
 ## Batch 122: local authoring candidate
 
 The bounded candidate is **悠**, frozen source row 367, with a generated KanjiVG stroke file and a link-only wrapper in the existing N2 悠々 article. No word article is added. The [source packet](n1-sources/batch-122/) retains complete selected dictionary records, actual baseline comparison cards, source-only reading distinctions and the author audit. Starter-compatible reading distractors trade close visual similarity for bounded reading-pool safety. This local draft is not review-closed or published; published accounting remains 251 delivered and 977 undelivered.
