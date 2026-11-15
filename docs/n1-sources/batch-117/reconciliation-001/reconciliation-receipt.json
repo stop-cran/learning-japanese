@@ -1,0 +1,96 @@
+{
+  "batch": 117,
+  "kind": "additive-author-reconciliation-receipt",
+  "createdAt": "2026-11-15",
+  "reviewedCandidateParent": "93c6e09770a5272529ce2b324873768c36a94f71",
+  "base": "589f782aca02815f129f327e95131892b0a171f4",
+  "b116PublicationCommit": "c9d87f9d7d3b9e00f7f5f8c2d27453815b84dd80",
+  "supersedes": {
+    "path": "docs/n1-sources/batch-117/authoring-receipt.json",
+    "sha256": "4b7904d6611df50de88d4f05bc2a71380d947e6e8f202ed3acf94e6308e1595f",
+    "scope": "Only the readingExposure narrative is superseded; the historical receipt remains byte-for-byte unchanged.",
+    "historicalReadingExposure": {
+      "productionHits": 0,
+      "latentCollisions": 1,
+      "latentCollisionDrawable": false,
+      "note": "The historical receipt says 維's ゆい matches 由's ユイ in the broad inventory but is not drawable in shipped quiz pools. That statement is incorrect."
+    }
+  },
+  "readingExposureCorrection": {
+    "preRevisionReproduction": {
+      "path": "C:/Users/stop-/n1-kanji-workspace/scratch-117/review/coordinator-reading-extra-before.log",
+      "sha256": "b88160782cd06cb0b235dfe177fa1b1d4a2865143369f2060fdceeda7eba81a0",
+      "result": "With the unchanged model and --extra 維=ゆい, one production hit was reproducible via 由 in both N1 and All."
+    },
+    "sourceDistinction": "KANJIDIC2 classifies 維's ゆい among nanori; Digital Daijisen separately lists ユイ as a Go-on on-reading. 由 has ユイ in its KANJIDIC2 on-reading metadata. The distinctions do not change preserved metadata or selected イ practice.",
+    "revision": {
+      "curatedOptions": ["録", "催", "集"],
+      "claim": "All three options have usable on readings, filling the curated slots for 維's practiced イ and avoiding fallback to 由 in the bounded N1/All model.",
+      "supplementalAudit": "scratch-117/check-reading-exposure-reconciliation.py runs the unchanged audit with --extra 維=ゆい.",
+      "freshResultLog": "scratch-117/author-gates-reconciliation-20261115-final3/reading-exposure-supplemental.log",
+      "freshResultReceipt": "scratch-117/author-gates-reconciliation-20261115-final3/reading-exposure-supplemental.json"
+    },
+    "residualLimit": "A bounded single-borrow Starter case can still draw ユイ from 由 if 由 is borrowed alongside 維. No claim is made for arbitrary pools, multiple borrowed cards, Kotlin/native/device behavior, or publication."
+  },
+  "sourceEvidence": {
+    "index": "docs/n1-sources/batch-117/reconciliation-001/source-evidence-index.json",
+    "indexSha256": "74e22d03c34f35e590de22f277c28b2f12a0d3e4f3d933a25a289b1bcb4d6a25",
+    "comparisonCardSnapshots": 72,
+    "completeKanjidic2Records": 76,
+    "completeJmdictComparisonEntries": 5,
+    "fullDaijisenExtracts": 4,
+    "inputs": {
+      "KANJIDIC2": {
+        "sha256": "af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed"
+      },
+      "JMdict": {
+        "sha256": "2dbbfe0b1214911766bbc128a0935618b925be917e7d1c50f3536a89b0e8786d"
+      }
+    },
+    "coverageNote": "The snapshots support the per-pair dispositions in the separate neutral author artifact; they are bounded comparison evidence, not an exhaustive audit of the full card corpus."
+  },
+  "revisionScope": {
+    "cards": ["紀", "索", "維", "賃"],
+    "meaningGuardSummary": {
+      "紀": ["歴", "書", "籍", "述", "規", "律", "則", "典", "法", "制", "憲", "整", "順", "年", "期", "代", "世", "齢"],
+      "索": ["捜", "探", "求", "問", "聞", "伺", "調", "散", "査", "究"],
+      "維": ["索", "緒", "糸", "結", "括", "保", "持", "支", "留"],
+      "賃": ["代", "俸", "給", "費", "価", "値", "払", "報", "賞", "雇", "償"]
+    },
+    "unchanged": [
+      "All source on/kun/nanori metadata and selected readings",
+      "Four stroke files, character identities, word wrappers, word prose and word metadata",
+      "Historical authoring receipt and frozen initial review evidence",
+      "B116 evidence and publication receipt"
+    ],
+    "noteCorrection": "The B117 subsection of docs/n1-authoring-notes.md now records the exact B116 publication SHA and that initial independent reviews are complete while confirmations and publication remain pending."
+  },
+  "separateAuthorArtifacts": {
+    "claudeResponse": "scratch-117/review/reconciliation-001/author-response-claude-001.md",
+    "gptResponse": "scratch-117/review/reconciliation-001/author-response-gpt-001.md",
+    "neutralPairDispositions": "scratch-117/review/reconciliation-001/pair-dispositions.json"
+  },
+  "validation": {
+    "runner": "scratch-117/run-checks-reconciliation.py",
+    "freshResultsDirectory": "scratch-117/author-gates-reconciliation-20261115-final3",
+    "gates": [
+      "lint",
+      "quiz-safety",
+      "linkplan",
+      "reading-exposure-supplemental",
+      "validate",
+      "manifest",
+      "unittest",
+      "budget",
+      "vocabulary",
+      "manifest-rebuild"
+    ],
+    "authority": "Individual JSON receipts and summary.json in the fresh results directory report the executed outcomes and hashes."
+  },
+  "publication": {
+    "pushed": false,
+    "published": false,
+    "independentReviewsStarted": false,
+    "confirmationAndPublicationRemainCoordinatorOwned": true
+  }
+}
