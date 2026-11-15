@@ -59,6 +59,12 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 121: local authoring candidate
+
+The bounded candidate is **徳**, frozen source row 347, with a generated KanjiVG stroke file and a link-only wrapper in the existing 道徳 article. No word article is added. The [source packet](n1-sources/batch-121/) retains complete selected dictionary records, actual baseline comparison cards, source-specific reading distinctions and the author audit. Its supplemental おしえ reading and the whole-word 徳利 reading do not replace pinned metadata. The host reading model is bounded and does not establish native, device, arbitrary-pool or multi-borrow acceptance.
+
+This draft remains unreviewed and unpublished. Published accounting at the base is 250 delivered and 978 undelivered; the local card is not included in that count.
+
 ## Batch 119: local authoring candidate
 
 The bounded candidate is **妥・循**, frozen source rows 225 and 345, with generated KanjiVG stroke files and link-only wrappers in the existing 妥当 and 循環 articles. No word articles are added. The [source packet](n1-sources/batch-119/) records the selected dictionary records, source-specific reading classifications, direct meaning comparisons, and authoring gates. Starter-compatible reading distractors are a deliberate trade-off against closer visual choices. This is a local candidate only; independent review and publication remain pending. The published baseline is 247 delivered and 981 undelivered frozen pending records.
