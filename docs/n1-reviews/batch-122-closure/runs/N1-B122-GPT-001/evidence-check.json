@@ -1,0 +1,441 @@
+{
+  "run": "N1-B122-GPT-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-122\\initial-gpt-001.md",
+    "sha256": "19dbef6ea2d60531b768268ad927be1408d3b64159419814afb6636a3b4946c2"
+  },
+  "verdict": "NEEDS FIX",
+  "formalCitations": [
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "snapshot/kanji/悠.md:3-14",
+      "opened": true,
+      "exactSourceText": "title: leisurely; distant\njlpt: 1\ntags: [jlpt-n1, grade-8, structure-unclassified]\nstrokes: 11\nradical: 心\nradicalNumber: 61\nonyomi: [ユウ]\nkunyomi: []\nquizOnyomi: [ユウ]\nquizKunyomi: []\ndistractors: [側, 後, 達]\nquiz_exclusions: [遠, 久, 永, 楽, 静, 広, 遅, 長, 安, 平, 和, 凪, 休, 息, 寧]"
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "repo/kanji/常.md:3",
+      "opened": true,
+      "exactSourceText": "title: usual; constant"
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "repo/kanji/常.md:20-22",
+      "opened": true,
+      "exactSourceText": "常 covers what is usual, regular, or continuing. 日常 にちじょう concerns everyday life, while 常に つねに means\n\"always\" or \"constantly.\" In [非常口](../words/非常口.md) ひじょうぐち, 非 negates the ordinary:\n非常 means an emergency, and the whole word is an emergency exit."
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "repo/kanji/続.md:3",
+      "opened": true,
+      "exactSourceText": "title: continue"
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "repo/kanji/続.md:20-22",
+      "opened": true,
+      "exactSourceText": "続 expresses something going on, following on, or forming a series. The important pair is\n続く つづく, \"continue,\" and [続ける](../words/続ける.md) つづける, \"keep something going.\"\nThe difference is who or what the sentence presents as continuing."
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "repo/kanji/続.md:32-40",
+      "opened": true,
+      "exactSourceText": "| --- | --- | --- |\n| つづ.く | kun | 続く つづく — continue; last |\n| つづ.ける | kun | [続ける](../words/続ける.md) つづける — continue something |\n| ゾク | on | 連続 れんぞく — succession; series |\n\n## Common words\n\n- [続ける](../words/続ける.md) つづける — keep up; continue\n- 続く つづく — continue; last"
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "evidence/kanjidic2-records.xml:45-68",
+      "opened": true,
+      "exactSourceText": "    <reading_meaning>\n      <rmgroup>\n        <reading r_type=\"pinyin\">you1</reading>\n        <reading r_type=\"korean_r\">yu</reading>\n        <reading r_type=\"korean_h\">유</reading>\n        <reading r_type=\"vietnam\">Du</reading>\n        <reading r_type=\"ja_on\">ユウ</reading>\n        <meaning>permanence</meaning>\n        <meaning>distant</meaning>\n        <meaning>long time</meaning>\n        <meaning>leisure</meaning>\n        <meaning m_lang=\"fr\">éternité</meaning>\n        <meaning m_lang=\"fr\">éloigné</meaning>\n        <meaning m_lang=\"fr\">permanence</meaning>\n        <meaning m_lang=\"fr\">tranquille</meaning>\n        <meaning m_lang=\"es\">distante</meaning>\n        <meaning m_lang=\"es\">mucho tiempo</meaning>\n        <meaning m_lang=\"pt\">permanência</meaning>\n        <meaning m_lang=\"pt\">tempo longo</meaning>\n        <meaning m_lang=\"pt\">distante</meaning>\n        <meaning m_lang=\"pt\">lazer</meaning>\n      </rmgroup>\n      <nanori>ゆ</nanori>\n    </reading_meaning>"
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "evidence/external-snapshots/01-extract.txt:6-8",
+      "opened": true,
+      "exactSourceText": "［常用漢字］　［音］ユウ（イウ）（呉）（漢）　［訓］はるか\n１ 時間的・空間的に、どこまでも続くさま。はるか。「悠遠・悠久」\n２ 気分がゆったりしているさま。「悠然・悠長・悠揚・悠悠自適」"
+    },
+    {
+      "item": "F1",
+      "reportLine": 103,
+      "citation": "repo/docs/content-format.md:104-123",
+      "opened": true,
+      "exactSourceText": "both against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n\nEditorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.\nThis behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);\nlarger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.\n\n### Curated reading questions\n\nKeep complete sourced `onyomi` / `kunyomi` metadata and its order, including rare readings. Use the optional quiz lists to select\nuseful question material independently: declare each once with an unquoted, unindented key and an inline list of distinct,\nnonempty kana strings exactly as written in the matching full list, including script, dots and dashes. Simple quotes around\nvalues are allowed; quoted keys, duplicates, indentation, block lists, nulls and malformed lists are not."
+    }
+  ],
+  "issues": [],
+  "comparisons": [
+    {
+      "id": "D1",
+      "card": "易",
+      "reportLine": 68,
+      "displayedTitle": "easy",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Easy/not difficult is the displayed option and the article's teaching (repo/kanji/易.md:3; repo/kanji/易.md:20-22). JMdict independently gives 悠々 \"easily\", but this is whole-word evidence, not automatic constituent allocation (evidence/jmdict-families.xml:132-163).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: ease plausibly overlaps relaxed leisure, but the supplied character definitions do not explicitly establish effortless achievement for bare 悠. No direct pair is declared on either endpoint (repo/kanji/易.md:1-12; snapshot/kanji/悠.md:14); not a current curated option."
+    },
+    {
+      "id": "D2",
+      "card": "簡",
+      "reportLine": 69,
+      "displayedTitle": "simplicity; brevity",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes simple/easy 簡単 as well as choosing, tags and intention (repo/kanji/簡.md:20-46). The relevant overlap is easy achievement, not brevity or ticket meanings (evidence/jmdict-families.xml:145-153).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: no independent comparison entry supplied establishes whether its simplicity/ease makes the title defensible for 悠. Compound status alone does not dismiss that possibility. Pair absent on both endpoints (repo/kanji/簡.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D3",
+      "card": "単",
+      "reportLine": 70,
+      "displayedTitle": "single; simple",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article explicitly includes uncomplicated 単純, while warning that an individual word need not be easy (repo/kanji/単.md:20-22; repo/kanji/単.md:35-37). 悠々 has an independently sourced without-difficulty sense (evidence/jmdict-families.xml:145-153).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: the strongest question is simple/uncomplicated versus relaxed or easy achievement, not single versus distant. Neither word-to-character allocation nor its absence is independently settled. Pair absent both endpoints (repo/kanji/単.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D4",
+      "card": "慢",
+      "reportLine": 71,
+      "displayedTitle": "arrogance; slackness",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes negligent attitude, slow/sluggish 緩慢 and chronic duration, not just arrogance (repo/kanji/慢.md:23-36; repo/kanji/慢.md:56-60). 悠 independently has relaxed leisure and lasting extent (evidence/external-snapshots/01-extract.txt:6-8; evidence/kanjidic2-records.xml:45-68).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: negative negligence versus neutral leisure may matter, but does not settle slow pace or chronic duration. No independent 慢 dictionary entry was supplied. Pair absent both endpoints (repo/kanji/慢.md:14; snapshot/kanji/悠.md:14). 慢–遅 and 慢–永 do not transitively guard 悠–慢; not curated."
+    },
+    {
+      "id": "D5",
+      "card": "常",
+      "reportLine": 72,
+      "displayedTitle": "usual; constant",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The actual title includes constant; its article also says continuing and always (repo/kanji/常.md:3; repo/kanji/常.md:20-22). 悠 independently includes permanence and indefinitely continuing temporal extent (evidence/kanjidic2-records.xml:45-68; evidence/external-snapshots/01-extract.txt:6-8).",
+      "disposition": "Collision-needing-exclusion, F1: constant is defensible against 悠's permanence, regardless of the unrelated usual sense. Pair absent both endpoints (repo/kanji/常.md:1-12; snapshot/kanji/悠.md:14); not currently curated, but the contract covers fallbacks."
+    },
+    {
+      "id": "D6",
+      "card": "延",
+      "reportLine": 73,
+      "displayedTitle": "prolong; postpone",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Extending a period/event, spreading out, aggregate totals and postponement all appear in the article (repo/kanji/延.md:20; repo/kanji/延.md:29-44). 悠's independent definition includes continuing spatial/temporal extent (evidence/external-snapshots/01-extract.txt:7).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: postpone alone differs, but extending duration is the strongest overlap. Causation versus a continuing state is relevant, not sufficient proof of nonambiguity. Pair absent both endpoints (repo/kanji/延.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D7",
+      "card": "幅",
+      "reportLine": 74,
+      "displayedTitle": "width; breadth",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes range/difference as well as physical breadth and distinguishes the noun from 広い (repo/kanji/幅.md:20). 悠 independently extends through space; 悠々 also has boundless scope (evidence/external-snapshots/01-extract.txt:7; evidence/jmdict-families.xml:154-163).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: not established to be exclusively physical, and a noun/adjective difference alone cannot dismiss breadth versus boundlessness. Pair absent both endpoints (repo/kanji/幅.md:1-12; snapshot/kanji/悠.md:14). 悠–広 does not guard 悠–幅; not curated."
+    },
+    {
+      "id": "D8",
+      "card": "優",
+      "reportLine": 75,
+      "displayedTitle": "gentle; superior",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes kindness, excellence and actors, and explicitly contrasts kind versus easy (repo/kanji/優.md:20-22; repo/kanji/優.md:38-46). The plausible overlap is gentle/relaxed composure, not superiority (evidence/external-snapshots/01-extract.txt:8).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: kindness differs from leisure, but the supplied independent sources do not settle the full gentle sense. Search-only 優游 spellings in a whole-word family are not a standalone 優 gloss (evidence/jmdict-families.xml:11-18). Pair absent both endpoints (repo/kanji/優.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D9",
+      "card": "遊",
+      "reportLine": 76,
+      "displayedTitle": "play",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Recreation, enjoying oneself and spending time with friends are included; instrument-playing is explicitly distinguished (repo/kanji/遊.md:20-21; repo/kanji/遊.md:35-44). 悠 independently has leisure (evidence/kanjidic2-records.xml:45-68).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: the strongest overlap is leisure/recreation, not music. Shared enjoyment alone does not prove a collision, while absence of a leisure gloss from this article does not prove its absence. Pair absent both endpoints (repo/kanji/遊.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D10",
+      "card": "娯",
+      "reportLine": 77,
+      "displayedTitle": "recreation; amusement",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Enjoyment/recreation is not restricted to childish or frivolous activity (repo/kanji/娯.md:23-26). The relevant comparison is leisure, independently sourced for 悠 (evidence/kanjidic2-records.xml:45-68).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: leisure and amusement can differ, but no independent 娯 character/word entry was supplied to settle the overlap. Pair absent both endpoints (repo/kanji/娯.md:14; snapshot/kanji/悠.md:14). 娯–楽 does not guard 悠–娯; not curated."
+    },
+    {
+      "id": "D11",
+      "card": "余",
+      "reportLine": 78,
+      "displayedTitle": "surplus",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article positively includes helpful spare time as well as excess/unused amounts (repo/kanji/余.md:20-22; repo/kanji/余.md:44). 悠々 independently has easy/comfortable achievement (evidence/jmdict-families.xml:145-153).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: surplus is not simply ease, but spare time/leeway is the strongest overlap and cannot be dismissed merely as a noun. No independent 余 family was supplied. Pair absent both endpoints (repo/kanji/余.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D12",
+      "card": "快",
+      "reportLine": 79,
+      "displayedTitle": "pleasant; agreeable",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Comfortable, enjoyable/amusing and refreshing uses appear beyond the title (repo/kanji/快.md:20; repo/kanji/快.md:35-38). 悠 independently has relaxed mood and 悠々 comfortable ease (evidence/external-snapshots/01-extract.txt:8; evidence/jmdict-families.xml:145-153).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: pleasantness is not automatically calm, but the comfortable secondary sense needs independent comparison evidence. Pair absent both endpoints (repo/kanji/快.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D13",
+      "card": "伸",
+      "reportLine": 80,
+      "displayedTitle": "stretch; lengthen",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes development of ability, growth, laying out and extending, not only physical stretching (repo/kanji/伸.md:20; repo/kanji/伸.md:29-35). 悠 independently has spatial/temporal continuation (evidence/external-snapshots/01-extract.txt:7).",
+      "disposition": "UNVERIFIED between collision-needing-exclusion and harmless: the strongest overlap is extended length/duration; object examples do not establish an exclusively physical restriction. A change versus state contrast is insufficient by itself. Pair absent both endpoints (repo/kanji/伸.md:1-12; snapshot/kanji/悠.md:14); not curated."
+    },
+    {
+      "id": "D14",
+      "card": "続",
+      "reportLine": 81,
+      "displayedTitle": "continue",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The actual answer is continue; the article includes continuing/lasting and succession (repo/kanji/続.md:3; repo/kanji/続.md:20-22; repo/kanji/続.md:32-40). Independent Daijisen defines 悠 as time/space continuing without end (evidence/external-snapshots/01-extract.txt:7).",
+      "disposition": "Collision-needing-exclusion, F1: continue is a defensible broad answer to that ordinary secondary character sense. Succession need not be synonymous with eternity for this overlap to matter. Pair absent both endpoints (repo/kanji/続.md:1-12; snapshot/kanji/悠.md:14); not currently curated."
+    },
+    {
+      "id": "E1",
+      "card": "遠",
+      "reportLine": 82,
+      "displayedTitle": "far",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Far/distant matches 悠's displayed distant and independent character definition; the supplied 遠い family also retains temporal, relational and degree senses (repo/kanji/遠.md:3; evidence/external-snapshots/01-extract.txt:7; evidence/jmdict-families.xml:309-361).",
+      "disposition": "Already handled: direct 悠–遠 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/遠.md:1-12). A required distance collision guard; no claim of universal interchangeability or current curated exposure."
+    },
+    {
+      "id": "E2",
+      "card": "久",
+      "reportLine": 83,
+      "displayedTitle": "a long time",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The actual title is exactly the independently sourced long-time meaning of 悠; the article distinguishes elapsed intervals from activity duration (repo/kanji/久.md:3; repo/kanji/久.md:20; repo/kanji/久.md:39; evidence/kanjidic2-records.xml:45-68).",
+      "disposition": "Already handled: direct 悠–久 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/久.md:1-12). Required long-time guard, not an assertion that 久しぶり means prolonged activity; not curated."
+    },
+    {
+      "id": "E3",
+      "card": "永",
+      "reportLine": 84,
+      "displayedTitle": "eternity; enduring duration",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Actual eternity/enduring title overlaps independently sourced permanence/long time and Daijisen's temporal continuation (repo/kanji/永.md:3; repo/kanji/永.md:20; evidence/kanjidic2-records.xml:45-68; evidence/external-snapshots/01-extract.txt:7).",
+      "disposition": "Already handled: direct 悠–永 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/永.md:1-12). Required duration guard; 永い's time scope is retained, not generalized to every physical object; not curated."
+    },
+    {
+      "id": "E4",
+      "card": "楽",
+      "reportLine": 85,
+      "displayedTitle": "music, enjoyment, ease",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Ease/comfortable relaxation, not music, is the relevant displayed/secondary overlap. The independent 楽 family retains peace, relaxation, easy and economically comfortable senses separately from pottery/Buddhism/music (repo/kanji/楽.md:3; evidence/jmdict-families.xml:402-454; evidence/external-snapshots/01-extract.txt:8).",
+      "disposition": "Already handled: direct 悠–楽 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/楽.md:1-12). Appropriate relaxation/ease guard without equating ease and enjoyment; not curated."
+    },
+    {
+      "id": "E5",
+      "card": "静",
+      "reportLine": 86,
+      "displayedTitle": "quiet",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Quiet and calm are independently supplied for 悠/悠々; 静か independently also includes slow/unhurried and peaceful, not just silence (repo/kanji/静.md:3; evidence/jmdict-families.xml:256-278; evidence/jmdict-families.xml:483-519).",
+      "disposition": "Already handled: direct 悠–静 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/静.md:1-12). Appropriate quiet/calm/unhurried guard. The bare-悠 JMdict entry is archaic; ordinary character relaxed mood is separately corroborated by Daijisen (evidence/external-snapshots/01-extract.txt:8); not curated."
+    },
+    {
+      "id": "E6",
+      "card": "広",
+      "reportLine": 87,
+      "displayedTitle": "wide, spacious",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Width/space and spreading/extension appear in the comparison, including breadth and available space (repo/kanji/広.md:20; repo/kanji/広.md:27-43). Independent 悠 character evidence gives spatial continuation; 悠々 includes boundless scope (evidence/external-snapshots/01-extract.txt:7; evidence/jmdict-families.xml:154-163).",
+      "disposition": "Already handled: direct 悠–広 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/広.md:1-12). Conservative spatial-extent guard; dictionary whole-word boundlessness does not license every substitution of wide; not curated."
+    },
+    {
+      "id": "E7",
+      "card": "遅",
+      "reportLine": 88,
+      "displayedTitle": "late; slow",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Slow is independently documented in 悠長, while Daijisen places 悠長 under the relaxed-mood character sense; comparison includes low speed as well as lateness (evidence/jmdict-families.xml:79-99; evidence/external-snapshots/01-extract.txt:8; repo/kanji/遅.md:20-21).",
+      "disposition": "Already handled: direct 悠–遅 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/遅.md:1-12). Conservative unhurried/slow guard; no assertion that leisure always means lateness or that easy train-catching is slow; not curated."
+    },
+    {
+      "id": "E8",
+      "card": "長",
+      "reportLine": 89,
+      "displayedTitle": "long, chief",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed long sense and article's space/time lengths overlap independently sourced long time and extended distance, not leadership (repo/kanji/長.md:3; repo/kanji/長.md:20-22; evidence/kanjidic2-records.xml:45-68; evidence/external-snapshots/01-extract.txt:7).",
+      "disposition": "Already handled: direct 悠–長 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/長.md:1-12). Required duration/extent guard, not a chief-sense equivalence; not curated."
+    },
+    {
+      "id": "E9",
+      "card": "安",
+      "reportLine": 90,
+      "displayedTitle": "cheap, peaceful",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Peaceful/at ease, not low price, overlaps relaxed mood. Independent 安らか includes peaceful, tranquil, calm and restful (repo/kanji/安.md:3; repo/kanji/安.md:20-21; evidence/jmdict-families.xml:281-302; evidence/external-snapshots/01-extract.txt:8).",
+      "disposition": "Already handled: direct 悠–安 declared on 悠 only (snapshot/kanji/悠.md:14; repo/kanji/安.md:1-12). Appropriate calm/ease guard; cheap and ease-of-understanding suffixes are not conflated; not curated."
+    },
+    {
+      "id": "E10",
+      "card": "寧",
+      "reportLine": 91,
+      "displayedTitle": "polite; peaceful",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "悠": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The actual peaceful title and article's calm/settled peace and tranquility overlap 悠's independently corroborated relaxed/calm side (repo/kanji/寧.md:3; repo/kanji/寧.md:23-34; evidence/external-snapshots/01-extract.txt:8; evidence/jmdict-families.xml:256-278).",
+      "disposition": "Already handled: direct 悠–寧 declared on 悠, not 寧 (snapshot/kanji/悠.md:14; repo/kanji/寧.md:14). Appropriate peaceful/calm guard, not a claim that politeness, carefulness or \"rather\" means leisure; not curated."
+    }
+  ],
+  "sourceFilesRehashed": 57,
+  "newTitles": {
+    "悠": "leisurely; distant"
+  },
+  "acceptanceLimit": "Mechanics and factual source bindings only; no linguistic verdict is inferred."
+}
