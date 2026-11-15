@@ -59,6 +59,21 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 118: local authoring candidate
+
+The bounded candidate is **析**, frozen source row 528, with its generated
+KanjiVG stroke file and one link-only wrapper in the existing 分析 article.
+No word article is added. Source records, direct meaning comparisons, and
+reading-classification evidence are in [batch-118](n1-sources/batch-118/).
+The three starter-compatible reading distractors are a deliberate trade-off
+against closer visual choices: source-only alternatives can otherwise reach
+fallback options in smaller pools. The bounded host model does not establish
+native, device, arbitrary-pool, or multi-borrow acceptance.
+
+This is a local candidate only: independent review and publication remain
+pending. The published baseline remains 246 delivered and 982 undelivered
+frozen pending records, including six earlier N2 placements.
+
 ## Batch 117: reconciled local candidate; initial review complete
 
 The four cards are **紀・索・維・賃**, from source rows 821, 830, 844 and 1045. Each has one generated KanjiVG stroke file and one required reciprocal link wrapper in its existing support word: 世紀, 索引, 維持 and 家賃. No word articles were added; the four existing articles retain their metadata and non-link prose. The source and authoring receipts and exact changed-file inventory are in [batch-117](n1-sources/batch-117/).
