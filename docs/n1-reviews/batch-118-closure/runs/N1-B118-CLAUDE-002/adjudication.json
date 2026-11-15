@@ -1,0 +1,48 @@
+{
+  "run": "N1-B118-CLAUDE-002",
+  "candidate": "dc2ee12623b36eb059d147ece2f2cfa3f87dfad7",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-118\\initial-claude-002.md",
+    "sha256": "4bae516469b2d9a4bd3bfa4b952bd5c6e214ba13a72b4aec22ede19f3b0da73e"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-CLAUDE-002-final.json",
+    "sha256": "f7833b826960c089171c4592d77d3596788a75c7c4a127f68d14d76a2244f7a7"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-CLAUDE-002-evidence-check.json",
+    "sha256": "0ad9a0fe0ad81a2432642c632e0fa0181fa9063795f7d8b42bbdc5280f00327c",
+    "mechanicalCitationIssues": 0,
+    "sourceFilesRehashed": 60,
+    "comparisonRows": 27,
+    "substantiveCitationCaveat": "O2 and D3 cite kanjidic2-records.xml:57-60 as raw chop/divide evidence, but those lines contain French/Spanish meanings. The English chop/divide/tear/analyze entries are at lines 51-54; source-metadata.json:18-23 also supplies them. The raw report is preserved, not corrected or rerun."
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "The frozen card teaches separating into parts (snapshot/kanji/析.md:23). This is independently supported by the character-level Daijisen definition こまかく分かつ (evidence/external-snapshots/01-extract.txt:7) and KANJIDIC2 divide (evidence/kanjidic2-records.xml:52), without treating a whole-word JMdict gloss as a general character meaning. 別 and 離 both display separate, and neither direct pair is declared on either endpoint. Existing 析/分 and 分/離 declarations do not cover 析/離. The content contract requires checking displayed labels against ordinary meanings and explicitly makes exclusions non-transitive (repo/docs/content-format.md:97-114).",
+      "fix": "Append 別 and 離 to 析's quiz_exclusions while preserving all original exclusions, and explain the direct separation overlap concisely in Notes. Do not remove the source-supported dividing sense merely to suppress the collision.",
+      "scope": "A bounded semantic safeguard. Current curated choices already fill all slots; this does not claim a demonstrated collision in the current default pool or native/arbitrary-pool acceptance."
+    }
+  ],
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "disposition": "accepted-as-optional-clarification",
+      "basis": "The only supplied へぎ board evidence is explicitly historical terminology. The card already separates this from selected readings, and 盤 displays board. On the ordinary-meaning contract this establishes a rationale needing qualification, not a mandatory new 析/盤 exclusion.",
+      "suggestion": "Preserve the existing 板 exclusion and identify it as precautionary for the historical へぎ entry. Do not call 析/盤 universally safe or add it solely because exclusions are thought transitive."
+    },
+    {
+      "id": "O2",
+      "disposition": "accepted-as-optional-clarification-with-citation-caveat",
+      "basis": "KANJIDIC2's English chop gloss is real at lines 51-54, although the report cites the wrong range. 断 teaches sever/cut off, but the supplied character definitions for 析 do not explicitly give sever. The report itself does not establish a necessary new 析/断 exclusion.",
+      "suggestion": "Preserve the existing 切 guard and make its raw chop-gloss rationale explicit without implying that every cutting-family title is automatically unsafe. No new exclusion is required by this optional point alone."
+    }
+  ],
+  "reviewLimits": "Accept this as independent bounded textual evidence with the raw NEEDS FIX verdict. The audit verifies Claude-family execution, all 13 core and 6 extension segments, one write/readback, no fetches or unexpected messages, and full-context/structure PASS. The localized optional citation caveat does not invalidate F1. Preserve the report's native/phone, geometry, unrequested-comparison and source limits.",
+  "priorAttempt": "Claude-001 remains excluded under its frozen structure hold. Its raw report was not used as accepted evidence or supplied to Claude-002.",
+  "next": "Obtain the independent GPT initial review on the unchanged candidate before author reconciliation; supply no Claude findings to GPT.",
+  "publicationAccepted": false
+}

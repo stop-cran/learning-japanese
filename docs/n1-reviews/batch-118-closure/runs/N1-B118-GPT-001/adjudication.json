@@ -1,0 +1,39 @@
+{
+  "run": "N1-B118-GPT-001",
+  "candidate": "dc2ee12623b36eb059d147ece2f2cfa3f87dfad7",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-118\\initial-gpt-001.md",
+    "sha256": "7fcd193f61bfb5f6d12c74356f0cdef27c506686aad4b4da6f46b3233374dc45"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-GPT-001-final.json",
+    "sha256": "67ab09eca4a1384c6664d17b6f5edd8147c5b79ab7aa7aaff66c574754816e7b"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-GPT-001-evidence-check.json",
+    "sha256": "e7432b7304de13e2f3dc8a23f7e8e0aec9be26cb19738f89f4b1ac757d13bb3a",
+    "mechanicalCitationIssues": 0,
+    "sourceFilesRehashed": 52,
+    "comparisonRows": 19,
+    "substantiveCitationCaveat": "D2 and F1 cite repo/kanji/離.md:15 for 離's existing 別/分 guards, but line 15 is the closing front-matter delimiter; quiz_exclusions [別, 分, 放, 去] is at line 14 (also inside the opened 1-14 range). The claim is correct; the raw report is preserved, not corrected or rerun."
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "Independently matches accepted Claude-002 F1. The character-level Daijisen entry defines 析 as こまかく分かつ / こみ入ったものを解きほぐす (evidence/external-snapshots/01-extract.txt:4-7) and KANJIDIC2 lists divide (evidence/kanjidic2-records.xml:52); the frozen card itself teaches separating things into parts (snapshot/kanji/析.md:23). 別 displays 'separate, another' (repo/kanji/別.md:3) and 離 displays 'separate; detach' (repo/kanji/離.md:3). 析.md:14 declares [分, 解, 割, 切, 破, 剖, 板]; 別.md has no quiz_exclusions; 離.md:14 declares [別, 分, 放, 去] but not 析. The content contract makes exclusions symmetric but non-transitive and requires checking displayed labels against ordinary meanings (repo/docs/content-format.md:100-114).",
+      "fix": "Append 別 and 離 to 析's quiz_exclusions while preserving all seven original exclusions, and explain the direct separation overlap concisely in Notes. Do not remove the source-supported dividing sense to suppress the collision or claim the characters' words are interchangeable.",
+      "scope": "A bounded semantic safeguard. Neither is among 析's current curated distractors; this does not claim a demonstrated default-pool collision or native/arbitrary-pool acceptance."
+    }
+  ],
+  "optionalPoints": [],
+  "unresolvedLimits": {
+    "D3-D12": "Reported UNVERIFIED (断, 絶, 削, 折, 研, 究, 査, 調, 察, 考): explicitly not findings and not harmlessness conclusions. Not converted into required changes; the author may address them only with source-backed reasoning during reconciliation.",
+    "L3": "Unread screening candidates 盤, 片, 刈, 判, 診, 討, 試 are title-index observations only; 盤 also appears in Claude-002 O1. No required change is established."
+  },
+  "reviewLimits": "Accept as independent bounded GPT-family textual evidence with the raw NEEDS FIX verdict. The final audit verifies gpt-6.1-sol execution, all 13 core and 4 extension segments, one write/readback, no fetches or unexpected messages, and full-context/structure PASS. The localized 離.md:15 citation caveat does not invalidate F1. No Claude findings, adjudications or author hints were supplied to this reviewer.",
+  "crossFamilyAgreement": "Claude-002 F1 and GPT-001 F1 independently require the same 析/別 and 析/離 direct exclusions.",
+  "next": "Send both raw reports and both adjudications separately to the original author session 9be30aab-8ffc-4480-b1be-caf6a27a0a8c for source-backed signed reconciliation.",
+  "publicationAccepted": false
+}

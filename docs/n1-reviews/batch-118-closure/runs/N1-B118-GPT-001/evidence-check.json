@@ -1,0 +1,359 @@
+{
+  "run": "N1-B118-GPT-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-118\\initial-gpt-001.md",
+    "sha256": "7fcd193f61bfb5f6d12c74356f0cdef27c506686aad4b4da6f46b3233374dc45"
+  },
+  "verdict": "NEEDS FIX",
+  "formalCitations": [
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "evidence/external-snapshots/01-extract.txt:4-7",
+      "opened": true,
+      "exactSourceText": "せき【析】\n読み方：せき\n［常用漢字］　［音］セキ（漢）\nこまかく分かつ。こみ入ったものを解きほぐす。「析出／解析・透析・分析」"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "evidence/kanjidic2-records.xml:51-54",
+      "opened": true,
+      "exactSourceText": "        <meaning>chop</meaning>\n        <meaning>divide</meaning>\n        <meaning>tear</meaning>\n        <meaning>analyze</meaning>"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "repo/kanji/別.md:3",
+      "opened": true,
+      "exactSourceText": "title: separate, another"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "repo/kanji/別.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 別\ntitle: separate, another\njlpt: 4\ntags: [jlpt-n4, grade-4, structure-unclassified]\nstrokes: 7\nradical: 刀\nradicalNumber: 18\nonyomi: [ベツ]\nkunyomi: [わか.れる, わ.ける]\ndistractors: [男, 勉, 帰]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "repo/kanji/離.md:3",
+      "opened": true,
+      "exactSourceText": "title: separate; detach"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "repo/kanji/離.md:15",
+      "opened": true,
+      "exactSourceText": "---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "snapshot/kanji/析.md:13-14",
+      "opened": true,
+      "exactSourceText": "distractors: [新, 本, 休]\nquiz_exclusions: [分, 解, 割, 切, 破, 剖, 板]"
+    },
+    {
+      "item": "F1",
+      "reportLine": 89,
+      "citation": "repo/docs/content-format.md:100-120",
+      "opened": true,
+      "exactSourceText": "they are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n\nEditorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.\nThis behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);\nlarger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.\n\n### Curated reading questions\n\nKeep complete sourced `onyomi` / `kunyomi` metadata and its order, including rare readings. Use the optional quiz lists to select"
+    }
+  ],
+  "issues": [],
+  "comparisons": [
+    {
+      "id": "D1",
+      "card": "別",
+      "reportLine": 59,
+      "displayedTitle": "separate, another",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The separate option overlaps independently attested fine division, not merely analysis as a shared topic: evidence/external-snapshots/01-extract.txt:4-7; repo/kanji/別.md:3. The article also covers difference and people parting, without restricting the displayed separate sense to people: repo/kanji/別.md:20-22; repo/kanji/別.md:41.",
+      "disposition": "Collision-needing-exclusion, F1. No direct pair declared on either endpoint: snapshot/kanji/析.md:14; repo/kanji/別.md:1-12."
+    },
+    {
+      "id": "D2",
+      "card": "離",
+      "reportLine": 60,
+      "displayedTitle": "separate; detach",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Separate is a defensible answer to the character's sourced divide/separate sense: evidence/kanjidic2-records.xml:51-54; evidence/external-snapshots/01-extract.txt:7; repo/kanji/離.md:3. Distance, departure and divorce are additional article uses, not a restriction eliminating its separation sense: repo/kanji/離.md:23-27.",
+      "disposition": "Collision-needing-exclusion, F1. No direct 析 pair on either endpoint; 離's 別/分 guards are not transitive: repo/kanji/離.md:15; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D3",
+      "card": "断",
+      "reportLine": 61,
+      "displayedTitle": "sever; refuse",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Sourced chop/divide/tear makes sever a plausible overlap, while the article explicitly includes cut off, judgment, notice and permission: evidence/kanjidic2-records.xml:51-54; repo/kanji/断.md:20-22; repo/kanji/断.md:43-46. Independent comparison-character evidence establishing the applicable cutoff boundary is absent.",
+      "disposition": "UNVERIFIED whether a further direct guard is required; not adjudicated harmless from refuse or judgment. No pair declared on either endpoint: repo/kanji/断.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D4",
+      "card": "絶",
+      "reportLine": 62,
+      "displayedTitle": "sever; cease",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Cut-off connection/flow and cessation, plus beyond-comparison usage, require consideration against chop/divide, not dismissal as exclusively abstract: repo/kanji/絶.md:20-22; repo/kanji/絶.md:31-38; evidence/kanjidic2-records.xml:51-54. No independent 絶 character entry was supplied.",
+      "disposition": "UNVERIFIED whether sever creates a required direct collision; no pair on either endpoint: repo/kanji/絶.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D5",
+      "card": "削",
+      "reportLine": 63,
+      "displayedTitle": "shave; sharpen; pare",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Physical shaving/slicing and the historical thin split board create a plausible boundary question; reduction, deletion and figurative weakening must also be considered: repo/kanji/削.md:22; repo/kanji/削.md:31-32; repo/kanji/削.md:47-49; evidence/external-snapshots/01-extract.txt:12-15. A board noun does not itself establish a constituent shaving verb.",
+      "disposition": "UNVERIFIED whether pare is an ordinary alternative for 析; no independent 削 entry settles the distinction and no direct guard is declared on either endpoint: repo/kanji/削.md:1-14; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D6",
+      "card": "折",
+      "reportLine": 64,
+      "displayedTitle": "fold",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Fold differs from the opened target glosses, but the comparison also teaches snapping and breaking by bending. That strongest secondary overlap cannot be discarded because fold is the title: repo/kanji/折.md:20-21; repo/kanji/折.md:30-39; evidence/kanjidic2-records.xml:51-54.",
+      "disposition": "UNVERIFIED whether the secondary break sense requires a direct pair; the sources do not independently settle it. No pair on either endpoint: repo/kanji/折.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D7",
+      "card": "研",
+      "reportLine": 65,
+      "displayedTitle": "polish; study closely",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Study closely can plausibly describe analyzing complex material; sharpening, polishing and training do not erase that title sense: repo/kanji/研.md:3; repo/kanji/研.md:20-21; repo/kanji/研.md:30-37; evidence/external-snapshots/01-extract.txt:7. Independent 研 character evidence was not supplied.",
+      "disposition": "UNVERIFIED whether the broad study label is a sufficiently ordinary alternative to require exclusion; not harmless merely because research is broader. No pair on either endpoint: repo/kanji/研.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D8",
+      "card": "究",
+      "reportLine": 66,
+      "displayedTitle": "investigate thoroughly",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Pursuing a subject deeply, mastering it and investigation to establish facts are the strongest relevant comparison senses: repo/kanji/究.md:20-21; repo/kanji/究.md:32-38. The independently supplied target means analysis and fine division, but does not establish an exclusive boundary with investigation: evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "UNVERIFIED whether a direct guard is required; neither shared research compounds nor the broad label alone prove collision or harmlessness. No pair on either endpoint: repo/kanji/究.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D9",
+      "card": "査",
+      "reportLine": 67,
+      "displayedTitle": "investigate; inspect",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Examination/testing and information gathering can overlap; the article itself rejects an exclusive division: repo/kanji/査.md:20; repo/kanji/査.md:37. The target's analytical unpacking could be called examination, but independent 査 evidence is unavailable: evidence/external-snapshots/01-extract.txt:7.",
+      "disposition": "UNVERIFIED whether the actual investigate/inspect option requires a direct guard; not harmless from a gather-versus-analyze slogan. No pair on either endpoint: repo/kanji/査.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D10",
+      "card": "調",
+      "reportLine": 68,
+      "displayedTitle": "investigate; tune",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Examine/check/look up is the potentially overlapping side; tone, condition and health are additional senses, not evidence that investigation excludes analysis: repo/kanji/調.md:20-22; repo/kanji/調.md:36-42; evidence/external-snapshots/01-extract.txt:7. No independent 調 article was supplied.",
+      "disposition": "UNVERIFIED whether investigate is a defensible target option requiring a direct guard. No pair on either endpoint: repo/kanji/調.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D11",
+      "card": "察",
+      "reportLine": 69,
+      "displayedTitle": "observe; infer",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Looking closely and judging from clues may involve analysis, but related activities alone do not establish synonymy; police is another lexical use, not a semantic restriction: repo/kanji/察.md:20-22; repo/kanji/察.md:35-42; evidence/external-snapshots/01-extract.txt:7. Independent 察 evidence is absent.",
+      "disposition": "UNVERIFIED whether the observe/infer label or secondary judge sense creates a required collision. No pair on either endpoint: repo/kanji/察.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "D12",
+      "card": "考",
+      "reportLine": 70,
+      "displayedTitle": "think over",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Considering possibilities and forming judgments is the strongest overlap with analysis. The comparison expressly describes a tendency rather than a logical/emotional rule: repo/kanji/考.md:20-21; repo/kanji/考.md:43-44; evidence/external-snapshots/01-extract.txt:7. No independent 考 sense evidence resolves this boundary.",
+      "disposition": "UNVERIFIED whether a direct guard is required; broad thinking is not automatically synonymous with analysis or proven harmless. No pair on either endpoint: repo/kanji/考.md:1-12; snapshot/kanji/析.md:14."
+    },
+    {
+      "id": "E1",
+      "card": "分",
+      "reportLine": 71,
+      "displayedTitle": "minute, part",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The target's independently sourced fine division supports the potential part/division connection; the actual comparison additionally teaches divide, separate, understand and literary parting: evidence/external-snapshots/01-extract.txt:7; repo/kanji/分.md:20-21; repo/kanji/分.md:30-33. The minute sense alone would not settle this pair.",
+      "disposition": "Already handled by the direct declaration on 析, not on 分: snapshot/kanji/析.md:14; repo/kanji/分.md:1-12. Guard is defensible; independent confirmation of every 分 secondary sense was not supplied."
+    },
+    {
+      "id": "E2",
+      "card": "解",
+      "reportLine": 72,
+      "displayedTitle": "unravel; solve",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed unravel matches the independently sourced 解きほぐす target sense. The comparison includes untying, solving, understanding and figurative analysis: evidence/external-snapshots/01-extract.txt:7; repo/kanji/解.md:3; repo/kanji/解.md:20-22; repo/kanji/解.md:39-44. Solving and understanding need not be identical for unravel to collide.",
+      "disposition": "Already handled; the direct pair is declared on 析 only: snapshot/kanji/析.md:14; repo/kanji/解.md:1-12."
+    },
+    {
+      "id": "E3",
+      "card": "割",
+      "reportLine": 73,
+      "displayedTitle": "split; proportion",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Split overlaps the independent divide gloss and fine-division sense; proportion and object breaking do not remove it: evidence/kanjidic2-records.xml:51-54; evidence/external-snapshots/01-extract.txt:7; repo/kanji/割.md:3; repo/kanji/割.md:20-22; repo/kanji/割.md:38-41.",
+      "disposition": "Already handled; direct pair on 析 only: snapshot/kanji/析.md:14; repo/kanji/割.md:1-12."
+    },
+    {
+      "id": "E4",
+      "card": "切",
+      "reportLine": 74,
+      "displayedTitle": "cut",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Chop is a kind of cutting, independently recorded for the target; the actual cut label remains defensible despite the comparison's end/disconnect and important/precious uses: evidence/kanjidic2-records.xml:51-54; repo/kanji/切.md:3; repo/kanji/切.md:20; repo/kanji/切.md:36-39.",
+      "disposition": "Already handled; direct pair on 析 only: snapshot/kanji/析.md:14; repo/kanji/切.md:1-12."
+    },
+    {
+      "id": "E5",
+      "card": "破",
+      "reportLine": 75,
+      "displayedTitle": "tear; break",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Tear is an exact independent target gloss. The comparison includes destruction and qualifies the breadth of break; no unrestricted word substitution is inferred: evidence/kanjidic2-records.xml:51-54; repo/kanji/破.md:3; repo/kanji/破.md:20-22; repo/kanji/破.md:36-38.",
+      "disposition": "Already handled; direct pair on 析 only: snapshot/kanji/析.md:14; repo/kanji/破.md:1-12."
+    },
+    {
+      "id": "E6",
+      "card": "剖",
+      "reportLine": 76,
+      "displayedTitle": "dissect; split open",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Splitting to examine is a plausible overlap with sourced dividing and analytical unpacking; the comparison also explicitly includes figurative analysis without making 剖 an independent general verb: evidence/kanjidic2-records.xml:51-54; evidence/external-snapshots/01-extract.txt:7; repo/kanji/剖.md:22; repo/kanji/剖.md:29-35; repo/kanji/剖.md:43.",
+      "disposition": "Already handled by the direct pair on 析 only: snapshot/kanji/析.md:14; repo/kanji/剖.md:1-14. The guard is defensible; independent confirmation of 剖's figurative constituent meaning remains unavailable."
+    },
+    {
+      "id": "E7",
+      "card": "板",
+      "reportLine": 77,
+      "displayedTitle": "plank; board",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "析": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The independent historical entry explicitly defines 析 as a thin split cedar/cypress board, making board defensible in that qualified sense. Glass plates, blackboards, printing blocks and signalling boards are also considered, not substituted for that narrow noun: evidence/external-snapshots/01-extract.txt:12-15; repo/kanji/板.md:3; repo/kanji/板.md:20; repo/kanji/板.md:39-41.",
+      "disposition": "Already handled; direct pair on 析 only: snapshot/kanji/析.md:14; repo/kanji/板.md:1-12. This does not promote the historical noun to a general modern replacement for 板."
+    }
+  ],
+  "sourceFilesRehashed": 52,
+  "newTitles": {
+    "析": "analyze"
+  },
+  "acceptanceLimit": "Mechanics and factual source bindings only; no linguistic verdict is inferred."
+}
