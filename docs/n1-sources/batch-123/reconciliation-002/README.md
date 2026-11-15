@@ -1,0 +1,5 @@
+# B123 reconciliation 002
+
+This additive packet addresses the direct 範/普 widespread comparison. `comparison-普.md` is the byte-exact actual comparison card, checked against the initial and published baseline snapshots. `query-manifest.json` binds the pinned inputs, exact queries, complete reserialized dictionary members and output hashes. JMdict 1497100 marks あまねく as usually written in kana and marks 周く and 洽く individually rare; 1497110 records the complete 普及 word. The whole-word meanings do not establish 普 as a normative model. The complete KANJIDIC2 普 record supplies its wide/general character senses.
+
+The independent Digital Daijisen 範 character entry separately gives a widespread branch, illustrated by 広範. Its original raw response remains `scratch-123\character-source.html`, SHA-256 `bd5186c6eac77175686cea96d6bec644107205dd94e8ac526a829dcd7a64af88`. The prior nine no-new-guard decisions remain in `../reconciliation-001/pair-dispositions.json`, with their uncertainty, and no new conclusions are inferred for them. The original source and review evidence is unchanged.
