@@ -59,6 +59,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 119: local authoring candidate
+
+The bounded candidate is **妥・循**, frozen source rows 225 and 345, with generated KanjiVG stroke files and link-only wrappers in the existing 妥当 and 循環 articles. No word articles are added. The [source packet](n1-sources/batch-119/) records the selected dictionary records, source-specific reading classifications, direct meaning comparisons, and authoring gates. Starter-compatible reading distractors are a deliberate trade-off against closer visual choices. This is a local candidate only; independent review and publication remain pending. The published baseline is 247 delivered and 981 undelivered frozen pending records.
+
 ## Batch 118: local authoring candidate
 
 The bounded candidate is **析**, frozen source row 528, with its generated
