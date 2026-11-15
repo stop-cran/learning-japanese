@@ -1,0 +1,70 @@
+{
+  "run": "N1-B120-CLAUDE-001",
+  "candidate": "8637cccb25507a1123559041ebba5401203de2db",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-120\\initial-claude-001.md",
+    "sha256": "2e34e22d21b224d9e33f57adce4320092e0fd36b9798cdf1a7456b59fb53aeae"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\review\\N1-B120-CLAUDE-001-evidence-check.json",
+    "sha256": "b09cf819bb7f67b1da32a6aa58169bdeb5236e19257359938e535c0ab7eb2fb6",
+    "mechanicalCitationIssues": 0,
+    "comparisonRows": 14,
+    "substantiveCitationCaveats": [
+      "O1's wrapper is on snapshot/words/逮捕.md:24; line 25 is blank. The full diff citation contains the correct change.",
+      "O4's existing 循 exclusions are at repo/kanji/循.md:14, not 15, and its following/追 comparison is at line 42, not 43. The cited 追 card and JMdict chase/follow-after gloss are substantive supporting evidence.",
+      "D1's 留 card has no quiz_exclusions property; its complete frontmatter is lines 1-12. Line 11 is the distractor list, not an exclusion declaration."
+    ]
+  },
+  "verdict": "UNVERIFIED",
+  "acceptedFindings": [
+    {
+      "id": "O4",
+      "originalClassification": "optional; low confidence",
+      "disposition": "accepted-as-conservative-direct-safeguard",
+      "basis": "逮 displays chase and 循 displays follow; cycle. The opened 追 card explicitly describes following after in pursuit, and the complete 追う entry puts chase and follow after in the same sense. Thus the unqualified follow label can be defensible for the 逮 prompt even though 循's taught examples follow a course or sequence. Existing 循/追 exclusions are corroborating context, not a transitive proof. Neither endpoint declares 逮/循.",
+      "fix": "Append 循 to 逮's exclusions, preserving all original guards and the source-backed chase gloss. Qualify any comparison note so it distinguishes pursuit from following a sequence rather than claiming Japanese-word interchangeability.",
+      "confidence": "medium; a bounded displayed-label precaution, not a reproduced curated/default-pool collision or an assertion that 循 means arrest",
+      "scope": "The raw reviewer report remains UNVERIFIED with no formal Findings. This separate coordinator disposition accepts its O4 suggestion more conservatively than the report's harmless table row."
+    }
+  ],
+  "requiredEvidenceFollowup": [
+    {
+      "id": "D1/L1",
+      "status": "unresolved",
+      "pair": ["逮", "留"],
+      "basis": "留 displays retain; stay and teaches keeping in place. 監's actual lines 146-150 additionally describe 留 as detaining or keeping in place, but that neighboring card is not a substitute for complete applicable dictionary evidence. The direct pair is absent. The report appropriately preserves the uncertainty.",
+      "required": "After both blind initials, inspect complete applicable 留める/留まる and relevant detention families with their spelling/sense restrictions. Record a direct pair disposition against both actual displayed titles; add a guard if supported, otherwise substantiate the non-collision. Preserve the original limited evidence and obtain the original reviewer's confirmation.",
+      "notClaimed": "This is not yet a verified omission or a demand to infer arrest from every compound containing 留."
+    }
+  ],
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "disposition": "mechanically-explained; formatting restoration not required",
+      "basis": "Coordinator verification proves that after the repository-standard CRLF-to-LF normalization, the supporting word differs from the base only by one required 逮 link wrapper. No BOM, textual whitespace or semantic change remains. Both the new card and the word have committed CRLF, while the base word used LF. tools/build_manifest.py and the pinned publication ZIP verifier explicitly normalize text hashes in this way.",
+      "evidence": "scratch-120/review/coordinator-candidate-verification.json, SHA256 698ab9d0efa7b0ee4e7183f69efb853d9fb9e373b76c31e9151a504ee6fc1155, records raw/normalized hashes and CRLF counts. No contributor/source bytes were normalized.",
+      "suggestion": "Keep the raw-byte disclosure and existing proof; no teaching correction or separate formatting-only commit is required."
+    },
+    {
+      "id": "O2",
+      "disposition": "optional-no-expansion-required",
+      "basis": "The Joyo row indeed lists both 逮捕 and 逮夜. Saying it lists タイ in 逮捕 is accurate and sufficient for the selected linked reading. The full row is retained in source evidence.",
+      "suggestion": "No extra compound or article is required. Any optional mention must remain source-qualified and must not imply frequency or broaden practice coverage."
+    },
+    {
+      "id": "O3",
+      "disposition": "optional-clarification",
+      "basis": "KANJIDIC2 genuinely supplies chase, while the other named character entry describes reaching/capturing. The current title is supported. The comparison note can more clearly separate the character gloss from the meaning of the complete arrest word.",
+      "suggestion": "A concise source-attribution clarification is reasonable alongside necessary reconciliation. Preserve the supported title/metadata and do not adopt an unsupported claim that modern usage is exclusively or essentially one compound."
+    }
+  ],
+  "remainingReviewQuestions": [
+    "D1/L1 must be resolved before textual closure; the independent report's UNVERIFIED verdict is not relabelled CLEAN.",
+    "Other harmless rows are bounded observations, not exhaustive lexical proofs. In particular, the categorical claim that a chased target must be in view is not adopted; absence from view alone does not distinguish pursuit from searching.",
+    "L3's unread 禁, 束, 防 and 制 are disclosed screening limits, not established defects or blanket safety approvals. Do not add them merely to expand the review; reconcile consequential evidence from the second initial if any."
+  ],
+  "reviewLimits": "Accepted only as bounded independent UNVERIFIED evidence. The final audit verifies the Claude family, 15 core plus 5 extension reads, one write/readback, zero fetches, no unexpected messages, idle completion and context/structure PASS. Runtime model identity is independently verified despite the reviewer's narrower L6 self-verification limit. No native/device, arbitrary-pool, installed-client or fresh PDF/stroke-geometry acceptance is claimed.",
+  "next": "Run the blind GPT initial on unchanged signed 8637cccb. Do not send Claude's report, this adjudication or the author follow-up questions to GPT. Only after both independent initials send the original reports and separate dispositions to the author for bounded reconciliation.",
+  "publicationAccepted": false
+}

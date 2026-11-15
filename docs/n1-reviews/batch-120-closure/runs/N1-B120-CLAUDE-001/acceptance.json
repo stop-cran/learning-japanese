@@ -1,0 +1,38 @@
+{
+  "run": "N1-B120-CLAUDE-001",
+  "batch": 120,
+  "candidate": "8637cccb25507a1123559041ebba5401203de2db",
+  "createdAt": "2026-11-15T11:06:55.425379+00:00",
+  "preflightSha256": "d4bae5a909e582542eae1c2bad5ac1f86d274bc14ff2e67115b036ee871b9f34",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\review\\prompts\\preflight.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "reviewAccepted": true,
+  "verdict": "UNVERIFIED",
+  "acceptedFindings": [
+    {
+      "id": "O4",
+      "originalClassification": "optional; low confidence",
+      "disposition": "accepted-as-conservative-direct-safeguard",
+      "basis": "逮 displays chase and 循 displays follow; cycle. The opened 追 card explicitly describes following after in pursuit, and the complete 追う entry puts chase and follow after in the same sense. Thus the unqualified follow label can be defensible for the 逮 prompt even though 循's taught examples follow a course or sequence. Existing 循/追 exclusions are corroborating context, not a transitive proof. Neither endpoint declares 逮/循.",
+      "fix": "Append 循 to 逮's exclusions, preserving all original guards and the source-backed chase gloss. Qualify any comparison note so it distinguishes pursuit from following a sequence rather than claiming Japanese-word interchangeability.",
+      "confidence": "medium; a bounded displayed-label precaution, not a reproduced curated/default-pool collision or an assertion that 循 means arrest",
+      "scope": "The raw reviewer report remains UNVERIFIED with no formal Findings. This separate coordinator disposition accepts its O4 suggestion more conservatively than the report's harmless table row."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-120\\initial-claude-001.md",
+    "sha256": "2e34e22d21b224d9e33f57adce4320092e0fd36b9798cdf1a7456b59fb53aeae"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\review\\N1-B120-CLAUDE-001-final.json",
+    "sha256": "475ea66420fc99e3f094aaf8ee261cf3afeb53e2b6a4397c4cb4eab94a784c1a"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\review\\N1-B120-CLAUDE-001-adjudication.json",
+    "sha256": "23d0798b7df7156eab8cec958a1472ed2ea54498320e58f259b15f7db09b615b"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

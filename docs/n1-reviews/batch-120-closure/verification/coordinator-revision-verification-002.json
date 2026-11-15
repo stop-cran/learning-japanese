@@ -1,0 +1,65 @@
+{
+  "scope": "Coordinator mechanical verification of the B120 reconciliation commit; not linguistic review or publication acceptance.",
+  "head": "c986ae49e844c08afc294d9381c7e486f2c9315d",
+  "parents": [
+    "8637cccb25507a1123559041ebba5401203de2db"
+  ],
+  "originalBase": "aab6e2782f093ace1deb4f567c5e4dee8890cbf6",
+  "signature": "G|D4C9A275A218AF747B787AFA9D94B9D311BD26A7|Roman Konstantinovskiy <stop-cran@list.ru>|Roman Konstantinovskiy <stop-cran@list.ru>",
+  "trailerPresent": true,
+  "cleanStatus": true,
+  "runtimeChangedPaths": [
+    "kanji/逮.md",
+    "manifest.json"
+  ],
+  "docsChangedFileCount": 28,
+  "bindingsRehash": {
+    "packetFiles": 27,
+    "externalEvidence": 9,
+    "mismatches": 0
+  },
+  "comparisonCardSnapshotsByteEqualCandidateBlobs": 15,
+  "retentionCopiesByteEqualCoordinatorExtraction": {
+    "receiptSha256": "78dff896140cf3c57227750cd54fc483d32483d445462f9e99fba883c1ea4448",
+    "files": [
+      "jmdict-records.xml",
+      "kanjidic2-records.xml",
+      "receipt.json"
+    ]
+  },
+  "committedTreeGates": {
+    "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\committed-revision-gates-001",
+    "summarySha256": "985b89011351ab99143beaa14de30c7ac8f5be6c47239b1f3a8a6de63e904810",
+    "runner": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\run-committed-revision-checks.py",
+      "sha256": "3adf43a5a3390868ae387652026c781e21de9df59382b04bbbcc28a8a93b98c6",
+      "derivedFrom": "scratch-120/run-revision-checks.py a4364f07b69596d8622cbb36c964d05b08e2e1f6ab614f26dfbe1ea06d7c5d81; only HEAD pin, sole-parent and clean-tree checks differ"
+    },
+    "checks": [
+      "lint",
+      "quiz-safety",
+      "linkplan",
+      "reading-exposure",
+      "validate",
+      "manifest",
+      "unittest",
+      "budget",
+      "vocabulary",
+      "manifest-rebuild"
+    ],
+    "manifestSha256": "000daca2adf350a897a99027de9fda6e310bc18fce6897b69b5e79d10e1a2f29",
+    "manifestEqualsCommitted": true,
+    "cleanBeforeAndAfter": true,
+    "unittestCount": 431
+  },
+  "authorStagedGates": {
+    "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\revision-gates-001",
+    "summarySha256": "0ce88a4fda357ff1e8a425e601ef584e2430a292b46019ad4bafc656296c0cdc",
+    "note": "Run on staged bytes before the commit; superseded for confirmation by the committed-tree rerun."
+  },
+  "supersedes": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\review\\coordinator-revision-verification-001.json",
+    "sha256": "4ec540b3dd51e914589a8de7b6d54d2bc5d759567416bc3c67d20e7724a01fd1",
+    "defect": "Git core.quotepath quoted non-ASCII docs paths, so they were misclassified as runtime paths; all other fields unchanged."
+  }
+}
