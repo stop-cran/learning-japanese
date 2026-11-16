@@ -470,7 +470,7 @@ The [article-subject snapshot](docs/article-subjects-source-snapshot.json) recor
 17 new word cards, and reuse of 訳 for わけ, including dictionary-reading caveats and the 妖 level exception.
 作家 is shared with the N3 vocabulary expansion, so merging these additions adds 16 distinct word cards to that collection.
 
-Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, 1,739 N2 and two N1 articles, independently of the kanji they contain.
+Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, 1,739 N2 and three N1 articles, independently of the kanji they contain.
 This article-level label does not assign every subsidiary sense or reading to that level. The remaining 277 articles have no
 sourced word-level label. In particular, the pinned list's N1 labels for くらい and だけ are not recommendations to postpone these basic particles.
 Vocabulary-aware app versions use explicit levels first and retain kanji-based inference only when the
