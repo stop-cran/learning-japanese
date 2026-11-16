@@ -37,6 +37,24 @@ such as 三十歳. The answer screen lists the spellings and readings accepted f
 that exact expression.
 
 **歳 / 才** counts age. 歳 is the usual full spelling and 才 a common simpler one.
+It is valid for young children too: 一歳（いっさい）, 四歳（よんさい）,
+八歳（はっさい）and 十歳（じゅっさい／じっさい）are all correct.
+**歳 does not start only at eleven.**
+See the [歳 counting table](https://guidetojapanese.org/learn/grammar/numbers)
+for the age-counter readings from one through ten.
+
+[Children's ages can also use the native series](https://www.tofugu.com/japanese/japanese-counter-tsu/#ages-19):
+一つ（ひとつ）, 二つ（ふたつ）,
+三つ（みっつ）, 四つ（よっつ）, 五つ（いつつ）, 六つ（むっつ）,
+七つ（ななつ）, 八つ（やっつ）and 九つ（ここのつ）.
+[十（とお）](https://kotobank.jp/word/%E5%8D%81-515445) can also mean age ten,
+with no final つ.
+From eleven, use forms such as 十一歳（じゅういっさい）, not 十一つ.
+
+The age-writing prompts for 1, 4, 8 and 10 accept both constructions, including
+Arabic-digit spellings. Reading practice still asks for the **displayed expression**:
+よっつ reads 四つ, not 四歳; とお reads 十, not 十歳.
+
 [二十歳（はたち）](../words/二十歳.md) has a special everyday reading; the regular
 にじゅっさい / にじっさい readings are also possible. 何歳（なんさい） asks age.
 おいくつ is another polite age question when it refers to a person; it is not a
