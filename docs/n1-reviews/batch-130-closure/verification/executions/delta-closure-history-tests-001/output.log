@@ -1,0 +1,54 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b130_delta_closure.py", "sha256": "081dae0f96473184ad9d0a2f65e8386a1c398dea5cec5fca0eec65b9a8f3e09a", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+EEEE
+======================================================================
+ERROR: test_actual_mixed_finals_and_all_six_outcomes (__main__.ActualDeltaClosureTests.test_actual_mixed_finals_and_all_six_outcomes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 56, in test_actual_mixed_finals_and_all_six_outcomes
+    args = self.fixture()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 31, in fixture
+    "run": row["run"], "family": family, "session": row["session"],
+                                                    ~~~^^^^^^^^^^^
+KeyError: 'session'
+
+======================================================================
+ERROR: test_historical_unverified_cannot_be_relabelled (__main__.ActualDeltaClosureTests.test_historical_unverified_cannot_be_relabelled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 63, in test_historical_unverified_cannot_be_relabelled
+    provenance, candidate, config, finals = self.fixture()
+                                            ^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 31, in fixture
+    "run": row["run"], "family": family, "session": row["session"],
+                                                    ~~~^^^^^^^^^^^
+KeyError: 'session'
+
+======================================================================
+ERROR: test_unused_claude003_cannot_replace_actual004 (__main__.ActualDeltaClosureTests.test_unused_claude003_cannot_replace_actual004)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 84, in test_unused_claude003_cannot_replace_actual004
+    provenance, candidate, config, finals = self.fixture()
+                                            ^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 31, in fixture
+    "run": row["run"], "family": family, "session": row["session"],
+                                                    ~~~^^^^^^^^^^^
+KeyError: 'session'
+
+======================================================================
+ERROR: test_unused_preparation_and_original_control_holds_cannot_disappear (__main__.ActualDeltaClosureTests.test_unused_preparation_and_original_control_holds_cannot_disappear)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 71, in test_unused_preparation_and_original_control_holds_cannot_disappear
+    original, candidate, config, finals = self.fixture()
+                                          ^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b130_delta_closure.py", line 31, in fixture
+    "run": row["run"], "family": family, "session": row["session"],
+                                                    ~~~^^^^^^^^^^^
+KeyError: 'session'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.026s
+
+FAILED (errors=4)

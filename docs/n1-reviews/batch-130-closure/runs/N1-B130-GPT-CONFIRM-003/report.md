@@ -1,0 +1,47 @@
+# B130 confirmation — N1-B130-GPT-CONFIRM-003
+
+## Snapshot
+Commit: 1ac4053c5da955c3afaafc1e879e63a98ee42526
+Model: GPT-6.1 Sol (gpt-6.1-sol), serving-runtime declaration; independent identity attestation unverified.
+
+## Scope
+Chain: All 34 segments read completely, serially and in order through END OF CHAIN; no re-views.
+Fetches: None.
+
+  This is continuation of my own held UNVERIFIED confirmation, not a fresh initial review or a claim that the previous confirmation was accepted. I read the full previous report and supplied original initial report, the three revised scoped cards and support articles, the complete actual 響 counterpart, the complete delta, author response and mapping, all 99 supplied complete JMdict families and 31 character records, both complete 28-pair tables, presentation/binding material and all ten committed check logs. The original initial report was another same-family reviewer's work, not mine.
+
+  Every changed scoped-card line is covered by the two hunks: appending 響 to 拍's direct exclusions and replacing the earlier sound/effect distinction with an explicitly qualified precaution. The current snapshot actually contains both changes. 塀 and 耗 have no change in this supplied delta. The added prose retains the ordinary distinction between clapping/beat and resonance, separately identifies the effect/impression question, and expressly does not turn the pair into ordinary synonyms. It adds no reading, example, historical derivation or unrestricted spelling recommendation. Sources: diffs/fix.patch:1-29; snapshot/kanji/拍.md:9-14; snapshot/kanji/拍.md:56-85; verification/verification.json:8-17.
+
+  The D18/L1 quiz-safety hold is now addressed by a direct precaution, not by resolving lexical allocation. The actual 響 article teaches non-audible effects as well as sound. Complete 響く entry 1238610 positively has effect/impression senses; complete 打つ entry 1408810 retains rarely used 拍つ and move/impress/touch without spelling-specific allocation. The new wording and table correctly preserve that uncertainty. The independently read definitions justify protecting this particular question; neither the different first titles nor merely sharing a sound topic establishes the decision. Under the stipulated symmetric direct-pair rule, the declaration on 拍 protects 拍/響 without requiring another declaration on 響, and without relying on either character's 音 exclusion. Sources: snapshot/kanji/響.md:3-14; snapshot/kanji/響.md:22-29; snapshot/kanji/響.md:56-66; evidence/reconciliation/jmdict-families.xml:10; evidence/reconciliation/jmdict-families.xml:26; evidence/reconciliation/jmdict-families.xml:71; evidence/reconciliation/jmdict-families.xml:73; snapshot/kanji/拍.md:77-82; evidence/reconciliation/pair-dispositions-002.jsonl:20.
+
+  I accept the author's response to the open claim and the citation erratum after checking the actual entries: compact XML line 8 is 記 entry 1223130; 響く entry 1238610 is line 10, and 打つ entry 1408810 is line 26. The correction does not change the underlying question. The old and new tables retain the other rows; the changed 拍/響 row is now a precaution rather than a bounded noncollision. The mapping retains the original question and historical disposition instead of rewriting the earlier review. There is no new decline or dispute requiring adjudication. Sources: evidence/reconciliation/jmdict-families.xml:8; evidence/reconciliation/jmdict-families.xml:10; evidence/reconciliation/jmdict-families.xml:26; snapshot/docs/n1-sources/batch-130-reconciliation/responses/gpt-response-002.md:8-29; snapshot/docs/n1-sources/batch-130-reconciliation/responses/gpt-mapping-002.json:410-460; evidence/reconciliation/pair-dispositions-001.jsonl:20; evidence/reconciliation/pair-dispositions-002.jsonl:1; evidence/reconciliation/pair-dispositions-002.jsonl:20.
+
+  Meaning choices remain 塀: 古/右/石, 拍: 古/右/川, 耗: 右/川/本; selected reading prompts remain ヘイ, ハク and モウ with no kun prompts. 響 is an additional meaning precaution, not a new curated answer or reading option. The supplied host exposure output still reports curated completion in N1/All, limited 塀 Starter fallback, zero tested production/padded hits and two latent supplemental-reading risks. That modeled exposure is separate from the semantic reason for the new pair. The unchanged inventories, recognition/practice distinction and linked support remain coherent; complete support entries still preserve clapping/prayer and the alternative 消耗 reading. Sources: snapshot/kanji/塀.md:9-14; snapshot/kanji/拍.md:9-14; snapshot/kanji/耗.md:9-14; snapshot/kanji/拍.md:35-52; snapshot/words/拍手.md:14-45; snapshot/words/消耗.md:14-50; evidence/reconciliation/jmdict-families.xml:31; evidence/reconciliation/jmdict-families.xml:58; evidence/reconciliation/jmdict-families.xml:60; committed-checks/quiz-safety.log:1-6; committed-checks/reading-exposure.log:1-60.
+
+## Dispositions
+
+## Verdicts
+Correctness: CLEAN
+Scoped coverage: CLEAN
+Consistency and quiz safety: CLEAN
+Comprehensibility: CLEAN
+
+## Confirmation
+Verdict: CONFIRMED
+Basis: The actual new direct 拍/響 precaution and qualified Notes address my prior consequential D18/L1 quiz-safety hold while retaining the unresolved lexical allocation honestly; every scoped delta line is acceptable, no new defect is established, and no consequential unprotected claim remains within this bounded follow-up.
+
+## Findings
+None.
+
+## Optional
+None.
+
+## Limits
+- L1: The prior D18/L1 uncertainty remains lexical, not a finding of ordinary synonymy or a proven historical missing exclusion. The new direct precaution addresses its quiz consequence; it does not allocate every effect/impression sense of rare 拍つ to ordinary bare 拍. The earlier UNVERIFIED report and its hold remain historical and are not rewritten as accepted. Sources: previous-confirmation/N1-B130-GPT-CONFIRM-002.md:49; evidence/reconciliation/jmdict-families.xml:10; evidence/reconciliation/jmdict-families.xml:26; snapshot/kanji/拍.md:77-82.
+- L2: Historical image-only glyph identities, old lookup allocation and other broad rare-spelling allocations remain unresolved. No raw HTML/images, binary Joyo PDF, fonts, rendered strokes or phone rendering were inspected. The explicit source disagreements and modern-shape mnemonic qualifications remain; this delta does not settle etymology.
+- L3: Reading and exclusion mechanics have only the stipulated direct-pair policy, supplied declarations and bounded host outputs here, not fresh implementation-source inspection or execution. Caller-built/custom pools, multiple borrowed cards, Kotlin, JVM/Gradle/emulator/ADB, native/device acceptance, font fallback and compatibility with installed APK 5c000bd remain unverified. That APK predates quiz_exclusions. The two latent risks 拍ひゃく and 耗ぼう remain disclosed, not erased by zero hits in the tested pools. Sources: committed-checks/reading-exposure.log:1-60; initial-report/initial-gpt-004.md:140.
+- L4: All ten supplied committed check logs were read, not rerun. They report passes, 431 host tests, matching manifest/rebuild output and 83 retained nonfatal Notes-mention warnings, not linguistic proof or arbitrary-option safety. The supplied verification records an earlier RAM abort and a successful complete retry; I did not inspect the aborted attempt's separate raw artifacts and do not recast it as a pass. Sources: committed-checks/summary.json:1-25; committed-checks/quiz-safety.log:21-103; committed-checks/unittest.log:13-17; committed-checks/manifest.log:1; committed-checks/manifest-rebuild.log:1; verification/verification.json:28.
+- L5: This is only the actual successor delta. Other unchanged comparison/curated cards, the original title index, original 519-family collection, original 192-character collection, external captures and stroke JSON/SVG assets were not reread in this follow-up. Prior bounded assessments and initial F1-F4/O1 dispositions remain historical, not new full-card certifications. Existing exclusions outside the changed pair and changes outside the three scoped cards receive no new whole-card approval. Sources: verification/presentation.json:33; previous-confirmation/N1-B130-GPT-CONFIRM-002.md:27-32; previous-confirmation/N1-B130-GPT-CONFIRM-002.md:53.
+- L6: Index-only candidates 少/耗, 絶/耗, 終/耗, 老/耗, 労/耗, 郵/耗 and 画・版/拍 remain unread as complete comparison cards here. They are limits, not established defects or an added batch. Neither this delta nor the finite comparison tables establishes whole-corpus freedom from collisions. Sources: initial-report/initial-gpt-004.md:137-138; previous-confirmation/N1-B130-GPT-CONFIRM-002.md:54.
+- L7: Printed hashes, source-reuse claims and canonical-equality/presentation receipts were read, not independently recomputed. Citations use full supplied SOURCE labels and source line numbers. No network request, shell, search, agent, build, other reviewer's confirmation or input read outside the admitted prompt and reached chain was used. The prior report's line-8 citation error is acknowledged above without editing that report.
+- L8: This confirmation grants no publication or delivery credit and establishes neither served-archive identity, general-release acceptance, whole-N1 delivery nor device compatibility. I continue my own prior confirmation, not the original initial reviewer's session. Model identity is the serving-runtime declaration, without independent execution attestation.

@@ -1,0 +1,22 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b130_delta_closure_inputs.py", "sha256": "cd0906d5de3d8eaf1000331be717894c2739e3fe3391de95e70ea5f094d471e9", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b130_delta_closure_inputs.py", line 149, in <module>
+    (prepare_closure if sys.argv[1] == "closure" else prepare_finalizer)()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b130_delta_closure_inputs.py", line 95, in prepare_closure
+    captured = execution_files(test_dir, 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\finalize_b130.py", line 54, in execution_files
+    raw = frozen(directory / "receipt.json")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 44, in frozen
+    require(readonly(path), f"Writable frozen input: {path}")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Writable frozen input: C:\Users\stop-\n1-kanji-workspace\scratch-130\review\protocol-tests-002\receipt.json

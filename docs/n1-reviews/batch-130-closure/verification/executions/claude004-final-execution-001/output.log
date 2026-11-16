@@ -1,0 +1,17 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_b130_followup_v3.py", "sha256": "41d23ec4ab7e5dc63ead708957da2554efa77f900c01fdb52bb288ab6c4137cf", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+B127 lifecycle child: {"started": "2026-11-16T13:58:40.639626+00:00", "finished": "2026-11-16T13:58:40.889938+00:00", "command": ["C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe", "-B", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\confirm\\audit-confirm.py", "--session", "a446a6a9-6aed-407e-9bd8-b2508bc2941f", "--config", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\confirm\\N1-B130-CLAUDE-CONFIRM-004-config.json", "--offset", "3072926", "--prefix-sha256", "d5ab76cef7185b5955067ec06d2350e2c8347014958c82a9a4d23875c421c46a", "--final"], "pid": 9732, "exitCode": 0, "waitTimeoutSeconds": 0.1, "cleanupTimeoutSecondsPerStage": 10, "cleanupScope": "Immediate child PID only.", "cleanupError": null, "memory": {"freeRamBeforeBytes": 3803615232, "freeRamAfterBytes": 3804860416, "minimumObservedFreeRamBytes": 3793666048, "peakWorkingSetBytes": 26570752, "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.", "abortThresholdBytes": 1073741824, "samplingIntervalSeconds": 0.25, "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.", "breach": null}, "helperSha256": "da62da64eb7d462dc4f4d39be812edd833157d45a1ea0e9b54f8440edde6d471", "cleanupHelperSha256": "e2695e2517918ef6a292648708edad7db7d2cdd018e3f608f4e4cd8b059ce153"}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b130_followup_v3.py", line 199, in <module>
+    final(Path(args[0]))
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b130_fresh_context.py", line 219, in final
+    require(audit["status"] == "FINAL_AUDIT_NEEDS_CLAIM_CHECK" and not audit["breaches"]
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Confirmation execution HOLD: C:\Users\stop-\n1-kanji-workspace\scratch-130\review\confirm\N1-B130-CLAUDE-CONFIRM-004\audit-20261116T135840716486\audit.json

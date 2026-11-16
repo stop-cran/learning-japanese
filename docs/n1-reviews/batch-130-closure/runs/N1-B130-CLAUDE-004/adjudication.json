@@ -1,0 +1,75 @@
+{
+  "run": "N1-B130-CLAUDE-004",
+  "candidate": "ce1b5c895fac90852143f322a115c2de4e768e20",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-130\\initial-claude-004.md",
+    "sha256": "1271c4fd8bad602e7f72fda096377e3ad4b8754ad0511f13aac7cea66b4f7af8"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-004-final.json",
+    "sha256": "37f6d1e5f8689da50f9e7b179b552a0ad55dbb237add8b7057c65329fec2db32"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-004-evidence-check.json",
+    "sha256": "8325bb8caa89a01aa2add62706202237f472e0f67b5818ef7f947167a0a2803e",
+    "bytes": 34877
+  },
+  "rawVerdict": "NEEDS FIX",
+  "verdict": "NEEDS FIX",
+  "verdictScope": "Bounded report acceptance with the qualifications below, not wholesale adoption of every report sentence, whole-set certification or publication approval.",
+  "acceptedFindings": [
+    "F1",
+    "F2"
+  ],
+  "findingAdjudication": {
+    "F1": {
+      "decision": "accepted (medium) as a direct-pair displayed-label consistency guard, not lexical identity",
+      "basis": "耗 displays 'decrease; wear down through use' and its own body says 摩耗 illustrates wear through friction (snapshot/kanji/耗.md:3,26-27). Daijisen glosses 耗 すりへる and lists 摩耗 (04-extract.txt:11); JMdict 1604200 摩耗/磨耗 is 'wear; abrasion' (jmdict-families.xml:243). 擦's own reading row glosses 擦れる 'to rub; to chafe; to wear out' (repo/kanji/擦.md:33) and 摩 displays 'rub; chafe' (repo/kanji/摩.md:3). Neither endpoint declares either pair (耗.md:14; 擦.md:14 [磨, 掃]; 摩.md:14 [擦, 磨, 研]). Exclusions are symmetric when declared on either card (repo/docs/content-format.md:103). The candidate's own threshold already guards 殺 on its KANJIDIC2 'diminish; reduce' glosses alone (kanjidic2-records.xml:124), a weaker overlap.",
+      "required": "Declare the direct 耗/擦 and 耗/摩 pairs, preferably on 耗 so earlier cards stay unchanged, and add a concise qualified 耗 Notes explanation (friction/wear overlap, not synonymy). Preserve all existing 耗 guards, metadata, selected readings, curated choices and geometry; rerun validation, manifest rebuild and applicable gates.",
+      "qualification": "摩 and 擦 are rubbing/friction actions, not depletion; the overlap is through the wear-by-friction labels. This does not establish transitive guards (e.g. via 摩/磨/研) or universal synonymy. D14 磨 remains a reviewed harmless disposition: its displayed label is 'polish; grind' and its rub/chafe row is a rare 擦る-family spelling (repo/kanji/磨.md:3,20,32); the 磨耗 JMdict variant spelling alone does not make 磨 required.",
+      "exposureQualification": "The report correctly notes current N1/All/Starter curated choices fill every slot. The contract nevertheless requires direct symmetric meaning exclusions; fallback, custom and smaller pools remain untested."
+    },
+    "F2": {
+      "decision": "accepted (low) as a consistency finding with two permitted remedies",
+      "basis": "削 displays 'shave; sharpen; pare'; its card says 削る can mean reducing an amount, glosses けず.る 'cut down', lists 削減 'reduction; cut' and 予算を削る 'cut the budget' (repo/kanji/削.md:3,22,31,41,44). 耗 displays 'decrease' first. Neither card declares the pair (削 has no quiz_exclusions; 耗.md:14), while 耗 guards 減 and 殺 for decrease/diminish overlaps.",
+      "required": "Either declare the direct 耗/削 pair with a concise Notes mention, or record in 耗's Notes a sourced reason why 削's transitive cut/pare reduction sense is not an ordinary meaning-choice collision with 'decrease; wear down through use'.",
+      "qualification": "削 is a transitive cutting/paring action; 耗 is decrease or wear through use. The overlap is the reduce/cut-down region only, not identity."
+    }
+  },
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "decision": "source-supported optional clarity; author discretion",
+      "basis": "The cached Joyo row and both Daijisen character extracts list only ヘイ, placing 石塀/板塀/土塀 under it (joyo-rows.json:9; 01-extract.txt:12-14; 06-extract.txt:5-7). KANJIDIC2 lists ベイ, and the card already labels these as recognition examples (塀.md:37). Any wording must not deny the pinned KANJIDIC2 ベイ reading."
+    },
+    {
+      "id": "O2",
+      "decision": "optional; not required",
+      "basis": "使 is distinguished by its spending sense (repo/kanji/使.md:21); 用 concerns using something or purpose (repo/kanji/用.md:20). The difference is defensible; no collision is established."
+    },
+    {
+      "id": "O3",
+      "decision": "optional; not required",
+      "basis": "Both 辺 and 際 are precautionary edge labels; neither means a wall. Threshold wording is polish, not a demonstrated defect."
+    },
+    {
+      "id": "O4",
+      "decision": "optional; known disclosed limitation",
+      "basis": "The 83 nonfatal exclusion-not-mentioned warnings were already disclosed (quiz-safety.txt). Unexplained precautionary guards are not shown to be wrong; grouping rationale is optional."
+    },
+    {
+      "id": "O5",
+      "decision": "optional wording; recommended if 耗 Notes are edited for F1/F2",
+      "basis": "The note groups curated 右 with non-curated 石 and 未 before 'For the curated choices' (snapshot/kanji/耗.md:13,83-89). Factually true but potentially confusing; not a correctness defect."
+    }
+  ],
+  "otherDispositions": {
+    "execution": "87/87 core and 8/8 extension segments read once in order; one report write with verified readback; zero fetches; context PASS without compaction; structure PASS; evidence check no issues with 38 opened formal citations and 28 title-matching D/E rows. The exact two-line phase-2 message was independently verified as delivered. Raw report unchanged.",
+    "comparisons": "D1-D14, D16-D22 and E3-E6 dispositions accepted as bounded reviewer judgments after spot-checking the actual cards; D15/E1/E2 are F2/F1. Not a coordinator certification of every row sentence.",
+    "citationErrata": "Several hand-computed line numbers are offset because chain segments map ranges, not per-line numbers. Content exists at the adjacent actual lines: F2 削.md:23->22, :32->31, :42->41, :45->44; O2 用.md:21->20; D3 門, D4 城, D6 歌, D10 拝, D11 度, D12 符, D19 枯, E6 辺 :21->:20; D14 磨.md:21,33 -> :20,32; D10 jmdict-families.xml:254 -> :145 (拍手 1474820) and :272 (柏手 1841790); O4/D21 絶える is 絶.md:32, not :31. None changes a finding or disposition.",
+    "limits": "Retain all report limits L1-L7 (model identity unverified by the reviewer, binary/visual assets unread, image-only glyphs, bounded host pools only, unread low-plausibility candidates, unresolved 拍つ/old-dictionary allocations, static checks not linguistic proof). No arbitrary/custom/multi-borrow, Kotlin/native/device, whole-set, publication or delivery acceptance."
+  },
+  "openClaimIds": [],
+  "publicationAccepted": false,
+  "next": "Accept with explicit preflight004, then admit the independent GPT004 pass on the unchanged frozen packet without sharing this report, adjudication or any excluded-attempt observation. Do not send findings to the author before GPT's initial is accepted."
+}

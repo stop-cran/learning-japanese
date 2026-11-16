@@ -1,0 +1,65 @@
+{
+  "batch": 130,
+  "run": "N1-B130-CLAUDE-003",
+  "session": "3e7cf65d-f75a-4a01-b97c-8d19b28d02d4",
+  "candidate": "ce1b5c895fac90852143f322a115c2de4e768e20",
+  "status": "VOID_COORDINATOR_PHASE2_MESSAGE_MISMATCH",
+  "reviewAccepted": false,
+  "finalAcceptance": false,
+  "preflight": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\prompts\\preflight-compact-003.json",
+    "sha256": "06a3c5b6e3ce094542e7bfd091b17a0d8987c29edbd9effeb1c66f81dc6732f8"
+  },
+  "phase1": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003-phase1.json",
+    "sha256": "4284806d45890d75a53d0349af0c6c8f071b3b2d247067859c512de0ca00f7f0"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003-final.json",
+    "sha256": "f1306db5565ce85cdafd58ac902f4d8d515803b92dc096b1ee06b131247e065e"
+  },
+  "audit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003\\audit-20261116T112543823499\\audit.json",
+    "sha256": "d4e449647b01ed15376f5c01098c77fefe34309cbdb7affb5ee9aef1c962a393"
+  },
+  "events": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003\\audit-20261116T112543823499\\events.jsonl",
+    "sha256": "29b2037af24321c5b56ab43aa5c3e44ce537aa7a8b7549748fcb8d5f82eaefa4"
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003-context.json",
+    "sha256": "d090aed6ceaac03a64ea03cc0d4593f5c2d22c97d47ccea1325c134c30942858",
+    "bytes": 452
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003-structure.json",
+    "sha256": "e1c6fb01b5c7c06a34564e1422d475f921abba18574c4c0d991956932c349f1c",
+    "bytes": 396
+  },
+  "phase2Message": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\N1-B130-CLAUDE-003-phase2-message.txt",
+    "sha256": "44eaea61dd58357aa1d45be1e12fd796b3095d674b3e1b4868d39555ac6b192c"
+  },
+  "deliveredPhase2": {
+    "eventIndex": 915,
+    "sha256": "ee3a9c3472a9d07a94d7ecd5c78a12ea17ced619a3b29c7e7ecfb5e937616a84",
+    "missingSuffix": "\nMissing entries: none"
+  },
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-130\\initial-claude-003.md",
+    "sha256": "d26ce29c943c7e5296ba1d62ac35e9e8f934b8321bd5e151cfcee3897059ee83",
+    "quarantined": true
+  },
+  "reason": "The coordinator sent only the first line (the extension path) of the frozen two-line phase-2 message and omitted 'Missing entries: none'. The auditor therefore never recognized phase 2 and VOIDed all later calls. Phase 1 was clean (87/87, context PASS); all nine extension reads followed the delivered message. This is a coordinator protocol breach, not a reviewer breach, but the frozen exact-message gate is not waived or relabeled.",
+  "quarantine": "The report, selection and observations from this run are not accepted and may not be supplied to an author or fresh reviewer. The coordinator has not read the report text.",
+  "failureExecution": {
+    "receipt.json": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\claude-003-final-execution-001\\receipt.json",
+      "sha256": "e3c126c822490ac7da2a38ad36a1c4c0c5070fff5265dbebd44ab8a846cac448"
+    },
+    "output.log": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\claude-003-final-execution-001\\output.log",
+      "sha256": "1a8fb725d73ff1b57aa6a2a296e26338646afea32c1f8fc7dc2cc3fdc54a1e01"
+    }
+  }
+}

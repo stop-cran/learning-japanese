@@ -1,0 +1,84 @@
+{
+  "batch": 130,
+  "revision": "reconciliation-002",
+  "mode": "author",
+  "status": "PASS",
+  "parent": "d440617274eef6ea7611e60f147d6483f29ca710",
+  "publishedBase": "f237a8d590a4cb91029bc0b8485163933f44b403",
+  "startingHead": "d440617274eef6ea7611e60f147d6483f29ca710",
+  "checks": [
+    "lint",
+    "quiz-safety",
+    "linkplan",
+    "reading-exposure",
+    "validate",
+    "manifest",
+    "unittest",
+    "budget",
+    "vocabulary",
+    "manifest-rebuild"
+  ],
+  "serial": true,
+  "manifestSha256": "0c30b22fa8b352693dae75e8e12495863a2e8735b14e329775acfeabb877350b",
+  "runnerSha256": "cf38068057c753348da41e49b2cc9aa105609b1587cddf9a2afc9c49a04883d0",
+  "gateImplementationSha256": "9d9d302e713c4ac14563caaf83f71f0036e51b97fdd4817f7c2c5e81aeb6465c",
+  "implementationDisclosure": "Same original ten commands and bounded run_gate implementation. Only outer parent/snapshot admission changes; published-base lint/link/payload scope is not narrowed.",
+  "commonHelperSha256": "7809e589e7ac8691e9e3081f40f33eed329bce10c10c6696f03fd03486dde530",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84",
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "finalMemory": {
+    "freeRamBeforeBytes": 3856789504,
+    "freeRamAfterBytes": 3856793600,
+    "minimumObservedFreeRamBytes": 3856789504,
+    "peakWorkingSetBytes": 24829952,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "logs": {
+    "lint": {
+      "logSha256": "d0b9180b798b40a68afdb0bfcbd92e0034a7da6f54c991aaa8f86a648cc4b216",
+      "receiptSha256": "72f3ac2ef11792ef1e83959c6d9df8cfc2b5c8ee9fc86d2bf2a445907675a356"
+    },
+    "quiz-safety": {
+      "logSha256": "be24a587220a0df2bfba70b2f488da8e4ce25c8fb771da29aab2d839a0b1393a",
+      "receiptSha256": "1612c48bc7c64e181e80c66c0c46584e0d5de1667c7fbf558fe1ca76ce18eded"
+    },
+    "linkplan": {
+      "logSha256": "4212aacdf6d8ff42fa3bd761153ac7bd93b6645b08dd1e93c2a1e111f0c08fd7",
+      "receiptSha256": "2775ad9dafab259d12cb45a1bab413fce759343712f0794b4094a51e20e8f3b5"
+    },
+    "reading-exposure": {
+      "logSha256": "b97543a584845d2bf288eea3b7c195ca45944f0054b82c97c5c4248c7548c655",
+      "receiptSha256": "ce4ed591a370fec29e4d77acca788bf345f0a61d5e5ab9dab3f4cb4e8635cdb3"
+    },
+    "validate": {
+      "logSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "receiptSha256": "efd28ee8ccee299b26df1b77af8af4b38b92d9bd8e7e2910c09cecd364cc60b3"
+    },
+    "manifest": {
+      "logSha256": "1154be9071b0623791d47f1678be4f4e6e2f55f67a4af9bf3f87700336d028d3",
+      "receiptSha256": "8f696380cfb3c14c41d09b900b14075322eef28acbce729485f99d5eec3c4169"
+    },
+    "unittest": {
+      "logSha256": "c03f52a02583722a4896978e3b80bea2a5dbd6f0aed380ee1678835173ec871d",
+      "receiptSha256": "29fcca3342edb17b1ca90efe19910327b7cce6b313241a40c8daad7b90b5f525"
+    },
+    "budget": {
+      "logSha256": "b3fd5ff47eb17b6fd39d1ebffb86b5cfabc5fae77ad4212552518dd53d99dccb",
+      "receiptSha256": "9d8552b0b54b4de8831595e5a5054fba1bac524fccf0f37e8f94a7c27172422e"
+    },
+    "vocabulary": {
+      "logSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "receiptSha256": "69f78b640e425ec948340581f3009a5b5cb52327ccb55c8fd7769a27fa52d38e"
+    },
+    "manifest-rebuild": {
+      "logSha256": "1154be9071b0623791d47f1678be4f4e6e2f55f67a4af9bf3f87700336d028d3",
+      "receiptSha256": "72f01eb64635bf094c8bd03bcb4b091c7cdbb87c8ff8eea09ba96ed349a38b67"
+    }
+  },
+  "limits": "Bounded host/static evidence only, not independent linguistic confirmation, arbitrary/custom/multiple-borrow/native/device/visual/publication acceptance."
+}
