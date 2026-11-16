@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:38:37.976258+00:00",
+  "finished": "2026-11-16T01:38:38.223127+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import hashlib, json, subprocess\nfrom pathlib import Path\nroot = Path(r'C:\\Users\\stop-\\n1-kanji-workspace')\nreview = root / 'scratch-126' / 'review'\nexpected = {\n 'source-selection-verification-001.json': '0d65e40047536eb850ae57af542206ceeb5c24560b8cfc824220419b329be9a9',\n 'coordinator-candidate-verification.json': '0d3be59a7cf6f2f95e9d5b049c608e2e9b0152aca031012a57d2892420c5f8a6',\n 'handoff-verification-001.json': '171f22a65f87535186a9fda1fcb7b976c2da7f3fed44b86c00f943c442cdb2fa',\n 'prompts/preflight.json': '0478029fbf212de688dad95c53e8ebf8a47589b0f44967c9560b432ec25b5ae4',\n 'N1-B126-CLAUDE-001-phase2-message.txt': '568b1ea8dbc52676eef8ea838d298031aaf42fcf144b6aff6b14d7df112c5aad',\n 'N1-B126-CLAUDE-001-extension.json': '722be47b02b8d484cc2bd2b80de68ad3d01d8441c6a463393b929035d0068e3a',\n 'guarded-test-v2.py': 'b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc',\n}\nverified = {}\nfor relative, digest in expected.items():\n path = review.joinpath(*relative.split('/'))\n actual = hashlib.sha256(path.read_bytes()).hexdigest()\n assert actual == digest, (str(path), actual, digest)\n verified[str(path)] = actual\nphase = json.loads((review / 'N1-B126-CLAUDE-001-phase1.json').read_text('utf-8'))\nassert phase['status'] == 'PHASE1_READY' and phase['readyForPhase2'] and not phase['breaches']\nfor filename, key in [('audit.json', 'auditSha256'), ('events.jsonl', 'eventsSha256'), ('phase1-list.txt', 'phase1ListSha256')]:\n path = Path(phase['auditDir']) / filename\n actual = hashlib.sha256(path.read_bytes()).hexdigest()\n assert actual == phase[key], (str(path), actual)\n verified[str(path)] = actual\nrepo = root / 'b126-worktree'\nhead = subprocess.check_output(['git', '--no-pager', '-C', str(repo), 'rev-parse', 'HEAD'], text=True, timeout=30).strip()\nassert head == '246a1319ef30414d73e4518b52ae99c1d700c57e', head\nstatus = subprocess.check_output(['git', '--no-pager', '-C', str(repo), 'status', '--porcelain=v1'], text=True, timeout=30)\nassert not status.strip(), status\nprint(json.dumps({'status':'PASS','candidate':head,'worktreeClean':True,'verifiedArtifactHashes':verified,'limit':'Recovery identity check only; final review audit, substantive adjudication and publication still pending.'}, indent=2))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 4596,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "2144f5462e55c2555cf2e69317794adfaf46659c2e489f8e1f55029f00b4f813",
+  "memory": {
+    "freeRamBeforeBytes": 5147234304,
+    "freeRamAfterBytes": 5127692288,
+    "minimumObservedFreeRamBytes": 5120733184,
+    "peakWorkingSetBytes": 23040000,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:29:00.462402+00:00",
+  "finished": "2026-11-16T01:29:02.020632+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nimport stat\nimport sys\nfrom pathlib import Path\nsys.path.insert(0, r'C:\\Users\\stop-\\n1-kanji-workspace\\review-tools')\nfrom common import WS, freeze_json, frozen, git, require, sha, start_guard, write_frozen\nfrom confirm_v2 import clean\nhere = WS / 'scratch-126' / 'review'\nraw = (WS / 'scratch-126' / 'handoff-001' / 'handoff.json').read_bytes()\nrequire(sha(raw) == 'b36ebc8e28031723eb16686b65c7e34e86c0a266147feeb50ce264a15dd9a43e', 'Handoff changed')\nhandoff = json.loads(raw)\nproof = json.loads(frozen(here / 'coordinator-candidate-verification.json', '0d3be59a7cf6f2f95e9d5b049c608e2e9b0152aca031012a57d2892420c5f8a6'))\nconfig = json.loads(frozen(here / 'batch.json'))\nrequire(handoff['candidate'] == config['candidate'] == proof['candidate'] and handoff['base'] == config['base'] == proof['base'], 'Handoff snapshot differs')\nrequire(handoff['contributorChanges']['allChangedPaths'] == sorted(proof['changedPaths']) and len(proof['changedPaths']) == 79, 'Changed path inventory differs')\nclean(config, config['candidate'])\nguard, _ = start_guard('B126 complete runtime handoff verification')\ntry:\n    manifest = json.loads(git(config, 'show', config['candidate'] + ':manifest.json'))\n    hashes = {path: digest for group in manifest.values() if isinstance(group, dict) for path, digest in group.items()}\n    actual = {}\n    for name, digest in hashes.items():\n        guard.check()\n        data = (Path(config['repo']) / Path(name)).read_bytes()\n        if name.endswith(('.md', '.json')):\n            data = data.replace(b'\\r\\n', b'\\n')\n        actual[name] = sha(data)\n        require(actual[name] == digest, 'Runtime hash mismatch: ' + name)\n    require(len(actual) == 8714, 'Runtime count differs')\n    preserves = {}\n    for name, binding in handoff['preservation'].items():\n        directory = WS / 'scratch-126' / name\n        summary_raw = (directory / 'summary.json').read_bytes()\n        runtime_raw = (directory / 'runtime-hashes.json').read_bytes()\n        summary = json.loads(summary_raw)\n        require(sha(summary_raw) == binding['summarySha256'] and sha(runtime_raw) == binding['runtimeHashesSha256'] and json.loads(runtime_raw) == actual, 'Preservation evidence differs')\n        require(summary['status'] == 'PASS' and not summary['memory']['breach'] and summary['allCandidateRuntimeHashesChecked'] == len(actual), 'Preservation did not pass')\n        if name == 'preservation-committed-001':\n            require(summary['head'] == config['candidate'], 'Committed preservation snapshot differs')\n        preserves[name] = {'summarySha256': sha(summary_raw), 'runtimeHashesSha256': sha(runtime_raw)}\n    for name, binding in handoff['gates'].items():\n        summary_raw = (WS / 'scratch-126' / name / 'summary.json').read_bytes()\n        require(sha(summary_raw) == binding['summarySha256'], 'Gate handoff summary differs')\n        summary = json.loads(summary_raw)\n        require(summary['logs'] == binding['individualLogAndReceiptBindings'], 'Gate handoff individual hashes differ')\n    for name, digest in handoff['sourceBindings']['comparisonEvidence'].items():\n        require(sha(git(config, 'show', config['candidate'] + ':docs/n1-sources/batch-126/' + name)) == digest, 'Source handoff differs: ' + name)\n    require(git(config, '-c', 'core.whitespace=cr-at-eol', 'diff', '--check', config['base'], config['candidate']) == b'', 'CRLF-aware whitespace errors')\n    clean(config, config['candidate'])\nfinally:\n    memory = guard.finish()\nrequire(not memory['breach'], 'Runtime verification memory breach')\npreparer = WS / 'review-tools' / 'prepare_b126_review_tools.py'\nderivation = json.loads(frozen(here / 'guarded-test-derivation.json'))\nrequire(sha(preparer.read_bytes()) == derivation['producerSha256'] == '673d25733d0dfe8796cfacea3d40c53f7c34ea6e0678ea85b14980bfc152119b', 'Primary preparer changed')\npreparer.chmod(stat.S_IREAD)\nrequire(not [p.name for p in (WS / 'review-tools').glob('*.py') if p.stat().st_mode & stat.S_IWRITE], 'Unfrozen shared reviewer tool remains')\ncapture = write_frozen(here / 'author-handoff-001.json', raw)\nprint(json.dumps(freeze_json(here / 'handoff-verification-001.json', {\n    'status': 'PASS', 'batch': 126, 'candidate': config['candidate'], 'base': config['base'],\n    'handoff': capture, 'runtimeHashesChecked': len(actual), 'changedPathsChecked': len(proof['changedPaths']),\n    'preservation': preserves, 'memory': memory,\n    'scope': 'Complete actual runtime hashes, signed candidate binding, exact handoff and gate/source identities; not linguistic or publication acceptance.',\n})))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 14748,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "532464185b5267ddf5facc7eb68ff0594f406ef18d1ad590a22e6414de8098e2",
+  "memory": {
+    "freeRamBeforeBytes": 5548425216,
+    "freeRamAfterBytes": 5512105984,
+    "minimumObservedFreeRamBytes": 5488279552,
+    "peakWorkingSetBytes": 23207936,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

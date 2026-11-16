@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:56:02.932446+00:00",
+  "finished": "2026-11-16T01:56:03.018261+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "from close_b126 import *\npreflight = read(REVIEW / 'prompts' / 'preflight.json')\nfor family, (run, session, model, digest) in RUNS.items():\n    accepted = read(REVIEW / f'{run}-acceptance.json', digest)\n    final = bound(accepted['final'])\n    audit = bound(final['finalAudit'])\n    check_review(accepted, final, audit, bound(final['context']), bound(final['structure']), bound(accepted['adjudication']), family)\n    phase = read(REVIEW / f'{run}-phase1.json')\n    spec = preflight['runs'][family]\n    cfg = read(spec['auditConfig'])\n    print(json.dumps({'run':run, 'review':'PASS', 'phaseKeys':list(phase), 'specKeys':list(spec), 'configKeys':list(cfg), 'callKeys':list(audit['calls'][0]), 'callLast':{k:v for k,v in audit['calls'][-1].items() if k in ('timestamp','time','name')}}))\nprint('proof keys', list(read(REVIEW / 'coordinator-candidate-verification.json')['capturedGateInputs']))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 5888,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "5c3adb8b468265aae21140be00d5205db2ad2f3c8d2eb80d9c588f45125de56f",
+  "memory": {
+    "freeRamBeforeBytes": 5376122880,
+    "freeRamAfterBytes": 5376925696,
+    "minimumObservedFreeRamBytes": 5376122880,
+    "peakWorkingSetBytes": 23097344,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

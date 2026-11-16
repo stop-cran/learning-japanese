@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\step_v2.py", line 300, in <module>
+    sys.exit(main(*sys.argv[1:]))
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\step_v2.py", line 208, in main
+    adjudication = json.loads(frozen(adjudication_path))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 44, in frozen
+    require(readonly(path), f"Writable frozen input: {path}")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Writable frozen input: C:\Users\stop-\n1-kanji-workspace\scratch-126\review\N1-B126-CLAUDE-001-adjudication.json
