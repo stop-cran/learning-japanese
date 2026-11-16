@@ -59,6 +59,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 129: local authoring candidate
+
+The bounded candidate is **茉・絹・虹**, frozen rows 931, 841 and 967.
+Each has a generated pinned-KanjiVG stroke file and one reciprocal wrapper
+in an existing supporting word: 茉莉花, 絹 and 虹. No word article or
+non-link word prose is added or removed; 絹 remains N4 and 虹 remains N2.
+The [source packet](n1-sources/batch-129/) retains complete applicable
+dictionary records, selection predicates, ordered metadata, actual
+1,248-card baseline meaning/title scans and finite two-direction pair decisions.
+
+Practice selects マツ, きぬ and にじ respectively, independently of the
+preserved complete character reading lists. Name-use み, special whole-word
+readings, qualified historical snare/bridge/dish/dispute uses and source
+discrepancies remain distinct. Conservative direct guards protect unresolved
+broad choices; they do not establish universal synonymy or transitive guards.
+
+A five-card source survey was split before teaching authoring: 羊 and 霜
+remain unimplemented because their positive secondary senses enlarged the
+review packet. The original survey and failed first supplemental extraction
+remain local and historical. No source claim is discarded merely for lacking
+priority or standard-list status.
+
+This is an unreviewed local candidate, not native/device or publication
+acceptance. The [B129 ledger](n1-sources/batch-129-progress.json) keeps
+**258 delivered / 970 undelivered**; these three local drafts are not delivered.
+All predecessor source, review and publication evidence is unchanged.
+
 ## Batch 128: local authoring candidate
 
 The bounded candidate is **唇**, frozen source row 159, with a generated
