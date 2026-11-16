@@ -1,55 +1,54 @@
 {
   "batch": 132,
-  "status": "local-unreviewed-author-candidate",
   "base": "2375ab9add0cc5d569c8ea35d229b82813fd8557",
   "governingIssue": 60,
+  "status": "textual-review-closed-publication-pending",
   "members": [
     "墓"
   ],
   "sourceRows": [
     197
   ],
-  "publishedDelivered": 267,
-  "frozenTotal": 1228,
-  "undelivered": 961,
-  "localUnpublishedDrafts": 1,
-  "deliveryNotIncremented": true,
   "supports": [
     [
       "墓",
       "墓"
     ]
   ],
-  "proseException": null,
-  "practice": {
-    "墓": "はか"
+  "initialSnapshot": "2e618b38ae5b420f7a1fe6783268093348367c51",
+  "reviewedSnapshot": "009b70b2e6ec836d7364c6c3096b65b1fa9df65d",
+  "reviewClosed": [
+    "墓"
+  ],
+  "published": [],
+  "runtimePublished": false,
+  "manifestSha256": "5432522265f9efeef23103ed5ec9844e0deddd70bd06e72719143341c185b9d4",
+  "contentVersion": "adbf488f76c55cc2",
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 267,
+    "publishedN1Additions": 261,
+    "n2Placements": 6,
+    "undelivered": 961,
+    "reviewClosedPendingRecordsWithCards": 268,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 960,
+    "overallN1TaskComplete": false
   },
-  "pairTable": "batch-132/pair-dispositions.json",
-  "sourceAnalysis": "batch-132/authored-source-analysis.json",
-  "fontEvidence": "batch-132/stroke-font-evidence.json",
-  "completeJmdictFamilies": 95,
-  "completeKanjidicRecords": 7,
-  "comparisonCopies": 6,
-  "pairRows": 6,
-  "authorGates": {
-    "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\author-gates-001",
-    "summarySha256": "8ea3dbc725a6f7a745bfd7e50fdc4cfdd864290ada3343954c9d3a4fc48a8e90",
-    "gates": [
-      "lint",
-      "quiz-safety",
-      "linkplan",
-      "reading-exposure",
-      "validate",
-      "manifest",
-      "unittest",
-      "budget",
-      "vocabulary",
-      "manifest-rebuild"
-    ]
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "finalRuns": [
+      "N1-B132-CLAUDE-CONFIRM-002",
+      "N1-B132-GPT-CONFIRM-002"
+    ],
+    "closure": "../n1-reviews/batch-132-closure/provenance.json",
+    "closureProvenanceSha256": "1cc7576ae41ce16f3cfc9521ac69213141195fe660fe633f670ee65f7ec9cfa3",
+    "historicalReportsPreserved": true,
+    "remainingActionableFindings": [],
+    "remainingConsequentialClaims": []
   },
-  "manifestSha256": "6d19511016fa83d772405c862d251b65392216c9066aef9bf8f65d7393965624",
-  "contentVersion": "fe3422ad0adbef89",
-  "warnings": {
+  "originalAuthorProgress": "../n1-reviews/batch-132-closure/verification/original-progress.json",
+  "originalAuthorWarnings": {
     "quizSafetyCount": 0,
     "quizSafetyWarnings": [],
     "reading": "0 production and 0 Starter-plus-target hits; three latent smaller-pool collisions. つか is drawable when Starter also borrows holder 束. Multiple borrowing and arbitrary pools remain outside the bounded pass.",
@@ -57,5 +56,19 @@
     "surveyProcess": "survey-001 used two subprocess.run(timeout=10) git probes, rather than required <=0.1s child-wait loops; subsequent source/gate producers use bounded waits.",
     "source": "字通 historical glyph images are absent from extracted text. Supplemental and old dictionary readings are over-tested, not asserted to be ordinary modern readings."
   },
-  "boundary": "Author-only candidate. Committed ten-gate and preservation receipts bind eventual owner-signed direct child locally; no independent review, push, publication or next batch."
+  "publicationGates": [
+    "Owner-signed publication",
+    "CI",
+    "Exact served ZIP/runtime equality"
+  ],
+  "limits": [
+    "Two independent same-snapshot initials plus both original-reviewer delta confirmations, not exhaustive linguistic certification.",
+    "The source packet and every original review input remain immutable locally. Complete external extracts, raw HTML, raw execution events, raw audits and private session rosters are not redistributed.",
+    "Chain segments containing any complete external extract remain local in full; retention indices and original hashes are published. This archive is not the full local review environment.",
+    "The reading audit covers finite N1/All/Starter and single-borrow pools only. Three latent smaller-pool collisions and the positive Starter-plus-束 case remain disclosed; arbitrary, custom and multiple-borrow pools, Kotlin/native/device behavior are not established.",
+    "Finite font cmap coverage and stroke metadata are not rendered, native or phone acceptance. Missing historical glyph images were not reconstructed.",
+    "The author survey's earlier noncompliant child waits remain disclosed in original progress.",
+    "No delivery or whole-set credit until owner-signed publication, matching CI and exact served ZIP verification; delivered remains 267/1228 and remaining remains 961.",
+    "Initial CLEAN and UNVERIFIED reports remain unchanged. Two source-backed direct guards resolve the original Q1/Q2 evidence gaps only in the signed revised snapshot. The full external extracts were supplied locally and are not redistributed. The source packet's initially writable64 files were verified and later frozen; no retroactive immutability."
+  ]
 }

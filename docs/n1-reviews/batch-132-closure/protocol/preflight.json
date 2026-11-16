@@ -1,0 +1,95 @@
+{
+  "status": "PARTIAL_AUDIT_CONFIGS_NOT_REVIEW_READY",
+  "batch": 132,
+  "candidate": "2e618b38ae5b420f7a1fe6783268093348367c51",
+  "base": "2375ab9add0cc5d569c8ea35d229b82813fd8557",
+  "order": [
+    "claude",
+    "gpt"
+  ],
+  "runs": {
+    "claude": {
+      "run": "N1-B132-CLAUDE-001",
+      "prompt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\prompts-002\\initial-claude-001.txt",
+        "sha256": "7bc6535e714d575b87fb8e53ae8fba0c7e09c434a0e2a1dd1c55287dd41961e2",
+        "bytes": 27851
+      },
+      "kickoff": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\prompts-002\\kickoff-claude-001.txt",
+        "sha256": "817700240689758d2f054dc62dd5c22ee2dd7f386fb8782fdb670173233bc542",
+        "bytes": 652
+      },
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only. The frozen prompt supplies the exact snapshot, scope and access rules.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\prompts-002\\initial-claude-001.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\reports-002\\review-claude-001\\initial-claude-001.md",
+      "readiness": "exclusive create/readback/delete passed; reserved report absent",
+      "auditConfig": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\audit-configs-001\\audit-claude-001.json",
+        "sha256": "4e10a732df094fabc73ad8fda59461b3a2ea01acfce73f4fc61391bee4f6fe7a",
+        "bytes": 4496
+      },
+      "reportReadiness": {
+        "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\reports-002\\review-claude-001\\initial-claude-001.md",
+        "parent": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\reports-002\\review-claude-001",
+        "exclusiveCreateReadbackDelete": "PASS"
+      },
+      "startupEstimate": {
+        "status": "PASS_ESTIMATE",
+        "estimatedUpper": 913721,
+        "limit": 952000,
+        "method": "One estimated token per source/prompt byte plus explicit startup/report/drift allowances.",
+        "limits": "Heuristic, not actual tokenizer/model usage or a guarantee. Live token/compaction gates required."
+      },
+      "launch": {
+        "mode": "interactive",
+        "model": "claude-opus-5.5",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B132 CLAUDE independent review 001"
+      }
+    },
+    "gpt": {
+      "run": "N1-B132-GPT-001",
+      "prompt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\prompts-002\\initial-gpt-001.txt",
+        "sha256": "21896dc6965cfd0faa9566329ae5694164cbc693f62ef0534ccfe3c1aa9b2bc7",
+        "bytes": 27833
+      },
+      "kickoff": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\prompts-002\\kickoff-gpt-001.txt",
+        "sha256": "d97ecc9e6cc355c57d3ae640ee3b15c108289b6b7185ed42df613bf6cbb1b86d",
+        "bytes": 649
+      },
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only. The frozen prompt supplies the exact snapshot, scope and access rules.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\prompts-002\\initial-gpt-001.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\reports-002\\review-gpt-001\\initial-gpt-001.md",
+      "readiness": "exclusive create/readback/delete passed; reserved report absent",
+      "auditConfig": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\audit-configs-001\\audit-gpt-001.json",
+        "sha256": "41b4ebd8e397bea647a8b018b305060f332be6b568cd1358768f987c0005adbc",
+        "bytes": 4468
+      },
+      "reportReadiness": {
+        "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\reports-002\\review-gpt-001\\initial-gpt-001.md",
+        "parent": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\neutral-preparation-002\\reports-002\\review-gpt-001",
+        "exclusiveCreateReadbackDelete": "PASS"
+      },
+      "startupEstimate": {
+        "status": "PASS_ESTIMATE",
+        "estimatedUpper": 913703,
+        "limit": 922000,
+        "method": "One estimated token per source/prompt byte plus explicit startup/report/drift allowances.",
+        "limits": "Heuristic, not actual tokenizer/model usage or a guarantee. Live token/compaction gates required."
+      },
+      "launch": {
+        "mode": "interactive",
+        "model": "gpt-6.1-sol",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B132 GPT independent review 001"
+      }
+    }
+  },
+  "coreManifestSha256": "2fb4092299b47a7a2808965c6e4f58dba716367b4ac403123285bb5f8aaf9bcd",
+  "capacityMeasurementSha256": "fb7398e45ebcffabd7565339ced4f50ff4e1a1fedd1fce472b252d74178f7dff",
+  "limits": "Actual current status/resource/serial admission and full synthetic protocol verification remain mandatory. Mechanical audit is not claim adjudication."
+}

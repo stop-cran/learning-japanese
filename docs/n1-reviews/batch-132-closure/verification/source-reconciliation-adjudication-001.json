@@ -1,0 +1,68 @@
+{
+  "batch": 132,
+  "candidate": "2e618b38ae5b420f7a1fe6783268093348367c51",
+  "base": "2375ab9add0cc5d569c8ea35d229b82813fd8557",
+  "status": "PRECAUTIONS_JUSTIFIED_IMPLEMENTATION_AND_CONFIRMATIONS_PENDING",
+  "sourceInventory": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\source-reconciliation-001\\inventory.json",
+    "sha256": "390ec9d4412633458b1333870461edad1f74630520cbf2ddf83914f9eccc7286"
+  },
+  "coordinatorVerification": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\source-reconciliation-verification-001.json",
+    "sha256": "4f64783f8810d41b778a7ccb2048ca1fc54bcff7c3ed009b20541ddd23b9bc77"
+  },
+  "freezeQualification": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-132\\review\\source-reconciliation-freeze-001.json",
+    "sha256": "41b27f638aa6e31e54be7c40bba3f2fd215bbc339f78cfd66670e059b3f66a93",
+    "detail": "The original source handoff was writable, contrary to its frozen description. The coordinator preserved the failed verifier receipt, verified every reported byte hash, then applied ReadOnly to all60 packet files and4 reused captures. The same complete-record verifier then passed. This is a later freeze, not retroactive immutability."
+  },
+  "decisions": [
+    {
+      "claimId": "Q1",
+      "pair": ["墓", "標"],
+      "decision": "Implement a direct conservative precaution and a qualified explanatory Note.",
+      "reason": "The independently attested native-word sense of 墓 includes the marker itself. 標/しるし independently has the mark/sign sense, and the displayed counterpart label includes mark. The marker overlap is therefore more specific than a shared burial topic or a compound-only inference. A generic mark is not a grave, and grave is not an unrestricted standalone gloss of 標. The Note must state that distinction rather than teach synonymy.",
+      "evidence": [
+        "survey-001/external/墓-kotobank.txt:123-129",
+        "source-reconciliation-001/jmdict-exact-families.xml:4-64",
+        "source-reconciliation-001/external/標-kotobank.txt:25-66",
+        "source-reconciliation-001/external/墓標-kotobank.txt:25-51",
+        "source-reconciliation-001/jmdict-exact-families.xml:301-343"
+      ],
+      "resolutionStatus": "OPEN_PENDING_SIGNED_CHANGE_AND_ORIGINAL_REVIEWER_CONFIRMATION"
+    },
+    {
+      "claimId": "Q2",
+      "pair": ["墓", "塔"],
+      "decision": "Implement a separate direct conservative precaution and a qualified explanatory Note.",
+      "reason": "Independent 塔 entries establish its religious tower/stupa sense, while complete 石塔 entries explicitly identify stone towers used as graves as well as grave markers. The independent 仏塔 account confirms particular stone-pagoda forms used as grave markers. This supports a bounded tower-shaped grave/marker overlap, not only a common religious topic. Do not equate every tower, pagoda or ordinary 供養塔 with a grave; do not transfer the wooden-tablet sense of 卒塔婆 to standalone 塔 or turn historical word origins into an unrestricted modern gloss.",
+      "evidence": [
+        "source-reconciliation-001/jmdict-exact-families.xml:73-103",
+        "source-reconciliation-001/external/塔-kotobank.txt:25-75",
+        "source-reconciliation-001/external/塔-kotobank.txt:120-140",
+        "source-reconciliation-001/external/石塔-kotobank.txt:25-43",
+        "source-reconciliation-001/external/石塔-kotobank.txt:52-96",
+        "source-reconciliation-001/jmdict-referenced-families.xml:38-55",
+        "source-reconciliation-001/external/仏塔-kotobank.txt:148",
+        "source-reconciliation-001/external/卒塔婆-kotobank.txt:145-150",
+        "survey-001/external/墓-kotobank.txt:337-353"
+      ],
+      "resolutionStatus": "OPEN_PENDING_SIGNED_CHANGE_AND_ORIGINAL_REVIEWER_CONFIRMATION"
+    }
+  ],
+  "changeBoundary": {
+    "teachingArticle": "kanji/墓.md",
+    "quizExclusionsBefore": ["埋", "石"],
+    "quizExclusionsAfter": ["埋", "石", "標", "塔"],
+    "prose": "Two concise qualified Notes and directly related source citations only.",
+    "preserve": "Title, metadata readings, practice readings, distractors, common words, mnemonic, stroke file, sole support wrapper and all other teaching articles.",
+    "dependentChanges": "Regenerated manifest and separate additive contributor reconciliation provenance/gate evidence; preserve the initial author packet and both initial review records.",
+    "mechanism": "Use the existing symmetric direct-pair rule, not reciprocal article edits or transitive exclusions. Content-side tools/audit_n1_batch.py:575-584 checks both directions; no Kotlin execution or native-device result is claimed."
+  },
+  "reviewDisposition": "Claude's original CLEAN and GPT's original UNVERIFIED remain unchanged. The new evidence justifies a narrow conservative change but does not retroactively label either original review a defect report. Both original reviewers must confirm the actual changed signed snapshot. Preserve Claude O1/O2 as optional/no-required-change; do not implement them as part of this reconciliation.",
+  "publication": "BLOCKED",
+  "openClaimIds": ["Q1", "Q2"],
+  "delivered": 267,
+  "remaining": 961,
+  "limits": "Coordinator adjudication only. No actual teaching change, signed reconciliation, confirmation, publication, rendered-font/stroke, arbitrary/custom/multiple-borrow, Kotlin/native/device or whole-set acceptance."
+}

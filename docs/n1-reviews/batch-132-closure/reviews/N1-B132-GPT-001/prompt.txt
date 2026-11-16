@@ -1,0 +1,274 @@
+Perform ONE complete, independent first content review of B132 under run N1-B132-GPT-001, in TWO PHASES that together form one pass. Do not implement fixes, edit content or perform a confirmation round. Establish every conclusion from evidence you open in this pass.
+
+Context: the repository owner's original full-scope direction is, verbatim: "Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it." The coordinator has prepared the bounded B132 slice. Your assignment is only the read-only independent review described here.
+
+Original packet (authoritative, immutable): C:\Users\stop-\n1-kanji-workspace\scratch-132\review\neutral-preparation-002\packet
+Snapshot: 2e618b38ae5b420f7a1fe6783268093348367c51
+Base: 2375ab9add0cc5d569c8ea35d229b82813fd8557
+Packet SHA256SUMS.json: b563c909467add3541b3f849cbcc93fdfc155157cf77f13a26662b688967a973
+Sole report destination: C:\Users\stop-\n1-kanji-workspace\scratch-132\review\neutral-preparation-002\reports-002\review-gpt-001\initial-gpt-001.md (absent at preflight)
+Coordinator session: 2451b10d-02a9-46ab-82d5-d90993f0cb8b
+
+HOW YOU RECEIVE THE PACKET: read chains only. You never open packet files directly.
+- REQUIRED CHAIN (phase 1): read all 37 segments of the B132 core chain. Each part header states the source path, the source SHA-256 and which segment lines equal which source lines; cite findings by source path and source line numbers. The last line of each segment gives the exact path of the next segment; segment 37 ends with "END OF CHAIN". Segment 1 is:
+C:\Users\stop-\n1-kanji-workspace\scratch-132\review\neutral-preparation-002\chains\core-001\01-324896b582c14cd895e0b864bac99ad2.txt
+- EXTENSION CHAIN (phase 2): after the actual runtime capacity gate, the coordinator mechanically builds byte-exact D/E articles in your request order. Its single message includes the first segment path, exact missing-entry disclosure, and exact dictionary matches/absence metadata. All supplied dictionary records are already in core; no additional dictionary records are implied.
+Read segments in order, each with one view of the exact path printed at the end of the previous segment. Never use view_range; forceReadLargeFiles: true is permitted. Segments are under 16 KB and are returned whole. You may re-view a segment you have already reached.
+
+Do not open, request or search for any review report, observation or audit record, author rationale, changed checkout, other packet, session history, or any summary of earlier work.
+
+ACCESS RULES. These narrower rules govern any wider packet wording, including REVIEW.md's general access text. Any breach, wherever it falls in the run, voids the whole pass: its report and observations are quarantined and not used. There is no retry. If you notice you have breached a rule, stop immediately and tell the coordinator exactly what happened.
+1. EXACTLY ONE TOOL CALL PER RESPONSE. Wait for its result before the next response. Never place two or more tool calls in one response, even for independent files, and use no parallel wrapper or batch.
+2. Read local inputs only with view of one explicitly named file by absolute path, never a directory and never with view_range. The only allowed local inputs are (a) core-chain segments, reached as described above, (b) extension-chain segments, reached from the first-segment path the coordinator sends in phase 2, and (c) one readback of your report with forceReadLargeFiles: true. The sole delivery exception is the kickoff's initial full view of this instruction file, C:\Users\stop-\n1-kanji-workspace\scratch-132\review\neutral-preparation-002\prompts-002\initial-gpt-001.txt, with forceReadLargeFiles: true and no view_range; do not read this file again. No other local path: in particular NOT any file under review-packets (including repo\kanji cards; D and E cards reach you only through the extension chain) and not the chain directories.
+3. No shell/PowerShell/cmd, Python/scripts, search/grep/rg/glob, enumeration/listing/wildcards/recursion, corpus scans, agents, background jobs, browser/webview, JVM/Gradle/emulator/ADB, builds or temporary files.
+4. No web_fetch, web search or browser. External sources are only the supplied snapshots. Any claim not supported by evidence you opened in this pass is UNVERIFIED.
+5. The only write is the one report at the destination above, in phase 2, after every core and extension segment has been read. Use one create call if available; otherwise one apply_patch call containing exactly one Add File for that path is authorized. Do not revise or append it later. One readback view of the report is authorized.
+6. Exactly two messages to the coordinator in total, each a send_session_message to session 2451b10d-02a9-46ab-82d5-d90993f0cb8b with only session_id and message: the phase-1 list message and the phase-2 completion message described below. The phase-2 send_session_message to the coordinator must have a message value of exactly CLEAN, NEEDS FIX or UNVERIFIED, optionally followed by one LF or CRLF newline. No report path or other text may be in that message; its findings and evidence must be in the report. This restriction is scoped to the coordinator tool message. An ordinary final assistant response in this isolated reviewer session may summarize its report, but is not review evidence. No further investigation or tool calls are authorized after the completion message except the existing optional task_complete. Contact no other session.
+7. After the phase-2 message, stop. A single task_complete call is the only tool call permitted after it; none is permitted before it.
+8. If required work cannot be completed within these bounds, report the limitation truthfully and stop. No extra prompt, retry or further pass is authorized.
+
+REQUIRED READS: all 37 core segments, in full. They contain these complete sources in order:
+- REVIEW.md
+- packet.json
+- rubric/copilot-instructions.md
+- rubric/content-structure.instructions.md
+- repo/docs/content-format.md
+- repo/docs/jlpt-levels.md
+- snapshot/kanji/墓.md
+- snapshot/strokes/墓.json
+- baseline/words/墓.md
+- snapshot/words/墓.md
+- diffs/existing.diff
+- diffs/runtime-content.diff
+- checks/lint.log
+- checks/lint.json
+- checks/quiz-safety.log
+- checks/quiz-safety.json
+- checks/linkplan.log
+- checks/linkplan.json
+- checks/reading-exposure.log
+- checks/reading-exposure.json
+- checks/unittest.log
+- checks/unittest.json
+- checks/validate.log
+- checks/validate.json
+- checks/manifest.log
+- checks/manifest.json
+- checks/manifest-rebuild.log
+- checks/manifest-rebuild.json
+- checks/budget.log
+- checks/budget.json
+- checks/vocabulary.log
+- checks/vocabulary.json
+- evidence/source-metadata.json
+- evidence/xml-presentation.json
+- evidence/jmdict-families.xml
+- evidence/kanjidic2-records.xml
+- evidence/dictionary-index.json
+- evidence/joyo-rows.json
+- evidence/font-cmap.json
+- evidence/shape-evidence.json
+- evidence/provenance.json
+- evidence/baseline-title-index.txt
+- evidence/title-index.txt
+- repo/kanji/暮.md
+- repo/kanji/募.md
+- repo/kanji/川.md
+- evidence/external-snapshots/manifest.json
+- evidence/external-snapshots/01-extract.txt
+- evidence/external-snapshots/02-extract.txt
+
+The title indices list all 1257 baseline and 1258 same-commit kanji articles in code-point order. Report full reads and first/last lines. All 95 JMdict families and seven KANJIDIC2 records are complete, with full predicates and zero-match queries; no record projection. Both complete external extracts and every committed gate receipt and log are in the chain. Original selection XML, raw HTML and SVG and any non-chain asset remain unread by you; disclose this. Missing historical glyph images must not be reconstructed. Any context compaction voids the pass; capacity estimates are not guarantees. The coordinator must check actual model/context telemetry and capacity before sending phase 2.
+
+PHASE 1 (selection). Read all 37 core segments in full, in order, through the END OF CHAIN terminator before selecting. Title indices are not the end of the chain; the curated cards and complete external extracts follow. Then select:
+D. At most 25 collision-candidate cards, each neither a C distractor, a new card, nor an existing quiz_exclusions target of a new card. For each, name the new card(s) and the overlapping sense.
+E. At most 10 cards that are existing quiz_exclusions targets of a new card whose text a conclusion relies on, each with the reason. Exclusion targets that are themselves new cards are already read in the core; they are not eligible E requests.
+Request only cards by kanji character; the coordinator includes only entries that exist as repo\kanji\<character>.md in the original packet and reports any nonexistent entry back verbatim, with no substitutes or hints.
+ELIGIBILITY REFERENCE (exact bytes of the packet's eligibility-reference.json: mechanically extracted original frontmatter, in card order):
+{
+  "newCards": [
+    "墓"
+  ],
+  "otherRequiredCards": [],
+  "cards": [
+    {
+      "card": "墓",
+      "source": "snapshot/kanji/墓.md",
+      "sha256": "efbc2b3396014fd625a49548a142440da724a8ebad6ea3ac487751f3aeb693f4",
+      "distractors": [
+        "暮",
+        "募",
+        "川"
+      ],
+      "quiz_exclusions": [
+        "埋",
+        "石"
+      ]
+    }
+  ]
+}
+END ELIGIBILITY REFERENCE
+
+Before sending your final D/E lists, check every entry against this reference. D must contain no new card, distractor, or quiz_exclusions target from any new card. E must contain only quiz_exclusions targets, and no new card or distractor. Each D line must name at least one actual new card and a nonempty overlapping sense after the colon.
+
+Phase 1 ends with EXACTLY ONE send_session_message to the coordinator whose message contains ONLY the full numbered lists, one item per line, in this form and nothing else:
+D1 <character> - <new card(s)>: <overlapping sense>
+...
+E1 <character> - <reason>
+...
+Write "D: none" or "E: none" if a list is empty. Number each list consecutively starting at 1. Then end your turn and wait; make no further tool call (including task_complete) until the coordinator's phase-2 message arrives. The lists are final: phase 2 cannot add any D or E entry. Disclose later-discovered unread candidates as limits.
+
+PHASE 2 (review). The coordinator's exact single phase-2 message contains the extension first-segment path, the complete missing-entry disclosure, then Dictionary matches in fully read core and No exact-keb match in frozen union metadata. Absence from the frozen union does not establish real-world absence. Missing entries get no substitute; disclose them as limits. Read the whole extension chain serially (an empty selection yields one segment without source parts), then analyse and write the report.
+
+ANALYSIS AND REPORT:
+Follow REVIEW.md's four facets and report contract: correctness, scoped coverage, consistency/quiz safety, comprehensibility. Number findings F1 onward, optional points O1 onward, limits L1 onward. Distinguish CLEAN, NEEDS FIX and UNVERIFIED. Identify consequential unverified claims; automated checks are not linguistic proof.
+Evidence standard: material factual claims require independent evidence actually opened during this pass; candidate assertions alone are not independent support, and unsupported claims must be marked UNVERIFIED rather than CLEAN.
+Judge every comparison against both the displayed title and the ordinary secondary senses in the supplied dictionary evidence; a different displayed title alone does not establish harmlessness. For every disposition that relies on an exclusion, state whether that direct pair is declared on either endpoint.
+For each new card, compare each displayed title sense and ordinary secondary sense with the full index, including shared English head words/stems. Independently determine which direct exclusion pairs the contract requires. Exclusions are symmetric, not transitive.
+For each C card, check its title against the index, meaning defensibility as an option, and reading overlap. For every D/E read, decide collision-needing-exclusion, already handled, or harmless; give evidence.
+Check the one link wrapper in diffs\existing.diff against both complete support-article snapshots, for the correct target and no other change. Review stroke JSON only against the card, evidence and contract text you read; make no fresh visual geometry claim.
+Include: the list of core-chain and extension-chain segment numbers you read (and any re-views); your phase-1 D/E lists, any nonexistent entries, and a table of EVERY D/E card actually read (character, displayed title, related new card, reason, disposition); per-card results for the one new card; and all identified but unread candidates with reasons in Limits.
+Preserve dictionary entry/sense restrictions, spelling and register distinctions. Do not invent etymology or constituent readings, demand unrelated vocabulary, or treat historical completeness as the scope.
+Reading audits model limited pools only: not custom/caller-built or multi-borrow Starter behavior, Kotlin execution, native/phone acceptance, or compatibility with any installed APK. JVM/emulator work remains out of scope.
+Identify your actual model only if verifiable; otherwise disclose that execution-model identity is unverified.
+
+REQUIRED REPORT TEMPLATE (report-structure-v1)
+Before any content adjudication, the coordinator checks the report's structure mechanically with a frozen checker. A report that does not pass is not accepted, and there is no retry. This template fixes only the form of the report: it implies no finding, verdict, card, source or wording. Replace every <placeholder> with your own content; keep every other character of the fixed lines.
+Skeleton:
+- The first line is exactly: # B132 initial review — N1-B132-GPT-001
+- Then exactly these nine level-2 headings, each once and in this order: ## Overall verdict, ## Facet verdicts, ## Segments read, ## Phase-1 D/E lists, ## D/E cards read, ## Per-card results, ## Findings, ## Optional points, ## Limits. No other level-1 or level-2 heading is allowed.
+- Level-3 headings (### ) appear only under Facet verdicts, Findings and Optional points. Use no other heading level.
+Section contents:
+1. Overall verdict: one line "Verdict: <CLEAN|NEEDS FIX|UNVERIFIED>". It is NEEDS FIX if any facet verdict is NEEDS FIX; otherwise UNVERIFIED if any facet verdict is UNVERIFIED; otherwise CLEAN.
+2. Facet verdicts: nothing before the first level-3 heading, then exactly four level-3 headings in this order: ### Correctness, ### Scoped coverage, ### Consistency/quiz safety, ### Comprehensibility. Under each, one line "Verdict: <CLEAN|NEEDS FIX|UNVERIFIED>" and one line "Basis: <nonempty reason for this facet's verdict>".
+3. Segments read: one line "Core chain: <segment numbers read, and any re-views>" and one line "Extension chain: <segment numbers read, and any re-views>". Other statements this prompt requires about what you read, such as the title-index confirmation, follow as further plain lines in this section.
+4. Phase-1 D/E lists: one line "D: <each D ID you sent, once, each followed by its character, comma-separated>", or "D: none" if you sent no D entry; one line "E: ..." in the same form, or "E: none"; and one line "Missing entries: none", or "Missing entries: <exactly the IDs of the entries the coordinator reported as missing>".
+5. D/E cards read: one table with exactly this header row, then a separator row:
+| ID | Character | Displayed title | Related new card(s) | Reason | Disposition |
+| --- | --- | --- | --- | --- | --- |
+Then exactly one row for each D/E entry actually read (every entry you sent except reported missing ones), in your phase-1 list order, with ID and Character exactly as you sent them. Every cell is nonempty. If no entry was read, write the single line "None read." instead of the table.
+6. Per-card results: one table with exactly this header row, then a separator row:
+| Card | Correctness | Scoped coverage | Consistency/quiz safety | Comprehensibility | Evidence |
+| --- | --- | --- | --- | --- | --- |
+Then exactly one row for the one new card. Each facet cell is exactly CLEAN, NEEDS FIX or UNVERIFIED. A cell may be NEEDS FIX only if that facet's verdict is NEEDS FIX, and UNVERIFIED only if that facet's verdict is not CLEAN. The Evidence cell is nonempty and names the evidence or the F/O items for that card.
+7. Findings: either the single line "None." or items numbered F1, F2, ... without gaps. Each item is a level-3 heading "### F<n>: <short title>" followed by exactly these six top-level bullets, each with a nonempty value and no other top-level line:
+- Facet: <Correctness|Scoped coverage|Consistency/quiz safety|Comprehensibility>
+- Severity: <high|medium|low>
+- Confidence: <high|medium|low>
+- Citations: <citation>; <citation>; ...
+- Evidence: <what the cited lines show>
+- Required change: <the change needed>
+Continuation lines of a bullet must be indented. Every facet whose verdict is NEEDS FIX needs at least one F item naming it, and an F item may name only a facet whose verdict is NEEDS FIX.
+8. Optional points: either the single line "None." or items numbered O1, O2, ... without gaps. Each item is a level-3 heading "### O<n>: <short title>" followed by exactly these six top-level bullets, each with a nonempty value and no other top-level line:
+- Facet: <Correctness|Scoped coverage|Consistency/quiz safety|Comprehensibility>
+- Severity: optional
+- Confidence: <high|medium|low>
+- Citations: <citation>; <citation>; ...
+- Evidence: <what the cited lines show>
+- Suggestion: <the optional change>
+9. Limits: lines "- L1: <limit>", "- L2: <limit>", ... numbered without gaps; at least one. Continuation lines must be indented. Disclosures this prompt requires (unread inputs, unread candidates, unverified model identity, missing entries) go here unless this template places them elsewhere.
+Citations: each citation is <source>:<line> or <source>:<first>-<last>, and at least one is required per F or O item. <source> is the path printed after "SOURCE:" in a segment header of your own core or extension chain, without any bracketed [D<n>] or [E<n>] label. Line numbers are the source's own numbering (as in "SOURCE LINES"), not segment line numbers, and must lie within the lines included in the chain.
+Verdict cells contain only the exact enum, with no annotations or finding IDs.
+No table cell may contain the "|" character. Bold or code markup is ignored by the checker. Your coordinator completion message must equal the overall verdict.
+
+LITERAL FILL-IN REPORT SKELETON (form only)
+Use the following layout for the report; do not copy the enclosing code fence. Fill every placeholder from this pass. Verdict placeholders take only the enums already defined above; no verdict is supplied here. Repeat the D/E data row for every entry actually read, in phase-1 order; if none was read, replace that entire table with "None read.". Keep exactly one per-card data row for the one new card, as laid out. Under Findings and Optional points, either repeat the item layout with consecutive numbering from 1 or replace the whole section body with "None." when there are no such items. Repeat the numbered limit line as needed, with at least one limit. The existing rules for citations, disclosures, consistency, nonempty cells and indented continuation lines apply unchanged.
+
+```text
+# B132 initial review — N1-B132-GPT-001
+
+## Overall verdict
+Verdict: <overall-verdict>
+
+## Facet verdicts
+### Correctness
+Verdict: <correctness-verdict>
+Basis: <correctness-basis>
+
+### Scoped coverage
+Verdict: <coverage-verdict>
+Basis: <coverage-basis>
+
+### Consistency/quiz safety
+Verdict: <consistency-verdict>
+Basis: <consistency-basis>
+
+### Comprehensibility
+Verdict: <comprehensibility-verdict>
+Basis: <comprehensibility-basis>
+
+## Segments read
+Core chain: <core-segment-numbers-and-re-views>
+Extension chain: <extension-segment-numbers-and-re-views>
+<other-required-read-disclosures>
+
+## Phase-1 D/E lists
+D: <sent-D-IDs-and-characters-or-none>
+E: <sent-E-IDs-and-characters-or-none>
+Missing entries: <reported-missing-IDs-or-none>
+
+## D/E cards read
+| ID | Character | Displayed title | Related new card(s) | Reason | Disposition |
+| --- | --- | --- | --- | --- | --- |
+| <ID> | <character> | <displayed-title> | <related-card> | <reason> | <disposition> |
+
+## Per-card results
+| Card | Correctness | Scoped coverage | Consistency/quiz safety | Comprehensibility | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| 墓 | <墓-correctness-verdict> | <墓-coverage-verdict> | <墓-consistency-verdict> | <墓-comprehensibility-verdict> | <墓-evidence> |
+
+## Findings
+### F1: <finding-title>
+- Facet: <finding-facet>
+- Severity: <finding-severity>
+- Confidence: <finding-confidence>
+- Citations: <finding-source>:<finding-line-or-range>
+- Evidence: <finding-evidence>
+- Required change: <required-change>
+
+## Optional points
+### O1: <optional-title>
+- Facet: <optional-facet>
+- Severity: optional
+- Confidence: <optional-confidence>
+- Citations: <optional-source>:<optional-line-or-range>
+- Evidence: <optional-evidence>
+- Suggestion: <suggestion>
+
+## Limits
+- L1: <limit>
+```
+
+REVIEW SCOPE AND REPORT CONSTRUCTION CHECK
+
+Semantic exclusion assessment and current runtime exposure are different questions. For every requested comparison, first assess whether the displayed senses or independently sourced ordinary secondary senses could make the meaning choice ambiguous. Assess that direct pair even if neither endpoint is currently in the other's distractors. Only then report whether a declared direct exclusion already handles it and, separately, whether the current curated quiz exposes it. Absence from current options, a different displayed title, or an exclusion involving a third card is not by itself evidence that this direct pair is harmless. State the evidence for the semantic disposition; if the supplied evidence cannot settle a consequential claim, mark that claim and the affected verdict UNVERIFIED rather than substituting a runtime-only check. Do not infer a collision merely from shared subject matter.
+
+Before the sole report write, check your complete draft against the literal skeleton and the required template. This is an internal construction check, not authorization for another tool or a rewrite.
+- Keep the exact prefix "Verdict: " in the Overall verdict section, followed by your own verdict enum. A bare verdict word without that prefix is not the required field.
+- Each D summary entry must include its actual D ID and character. Preserve the D1, D2, and subsequent IDs from your own phase-1 message; list each separately once, comma-separated. Characters alone, counts, ID ranges, or a reference to the table do not satisfy this field.
+- Apply the same rule independently to E IDs. Use "D: none" or "E: none" only if that list was empty.
+- Keep every literal heading, table header and field label in the skeleton. Replace placeholders only. Supply exactly one per-card row for the one new card, and all requested/read D/E rows.
+- Ensure every required finding, optional point, citation, facet verdict and numbered limit meets the unchanged required template. Every disposition needs evidence, not just the words "no collision".
+- The coordinator completion message is the bare overall enum; the report's Overall verdict field is instead the prefixed "Verdict: " line. These are different output locations with different formats.
+
+No verdict or content answer is supplied by this checklist. Form compliance does not establish linguistic correctness.
+
+Additional evidence discipline and literal scope cells
+
+The D/E limits are maxima, not quotas. Select comparisons by plausible meaning ambiguity after reading the entire title index; do not fill spare slots merely to reach a count.
+
+For each D/E row, supply a source-line citation supporting the semantic decision in the Reason or Disposition cell. Briefly identify the potentially overlapping sense, then state the evidence that supports the decision. A short explanation with a citation is enough; do not add columns or change the report skeleton.
+
+Read all applicable senses in each supplied comparison article, not just its title or first paragraph. Do not infer that a sense is exclusively physical, exclusively abstract, confined to a particular domain, or absent merely because another sense comes first. If that restriction is material to a harmless disposition, it needs positive support in the opened evidence. Explicitly address secondary meanings that the article itself includes.
+
+A whole-word meaning does not automatically establish a constituent character meaning. Conversely, saying "only a compound" does not refute a possible ordinary secondary sense either. Decide from the actual character and word evidence, preserving the distinction without using it as a blanket reason to dismiss a comparison. Likewise, a nominal role versus an action can be a relevant distinction but is not by itself a proof that ordinary meaning choices cannot overlap.
+
+Do not assert an exhaustive negative merely because one source lacks a gloss. If the opened evidence cannot settle a consequential semantic decision, state the uncertainty and propagate UNVERIFIED to the affected assessment. Do not force agreement or a particular verdict. A supported NEEDS FIX is a valid review outcome; a CLEAN outcome is not the goal.
+
+In the Related new card(s) column, write only the literal new-card character(s) whose direct pair that row assesses, separated by ", " when there is more than one. Do not put parentheses, exclusion provenance, or explanatory text in that cell. Put relevant cross-card context in Reason or Disposition instead. This does not change the scope: only direct pairs involving the one new card are adjudicated.
+
+Before the one authorized write, check every harmless disposition against its cited source: does the explanation address the strongest plausible overlap found there, or merely a different title, first sense, part of speech, compound status or current runtime exposure? Correct the reasoning or disclose uncertainty in the draft before writing. Do not inspect any earlier run or create a second report.
+
+CITATION FIELD GRAMMAR (form only). In every Findings or Optional points "Citations:" bullet, each semicolon-delimited citation must repeat the complete source path followed by a colon and exactly one line number or one contiguous range. Do not put comma-separated line numbers or ranges after a source path. To cite noncontiguous locations in the same source, repeat the full source path after each semicolon. The literal layout is "<source>:<line>; <source>:<first>-<last>". Replace placeholders with your own opened sources and line numbers; the layout supplies no source, claim or verdict. Check every such bullet against this grammar before the sole report write.
+
+Finish with exactly one report write, then one complete view readback (forceReadLargeFiles: true). Do not hash it: the coordinator will. Send ONE phase-2 send_session_message to the coordinator whose entire message value is exactly CLEAN, NEEDS FIX or UNVERIFIED, with at most one trailing LF or CRLF newline. No report path, explanation, recommendations, extra spaces, extra lines, hash or other text is allowed in that coordinator message; its findings and evidence must be in the report. An ordinary final assistant response in this isolated reviewer session may summarize its report, but is not review evidence. No further investigation or tool calls are authorized after the completion message except the existing optional task_complete. Then stop; do not start further work.
