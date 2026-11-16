@@ -59,6 +59,23 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 132: local unreviewed authoring candidate
+
+墓 is a missing frozen member (row 197). The existing N3 article 墓
+supports はか practice and gains one reciprocal wrapper; no prose exception
+is needed. The complete ordered source readings remain separate from practice.
+The [source packet](n1-sources/batch-132/selection.json) retains complete
+applicable dictionary records, the baseline scan and six bidirectional
+pair dispositions. The direct 埋 and 石 precautions are conservative
+broad-label protections, not claims that every burial or stone is a grave.
+
+Published delivery remains **267/1,228**, with **961 remaining**; this
+local draft is not delivery. The bounded host reading model found no
+N1/All or Starter-plus-target hits but found three latent smaller-pool
+collisions, including a drawable つか when Starter also borrows 束.
+That and the recorded source and font limitations are not independent
+review, arbitrary-pool, native/device, visual or publication acceptance.
+
 ## Batch 131 reconciliation 001: bounded direct precautions
 
 The local revision of candidate 1359b467 appends nine direct precautions on
