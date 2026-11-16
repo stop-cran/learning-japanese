@@ -1,0 +1,18 @@
+............................E.........
+======================================================================
+ERROR: test_exact_completed_recovery_passes (test_verify_b128_reconciliation_v2.ResumeTests.test_exact_completed_recovery_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_verify_b128_reconciliation_v2.py", line 26, in test_exact_completed_recovery_passes
+    result = v.check_resume(self.directory, CANDIDATE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b128_reconciliation_v2.py", line 570, in check_resume
+    require(evidence["budgetLog"].encode("utf-8") == pin(COMMITTED_GATES / "budget.log"),
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Recovery budget differs from committed gate
+
+----------------------------------------------------------------------
+Ran 38 tests in 4.226s
+
+FAILED (errors=1)

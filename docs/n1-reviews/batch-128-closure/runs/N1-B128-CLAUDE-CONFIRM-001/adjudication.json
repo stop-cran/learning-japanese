@@ -1,0 +1,38 @@
+{
+  "run": "N1-B128-CLAUDE-CONFIRM-001",
+  "candidate": "7b3fd5c13c20f4b456723abe3de0ac42c4390bd4",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-128\\N1-B128-CLAUDE-CONFIRM-001.md",
+    "sha256": "640d64759e6b25e0512fa39991fb965ca7aa5a74a4501b2abfb55daa529b1c77"
+  },
+  "rawVerdict": "CONFIRMED",
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": true,
+  "acceptedNewFindings": [],
+  "openClaimIds": [],
+  "evidence": {
+    "mechanicalFinalSha256": "f5603af240c01f1dff0b73b97133c603ec88ece9ca7a8b598a95c6228220c4e3",
+    "auditSha256": "dda448f9e206906e0bc4b24047c1c6676e08bfbd597de5802b9df99eab1efcc0",
+    "actualResponseModels": ["claude-opus-5-5"],
+    "context": "PASS; long_context, no compaction",
+    "successorVerificationSha256": "3418480c542a8e92540f89b695837814e989a3e793933561f1cecfdd02ab234b",
+    "execution": "All 32 chain segments read once in order; no execution breaches, fetches or unexpected user messages; one report write and verified readback; reviewer idle at audit."
+  },
+  "initialDispositions": {
+    "F1": "Resolved. The signed successor declares 咲 directly on 唇 (kanji/唇.md:14) and explains at :66-68 that the noun-like English choice 'blossom; bloom' sits near the sourced literary petal sense while 咲く itself means 'to bloom'. Coordinator re-checked complete JMdict 1194500 (flower/blossom/bloom/petal in one noun sense) and 1297210 (to bloom/flower/blossom/open; rising waves) in the committed reconciliation records, and the Daijisen/Nikkoku 花びら lines in the chain extract. Exclusions are symmetric, so the single declaration covers both directions; 咲.md need not change.",
+    "O1": "Decline accepted. The card keeps structure-unclassified, no phonetic field and an explicitly non-etymological modern-shape mnemonic (kanji/唇.md:5, :29-32). The hedge is accurate and O1 was optional; historical/phonetic enrichment remains deferred, not denied."
+  },
+  "revisionAdjudication": [
+    "The only runtime change from the initial candidate is kanji/唇.md; the support word, geometry and 8,717 other mapped runtime entries are byte-identical, as bound by the independent v3 proof.",
+    "The added 刃 and 郊 guards are conservative precautions for the context-poor 名義抄 脣=ホトリ・クチビル quotation; the card states they are not synonymy claims. The reviewer accepts them as harmless, and both reference existing cards without overlapping curated 古/右/石.",
+    "The reviewer opened the full Q3-Q14 records it cites (鳴, 叫, 騒, 差, 房, 案, 在, 鋭) and found the no-guard dispositions consistent; no new finding was raised."
+  ],
+  "confirmationOptionalDispositions": [],
+  "limits": [
+    "Preserve the raw report, including its identity-unverified wording. Execution identity is verified separately by the audit (claude-opus-5-5 on every response record) and is not linguistic proof.",
+    "Reviewer L3 keeps 末, 隅, 葉, 紅 and 顔 unassessed, matching the explicit deferral in response-a L2. Coordinator title check: end; tip / corner; nook / leaf / crimson; deep red / face; expression. None names lips, a petal, a labial sound, surprise or the waterside/vicinity range of ホトリ; they remain bounded title-level observations, not accepted pair dispositions.",
+    "The 刃/郊 guards rest on an unresolved historical gloss and reduce fallback-pool variety; custom/caller-built pools were not modelled.",
+    "No exhaustive linguistic, arbitrary/custom-pool, multi-borrow, Kotlin/native/device, installed-APK or 脣 fallback-rendering acceptance.",
+    "This accepts only the original Claude family's confirmation on this exact successor. GPT confirmation, closure, publication and the owner checkpoint are still pending."
+  ]
+}
