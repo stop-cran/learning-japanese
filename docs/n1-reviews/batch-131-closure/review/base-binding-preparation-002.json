@@ -1,0 +1,24 @@
+{
+  "status": "PREPARATION_ONLY",
+  "sourceBase": "6da1184b82b60553f9b65c57f53289c779f96f7c",
+  "candidateBase": "cb0f5581bdda84f7e673225c19126c85e242e57b",
+  "baselineKanjiEntries": 1254,
+  "moduleSha256": "76c11728caa881ede7179266fd7060e97bb861e773933d898ce331d46dcb8c2b",
+  "testSha256": "48973a123851f5543e25858bcba2a7605497e7e0fcb7894fdf70309f293a96af",
+  "testReceiptSha256": "8f36033cb90bc03cc82ce45807821c63983e14d3e738294c1b8c289e44d3b6f3",
+  "observedAdaptationSha256": "69fec25c4cdb64e13c7c45d6f01d3dc45bf3348fec549fabe928555ce19dc8b8",
+  "memory": {
+    "freeRamBeforeBytes": 3602784256,
+    "freeRamAfterBytes": 3540787200,
+    "minimumObservedFreeRamBytes": 3540787200,
+    "peakWorkingSetBytes": 26058752,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "preservedFailureReceiptSha256": "a61aedb6f7c7a1c03b60b353c572033aa7d59d0cb07311a9f222da6a582f7ca8",
+  "correction": "Initial coordinator helper compared an ls-tree -rz digest to the author's ls-tree -r digest. V2 retains exact NUL-delimited tree equality, reproduces the original line-delimited digest and rejects unsafe path serialization. Original author evidence is unchanged.",
+  "limits": "Four focused controls and actual immutable baseline trees only. No active author teaching draft was read. The candidate branch of the verifier must still run after handoff with independent signature and clean-tree checks; no candidate, source semantics or publication is accepted."
+}

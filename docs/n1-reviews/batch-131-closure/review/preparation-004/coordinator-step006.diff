@@ -1,0 +1,55 @@
+--- step_b131_neutral_005.py
++++ step_b131_neutral_006.py
+@@ -3,11 +3,11 @@
+ Derived from step.py: an optional frozen prompts preflight selects a clean-path attempt, and child checkers
+ always run with UTF-8 stdout.
+ 
+-  python -B step_b131_neutral_005.py <batch> <claude|gpt> admit <get_sessions_status.json> [preflight]
+-  python -B step_b131_neutral_005.py <batch> <claude|gpt> launch <session-id> [preflight]
+-  python -B step_b131_neutral_005.py <batch> <claude|gpt> phase1 <session-id> [preflight]
+-  python -B step_b131_neutral_005.py <batch> <claude|gpt> final <session-id> [preflight]
+-  python -B step_b131_neutral_005.py <batch> <claude|gpt> accept <adjudication.json> [preflight]
++  python -B step_b131_neutral_006.py <batch> <claude|gpt> admit <get_sessions_status.json> [preflight]
++  python -B step_b131_neutral_006.py <batch> <claude|gpt> launch <session-id> [preflight]
++  python -B step_b131_neutral_006.py <batch> <claude|gpt> phase1 <session-id> [preflight]
++  python -B step_b131_neutral_006.py <batch> <claude|gpt> final <session-id> [preflight]
++  python -B step_b131_neutral_006.py <batch> <claude|gpt> accept <adjudication.json> [preflight]
+ """
+ import datetime
+ import json
+@@ -35,7 +35,7 @@
+     return {"path": str(path), "sha256": sha(data)}
+ 
+ 
+-from b131_lifecycle_process_004 import python
++from b131_lifecycle_process_005 import python
+ from b131_review_admission_003 import observe
+ 
+ 
+@@ -79,7 +79,7 @@
+     record = {"run": run, "batch": config["batch"], "candidate": config["candidate"], "createdAt": now(),
+               "preflightSha256": sha(preflight_path.read_bytes()),
+               "preflight": str(preflight_path),
+-              "tool": {"path": str(TOOLS / "step_b131_neutral_005.py"), "sha256": sha((TOOLS / "step_b131_neutral_005.py").read_bytes())}}
++              "tool": {"path": str(TOOLS / "step_b131_neutral_006.py"), "sha256": sha((TOOLS / "step_b131_neutral_006.py").read_bytes())}}
+ 
+     if action == "admit":
+         order = preflight["order"]
+@@ -167,7 +167,7 @@
+         ctx = context(records, path.parent / "events.jsonl")
+         ctx.update(events=str(path.parent / "events.jsonl"),
+                    checkerSha256=sha((records / "check-run-context.py").read_bytes()))
+-        context_record = freeze_json(records / f"{run}-context.json", ctx)
++        context_record = freeze_json(records / f"{run}-context-{path.parent.name}.json", ctx)
+         if ctx["status"] != "PASS":
+             problems.append("context " + "; ".join(ctx.get("errors", [])))
+         structure = None
+@@ -179,7 +179,7 @@
+                 "--phase1-list", phase1_list, "--phase2-message", phase2, "--audit", path, "--run", run)
+             require(code in (0, 1) and stdout.strip(), f"Structure checker produced no result (exit {code}): {stderr}")
+             structure = json.loads(stdout)
+-            structure_record = freeze_json(records / f"{run}-structure.json", structure)
++            structure_record = freeze_json(records / f"{run}-structure-{path.parent.name}.json", structure)
+             if structure["status"] != "PASS":
+                 problems.append("structure " + "; ".join(structure.get("errors", [])[:20]))
+         else:

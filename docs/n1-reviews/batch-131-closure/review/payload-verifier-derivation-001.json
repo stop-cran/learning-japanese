@@ -1,0 +1,123 @@
+{
+  "batch": 131,
+  "status": "PREPARATION_ONLY",
+  "verifier": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b130_payload.py",
+      "sha256": "f5d3791ae3b1ae301617ee90ab3625cb60aab9631724441200df22cca8ee2551"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b131_payload.py",
+      "sha256": "0b225ae7ee2d0682b66fefae70e4cf4928914e676747ea73b76ca35d47abb678",
+      "bytes": 12293
+    },
+    "substitutions": [
+      {
+        "before": "b130",
+        "after": "b131",
+        "count": 6
+      },
+      {
+        "before": "B130",
+        "after": "B131",
+        "count": 5
+      },
+      {
+        "before": "batch-130",
+        "after": "batch-131",
+        "count": 2
+      },
+      {
+        "before": "scratch-130",
+        "after": "scratch-131",
+        "count": 1
+      },
+      {
+        "before": "Batch 130",
+        "after": "Batch 131",
+        "count": 1
+      },
+      {
+        "before": "\"f237a8d590a4cb91029bc0b8485163933f44b403\"",
+        "after": "\"cb0f5581bdda84f7e673225c19126c85e242e57b\"",
+        "count": 1
+      },
+      {
+        "before": "MEMBERS = [\"\\u5840\", \"\\u62cd\", \"\\u8017\"]",
+        "after": "MEMBERS = [\"\\u885b\", \"\\u7f8a\", \"\\u971c\"]",
+        "count": 1
+      },
+      {
+        "before": "SUPPORTS = {\"\\u5840\": [\"\\u5840\"], \"\\u62cd\": [\"\\u62cd\\u624b\"], \"\\u8017\": [\"\\u6d88\\u8017\"]}",
+        "after": "SUPPORTS = {\"\\u885b\": [\"\\u81ea\\u885b\", \"\\u885b\\u661f\"], \"\\u7f8a\": [\"\\u7f8a\\u6bdb\"], \"\\u971c\": [\"\\u971c\"]}",
+        "count": 1
+      },
+      {
+        "before": "\"222518f71e16878a49dbff51ecaa94ee2d9f6f471b8d9a5fa4fb9bd4b6d0a22b\"",
+        "after": "\"6efda73704e0ed665c540b5cba62d9de62613df5fc4c16ffe5ba52c834078e67\"",
+        "count": 1
+      },
+      {
+        "before": "\"f95c7bc6867cf08977e2ada07630564441790ad31a50141126fec8de3a7d8b84\"",
+        "after": "\"da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b\"",
+        "count": 1
+      },
+      {
+        "before": "proof[\"batch\"] == 130",
+        "after": "proof[\"batch\"] == 131",
+        "count": 1
+      },
+      {
+        "before": "\"batch\": 130",
+        "after": "\"batch\": 131",
+        "count": 1
+      },
+      {
+        "before": "len(previous) == 8724 and len(current) == 8730",
+        "after": "len(previous) == 8731 and len(current) == 8737",
+        "count": 1
+      },
+      {
+        "before": "binding[\"file\"] == svg_name",
+        "after": "binding[\"path\"] == svg_name",
+        "count": 1
+      }
+    ],
+    "reverseExact": true
+  },
+  "tests": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b130_payload.py",
+      "sha256": "dd5f9705cf16e00c7808b5f359baff2b35e2201c1fadf0514f07dd78b005951d"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b131_payload.py",
+      "sha256": "9cd43e7a92ccfc418d1d7651494aca905503ca9b467e8270f8696886b377c3ff",
+      "bytes": 3170
+    },
+    "substitutions": [
+      {
+        "before": "verify_b130_payload",
+        "after": "verify_b131_payload",
+        "count": 1
+      }
+    ],
+    "reverseExact": true
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b131_payload_verifier.py",
+    "sha256": "cc1333eff26fa3b09ce95a11027f8f50edf7a4065e3d9eedc77ce740e1b081da"
+  },
+  "memory": {
+    "freeRamBeforeBytes": 5429309440,
+    "freeRamAfterBytes": 5428654080,
+    "minimumObservedFreeRamBytes": 5428654080,
+    "peakWorkingSetBytes": 25292800,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "limits": "Specialization only; actual signed runtime, metadata, reciprocal wrapper and stroke-converter verification must still execute."
+}

@@ -1,0 +1,76 @@
+E.........
+======================================================================
+ERROR: test-audit-confirm (unittest.loader._FailedTest.test-audit-confirm)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test-audit-confirm
+Traceback (most recent call last):
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\confirm-002\test-audit-confirm.py", line 14, in <module>
+    spec.loader.exec_module(module)
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\confirm-002\audit-confirm.py", line 24, in <module>
+    from review_chain import digest  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'review_chain'
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.045s
+
+FAILED (errors=1)
+{
+  "contract": "confirm-structure-v1",
+  "status": "PASS",
+  "errors": [],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "The coordinator completion message is not an exact confirmation verdict"
+  ],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "Report is absent"
+  ]
+}
+
+{"started": "2026-11-16T19:53:31.445095+00:00", "finished": "2026-11-16T19:53:31.640336+00:00", "command": ["C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe", "-B", "-c", "import sys, unittest; sys.path.insert(0, 'C:\\\\Users\\\\stop-\\\\n1-kanji-workspace\\\\scratch-131\\\\review\\\\confirm-002'); unittest.main(module=None, argv=['unittest', 'test-audit-confirm', 'test-confirm-structure'])"], "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b131-worktree", "exitCode": 1, "childPid": 27524, "childExitCodeAfterCleanup": 1, "waitTimeoutSeconds": 0.1, "cleanupTimeoutSecondsPerStage": 10, "cleanupScope": "Immediate child PID only; not descendant-process acceptance.", "cleanupError": null, "logSha256": "b19e25c597d1287eac7a2adb541f366871529523cb6c0f33eb1ca91ee102b5ad", "memory": {"freeRamBeforeBytes": 3841855488, "freeRamAfterBytes": 3835596800, "minimumObservedFreeRamBytes": 3824599040, "peakWorkingSetBytes": 23265280, "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.", "abortThresholdBytes": 1073741824, "samplingIntervalSeconds": 0.25, "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.", "breach": null}, "runnerSha256": "da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b", "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"}

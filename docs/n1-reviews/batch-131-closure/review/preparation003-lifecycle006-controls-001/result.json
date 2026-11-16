@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "realReport": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-003\\reports\\review-claude-003\\initial-claude-003.md",
+    "sha256": "a3034b4c4c6f1b58ce97e9765b3e0f01248f7d30b82116b594ab5bc2cb666011"
+  },
+  "positive": {
+    "contract": "report-structure-v1",
+    "status": "PASS",
+    "errors": [],
+    "overall": "NEEDS FIX",
+    "facets": {
+      "Correctness": "CLEAN",
+      "Scoped coverage": "CLEAN",
+      "Consistency/quiz safety": "NEEDS FIX",
+      "Comprehensibility": "CLEAN"
+    },
+    "findings": 2,
+    "optionalPoints": 3,
+    "limits": 7,
+    "deRows": 29,
+    "acceptanceLimit": "Structure only; not linguistic acceptance."
+  },
+  "negative": {
+    "contract": "report-structure-v1",
+    "status": "FAIL",
+    "errors": [
+      "Level-2 headings must be exactly, in order: Overall verdict; Facet verdicts; Segments read; Phase-1 D/E lists; D/E cards read; Per-card results; Findings; Optional points; Limits"
+    ],
+    "overall": "NEEDS FIX",
+    "facets": {
+      "Correctness": "CLEAN",
+      "Scoped coverage": "CLEAN",
+      "Consistency/quiz safety": "NEEDS FIX",
+      "Comprehensibility": "CLEAN"
+    },
+    "findings": 2,
+    "optionalPoints": 3,
+    "limits": 7,
+    "deRows": 29,
+    "acceptanceLimit": "Structure only; not linguistic acceptance."
+  },
+  "checks": [
+    "empty-parent-PYTHONPATH import succeeds",
+    "actual report passes unchanged checker",
+    "extra H2 is rejected",
+    "actual report unchanged",
+    "prior partial context retained"
+  ],
+  "limits": "Tool integration and structure only; not substantive report or publication acceptance."
+}

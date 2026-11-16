@@ -1,0 +1,229 @@
+{
+  "batch": 131,
+  "status": "PREPARATION_ONLY",
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\review_chain.py",
+        "sha256": "2c02b506086b0698ccac49ead5ddfa87271b535f4deebbefdd9f28734bfb2109"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\review_chain.py",
+        "sha256": "4154bba87fcd508466a2cc4413b33b8dceac4e8be46c651c0ec9aab26f891b0a",
+        "bytes": 7057
+      },
+      "changes": [
+        {
+          "before": "    for group in (\"D\", \"E\"):\n",
+          "after": "    if len({e[\"character\"] for e in entries}) != len(entries):\n        errors.append(\"Duplicate comparison character\")\n    for group in (\"D\", \"E\"):\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\audit-review.py",
+        "sha256": "e31be612ded65ed079c2c69270591ef103f1e816603cc59742b660b4448c9a21"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\audit-review.py",
+        "sha256": "47a2413a8b95d38560d202e48dfe941343bb3fb25dd2cd4ca4b3d15e6426c49c",
+        "bytes": 25487
+      },
+      "changes": [
+        {
+          "before": "B130",
+          "after": "B131",
+          "count": 1
+        },
+        {
+          "before": "    config = json.loads(args.config.read_bytes())",
+          "after": "    config = json.loads(require_frozen(args.config))",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\check-report-structure.py",
+        "sha256": "880570f385e57545e28e726cd3fe4a6ef512402772917bb11f7f08b5669822a3"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\check-report-structure.py",
+        "sha256": "3ccb51f9f5636e99a65fd16400a4317afb026f4e373a83c11dba6925440121e3",
+        "bytes": 15594
+      },
+      "changes": [
+        {
+          "before": "B130",
+          "after": "B131",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\check-run-context.py",
+        "sha256": "2555515b459b99ce50e8a999a6077622458f0636c34f39783400ddec8877a5e0"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\check-run-context.py",
+        "sha256": "9902553a73d0099940517730b2c8a06f1082951a530ca32d0c26efd116326bb4",
+        "bytes": 2005
+      },
+      "changes": []
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\test-review-chain.py",
+        "sha256": "b6e123d1c70c8a8f80ce8dc8b3eb4d1a76c16edefb8d6c8b469b1cfba9836e0e"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-chain.py",
+        "sha256": "77b9b79947ceebc05da1288641ef6622ffd438a14c6cf6ea4389df58add4bbc3",
+        "bytes": 3887
+      },
+      "changes": []
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\test-report-structure.py",
+        "sha256": "e2611df0e4ab6d0106516147ff88766143cfad50f078a8fcf6ce4e73babc5ade"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-report-structure.py",
+        "sha256": "db5da1583350c97ad736c6fa3af376f26c884ea25de8026f665abf79c57d6945",
+        "bytes": 13208
+      },
+      "changes": [
+        {
+          "before": "B130",
+          "after": "B131",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\test-review-audit.py",
+        "sha256": "5eadbaf282b1de5b6ff5fa4a6775b085ae792f7f8b9b1d0c70e707f5d4fd88e6"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-audit.py",
+        "sha256": "70cd33c0507f6a8df55970f4923635a987097c85fdf01521d941918746e2ddf7",
+        "bytes": 24840
+      },
+      "changes": []
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare-chain-b130-compact.py",
+        "sha256": "72477e0c6fd24359250d6a9a8710aa2711d3a70c7a3788bba40c60480718ff04"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_chain_b131_001.py",
+        "sha256": "594bd403fc2565b828287801a0f58c29ab66f615fbef7e5766331b8e7acc8730",
+        "bytes": 7174
+      },
+      "changes": [
+        {
+          "before": "b130_compact_common",
+          "after": "b131_neutral_common_001",
+          "count": 1
+        },
+        {
+          "before": "prepare-chain-b130-compact.py",
+          "after": "prepare_chain_b131_001.py",
+          "count": 2
+        },
+        {
+          "before": "WS / \"review-chains\" / f\"b{n}-{args.run}-extension\"",
+          "after": "records / \"chains\" / f\"b{n}-{args.run}-extension\"",
+          "count": 1
+        },
+        {
+          "before": "WS / \"review-chains\" / f\"b{n}-initial-compact-001\"",
+          "after": "records / \"chains\" / f\"b{n}-initial-compact-001\"",
+          "count": 1
+        },
+        {
+          "before": "            for name in (\"source-metadata.json\",",
+          "after": "            add(\"evidence/baseline-title-index.txt\")\n            add(\"evidence/font-cmap.json\")\n            for relative in packet[\"modifiedExisting\"]:\n                add(\"baseline/\" + relative)\n            for name in (\"source-metadata.json\",",
+          "count": 1
+        },
+        {
+          "before": "            require(phase1[\"status\"] == \"PHASE1_READY\"",
+          "after": "            require(phase1[\"session\"] and args.run in args.phase1_audit.parts,\n                    \"Phase-1 audit is not stored under this run\")\n            require(phase1[\"status\"] == \"PHASE1_READY\"",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b130_compact.py",
+        "sha256": "a81bbee7c25396a46b0ded8b5d5b002d0c3aadf384a9869d431a2964a1d8d359"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_001.py",
+        "sha256": "81f84c2cf9e371b1d6c521edc9e16edd0584e32adcff55ca413c5fd9691954bc",
+        "bytes": 16950
+      },
+      "changes": [
+        {
+          "before": "b130_compact_common",
+          "after": "b131_neutral_common_001",
+          "count": 1
+        },
+        {
+          "before": "step_b130_compact.py",
+          "after": "step_b131_neutral_001.py",
+          "count": 7
+        },
+        {
+          "before": "prepare-chain-b130-compact.py",
+          "after": "prepare_chain_b131_001.py",
+          "count": 1
+        },
+        {
+          "before": "from b127_lifecycle_process import python",
+          "after": "from b131_lifecycle_process_001 import python\nfrom b131_review_admission_001 import observe",
+          "count": 1
+        },
+        {
+          "before": "        source = Path(argument)\n        raw = source.read_bytes()\n        status = json.loads(raw)\n        sessions = status.get(\"sessions\", [])\n        active = [{\"id\": s.get(\"id\"), \"name\": s.get(\"name\"), \"activity\": s.get(\"activity\")} for s in sessions\n                  if (s.get(\"activity\") or {}).get(\"status\") != \"idle\" or s.get(\"is_running\")]\n        others = [s for s in active if s[\"id\"] not in (COORDINATOR, \"e1ee36b6-cb53-4c64-854e-cec8a61c1dfb\")]\n        same_name = [s.get(\"name\") for s in sessions if (s.get(\"name\") or \"\").strip() == spec[\"launch\"][\"sessionName\"]]\n        resource = load_module(\"n1_ram_guard_admit\", GUARD)\n        ram = resource.available_ram()\n        absent = {\"report\": not report.exists(), \"extension\": not extension.exists(),\n                  \"auditDirectory\": not (records / run).exists()}\n        record.update(freeRamBytes=ram, startupFloorMet=ram > 2 * 1024 ** 3, activeSessions=active,\n                      otherBusySession=bool(others), sessionNamedForThisRunExists=bool(same_name),\n                      absent=absent, launch=spec[\"launch\"], kickoff=spec[\"kickoffText\"],\n                      note=\"Fresh observation only, not a reservation or permission to skip later guards.\")\n        record[\"admitted\"] = bool(record[\"startupFloorMet\"] and not others and not same_name and all(absent.values()))\n        if not record[\"admitted\"]:\n            print(json.dumps(record, ensure_ascii=False, indent=1))\n            raise SystemExit(\"Admission refused\")\n        record[\"statusSnapshot\"] = write_frozen(records / f\"{run}-admission-status.json\", raw)\n        out = records / f\"{run}-admission.json\"\n",
+          "after": "        record = observe(argument, config, spec, record)\n        out = records / f\"{run}-admission.json\"\n",
+          "count": 1
+        },
+        {
+          "before": "    elif action == \"launch\":\n        admission = binding(records / f\"{run}-admission.json\")",
+          "after": "    elif action == \"launch\":\n        admission_path = records / f\"{run}-admission.json\"\n        admitted = json.loads(frozen(admission_path))\n        age = (datetime.datetime.now(datetime.timezone.utc) -\n               datetime.datetime.fromisoformat(admitted[\"createdAt\"])).total_seconds()\n        require(admitted[\"admitted\"] is True and 0 <= age < 120,\n                \"Startup observation expired; do not launch against a stale admission\")\n        admission = binding(admission_path)",
+          "count": 1
+        },
+        {
+          "before": "        launch = json.loads(frozen(records / f\"{run}-launch.json\"))",
+          "after": "        launch = json.loads(frozen(records / f\"{run}-launch.json\"))",
+          "count": 1
+        },
+        {
+          "before": "        require(adjudication[\"run\"] == run and adjudication[\"report\"][\"sha256\"] == sha(frozen(report)),",
+          "after": "        require(adjudication[\"candidate\"] == config[\"candidate\"]\n                and adjudication[\"finalSha256\"] == sha(frozen(records / f\"{run}-final.json\"))\n                and adjudication[\"claimsAdjudicated\"] is True\n                and adjudication[\"run\"] == run\n                and adjudication[\"report\"][\"sha256\"] == sha(frozen(report)),",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\build-prompts-b130-attempt004.py",
+        "sha256": "ea867a8ffeacb574d0b97d258fb3df8700149d4eac21907d684d22877daf620b"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b131_prompt_primitives_001.py",
+        "sha256": "56686b6294e4b48d5f71f5a9fc7ff80abf80a714dff13c483381bc9d988f72a8",
+        "bytes": 8548
+      },
+      "changes": "Retain only accepted-template value/render functions, never run predecessor main; change shared configuration import to B131-only paths."
+    }
+  ],
+  "producerSha256": "320f609048887e82e6731e4baa5dcb5715b32bfc16e32114eb64c4461c3c4e99",
+  "limits": "Implementation sources only. No predecessor reports, selections, audit runs, adjudications, findings or access grants were imported or executed."
+}

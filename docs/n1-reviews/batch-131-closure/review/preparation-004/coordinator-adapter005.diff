@@ -1,0 +1,11 @@
+--- b131_lifecycle_process_004.py
++++ b131_lifecycle_process_005.py
+@@ -23,7 +23,7 @@
+     try:
+         process = subprocess.Popen(command, cwd=REPO, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                    env={**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8",
+-                                        "PYTHONDONTWRITEBYTECODE": "1"})
++                                        "PYTHONDONTWRITEBYTECODE": "1", "PYTHONPATH": str(TOOLS)})
+         while True:
+             guard.check()
+             try:

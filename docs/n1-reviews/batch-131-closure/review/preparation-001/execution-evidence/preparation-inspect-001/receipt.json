@@ -1,0 +1,32 @@
+{
+  "started": "2026-11-16T17:12:57.131090+00:00",
+  "finished": "2026-11-16T17:12:57.209778+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "from pathlib import Path; r=Path(r'C:\\Users\\stop-\\n1-kanji-workspace'); print('\\n'.join(str(p.relative_to(r)) for d in ['review-tools','scratch-131/review','review-packets'] for p in (r/d).iterdir() if (d!='review-tools' or any(x in p.name for x in ['b130','b129_confirmation','run_b127']))))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b131-worktree",
+  "exitCode": 0,
+  "childPid": 14488,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "cleanupScope": "Immediate child PID only; not descendant-process acceptance.",
+  "cleanupError": null,
+  "logSha256": "d785665381e96598f236009938b790f67db26db39290b21e6cfb1630055e1ea2",
+  "memory": {
+    "freeRamBeforeBytes": 4827607040,
+    "freeRamAfterBytes": 4827734016,
+    "minimumObservedFreeRamBytes": 4827607040,
+    "peakWorkingSetBytes": 23179264,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

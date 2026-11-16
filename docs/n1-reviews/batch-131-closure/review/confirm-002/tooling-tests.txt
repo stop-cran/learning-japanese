@@ -1,0 +1,82 @@
+E.........
+======================================================================
+ERROR: test-audit-confirm (unittest.loader._FailedTest.test-audit-confirm)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test-audit-confirm
+Traceback (most recent call last):
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\confirm-002\test-audit-confirm.py", line 14, in <module>
+    spec.loader.exec_module(module)
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\confirm-002\audit-confirm.py", line 24, in <module>
+    from review_chain import digest  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'review_chain'
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.045s
+
+FAILED (errors=1)
+{
+  "contract": "confirm-structure-v1",
+  "status": "PASS",
+  "errors": [],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "The coordinator completion message is not an exact confirmation verdict"
+  ],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "Report is absent"
+  ]
+}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 121, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 117, in main
+    run_command(sys.argv[2:], output, REPO, env, module.RamGuard())
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 96, in run_command
+    raise RuntimeError("Command failed or breached its RAM guard; receipt preserved.")
+RuntimeError: Command failed or breached its RAM guard; receipt preserved.

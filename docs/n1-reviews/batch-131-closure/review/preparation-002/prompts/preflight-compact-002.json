@@ -1,0 +1,61 @@
+{
+  "batch": 131,
+  "candidate": "1359b467e0edee8822c665614d6ca57e42785c4d",
+  "base": "cb0f5581bdda84f7e673225c19126c85e242e57b",
+  "packetManifestSha256": "7a8308db2ca5f912afbb61151afff31f98ee5b35c5b357957e9c80835010305c",
+  "coreChainSha256": "c6ce97ff03a25a08029689fe0e0cb26af83c97853892cd1bee135094956c8bdb",
+  "capacityForecastSha256": "1d524f25ed065fb5a2c9f4ecfbad1e28a25b4b54d0b058c6bbcd1619283ca3bb",
+  "chosenCaps": {
+    "D": 25,
+    "E": 10
+  },
+  "projectedPeak": 698784,
+  "order": [
+    "claude",
+    "gpt"
+  ],
+  "runs": {
+    "claude": {
+      "run": "N1-B131-CLAUDE-002",
+      "prompt": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\initial-claude-002.txt",
+      "promptSha256": "1b66bec4c7479bb475d27161a9e3f58ac4c7b21ab72aa5376339b43be59fed63",
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\kickoff-claude-002.txt",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only, under the exact frozen compact-002 scope.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\initial-claude-002.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "auditConfig": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\audit-config-N1-B131-CLAUDE-002.json",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\reports\\initial-claude-002.md",
+      "launch": {
+        "mode": "interactive",
+        "model": "claude-opus-5.5",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B131 CLAUDE independent review002"
+      }
+    },
+    "gpt": {
+      "run": "N1-B131-GPT-002",
+      "prompt": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\initial-gpt-002.txt",
+      "promptSha256": "0116984399c1e5bb05cfeb831ce82eb54764b35b8092b4237e10eddd5b7dacb8",
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\kickoff-gpt-002.txt",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only, under the exact frozen compact-002 scope.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\initial-gpt-002.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "auditConfig": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\prompts\\audit-config-N1-B131-GPT-002.json",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\reports\\initial-gpt-002.md",
+      "launch": {
+        "mode": "interactive",
+        "model": "gpt-6.1-sol",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B131 GPT independent review002"
+      }
+    }
+  },
+  "reportDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\reports",
+  "phase2Delivery": "Only after actual capacity AND independently rederived full article/JMdict coverage check. Send the ENTIRE frozen phase2-message, including missing/match metadata.",
+  "readBudget": {
+    "coreSegments": 66,
+    "maxSegmentBytesExclusive": 16000,
+    "totalCoreSegmentBytes": 874263,
+    "contextAcceptance": "Actual long_context, every usage maxPromptTokens>=952000, no compaction, actual-token phase2 gate<=740000."
+  },
+  "blindness": "Identity-only paired neutral prompts; no held review observations or selections used.",
+  "limits": "Preparation only, not current reviewer admission/launch permission. Forecast is not a guarantee."
+}

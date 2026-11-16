@@ -1,0 +1,135 @@
+{
+  "batch": 131,
+  "status": "PREPARATION_ONLY",
+  "schema": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b130_source_schema.py",
+      "sha256": "91df923ee8ed6750b079a7ef35d0231560591fa699df15c6274e9919b9260ffa"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b131_source_schema.py",
+      "sha256": "bf40ae78072e12931dc6702b7e868a0c811294fb051acd29b3317ebfe24cd5a9",
+      "bytes": 2551
+    },
+    "reuse": "Exact two-substitution output from preserved predecessor; not rewritten."
+  },
+  "tests": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b130_source_schema.py",
+      "sha256": "97864fc825c657af14b683525d2d2a0b1943ba412de7fb4f90d9b4e06bfd787e"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b131_source_schema.py",
+      "sha256": "17f47bd17e6cab5622357232889191fdf3c3304e81ef52123987afbad9f24227",
+      "bytes": 5933
+    },
+    "substitutions": [
+      {
+        "before": "130",
+        "after": "131",
+        "count": 4
+      }
+    ],
+    "reverseExact": true
+  },
+  "verifier": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b130_sources.py",
+      "sha256": "222518f71e16878a49dbff51ecaa94ee2d9f6f471b8d9a5fa4fb9bd4b6d0a22b"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b131_sources.py",
+      "sha256": "6efda73704e0ed665c540b5cba62d9de62613df5fc4c16ffe5ba52c834078e67",
+      "bytes": 17297
+    },
+    "substitutions": [
+      {
+        "before": "import b130_source_schema as schema",
+        "after": "import b131_source_schema as schema\nimport b131_base_binding_v2 as base_bridge",
+        "count": 1
+      },
+      {
+        "before": "SCHEMA_SHA = \"91df923ee8ed6750b079a7ef35d0231560591fa699df15c6274e9919b9260ffa\"",
+        "after": "SCHEMA_SHA = \"bf40ae78072e12931dc6702b7e868a0c811294fb051acd29b3317ebfe24cd5a9\"\nBRIDGE_SHA = \"76c11728caa881ede7179266fd7060e97bb861e773933d898ce331d46dcb8c2b\"",
+        "count": 1
+      },
+      {
+        "before": "    frozen(Path(schema.__file__), SCHEMA_SHA)\n",
+        "after": "    frozen(Path(schema.__file__), SCHEMA_SHA)\n    frozen(Path(base_bridge.__file__), BRIDGE_SHA)\n",
+        "count": 1
+      },
+      {
+        "before": "facts[\"batch\"] == 130",
+        "after": "facts[\"batch\"] == 131",
+        "count": 1
+      },
+      {
+        "before": "B130 verifier requires batch 130",
+        "after": "B131 verifier requires batch 131",
+        "count": 1
+      },
+      {
+        "before": "        require(TRAILER in git(\"show\", \"-s\", \"--format=%B\", candidate), \"Missing trailer\")\n",
+        "after": "        require(TRAILER in git(\"show\", \"-s\", \"--format=%B\", candidate), \"Missing trailer\")\n        base_binding = base_bridge.verify_signed_binding(git, candidate)\n        source_base = base_binding[\"sourceBase\"]\n        require(base == base_binding[\"candidateBase\"], \"Candidate facts use the wrong adapted base\")\n",
+        "count": 1
+      },
+      {
+        "before": "git(\"ls-tree\", \"-rz\", base, \"--\", \"kanji\")",
+        "after": "git(\"ls-tree\", \"-rz\", source_base, \"--\", \"kanji\")",
+        "count": 1
+      },
+      {
+        "before": "baseline = json.loads(blob(\"manifest.json\", base))[\"files\"]",
+        "after": "baseline = json.loads(blob(\"manifest.json\", source_base))[\"files\"]",
+        "count": 1
+      },
+      {
+        "before": "schema.verify_selection(selection, signed_rows, index, members, base)",
+        "after": "schema.verify_selection(selection, signed_rows, index, members, source_base)",
+        "count": 1
+      },
+      {
+        "before": "title, base, helper",
+        "after": "title, source_base, helper",
+        "count": 2
+      },
+      {
+        "before": "\"batch\": facts[\"batch\"], \"candidate\": candidate, \"base\": base, \"status\": \"PASS\",",
+        "after": "\"batch\": facts[\"batch\"], \"candidate\": candidate, \"base\": base, \"status\": \"PASS\",\n        \"sourceBase\": source_base, \"baseBinding\": base_binding,\n        \"baseBridgeVerifier\": {\"path\": str(Path(base_bridge.__file__)), \"sha256\": BRIDGE_SHA},",
+        "count": 1
+      },
+      {
+        "before": "Usage: verify_b130_sources.py",
+        "after": "Usage: verify_b131_sources.py",
+        "count": 1
+      }
+    ],
+    "reverseExact": true
+  },
+  "baseBridge": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b131_base_binding_v2.py",
+    "sha256": "76c11728caa881ede7179266fd7060e97bb861e773933d898ce331d46dcb8c2b"
+  },
+  "predecessor": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b131_source_verifier.py",
+    "sha256": "1c49464972263d673822b45a3445d293f439c3c03cc00ed3e1ab974e7f1544a5",
+    "failedReceiptSha256": "ed8423e05b0e572a3fa7e9220b1e360b2ad295c0535c1483021ac843240b4fa4",
+    "failure": "Overlapping renames made the final broad test substitution ambiguous."
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b131_source_verifier_v2.py",
+    "sha256": "83c63d434557e7e8b675d3acee5e0561656df47f2d0e0b7755f5b76f3645d3f6"
+  },
+  "memory": {
+    "freeRamBeforeBytes": 3371872256,
+    "freeRamAfterBytes": 3368153088,
+    "minimumObservedFreeRamBytes": 3368148992,
+    "peakWorkingSetBytes": 25882624,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "limits": "Executable admission preparation only. Actual signed handoff, complete source records, scan reproduction, payload, gates, reviews and publication remain pending."
+}

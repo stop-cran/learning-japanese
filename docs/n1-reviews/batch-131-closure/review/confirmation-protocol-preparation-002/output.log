@@ -1,0 +1,101 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_b131_002.py", "sha256": "2420d72cd174811632b36c8952b2298e0353ba8012d9449e5ca9c9d8c601ebf5", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+B131 lifecycle receipt: C:\Users\stop-\n1-kanji-workspace\scratch-131\review\preparation-v4-lifecycle-856aaa9d24064d05b024f8d1757a9bcc\captured\child-receipt.json
+3 confirmation skeleton checks passed
+E.........
+======================================================================
+ERROR: test-audit-confirm (unittest.loader._FailedTest.test-audit-confirm)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test-audit-confirm
+Traceback (most recent call last):
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\confirm-002\test-audit-confirm.py", line 14, in <module>
+    spec.loader.exec_module(module)
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\confirm-002\audit-confirm.py", line 24, in <module>
+    from review_chain import digest  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'review_chain'
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.045s
+
+FAILED (errors=1)
+{
+  "contract": "confirm-structure-v1",
+  "status": "PASS",
+  "errors": [],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "The coordinator completion message is not an exact confirmation verdict"
+  ],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "Report is absent"
+  ]
+}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 121, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 117, in main
+    run_command(sys.argv[2:], output, REPO, env, module.RamGuard())
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 96, in run_command
+    raise RuntimeError("Command failed or breached its RAM guard; receipt preserved.")
+RuntimeError: Command failed or breached its RAM guard; receipt preserved.
+
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b131_002.py", line 243, in <module>
+    derive(int(args[0]))
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b131_002.py", line 69, in derive
+    require(run.returncode == 0, "Confirmation gate regressions failed")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Confirmation gate regressions failed
