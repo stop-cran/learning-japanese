@@ -76,6 +76,12 @@ acceptance. The [B127 ledger](n1-sources/batch-127-progress.json) retains
 **256 delivered / 972 undelivered**, with one local draft not counted as
 delivered. Prior source packets, publication receipts and ledgers are unchanged.
 
+The [B127 reconciliation packet](n1-sources/batch-127-reconciliation/) adds
+complete finite comparison families, Q1-Q13 dispositions and qualified
+cancellation guards. Its [new ledger revision](n1-sources/batch-127-progress-002.json)
+keeps the original ledger historical and the revised candidate unconfirmed
+and unpublished; delivered accounting remains unchanged.
+
 ## Batch 126: local authoring candidate
 
 The bounded candidate is **傘**, frozen source row 70, with its generated

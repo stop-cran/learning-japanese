@@ -1,0 +1,62 @@
+{
+  "batch": "127",
+  "revision": "reconciliation-001",
+  "parent": "fcf8cb48d4e66b774189fe253dd799daadcc4015",
+  "authorGates": {
+    "status": "PASS",
+    "directory": "author-gates-001",
+    "summarySha256": "8e3d2059e73771a425f7c49a7f028196de9b3550c4a32592ec4c26af23ec886f",
+    "checks": [
+      "lint",
+      "quiz-safety",
+      "linkplan",
+      "reading-exposure",
+      "validate",
+      "manifest",
+      "unittest",
+      "budget",
+      "vocabulary",
+      "manifest-rebuild"
+    ]
+  },
+  "runtime": {
+    "manifestSha256": "8b668da6ed7c88eff76542878fe1044f5b48b58ba8343b30566a7d1d39ed44a7",
+    "contentVersion": "b6f11a69505108f7",
+    "entries": 8716
+  },
+  "warnings": {
+    "lint": "0 error(s), 0 warning(s)",
+    "quizSafety": "0 error(s), 0 warning(s)",
+    "unittest": "431 tests pass; HTTP 429/retry output is fixture output",
+    "vocabulary": "PASS, existing pilot coverage 2122/2431, not full closure"
+  },
+  "preservedFailures": [
+    {
+      "directory": "failed-author-producer-001",
+      "cause": "Raw CRLF text was not normalized before an anchored metadata regex; corrected to LF normalization. No original evidence overwritten."
+    }
+  ],
+  "sourceReceiptSha256": "24cc550390a6b1d49f62bd9e349d7a05049745c0a7ff36a43cb9afe45504c133",
+  "pairDispositionsSha256": "1891e64fb601767584b51d5330a08a289126663279c90cd2179260ae04128185",
+  "historyInventorySha256": "39d01273b927c3ab4a5eabb69545bfd3573d16c0f3efba5f59ef9aabddca1a5d",
+  "familyResponses": {
+    "claude-author-response.md": "9c3d9559b68eb2ab57c95813b7b818a98507d8c3ce10f29347522327f760e79b",
+    "gpt-author-response.md": "ffa80231f97fa87e5b7bf50e83ae7d4f023ea47323353c4fe7e5a336e6d04fc5"
+  },
+  "resourcePolicy": {
+    "serial": true,
+    "admitAboveBytes": 2147483648,
+    "abortBelowBytes": 1073741824,
+    "sampleSeconds": 0.25,
+    "childWaitAtMostSeconds": 0.1,
+    "cleanupDeadlineSecondsPerStage": 10,
+    "scope": "Immediate child PID cleanup, not descendant-process acceptance."
+  },
+  "committedChecks": "Bound separately in scratch after signing, not claimed in advance.",
+  "accounting": {
+    "delivered": 256,
+    "remaining": 972,
+    "revisedUnconfirmedLocalDrafts": 1,
+    "publication": false
+  }
+}
