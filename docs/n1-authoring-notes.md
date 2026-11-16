@@ -59,6 +59,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 128: local authoring candidate
+
+The bounded candidate is **唇**, frozen source row 159, with a generated
+KanjiVG stroke file and one reciprocal wrapper in the existing N2 唇
+word article. Its now-false no-card sentence is removed; all other word
+prose, metadata and its easier level remain unchanged. No word article
+is added. The [source packet](n1-sources/batch-128/) retains complete
+dictionary families, the complete character record, actual 1,247-card
+baseline gloss scans and finite bidirectional comparison dispositions.
+
+The full シン/くちびる metadata is preserved. Practice selects くちびる;
+シン is illustrated with 口唇 without creating a new word article.
+Source-positive literary petals, Jitsu's surprise sense and its historical
+variant ホトリ gloss, and the separate noun しん are distinguished rather
+than erased. Conservative direct guards prevent unresolved broad-choice
+ambiguities; they do not assert universal synonymy or propagate old guards.
+
+This is an unreviewed local candidate, not publication or native/device
+acceptance. The [B128 ledger](n1-sources/batch-128-progress.json) retains
+**257 delivered / 971 undelivered**, with one local draft not counted as
+delivered. Prior evidence, receipts and published ledgers are unchanged.
+
 ## Batch 127: local authoring candidate
 
 The bounded candidate is **倉**, frozen source row 57, with its generated
