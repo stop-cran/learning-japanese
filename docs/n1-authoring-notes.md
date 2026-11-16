@@ -59,6 +59,23 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 127: local authoring candidate
+
+The bounded candidate is **倉**, frozen source row 57, with its generated
+KanjiVG stroke file and one link-only wrapper in the existing N2 倉庫 article.
+No word article is added. The [source packet](n1-sources/batch-127/) retains
+78 complete JMdict families, the complete character record, actual 1,246-card
+baseline gloss scans, comparison cards and finite direct pair dispositions.
+The full ソウ/くら metadata is unchanged; practice selects ソウ via 倉庫.
+Positive supplemental にわか and historical lookup readings remain separately
+qualified and explicitly included in the bounded host reading check.
+Conservative broad-label guards do not assert universal synonymy.
+
+This is an unreviewed local candidate, not publication or native/device
+acceptance. The [B127 ledger](n1-sources/batch-127-progress.json) retains
+**256 delivered / 972 undelivered**, with one local draft not counted as
+delivered. Prior source packets, publication receipts and ledgers are unchanged.
+
 ## Batch 126: local authoring candidate
 
 The bounded candidate is **傘**, frozen source row 70, with its generated
