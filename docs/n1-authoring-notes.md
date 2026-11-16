@@ -59,6 +59,19 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 130 reconciliation 002: protected effect allocation
+
+This unpublished author proposal adds only a direct 拍/響 precaution and
+qualified Notes; ordinary clapping is not resonance, and allocation of
+the complete 打つ/rare 拍つ family's effect/impression senses to bare 拍
+remains unresolved. The [new pair table](n1-sources/batch-130-reconciliation/pair-dispositions-002.json)
+retains all 28 pairs: eight guards, 17 precautions and three bounded
+noncollisions. All earlier evidence and dispositions remain historical.
+The [new progress record](n1-sources/batch-130-progress-reconciliation-003.json)
+is awaiting two independent confirmations; earlier acceptance applies only
+to its earlier snapshot. Published delivery stays **261/1,228**, with
+**967 undelivered**. No publication or next batch is implied.
+
 ## Batch 130 reconciliation 001: local author successor
 
 The three-card successor preserves the signed initial candidate and its
