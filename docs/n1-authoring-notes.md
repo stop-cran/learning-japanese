@@ -59,6 +59,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 131: local unreviewed authoring candidate
+
+衛・羊・霜 are three missing frozen members (rows 977, 870 and 1174).
+Existing 自衛・衛星, 羊毛 and 霜 support selected エイ・ヨウ・しも
+practice. Exactly four reciprocal wrappers are added, with no prose
+exception; complete ordered source readings remain separate from practice.
+
+The [source packet](n1-sources/batch-131/selection.json) preserves the
+original 6da1184b survey and scans. A [separate adaptation binding](n1-sources/batch-131/base-adaptation.json)
+verifies their unchanged baseline cards at cb0f5581, including preservation
+of the intervening word-only work. The final union contains 874 complete
+JMdict families, 182 complete character records, 179 comparison copies,
+all 1,254 baseline rows per member and 195 finite bidirectional pair rows.
+Historical/native/name evidence, secondary senses and source discrepancies
+remain qualified, not discarded or made universally interchangeable.
+
+Actual Starter reading collisions in the earlier author attempt prompted
+independently checked 古・右・川 choices; the failed evidence remains.
+All three bundled cmaps lack 亍 U+4E8D, 凜 U+51DC, 彳 U+5F73,
+衞 U+885E and 韋 U+97CB in the bounded glyph scope. Host checks are
+not rendered-fallback, native/device, independent review or publication
+acceptance. See the [progress ledger](n1-sources/batch-131-progress.json).
+Published delivery remains **264/1,228**, with **964 remaining**;
+three local drafts do not advance it. 皇・桜 and 伯・憶・撲 remain deferred.
+
 ## Batch 130 reconciliation 002: protected effect allocation
 
 This unpublished author proposal adds only a direct 拍/響 precaution and
