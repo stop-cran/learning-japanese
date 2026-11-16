@@ -1,0 +1,5 @@
+# Response to Claude confirmation 001
+
+The raw confirmation SHA-256 is `ce0cbf16a6b0c4248faedbe5df78f119296ca49cb055606ff5950602883c7679`: CONFIRMED on exact snapshot `dbca5192a4308dc6e8d954af37775e0fcd1986ea`, not on this successor. Its F1, O1 and O2 resolutions and L1–L6 remain as recorded. Its L2 notes the additional 侵 character-source branch without assessing that branch as a quiz comparison; L3 preserves the corrected 侵撃 attribution.
+
+The additive `disposition.md` examines that source entry against the complete parent title/reading inventory and selected character/word records. The entry's 「外」 qualifier does not establish frequency or age. Four conservative guards protect broad height/size/appearance choices in either direction without claiming a short or small person is unattractive, or changing the frozen readings. A host reading model explicitly supplied みにくい and found no exact-key offer in the documented current pools; arbitrary pools, native/device execution and other earlier limits remain outside this evidence.
