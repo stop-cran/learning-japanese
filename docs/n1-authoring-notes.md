@@ -81,6 +81,19 @@ acceptance. The [B128 ledger](n1-sources/batch-128-progress.json) retains
 **257 delivered / 971 undelivered**, with one local draft not counted as
 delivered. Prior evidence, receipts and published ledgers are unchanged.
 
+### Batch 128: bounded reconciliation
+
+The [reconciliation packet](n1-sources/batch-128-reconciliation/) adds direct
+咲, 刃 and 郊 guards on 唇, preserving the fourteen earlier declarations.
+The noun-like English choice "blossom; bloom" motivates 咲, while the
+context-poor historical ホトリ quotation leaves qualified edge/outer-area
+choices conservatively guarded, without asserting lexical identity.
+The packet retains complete narrow comparison families, Q1-Q15
+two-direction dispositions and the superseded source/evidence history.
+Words, readings, curated choices, geometry and published counts are unchanged.
+The [progress revision](n1-sources/batch-128-progress-reconciliation-001.json)
+still records a local candidate, not publication or native/device acceptance.
+
 ## Batch 127: local authoring candidate
 
 The bounded candidate is **倉**, frozen source row 57, with its generated
