@@ -59,6 +59,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 130: local unreviewed authoring candidate
+
+塀・拍・耗 are three genuinely missing frozen members (rows 191, 419 and
+879). Their existing supports remain 塀 (N3), 拍手 (N3) and 消耗 (N2);
+each receives exactly one reciprocal wrapper, with no prose exception.
+Full ordered character readings stay separate from selected ヘイ・ハク・モウ
+practice. The five-member survey was split before teaching; 皇 and 桜,
+and the previously deferred 伯・憶・撲, are not resolved by this batch.
+
+The [source packet](n1-sources/batch-130/selection.json) retains 519 complete
+JMdict families, 192 complete character records, 189 actual comparison
+copies, full baseline scans and a finite bidirectional pair table.
+Supplemental news/information for 耗, historical/native forms, spelling
+restrictions, source disagreements and unresolved image glyphs remain
+visible. Conservative direct guards are not universal synonymy; shared
+topics, materials and English homographs alone do not compel guards.
+
+Strokes use the pinned converter and KanjiVG revision. All three bundled
+font cmaps lack 尸 U+5C38, 并 U+5E76, 扌 U+624C and 耒 U+8012:
+this is not rendered-fallback or native/device acceptance. The ten serial
+host gates and preservation receipts are author evidence only, not
+independent review or publication. See the [progress ledger](n1-sources/batch-130-progress.json).
+Published delivery remains **261/1,228**, with **967 undelivered**; these
+three local drafts do not increment delivery.
+
 ## Batch 129: local authoring candidate
 
 The bounded candidate is **茉・絹・虹**, frozen rows 931, 841 and 967.
