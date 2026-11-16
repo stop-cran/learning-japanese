@@ -1,0 +1,46 @@
+test_derivation_rejects_missing_or_ambiguous_anchor (test_b129_closure_revision.IdentityTests.test_derivation_rejects_missing_or_ambiguous_anchor) ... ok
+test_original_must_retain_identity (test_b129_closure_revision.IdentityTests.test_original_must_retain_identity) ... ok
+test_replacement_requires_proven_lineage_and_explicit_attribution (test_b129_closure_revision.IdentityTests.test_replacement_requires_proven_lineage_and_explicit_attribution) ... ok
+test_void_summary_retains_failure_without_raw_messages (test_b129_closure_revision.IdentityTests.test_void_summary_retains_failure_without_raw_messages) ... ok
+test_new_complete_sources_are_local_and_verified (test_b129_closure_revision.RetentionTests.test_new_complete_sources_are_local_and_verified) ... ok
+test_other_batch_is_refused_before_any_archive_write (test_close_b129.BatchScopeTests.test_other_batch_is_refused_before_any_archive_write) ... ok
+test_held_or_different_revision_cannot_close (test_close_b129.ClosureAcceptanceTests.test_held_or_different_revision_cannot_close) ... ok
+test_intermediate_is_unaccepted_evidence_on_an_earlier_revision (test_close_b129.ClosureAcceptanceTests.test_intermediate_is_unaccepted_evidence_on_an_earlier_revision) ... ok
+test_adding_omitted_capture_is_rejected (test_verify_b129_archive.ArchiveVerificationTests.test_adding_omitted_capture_is_rejected) ... ok
+test_missing_changed_and_oversized_public_segments_are_rejected (test_verify_b129_archive.ArchiveVerificationTests.test_missing_changed_and_oversized_public_segments_are_rejected) ... ok
+test_mixed_archive_preserves_reviewed_bytes_and_omission (test_verify_b129_archive.ArchiveVerificationTests.test_mixed_archive_preserves_reviewed_bytes_and_omission) ... ok
+test_rehashed_false_retention_inventory_is_rejected (test_verify_b129_archive.ArchiveVerificationTests.test_rehashed_false_retention_inventory_is_rejected) ... ok
+test_wrapped_capture_is_omitted_and_cannot_be_restored (test_verify_b129_archive.ArchiveVerificationTests.test_wrapped_capture_is_omitted_and_cannot_be_restored) ... ok
+test_derivation_leaves_nonbuilder_gates_identical (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_derivation_leaves_nonbuilder_gates_identical) ... ERROR
+test_initial_only_lineage_reproduces_actual_context_failure (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_initial_only_lineage_reproduces_actual_context_failure) ... ok
+test_rejects_changed_source_selection_or_invented_prior (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_rejects_changed_source_selection_or_invented_prior) ... ok
+test_rejects_reuse_misattribution_or_changed_snapshot (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_rejects_reuse_misattribution_or_changed_snapshot) ... ok
+test_rejects_unaccepted_initial_or_laundered_failure (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_rejects_unaccepted_initial_or_laundered_failure) ... ok
+test_replacement_does_not_change_access_or_report_contracts (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_replacement_does_not_change_access_or_report_contracts) ... ok
+test_crlf_and_lf_produce_the_same_derivative (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_crlf_and_lf_produce_the_same_derivative) ... ok
+test_derivation_leaves_nonbuilder_gates_identical (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_derivation_leaves_nonbuilder_gates_identical) ... ok
+test_initial_only_lineage_reproduces_actual_context_failure (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_initial_only_lineage_reproduces_actual_context_failure) ... ok
+test_rejects_changed_source_selection_or_invented_prior (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_rejects_changed_source_selection_or_invented_prior) ... ok
+test_rejects_reuse_misattribution_or_changed_snapshot (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_rejects_reuse_misattribution_or_changed_snapshot) ... ok
+test_rejects_unaccepted_initial_or_laundered_failure (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_rejects_unaccepted_initial_or_laundered_failure) ... ok
+test_replacement_does_not_change_access_or_report_contracts (test_prepare_b129_initial_replacement_v2.FirstConfirmationReplacementV2Tests.test_replacement_does_not_change_access_or_report_contracts) ... ok
+
+======================================================================
+ERROR: test_derivation_leaves_nonbuilder_gates_identical (test_prepare_b129_initial_replacement.FirstConfirmationReplacementTests.test_derivation_leaves_nonbuilder_gates_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_prepare_b129_initial_replacement.py", line 85, in test_derivation_leaves_nonbuilder_gates_identical
+    changed = derive_text(original)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b129_initial_replacement.py", line 133, in derive_text
+    require(text.count(before) == 1, f"Unexpected builder anchor: {before}")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Unexpected builder anchor:     require(launch["session"] == spec["session"] and accepted["candidate"] == config["candidate"],
+            "Wrong original reviewer or freeze")
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.156s
+
+FAILED (errors=1)
+{"path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\closure-v2-derivation.json", "sha256": "9cc6b4e4578c2fba36e1c5e63caa537b08dd1972e45b5f2479fce6a894ebdd66", "bytes": 7543}
