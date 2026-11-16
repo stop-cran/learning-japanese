@@ -1,0 +1,21 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_reconciliation_v3.py", "sha256": "f4c1cb5e8f73da6200dfcd9bc1e981c28279a3a4b75615e2b3dd592f8526ecd3", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b127_reconciliation_v3.py", line 348, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b127_reconciliation_v3.py", line 320, in main
+    gate_sets, linkplan = verify_gates(handoff, config, guard)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b127_reconciliation_v3.py", line 189, in verify_gates
+    check_gate(record, log, name, MANIFEST_SHA, str(repo), SERIAL_SHA)
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b123_revision_v2.py", line 78, in check_gate
+    require(all(value.encode("utf-8") in log for value in
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Target or supplemental readings missing from exposure evidence

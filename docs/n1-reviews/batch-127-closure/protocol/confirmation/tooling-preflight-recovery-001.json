@@ -1,0 +1,124 @@
+{
+  "batch": 127,
+  "status": "PASS_PREPARATION_ONLY",
+  "sourcePreflight": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\confirm\\tooling-preflight.json",
+    "sha256": "0630da7d1d0b3097b8614d7ec5fbb49e52e77e7983934d03a506855b78665163"
+  },
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\confirm\\audit-confirm.py",
+        "sha256": "cad7ccc10e9ad4341e0cfee2c3cc1b2703b12a07f7040f51a1b46917bd5fb866",
+        "bytes": 23228
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\audit-confirm.py",
+        "sha256": "8b9364cc9920778a05d3dba17b704748261d9960787939eb69bdf551d71ee7b7",
+        "bytes": 23228
+      },
+      "reverseExact": true,
+      "soleDelta": "B125 to B127; production protocol and all fixture assertions unchanged"
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\confirm\\check-confirm-structure.py",
+        "sha256": "b36089f110bfb4c8409c1091e7c576724aeec009b9aae141a1e984db6c9df015",
+        "bytes": 13732
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\check-confirm-structure.py",
+        "sha256": "2f0a7e186537a61ccae4e18031d64dff20214fa5b1460acec8c223b0a2a587f4",
+        "bytes": 13732
+      },
+      "reverseExact": true,
+      "soleDelta": "B125 to B127; production protocol and all fixture assertions unchanged"
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\confirm\\renderer.py",
+        "sha256": "e4c3b5f9c965467071eb00635d63385bd4627912a85b86732f3ae7e18c247941",
+        "bytes": 11868
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\renderer.py",
+        "sha256": "21e456a11652f0e35c7f1e5cceea30755d8097fd80ba881ab610e4a918a8f212",
+        "bytes": 11868
+      },
+      "reverseExact": true,
+      "soleDelta": "B125 to B127; production protocol and all fixture assertions unchanged"
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\confirm\\test-audit-confirm-isolated.py",
+        "sha256": "b5f3587bcca2a4e80fc5cbd2114e3478a9f11f38f800285efc73e3d8dbeb7208",
+        "bytes": 14908
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\test-audit-confirm-isolated.py",
+        "sha256": "16da0772a1ee5add2b854ffda51f466ed7895177b1629fd5f19603b5a9be1e92",
+        "bytes": 14908
+      },
+      "reverseExact": true,
+      "soleDelta": "B125 to B127; production protocol and all fixture assertions unchanged"
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\confirm\\test-confirm-structure.py",
+        "sha256": "97a241fe01f775d15c9c3c110d91a9cac239ed86f560ad676c44e21d104c3fcd",
+        "bytes": 11084
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\test-confirm-structure.py",
+        "sha256": "c1764645e6a62218b97b3affdf5ee8c018a985d15bb3144e2851572597039680",
+        "bytes": 11084
+      },
+      "reverseExact": true,
+      "soleDelta": "B125 to B127; production protocol and all fixture assertions unchanged"
+    }
+  ],
+  "engineDerivation": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_v2.py",
+      "sha256": "a7a5cbc435295a99caa6be9680b6ed2caf1090df9ced8ace17a48c0210432305"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_b127.py",
+      "sha256": "2ac571eb72cdd73415a829bc4930082b311215e6785e3d4066b01edf214b633a",
+      "bytes": 15180
+    },
+    "helper": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b127_lifecycle_process.py",
+      "sha256": "da62da64eb7d462dc4f4d39be812edd833157d45a1ea0e9b54f8440edde6d471"
+    },
+    "reverseExact": true,
+    "soleDelta": "Final audit capture uses the existing 0.1-second communication and bounded cleanup helper; all confirmation admission, chain and audit semantics retained.",
+    "before": "    done = subprocess.run(command, capture_output=True, text=True, encoding=\"utf-8\")",
+    "after": "    from b127_lifecycle_process import python\r\n    code, stdout, stderr = python(*command[2:])\r\n    done = subprocess.CompletedProcess(command, code, stdout, stderr)"
+  },
+  "exitCode": 0,
+  "tests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\tooling-tests-recovery-001.txt",
+    "sha256": "441e0ace0df7634dbbe3e3b62b5242ec6075e629f00a114695135c3c7426a7f3",
+    "bytes": 3231
+  },
+  "rendererChecks": 3,
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b127_confirmation_tools.py",
+    "sha256": "cd92b983d76b9120a09575c2218474be9581409baa6d7a5c2a7d7085aa5da6c3"
+  },
+  "limits": "Preparation only. No candidate, confirmation, publication or semantic acceptance. Build and final run through run_b127_tool.py for bounded Git. Admission uses scoped_confirmation_admission.py and a fresh complete status snapshot; the historical unscoped admit and derive commands are not used.",
+  "testCount": 25,
+  "protocolTestCount": 21,
+  "boundedProcessTestCount": 4,
+  "recovery": "Explicit module loading executes the unchanged hyphenated tests which unittest discovery skipped. Original failed invocation and all bytes preserved.",
+  "originalPreflightSha256": "8a10f48fda2d73d540c4f563cb6ff8b853d9f5b6756336e4b02fcd6ea126b1a3",
+  "verifier": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_confirmation_tools.py",
+    "sha256": "256a3d8b417d93e325878664d402b7e2d3138dd2c980485e39473e17297144c2"
+  },
+  "helperTests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b127_lifecycle_process.py",
+    "sha256": "8e17a34ed89f71595d4ce65ca9fb5e12b283d67b331560995c34f4772847457e"
+  }
+}

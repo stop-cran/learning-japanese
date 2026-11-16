@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "batch": "127",
+  "revision": "reconciliation-001",
+  "mode": "author",
+  "parent": "fcf8cb48d4e66b774189fe253dd799daadcc4015",
+  "startingHead": "fcf8cb48d4e66b774189fe253dd799daadcc4015",
+  "publishedBase": "dd45f6fb7cd3ce579422e2333860aa6d245af898",
+  "checks": [
+    "lint",
+    "quiz-safety",
+    "linkplan",
+    "reading-exposure",
+    "validate",
+    "manifest",
+    "unittest",
+    "budget",
+    "vocabulary",
+    "manifest-rebuild"
+  ],
+  "commands": {
+    "lint": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1_batch_tool.py",
+      "lint",
+      "--base",
+      "fcf8cb48d4e66b774189fe253dd799daadcc4015",
+      "--no-jmdict",
+      "倉"
+    ],
+    "quiz-safety": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\quiz_safety.py",
+      "倉"
+    ],
+    "linkplan": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1_linkplan.py",
+      "verify",
+      "fcf8cb48d4e66b774189fe253dd799daadcc4015",
+      "倉"
+    ],
+    "reading-exposure": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\check_reading_b127.py"
+    ],
+    "validate": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b127-worktree\\tools\\validate.py"
+    ],
+    "manifest": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b127-worktree\\tools\\build_manifest.py"
+    ],
+    "unittest": [
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test_*.py"
+    ],
+    "budget": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b127-worktree\\tools\\check_content_budget.py"
+    ],
+    "vocabulary": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b127-worktree\\tools\\grammar_vocabulary.py",
+      "check"
+    ],
+    "manifest-rebuild": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b127-worktree\\tools\\build_manifest.py"
+    ]
+  },
+  "manifestSha256": "8b668da6ed7c88eff76542878fe1044f5b48b58ba8343b30566a7d1d39ed44a7",
+  "contentVersion": "b6f11a69505108f7",
+  "runnerSha256": "e03dc3f51da7873b86e0b640e3e0d34356360d8f441eba9a8b282355358451e6",
+  "reusedSerialRunGateSha256": "ec62cbf2a03b012b8cdba50cacd925e9eb3816d9f3978eaae3cd65a14343856d",
+  "commonHelperSha256": "a13ff0ddc995e636cf0eeba8153179e364422bf496093d14c0c14480cd057b2e",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84",
+  "serial": true,
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "finalMemory": {
+    "freeRamBeforeBytes": 5149245440,
+    "freeRamAfterBytes": 5150289920,
+    "minimumObservedFreeRamBytes": 5149245440,
+    "peakWorkingSetBytes": 25522176,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "logs": {
+    "lint": {
+      "logSha256": "2bc29e6a467d42ce736bf8bebe95f743c72183fdb987df24b31bccf7aa356850",
+      "receiptSha256": "9e136dad179ba300346a2eca7ced513a2f24251d9b991feb2d1cdaed5ba4f08e"
+    },
+    "quiz-safety": {
+      "logSha256": "5a7bf51d85c303ecc7df2884d60d067c5726e40b8f9f3333418af89fc43cc036",
+      "receiptSha256": "5720433a3025760ee5c92348867f70ccc14745c0eb82f53a11b8c1639ec20980"
+    },
+    "linkplan": {
+      "logSha256": "0d7015b4aeb7af991eb658defe5f83b25a72dbfb79463ad254807608ee51137e",
+      "receiptSha256": "366c2a52f54d8163465ab565eb32ec8cf902b1b54cac1cc91b98376f61e23ca5"
+    },
+    "reading-exposure": {
+      "logSha256": "f41e701cc7e9ebf13508119fc37915a3616c66492741e7ec961d5afbb64c7ace",
+      "receiptSha256": "248b26766d1c8ec6549e9d8ad06c2cad6c521ecbbfac3649b092bf4445d69aef"
+    },
+    "validate": {
+      "logSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "receiptSha256": "61cf1b2967e27be3034c48c458c17fdc8e58b327ea65701caa98fe5805d2267e"
+    },
+    "manifest": {
+      "logSha256": "9412a7036ab0da780601b5807aedfcc1fc48eab72afc7312053356f7125f84a4",
+      "receiptSha256": "9b090fdcb1dc0cda5440b046a83b5dfc7de68c8d7c5135c76546c6883420e579"
+    },
+    "unittest": {
+      "logSha256": "5091bf7931c4fc7f5cbe6b0db8a2a7b398c3488abad682f27ea98c28d5cc1f0d",
+      "receiptSha256": "ee915b9fdcf5eddfba65afa1208cc408a3f05e97ba209f3de3edfc3384d047d9"
+    },
+    "budget": {
+      "logSha256": "b5596e374ceb2f295e60ea6d48d1eba819b30207c2b00e0c52c86e75fe545155",
+      "receiptSha256": "72d4d8f5ef33a8f75f55630d6e84185fdc78be8152c535e6534bf21552bf84a6"
+    },
+    "vocabulary": {
+      "logSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "receiptSha256": "ee35cc9054597fa5bdc5ed80e995be56cbfa12fcd4fac0c463b66c9242f1e7df"
+    },
+    "manifest-rebuild": {
+      "logSha256": "9412a7036ab0da780601b5807aedfcc1fc48eab72afc7312053356f7125f84a4",
+      "receiptSha256": "52a382c2524cab5d121b137668e8ba5976f4b912b702efb0dfd71e923f4262d9"
+    }
+  },
+  "limits": "Host/static checks, not independent linguistic, custom/multiple-borrow, Kotlin/native/device, publication or whole-set acceptance."
+}

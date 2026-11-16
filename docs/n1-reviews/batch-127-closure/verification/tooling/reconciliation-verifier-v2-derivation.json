@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_reconciliation.py",
+    "sha256": "27311173b29b78fef459066933257441026ccc9735b51364c6384e2ed73369a1"
+  },
+  "output": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_reconciliation_v2.py",
+    "sha256": "e812aceb2ddbee14f696c18ae3b581682734653b44196ca54bf9dc72340cfe39",
+    "bytes": 21800
+  },
+  "before": "git(config, \"show\", \"-s\", \"--format=%P|%G?|%GF|%GP|%ae|%ce\", CANDIDATE).decode().strip()",
+  "after": "\"|\".join(field.strip() for field in git(config, \"show\", \"-s\", \"--format=%P|%G?|%GF|%GP|%ae|%ce\", CANDIDATE).decode().strip().split(\"|\"))",
+  "reverseExact": true,
+  "reason": "The observed Git %GP output retains one CR before its field separator on Windows. Trim whitespace at each field boundary, retaining exact checks of all six fields.",
+  "diagnostic": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\reconciliation-signature-diagnostic-001",
+  "producerSha256": "680eaae12199e21b29efcb2e4c770dfd307b45f6c78d7efd8f82ccaa25b2ffb1"
+}

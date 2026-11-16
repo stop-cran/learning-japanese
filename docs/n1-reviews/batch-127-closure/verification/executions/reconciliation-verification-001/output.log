@@ -1,0 +1,19 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_reconciliation.py", "sha256": "27311173b29b78fef459066933257441026ccc9735b51364c6384e2ed73369a1", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b127_reconciliation.py", line 348, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b127_reconciliation.py", line 231, in main
+    handoff = json.loads(frozen(SCRATCH / "reconciliation-handoff-001" / "handoff.json", HANDOFF_SHA))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 44, in frozen
+    require(readonly(path), f"Writable frozen input: {path}")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Writable frozen input: C:\Users\stop-\n1-kanji-workspace\scratch-127\reconciliation-handoff-001\handoff.json
