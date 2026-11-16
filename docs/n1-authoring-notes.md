@@ -59,6 +59,30 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 130 reconciliation 001: local author successor
+
+The three-card successor preserves the signed initial candidate and its
+entire evidence packet. A separate [reconciliation packet](n1-sources/batch-130-reconciliation/pair-dispositions-001.json)
+retains 99 complete JMdict families, 31 complete character records and
+28 complete comparison cards. Narrow new external captures independently
+establish news/tidings for 信 and 音, and retain 城's historical カキ
+lookup without making every castle a fence.
+
+The finite table distinguishes 24 direct guards from four bounded
+noncollision dispositions (耗/文, 耗/研, 拍/響 and 耗/書). Precautions
+for unresolved historical or rare-spelling allocations are not claims of
+ordinary synonymy or a resolution of those allocations. Source-positive
+wear, reduction, encouragement and rhythm senses remain visible.
+All earlier guards stay in order; metadata, practice, curated choices,
+stroke geometry and the three easier-level support articles are unchanged.
+Family-isolated author responses are separate from the neutral evidence.
+
+The [new progress record](n1-sources/batch-130-progress-reconciliation-002.json)
+binds author gates and limitations. Initial review evidence stays historical;
+author reconciliation is not independent confirmation, publication or
+whole-N1 completion. Published delivery remains **261/1,228**, with
+**967 undelivered**. No next batch is started.
+
 ## Batch 130: local unreviewed authoring candidate
 
 塀・拍・耗 are three genuinely missing frozen members (rows 191, 419 and
