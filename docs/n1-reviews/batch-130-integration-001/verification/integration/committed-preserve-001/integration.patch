@@ -1,0 +1,153 @@
+diff --git a/articles/numbers-and-counters.md b/articles/numbers-and-counters.md
+index 406cf0d6..fa3d66cb 100644
+--- a/articles/numbers-and-counters.md
++++ b/articles/numbers-and-counters.md
+@@ -37,6 +37,24 @@ such as 三十歳. The answer screen lists the spellings and readings accepted f
+ that exact expression.
+ 
+ **歳 / 才** counts age. 歳 is the usual full spelling and 才 a common simpler one.
++It is valid for young children too: 一歳（いっさい）, 四歳（よんさい）,
++八歳（はっさい）and 十歳（じゅっさい／じっさい）are all correct.
++**歳 does not start only at eleven.**
++See the [歳 counting table](https://guidetojapanese.org/learn/grammar/numbers)
++for the age-counter readings from one through ten.
++
++[Children's ages can also use the native series](https://www.tofugu.com/japanese/japanese-counter-tsu/#ages-19):
++一つ（ひとつ）, 二つ（ふたつ）,
++三つ（みっつ）, 四つ（よっつ）, 五つ（いつつ）, 六つ（むっつ）,
++七つ（ななつ）, 八つ（やっつ）and 九つ（ここのつ）.
++[十（とお）](https://kotobank.jp/word/%E5%8D%81-515445) can also mean age ten,
++with no final つ.
++From eleven, use forms such as 十一歳（じゅういっさい）, not 十一つ.
++
++The age-writing prompts for 1, 4, 8 and 10 accept both constructions, including
++Arabic-digit spellings. Reading practice still asks for the **displayed expression**:
++よっつ reads 四つ, not 四歳; とお reads 十, not 十歳.
++
+ [二十歳（はたち）](../words/二十歳.md) has a special everyday reading; the regular
+ にじゅっさい / にじっさい readings are also possible. 何歳（なんさい） asks age.
+ おいくつ is another polite age question when it refers to a person; it is not a
+diff --git a/counters/age.json b/counters/age.json
+index ca46e849..d313d1b8 100644
+--- a/counters/age.json
++++ b/counters/age.json
+@@ -9,24 +9,29 @@
+   "article": "articles/numbers-and-counters.md",
+   "sources": [
+     "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L04.pdf",
+-    "https://www.tofugu.com/japanese/japanese-counters-list/"
++    "https://www.tofugu.com/japanese/japanese-counters-list/",
++    "https://guidetojapanese.org/learn/grammar/numbers",
++    "https://www.tofugu.com/japanese/japanese-counter-tsu/",
++    "https://kotobank.jp/word/%E5%8D%81-515445"
+   ],
+   "expressions": [
+     {
+       "id": "age-expression-1",
+-      "cue": "Age: 1 years old.",
++      "cue": "Age: 1 year old.",
+       "written": "一歳",
+       "writtenAnswers": [
+         "一歳",
+         "1歳",
+         "一才",
+-        "1才"
++        "1才",
++        "一つ",
++        "1つ"
+       ],
+       "reading": "いっさい",
+       "readingAnswers": [
+         "いっさい"
+       ],
+-      "explanation": "歳 counts years of age; 才 is a common simpler spelling. Twenty has the special reading はたち."
++      "explanation": "一歳 / 一才 (いっさい) is correct even for a young child. 一つ (ひとつ) can also express age one. Both written expressions answer this cue, but ひとつ is not a reading of 一歳."
+     },
+     {
+       "id": "age-expression-2",
+@@ -36,13 +41,15 @@
+         "四歳",
+         "4歳",
+         "四才",
+-        "4才"
++        "4才",
++        "四つ",
++        "4つ"
+       ],
+       "reading": "よんさい",
+       "readingAnswers": [
+         "よんさい"
+       ],
+-      "explanation": "歳 counts years of age; 才 is a common simpler spelling. Twenty has the special reading はたち."
++      "explanation": "四歳 / 四才 (よんさい) is correct for age four. 四つ (よっつ) can also express a child's age. Both written expressions answer this cue, but よっつ is not a reading of 四歳."
+     },
+     {
+       "id": "age-expression-3",
+@@ -52,13 +59,15 @@
+         "八歳",
+         "8歳",
+         "八才",
+-        "8才"
++        "8才",
++        "八つ",
++        "8つ"
+       ],
+       "reading": "はっさい",
+       "readingAnswers": [
+         "はっさい"
+       ],
+-      "explanation": "歳 counts years of age; 才 is a common simpler spelling. Twenty has the special reading はたち."
++      "explanation": "八歳 / 八才 (はっさい) is correct for age eight. 八つ (やっつ) can also express a child's age. Both written expressions answer this cue, but やっつ is not a reading of 八歳."
+     },
+     {
+       "id": "age-expression-4",
+@@ -68,14 +77,16 @@
+         "十歳",
+         "10歳",
+         "十才",
+-        "10才"
++        "10才",
++        "十",
++        "10"
+       ],
+       "reading": "じゅっさい",
+       "readingAnswers": [
+         "じゅっさい",
+         "じっさい"
+       ],
+-      "explanation": "歳 counts years of age; 才 is a common simpler spelling. Twenty has the special reading はたち."
++      "explanation": "十歳 / 十才 is read じゅっさい or じっさい. The native form 十 (とお), without つ, can also mean age ten. Both written expressions answer this cue, but とお is not a reading of 十歳."
+     },
+     {
+       "id": "age-expression-5",
+diff --git a/manifest.json b/manifest.json
+index 89e07c6d..3bd98de5 100644
+--- a/manifest.json
++++ b/manifest.json
+@@ -38,7 +38,7 @@
+   "audio/n5-weekend-plans.ogg": "782a7bbb6cf7439f1453bb1c139d14b2b07527bd7cc01bf6af91ade4abfdbb4f"
+  },
+  "baseLanguage": "en",
+- "contentVersion": "28cf9fcf63dc3036",
++ "contentVersion": "3df59f6cf1dee0f2",
+  "curriculum": {
+   "curriculum/grammar.json": "928f926fe495c3a1a07206391d0c8c60ba425008ba9d523199cd028455048579"
+  },
+@@ -70,7 +70,7 @@
+   "articles/necessity-advice-and-instructions.md": "c27a84b7f50b0f2453302672758136e92d40da806dfb72023ae6a39b45dcd6ed",
+   "articles/noni-and-concessive-contrasts.md": "54948af3e4b845eb83a7828d415d9862757b3ba36e388595bc8aa8f9417e38f9",
+   "articles/noun-descriptions-and-activities.md": "5369ceb2374e9f42dd8039bdea39bdf8f03feb16fbd031cab5bab3e6c649b906",
+-  "articles/numbers-and-counters.md": "b9e2433e7f862524462ec6f1ec307b40c9f74d86a2982ab3d8d716b073dfc930",
++  "articles/numbers-and-counters.md": "939b6bde1d11bc29d52918f3c4110f2d118236a7f43195d8fa1b9798306dc0db",
+   "articles/occupation-and-role-endings.md": "8ac8d72ae12b34131e25b6b3482eb1439faeb473821098809b3ff16277bb352d",
+   "articles/only-and-unexpected-inclusion.md": "74ceff06adfaed495c8cec880a88372befac2a3227eb08d59f978a30b57d09be",
+   "articles/onomatopoeia-body-and-feelings.md": "08ac39f12d48fa98466d3bb63a3339185561d48496ad218cdf8268471890c28c",
+@@ -100,7 +100,7 @@
+   "articles/volition-plans-and-goals.md": "7dfb496ea10be56888154a4ad5a91a1410ee62e12e176a77394dde5a8cdb3434",
+   "articles/wa-ga-mo-topic-and-inclusion.md": "21417a05f0744e0d49e8684a65a0bbf3d4994bf6561871b58ae922c5d968bc00",
+   "articles/wants-plans-and-invitations.md": "1da2d6d6e3b53e08ebe1d2bbfc8fb172293f2f91dd10460afcc3393a66474bd6",
+-  "counters/age.json": "44a8f68a0dd6dcf1c1d24be6ec94a7f386d3de3d7813e2061df7d2537767366c",
++  "counters/age.json": "3aec5a74ffb4fa7b90caf3a122eb5dd40d779c7c34cabf9515cff917da20e0c6",
+   "counters/agebands.json": "20a4940c8c809443c46cec2f152a23402ffb06ff1432739b73cd85bd4ee86b99",
+   "counters/approximations.json": "0de1971ec7c1b078458b774d77f7ba13e1be3c11f5859b626dcd7c89cc129620",
+   "counters/approximationstime.json": "79af642fe1083bab28ff53f16835447fc57efc4f4b6e1bc7255fe648284131ae",
