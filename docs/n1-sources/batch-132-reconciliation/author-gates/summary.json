@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "mode": "author",
+  "head": "2e618b38ae5b420f7a1fe6783268093348367c51",
+  "parent": "2e618b38ae5b420f7a1fe6783268093348367c51",
+  "originalBatchBase": "2375ab9add0cc5d569c8ea35d229b82813fd8557",
+  "checks": [
+    "lint",
+    "quiz-safety",
+    "linkplan",
+    "reading-exposure",
+    "validate",
+    "manifest",
+    "unittest",
+    "budget",
+    "vocabulary",
+    "manifest-rebuild"
+  ],
+  "serial": true,
+  "manifestSha256": "5432522265f9efeef23103ed5ec9844e0deddd70bd06e72719143341c185b9d4",
+  "scoping": "Lint and linkplan intentionally retain the original batch base 2375ab9a: they audit the original new member and original support wrapper against their creation base. Revised delta and all unrelated paths are independently preservation-checked against parent 2e618b38.",
+  "runnerSha256": "be3a8480e72d7837bd6e55d428677b59b15e48f7786c08db3fc7ae04dc06e364",
+  "delegateRunnerSha256": "3284fc585308c48bd1a7703cc349f95e7438b96fd5087e71655d2bf00edd7b30",
+  "commonHelperSha256": "34756cc55759baba4c0d29327e987090a2e42ab1a5c736814d944e256c9011bf",
+  "finalMemory": {
+    "freeRamBeforeBytes": 3375251456,
+    "freeRamAfterBytes": 3375255552,
+    "minimumObservedFreeRamBytes": 3375251456,
+    "peakWorkingSetBytes": 24858624,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "logs": {
+    "lint": {
+      "logSha256": "2bc29e6a467d42ce736bf8bebe95f743c72183fdb987df24b31bccf7aa356850",
+      "receiptSha256": "bd59ff745bbf5d10e76960dfe8444777dce6baa5e074405495e00e752c48700b"
+    },
+    "quiz-safety": {
+      "logSha256": "68939a0102421eeecec7207bc42a9e872fafeead8c625af3044ae3c4f7cc3628",
+      "receiptSha256": "57abf72eac836a657195bf0e565c675fe7114cad03fbeac10076cd61f6c61018"
+    },
+    "linkplan": {
+      "logSha256": "0cf348bbde45f6e104238b98f2af66d551a2ec91723a05acea99916ed95b6a57",
+      "receiptSha256": "a096100fd2627e2a1817ca9a801f8798cd539cd380cac93dafeffe4acca22738"
+    },
+    "reading-exposure": {
+      "logSha256": "2b222f046f897cd1d3e457a4c99cc35bea897a9bfa793404d2d6d4dd60bd2ffb",
+      "receiptSha256": "8c1f64ad8a13b9084e9f95a4a6ab34216ca0b3d70512166bcb499f355a3ab952"
+    },
+    "validate": {
+      "logSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "receiptSha256": "6f31e8d321b9603b82910de2c5c856c0bf06677380bc221ee8f26505033f2bdf"
+    },
+    "manifest": {
+      "logSha256": "7b32bc06f702873918e4fe465f8ebd7f4a64b3ed2898564e5d6eb2f795a25611",
+      "receiptSha256": "2ff86620faf2cd86bbfef5157b7d8478b4f3d62dbbacff40c8ac38bcff5a5d50"
+    },
+    "unittest": {
+      "logSha256": "fe968c492740f49ff36a35c2777bd8b06448d0daf4fe8411af79c0f742b39881",
+      "receiptSha256": "34351b05a4c49a2d23df610ae6d479a08edd07ae8969f942e16c4e84a46a3420"
+    },
+    "budget": {
+      "logSha256": "f7c938d14813d8ccb56302aa4ac71429d199f70a960823f407c57bc22ddc7bfe",
+      "receiptSha256": "9acd5826cd98a94bb7b6656a292a48a3470d3e6f3497ecb72b09e1f346a1a6d0"
+    },
+    "vocabulary": {
+      "logSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "receiptSha256": "094c7e10c569deeec5da45df959e97437404ac44c2f6c52410a3d11061908ac7"
+    },
+    "manifest-rebuild": {
+      "logSha256": "7b32bc06f702873918e4fe465f8ebd7f4a64b3ed2898564e5d6eb2f795a25611",
+      "receiptSha256": "8e419944619d23d1a15d778737cef91f5ad6c483913363c581cb4ecb549b9474"
+    }
+  },
+  "limits": "Host/static bounded checks; not linguistic review, arbitrary/custom/multiple-borrow pools, Kotlin/native/device, visual, whole-set or publication acceptance."
+}
