@@ -1,0 +1,90 @@
+{
+  "revision": "003",
+  "supersedesForFinalDisposition": "evidence-scope-revision-002.json",
+  "preservedHistoricalFilesSha256": {
+    "evidence-scope-revision-002.json": "19ef4fe4c5a72459bd510c56e64e321d0a742a04b95824ac98287b819cfbec27",
+    "evidence-inventory.json": "234eeffb1c84c90eb7ccfc8cf1b82b755a5f65d9294432b9316adff9549490d5",
+    "evidence-inventory-002.json": "34c435671236becfaff71c5865ca564c97b9e5fd2539a40ce94e204eed93f478"
+  },
+  "base": "20fda42f7b456889ae4ef82650dde227a139917c",
+  "originalSignedCandidate": "61232c2022be5cd81b26ee1fed87f788ce4a5da0",
+  "originalCandidatePreservedAt": "refs/heads/b129-candidate-001",
+  "correction": "LF normalization was applied transiently and then reverted before signing. The signed prose files equal revision 002's CRLF rawBefore bytes, not its temporary LF rawAfter bytes. The two prose files are byte-unchanged in this replacement.",
+  "files": {
+    "docs/n1-authoring-notes.md": {
+      "finalLineEndings": "CRLF, matching the baseline convention",
+      "committedBlobIdAtOriginalCandidate": "37fda24c24195b412ad26201bb4c0b8927d8d959",
+      "committedBlobSha256": "ca5db705f7435b62f1934330ada9c2c4f65c4c5a870999d2c526149d8f6c518c",
+      "equalsHistoricalRawBefore": true,
+      "historicalTemporaryLfSha256": "11191f8231d81a378fc533735d8401c2fd051f3233a3d9e3cf4d5e63a0307b67",
+      "temporaryLfNormalizationWasReverted": true
+    },
+    "words/茉莉花.md": {
+      "finalLineEndings": "CRLF, matching the baseline convention",
+      "committedBlobIdAtOriginalCandidate": "cd4e4db92d5846a0b12f7bcaeadb7fe5366020f5",
+      "committedBlobSha256": "12066955b4001a617dfde313b467cbb3152bddead4bde94d9b2ba5e1a992c456",
+      "equalsHistoricalRawBefore": true,
+      "historicalTemporaryLfSha256": "985e46b5cb2cd63c56a00b323e2f417b95fa30b5139f04869fc3893871b33d23",
+      "temporaryLfNormalizationWasReverted": true
+    }
+  },
+  "whitespaceDisposition": {
+    "baselineConvention": "CRLF; inserted lines follow that same convention.",
+    "plainGitDiffCheck": "The original git diff --check reported CR-at-EOL as trailing whitespace. That report is accepted as a consequence of the baseline convention, not fixed by shipping LF normalization.",
+    "actualAcceptanceCommand": "git -c core.whitespace=cr-at-eol diff --cached --check",
+    "actualAcceptanceExitCode": 0,
+    "rawEvidence": "Frozen source/report bytes are not normalized to silence the diagnostic."
+  },
+  "finalSnapshotEvidence": {
+    "priorCommittedVerification": {
+      "committed-gates-001": {
+        "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\committed-gates-001",
+        "snapshot": "61232c2022be5cd81b26ee1fed87f788ce4a5da0",
+        "summarySha256": "7f07727c4456af20d96b2ec1445881bc0ad1f77070848343d83332b94bbd6fc2",
+        "files": {
+          "admission.json": "103b31b5d84f4e007c1ab8dd147a22afefef78fda5f9149e8832e34392419737",
+          "budget.json": "90c4413826ceaa88dd452285dd3b1b7be108a642cb0071d2e7037947a74e8cd0",
+          "budget.log": "8583065241318a5e7d3ef182b5fb32f4cdf78f663e7eebf2cce2d7c903827c06",
+          "linkplan.json": "42a05982e9116d70674ddb93fde3464f356c3722b7a18afc019b746164df6ba1",
+          "linkplan.log": "4212aacdf6d8ff42fa3bd761153ac7bd93b6645b08dd1e93c2a1e111f0c08fd7",
+          "lint.json": "f375de1858e8d5808ac8e6691fd214295fb8a9f40bdd500e60502167efd98274",
+          "lint.log": "d0b9180b798b40a68afdb0bfcbd92e0034a7da6f54c991aaa8f86a648cc4b216",
+          "manifest-rebuild.json": "8c7f6e1223e11f82e1ccc96873aa523031582932d26b7d94946836fba829e557",
+          "manifest-rebuild.log": "a99016b99798d79123b0bc27702e6b8f0c666127f462dea283564ffe7eae922f",
+          "manifest.json": "464676b1ad8078e831af6fd1b84d45b53f2a1cd1ca9f335be39611bea6a112b1",
+          "manifest.log": "a99016b99798d79123b0bc27702e6b8f0c666127f462dea283564ffe7eae922f",
+          "quiz-safety.json": "760a42a13fc789c3b0c6cd436a30ddbef2455a1086c39d7f573e7d56edf860ff",
+          "quiz-safety.log": "1e4cfc4c0f8c1f09ae676a50148ddcf374c903e725e274a60354a2f8757027cf",
+          "reading-exposure.json": "910f1ce345dd066ab298e0a173578a0e5e41fab8209ac000cabec31fab975b55",
+          "reading-exposure.log": "6aeba00a1ed10fe3a9b8f8bfff5a0198f0a08e33ebad5e93675b1d9519c8899f",
+          "summary.json": "7f07727c4456af20d96b2ec1445881bc0ad1f77070848343d83332b94bbd6fc2",
+          "unittest.json": "9065f204c9398843f8ceee3a02f45bc7904e1e7fe7562af2796a65394713fbfe",
+          "unittest.log": "f22f9fb1e428e2c44ab131d6eb35d789295789f3282491a007e359a4b6de62d8",
+          "validate.json": "866562241eba1a601f9787a2ca3e341ddb743b0928daa62761e0c7f9d81352af",
+          "validate.log": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+          "vocabulary.json": "ed1d62d5ff299102ee8d7775a47693a75a0f66120a34b859d318a5426f23022a",
+          "vocabulary.log": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+        }
+      },
+      "committed-preservation-001": {
+        "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\committed-preservation-001",
+        "snapshot": "61232c2022be5cd81b26ee1fed87f788ce4a5da0",
+        "summarySha256": "93b72edc55de939db70fd8dc2b0dad986d7b6df28c43c5582918d9c388284ae0",
+        "files": {
+          "memory.json": "4dff3f765c40d3fc994a475ba0f929f324b03d74aa079c3317db19e4efce2408",
+          "runtime-hashes.json": "4373eda2248885119986c0376e589c60f59b53524760ce2e989b09876c12a6e9",
+          "summary.json": "93b72edc55de939db70fd8dc2b0dad986d7b6df28c43c5582918d9c388284ae0"
+        }
+      }
+    },
+    "applicability": "The bound committed gates and all-group preservation verified the original signed snapshot with these actual CRLF bytes. All original files, all runtime bytes and manifest bytes remain exactly unchanged in the replacement; only this correction and the new final inventory are added. Earlier author-gate results are not substituted for exact replacement-snapshot verification.",
+    "replacementCommittedGatesDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\committed-gates-002",
+    "replacementAllGroupPreservationDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\committed-preservation-002",
+    "replacementReceiptBinding": "After signing, handoff-002.json binds the replacement SHA, new exact-snapshot gate/preservation summaries, every log/receipt hash and this inventory. These future results are not asserted as completed by this committed record.",
+    "gateRunnerSha256": "876f35e2ea0df5a165beeb4e66c4534ef528afc30af08af8c9835d11c69ef322",
+    "allGroupPreservationProducerSha256": "0fb8af4eabed22a756975d60cc0ce8fe272d54e5f364ef78cf3be9f5285a6448"
+  },
+  "runtimeManifestSha256Unchanged": "47ad11dea7b388a0c8bb122d32a2131eceb815edaf47e9addf9ebddbfc41fa06",
+  "limits": "Bounded author-only evidence correction. No teaching/source claim, runtime, support prose, predecessor evidence, review/native/device acceptance or publication change.",
+  "producerSha256": "cb0f6daa49f5a9f2e64a3a6872677f540a412b19c7c8b5700a8a92042b825934"
+}
