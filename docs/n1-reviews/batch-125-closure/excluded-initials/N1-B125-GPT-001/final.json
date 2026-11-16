@@ -1,0 +1,46 @@
+{
+  "run": "N1-B125-GPT-001",
+  "batch": 125,
+  "candidate": "483bb066e68faf354779f7d5fc73c4594605cdd7",
+  "createdAt": "2026-11-15T23:18:08.986637+00:00",
+  "preflightSha256": "d326f6e9243072758f6e066c891c35a3f0fec288fb33b05951b777650e43d81a",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\prompts\\preflight.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "session": "d0416d02-e6fe-4599-bbce-0fee4ec7e22d",
+  "finalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-GPT-001\\audit-20261115T231809049935\\audit.json",
+    "sha256": "e6ab4990f644fa182c61b0d3ae7cd31a5e96f41e804012256de5c40a8bc45c25"
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-GPT-001-context.json",
+    "sha256": "729331061cae49585cabb90de7322ca4767a3e3748a60250afaaa88ee0f8e83e",
+    "bytes": 449
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-GPT-001-structure.json",
+    "sha256": "a5ce46efa17ecc1dfac8cd31d2305379dff5b2d90adcaa3a8a8b9e0ddf477485",
+    "bytes": 396
+  },
+  "problems": [
+    "audit VOID ['Tool call during the phase gap', 'Extension read before phase 2 or out of order', 'Tool call during the phase gap', 'Extension read before phase 2 or out of order', 'Tool call during the phase gap', 'Extension read before phase 2 or out of order', 'Tool call during the phase gap', 'Extension read before phase 2 or out of order', 'Tool call during the phase gap', 'Report write before complete required coverage, or a repeated write', 'Tool call during the phase gap', 'Invalid report readback', 'Tool call during the phase gap', 'Invalid completion message or premature completion', 'Incomplete two-phase execution']"
+  ],
+  "evidenceCheck": null,
+  "status": "HOLD",
+  "execution": {
+    "coreRead": 20,
+    "extensionRead": 4,
+    "writes": 1,
+    "readbacks": 1,
+    "fetches": 0,
+    "messages": [
+      "D1 略 - 侵: raid; invade; plunder as a possible secondary sense\nD2 討 - 侵: attack; raid\nD3 損 - 侵: harm; damage\nD4 痛 - 侵: harm; hurt; afflict\nD5 破 - 侵: violate; infringe or break a boundary or rule\nD6 占 - 侵: invade; occupy another domain\nD7 凌 - 侵: encroach; violate as a possible secondary sense\nD8 徹 - 侵: penetrate; intrude\nD9 突 - 侵: invade; raid; attack by thrusting into a domain\nE1 犯 - Check the direct violation or transgression overlap and the declared exclusion.\nE2 冒 - Check the ordinary harm or affliction secondary sense and the declared exclusion.\nE3 害 - Check harm or injury against the ordinary secondary senses of 侵す and the declared exclusion.\nE4 攻 - Check attack or aggression against invasion and raid, separately from current curated exposure.\nE5 撃 - Check attack or conquest secondary senses against invasion and raid and the declared exclusion.\nE6 入 - Check broad enter or put-in choices against intrusion and the declared conservative exclusion.",
+      "NEEDS FIX"
+    ],
+    "actualResponseModels": [
+      "gpt-6.1-sol"
+    ]
+  }
+}

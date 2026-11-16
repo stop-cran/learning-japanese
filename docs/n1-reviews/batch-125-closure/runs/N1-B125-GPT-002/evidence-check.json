@@ -1,0 +1,360 @@
+{
+  "run": "N1-B125-GPT-002",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-125\\initial-gpt-002.md",
+    "sha256": "4944978fd809b4322fe3196562b20149a3dcafd43250bc757c315b83e40822d4"
+  },
+  "verdict": "NEEDS FIX",
+  "formalCitations": [
+    {
+      "item": "F1",
+      "reportLine": 70,
+      "citation": "snapshot/kanji/侵.md:13-14",
+      "opened": true,
+      "exactSourceText": "distractors: [寝, 進, 掃]\nquiz_exclusions: [犯, 冒, 害, 攻, 撃, 入]"
+    },
+    {
+      "item": "F1",
+      "reportLine": 70,
+      "citation": "evidence/jmdict-families.xml:105-126",
+      "opened": true,
+      "exactSourceText": "    <sense>\n      <pos>Godan verb with 'su' ending</pos>\n      <pos>transitive verb</pos>\n      <gloss xml:lang=\"eng\">to invade</gloss>\n      <gloss xml:lang=\"eng\">to raid</gloss>\n      <gloss xml:lang=\"eng\">to violate (airspace, etc.)</gloss>\n      <gloss xml:lang=\"eng\">to intrude</gloss>\n      <gloss xml:lang=\"eng\">to trespass</gloss>\n    </sense>\n    <sense>\n      <pos>Godan verb with 'su' ending</pos>\n      <pos>transitive verb</pos>\n      <gloss xml:lang=\"eng\">to infringe</gloss>\n      <gloss xml:lang=\"eng\">to encroach</gloss>\n    </sense>\n    <sense>\n      <pos>Godan verb with 'su' ending</pos>\n      <pos>transitive verb</pos>\n      <xref>冒す・おかす・2</xref>\n      <gloss xml:lang=\"eng\">to harm</gloss>\n      <gloss xml:lang=\"eng\">to afflict</gloss>\n      <gloss xml:lang=\"eng\">to affect</gloss>"
+    },
+    {
+      "item": "F1",
+      "reportLine": 70,
+      "citation": "repo/kanji/損.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 損\ntitle: loss; damage\njlpt: 2\ntags: [jlpt-n2, grade-5, structure-unclassified]\nstrokes: 13\nradical: 手\nradicalNumber: 64\nonyomi: [ソン]\nkunyomi: [そこ.なう, そこな.う, -そこ.なう, そこ.ねる, -そこ.ねる]\ndistractors: [員, 指, 招]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 70,
+      "citation": "repo/kanji/痛.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 痛\ntitle: pain; hurt\njlpt: 3\ntags: [jlpt-n3, grade-6, structure-unclassified]\nstrokes: 12\nradical: 疒\nradicalNumber: 104\nonyomi: [ツウ]\nkunyomi: [いた.い, いた.む, いた.ましい, いた.める]\ndistractors: [通, 用, 同]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 70,
+      "citation": "repo/kanji/討.md:1-15",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 討\ntitle: attack; discuss\njlpt: 1\ntags: [jlpt-n1, grade-6, structure-unclassified]\nstrokes: 10\nradical: 言\nradicalNumber: 149\nonyomi: [トウ]\nkunyomi: [う.つ]\nquizOnyomi: [トウ]\nquizKunyomi: [う.つ]\ndistractors: [計, 村, 寺]\nquiz_exclusions: [攻, 敗, 撃, 打, 克, 殺, 責, 刑, 勝, 批, 議, 論, 談, 話, 争, 評, 査, 調, 究, 診, 研, 考, 思, 学, 偵, 戦]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 70,
+      "citation": "repo/docs/content-format.md:96-120",
+      "opened": true,
+      "exactSourceText": "The meaning quiz displays a kanji and offers other cards' English titles as answers. For new cards, curate **three** semantically\ndistinct wrong options for the default four-choice quiz. Two remain structurally valid for older cards, but the app fills missing\nchoices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:\ndifferent English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when\nthey are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n\nEditorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.\nThis behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);\nlarger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.\n\n### Curated reading questions\n\nKeep complete sourced `onyomi` / `kunyomi` metadata and its order, including rare readings. Use the optional quiz lists to select"
+    }
+  ],
+  "issues": [],
+  "comparisons": [
+    {
+      "id": "D1",
+      "card": "凌",
+      "reportLine": 39,
+      "displayedTitle": "endure; surpass",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested possible encroachment or violation. The complete card teaches enduring and surpassing, including getting through difficulty (repo/kanji/凌.md:21-30), whereas the independent 侵 character entry specifies unauthorized entry into another's domain (evidence/external-snapshots/01-extract.txt:4-7).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the displayed senses do not themselves establish a collision, but no independent 凌 entry was supplied to settle the suspected ordinary secondary infringement sense. Neither endpoint declares 侵–凌; neither curated set exposes it (repo/kanji/凌.md:1-14; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D2",
+      "card": "略",
+      "reportLine": 40,
+      "displayedTitle": "abbreviate; omit",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested invasion or raiding. The card expressly includes taking or plundering and retains おか.す (repo/kanji/略.md:19-35); independent JMdict recognizes 侵略 as invasion, raid and aggression (evidence/jmdict-families.xml:827-866).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the full word corroborates the concern, but does not independently allocate its invasion sense to 略. Its title alone is not exculpatory. Neither endpoint declares 侵–略 and neither curated set exposes it (repo/kanji/略.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D3",
+      "card": "討",
+      "reportLine": 41,
+      "displayedTitle": "attack; discuss",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested attack or raid. 侵す independently includes raid (evidence/jmdict-families.xml:105-112); 討 actually offers attack, and the supplied shared 討つ/撃つ family independently confirms attack, defeat and conquest rather than discussion alone (repo/kanji/討.md:3; evidence/jmdict-families.xml:590-651).",
+      "disposition": "Collision-needing-exclusion: F1. Attack is a defensible broad answer for raiding, irrespective of the discussion branch. Neither endpoint declares 侵–討; 討's guards involving 攻 and 撃 are not transitive. Neither curated set currently exposes this direct pair (repo/kanji/討.md:1-15; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D4",
+      "card": "損",
+      "reportLine": 42,
+      "displayedTitle": "loss; damage",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested harm or damage. Independent JMdict gives 侵す the unrestricted glosses harm, afflict and affect (evidence/jmdict-families.xml:120-126); 損's displayed choice includes damage, and its body and reading rows also include harm and hurt (repo/kanji/損.md:3-35).",
+      "disposition": "Collision-needing-exclusion: F1. The displayed damage branch itself is a defensible rendering of harming; this does not depend on accepting the comparison card as independent dictionary proof. Neither endpoint declares 侵–損; the 侵–害 guard does not protect it. Neither curated set currently exposes the pair (repo/kanji/損.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D5",
+      "card": "痛",
+      "reportLine": 43,
+      "displayedTitle": "pain; hurt",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested harm or hurt. Independent 侵す harm/afflict supports the broad English hurt option (evidence/jmdict-families.xml:120-126; repo/kanji/痛.md:3). The comparison card teaches aching as well as pain and retains いた.める in metadata (repo/kanji/痛.md:10-22).",
+      "disposition": "Collision-needing-exclusion: F1. The displayed word hurt is not limited to the card's aching examples; no claim that all 痛 and 侵 uses coincide is needed. Neither endpoint declares 侵–痛 and neither curated set currently exposes it (repo/kanji/痛.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D6",
+      "card": "患",
+      "reportLine": 44,
+      "displayedTitle": "be ill; suffer",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested affliction or suffering harm. The article includes illness, suffering, a medical patient and both transitive/intransitive 患う uses (repo/kanji/患.md:19-39); independent 侵す includes afflict and affect (evidence/jmdict-families.xml:120-126).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: being affected and causing affliction are distinguishable, but that distinction alone cannot rule out every ordinary 患 sense. No independent 患 family was opened. Neither endpoint declares 侵–患; neither curated set exposes it (repo/kanji/患.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D7",
+      "card": "病",
+      "reportLine": 45,
+      "displayedTitle": "illness",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested affliction with illness. The card includes disease, falling ill, being troubled, worrying and recovery/addiction expressions, not only the title illness (repo/kanji/病.md:19-38); independent 侵す includes afflict (evidence/jmdict-families.xml:120-126).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: illness as the condition is not automatically the action of afflicting, but the supplied evidence does not independently settle 病's full ordinary character senses. Neither endpoint declares 侵–病; neither curated set exposes it (repo/kanji/病.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D8",
+      "card": "毒",
+      "reportLine": 46,
+      "displayedTitle": "poison; venom",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested harm or affliction. The card covers harmfulness, poison, disinfection and the nonliteral 気の毒 expressions, and explicitly distinguishes poison from harm (repo/kanji/毒.md:19-41). Independent 冒す specifies disease or chemical harm, cross-referenced by 侵す (evidence/jmdict-families.xml:120-126; evidence/jmdict-families.xml:757-802).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: substance, harmful property and action must not be conflated, but no independent 毒 entry establishes whether poisoning/harming supplies an ordinary secondary overlap. Neither endpoint declares 侵–毒; neither curated set exposes it (repo/kanji/毒.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D9",
+      "card": "破",
+      "reportLine": 47,
+      "displayedTitle": "tear; break",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested breaking or violating. The complete card teaches tearing, breaking and destruction and cautions that its examples do not license every English break construction (repo/kanji/破.md:19-22; repo/kanji/破.md:35-44). Independent 侵す includes violation and infringement (evidence/jmdict-families.xml:105-118).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the article's paper examples do not prove that the ordinary range excludes breaking agreements or rules. No independent 破る family was supplied. Neither endpoint declares 侵–破; neither curated set exposes it (repo/kanji/破.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D10",
+      "card": "占",
+      "reportLine": 48,
+      "displayedTitle": "divine fortunes; occupy",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested invasion or occupation of another's domain. The full card includes occupying places, proportions, fortune-telling and 占領 occupation/taking possession (repo/kanji/占.md:19-42); independent 侵寇 includes occupation of other countries (evidence/jmdict-families.xml:1390-1425).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: invasion and occupation are not identical, but the independent whole-word evidence makes dismissal as mere shared subject matter premature; constituent allocation is unresolved. Neither endpoint declares 侵–占; neither curated set exposes it (repo/kanji/占.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D11",
+      "card": "触",
+      "reportLine": 49,
+      "displayedTitle": "touch; contact",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested infringement or violation. The article includes literal/figurative contact, handling and touching on topics, and acknowledges wider uses (repo/kanji/触.md:19-20; repo/kanji/触.md:28-43); independent 侵す includes infringement (evidence/jmdict-families.xml:114-118).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: those contact examples do not settle the suspected legal-violation secondary use; no independent 触れる family was supplied. Neither endpoint declares 侵–触; neither curated set exposes it (repo/kanji/触.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D12",
+      "card": "違",
+      "reportLine": 50,
+      "displayedTitle": "differ",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested violation or transgression. The full article includes mismatch, being wrong, mistakes and mistaken assumptions, not merely neutral difference (repo/kanji/違.md:19-21; repo/kanji/違.md:35-45). Independent 侵す includes violate (evidence/jmdict-families.xml:105-118).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: no independent 違 record was supplied to settle an ordinary breach/violation sense; a differ title does not settle it. Neither endpoint declares 侵–違; neither curated set exposes it (repo/kanji/違.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D13",
+      "card": "突",
+      "reportLine": 51,
+      "displayedTitle": "thrust; sudden",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested attacking or intruding. The article includes thrusting, poking, collision and suddenness, with both impact and non-impact examples (repo/kanji/突.md:19-21; repo/kanji/突.md:35-46). Independent 侵す includes raid and intrude (evidence/jmdict-families.xml:105-112).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: suddenness or a thrust alone is not invasion, but no independent 突/突く family settles the suspected attacking branch. Neither endpoint declares 侵–突; neither curated set exposes it (repo/kanji/突.md:1-12; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "D14",
+      "card": "徹",
+      "reportLine": 52,
+      "displayedTitle": "penetrate; be thorough",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested intrusion or penetration. The full card includes piercing through, reaching a limit, completion, exclusivity, all-night activity, clarity and figurative strike home (repo/kanji/徹.md:21-34; repo/kanji/徹.md:66-94). Independent 侵入 includes penetration, while the independent 侵 character entry specifies unauthorized domain-entry (evidence/jmdict-families.xml:215-242; evidence/external-snapshots/01-extract.txt:4-7).",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: penetration is genuine whole-word evidence, not automatically a constituent gloss; going through versus entering does not by itself settle all ordinary overlap. Neither endpoint declares 侵–徹; exclusions through 討 or 撃 do not protect it. Neither curated set exposes the pair (repo/kanji/徹.md:1-15; snapshot/kanji/侵.md:13-14)."
+    },
+    {
+      "id": "E1",
+      "card": "犯",
+      "reportLine": 53,
+      "displayedTitle": "commit an offense",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested the declared pair's violation branch. 犯's article teaches violating a rule (repo/kanji/犯.md:19-21; repo/kanji/犯.md:32-38); independent 犯す has a rule-breaking/violation sense and independent 侵す has violation/infringement (evidence/jmdict-families.xml:590-718; evidence/jmdict-families.xml:105-126).",
+      "disposition": "Already handled: the ordinary violation branch supports a direct semantic guard even though commit an offense and invade are not unrestricted synonyms. Declared on 侵 at snapshot/kanji/侵.md:14, not on 犯 (repo/kanji/犯.md:1-12). Neither curated set exposes the pair."
+    },
+    {
+      "id": "E2",
+      "card": "冒",
+      "reportLine": 54,
+      "displayedTitle": "brave danger; venture",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested shared harm/affliction. The full card includes both risk-taking and disease affliction (repo/kanji/冒.md:21-23; repo/kanji/冒.md:44-49); independent 冒す's disease/chemical harm sense is explicitly cross-referenced by independent 侵す (evidence/jmdict-families.xml:757-802; evidence/jmdict-families.xml:120-126).",
+      "disposition": "Already handled: the harm branch, not merely the risk title, supports the guard. Desecration and assuming a surname in the independent 冒す entry do not make all other 侵 meanings interchangeable. Declared on 侵 at snapshot/kanji/侵.md:14, not on 冒 (repo/kanji/冒.md:1-15). Neither curated set exposes the pair."
+    },
+    {
+      "id": "E3",
+      "card": "害",
+      "reportLine": 55,
+      "displayedTitle": "harm",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested harm/injury. The displayed harm choice directly matches independently sourced 侵す harm/afflict; independent 害する additionally gives injury, damage and hurt, as well as killing and hindering (repo/kanji/害.md:3; evidence/jmdict-families.xml:120-126; evidence/jmdict-families.xml:867-909).",
+      "disposition": "Already handled: a necessary direct guard for the shared harm answer; killing and obstructing are not thereby assigned to 侵. Declared on 侵 at snapshot/kanji/侵.md:14, not on 害 (repo/kanji/害.md:1-12). Neither curated set exposes the pair."
+    },
+    {
+      "id": "E4",
+      "card": "攻",
+      "reportLine": 56,
+      "displayedTitle": "attack; go on the offensive",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested attack/invasion. Actual 攻 choices and its attack/challenge/boldness and study branches were read (repo/kanji/攻.md:3; repo/kanji/攻.md:21-49). Independent 攻める confirms attack and assault; independent 侵す includes raid (evidence/jmdict-families.xml:42-77; evidence/jmdict-families.xml:105-112).",
+      "disposition": "Already handled: raiding supports a broad attack choice; neither special study nor colloquial boldness is assigned to 侵. Conservative invasion/attack guard declared on 侵 at snapshot/kanji/侵.md:14, not on 攻 (repo/kanji/攻.md:1-15). Neither curated set exposes the pair."
+    },
+    {
+      "id": "E5",
+      "card": "撃",
+      "reportLine": 57,
+      "displayedTitle": "shoot; strike",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested attack/raid. The article includes shooting, striking, counterattack, sensory impact and defeat (repo/kanji/撃.md:21-23; repo/kanji/撃.md:40-45). Independent KANJIDIC2 includes attack and conquest, and the supplied 討つ/撃つ family includes attack (evidence/kanjidic2-records.xml:893-977; evidence/jmdict-families.xml:590-651).",
+      "disposition": "Already handled: attack/raid supports the conservative guard; invasion need not involve shooting and no universal equivalence is asserted. Declared on 侵 at snapshot/kanji/侵.md:14, not on 撃 (repo/kanji/撃.md:1-15). Neither curated set exposes the pair."
+    },
+    {
+      "id": "E6",
+      "card": "入",
+      "reportLine": 58,
+      "displayedTitle": "enter, put in",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "侵": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Requested entry/intrusion. The article includes entering, putting in, literary いる and the recorded ジュ example (repo/kanji/入.md:19-34). Independent 侵's definition explicitly involves entering another's domain without permission, and independent 入 has enter/insert (evidence/external-snapshots/01-extract.txt:4-7; evidence/kanjidic2-records.xml:290-373).",
+      "disposition": "Already handled: enter is a defensible broad component of the intrusion action although entry need not be unauthorized; this is a conservative guard, not a claim that put in universally means invade. Declared on 侵 at snapshot/kanji/侵.md:14, not on 入 (repo/kanji/入.md:1-12). Neither curated set exposes the pair."
+    }
+  ],
+  "sourceFilesRehashed": 53,
+  "newTitles": {
+    "侵": "invade; encroach"
+  },
+  "acceptanceLimit": "Mechanics and factual source bindings only; no linguistic verdict is inferred."
+}
