@@ -59,6 +59,26 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 131 reconciliation 001: bounded direct precautions
+
+The local revision of candidate 1359b467 appends nine direct precautions on
+霜 and seven on 衛, with qualified additive Notes. 羊, all ordered reading
+metadata and practice choices, four support wrappers and stroke data stay
+unchanged. The [neutral addendum](n1-sources/batch-131-reconciliation/pair-dispositions-001.json)
+retains all 13 comparison questions and both displayed-answer directions:
+twelve receive qualified precautions; 霜/冴 retains a bounded non-collision
+without denying 冴's older cold/freezing senses.
+
+The packet adds 78 complete narrowly queried JMdict families, 19 complete
+character records and 17 actual comparison copies. Complete external source
+captures remain local with exact bindings; historical jargon, image gaps,
+compound-allocation uncertainty and non-transitive guard limits remain
+explicit. Original evidence and progress are historical, not overwritten.
+Separate family-isolated author responses await independent confirmations.
+The [revision ledger](n1-sources/batch-131-progress-reconciliation-001.json)
+does not increment published delivery: **264/1,228**, **964 remaining**.
+Local host checks are not native/device, whole-set or publication acceptance.
+
 ## Batch 131: local unreviewed authoring candidate
 
 衛・羊・霜 are three missing frozen members (rows 977, 870 and 1174).
