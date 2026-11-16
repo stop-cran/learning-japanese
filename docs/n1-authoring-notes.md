@@ -59,6 +59,23 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 126: local authoring candidate
+
+The bounded candidate is **傘**, frozen source row 70, with its generated
+KanjiVG stroke file and one link-only wrapper in the existing N5 傘 article.
+No word article is added. The [source packet](n1-sources/batch-126/) retains
+56 complete JMdict families, the complete character record, actual 1,245-card
+baseline gloss scans, all comparison cards and direct pair dispositions.
+The full サン/かさ metadata is preserved; practice selects かさ, and the
+separate JMdict spelling 傘/からかさ is explicitly acknowledged and checked
+in the bounded host reading model. The direct 被 exclusion conservatively
+guards a broad English cover/shelter label, not universal synonymy.
+
+This is an unreviewed local draft, not publication or native/device acceptance.
+The [B126 ledger](n1-sources/batch-126-progress.json) keeps published accounting
+unchanged at **255 delivered / 973 undelivered**. B125's publication ledger,
+receipt, sources and historical authoring reports remain unchanged.
+
 ## Batch 124: local authoring candidate
 
 The one-card local candidate is **裕**, frozen source row 986, with a generated KanjiVG stroke file and one link-only wrapper in the existing N3 余裕 article. No word article is added. The [source packet](n1-sources/batch-124/) records the complete dictionary records, the 1,243-card baseline gloss scan, the 厚 and 財 overlap dispositions, and the reading and quiz-safety rationale. The latest author audit is `author-audit-002.json`; earlier decisions remain preserved. This is an authoring candidate only; independent review and acceptance/publication remain pending. Published accounting is unchanged at 253 delivered and 975 undelivered.
