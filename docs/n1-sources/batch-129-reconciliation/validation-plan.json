@@ -1,0 +1,145 @@
+{
+  "parent": "7c662b37c647a9b300278abe2e3079fe57f09f83",
+  "batchScopeBase": "20fda42f7b456889ae4ef82650dde227a139917c",
+  "baseDistinction": "Lint/linkplan use original B129 introduction base20fda42f; reconciliation direct-child admission/signing uses7c662b37. No changed teaching support or prose exception is needed.",
+  "commands": {
+    "lint": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1_batch_tool.py",
+      "lint",
+      "--base",
+      "20fda42f7b456889ae4ef82650dde227a139917c",
+      "--no-jmdict",
+      "茉",
+      "絹",
+      "虹"
+    ],
+    "quiz-safety": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\quiz_safety.py",
+      "茉",
+      "絹",
+      "虹"
+    ],
+    "linkplan": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1_linkplan.py",
+      "verify",
+      "20fda42f7b456889ae4ef82650dde227a139917c",
+      "茉",
+      "絹",
+      "虹"
+    ],
+    "reading-exposure": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\check_reading.py"
+    ],
+    "validate": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\validate.py"
+    ],
+    "manifest": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\build_manifest.py"
+    ],
+    "unittest": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test_*.py"
+    ],
+    "budget": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\check_content_budget.py"
+    ],
+    "vocabulary": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\grammar_vocabulary.py",
+      "check"
+    ],
+    "manifest-rebuild": [
+      "python",
+      "-B",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\build_manifest.py"
+    ]
+  },
+  "serialGateOrder": [
+    "lint",
+    "quiz-safety",
+    "linkplan",
+    "reading-exposure",
+    "validate",
+    "manifest",
+    "unittest",
+    "budget",
+    "vocabulary",
+    "manifest-rebuild"
+  ],
+  "preservation": "preserve.py after each complete serial gate run",
+  "plannedAuthorDirectories": [
+    "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\author-gates-001",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\author-preservation-001"
+  ],
+  "plannedCommittedDirectories": [
+    "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\committed-gates-001",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\committed-preservation-001"
+  ],
+  "snapshotBinding": "Final local handoff, outside the Git tree, binds actual author/committed receipts by SHA256 to the signed tree/commit and this self-excluding packet inventory. This plan is not a claim that prospective checks already passed.",
+  "process": {
+    "N1_REPO": "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "ramGuardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84",
+    "admitFreeGiBAbove": 2,
+    "abortFreeGiBBelow": 1,
+    "sampleSeconds": 0.25,
+    "childWaitMaxSeconds": 0.1,
+    "cleanupMaxSecondsPerStage": 10
+  },
+  "producerHashes": {
+    "producers/check_reading.py": "3369f02cdec8933f423395365da081c87903a01ef1bfe9a7ca6b8f6778456cf4",
+    "producers/claim_readback.py": "bae0028d99c27c84a41105f39fcdbe1538301e09ab0486b37d803909e337d3a8",
+    "producers/compose_packet.py": "4f1f56f24f2711186e9f2773c4db709fb45883fca8400071fcf27dd4a460f194",
+    "producers/finalize_packet.py": "253c7bf0f07db4b1df4748182f4b97cc94e9b21c4a45f1f38f041b2a895d279f",
+    "producers/monolingual.py": "5ab3885ce5e16bec1ef16ddae0a19678b45291b538a97618ea38075d6a19dccd",
+    "producers/noose_monolingual.py": "481281d0daa7317f9f6225f9eb3ba7664c53b21e7534bf3e63214926caa29496",
+    "producers/noose_source.py": "bda32a05e60b2317f00ade1665f8d7f6ec1cb167a40e3394456e24b399b76225",
+    "producers/pair_records.py": "1aed3eff452a32c26bb0c4b8a75a01207de6c5338d9372f39f2673684e2a0c52",
+    "producers/prepare_manifest.py": "95e4cb345edffa34a8c91e3c11d1f19caeacb5c1602712b42be2e61c82f80b18",
+    "producers/present_sources.py": "009cb7786e42a65f0691cfa5260eb66a5af1c7e38b60b2af11d5ed0a85258ab6",
+    "producers/preserve.py": "edc28cc7883a4361b392f2abdbe1d0217765a6f6356dbbb42a43a84d4ffee482",
+    "producers/recon_common.py": "dab282c91376556277c732abf79a4a4a772c154d711fe03edae1ebda36f57efc",
+    "producers/run_gates.py": "c140983daa4bd7a12f4be6fe03054c2dd09d2648896c770445cc4c524ca0b8f5",
+    "producers/sign.py": "415dcb4c8cab5057725711abfa3965265568b13a5df1fbbefc297bb05ba7ae66",
+    "producers/sources.py": "9e0206852df6d3508cc55a17750faa15ce9ae32d5af7dd5d032da2875737b8f9",
+    "producers/supplement_sources.py": "bff389531d4d47e296ea2aa7e51e9c25321473334aa2f2bb5abf433ce2291832",
+    "producers/b129_common.py": "d8e2db66d18a8dd57b5580cd948853e5c26c6053789e431715d1a90c06d4a8b7",
+    "producers/extract_b129.py": "c06df4504089793f5239c9450c24c7bc803e670730a8e5f85e74f69159746e31"
+  },
+  "toolHashes": {
+    "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1_batch_tool.py": "20f69234c98407a4cca6a08814a1665d64f39618ca5c568e1cebdd3595d4938b",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1lib.py": "bffe32496a4c16cfae78108e60027c5cc2968fa6c542de20ae0af51bffb066ce",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\quiz_safety.py": "b475b8ccd750b9ac090d25be30585e5278b0d4b70d35d6114b225b7d4b03bd86",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\n1_linkplan.py": "46432f8d4c4470b5d8b90dfe0ae7c0095fd9de0ca5be7ef2873099a24e78943b",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\lean\\reading_exposure.py": "14823d230e3b3c8b821143e4b5d28aa724172ef4502f14de70823aaef1a6c247",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\validate.py": "015feb17e2ab62dbade8d311d6dd37aa053e2d23430d3b4c95382e66e25eae12",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\build_manifest.py": "e15e104e463566fce38d3406b52980d362295d4f8840e260aa8d1196c115767f",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\check_content_budget.py": "88aa55e462cc995144df860fe1e7c663d741a46a33322c8f5cd05e9dfb897001",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\b129-worktree\\tools\\grammar_vocabulary.py": "afd94a95a63030095f8894983316556ce61a19c218ecd7537a2d7752a6394afc"
+  },
+  "reading": "All18 explicit positive extra target keys, including ぐ, are passed to the bounded host model. Complete original/new family union is canonical-equality checked before deduplication.",
+  "limits": "Serial/static host evidence does not confer linguistic, native/device, arbitrary/custom/multi-borrow, rendered-font, whole-set or publication acceptance."
+}
