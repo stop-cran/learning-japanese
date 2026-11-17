@@ -147,7 +147,7 @@ between every construction using the paired words.
 
 | ID | Candidates | Tags | Question to refine |
 | --- | --- | --- | --- |
-| CW027 | [気（き）](../words/気.md), [気分（きぶん）](../words/気分.md), [気持ち（きもち）](../words/気持ち.md) | `O G U P` | "Feeling/mood/mind": which senses and fixed combinations overlap, and which do not? A bare gloss cannot cover all of 気. |
+| CW027 | [気（き）](../words/気.md), [気分（きぶん）](../words/気分.md), [気持ち（きもち）](../words/気持ち.md) | `O G U P` | "Feeling/mood/mind": which senses and fixed combinations overlap, and which do not? A bare gloss cannot cover all of 気. See [気 expressions](../articles/ki-expressions-attention-and-feelings.md) for common attention, concern, liking, and noticing patterns; the 気分／気持ち comparison remains open. |
 | CW028 | [不安（ふあん）](../words/不安.md), [心配（しんぱい）](../words/心配.md) | `O G U` | "Anxiety/worry": what is being felt or worried about, and which noun/adjectival/verb constructions fit? |
 | CW029 | [うれしい](../words/うれしい.md), [楽しい（たのしい）](../words/楽しい.md) | `O G U` | "Happy": being glad about something versus an enjoyable experience; examine overlap without inventing a strict cause/duration rule. |
 | CW030 | [上手（じょうず）](../words/上手.md), [上手い（うまい）](../words/上手い.md), [得意（とくい）](../words/得意.md) | `O G F U P` | "Good at": skill assessment, one's strong area, register, and other senses of うまい. Which forms suit self-description? |
@@ -343,6 +343,7 @@ Coverage here means relevant discussion exists, not that every possible contrast
 | [Occupation and role endings](../articles/occupation-and-role-endings.md) | 作者 versus 作家; 研究者 versus 研究員; 医師 versus 医者; 政治家 versus 政治屋. Shared endings do not establish a universal prestige or qualification hierarchy. |
 | [Koto, wake, and noun-based grammar](../articles/koto-wake-and-formal-nouns.md) | こと versus わけ, こと versus の, とき versus ころ, approximate quantities with ほど・くらい・ばかり, and other construction-dependent neighbors. These are the grammar boundary of the inventory, not all ordinary lexical synonyms. |
 | [Verb extensions: direction and aspect](../articles/verb-extensions-direction-and-aspect.md) | ～ていく versus ～てくる; ～始める versus onset ～出す; ～終わる・～切る・～てしまう; ～ておく versus ～てある and ～ている. Learn the complete construction, not an English label for the final verb alone. |
+| [気 expressions](../articles/ki-expressions-attention-and-feelings.md) | 気になる versus 気にする; 気になる versus 気に入る; 気づく versus 気を付ける and 気がする; 気を遣う・気遣う・気にかける; 元気・やる気・本気・平気. The 気分／気持ち comparison in CW027 remains open. |
 
 ## Refinement, later
 
