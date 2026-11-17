@@ -150,6 +150,8 @@ Purpose **ために** can also discuss a goal, but do not replace every のに m
 Study the complete predicate, such as **時間がかかる**, **便利だ** or **必要だ**.
 The initial meaning questions identify required time, tool use and an unexpected outcome; they do not ask the learner
 to prove a universal boundary between every purpose construction.
+Purpose のに next to ために, and telling it apart from "although" のに, is practised further in
+[Emphatic causes and reason connectives](emphatic-causes-and-reason-connectives.md#purpose-のに-ために-and-although-のに).
 
 ## Combining のに with はず and つもり
 

@@ -739,6 +739,8 @@ Neither word classifies the cause itself as inherently good or bad:
 make every おかげ sentence impossible. ため often reports a cause without the same explicit credit or blame.
 For attachment, compare **先生のおかげで**, **静かなおかげで**, **うるさいせいで** and **鍵を忘れたせいで**.
 Do not add の after a completed plain verb clause such as 鍵を忘れた.
+To stress a reason with **からこそ** ("precisely because") or to blame one cause with **ばかりに** ("just because"),
+see [Emphatic causes and reason connectives](emphatic-causes-and-reason-connectives.md#emphatic-causes-からこそ-and-ばかりに).
 
 ### かわり and ついで: replacement, an additional errand, or a trade-off
 

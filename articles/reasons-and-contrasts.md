@@ -366,6 +366,8 @@ A fuller follow-up can be **それで、どちらが勝ったの？**
 A quoted version of that question remains a request for further information even inside an outer report.
 **それでは／それじゃ** belongs to a related but different "well then/in that case" use;
 it is not merely a spelling variant accepted in place of every それで.
+For **なぜなら** ("the reason is…", announcing a reason in the next sentence) and **そのため** ("for that reason",
+a result), see [Emphatic causes and reason connectives](emphatic-causes-and-reason-connectives.md#linking-reasons-across-sentences-なぜなら-and-そのため).
 
 ### それでも: retain the following stance despite the background
 
