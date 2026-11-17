@@ -206,6 +206,8 @@ uses. For the teacher example, **先生すら / 先生ですら / 先生だっ�
 すら is less usual than さえ; だって is conversational.
 Their other uses and combinations are not interchangeable, and sentence-initial だって can instead give
 a reason or objection. These alternatives are acknowledged, not a demand to master every register now.
+In a condition, **さえ〜ば** means "as long as": 練習さえすれば, "as long as you practise." It is practised in
+[Concession and supposition](concession-and-supposition.md#1-three-roles-for-a-condition).
 
 ## でも: an unlikely example, not always an actual surprise
 

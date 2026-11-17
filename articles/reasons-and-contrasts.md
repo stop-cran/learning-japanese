@@ -285,6 +285,8 @@ The pair does not mean that both alternatives simultaneously hold, nor does ever
 English "neither ... nor." Keep the actual main predicate.
 The new formation tasks cover noun/adjective alternatives and an affirmative-versus-negative second case.
 They are not unrestricted synonym-selection tasks or a replacement for the existing のに contrasts.
+**たとえ／いくら／どんなに〜ても**, "even if / however much," and further ても〜なくても practice are in
+[Concession and supposition](concession-and-supposition.md#2-adverbs-that-set-up-the-clause-たとえ-いくら-どんなに-もしも).
 
 ## Whole-sentence connections: しかし, でも, そして and それから
 

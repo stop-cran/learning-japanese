@@ -212,6 +212,8 @@ For the relation to concessive and nominalizing uses of のに, see
 
 In **行ったなら**, a completed visit is the assumed proposition: "if you went/have gone." It need not be a regret. Compare **行ったら** in a future plan: "if/when you go." Read the whole context instead of identifying past time from a single た.
 
+Supposition with **としたら／とすれば／とすると**, "assuming that," the adverb **もしも**, and **さえ〜ば**, "as long as,"
+are practised in [Concession and supposition](concession-and-supposition.md#1-three-roles-for-a-condition).
 ## 7. How to choose without learning false exclusions
 
 1. **Build a valid predicate.** Distinguish 安ければ, 静かなら, 静かだと and 静かな場合.

@@ -112,6 +112,8 @@ Keep the attachment differences:
 **暇（ひま）** means free or unoccupied; **安い（やすい）** means inexpensive.
 Kana is common, but **割に／割りに** and **癖に** are possible spellings in the practiced constructions.
 The contrast exercises accept the suitable alternatives together. A different accepted wording is never a wrong button.
+Neutral concession with **ながらも**, an expectation set by a category with **にしては**, and a granted premise with **にしても**
+are practised in [Concession and supposition](concession-and-supposition.md#5-against-an-expectation-or-despite-a-premise-にしては-わりに-にしても).
 
 ## Another のに: doing something, the time it takes, or a tool's use
 
