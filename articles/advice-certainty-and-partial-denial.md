@@ -136,6 +136,9 @@ It often goes with **きっと** or **絶対に**. It is a little written or emp
 > もしかしたら、ごごは あめが ふるかもしれない。  
 > It might rain this afternoon.
 
+もしかしたら, まさか and 一体 as adverbs that set up their ending are practised in
+[Attitude, conjecture and manner adverbs](attitude-and-conjecture-adverbs.md#2-adverbs-that-set-up-an-ending-もしかしたら-まさか-一体).
+
 **はずだ** says what should be true according to an arrangement, a plan or known facts. When the expectation
 fails, it is はずだ that sounds natural, not に違いない:
 

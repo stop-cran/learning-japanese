@@ -218,6 +218,8 @@ while **本をたくさん読む** describes reading a lot. たくさん is not 
 every adjective.
 With a negative ending, **とても〜ない** means "there is no way"; it is contrasted with なかなか and どうしても in
 [Adverbs with negative endings](adverbs-with-negative-endings.md#とてもない-there-is-no-way).
+The degree adverbs ずっと (which widens a より comparison), かなり and なかなか are practised in
+[Attitude, conjecture and manner adverbs](attitude-and-conjecture-adverbs.md#1-degree-なかなか-かなり-and-ずっと).
 
 ## Keep the existing quantity practice
 

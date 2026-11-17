@@ -180,6 +180,9 @@ observation perspectives are explanation/recognition support, not separately ass
 can appear. This is the primary curriculum's separate N3 pattern, not a required N4 distractor here.
 The N3 article [Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md#2-two-kinds-of-そうだ)
 practises choosing between the two そうだ.
+**N3 follow-up: まるで and ような気がする.** The adverb まるで, which strengthens a likeness, and
+ような気がする, which reports a vague feeling, are practised in
+[Attitude, conjecture and manner adverbs](attitude-and-conjecture-adverbs.md#3-likeness-and-feelings-まるで-and-ような気がする).
 More detailed に見える／と見える, って感じ, 風 and personality がり work is deferred rather than
 silently counted as covered.
 
