@@ -283,6 +283,8 @@ In shared topic tasks, fitting について, に関して, and のことを form
 An interpretation label outside a quoted sentence is not a connector to insert inside that sentence.
 Comparative attachment beyond the demonstrated patterns, the full range of ため/場合, and further relations
 such as において, として, によって, and をめぐって remain outside this lesson's practiced scope.
+**として**, "as (in the role of)," is practised next to **に代わって**, "in place of," in
+[Comparison, role and particle relations](comparison-and-role-relations.md#6-として-and-に代わって-as-or-in-place-of).
 
 Kana **について**, **にとって**, and **こと** are the ordinary models here.
 The recognized spellings **に就いて**, **に取って**, and **事** may occur; recognition is not equal frequency.

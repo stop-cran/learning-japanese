@@ -56,6 +56,9 @@ nominalized activities can never be compared.
 For **ほう versus ほか**, and comparison versus advice with **たほうがいい**, see
 [the existing comparison section](koto-wake-and-formal-nouns.md#ほう-and-ほか-compare-alternatives-or-add-something-else).
 Those harder contrasts are not extra choices in this installment.
+The intermediate frames **に比べて（にくらべて）**, "compared with," and **と同じくらい（とおなじくらい）**,
+"about as … as," which build on より and ほう, are practised in
+[Comparison, role and particle relations](comparison-and-role-relations.md#1-に比べて-a-stated-difference).
 
 ## 一番: identify the set before choosing its maximum
 
