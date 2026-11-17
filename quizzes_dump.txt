@@ -1,0 +1,179 @@
+ID: where-peach tier=1
+Prompt: Where did the old woman see the peach?
+ [*] river: At the river
+ [ ] mountain: On the mountain
+ [ ] home: Inside the house
+Explanation: She saw the large peach at the river. The old man went to the mountain, and the peach was cut at home later.
+Evidence[river 10-22]: 川で大きいももを見ました
+
+ID: from-peach tier=1
+Prompt: What came out of the peach?
+ [*] boy: A boy
+ [ ] dog: A dog
+ [ ] treasure: Treasure
+Explanation: A boy came out from inside the peach. The dog and the treasure appear later.
+Evidence[boy 30-38]: 男の子が出ました
+
+ID: morning-food tier=1
+Prompt: What did the old woman make in the morning?
+ [*] dumplings: Dumplings
+ [ ] peach: A peach
+ [ ] treasure: Treasure
+Explanation: In the morning she made many dumplings. The peach was found earlier, and the treasure appears on the island.
+Evidence[food 0-21]: 朝、おばあさんはだんごをたくさん作りました
+
+ID: pheasant-sky tier=1
+Prompt: Where did the pheasant come from?
+ [*] sky: From the sky
+ [ ] river: From the river
+ [ ] house: From the oni's house
+Explanation: The pheasant came from the sky. The peach was at the river, and the oni came out of his house.
+Evidence[friends 196-206]: きじは空から来ました
+
+ID: first-event tier=2
+Prompt: What happened first?
+ [*] saw: The old woman saw a peach at the river
+ [ ] boy: A boy came out of the peach
+ [ ] island: Momotaro went to the island
+Explanation: She saw the peach before they cut it and before Momotaro went to the island.
+Evidence[river 12-22]: 大きいももを見ました
+Evidence[boy 30-38]: 男の子が出ました
+Evidence[friends 271-281]: 一緒に島へ行きました
+
+ID: this-dumpling tier=2
+Prompt: The old woman says 「これを持ってください」. What is これ?
+ [*] dumpling: The dumplings she made
+ [ ] peach: The peach from the river
+ [ ] treasure: The treasure
+Explanation: She made dumplings and then told Momotaro to take them. これ refers to those dumplings, not the peach or the treasure.
+Evidence[food 8-21]: だんごをたくさん作りました
+Evidence[food 27-37]: これを持ってください
+
+ID: first-animal tier=2
+Prompt: On the road to the island, who came first?
+ [*] dog: The dog
+ [ ] monkey: The monkey
+ [ ] pheasant: The pheasant
+Explanation: The dog came first. After that the monkey came, and the pheasant came from the sky later.
+Evidence[friends 28-34]: 犬が来ました
+Evidence[friends 130-137]: さるが来ました
+Evidence[friends 196-206]: きじは空から来ました
+
+ID: what-is-this tier=2
+Prompt: The old man and woman ask 「これは何ですか」. What are they asking about?
+ [*] treasure: The treasure Momotaro brought from the island
+ [ ] peach: The peach from the river
+ [ ] dumpling: The dumpling Momotaro ate on the road
+Explanation: They ask after the treasure has been carried to the village. Momotaro answers that this treasure is the island's treasure.
+Evidence[return 152-159]: これは何ですか
+Evidence[return 172-181]: この宝は島の宝です
+
+ID: why-peach tier=3
+Prompt: Why did the old woman take the peach home?
+ [*] good: Because it was a good peach
+ [ ] oni: Because the oni asked her to take it
+ [ ] treasure: Because the peach was the treasure
+Explanation: The story states the reason: it was a good peach, so she took it home. It does not say the oni asked, and the treasure appears later.
+Evidence[river 57-76]: いいももですから、ももを家へ持ちました
+
+ID: why-go tier=3
+Prompt: Why did Momotaro want to go to the island?
+ [*] bad: Because the oni is bad
+ [ ] ordered: Because the old man ordered the animals to go
+ [ ] had: Because Momotaro already had the treasure
+Explanation: He states the reason: the oni is bad, so he wants to go. The story does not say the old man ordered the animals, and the treasure comes later.
+Evidence[wish 74-93]: 鬼は悪いですから、私は島へ行きたいです
+
+ID: why-give-dog tier=3
+Prompt: Why did Momotaro give the dog a dumpling?
+ [*] asked: Because the dog asked for a dumpling
+ [ ] weak: Because the dog was weak
+ [ ] road: Because the old woman was on the road
+Explanation: The story states the reason: the dog said please give me a dumpling, so Momotaro gave him one. It does not say the dog was weak or that the old woman was there.
+Evidence[friends 79-124]: 犬は「だんごをください。私も行きます」と言いましたから、桃太郎は犬にだんごを一つ出しました
+
+ID: why-together tier=3
+Prompt: Why did the dog, monkey, and pheasant go to the island with Momotaro?
+ [*] dumplings: Because he had given out dumplings
+ [ ] ordered: Because the old man ordered the animals to go
+ [ ] treasure: Because they already had the treasure
+Explanation: The later reason sentence says he had given out dumplings, so he went to the island with the dog, the monkey, and the pheasant. Earlier sentences show one dumpling for each animal. It does not say the old man ordered them or that they already had the treasure.
+Evidence[friends 247-281]: 桃太郎はだんごを出しましたから、犬とさるときじと一緒に島へ行きました
+
+ID: why-treasure tier=3
+Prompt: Why did the oni take out the treasure?
+ [*] weak: Because he was weak
+ [ ] dumpling: Because Momotaro gave him a dumpling
+ [ ] asked: Because the old woman asked him
+Explanation: The story gives the cause directly: the oni was weak, so he took out the treasure. The old woman was waiting at home.
+Evidence[return 60-76]: 鬼は弱いですから、宝を出しました
+
+ID: whole-journey tier=4
+Prompt: Which statement fits the whole story?
+ [*] journey: Momotaro leaves home with dumplings, meets the animals on the road, reaches the island once, and the treasure is put at home
+ [ ] stayed: Momotaro stays at the river and never goes to the island
+ [ ] oni-first: The oni comes to the village at the beginning and gives Momotaro a peach
+Explanation: He leaves home, the animals meet him on the road, they reach the island once, and the treasure is put down at home. The other statements contradict that order.
+Evidence[food 103-109]: 家を出ました
+Evidence[friends 271-281]: 一緒に島へ行きました
+Evidence[return 203-210]: 宝を置きました
+
+ID: who-stays tier=4
+Prompt: Which statement fits the people who do not travel to the island, and the oni at the end?
+ [*] home: The old man and woman do not go to the island and wait at home. At the end the oni is still on the island
+ [ ] daily: The old man goes to the island every day instead of the mountain
+ [ ] oni-home: The oni comes to the house and waits there with the grandparents
+Explanation: They tell Momotaro to go, but they do not go, and they wait at home. The last sentence says the oni was on the island.
+Evidence[wish 114-127]: 二人は島へ行きませんでした
+Evidence[return 140-147]: 家で待ちました
+Evidence[return 211-219]: 鬼は島にいました
+
+ID: dumpling-path tier=4
+Prompt: What happens to the dumplings across the story?
+ [*] shared: The old woman makes them, Momotaro eats one on the road, and he gives one each to the dog, the monkey, and the pheasant
+ [ ] oni: The oni eats the dumplings and then gives Momotaro the treasure
+ [ ] grandparents: The old man and woman take the dumplings to the island
+Explanation: She makes them at home, he eats one on the road, and he gives one to each animal before they reach the island. The oni is not given a dumpling, and the grandparents do not go.
+Evidence[food 8-21]: だんごをたくさん作りました
+Evidence[friends 11-22]: だんごを一つ食べました
+Evidence[friends 231-246]: きじにもだんごを一つ出しました
+
+ID: treasure-end tier=4
+Prompt: Where does the treasure end up, and who brings it there?
+ [*] home: The oni takes it out on the island. Momotaro and the animals carry it to the village and put it at home
+ [ ] house: It stays in the oni's house
+ [ ] river: The old woman finds it in the river at the beginning
+Explanation: The oni takes the treasure out, the party carries it to the village, and it is put down at home. It is not left in the oni's house, and the river object was a peach.
+Evidence[return 69-76]: 宝を出しました
+Evidence[return 120-127]: 村へ歩きました
+Evidence[return 203-210]: 宝を置きました
+
+ID: oni-takes tier=1
+Prompt: What do the village people say the oni does every day?
+ [*] things: He takes the village's things
+ [ ] dumplings: He makes dumplings
+ [ ] waits: He waits at Momotaro's house
+Explanation: They say the oni takes the village's things every day. The old woman makes the dumplings, and the old man and woman wait at home.
+Evidence[wish 37-49]: 鬼は毎日村の物を取ります
+
+ID: before-dog tier=2
+Prompt: On the road, what did Momotaro do before the dog came?
+ [*] ate: He ate one dumpling
+ [ ] pheasant: He gave a dumpling to the pheasant
+ [ ] treasure: He put the treasure at home
+Explanation: He ate one dumpling, and after that the dog came. The pheasant comes later, and the treasure is put down at home after the island.
+Evidence[friends 11-22]: だんごを一つ食べました
+Evidence[friends 23-34]: それから、犬が来ました
+
+ID: grew-strong tier=4
+Prompt: Which statement fits Momotaro before he leaves home?
+ [*] grew: He was a small child, ate many meals, worked on the mountain, and became strong. Then he said he wanted to go to the island
+ [ ] always: He was already strong at the beginning and never ate
+ [ ] oni: The oni became strong, and Momotaro stayed a small child
+Explanation: The name section says he was small, ate a lot, worked on the mountain, and became strong. In the next section he says he wants to go. He leaves home after that. The passage does not say the oni became strong.
+Evidence[name 29-37]: 小さい子供でした
+Evidence[name 44-56]: ご飯をたくさん食べました
+Evidence[name 79-88]: 山で仕事をしました
+Evidence[name 92-102]: 強い子供になりました
+Evidence[wish 85-93]: 島へ行きたいです
+
