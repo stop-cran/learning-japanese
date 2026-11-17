@@ -88,6 +88,19 @@ the following disclosed choices:
   they show as Unverified there; later commits use the registered key
   `9D94B9D311BD26A7`.
 
+## Batch 135: drafted, independent review pending
+
+Fifteen absent frozen members: 博 厳 及 姿 履 巡 弾 彫 恵 憶 我 揚 救 暇 模
+(rows 129–577). They are the first fifteen, in source-row order, of the
+thirty absent rows whose existing declaring word articles already cover an
+on-reading and, where one exists, a kun-reading. Thirty-two existing word
+articles each gain one link to a new card; no other article text changes and
+no word article is added. The [progress file](n1-sources/batch-135-progress.json)
+records the gates and disclosed limits. The quizzed 履 reading リ rests on
+草履, which the Joyo table lists in its appendix of words hard to show
+character by character; the card says so. Published delivery stays
+**272/1,228** until review closure, CI and ZIP verification.
+
 ## Batch 134: local unreviewed authoring candidate
 
 紫 is a missing frozen member (row 831). Existing N2 紫 supports the
