@@ -57,7 +57,8 @@ A future statement, wish or question about a trial does not assert that the tria
 not just trying a walk to see what it is like. Existing
 [change/effort practice](koto-wake-and-formal-nouns.md) retains that distinction.
 Volitional + とする has its own attempt/about-to uses at N3 in the primary curriculum;
-it is not a required choice in these N4 drills.
+it is not a required choice in these N4 drills. For **開けようとした（あけようとした）**, "tried to open," against
+**開けてみた**, "tried opening (to see)," see [Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md).
 
 ## ておく: preparation, or leaving something in a state
 
@@ -99,8 +100,12 @@ need not mean "finished sleeping." Not every しまう example is a completed ta
 task is regretted. Context can combine completion and disappointment; the practice uses stated circumstances,
 not a universal emotion attached to the ending.
 
+For a near miss that did not happen, **遅れるところだった（おくれるところだった）**, "I was nearly late," against
+**遅れてしまった**, "I ended up late," see the N3 article [Change, phases and trends](change-phases-and-trends.md).
+
 The [broader verb-extension comparison](verb-extensions-direction-and-aspect.md)
 also introduces stem + 終わる and 切る. Those neighboring patterns are not new required alternatives here.
+Stem + 切る／切れない is practised at N3 in [Compound verb endings](compound-verb-endings.md).
 
 ## Recognize とく／どく and ちゃう／じゃう
 

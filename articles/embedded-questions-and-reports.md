@@ -25,6 +25,8 @@ Read it in layers:
 | …知っています | Says the speaker knows its answer. |
 
 The inner か does **not** make the entire sentence a request for information.
+Nor is it the exclamation **ことか** (**どれほど待ったことか**（どれほど まったことか）, "how long I waited!"),
+an N3 form covered in [Written register and negation](written-register-and-casual-markers.md).
 Change the outer predicate and the purpose changes:
 
 > 友達が何を買ったか教えてください。  
@@ -98,6 +100,10 @@ A negative proposition can be left open too:
 That is **not** a statement that the bus definitely will not come.
 The positive and negative versions can divide the same possible outcomes, but they frame the proposition differently.
 A drill asking you to preserve 来ません therefore expects the negative predicate, not a reversal of it.
+
+An embedded question can also be the topic of **によって違う／による** ("differs depending on, depends on"):
+**かは〜によって違う** says that the answer varies with something else. See
+[Basis, field and viewpoint](basis-field-and-viewpoint.md#2-かはによって違う-embed-the-question-first).
 
 ## 3. Report information without turning it into proof
 
@@ -200,6 +206,8 @@ Likewise, sentence-final hearsay **ということだ**, hearsay **そうだ**, 
 are not silently taught by an N4 nominalizing-ということ drill.
 The existing [noun-based comparisons](koto-wake-and-formal-nouns.md) and
 [impression/hearsay boundary](appearance-resemblance-and-impressions.md) provide optional reading, not new compulsory distractors.
+Naming a source with **によると** and the hearsay endings **そうだ**, **ということだ** and **んだって** are practised in
+[Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md#3-hearsay-endings-そうだ-ということだ-and-んだって).
 
 ## 5. Report an instruction and keep the people straight
 

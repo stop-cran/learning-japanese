@@ -243,6 +243,8 @@ The positive or negative preference matters; a familiar よかった does not by
 
 Retrospective regrets are a common use, not a license to reconstruct every past event from
 an isolated conditional ending. These exercises give the relevant actual events explicitly.
+Forward-looking advice with **ばいい**, and the advice endings **ことだ**, **べきではない** and **ことはない**, are practised in
+[Advice, certainty and partial denial](advice-certainty-and-partial-denial.md#1-ばいい-looks-ahead-ばよかった-looks-back).
 
 ### てよかった: glad about what happened, or did not happen
 

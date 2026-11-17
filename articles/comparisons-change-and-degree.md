@@ -56,6 +56,9 @@ nominalized activities can never be compared.
 For **ほう versus ほか**, and comparison versus advice with **たほうがいい**, see
 [the existing comparison section](koto-wake-and-formal-nouns.md#ほう-and-ほか-compare-alternatives-or-add-something-else).
 Those harder contrasts are not extra choices in this installment.
+The intermediate frames **に比べて（にくらべて）**, "compared with," and **と同じくらい（とおなじくらい）**,
+"about as … as," which build on より and ほう, are practised in
+[Comparison, role and particle relations](comparison-and-role-relations.md#1-に比べて-a-stated-difference).
 
 ## 一番: identify the set before choosing its maximum
 
@@ -105,6 +108,9 @@ become higher without becoming expensive by everybody's standards.
 Read **明るい（あかるい）**, bright/well-lit; **静か（しずか）**, quiet; and **店長（てんちょう）**,
 shop manager. **きれい**, clean or beautiful, is a な-adjective despite its final い sound:
 **きれいになる**, not *きれくなる*. The familiar exception **いい／よい** uses **よくなる**, "become better."
+
+For change in proportion (**につれて**), trends that keep going (**一方だ（いっぽうだ）**) and **ますます**, "more and more,"
+see the N3 article [Change, phases and trends](change-phases-and-trends.md).
 
 Inflect **なる** for the sentence:
 
@@ -184,6 +190,10 @@ In expressive speech, すぎる can amplify admiration:
 **景色（けしき）** means scenery. Here the speaker is admiring it, not requesting less beauty.
 Do not turn the practical excess exercises into a universal ban on positive uses.
 Casual **すぎ** without final る and more intricate negative combinations are beyond this assessed batch.
+Excess can also be stated as a cause: **あまりに（も）**, "so ... that," and **N のあまり**, "out of excessive N," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#2-excess-のあまり-あまりの-and-あまりに).
+Dictionary form + **ばかりだ**, a change that only keeps going one way, is in the same article's
+[ばかり section](degree-excess-and-addition.md#dictionary-form--ばかりだ-versus-た-form--ばかり).
 
 ## High degree, large quantity and excess are not the same claim
 
@@ -206,6 +216,10 @@ The separate **結構です** acceptance/refusal uses and **とても...でき�
 need their own contexts; the linked word cards explain them. **たくさんの本** names many books,
 while **本をたくさん読む** describes reading a lot. たくさん is not a replacement for とても before
 every adjective.
+With a negative ending, **とても〜ない** means "there is no way"; it is contrasted with なかなか and どうしても in
+[Adverbs with negative endings](adverbs-with-negative-endings.md#とてもない-there-is-no-way).
+The degree adverbs ずっと (which widens a より comparison), かなり and なかなか are practised in
+[Attitude, conjecture and manner adverbs](attitude-and-conjecture-adverbs.md#1-degree-なかなか-かなり-and-ずっと).
 
 ## Keep the existing quantity practice
 

@@ -187,6 +187,9 @@ Do not conflate **ございます** with respectful human **いらっしゃい�
 Read **青い（あおい）**, **昨日（きのう）**, **会議（かいぎ）** and **二時（にじ）**.
 Negative existence and a negative copula say different things; do not insert or remove **で** indiscriminately.
 
+**である** looks similar but is neither polite nor honorific: it is the plain copula of essays and reports.
+See [である: the plain written copula](written-register-and-casual-markers.md#1-である-the-plain-written-copula).
+
 ## Courteous requests: who will do the action?
 
 The compact respectful request uses **お + verb stem + ください**, or a compatible **ご + verbal noun + ください**:

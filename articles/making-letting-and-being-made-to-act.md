@@ -197,6 +197,8 @@ This is supporting reading, not another scored group.
 For the receiving-side viewpoint behind later benefactive combinations, revisit
 [giving and receiving](giving-receiving-and-viewpoint.md).
 The full させてもらう／させていただく system is outside this N4 batch; it is not a required distractor.
+At N3, **させてもらう**, "be allowed to; humbly do," is practised in
+[Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md).
 
 ## Practice route and limits
 

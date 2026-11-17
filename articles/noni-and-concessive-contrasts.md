@@ -25,6 +25,8 @@ An appreciated result works too:
 
 Surprise, disappointment, gratitude and criticism come from the construction together with the surrounding context.
 Do not use "good result" versus "bad result" as an answer key.
+The adverb **かえって** also marks an outcome contrary to expectation, often an action that backfires; see
+[Correction and contrast connectives](correction-and-contrast-connectives.md#かえって-on-the-contrary-contrary-to-expectation).
 
 ## Attachment: what comes immediately before のに?
 
@@ -112,6 +114,8 @@ Keep the attachment differences:
 **暇（ひま）** means free or unoccupied; **安い（やすい）** means inexpensive.
 Kana is common, but **割に／割りに** and **癖に** are possible spellings in the practiced constructions.
 The contrast exercises accept the suitable alternatives together. A different accepted wording is never a wrong button.
+Neutral concession with **ながらも**, an expectation set by a category with **にしては**, and a granted premise with **にしても**
+are practised in [Concession and supposition](concession-and-supposition.md#5-against-an-expectation-or-despite-a-premise-にしては-わりに-にしても).
 
 ## Another のに: doing something, the time it takes, or a tool's use
 
@@ -148,6 +152,8 @@ Purpose **ために** can also discuss a goal, but do not replace every のに m
 Study the complete predicate, such as **時間がかかる**, **便利だ** or **必要だ**.
 The initial meaning questions identify required time, tool use and an unexpected outcome; they do not ask the learner
 to prove a universal boundary between every purpose construction.
+Purpose のに next to ために, and telling it apart from "although" のに, is practised further in
+[Emphatic causes and reason connectives](emphatic-causes-and-reason-connectives.md#purpose-のに-ために-and-although-のに).
 
 ## Combining のに with はず and つもり
 

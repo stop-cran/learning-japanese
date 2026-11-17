@@ -162,6 +162,7 @@ The reach of など can depend on grouping and context; do not read a list by in
 Nor is every など a neutral English "etc." It can soften an expression or convey a dismissive attitude.
 The nearby conversational forms **なんか** and **なんて** also have uses beyond neutral exemplification;
 they are not automatic replacements in every sentence.
+Their playing-down uses are practised in [Focus, limits and intervals](focus-limits-and-intervals.md).
 
 ## たり: representative activities and variable states
 
@@ -431,6 +432,8 @@ The following is a recognition map, not a complete formation or substitution cha
 
 These forms are not all interchangeable, and formal or legal writing can distinguish words that share a broad English gloss.
 Likewise, なんか／なんて, uncertainty/reporting とか, and specialized sentence-final uses need more than an "etc." translation.
+**A はもちろん B も**, "B as well as the obvious A," and **A をはじめ B**, "B, with A at the head," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#5-はもちろん-and-をはじめ), together with ばかりでなく／だけでなく.
 
 ## Read the complete message
 

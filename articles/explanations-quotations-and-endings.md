@@ -147,6 +147,12 @@ The reporting verb may be understood in conversation, but our marker drills keep
 Those drills explicitly request either the ordinary one-kana marker or the conversational doubled-consonant marker.
 The other can be grammatical yet outside that requested form; the scene alone does not always distinguish them.
 Topic-introducing って and larger reported-speech constructions are separate uses, not extra targets in this set.
+At N3, casual **って**, **っけ** and **さ** are covered for recognition in
+[Written register and negation](written-register-and-casual-markers.md#8-for-recognition-casual-markers-and-literary-words),
+which also covers the plain written copula
+[**である**](written-register-and-casual-markers.md#1-である-the-plain-written-copula).
+Hearsay **んだって** and naming with **という** and **というのは** build on this quotation foundation; see
+[Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md#5-naming-and-defining-という-and-というのは).
 
 The N4 [embedded questions and reports companion](embedded-questions-and-reports.md) contrasts an inner question
 with the outer message, heard information with impersonal reporting, and nominalized content with reported instructions.
@@ -410,7 +416,8 @@ The conversions require forming the predicate in typed mode. In choice mode, the
 supplied by the buttons: selecting the named frame is recognition, not evidence of productive conversion.
 Five groups cover wondering, confirmation/familiar questions, explanatory prefaces, discourse links and
 register/quoted voice. The [whole-message link examples](reasons-and-contrasts.md#n4-links-between-whole-messages)
-are part of the same set. Existing N5 exercises and their owners are unchanged.
+are part of the same set; the N3 discourse links すると, その結果, ところが, ところで, さて and つまり continue in
+[Result and topic connectives](result-and-topic-connectives.md). Existing N5 exercises and their owners are unchanged.
 Twenty-four new tasks are N4. The four isolated register/quotation controls stay N5: they ask about
 grammatical ending form and the selected voice, not the extra meaning of the supplied N4 surroundings.
 

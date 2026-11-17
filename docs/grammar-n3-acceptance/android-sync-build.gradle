@@ -1,0 +1,11 @@
+def outputRoot = System.getenv("N3_ANDROID_ACCEPTANCE_BUILD_ROOT")
+def fixtureRoot = System.getenv("N3_ANDROID_ACCEPTANCE_FIXTURE_ROOT")
+if (!outputRoot || !fixtureRoot) {
+    throw new GradleException("N3_ANDROID_ACCEPTANCE_BUILD_ROOT and N3_ANDROID_ACCEPTANCE_FIXTURE_ROOT are required")
+}
+allprojects {
+    layout.buildDirectory.set(new File(outputRoot, name))
+    plugins.withId("com.android.application") {
+        android.sourceSets.test.java.srcDir(fixtureRoot)
+    }
+}

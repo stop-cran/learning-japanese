@@ -409,6 +409,9 @@ The starting duration is unspecified, so six minutes is not necessarily the fina
 An exact repeated numerical amount and the unquantified small amounts in 少しずつ are not
 the same kind of measurement.
 
+Intervals such as **一日おきに（いちにちおきに）**, "every other day," and the distributive **それぞれ**, "each,"
+are contrasted with ずつ in section 5 of [Focus, limits and intervals](focus-limits-and-intervals.md).
+
 ## 8. Degree and polarity in context
 
 ### A limited assessment is not an explicit complete denial
@@ -476,6 +479,10 @@ An exercise's concrete inventory or event count is context, not a universal nume
 The [ほとんど word card](../words/ほとんど.md) gives related nominal and adverbial uses.
 **あまり** and negative **ほとんど** can overlap naturally; an underspecified gap should not reject one
 merely because the author imagined the other.
+
+At N3, more adverbs set the strength of a negative: **めったに**, "rarely"; **全く（まったく）**, "not at all";
+**決して（けっして）**, "never"; **必ずしも（かならずしも）**, "not necessarily"; and **別に（べつに）**, "not particularly".
+They are compared in [Adverbs with negative endings](adverbs-with-negative-endings.md).
 
 ## 9. A part and the amount left
 
