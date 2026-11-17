@@ -1255,6 +1255,8 @@ Kana and kanji spellings are accepted, including **程** and **丈**, though kan
 This is not a global rule separating the words: **読めば読むだけ** can also express correlated change,
 and shorter **読むほど** or other extent formulations can be natural in appropriate sentences.
 Likewise, **くらい／ぐらい** can overlap with clause-based degree without replacing ほど in every comparison or repeated-verb pattern.
+Two sentence-final uses, **N くらいです**, "N is about the only one," and clause + **くらいです**, "to the extent that," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#1-くらいです-about-the-only-one-or-how-far-something-goes).
 
 ### くらい: an illustrative degree or a basic minimum
 

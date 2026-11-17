@@ -187,6 +187,10 @@ In expressive speech, すぎる can amplify admiration:
 **景色（けしき）** means scenery. Here the speaker is admiring it, not requesting less beauty.
 Do not turn the practical excess exercises into a universal ban on positive uses.
 Casual **すぎ** without final る and more intricate negative combinations are beyond this assessed batch.
+Excess can also be stated as a cause: **あまりに（も）**, "so ... that," and **N のあまり**, "out of excessive N," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#2-excess-のあまり-あまりの-and-あまりに).
+Dictionary form + **ばかりだ**, a change that only keeps going one way, is in the same article's
+[ばかり section](degree-excess-and-addition.md#dictionary-form--ばかりだ-versus-た-form--ばかり).
 
 ## High degree, large quantity and excess are not the same claim
 

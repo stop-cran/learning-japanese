@@ -432,6 +432,8 @@ The following is a recognition map, not a complete formation or substitution cha
 
 These forms are not all interchangeable, and formal or legal writing can distinguish words that share a broad English gloss.
 Likewise, なんか／なんて, uncertainty/reporting とか, and specialized sentence-final uses need more than an "etc." translation.
+**A はもちろん B も**, "B as well as the obvious A," and **A をはじめ B**, "B, with A at the head," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#5-はもちろん-and-をはじめ), together with ばかりでなく／だけでなく.
 
 ## Read the complete message
 
