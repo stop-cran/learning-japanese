@@ -214,6 +214,9 @@ In casual speech, **～てしまう → ～ちゃう** and **～でしまう →
 
 Likewise, not every ～切る compound describes completing a task: **疲れ切る（つかれきる）** means "be completely exhausted." Learn the applicable sense, not a universal instruction to attach 切る to anything.
 
+At N3, **～切る／～切れない** and **～通す（とおす）**, "keep it up to the end," are practised in
+[Compound verb endings](compound-verb-endings.md#1-doing-it-completely-切る-and-切れない).
+
 ## 4. Doing it beforehand and leaving it that way
 
 ### Preparation with ～ておく
@@ -275,6 +278,10 @@ The image of going "in" can help you remember some connections, but it is not a 
 Even one compound can have different interpretations. NINJAL contrasts two uses of **走り込む**: running **into a police box**, and doing **intensive running practice before a match**. The first involves a physical destination; the second concerns intensive training.
 
 Likewise, **読み込む** also means "read/load" in computing. Understanding the components helps, but the whole word and context select the sense.
+
+At N3, both senses are practised: movement into a place, against **～出す（だす）**, "out of," in
+[Into a place: 込む against 出す](compound-verb-endings.md#3-into-a-place-込む-against-出す), and the deeper sense in
+[Deeply: the second meaning of 込む](compound-verb-endings.md#4-deeply-the-second-meaning-of-込む).
 
 ### ～つく: reaching a target or an idea
 

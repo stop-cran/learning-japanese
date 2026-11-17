@@ -105,6 +105,7 @@ For a near miss that did not happen, **遅れるところだった（おくれ�
 
 The [broader verb-extension comparison](verb-extensions-direction-and-aspect.md)
 also introduces stem + 終わる and 切る. Those neighboring patterns are not new required alternatives here.
+Stem + 切る／切れない is practised at N3 in [Compound verb endings](compound-verb-endings.md).
 
 ## Recognize とく／どく and ちゃう／じゃう
 

@@ -40,6 +40,9 @@ it marks the place left, and 出る is intransitive. The paired object/change qu
 verbs and specified participants, not a rule that any を proves transitivity.
 Topics with は and omitted understood participants are also possible outside the displayed basic frames.
 
+The N3 completion endings **～上がる** (the thing gets finished) and **～上げる** (someone finishes it) follow the same
+intransitive/transitive pairing; see [Finished: 上がる against 上げる](compound-verb-endings.md#5-finished-上がる-against-上げる).
+
 ## 2. Make something different, or describe its becoming different?
 
 The adjective connection is shared, but the last verb changes the presentation:
