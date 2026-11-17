@@ -109,6 +109,9 @@ Read **明るい（あかるい）**, bright/well-lit; **静か（しずか）**
 shop manager. **きれい**, clean or beautiful, is a な-adjective despite its final い sound:
 **きれいになる**, not *きれくなる*. The familiar exception **いい／よい** uses **よくなる**, "become better."
 
+For change in proportion (**につれて**), trends that keep going (**一方だ（いっぽうだ）**) and **ますます**, "more and more,"
+see the N3 article [Change, phases and trends](change-phases-and-trends.md).
+
 Inflect **なる** for the sentence:
 
 - **静かになります** - will become quiet, or becomes quiet in the relevant recurring situation.

@@ -539,6 +539,8 @@ it can also describe a resulting state. A past reference point can appear on the
 For productive beginning/continuation/redo forms, reference-time viewpoint and additional N4 recency practice, see
 [verb extensions](verb-extensions-direction-and-aspect.md#7-an-actions-stage-is-not-a-stopwatch).
 These nine stage exercises remain here; the linked practice does not create a second owner.
+At N3, **ところだった** marks a near miss (**遅れるところだった（おくれるところだった）**, "I was nearly late"),
+and **一方だ（いっぽうだ）** marks a trend that keeps going; both are practised in [Change, phases and trends](change-phases-and-trends.md).
 
 ### Time, recurrence, and occasions
 

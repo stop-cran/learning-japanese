@@ -99,6 +99,9 @@ need not mean "finished sleeping." Not every しまう example is a completed ta
 task is regretted. Context can combine completion and disappointment; the practice uses stated circumstances,
 not a universal emotion attached to the ending.
 
+For a near miss that did not happen, **遅れるところだった（おくれるところだった）**, "I was nearly late," against
+**遅れてしまった**, "I ended up late," see the N3 article [Change, phases and trends](change-phases-and-trends.md).
+
 The [broader verb-extension comparison](verb-extensions-direction-and-aspect.md)
 also introduces stem + 終わる and 切る. Those neighboring patterns are not new required alternatives here.
 

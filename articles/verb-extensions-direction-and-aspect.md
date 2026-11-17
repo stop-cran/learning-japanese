@@ -323,6 +323,7 @@ These also use stem-based constructions, but deserve separate treatment rather t
 | ～戻す（もどす） | Return or recovery in selected compounds | 取り戻す - get back, recover |
 
 The upward/downward readings are **みあげる／みおろす**. These meanings belong to the illustrated compounds; they do not exhaust what 上げる, 下ろす, or 戻す can contribute elsewhere.
+The noun form **読みかけ（よみかけ）**, "partly read," is contrasted with **焼きたて（やきたて）**, "freshly baked," in the N3 article [Change, phases and trends](change-phases-and-trends.md).
 
 ## 6. Putting the pieces together
 

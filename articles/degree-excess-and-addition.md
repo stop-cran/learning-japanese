@@ -135,7 +135,8 @@ The verb form before ばかり changes the meaning completely.
 > さっき おきたばかりなので、まだ ねむい。  
 > I've only just got up, so I'm still sleepy.
 
-**一方だ** is a close neighbour for continuing trends; it is practised in a separate set.
+**一方だ** is a close neighbour for continuing trends; it is practised in
+[Change, phases and trends](change-phases-and-trends.md#2-a-trend-that-keeps-going-一方だ-and-ますます).
 
 ## 4. 言うまでもない and 言うまでもなく
 
