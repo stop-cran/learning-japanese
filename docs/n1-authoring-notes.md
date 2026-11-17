@@ -61,9 +61,10 @@ will be retained in each batch before lexical authoring.
 
 ## Continuation after the 2026-11-17 PC move
 
-B134 紫 was merged with main and published at `2cdae679`; delivery is
-**272/1,228**, with **956 remaining**. Work continues on another PC with
-the following disclosed choices:
+B134 紫 was merged with main and published at `2cdae679`; delivery was
+**272/1,228** at the move, with **956 remaining**. Later batch sections give
+the current figure. Work continues on another PC with the following
+disclosed choices:
 
 - The frozen implementation JMdict bytes are not available there. Batches
   from B135 cite the explicit [continuation pin](n1-sources/continuation-inputs.json)
@@ -88,7 +89,29 @@ the following disclosed choices:
   they show as Unverified there; later commits use the registered key
   `9D94B9D311BD26A7`.
 
-## Batch 135: drafted, independent review pending
+From B136, these are standing steps before a batch is frozen, adopted from
+the B135 review:
+
+- Collect every reading attested for each new kanji beyond its KANJIDIC2
+  metadata: the readings Kanjipedia marks as outside the official table (外),
+  Daijisen headwords marked ▽ for the kanji, and single-kanji JMdict entries,
+  including okurigana variants. Pass them to the reading-exposure audit with
+  `--extra`, and read its one-holder summary line as well as the hit counts.
+- Where an attested reading could be drawn as a wrong answer, choose three
+  curated distractors that fill every slot of the question: each of them
+  offers only readings that are not the card's own, and their readings differ,
+  so the random fallback never runs. Prefer providers whose readings have the
+  prompt's shape (verb-like kun readings for a verb). Shape look-alikes that
+  are unsafe as providers stay in Notes.
+- Card text states facts about the chosen cards and sources, never what the
+  quiz will or will not offer, since that depends on other content.
+- Long sense lists use the B135 弾 layout: a one-line introduction, one bullet
+  per dictionary sense with one example and its kana, and the remaining
+  examples in a final Notes bullet. A word is glossed where it first appears.
+- Packet check logs carry no reviewer attributions, so a blind reviewer
+  cannot tell who asked for a check.
+
+## Batch 135: review closed, publication pending
 
 Fifteen absent frozen members: 博 厳 及 姿 履 巡 弾 彫 恵 憶 我 揚 救 暇 模
 (rows 129–577). They are the first fifteen, in source-row order, of the
@@ -98,10 +121,40 @@ articles each gain one link to a new card; no other article text changes and
 no word article is added. The [progress file](n1-sources/batch-135-progress.json)
 records the gates and disclosed limits. The quizzed 履 reading リ rests on
 草履, which the Joyo table lists in its appendix of words hard to show
-character by character; the card says so. Published delivery stays
-**272/1,228** until review closure, CI and ZIP verification.
+character by character; the card says so.
 
-## Batch 134: local unreviewed authoring candidate
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `163b384e` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX. Both found that the 博
+mnemonic added a dot that 甫 already has. Claude also found that 憶
+misdescribed 臆測 against the Joyo table. GPT also found a dense sense
+paragraph on 弾 and two major quiz defects: 救 could offer グ as a wrong
+answer to キュウ, and 巡's fallback could offer まわる to めぐる. Kanjipedia
+lists both readings outside the official table. Fix `2ef25d33` changed nine
+cards. Claude confirmed it. GPT found one more major defect: a padded Starter
+session could offer える, which Daijisen gives for 彫る, as a wrong answer on
+彫. Fix `fb236071` gave 彫 three curated distractors (円 高 見) that fill
+every slot, and applied Claude's three optional wording points, one of which
+replaced a 巡 distractor. Both reviewers then returned CONFIRMED with no
+findings. The [closure record](n1-reviews/batch-135-closure/README.md) keeps
+the reports, prompts, packets, dispositions and limits, including one pair
+of parallel tool calls in Claude's first confirmation.
+
+Gates at `fb236071` pass: 436 host tests, validation, lint (0 errors; 7
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit apart from three disclosed
+KANJIDIC2 name-only readings. Android JVM tests were not run (no JDK), and no
+native or phone acceptance is claimed. Published delivery stays
+**272/1,228** until CI and ZIP verification; publication would make it
+**287/1,228**, with **941 remaining**.
+
+## Batch 134: published
+
+Review-closed and published at `2cdae679`; see the
+[closure](n1-reviews/batch-134-closure/resolution.json) and the
+[receipt](n1-reviews/batch-134-publication/provenance.json). The rest of this
+section is the pre-review draft record.
 
 紫 is a missing frozen member (row 831). Existing N2 紫 supports the
 むらさき practice reading and gains one reciprocal introductory wrapper;

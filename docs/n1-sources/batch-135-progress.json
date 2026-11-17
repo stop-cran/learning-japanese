@@ -2,7 +2,7 @@
   "batch": 135,
   "base": "afed6694957e850d516c754f034044e801cc30a4",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "博",
     "厳",
@@ -168,9 +168,25 @@
       "模様"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "163b384e6cb8f75c06fe395f7b144cdd8b105673",
+  "reviewedSnapshot": "fb236071b6355b28423581c96a35a8ca1084a193",
+  "reviewClosed": [
+    "博",
+    "厳",
+    "及",
+    "姿",
+    "履",
+    "巡",
+    "弾",
+    "彫",
+    "恵",
+    "憶",
+    "我",
+    "揚",
+    "救",
+    "暇",
+    "模"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -179,8 +195,8 @@
     "publishedN1Additions": 266,
     "n2Placements": 6,
     "undelivered": 956,
-    "reviewClosedPendingRecordsWithCards": 272,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 287,
+    "localUnreviewedDrafts": 0,
     "notStarted": 941,
     "overallN1TaskComplete": false
   },
@@ -192,12 +208,56 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "2ef25d33ab16d928ac4f0a845b4d8f78005223da",
+      "fb236071b6355b28423581c96a35a8ca1084a193"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "163b384e6cb8f75c06fe395f7b144cdd8b105673",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "163b384e6cb8f75c06fe395f7b144cdd8b105673",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "2ef25d33ab16d928ac4f0a845b4d8f78005223da",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "2ef25d33ab16d928ac4f0a845b4d8f78005223da",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm2-claude",
+        "snapshot": "fb236071b6355b28423581c96a35a8ca1084a193",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm2-gpt",
+        "snapshot": "fb236071b6355b28423581c96a35a8ca1084a193",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude confirm2 Optional 1: also cite JMdict 1427950 (彫る, える) on 彫 line 41",
+      "Claude confirm2 Optional 2: -だか is one of 13 possible ほる options and shows a suffix dash"
+    ],
+    "closure": "../n1-reviews/batch-135-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-135-closure/provenance.json",
+    "closureProvenanceSha256": "f2d2de3f2feefeb2e7b528a8c7b1cd57c0145029dcecb3dbd0473fe7f41fbab7"
   },
   "gates": {
     "lint": {
@@ -209,9 +269,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 8838,
-      "retainedBytes": 50499722,
-      "inflatedBytes": 50771300,
-      "localZipBytes": 31779512
+      "retainedBytes": 50502721,
+      "inflatedBytes": 50774299,
+      "localZipBytes": 31780725
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -225,7 +285,14 @@
       "cards": 15,
       "productionHits": 0,
       "paddedSessionHits": 0,
-      "latentCollisions": 19
+      "oneHolderPaddedHits": 0,
+      "oneHolderNameOnly": [
+        "恵 へい",
+        "恵 み",
+        "我 か"
+      ],
+      "latentCollisions": 26,
+      "extras": "Kanjipedia outside-table (外) readings of the 15 kanji, plus 彫 える from the Daijisen headword え・る【▽彫る】"
     },
     "linkPlan": {
       "changedWordFiles": 32,
@@ -234,14 +301,18 @@
     },
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
-    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch"
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": "fb236071b6355b28423581c96a35a8ca1084a193"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
-    "19 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools.",
+    "26 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools; three one-holder Starter cases are KANJIDIC2 name-only readings (恵 へい, 恵 み, 我 か).",
     "7 lint warnings on existing word articles' Dictionary lines are pre-existing and out of scope.",
     "履 quiz リ rests on 草履, which the Joyo table lists in its appendix; the card discloses this.",
     "Source-only readings (e.g. 弾 タン, ただ.す, はじ.きゆみ; 厳 いつくし) are listed but not quizzed.",
-    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology."
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; reading-options.txt still labels 巡-まわる a hit because it ignores filled slots, and GPT verified from the builder that it cannot be drawn.",
+    "Daijisen ▽ headwords were searched only for 彫, not the other 14 kanji.",
+    "Claude's first confirmation once had two tool calls in flight; it disclosed this itself."
   ]
 }
