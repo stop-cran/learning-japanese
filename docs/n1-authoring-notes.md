@@ -59,6 +59,27 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 134: local unreviewed authoring candidate
+
+紫 is a missing frozen member (row 831). Existing N2 紫 supports the
+むらさき practice reading and gains one reciprocal introductory wrapper;
+no prose exception is needed. Complete KANJIDIC2 readings remain distinct
+from supported practice. The [source packet](n1-sources/batch-134/selection.json)
+retains full applicable families, supplemental character records, complete
+baseline scan rows and finite two-direction comparison dispositions.
+Direct precautions protect broad labels, not universal synonyms or
+transitive groups.
+
+Published delivery remains **271/1,228**, with **957 remaining**. This
+single local draft is not delivery or independent review. It was split for
+reviewability of the native secondary senses, historical reading and
+conflicting source stroke counts, not because of a fixed batch quota.
+Full external captures remain local and are bound by hashes; excerpts are
+bounded and attributed. Source-only/name/historical reading keys were
+included in a bounded host check, not promoted to ordinary practice readings.
+The host check, font cmaps and stroke metadata are not native/device,
+visual fallback, whole-set or publication acceptance.
+
 ## Batch 133: local unreviewed authoring candidate
 
 琴・鉛・滝 are missing frozen members (rows 707, 1120 and 643).
