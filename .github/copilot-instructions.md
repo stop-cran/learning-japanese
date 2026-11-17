@@ -169,6 +169,17 @@ complete reviewed RU instructions and a small real pilot precede broad translati
   but awaited-person `を` and waiting-place `で` guidance must not. Verify useful new Russian clarifications separately.
 - A shared generator change must test the current EN reader against newly generated EN content, not merely an old
   static fixture; RU fail-closed versioning must not inadvertently break live EN packages. See [EN #61](https://github.com/stop-cran/learning-japanese/issues/61).
+- Localized headings must update downstream section consumers too, without weakening their evidence checks.
+  The first RU fixture found the validator still selecting literal `Readings` after accepting `Чтения`;
+  `tools/test_content_language.py` now requires the localized reading row's own linked example and rejects its removal.
+- Reject duplicate raw language/schema declarations before a JSON object decoder can collapse them.
+  [Android #127](https://github.com/stop-cran/kanji-cards-android/issues/127#issuecomment-6605902288)
+  reproduced an ambiguous manifest accepted by the new reader despite strict generator-side validation;
+  green authoring-tool fixtures are not evidence that every reader enforces the same raw-input contract.
+- The first full RU pilot review found inherited explanation errors in 木/材木, 大木 and 火山;
+  [EN #62](https://github.com/stop-cran/learning-japanese/issues/62) preserves exact claims and dictionary evidence.
+  Keep source metadata separate from an erroneous example-to-reading assignment or word-formation explanation;
+  inheriting reviewed source prose is not approval of a contradicted Japanese claim.
 
 For this localization project, the user has requested ongoing methodological capture. In the same correction batch,
 put verified reusable content/format findings into the relevant EN/shared or RU instructions, with a finding/evidence
@@ -187,6 +198,10 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-03 - Localized reading evidence (resolve conflict):** C1's Russian fixture exposed a literal `Readings`
+  selector in `check_body` despite localized section acceptance. The localized-row regression in
+  `tools/test_content_language.py` retains the own-linked-example requirement under `Чтения`; acceptance of
+  translated headings must not silently disconnect reading evidence or reader helper extraction.
 - **2026-11-03 - Translation boundaries (add/resolve conflict):** [RU #1](https://github.com/stop-cran/learning-japanese-ru/issues/1#issuecomment-6599291063)
   found that a fixed six-file checklist could miss future instruction changes and inherited path-scope gaps.
   The actual `待つ` English comparison shows why removing an audience-specific comparison must not remove its Japanese rule.

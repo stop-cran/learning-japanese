@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 KANA = re.compile(r"^[ぁ-ゟァ-ヿー]+$")
-CARD_KEYS = {"id", "kind", "text", "en", "noun", "phrase", "reading", "good", "kana", "hard", "distractors", "note", "readingAnswers"}
+CARD_KEYS = {"id", "kind", "text", "en", "translation", "noun", "phrase", "reading", "good", "kana", "hard", "distractors", "note", "readingAnswers"}
 REQUIRED = ("id", "kind", "text", "en", "noun", "phrase", "reading", "good", "kana", "distractors")
 
 
@@ -139,6 +139,11 @@ def check_expressions(path, data, seen, err):
 
 
 def check_card(path, counter, card, cards, accepted, err) -> None:
+    if isinstance(card, dict) and "translation" in card:
+        if "en" in card:
+            err(path, "card must not declare both 'translation' and legacy 'en'")
+            return
+        card = {**card, "en": card["translation"]}
     if not isinstance(card, dict) or any(k not in card for k in REQUIRED):
         err(path, f"card needs {', '.join(REQUIRED)}")
         return
