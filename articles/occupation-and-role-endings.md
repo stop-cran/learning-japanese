@@ -188,6 +188,9 @@ Suffix patterns are therefore especially useful for **recognizing and rememberin
 
 **Learn the ending as a clue, the whole word as vocabulary, and the context as the guide to attitude.**
 
+Other noun endings, such as 的, 型, 同士, たち and 向け, are practised at N3 in
+[Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md).
+
 ## References
 
 The linked dictionary pages sometimes contain several entries or senses. The references below concern the person-denoting uses, not every meaning of the characters.

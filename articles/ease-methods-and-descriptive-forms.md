@@ -54,6 +54,9 @@ Physical and psychological difficulty can overlap, and にくい can describe pe
 For someone struggling with tiny print, **読みにくい** and **読みづらい** can both fit.
 The practice puts fitting にくい／づらい responses in the same difficulty answer class.
 Separate named-suffix drills ask you to construct a specified form, not to declare its neighbor impossible.
+At N3, written-style **がたい** is set against にくい in
+[Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md#8-がたい-and-にくい), which also covers the
+verb-stem endings がち and っぱなし.
 
 The teaching spelling is **づらい**. The formation questions explicitly request the displayed hiragana
 suffix while allowing supported spellings of the verb base; this is a bounded writing operation.
@@ -196,6 +199,8 @@ Compare the opening **長く話す**: it describes how long the talking lasts.
 **長さ** instead names a property as a noun. Neither automatically means "too long";
 [すぎる and degree](comparisons-change-and-degree.md#すぎる-too-much-for-a-relevant-standard)
 add a different judgment.
+The N3 suffix **み**, which names a quality as it is felt rather than measured, is contrasted with さ in
+[Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md#3-み-and-さ).
 
 ## 5. Kinds, materials, features and accessories
 
