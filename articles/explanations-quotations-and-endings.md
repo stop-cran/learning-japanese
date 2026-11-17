@@ -147,6 +147,8 @@ The reporting verb may be understood in conversation, but our marker drills keep
 Those drills explicitly request either the ordinary one-kana marker or the conversational doubled-consonant marker.
 The other can be grammatical yet outside that requested form; the scene alone does not always distinguish them.
 Topic-introducing って and larger reported-speech constructions are separate uses, not extra targets in this set.
+Hearsay **んだって** and naming with **という** and **というのは** build on this quotation foundation; see
+[Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md#5-naming-and-defining-という-and-というのは).
 
 The N4 [embedded questions and reports companion](embedded-questions-and-reports.md) contrasts an inner question
 with the outer message, heard information with impersonal reporting, and nominalized content with reported instructions.

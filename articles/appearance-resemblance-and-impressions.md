@@ -178,6 +178,8 @@ observation perspectives are explanation/recognition support, not separately ass
 **N3 follow-up: hearsay-そう.** Compare **降りそうだ**, "rain looks likely," with **降るそうだ**,
 "I hear it will rain." The latter keeps the plain verb; with a noun or な-adjective, **だそうだ**
 can appear. This is the primary curriculum's separate N3 pattern, not a required N4 distractor here.
+The N3 article [Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md#2-two-kinds-of-そうだ)
+practises choosing between the two そうだ.
 More detailed に見える／と見える, って感じ, 風 and personality がり work is deferred rather than
 silently counted as covered.
 

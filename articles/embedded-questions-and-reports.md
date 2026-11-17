@@ -204,6 +204,8 @@ Likewise, sentence-final hearsay **ということだ**, hearsay **そうだ**, 
 are not silently taught by an N4 nominalizing-ということ drill.
 The existing [noun-based comparisons](koto-wake-and-formal-nouns.md) and
 [impression/hearsay boundary](appearance-resemblance-and-impressions.md) provide optional reading, not new compulsory distractors.
+Naming a source with **によると** and the hearsay endings **そうだ**, **ということだ** and **んだって** are practised in
+[Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md#3-hearsay-endings-そうだ-ということだ-and-んだって).
 
 ## 5. Report an instruction and keep the people straight
 
