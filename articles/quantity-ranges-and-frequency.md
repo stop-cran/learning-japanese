@@ -409,6 +409,9 @@ The starting duration is unspecified, so six minutes is not necessarily the fina
 An exact repeated numerical amount and the unquantified small amounts in 少しずつ are not
 the same kind of measurement.
 
+Intervals such as **一日おきに（いちにちおきに）**, "every other day," and the distributive **それぞれ**, "each,"
+are contrasted with ずつ in section 5 of [Focus, limits and intervals](focus-limits-and-intervals.md).
+
 ## 8. Degree and polarity in context
 
 ### A limited assessment is not an explicit complete denial

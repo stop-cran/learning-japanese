@@ -162,6 +162,7 @@ The reach of など can depend on grouping and context; do not read a list by in
 Nor is every など a neutral English "etc." It can soften an expression or convey a dismissive attitude.
 The nearby conversational forms **なんか** and **なんて** also have uses beyond neutral exemplification;
 they are not automatic replacements in every sentence.
+Their playing-down uses are practised in [Focus, limits and intervals](focus-limits-and-intervals.md).
 
 ## たり: representative activities and variable states
 

@@ -72,6 +72,8 @@ Nor does だけ always mean "a small amount." **好きなだけ**, "as much as y
 The [formal-noun and particle-neighbor article](koto-wake-and-formal-nouns.md) covers those,
 along with ばかり. ばかり can express concentration or repetition and sometimes overlaps with restriction;
 it is not simply a wrong spelling of だけ.
+The intermediate **だけしか～ない**, the singling-out **こそ** and the playing-down **なんか／なんて**
+are practised in [Focus, limits and intervals](focus-limits-and-intervals.md).
 
 ## しか: the negative excludes the alternatives
 

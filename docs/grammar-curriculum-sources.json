@@ -1,5 +1,32 @@
 {
   "schemaVersion": 1,
+  "n3GrammarSeries": {
+    "status": "in-progress",
+    "levelPolicy": "Each task is labelled by the most advanced grammar in its complete visible contrast (prompt, instruction and offered forms); N2 only where the form fits N2 and N3 placement cannot be verified reliably.",
+    "preservation": "Each integration appends new groups to existing chapters. Every existing exercise, group, membership, partial/unmapped disposition, hard edge and recommendation edge is preserved.",
+    "integrations": [
+      {
+        "set": "grammar/focus-limits-intervals.json",
+        "sourceRecord": "docs/grammar-focus-limits-intervals-sources.json",
+        "newGroups": [
+          "focus-limits-intervals-focus",
+          "focus-limits-intervals-best-choice",
+          "focus-limits-intervals-only",
+          "focus-limits-intervals-intervals"
+        ],
+        "chapters": {
+          "focus-and-quantity": [
+            "focus-limits-intervals-focus",
+            "focus-limits-intervals-best-choice",
+            "focus-limits-intervals-only",
+            "focus-limits-intervals-intervals"
+          ]
+        },
+        "hardPrerequisites": 0,
+        "softRecommendations": 9
+      }
+    ]
+  },
   "n3IntervalFinalization": {
     "issues": [
       52,
