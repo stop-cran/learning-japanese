@@ -16,6 +16,7 @@ from urllib.parse import unquote
 import yaml
 
 from validate_scenes import IMAGE_PATH, check_scenes
+from content_language import HEADINGS, read_language
 
 ROOT = Path(__file__).resolve().parent.parent
 # Kotlin Char.isWhitespace includes Unicode separators, but not U+0085 (NEL).
@@ -237,14 +238,17 @@ def check_body(path: Path, meta: dict, body: str) -> None:
         match = re.match(r"^ {0,3}(#{1,6})[ \t]+(.*?)(?:[ \t]+#+)?[ \t]*$", line)
         if match:
             headings.append((number, len(match.group(1)), match.group(2)))
-    sections = KANJI_SECTIONS if path.parent.name == "kanji" else WORD_SECTIONS
-    if sections is WORD_SECTIONS and meta.get("kanji") == []:
+    language = read_language(ROOT)["baseLanguage"]
+    localized = HEADINGS[language]
+    sections = localized["kanji"] if path.parent.name == "kanji" else localized["words"]
+    combine_section = localized["words"][1]
+    if path.parent.name == "words" and meta.get("kanji") == []:
         # Kana-only words have no kanji to decompose, so this section may be omitted.
-        kana_only = [s for s in sections if s != KANJI_COMBINE_SECTION]
+        kana_only = [s for s in sections if s != combine_section]
         actual = [title for _, level, title in headings if level == 2 and title in sections]
         if actual not in (sections, kana_only):
             err(path, "body must contain these ## sections once each, in order: " + "; ".join(kana_only)
-                + " (\"" + KANJI_COMBINE_SECTION + "\" is optional for kana-only words, after Meaning)")
+                + f' ("{combine_section}" is optional for kana-only words, after {localized["words"][0]})')
         sections = actual
     actual = [title for _, level, title in headings if level == 2 and title in sections]
     if actual != sections:
@@ -258,7 +262,7 @@ def check_body(path: Path, meta: dict, body: str) -> None:
             err(path, f"body must start with a single H1 matching metadata: # {title}")
     start = headings[0][0] if headings else -1
     end = next((number for number, level, _ in headings if level == 2), len(body.splitlines()))
-    labels = (r"\bStrokes:", r"\bKey\s*\(radical\):", r"\bJLPT:")
+    labels = localized["facts"]
     if not any(all(re.search(label, line.replace("**", ""), re.I) for label in labels)
                for number, line in visible if start < number < end):
         err(path, "kanji body needs a facts line (Strokes, Key (radical), JLPT; Phonetic only when known) "
@@ -274,7 +278,8 @@ def check_body(path: Path, meta: dict, body: str) -> None:
             if reading.replace(".", "").replace("-", "") not in text and not (
                     okurigana and meta["kanji"] + okurigana in text):
                 err(path, f"kunyomi '{reading}' is not explained in the body (add a row to ## Readings)")
-    reading_start = next((number for number, level, title in headings if level == 2 and title == "Readings"), -1)
+    reading_start = next((number for number, level, title in headings
+                          if level == 2 and title == localized["kanji"][1]), -1)
     reading_end = next((number for number, level, _ in headings if number > reading_start and level <= 2), len(body.splitlines()))
     rows = [line.strip().strip("|").split("|") for number, line in visible
             if reading_start < number < reading_end and line.strip().startswith("|")]
@@ -572,6 +577,11 @@ def err_count_for(path: Path) -> int:
 
 def main() -> int:
     errors.clear()
+    try:
+        read_language(ROOT)
+    except ValueError as exc:
+        print(exc)
+        return 1
     stroke_counts = {path.stem: check_strokes(path) for path in sorted((ROOT / "strokes").glob("*.json"))}
     word_ids = {path.stem for path in (ROOT / "words").glob("*.md")}
     titles: dict[str, str] = {}

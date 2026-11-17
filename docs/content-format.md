@@ -1,4 +1,4 @@
-# Content format (schema version 1, draft)
+# Content format (EN manifest schema 1; RU manifest schema 2)
 
 The Android app [Ensō Nihongo](https://github.com/stop-cran/kanji-cards-android) reads this repository. Anyone can fork it and
 point the app at their fork. `tools/validate.py` checks structural constraints; dictionary accuracy, origins, natural examples,
@@ -16,6 +16,35 @@ images/<name>.webp     scene assets (separate raw-byte-hashed manifest images ma
 listening/<id>.json    N5 listening packages (separate manifest listening map)
 audio/<id>.ogg         approved mono Opus recordings (separate raw-byte-hashed audio map)
 ```
+
+## Repository teaching language
+
+`content-language.json` declares exactly `{"baseLanguage":"en","targetLanguage":"ja"}` for this edition,
+or `ru`/`ja` for the Russian edition. No declaration is legacy EN/ja. Language is repository-wide and stable
+across branches; changing language requires a different repository identity, not relabeling accepted cached lessons.
+The generator includes both language fields in `manifest.json` and in its deterministic `contentVersion`.
+Malformed/unsupported declarations stop generation/validation; contributors never hand-edit generated manifests.
+
+New EN manifests retain schema 1 so the released EN-only reader can still import this actual newly generated tree.
+RU requires explicit language fields and manifest schema 2, which that old reader refuses before importing lessons.
+The new reader supports legacy/explicit EN schema 1 and explicit RU schema 2; missing RU declarations or mismatched
+schema/language are errors, not permission to fall back to English. Nested stroke/counter/grammar/listening schemas
+keep their independent meanings. A shared-tool change must test old-reader/new-EN compatibility and RU safe refusal.
+
+All learner-facing titles, prose, glosses, task help/options/feedback and descriptions follow the base language.
+Japanese paths, internal IDs, readings, answers, tags and levels remain stable except for separately reviewed corrections.
+RU kanji H2 sections are `Значение и происхождение`, `Чтения`, `Частые слова`, `Примечания`; word sections are
+`Значение`, `Как сочетаются кандзи`, `Синонимы и антонимы`, `Оттенки значения`. Kana-only words may omit
+the kanji-combination section. RU facts labels are `Черты`, `Ключ (радикал)`, `JLPT`; retain existing EN labels here.
+Reading-table semantics remain unchanged and the reader accepts the localized section/table labels.
+
+Legacy counter v1 gloss field `en` remains valid for released EN readers. New-language content uses neutral
+`translation`; the updated parser adapts it to the same gloss model. Declaring both fields is invalid.
+Do not migrate published EN v1 cards to the neutral field until an explicitly approved APK-first compatibility change.
+Other existing `translation`/`gloss` fields are already language-neutral.
+
+Language metadata/provenance do not certify a translation, approve reused media, advance whole-corpus coverage or
+authorize generation. Use the [RU checkpoint plan](https://github.com/stop-cran/learning-japanese-ru/blob/main/docs/IMPLEMENTATION-PLAN.md).
 
 ## N5 listening
 
