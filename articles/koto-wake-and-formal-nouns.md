@@ -603,6 +603,8 @@ Use **の** after an event noun, as in 会議のあいだ; a verb phrase attache
 **うちに**, **あいだに** and **ときに** can overlap. うちに often brings out the possibility that a useful state will end;
 あいだに locates something within a period. This difference in emphasis does not make them mutually exclusive answers
 in every sentence about acting while there is time.
+Items where the sentence does decide between "while a state lasts" **うちに** and interval **間に** are practised in
+[Time spans, immediacy and prerequisites](time-spans-and-immediacy.md#3-うちに-or-間に-a-window-that-closes-or-an-interval-with-edges).
 
 ### たび, おり and さい: recurrence versus an occasion
 
@@ -707,6 +709,8 @@ Use the relationship being expressed. Adding two actions does not itself specify
 Conversely, preliminary-step うえで is not the whole inventory of うえで uses; do not extend this selected pattern's
 attachment chart to every expression translated as "in doing" or "when considering."
 The quiz's particle blanks explicitly request に or で and state the intended relationship.
+**Vた＋上で**, "after doing, as a deliberate step," is contrasted with **て初めて**, "only after," in
+[Time spans, immediacy and prerequisites](time-spans-and-immediacy.md#6-て初めて-or-上で-only-after-or-after-doing-as-a-step).
 
 ### ため, おかげ and せい: a goal, a cause, or an evaluation
 
