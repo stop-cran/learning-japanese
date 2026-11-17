@@ -25,6 +25,8 @@ Read it in layers:
 | …知っています | Says the speaker knows its answer. |
 
 The inner か does **not** make the entire sentence a request for information.
+Nor is it the exclamation **ことか** (**どれほど待ったことか**（どれほど まったことか）, "how long I waited!"),
+an N3 form covered in [Written register and negation](written-register-and-casual-markers.md).
 Change the outer predicate and the purpose changes:
 
 > 友達が何を買ったか教えてください。  

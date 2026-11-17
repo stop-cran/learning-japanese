@@ -160,6 +160,8 @@ For **なくて**, connect the negative through **なく + て**:
 The distinction is useful, but **not an absolute division of all sentences**.
 なくて commonly connects a negative reason to feelings, inability or another consequence.
 ないで commonly presents the circumstances or manner of doing the main action.
+In writing, this ないで often becomes **ずに** (**払わずに**（はらわずに）, "without paying"); see
+[ずに, ないで and なくて](written-register-and-casual-markers.md#5-ずに-ないで-and-なくて).
 Both fit some evaluative expressions, including the
 [negative gladness forms](necessity-advice-and-instructions.md#てよかった-glad-about-what-happened-or-did-not-happen).
 The named formation drills distinguish the requested connection, not every possible way to word that situation.
