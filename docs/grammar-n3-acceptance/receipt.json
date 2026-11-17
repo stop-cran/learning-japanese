@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "recordedOnUtc": "2026-11-17",
-  "status": "local-jvm-acceptance-passed; release-gate-open",
+  "status": "local-jvm-and-native-android-sync-acceptance-passed; release-gate-open",
   "contentCommit": "303667c9d4c5b96904fd1718b140fd3b7417def9",
   "appCommit": "4db1297c50984dff29499768b2da7cc30e18d850",
   "archive": {
@@ -20,6 +20,49 @@
     "largestGrammarFileBytes": 478993,
     "gitBlobVerification": "All 8790 file payloads matched the pinned commit's Git blob IDs; the ZIP comment names that commit.",
     "publication": "local candidate only; not uploaded and not a public release"
+  },
+  "contentValidation": {
+    "commit": "06552902de93fa977e5d2a5362977d8b905b5d26",
+    "inputIsolation": "Fresh full detached worktree with LF checkout; concurrent live README, confusable-words, article and manifest edits were excluded.",
+    "commands": [
+      "python -m unittest discover -s tools -p test_*.py",
+      "python tools/validate.py",
+      "python tools/check_content_budget.py",
+      "python tools/grammar_vocabulary.py check",
+      "python tools/build_manifest.py",
+      "git diff --exit-code -- manifest.json"
+    ],
+    "unitTests": 431,
+    "unitTestResult": "OK",
+    "validationErrors": 0,
+    "manifestChanged": false,
+    "log": "content-ci-verification.log",
+    "logSha256": "1724dd655c76599c77acaf954da3c36dbb64419675366b88107042e877ab2b40",
+    "coverageAudit": "220 unique dispositions: 163 practised, 10 topped-up, 33 reused, 14 recognition-only; zero audit problems; all 2431 baseline exercise identities and levels preserved.",
+    "evidenceRecheck": "All 8790 archive file payloads still match pinned Git blobs; saved JVM fixture and four report hashes match; runtime content is unchanged between 303667c9 and 06552902.",
+    "logHashBasis": "SHA-256 of the committed (LF-normalized) Git blob"
+  },
+  "nativeAndroidSync": {
+    "result": "passed: 1 test, 0 failures, 0 skips",
+    "scope": "Robolectric (SDK 28, native SQLite and native graphics) running unmodified app commit ContentSync, SceneImages WebP verification and Room against the pinned archive served by a local fake ContentHttp. Not a device, emulator or public-network run.",
+    "appCommit": "4db1297c50984dff29499768b2da7cc30e18d850",
+    "archiveSha256": "912a9dfc4e19653bc5eedbbd4aaae55fab5ee6a63060b3293ea71362f5c37e6a",
+    "assertions": [
+      "archive hash; parser problems empty with app image validator; 108 sets, 3336 exercises, 1139 N3",
+      "first sync Updated with no problems, 3336 grammar exercises, 108 Room grammar rows equal to parsed sets",
+      "sync metadata: content version, zero problems, curriculum stored, listening-task revision accepted",
+      "database close/reopen preserves rows and metadata; second sync UpToDate without download",
+      "forced refresh Updated with no problems and identical rows"
+    ],
+    "command": "gradlew --no-daemon -I docs/grammar-n3-acceptance/android-sync-build.gradle :app:testDebugUnitTest --tests *N3ArchiveSyncAcceptanceTest* (env: N3_ACCEPTANCE_ARCHIVE, N3_ANDROID_ACCEPTANCE_BUILD_ROOT, N3_ANDROID_ACCEPTANCE_FIXTURE_ROOT; JDK 17, android-36 SDK)",
+    "files": {
+      "N3ArchiveSyncAcceptanceTest.kt": "8318e57fca83bbbd160bce32b55d77039f10ee1ea5378a7b1da2f187fe4ed4e9",
+      "android-sync-build.gradle": "41a5e51a1a5fb4338c810c4a5516a2b6e1d3708b10c5bf9b98834bef1d548db0",
+      "android-sync-junit.xml": "5d751e3b4cf51893c88fe30250ad029816850862ef414324ed6a69a85395df9f",
+      "android-sync-test.log": "0b9049b6e79ca9db53b6a6387643e9e89386fe8da1e5c083a5bc709147a97013"
+    },
+    "earlierFailedAttempts": "Two earlier runs failed for test-harness reasons: missing @GraphicsMode(NATIVE) made legacy Robolectric unable to read WebP bounds, then a set-count assertion compared against an exercise count. No app or content change was needed.",
+    "fileHashBasis": "SHA-256 of the committed (LF-normalized) Git blobs"
   },
   "jvmTests": {
     "runtime": "Microsoft OpenJDK 17.0.21.0.2+1; Gradle 8.13; Windows",
@@ -78,7 +121,7 @@
     "After unrelated live-checkout article/manifest edits appeared, a final repeat used isolated inputs extracted from the pinned archive and :core:cleanTest :core:test. All 17 tests executed with zero skips; the retained XML belongs to this isolated-input run, not the live-checkout run."
   ],
   "remainingGates": {
-    "V1": "partial: production JVM importer, scope and availability passed; native ContentSync/Room and phone flow unverified",
+    "V1": "partial: production JVM importer, scope and availability passed; native ContentSync/Room passed on Robolectric with a local HTTP fake; phone flow unverified",
     "V2": "blocked: no connected physical phone for large-font passage, scrolling and screen-reader checks",
     "V3": "partial: all typed variants fit the limit; physical-phone IME and chunk-label usability unverified",
     "V4": "partial: real choice variants passed; physical-phone layout and feedback unverified; no five- or six-option N3 exercises shipped",
