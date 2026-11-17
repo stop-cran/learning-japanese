@@ -1,0 +1,58 @@
+{
+  "run": "N1-B133-CLAUDE-CONFIRM-001",
+  "candidate": "110b4ffb6af078eb2adb00645db4c9e0bd6db188",
+  "finalSha256": "4f14f95b4c30ca776057d48ee12019b95edfb5c25939862a32d51242d485268a",
+  "reportSha256": "a9f1ccc777b19c6d7dbb7db1a77d3b70858ec59865884a356bd62562f1f6934f",
+  "claimsAdjudicated": true,
+  "acceptedFindings": [],
+  "openClaimIds": [],
+  "coordinatorClaimIds": [],
+  "dispositions": {
+    "O1": "DECLINE ACCEPTED: optional; signed 鉛 keeps the 'lead (metal)' title and explicitly distinguishes the English verb.",
+    "O2": "DECLINE ACCEPTED: optional; the 字通 形声 analysis is attested and the unclassified structure tag makes no contrary claim.",
+    "O3": "DECLINE ACCEPTED: Daijisen 滝 sense 2 (急流/奔流) supports retaining 'rapids'; the JMdict archaic label stays disclosed in the body.",
+    "O4": "DECLINE ACCEPTED with corrected reason: the reviewer is right that packet evidence/joyo-rows.json (printed page 103) lists only たき for 滝, so the coordinator's 'no pinned per-reading Joyo source' reason was inaccurate. The decline still holds because the card already marks ロウ/ソウ as KANJIDIC2-retained and not practised, consistent with that Joyo row; no teaching change is required.",
+    "C1": "RESOLVED: 鉛-鉱 added with a qualified Note; 鉱 'unrefined metal/ore' and 粗金 'unrefined metal; ore' are attested and JMdict 1736440 鉛鉱 is lead mine/deposits, as the Note states.",
+    "C2": "RESOLVED: 鉛-鉄 distinction retained; 鉄 sense 1 is the specific element iron and the broad かね metal label is already guarded by 金.",
+    "C3": "RESOLVED: 滝-速 added; Daijisen 滝 sense 2 swift current and 速い '流れの速い川' support the conservative flow-speed guard."
+  },
+  "claimChecks": [
+    {
+      "claim": "The original reviewer fully performed the bounded delta confirmation within its declared scope.",
+      "evidence": "Final 4f14f95b and audit bf6ab16a: 17/17 ordered chain reads, one write with verified readback, zero fetches/breaches/unexpected messages, reviewer idle, single CONFIRMED message. Context 9d1381b1: actual claude-family records, peak 645048 below the 700000 policy gate and 952000 profile, no compactions/errors. Structure e12a103d: four CLEAN facets, O1-O4 DECLINE ACCEPTED, C1-C3 RESOLVED, no findings/optionals.",
+      "disposition": "Methodologically accepted; capacity forecast 698790 was conservative against the observed peak."
+    },
+    {
+      "claim": "Only the 11 direct exclusions and qualified Notes change teaching.",
+      "evidence": "Coordinator verification 0a95d563 (PASS_SIGNED_RECONCILIATION_BINDINGS_ONLY) independently checks the exact diff, preservation of 8742 unchanged runtime entries and ten committed gates; signed 鉛.md:14 holds the appended 鉱/遅/円 exclusions, distractors unchanged.",
+      "disposition": "Accepted within the changed-card scope."
+    },
+    {
+      "claim": "鉛-鉱 is a source-backed qualified precaution and corrects the earlier 'lead ore' wording.",
+      "evidence": "鉱-extract.txt:8 精錬してない金属/有用物質を含む岩石; 粗金-extract.txt:7-8 unrefined metal, ore, and an alias of iron; jmdict-families.xml:3 JMdict 1736440 鉛鉱 lead mine/lead deposits; signed 鉛.md:57-59.",
+      "disposition": "Accepted as a broad-label quiz guard, not synonymy."
+    },
+    {
+      "claim": "鉛-鉄 needs no precaution.",
+      "evidence": "鉄-extract.txt:14 sense 1 金属元素の一/くろがね; :7-9 figurative, railway and fan senses; 金-extract.txt:35 generic かね【金・鉄・銀・銅】 heading, whose broad label is already guarded by the existing 金 exclusion (鉛.md:14,57).",
+      "disposition": "Accepted: iron and lead name different specific metals."
+    },
+    {
+      "claim": "滝-速 is a source-backed qualified precaution.",
+      "evidence": "滝-extract.txt:7 急流/奔流; 早い-extract.txt:7 速い sense 1 includes 流れの速い川 and :12 notes 疾い/捷い spellings for that use; signed 滝 Notes list 速 among water/current/rapid guards.",
+      "disposition": "Accepted, consistent with the existing 急 guard."
+    },
+    {
+      "claim": "The other added exclusions and the 鉛-具 cross-pair hold on the supplied sections.",
+      "evidence": "Reviewer read the complete sections for 円, 遅, 激, 声, 岩, 険, 具, 糸 and 緒 and the counterpart cards; these match the coordinator's frozen adjudication cc04c27c and the coordinator's earlier substantive inspection of the signed diff.",
+      "disposition": "Accepted as conservative guards on qualified, regional or historical senses (reviewer L7); the six retained distinctions outside this scope are left to the GPT complete-chain confirmation."
+    },
+    {
+      "claim": "Five new JMdict citation identities were not supplied as families to this reviewer (L3).",
+      "evidence": "Coordinator check during this adjudication: all five IDs are absent from the original review packet but present in the committed reconciliation source docs/n1-sources/batch-133-reconciliation/source/jmdict-complete-families.xml (SHA256 414dc547…, byte-identical to frozen scratch-133/source-reconciliation-001) with matching headwords: 1396980 粗金/鉱 'ore' cited on 鉛; 1404975 早い/速い 'fast; quick; rapid' and 1380440 声 'voice' cited on 滝; 1244950 具 'tool; means' and 1343610 緒 'cord; strap' cited on 琴.",
+      "disposition": "Limit retained for the reviewer; citation identity is covered by this coordinator check, not by the reviewer."
+    }
+  ],
+  "citationQualification": "Several line references are approximate: 鉛 exclusions are at 鉛.md:14 (not 13); 鉄 sense 1 is 鉄-extract.txt:14 (7-11 are other senses); the 金 metal label heading is 金-extract.txt:35 (42-43 is かねじゃく); 速い flow use is 早い-extract.txt:7 (5 is the headword); 滝 ロウ/ソウ rows are slightly offset. Each consequential conclusion was independently confirmed at the exact lines above. Original report bytes are preserved.",
+  "limitsRetained": "All L1-L7 retained: unverifiable model identity; six retained distinctions (鉛-似, 鉛-倣, 琴-機, 琴-線, 琴-索, 滝-液) not judged; five JMdict identities not supplied to the reviewer; extracts only, no fresh KANJIDIC2/whole-JMdict or web; committed gate logs not reread; no caller-built/multi-borrow, Kotlin/native/device, installed-APK, rendering or publication acceptance; qualified/secondary senses judged only as conservative guards."
+}

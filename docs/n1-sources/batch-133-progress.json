@@ -1,8 +1,8 @@
 {
   "batch": 133,
-  "status": "local-unreviewed-author-candidate",
   "base": "6858fcfb069cc56a195c3f6ed938f92f657fe96b",
   "governingIssue": 60,
+  "status": "textual-review-closed-publication-pending",
   "members": [
     "琴",
     "鉛",
@@ -13,11 +13,6 @@
     1120,
     643
   ],
-  "publishedDelivered": 268,
-  "frozenTotal": 1228,
-  "undelivered": 960,
-  "localUnpublishedDrafts": 3,
-  "deliveryNotIncremented": true,
   "supports": [
     [
       "琴",
@@ -32,55 +27,42 @@
       "滝"
     ]
   ],
-  "proseException": null,
-  "practice": {
-    "琴": {
-      "on": [],
-      "kun": [
-        "こと"
-      ]
-    },
-    "鉛": {
-      "on": [
-        "エン"
-      ],
-      "kun": []
-    },
-    "滝": {
-      "on": [],
-      "kun": [
-        "たき"
-      ]
-    }
+  "initialSnapshot": "ad047ace020579f81bde250ac948b9a4cb597887",
+  "reviewedSnapshot": "b1acf155fb8c7e1066a5c3baf88ae98ab92c29ac",
+  "reviewClosed": [
+    "琴",
+    "鉛",
+    "滝"
+  ],
+  "published": [],
+  "runtimePublished": false,
+  "manifestSha256": "f29fd2000d9ae078382df44711e3af1b5b5e81424160f5ab06c74ec8a416a11a",
+  "contentVersion": "a4afe85384bc1452",
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 268,
+    "publishedN1Additions": 262,
+    "n2Placements": 6,
+    "undelivered": 960,
+    "reviewClosedPendingRecordsWithCards": 271,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 957,
+    "overallN1TaskComplete": false
   },
-  "pairTable": "batch-133/pair-dispositions.json",
-  "sourceAnalysis": "batch-133/authored-source-analysis.json",
-  "fontEvidence": "batch-133/stroke-font-evidence.json",
-  "completeJmdictFamilies": 515,
-  "completeKanjidicRecords": 83,
-  "comparisonCopies": 68,
-  "baselineScanRowsPerMember": 1258,
-  "baselinePairRows": 74,
-  "newMemberPairRows": 3,
-  "authorGates": {
-    "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-133\\author-gates-002",
-    "summarySha256": "50007df0d5cbda0aca0ab9e245d8098577f11442738ab1f320a4beaad7d8b1c2",
-    "gates": [
-      "lint",
-      "quiz-safety",
-      "linkplan",
-      "reading-exposure",
-      "validate",
-      "manifest",
-      "unittest",
-      "budget",
-      "vocabulary",
-      "manifest-rebuild"
-    ]
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "finalRuns": [
+      "N1-B133-CLAUDE-CONFIRM-003",
+      "N1-B133-GPT-CONFIRM-003"
+    ],
+    "closure": "../n1-reviews/batch-133-closure/provenance.json",
+    "closureProvenanceSha256": "e6f67be9dc9d890c1cf884b9ceab0801cff24dd9a04929d89b86b072ea49d1b3",
+    "historicalReportsPreserved": true,
+    "remainingActionableFindings": [],
+    "remainingConsequentialClaims": []
   },
-  "manifestSha256": "ae6e6d19d5a65f7cc2ec7d72415a6afa8538377e0d886e9e0e4ec89f0ef98bcf",
-  "contentVersion": "71e500c1cafde614",
-  "warnings": {
+  "originalAuthorProgress": "../n1-reviews/batch-133-closure/verification/original-progress.json",
+  "originalAuthorWarnings": {
     "quizSafetyCount": 0,
     "quizSafetyWarnings": [],
     "existingFallbackCards": [
@@ -133,5 +115,20 @@
     "source": "Reused B132 captures, not fresh fetches. Supplemental/name/historical and uncertain readings deliberately over-tested; missing historical glyph images not reconstructed.",
     "originalFailure": "author-gates-001 lint failed three H1 ASCII delimiters; fixed to repository-required em dash. Original log/receipt preserved, not relabeled."
   },
-  "boundary": "Author-only candidate. Final signed-snapshot ten-gate and preservation receipts remain local outside commit. No independent review, push, publication or next batch."
+  "publicationGates": [
+    "Owner-signed publication",
+    "CI",
+    "Exact served ZIP/runtime equality"
+  ],
+  "limits": [
+    "Two independent same-snapshot initial textual reviews, original GPT final confirmation and disclosed same-family fresh-context Claude final confirmation. Original Claude context could not fit the unchanged gate; its initial and first confirmation remain historical. This is not equal fresh-read depth or exhaustive linguistic certification.",
+    "The source packet and every original review input remain immutable locally. Complete external extracts, raw HTML, raw execution events, raw audits and private session rosters are not redistributed.",
+    "Chain segments containing any complete external extract remain local in full; retention indices and original hashes are published. This archive is not the full local review environment.",
+    "The reading audit covers finite N1/All/Starter and single-borrow pools only: 0 production and 0 padded-session hits. One latent smaller-pool 滝/湿 collision for うるおす remains disclosed and not drawable in the checked pools; arbitrary, custom and multiple-borrow pools, Kotlin/native/device behavior are not established.",
+    "Finite font cmap coverage (all three target glyphs present; eight component/variant/supplemental code points absent from each bundled font) and stroke metadata are not rendered, native or phone acceptance. Missing historical glyph images were not reconstructed.",
+    "琴 ことのを keeps an explicitly unresolved historical scope and is not taught as cord; the regional タキ cliff sense is not taught as unrestricted 滝. The 鉛-具 pigment/white-lead cross-pair remains a separately disclosed retained distinction, outside the nineteen direct pair decisions.",
+    "All initial and intermediate reports remain unchanged, including both UNVERIFIED confirmations. Thirteen qualified direct precautions, six retained distinctions and the corrected historical sake-name abbreviation apply only to the final signed snapshot. Earlier waterfall-water interpretations in GPT CONFIRM-002 and coordinator adjudications are withdrawn, not erased.",
+    "Five JMdict identities cited only by the reconciliation (1396980, 1404975, 1380440, 1244950, 1343610) are in the committed complete reconciliation families, not the original review packet.",
+    "No delivery or whole-set credit until owner-signed publication, matching CI and exact served ZIP verification; delivered remains 268/1228 and remaining remains 960."
+  ]
 }
