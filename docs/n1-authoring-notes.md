@@ -59,6 +59,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Continuation after the 2026-11-17 PC move
+
+B134 紫 was merged with main and published at `2cdae679`; delivery is
+**272/1,228**, with **956 remaining**. Work continues on another PC with
+the following disclosed choices:
+
+- The frozen implementation JMdict bytes are not available there. Batches
+  from B135 cite the explicit [continuation pin](n1-sources/continuation-inputs.json)
+  (JMdict created 2026-11-17). `tools/extract_n1_jmdict.py --pin continuation`
+  checks it. The frozen snapshot record is unchanged. KANJIDIC2 card metadata
+  and the KanjiVG revision stay frozen.
+- Batches follow the lean B111 shape: up to 15 absent frozen members whose
+  readings are already used by existing word articles. Those articles gain
+  links to the new cards; no new word articles are added.
+- Each frozen candidate gets an independent Claude review, then an
+  independent GPT review, run one after the other. Fixes are confirmed by the
+  same reviewers where possible; otherwise a fresh replacement confirms, and
+  that is disclosed.
+- The B134-era session-binding, admission and token-forecast records are not
+  continued. Each batch keeps one progress file in `n1-sources/` and one
+  review record in `n1-reviews/`; `tools/n1_record_publication.py` writes
+  the publication receipt.
+- Android JVM tests stay **not run** until a JDK is available. No native,
+  device or phone acceptance is claimed.
+- `bf9aa740`, `2cdae679` and `c5cdc604` are signed with key
+  `AD3E63ADB89CAE86`, which GitHub does not associate with the account, so
+  they show as Unverified there; later commits use the registered key
+  `9D94B9D311BD26A7`.
+
 ## Batch 134: local unreviewed authoring candidate
 
 紫 is a missing frozen member (row 831). Existing N2 紫 supports the

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Extract complete selected families from the frozen N1 implementation JMdict."""
+"""Extract complete selected families from the pinned N1 implementation JMdict.
+
+``--pin frozen`` (default) checks the 2026-11-02 file in docs/n1-source-snapshot.json;
+``--pin continuation`` checks the later file in docs/n1-sources/continuation-inputs.json.
+"""
 import argparse
 import gzip
 import hashlib
@@ -8,11 +12,22 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+PINS = {
+    "frozen": (Path("docs") / "n1-source-snapshot.json", "n1-implementation-JMdict_e.gz"),
+    "continuation": (Path("docs") / "n1-sources" / "continuation-inputs.json", "n1-continuation-JMdict_e.gz"),
+}
+
+
+def pinned_hash(pin, root=ROOT):
+    if pin not in PINS:
+        raise ValueError(f"Unknown JMdict pin: {pin}")
+    path, key = PINS[pin]
+    return json.loads((root / path).read_text(encoding="utf-8"))["inputs"][key]["sha256"]
 
 
 def extract(raw, expected_hash, entry_ids):
     if hashlib.sha256(raw).hexdigest() != expected_hash:
-        raise ValueError("Frozen JMdict compressed hash mismatch")
+        raise ValueError("Pinned JMdict compressed hash mismatch")
     if not entry_ids or len(entry_ids) != len(set(entry_ids)):
         raise ValueError("Select nonempty distinct JMdict entry IDs")
     source = ET.fromstring(gzip.decompress(raw))
@@ -33,11 +48,10 @@ def main():
     parser.add_argument("--selection", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--pin", choices=sorted(PINS), default="frozen")
     args = parser.parse_args()
-    snapshot = json.loads((ROOT / "docs" / "n1-source-snapshot.json").read_text(encoding="utf-8"))
     selection = json.loads(args.selection.read_text(encoding="utf-8"))
-    expected_hash = snapshot["inputs"]["n1-implementation-JMdict_e.gz"]["sha256"]
-    result = extract(args.input.read_bytes(), expected_hash, selection["entryIds"])
+    result = extract(args.input.read_bytes(), pinned_hash(args.pin), selection["entryIds"])
     if args.output.exists():
         if args.output.read_bytes() != result:
             raise ValueError(f"Different evidence already exists: {args.output}")

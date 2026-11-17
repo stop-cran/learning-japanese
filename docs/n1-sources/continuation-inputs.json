@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "governingIssue": 60,
+  "purpose": "Explicit dictionary pins for N1 batches authored after the 2026-11-17 move to a new PC. The frozen implementation JMdict bytes pinned in docs/n1-source-snapshot.json were not available there. That frozen snapshot record stays unchanged and still governs batches up to B134. Batches from B135 onward cite the continuation JMdict below.",
+  "firstBatch": 135,
+  "inputs": {
+    "n1-continuation-JMdict_e.gz": {
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+      "sha256": "42bd8fbc917bc039a1d4f4da0e75a1f5e03ba342b51b51ddc89a95f713ca6cec",
+      "bytes": 10603352,
+      "httpLastModified": "Tue, 17 Nov 2026 03:30:25 GMT",
+      "retrievedUtc": "2026-11-17T19:36:12Z",
+      "creationDate": "2026-11-17",
+      "xmlSha256": "79f8439e2ec3959eb7f36239a7ee2caf725d6ff418b3719696992c07b3cd84c0",
+      "xmlBytes": 63263041
+    }
+  },
+  "unchanged": {
+    "kanjidic2": "Card metadata keeps the frozen 2026-11-02 KANJIDIC2 snapshot already preserved in docs/n1-sources/source-index.json and docs/n1-sources/kanjidic2-selected.xml.",
+    "kanjivg": "Stroke files keep the frozen KanjiVG revision used by tools/generate_strokes.py."
+  },
+  "limits": "Raw dictionary bytes stay outside Git, as before. The continuation JMdict is newer than the frozen 2026-11-02 file, so entry contents may differ from those cited by batches up to B134; each later batch retains the complete JMdict families it relies on in its review packet."
+}

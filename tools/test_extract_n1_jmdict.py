@@ -3,7 +3,7 @@ import hashlib
 import unittest
 import xml.etree.ElementTree as ET
 
-from extract_n1_jmdict import extract
+from extract_n1_jmdict import extract, pinned_hash
 
 
 class ExtractN1JMdictTest(unittest.TestCase):
@@ -46,6 +46,18 @@ class ExtractN1JMdictTest(unittest.TestCase):
         for ids in ([], ["1", "1"]):
             with self.subTest(ids=ids), self.assertRaisesRegex(ValueError, "distinct"):
                 extract(self.raw, self.sha, ids)
+
+
+class PinnedHashTest(unittest.TestCase):
+    def test_frozen_and_continuation_pins_are_distinct_sha256(self):
+        frozen, continuation = pinned_hash("frozen"), pinned_hash("continuation")
+        for value in (frozen, continuation):
+            self.assertRegex(value, "^[0-9a-f]{64}$")
+        self.assertNotEqual(frozen, continuation)
+
+    def test_rejects_unknown_pin(self):
+        with self.assertRaisesRegex(ValueError, "Unknown JMdict pin"):
+            pinned_hash("latest")
 
 
 if __name__ == "__main__":
