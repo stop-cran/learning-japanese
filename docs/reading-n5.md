@@ -11,7 +11,7 @@ Do not enable that flag until the Android renderer accepts the package. The curr
 the file does not import it. Validation still checks the file and rejects CR. `.gitattributes` keeps `reading/*.json` as LF
 because Windows `autocrlf` would otherwise break that check. Do not put it in `manifest.files`.
 
-Empty `distribution.reviewed` means no jurisdiction has been reviewed. It is not worldwide permission.
+Empty `distribution.reviewed` means no jurisdiction has been reviewed. It is not worldwide permission, including Japan. `fa5884e9` and its acceptance archive stay frozen. This successor only replaces the rights note's last sentence: distribution is not cleared in any jurisdiction, including Japan. The 1950-11-26 death date remains a copyright-term fact, not clearance.
 
 ## Package
 
