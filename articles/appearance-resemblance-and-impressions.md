@@ -46,6 +46,8 @@ Verb-negative **降らなそうだ／降らなさそうだ** are both documented
 is another ordinary way to say rain does not look likely. Do not reject every inserted さ after a verb
 as impossible, or treat every adjective ending in ない as the separate absence word ない.
 These negative alternatives are supporting reading, not extra scored targets here.
+The negative outlook **そうもない／そうにない**, "does not look likely to," is practised against appearance そうだ in
+[Advice, certainty and partial denial](advice-certainty-and-partial-denial.md#6-そうもない-and-そうだ).
 
 ## 2. Match the following noun or predicate
 

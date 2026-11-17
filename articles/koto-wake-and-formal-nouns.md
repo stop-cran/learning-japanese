@@ -140,6 +140,8 @@ The three negative わけ constructions are especially important to keep separat
 - **わけにはいかない** says that circumstances, duties, or social considerations prevent an action.
 
 Negating the embedded verb changes the last pattern: **行かないわけにはいかない** means "I cannot very well not go," or, in context, "I have to go."
+ことはない and わけがない are contrasted with **ことだ**, **べきではない** and **とは限らない** in
+[Advice, certainty and partial denial](advice-certainty-and-partial-denial.md#2-ことだ-べきではない-and-ことはない).
 
 There is overlap between larger expressions. **～ということだ** can also mean "that means ...," for example. "こと concerns content; わけ concerns explanatory reasoning" is a useful starting point, not a rule that こと can never appear in a conclusion.
 

@@ -357,7 +357,7 @@ exercise objects, vocabulary records, memberships and chapter mappings are retai
 The [composition/text follow-up](grammar-composition-text-sources.json) adds 16 whole-sentence ordering tasks and
 12 text-grammar questions across six shared passages, in two sets and six groups. Complete responses use the
 existing v1 slot; there is no drag/drop or exam-simulation mode.
-Current practice is 2042 levelled exercises: 597 N5, 959 N4, 378 N3, 104 N2 and 4 N1. Mixed-level articles derive their browsing levels from
+Current practice is 2077 levelled exercises: 597 N5, 959 N4, 413 N3, 104 N2 and 4 N1. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -438,8 +438,8 @@ Repair chapter boundaries/staging rather than deleting genuine gates for layout 
 well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
 Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
 
-The current catalog places all **301 authored groups in 21 chapters**, with **23 immediate leaf prerequisites** and **9 derived
-chapter arrows**. The 275 recommendations are all soft links. The 292 unowned exercises remain compatibility practice, not fabricated
+The current catalog places all **306 authored groups in 21 chapters**, with **23 immediate leaf prerequisites** and **9 derived
+chapter arrows**. The 288 recommendations are all soft links. The 292 unowned exercises remain compatibility practice, not fabricated
 chapter/readiness credentials. The ledger distinguishes the earlier partial-mapping pilot from current ownership and records each
 edge's precise scope. The installment summaries below describe their original delivery snapshots; their original zero-prerequisite
 counts do not override the current `foundationRequirements` declarations.

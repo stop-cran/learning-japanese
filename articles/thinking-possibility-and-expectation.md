@@ -147,6 +147,9 @@ Their twelve time/polarity tasks retain their original identities.
 Past はずだった often suggests an unfulfilled expectation, but an appropriate recollection context can
 report an earlier expectation that was fulfilled. Neither event time nor actual outcome can be read from
 the last copula alone.
+The firmer conviction **に違いない（にちがいない）**, "must be," next to はずだ and かもしれない, and **とは限らない（とはかぎらない）**,
+"not necessarily," are practised in
+[Advice, certainty and partial denial](advice-certainty-and-partial-denial.md#3-に違いない-はずだ-and-かもしれない).
 
 ## 4. ないはずだ versus はずがない: where does negation act?
 
