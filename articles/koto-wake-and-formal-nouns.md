@@ -136,7 +136,7 @@ The last わけ example concerns obligations or circumstances that make an actio
 The three negative わけ constructions are especially important to keep separate:
 
 - **わけがない** strongly rejects a possibility.
-- **わけではない** rejects a characterization or inference; with an appropriate context, it can express "not necessarily" or "not always."
+- **わけではない** rejects a characterization or inference; with an appropriate context, it can express "not necessarily" or "not always." The adverb **必ずしも（かならずしも）**, "not necessarily," often comes before it; see [Adverbs with negative endings](adverbs-with-negative-endings.md#必ずしも-not-necessarily).
 - **わけにはいかない** says that circumstances, duties, or social considerations prevent an action.
 
 Negating the embedded verb changes the last pattern: **行かないわけにはいかない** means "I cannot very well not go," or, in context, "I have to go."

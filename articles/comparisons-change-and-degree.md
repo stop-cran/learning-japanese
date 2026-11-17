@@ -213,6 +213,8 @@ The separate **結構です** acceptance/refusal uses and **とても...でき�
 need their own contexts; the linked word cards explain them. **たくさんの本** names many books,
 while **本をたくさん読む** describes reading a lot. たくさん is not a replacement for とても before
 every adjective.
+With a negative ending, **とても〜ない** means "there is no way"; it is contrasted with なかなか and どうしても in
+[Adverbs with negative endings](adverbs-with-negative-endings.md#とてもない-there-is-no-way).
 
 ## Keep the existing quantity practice
 

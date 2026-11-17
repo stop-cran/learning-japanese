@@ -480,6 +480,10 @@ The [ほとんど word card](../words/ほとんど.md) gives related nominal and
 **あまり** and negative **ほとんど** can overlap naturally; an underspecified gap should not reject one
 merely because the author imagined the other.
 
+At N3, more adverbs set the strength of a negative: **めったに**, "rarely"; **全く（まったく）**, "not at all";
+**決して（けっして）**, "never"; **必ずしも（かならずしも）**, "not necessarily"; and **別に（べつに）**, "not particularly".
+They are compared in [Adverbs with negative endings](adverbs-with-negative-endings.md).
+
 ## 9. A part and the amount left
 
 A proportion does not tell you which quantity the question wants.

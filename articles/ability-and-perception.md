@@ -62,6 +62,8 @@ Neither says that the person is reading or borrowing at this moment.
 Conversely, a past potential can occur in an account of actual success:
 **昨日、やっと最後まで読めました**（きのう、やっとさいごまでよめました）,
 "Yesterday I finally managed to read to the end." Do not turn potential into a rule that the action never happened.
+**とても + negative potential**, as in **とても食べられない**（とてもたべられない）, "there is no way I could eat it,"
+rules an action out in advance; see [Adverbs with negative endings](adverbs-with-negative-endings.md#とてもない-there-is-no-way).
 
 **Dictionary verb + ことができる** is another way to express ability or possibility:
 本を借りることができます（ほんをかりることができます）, "I can borrow books."
