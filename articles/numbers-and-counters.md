@@ -469,6 +469,22 @@ physical pieces. 組み is also used for sets. In contrast, the numbered
 school labels 一組 and 二組 are **いちくみ** and **にくみ**.
 The label identifies a class; it does not count how many classes exist.
 
+A full class name usually puts the school year first:
+三年二組（さんねんにくみ）is “Year 3, Class 2.” Here 三年 is the third
+year at that school level (elementary, junior high or high school), not a
+period of three years; 三年生（さんねんせい）is a third-year student.
+Some schools label parallel classes with letters
+instead: 三年A組 and 三年B組 are “Year 3, Class A” and “Year 3, Class B.”
+Numbered school classes normally use **くみ** (さんねんにくみ), but lettered classes are
+heard with both **くみ** and **ぐみ**:
+三年A組（さんねんエーくみ／さんねんエーぐみ）. The TV drama
+3年B組金八先生（さんねんビーぐみきんぱちせんせい）, set in a junior high
+school, uses ぐみ. Named classes, common in nursery schools, usually take
+ぐみ, as in ほしぐみ “Star class.” For a real school, follow the reading its own
+members use. See the
+[NINJAL Q&A on くみ and ぐみ](https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-213/)
+(in Japanese) for these patterns and their tentative explanations.
+
 **人組** describes membership size:
 二人組（ふたりぐみ／ににんぐみ）, 三人組（さんにんぐみ）and
 四人組（よにんぐみ）. Two three-person groups are 二組 of 三人組;
