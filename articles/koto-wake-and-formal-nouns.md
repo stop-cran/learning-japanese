@@ -931,6 +931,8 @@ Other **ようにする** constructions concern arranging a desired result, so t
 Likewise, **眠る前はスマートフォンを使わないようにしていますが、たまに見てしまいます。**
 "I try not to use my smartphone before sleep, but I occasionally end up looking at it."
 The effort expression does not guarantee success every time.
+Do not confuse it with **ようとしない**, "won't (make the effort to)," which describes someone else's unwillingness
+(**弟は部屋を片付けようとしない**); see [Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md).
 For an ability or habit that stops, a common basic pattern is instead **Vなくなる**:
 **自転車に乗れなくなった**, "I became unable to ride a bicycle." That loss is not the same as deliberately avoiding cycling.
 

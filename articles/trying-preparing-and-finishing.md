@@ -57,7 +57,8 @@ A future statement, wish or question about a trial does not assert that the tria
 not just trying a walk to see what it is like. Existing
 [change/effort practice](koto-wake-and-formal-nouns.md) retains that distinction.
 Volitional + とする has its own attempt/about-to uses at N3 in the primary curriculum;
-it is not a required choice in these N4 drills.
+it is not a required choice in these N4 drills. For **開けようとした（あけようとした）**, "tried to open," against
+**開けてみた**, "tried opening (to see)," see [Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md).
 
 ## ておく: preparation, or leaving something in a state
 
