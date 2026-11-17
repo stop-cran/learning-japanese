@@ -2131,7 +2131,7 @@ class GrammarStateChangeCoverageTests(unittest.TestCase):
             ("mama-retained-clean-floor", "naru-became-clean-floor",
              ("きれい", "綺麗", "奇麗", "キレイ"), "な", "に", "na"),
             ("mama-retained-cold-water", "naru-became-cold-water",
-             ("冷た", "つめた", "つべた"), "い", "く", "i"),
+             ("冷た", "つめた"), "い", "く", "i"),
             ("mama-retained-high-price", "naru-became-higher-price",
              ("高", "たか"), "い", "く", "i"),
         ]
@@ -2604,8 +2604,8 @@ class GrammarMixedCompletionStateCoverageTests(unittest.TestCase):
         self.assertEqual({"はずだ", "ようだ"}, models["mixed-past-action-inference"])
 
     def test_persistence_is_not_elapsed_time_repetition_or_complete_unchangeability(self):
-        for exercise_id in ("mixed-completion-window", "mixed-retained-window"):
-            self.assertIn("数秒前", self.exercises[exercise_id]["prompt"])
+        self.assertIn("数秒前", self.exercises["mixed-completion-window"]["prompt"])
+        self.assertIn("今朝", self.exercises["mixed-retained-window"]["prompt"])
         self.assertIn("still left open", self.exercises["mixed-retained-window"]["translation"])
         self.assertIn("a week is not a universal disqualifier", self.exercises["mixed-retained-materials"]["explanation"])
         self.assertIn("lights remain off", self.exercises["mixed-retained-lights"]["translation"])

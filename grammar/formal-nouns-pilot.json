@@ -4,30 +4,122 @@
   "title": "Formal nouns: こと／わけ and はず／べき",
   "article": "articles/koto-wake-and-formal-nouns.md",
   "constructions": [
-    { "id": "koto", "label": "こと" },
-    { "id": "wake", "label": "わけ" },
-    { "id": "hazu", "label": "はず" },
-    { "id": "beki", "label": "べき" }
+    {
+      "id": "koto",
+      "label": "こと"
+    },
+    {
+      "id": "wake",
+      "label": "わけ"
+    },
+    {
+      "id": "hazu",
+      "label": "はず"
+    },
+    {
+      "id": "beki",
+      "label": "べき"
+    }
   ],
   "relationships": [
-    { "id": "koto-vs-wake", "label": "fact or event／reason or conclusion", "constructions": ["koto", "wake"] },
-    { "id": "hazu-vs-beki", "label": "expected／ought to", "constructions": ["hazu", "beki"] }
+    {
+      "id": "koto-vs-wake",
+      "label": "fact or event／reason or conclusion",
+      "constructions": [
+        "koto",
+        "wake"
+      ]
+    },
+    {
+      "id": "hazu-vs-beki",
+      "label": "expected／ought to",
+      "constructions": [
+        "hazu",
+        "beki"
+      ]
+    }
   ],
   "introductionGroups": [
     {
       "id": "expectation-obligation",
       "label": "What is expected versus what ought to be done",
       "facets": [
-        {"id": "expectation", "label": "Evidence-based expectation"},
-        {"id": "obligation", "label": "Obligation or strong recommendation"}
+        {
+          "id": "expectation",
+          "label": "Evidence-based expectation"
+        },
+        {
+          "id": "obligation",
+          "label": "Obligation or strong recommendation"
+        }
       ],
       "members": [
-        {"exerciseId": "hazu-shipping-estimate", "facetId": "expectation", "exampleKey": "shipping"},
-        {"exerciseId": "hazu-scheduled-arrival", "facetId": "expectation", "exampleKey": "airport-arrival"},
-        {"exerciseId": "beki-safety-report", "facetId": "obligation", "exampleKey": "safety-report"},
-        {"exerciseId": "beki-public-conduct", "facetId": "obligation", "exampleKey": "public-conduct"}
+        {
+          "exerciseId": "hazu-shipping-estimate",
+          "facetId": "expectation",
+          "exampleKey": "shipping"
+        },
+        {
+          "exerciseId": "hazu-scheduled-arrival",
+          "facetId": "expectation",
+          "exampleKey": "airport-arrival"
+        },
+        {
+          "exerciseId": "beki-safety-report",
+          "facetId": "obligation",
+          "exampleKey": "safety-report"
+        },
+        {
+          "exerciseId": "beki-public-conduct",
+          "facetId": "obligation",
+          "exampleKey": "public-conduct"
+        }
       ],
       "next": [],
+      "requires": []
+    },
+    {
+      "id": "formal-nouns-pilot-fact-or-conclusion",
+      "label": "A stated fact or arrangement, or a conclusion drawn from the situation",
+      "facets": [
+        {
+          "id": "koto",
+          "label": "こと: a reported fact or an arranged rule"
+        },
+        {
+          "id": "wake",
+          "label": "わけ: a conclusion drawn from the circumstances"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "koto-work-hours-fact",
+          "facetId": "koto",
+          "exampleKey": "work-hours"
+        },
+        {
+          "exerciseId": "koto-entry-rule",
+          "facetId": "koto",
+          "exampleKey": "entry-rule"
+        },
+        {
+          "exerciseId": "wake-impossible-arrival",
+          "facetId": "wake",
+          "exampleKey": "other-town"
+        },
+        {
+          "exerciseId": "wake-realization",
+          "facetId": "wake",
+          "exampleKey": "stopped-train"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "expectation-obligation",
+          "importance": 2,
+          "reason": "Compare conclusions with わけ to expectations with はず and obligations with べき."
+        }
+      ],
       "requires": []
     }
   ],
@@ -38,15 +130,95 @@
       "target": "koto",
       "relationship": "koto-vs-wake",
       "prompt": "勤務時間が来月から午前九時開始に変わるという____を、全員に伝えた。",
-      "translation": "I told everyone the fact that the new workday starts at 9 a.m. next month.",
+      "translation": "Choose こと or わけ and write it in hiragana. Decide whether the sentence reports a fact or event itself, or states a conclusion drawn from known facts. Context: working hours will change to a 9 a.m. start from next month, and this was passed on to everyone.",
       "evidence": "The sentence conveys a piece of information, not the reason for something or a conclusion drawn from premises.",
       "explanation": "こと can package a fact or event as a noun. わけ is used for a reason or an inferred conclusion, neither of which is being asked for here.",
       "answer": "koto",
-      "acceptedAnswers": ["こと"],
+      "acceptedAnswers": [
+        "こと"
+      ],
       "options": [
-        { "id": "koto", "label": "こと", "rationale": "Packages the reported fact as information." },
-        { "id": "wake", "label": "わけ", "rationale": "Would point to a reason or a conclusion; no such explanation is being given." }
-      ]
+        {
+          "id": "koto",
+          "label": "こと",
+          "rationale": "Packages the reported fact as information."
+        },
+        {
+          "id": "wake",
+          "label": "わけ",
+          "rationale": "Would point to a reason or a conclusion; no such explanation is being given."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5c2deb5ac2a0ac6ba09ab4131005acc64de51514ea504f61fb26bd3cb286f543",
+        "spans": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "勤務時間",
+            "reading": "きんむじかん",
+            "headword": "勤務時間",
+            "gloss": "working hours"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "来月",
+            "reading": "らいげつ",
+            "headword": "来月",
+            "gloss": "next month"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "午前",
+            "reading": "ごぜん",
+            "headword": "午前",
+            "gloss": "a.m."
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "九時",
+            "reading": "くじ",
+            "headword": "九時",
+            "gloss": "nine o'clock"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "開始",
+            "reading": "かいし",
+            "headword": "開始",
+            "gloss": "start"
+          },
+          {
+            "start": 16,
+            "end": 19,
+            "text": "変わる",
+            "reading": "かわる",
+            "headword": "変わる",
+            "gloss": "change"
+          },
+          {
+            "start": 28,
+            "end": 30,
+            "text": "全員",
+            "reading": "ぜんいん",
+            "headword": "全員",
+            "gloss": "everyone"
+          },
+          {
+            "start": 31,
+            "end": 34,
+            "text": "伝えた",
+            "reading": "つたえた",
+            "headword": "伝える",
+            "gloss": "told"
+          }
+        ]
+      }
     },
     {
       "id": "koto-entry-rule",
@@ -58,10 +230,20 @@
       "evidence": "The sentence describes an established procedure that applies to everyone entering.",
       "explanation": "ことになっている expresses a rule or established arrangement. わけになっている does not express this ordinary rule pattern.",
       "answer": "koto",
-      "acceptedAnswers": ["こと"],
+      "acceptedAnswers": [
+        "こと"
+      ],
       "options": [
-        { "id": "koto", "label": "こと", "rationale": "ことになっている is the established rule or arrangement pattern." },
-        { "id": "wake", "label": "わけ", "rationale": "わけ does not form the ordinary rule pattern intended here." }
+        {
+          "id": "koto",
+          "label": "こと",
+          "rationale": "ことになっている is the established rule or arrangement pattern."
+        },
+        {
+          "id": "wake",
+          "label": "わけ",
+          "rationale": "わけ does not form the ordinary rule pattern intended here."
+        }
       ]
     },
     {
@@ -70,15 +252,87 @@
       "target": "wake",
       "relationship": "koto-vs-wake",
       "prompt": "彼は朝からずっと別の町にいた。だから、会場に来た____がない。",
-      "translation": "He was in another town all morning, so there is no way he came to the venue.",
+      "translation": "Choose こと or わけ and write it in hiragana. Decide whether the sentence reports a fact or event itself, or states a conclusion drawn from known facts. Context: he had been in another town since the morning, and the speaker then comments on his coming to the venue.",
       "evidence": "Being elsewhere all morning rules out the arrival; the speaker draws an impossibility conclusion.",
       "explanation": "わけがない rejects a conclusion as impossible. ことがない would describe a lack of occasions or experience, not this inference from where he was.",
       "answer": "wake",
-      "acceptedAnswers": ["わけ"],
+      "acceptedAnswers": [
+        "わけ"
+      ],
       "options": [
-        { "id": "koto", "label": "こと", "rationale": "ことがない concerns occasions or experience, not an impossibility inferred from evidence." },
-        { "id": "wake", "label": "わけ", "rationale": "わけがない expresses that the inferred event could not have happened." }
-      ]
+        {
+          "id": "koto",
+          "label": "こと",
+          "rationale": "ことがない concerns occasions or experience, not an impossibility inferred from evidence."
+        },
+        {
+          "id": "wake",
+          "label": "わけ",
+          "rationale": "わけがない expresses that the inferred event could not have happened."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "dc77869abbef9ea9321bc5b94fce04c3bfe3cdfec98842829a385bc7d29b36cb",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "彼",
+            "reading": "かれ",
+            "headword": "彼",
+            "gloss": "he"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "朝",
+            "reading": "あさ",
+            "headword": "朝",
+            "gloss": "morning"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "ずっと",
+            "reading": "ずっと",
+            "headword": "ずっと",
+            "gloss": "all along"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "別",
+            "reading": "べつ",
+            "headword": "別",
+            "gloss": "other; different"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "会場",
+            "reading": "かいじょう",
+            "headword": "会場",
+            "gloss": "venue"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "来た",
+            "reading": "きた",
+            "headword": "来る",
+            "gloss": "came"
+          }
+        ]
+      }
     },
     {
       "id": "wake-realization",
@@ -86,15 +340,79 @@
       "target": "wake",
       "relationship": "koto-vs-wake",
       "prompt": "電車が止まり、代わりのバスもなかった。彼が遅れた____だ。",
-      "translation": "The train stopped and there was no replacement bus. That explains why he was late.",
+      "translation": "Choose こと or わけ and write it in hiragana. Decide whether the sentence reports a fact or event itself, or states a conclusion drawn from known facts. Context: the train stopped and there was no replacement bus, and the speaker then comments on his being late.",
       "evidence": "The speaker connects the preceding facts to an explanatory conclusion about his lateness.",
       "explanation": "わけだ marks the conclusion that now makes sense in light of the preceding facts. ことだ would not express this explanatory inference.",
       "answer": "wake",
-      "acceptedAnswers": ["わけ"],
+      "acceptedAnswers": [
+        "わけ"
+      ],
       "options": [
-        { "id": "koto", "label": "こと", "rationale": "Does not mark the conclusion that explains the lateness." },
-        { "id": "wake", "label": "わけ", "rationale": "わけだ presents the lateness as the understandable conclusion from the facts." }
-      ]
+        {
+          "id": "koto",
+          "label": "こと",
+          "rationale": "Does not mark the conclusion that explains the lateness."
+        },
+        {
+          "id": "wake",
+          "label": "わけ",
+          "rationale": "わけだ presents the lateness as the understandable conclusion from the facts."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7e14ee95ee84f80e21c8e58cb6da0438bb300b8b52642be1812c182cb77e28b3",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "止まり",
+            "reading": "とまり",
+            "headword": "止まる",
+            "gloss": "stop (and)"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "代わり",
+            "reading": "かわり",
+            "headword": "代わり",
+            "gloss": "substitute; replacement"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          },
+          {
+            "start": 19,
+            "end": 20,
+            "text": "彼",
+            "reading": "かれ",
+            "headword": "彼",
+            "gloss": "he"
+          },
+          {
+            "start": 21,
+            "end": 24,
+            "text": "遅れた",
+            "reading": "おくれた",
+            "headword": "遅れる",
+            "gloss": "was late"
+          }
+        ]
+      }
     },
     {
       "id": "hazu-shipping-estimate",
@@ -106,11 +424,67 @@
       "evidence": "The arrival is a prediction based on the site's shipping information, not a duty imposed on the package.",
       "explanation": "はず expresses an expectation based on evidence. べき expresses what someone ought to do, so it does not fit a prediction about delivery.",
       "answer": "hazu",
-      "acceptedAnswers": ["はず"],
+      "acceptedAnswers": [
+        "はず"
+      ],
       "options": [
-        { "id": "hazu", "label": "はず", "rationale": "Marks the expected arrival based on shipping information." },
-        { "id": "beki", "label": "べき", "rationale": "Expresses an obligation or recommendation, not an evidence-based prediction." }
-      ]
+        {
+          "id": "hazu",
+          "label": "はず",
+          "rationale": "Marks the expected arrival based on shipping information."
+        },
+        {
+          "id": "beki",
+          "label": "べき",
+          "rationale": "Expresses an obligation or recommendation, not an evidence-based prediction."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "161f206ae0f3d0a03b40d5ff53d471c80599208bc8f67304ce5eab38be3df729",
+        "spans": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "公式サイト",
+            "reading": "こうしきさいと",
+            "headword": "公式サイト",
+            "gloss": "official website"
+          },
+          {
+            "start": 7,
+            "end": 11,
+            "text": "発送済み",
+            "reading": "はっそうずみ",
+            "headword": "発送済み",
+            "gloss": "already shipped"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "荷物",
+            "reading": "にもつ",
+            "headword": "荷物",
+            "gloss": "luggage; belongings"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "届く",
+            "reading": "とどく",
+            "headword": "届く",
+            "gloss": "arrive"
+          }
+        ]
+      }
     },
     {
       "id": "hazu-scheduled-arrival",
@@ -122,11 +496,91 @@
       "evidence": "The speaker estimates her present location from the elapsed time and the assumption that the trip went normally.",
       "explanation": "はず marks an expectation based on the known timeline. べき would say that she ought to be at the airport, which is not the intended inference.",
       "answer": "hazu",
-      "acceptedAnswers": ["はず"],
+      "acceptedAnswers": [
+        "はず"
+      ],
       "options": [
-        { "id": "hazu", "label": "はず", "rationale": "Expresses the speaker's expectation from the timeline." },
-        { "id": "beki", "label": "べき", "rationale": "Would express what she ought to do, rather than where she is expected to be." }
-      ]
+        {
+          "id": "hazu",
+          "label": "はず",
+          "rationale": "Expresses the speaker's expectation from the timeline."
+        },
+        {
+          "id": "beki",
+          "label": "べき",
+          "rationale": "Would express what she ought to do, rather than where she is expected to be."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "2d653bd3f5c569c4a6cb525f2ccf35185b3c24266a1b4215cfadf52c03441d6c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "彼女",
+            "reading": "かのじょ",
+            "headword": "彼女",
+            "gloss": "she"
+          },
+          {
+            "start": 3,
+            "end": 7,
+            "text": "一時間前",
+            "reading": "いちじかんまえ",
+            "headword": "一時間前",
+            "gloss": "an hour before"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "空港",
+            "reading": "くうこう",
+            "headword": "空港",
+            "gloss": "airport"
+          },
+          {
+            "start": 11,
+            "end": 15,
+            "text": "向かった",
+            "reading": "むかった",
+            "headword": "向かう",
+            "gloss": "headed for"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "順調",
+            "reading": "じゅんちょう",
+            "headword": "順調",
+            "gloss": "smooth; on schedule"
+          },
+          {
+            "start": 21,
+            "end": 24,
+            "text": "今ごろ",
+            "reading": "いまごろ",
+            "headword": "今ごろ",
+            "gloss": "about now"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "空港",
+            "reading": "くうこう",
+            "headword": "空港",
+            "gloss": "airport"
+          },
+          {
+            "start": 27,
+            "end": 30,
+            "text": "着いて",
+            "reading": "ついて",
+            "headword": "着く",
+            "gloss": "arrive"
+          }
+        ]
+      }
     },
     {
       "id": "beki-safety-report",
@@ -138,11 +592,83 @@
       "evidence": "This is guidance about the responsible action someone should take.",
       "explanation": "べき expresses an obligation or strong recommendation. はず would express an expectation, not the action the listener ought to take.",
       "answer": "beki",
-      "acceptedAnswers": ["べき"],
+      "acceptedAnswers": [
+        "べき"
+      ],
       "options": [
-        { "id": "hazu", "label": "はず", "rationale": "Expresses expectation, not what a person ought to do." },
-        { "id": "beki", "label": "べき", "rationale": "Marks the action presented as the responsible thing to do." }
-      ]
+        {
+          "id": "hazu",
+          "label": "はず",
+          "rationale": "Expresses expectation, not what a person ought to do."
+        },
+        {
+          "id": "beki",
+          "label": "べき",
+          "rationale": "Marks the action presented as the responsible thing to do."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d3d9885e067d3534a4f36c2a72e2f0e3dff3116c7afe45e42cc21ffa2dae3b13",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "安全",
+            "reading": "あんぜん",
+            "headword": "安全",
+            "gloss": "safety"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "関わる",
+            "reading": "かかわる",
+            "headword": "関わる",
+            "gloss": "concern; relate to"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "text": "不具合",
+            "reading": "ふぐあい",
+            "headword": "不具合",
+            "gloss": "fault; defect"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "見つけたら",
+            "reading": "みつけたら",
+            "headword": "見つける",
+            "gloss": "if (you) find"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "すぐ",
+            "reading": "すぐ",
+            "headword": "すぐ",
+            "gloss": "soon; immediately"
+          },
+          {
+            "start": 18,
+            "end": 21,
+            "text": "責任者",
+            "reading": "せきにんしゃ",
+            "headword": "責任者",
+            "gloss": "person in charge"
+          },
+          {
+            "start": 22,
+            "end": 26,
+            "text": "報告する",
+            "reading": "ほうこくする",
+            "headword": "報告する",
+            "gloss": "report"
+          }
+        ]
+      }
     },
     {
       "id": "beki-public-conduct",
@@ -154,11 +680,75 @@
       "evidence": "The sentence states a social expectation about appropriate conduct, not a prediction.",
       "explanation": "べき recommends or prescribes appropriate conduct. はず would describe what is expected to happen, rather than what people should do.",
       "answer": "beki",
-      "acceptedAnswers": ["べき"],
+      "acceptedAnswers": [
+        "べき"
+      ],
       "options": [
-        { "id": "hazu", "label": "はず", "rationale": "Describes an expectation, but does not prescribe appropriate conduct." },
-        { "id": "beki", "label": "べき", "rationale": "States what people ought to do in this situation." }
-      ]
+        {
+          "id": "hazu",
+          "label": "はず",
+          "rationale": "Describes an expectation, but does not prescribe appropriate conduct."
+        },
+        {
+          "id": "beki",
+          "label": "べき",
+          "rationale": "States what people ought to do in this situation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ddb70193df9f85a2805b57638b8b93a386aeec1117cbad8ec7cb5f6fdffa315a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "公共",
+            "reading": "こうきょう",
+            "headword": "公共",
+            "gloss": "public"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "場所",
+            "reading": "ばしょ",
+            "headword": "場所",
+            "gloss": "place"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "他",
+            "reading": "ほか",
+            "headword": "他",
+            "gloss": "other"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person; other people"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "迷惑",
+            "reading": "めいわく",
+            "headword": "迷惑",
+            "gloss": "nuisance"
+          },
+          {
+            "start": 22,
+            "end": 26,
+            "text": "行動する",
+            "reading": "こうどうする",
+            "headword": "行動する",
+            "gloss": "act; behave"
+          }
+        ]
+      }
     }
   ]
 }

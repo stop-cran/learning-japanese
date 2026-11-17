@@ -438,8 +438,8 @@ Repair chapter boundaries/staging rather than deleting genuine gates for layout 
 well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
 Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
 
-The current catalog places all **393 authored groups in 21 chapters**, with **23 immediate leaf prerequisites** and **9 derived
-chapter arrows**. The 431 recommendations are all soft links. The 292 unowned exercises remain compatibility practice, not fabricated
+The current catalog places all **420 authored groups in 21 chapters**, with **23 immediate leaf prerequisites** and **9 derived
+chapter arrows**. The 444 recommendations are all soft links. The 112 unowned exercises remain compatibility practice, not fabricated
 chapter/readiness credentials. The ledger distinguishes the earlier partial-mapping pilot from current ownership and records each
 edge's precise scope. The installment summaries below describe their original delivery snapshots; their original zero-prerequisite
 counts do not override the current `foundationRequirements` declarations.

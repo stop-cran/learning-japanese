@@ -1020,8 +1020,9 @@ The task fixes the endings in kana and permits kana or kanji for the predicate; 
 The price-rise example means "became more expensive" relative to the earlier price, not necessarily expensive by everyone's standard.
 
 Recognized alternatives **空地／明き地**, **閑か**, and **綺麗／奇麗／キレイ** are accepted for their respective predicates;
-the models retain **空き地／静か／きれい**. The dictionary also records **つべたい** for 冷たい, so its corresponding forms
-are accepted, while **つめたい** remains the model pronunciation. Recognition does not imply equal frequency or preferred style.
+the models retain **空き地／静か／きれい**. The dictionary also records the variant reading **つべたい** for 冷たい,
+but both cold-water questions accept only 冷た／つめた stems; **つめたい** is the model
+pronunciation. Recognition does not imply equal frequency or preferred style.
 Longer expressions such as **きれいなままになっている**, "remains in a clean state," can also be natural.
 The appearance of なる inside such a whole expression does not turn it into the simple **きれいになった** change pattern.
 
@@ -1499,8 +1500,9 @@ This shared answer class does not make them interchangeable at every time distan
 The relevant action can finish before a larger task: hanging a coat need not complete everything involved in changing clothes.
 
 **たまま** instead reports that the resulting state continues. A window can have been opened **only a few seconds ago**
-and still be described as **開けたまま**. The two window questions deliberately use the same short elapsed time:
-one reports the recent completion, the other the continuing state. Both accounts can be true of one scene,
+and still be described as **開けたまま**, so the elapsed time alone does not decide the form. The two window questions
+differ in what is reported: one announces a window opened seconds ago as a just-finished task, the other describes a
+window opened this morning that is still not closed at noon. Both kinds of account can be true of one scene,
 but they answer different communicative needs. Do not choose by a time word alone.
 
 The selected state, not every property of the object, remains unchanged:
