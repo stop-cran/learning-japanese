@@ -313,6 +313,8 @@ The added desk description is not necessarily a later event. **そして** and *
 neither automatically means "because." **それから** can also mean "since then" when it refers back to a time point.
 **しかし** and **でも** can both fit the library contrast; stylistic preferences are not a unique grammar key.
 These are support words here, not separately scored synonym-definition questions.
+For the N3 connective **ところが**, which reports an outcome that went against expectation, see
+[Result and topic connectives](result-and-topic-connectives.md#against-expectation-ところが).
 
 This conjunction **でも** is different from example-giving **お茶でも**, "tea or something," and concessive
 **ても／でも**, "even if/when." For example-giving, see the

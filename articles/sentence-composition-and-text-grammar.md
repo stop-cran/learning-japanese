@@ -113,6 +113,8 @@ outside that finite response task, not globally incorrect Japanese.
 
 See [necessity, advice and instructions](necessity-advice-and-instructions.md) for obligation and permission,
 and [actions, states and time](japanese-actions-states-and-time.md) for result-state background.
+For the written connectives that link sentences across a passage (すなわち, また, あるいは, 前者／後者), see
+[Result and topic connectives](result-and-topic-connectives.md).
 
 ## Scope and sources
 
