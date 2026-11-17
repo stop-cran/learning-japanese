@@ -220,3 +220,5 @@ hearsay とか is N2.
 - [Embedded questions, reports and noticing](embedded-questions-and-reports.md)
 - [Looks, likeness and informed impressions](appearance-resemblance-and-impressions.md)
 - [Explanations, quotations and sentence endings](explanations-quotations-and-endings.md)
+- [Basis, field and viewpoint](basis-field-and-viewpoint.md)
+- [Advice, certainty and partial denial](advice-certainty-and-partial-denial.md)

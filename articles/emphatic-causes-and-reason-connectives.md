@@ -243,6 +243,9 @@ hint that the reason was only a pretext or was unfair.
 - [Koto, wake and formal nouns](koto-wake-and-formal-nouns.md)
 - [のに and concessive contrasts](noni-and-concessive-contrasts.md)
 - [Volition, plans and goals](volition-plans-and-goals.md)
+- [Result and topic connectives](result-and-topic-connectives.md)
+- [Correction and contrast connectives](correction-and-contrast-connectives.md)
+- [Concession and supposition](concession-and-supposition.md)
 
 ## Sources
 

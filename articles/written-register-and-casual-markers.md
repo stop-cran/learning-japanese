@@ -212,3 +212,5 @@ These items are common in N3 reading and listening. They are explained here but 
 - [Honorifics, humble and polite language](honorifics-humble-and-polite-language.md): polite and formal styles.
 - [Actions, states and time](japanese-actions-states-and-time.md): ないで and なくて in everyday style.
 - [Embedded questions and reports](embedded-questions-and-reports.md): questions with か inside a sentence.
+- [Adverbs with negative endings](adverbs-with-negative-endings.md): 決して and 全く with negative endings.
+- [Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md): ずにはいられない.

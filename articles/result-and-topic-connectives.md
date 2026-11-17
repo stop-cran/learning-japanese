@@ -73,8 +73,9 @@ the first part, try そこで.
 
 Beware that そこで is also the place word "there" (そこ + で): そこで待っています means "I'll wait there".
 
-For reason connectives such as **そのため** and **なぜなら**, see the separate article on emphatic causes and
-reason connectives in this series. **それで** ("and so") is the everyday spoken link from a cause to its result.
+For reason connectives such as **そのため** and **なぜなら**, see
+[emphatic causes, purpose and reason connectives](emphatic-causes-and-reason-connectives.md). **それで** ("and so") is
+the everyday spoken link from a cause to its result.
 
 ## Against expectation: ところが
 
@@ -222,6 +223,8 @@ This set does not practise 第一 with exercises; it is listed here for recognit
 - [Sentence composition and text grammar](sentence-composition-and-text-grammar.md)
 - [Reasons, contrasts and conversational prefaces](reasons-and-contrasts.md)
 - [Listing and examples](japanese-listing-and-examples.md)
+- [Correction and contrast connectives](correction-and-contrast-connectives.md)
+- [Emphatic causes, purpose and reason connectives](emphatic-causes-and-reason-connectives.md)
 
 ## Sources
 

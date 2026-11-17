@@ -209,3 +209,5 @@ the primary reference: こそ, なんか／なんて, に限る, だけしか, �
 - [Quantity, ranges, frequency and scope](quantity-ranges-and-frequency.md)
 - [Japanese listing and examples](japanese-listing-and-examples.md)
 - [は, が, and も: topic, contrast, and inclusion](wa-ga-mo-topic-and-inclusion.md)
+- [Degree, excess and addition](degree-excess-and-addition.md)
+- [Time spans, immediacy and prerequisites](time-spans-and-immediacy.md)

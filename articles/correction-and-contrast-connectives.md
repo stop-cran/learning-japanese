@@ -210,6 +210,12 @@ contrast these general connectives with the patterns above.
 - [のに and concessive contrasts](noni-and-concessive-contrasts.md): のに for a result that clashes with a premise.
 - [Koto, wake, and formal nouns](koto-wake-and-formal-nouns.md): Noun + のかわりに, ついでに, and かわりに for a trade-off.
 - [Listing and examples](japanese-listing-and-examples.md): adding items with し, や and たり.
+- [Result and topic connectives](result-and-topic-connectives.md): ところが, すると and other connectives between
+  sentences.
+- [Emphatic causes, purpose and reason connectives](emphatic-causes-and-reason-connectives.md): なぜなら and そのため for
+  reasons across sentences.
+- [Concession and supposition](concession-and-supposition.md): どころか and にしては.
+- [Comparison, role and particle relations](comparison-and-role-relations.md): に代わって, beside 代わりに.
 
 ## Practice scope and sources
 

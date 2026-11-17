@@ -247,6 +247,10 @@ anger: 走るんじゃない! ("Don't run!"). With a rising tone, the same sound
 - [Koto, wake and formal nouns](koto-wake-and-formal-nouns.md): べき, ものだ, わけではない, わけがない and
   ことはない in their existing practice.
 - [Appearance, resemblance and impressions](appearance-resemblance-and-impressions.md): appearance そうだ.
+- [Adverbs with negative endings](adverbs-with-negative-endings.md): 必ずしも〜ない and other adverbs that need a negative
+  ending.
+- [Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md): hearsay そうだ, beside the appearance そうだ in
+  そうもない.
 
 ## Sources
 

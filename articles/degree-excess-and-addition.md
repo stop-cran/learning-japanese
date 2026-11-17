@@ -253,6 +253,8 @@ sides, because each of those items asks you to rule out the N3 ばかり／ば�
 - [Degree, comparison and desired extent](koto-wake-and-formal-nouns.md#degree-comparison-and-desired-extent):
   ほど and くらい.
 - [Japanese listing and examples](japanese-listing-and-examples.md): adding facts with し, and examples with や and など.
+- [Focus, limits and intervals](focus-limits-and-intervals.md): だけしか〜ない and こそ for focus and limits.
+- [Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md): だらけ "covered with", beside ばかり.
 
 Word cards: [あまり](../words/あまり.md), [くらい](../words/くらい.md), [ばかり](../words/ばかり.md),
 [だけ](../words/だけ.md), [もちろん](../words/もちろん.md), [始める](../words/始める.md), [言う](../words/言う.md).

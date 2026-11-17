@@ -244,6 +244,8 @@ answer is an N4 form, because every item asks you to choose against an N3 altern
 - [Actions, events and results](actions-events-and-results.md): transitive and intransitive pairs, the pattern
   that 上げる and 上がる follow.
 - [Benefactive actions](benefactive-actions.md): てあげる and てもらう in detail.
+- [Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md): がたい and にくい, other endings on the verb
+  stem.
 
 ## Sources
 

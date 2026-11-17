@@ -232,6 +232,9 @@ happens to an object, にくい is the natural choice. In writing, がたい is 
 - [Describing nouns and talking about activities](noun-descriptions-and-activities.md): describing nouns with
   adjectives and の.
 - [Japanese occupation and role endings](occupation-and-role-endings.md): more endings that attach to nouns.
+- [Degree, excess and addition](degree-excess-and-addition.md): ばかり "nothing but", beside だらけ.
+- [Change, phases and trends](change-phases-and-trends.md): 一方だ and ～かけ／～たて.
+- [Compound verb endings](compound-verb-endings.md): 切る, 込む and other verb-stem endings.
 
 ## Sources
 

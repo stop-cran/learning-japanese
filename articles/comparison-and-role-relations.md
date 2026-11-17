@@ -199,6 +199,8 @@ the receiver (への), the setting (での), the partner (との) or the source 
   の in section 7.
 - [Kaeru: change, replace, exchange, and return](kaeru-change-replace-and-return.md): the verb family behind
   に代わって.
+- [Basis, field and viewpoint](basis-field-and-viewpoint.md): にとって and で言うと for a viewpoint.
+- [Correction and contrast connectives](correction-and-contrast-connectives.md): 代わりに and 一方で as connectives.
 
 ## Sources
 

@@ -245,6 +245,11 @@ the action was deliberate, sometimes mischievously.
 - [Thinking, possibility and expectation](thinking-possibility-and-expectation.md): かもしれない and だろう, the
   endings that follow もしかしたら.
 - [Comparisons, change and degree](comparisons-change-and-degree.md): より and のほうが comparisons and あまり.
+- [Adverbs with negative endings](adverbs-with-negative-endings.md): なかなか〜ない and other adverbs that need a negative
+  ending.
+- [Advice, certainty and partial denial](advice-certainty-and-partial-denial.md): かもしれない, に違いない and はずだ as certainty
+  endings.
+- [Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md): ずにはいられない and ふりをする.
 
 ## Sources
 

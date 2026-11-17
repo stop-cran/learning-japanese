@@ -283,6 +283,11 @@ against an N3 alternative.
   ところ for the stages of an action, including るところだ and たところだ.
 - [Koto, wake, and Japanese noun-based grammar](koto-wake-and-formal-nouns.md#たび-おり-and-さい-recurrence-versus-an-occasion):
   たびに for recurrence, against おり and さい.
+- [Degree, excess and addition](degree-excess-and-addition.md): ばかりだ for a change that only goes one way, beside
+  一方だ.
+- [Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md): がち and 気味 for tendencies rather than
+  trends.
+- [Time spans, immediacy and prerequisites](time-spans-and-immediacy.md): 最中, たとたん and other time spans.
 
 ## Sources
 

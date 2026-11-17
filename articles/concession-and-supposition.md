@@ -250,6 +250,10 @@ is whether the listener is satisfied with it, use でよければ.
 - [Japanese conditionals](japanese-conditionals.md): the ば, たら, と and なら conditions underneath さえ〜ば and もしも.
 - [Reasons and contrasts](reasons-and-contrasts.md): plain ても concessions that たとえ, いくら and どんなに strengthen.
 - [Only and unexpected inclusion](only-and-unexpected-inclusion.md): さえ and でも as "even".
+- [Correction and contrast connectives](correction-and-contrast-connectives.md): むしろ and かえって for an outcome against
+  expectation.
+- [Emphatic causes, purpose and reason connectives](emphatic-causes-and-reason-connectives.md): purpose のに against
+  "although" のに.
 
 ## Practice scope and sources
 

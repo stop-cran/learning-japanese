@@ -241,6 +241,8 @@ The negative counterpart of the "sometimes" sense is **ことはない／こと�
 - [Koto, wake and formal nouns](koto-wake-and-formal-nouns.md): formal nouns such as うち, あいだ, たび and こと.
 - [Verb extensions: direction and aspect](verb-extensions-direction-and-aspect.md): ～始める, ～出す and ～終わる,
   which appear in several practice sentences.
+- [Change, phases and trends](change-phases-and-trends.md): ～かけ, ～たて and にかけて.
+- [Focus, limits and intervals](focus-limits-and-intervals.md): おきに and ずつ for intervals and steps.
 
 ## Sources
 

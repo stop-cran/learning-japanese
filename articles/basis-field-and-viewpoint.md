@@ -215,6 +215,9 @@ other sets and appear here only in explanations, if at all.
 - [Japanese nouns and basic particles](japanese-nouns-and-basic-particles.md): で, に and の with nouns.
 - [Koto, wake, and Japanese noun-based grammar](koto-wake-and-formal-nouns.md): formal nouns such as とおり.
 - [Embedded questions, reports and noticing](embedded-questions-and-reports.md): か and かどうか clauses.
+- [Comparison, role and particle relations](comparison-and-role-relations.md): として and に代わって beside にとって.
+- [Hearsay, naming and topic frames](hearsay-naming-and-topic-frames.md): によると for an information source, against
+  によって.
 
 ## Sources
 

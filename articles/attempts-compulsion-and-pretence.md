@@ -211,6 +211,9 @@ They are not retested here.
 - [Making, letting and being made to act](making-letting-and-being-made-to-act.md): the causative behind させてもらう.
 - [Benefactive actions](benefactive-actions.md): てもらう and ていただく.
 - [Necessity, advice and instructions](necessity-advice-and-instructions.md): なければならない and related forms.
+- [Written register and negation](written-register-and-casual-markers.md): the ず form behind ずにはいられない.
+- [Attitude, conjecture and manner adverbs](attitude-and-conjecture-adverbs.md): つい and わざと: doing something without
+  meaning to, or on purpose.
 
 ## Sources
 

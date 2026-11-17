@@ -236,6 +236,10 @@ repeated as targets here. Positive なかなか is covered by a separate set.
 - [Koto, wake, and formal nouns](koto-wake-and-formal-nouns.md#わけ-a-reason-or-a-situation-understood-through-reasoning):
   わけ, including わけではない.
 - [Ability, availability and what you can perceive](ability-and-perception.md): potential verbs used with とても〜ない.
+- [Attitude, conjecture and manner adverbs](attitude-and-conjecture-adverbs.md): なかなか for degree, and adverbs that
+  set up other endings.
+- [Advice, certainty and partial denial](advice-certainty-and-partial-denial.md): とは限らない and ないことはない beside 必ずしも.
+- [Written register and negation](written-register-and-casual-markers.md): written negation with ず and ずに.
 
 Word cards: [滅多に](../words/滅多に.md), [全く](../words/全く.md), [決して](../words/決して.md),
 [なかなか](../words/なかなか.md), [どうしても](../words/どうしても.md), [とても](../words/とても.md),
