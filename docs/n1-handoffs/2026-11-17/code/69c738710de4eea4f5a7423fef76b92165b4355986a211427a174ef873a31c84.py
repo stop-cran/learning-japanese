@@ -1,0 +1,268 @@
+"""Batch-generic complete-record and baseline-scan verifier driven by a frozen facts file.
+
+Reuses the pinned B124 record verifier and B126 scan helper unchanged. Card titles,
+distractors and source rows are read from the signed candidate rather than supplied.
+"""
+import gzip
+import hashlib
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+from common import WS, freeze_json, frozen, load_module, require, sha, start_guard
+
+VERIFIER = WS / "scratch-124" / "review" / "verify-source-records.py"
+VERIFIER_SHA = "21842b6d2d6040d2deb4a9f8c6d15f2c28c17386a443da52780a7ef7cc169c62"
+SCAN_HELPER = Path(__file__).with_name("verify_b126_sources.py")
+SCAN_SHA = "6fc5f09b2c4ed04de40f9aec2502b2e560c3b577a836b1ae7f59f587e83b20e3"
+FINGERPRINT = "D4C9A275A218AF747B787AFA9D94B9D311BD26A7"
+OWNER = "stop-cran@list.ru"
+ORIGIN = "https://github.com/stop-cran/learning-japanese.git"
+TRAILER = b"Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>"
+FACT_KEYS = {"batch", "repo", "base", "candidate", "prefix", "requireCheckout", "runner", "members",
+             "jmdictSelections", "kanjidic2Selections", "expectedBaselineCards", "output"}
+MODES = {"contains-member", "contains-any", "exact"}
+
+
+class Git:
+    def __init__(self, repo, runner, guard):
+        self.repo, self.guard = Path(repo), guard
+        frozen(runner["path"], runner["sha256"])
+        self.cleanup = load_module("batch_source_cleanup", Path(runner["path"]))
+
+    def wait(self, process, data=None):
+        try:
+            while True:
+                try:
+                    out, err = process.communicate(data, timeout=0.1)
+                    return out, err
+                except subprocess.TimeoutExpired:
+                    data = None
+                    self.guard.check()
+        finally:
+            self.cleanup.stop_child(process)
+
+    def __call__(self, *args, include_stderr=False):
+        process = subprocess.Popen(["git", "--no-pager", "-c", "core.quotepath=false", *args], cwd=self.repo,
+                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = self.wait(process)
+        require(process.returncode == 0, f"Git failed: {args}: {err.decode('utf-8', 'replace')}")
+        return out + err if include_stderr else out
+
+    def objects(self, names):
+        process = subprocess.Popen(["git", "--no-pager", "cat-file", "--batch"], cwd=self.repo,
+                                   stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = self.wait(process, ("\n".join(names) + "\n").encode("utf-8"))
+        require(process.returncode == 0, f"Git object read failed: {err.decode('utf-8', 'replace')}")
+        result, offset = [], 0
+        for name in names:
+            end = out.index(b"\n", offset)
+            header = out[offset:end].decode("utf-8").split(" ")
+            require(len(header) == 3 and header[1] == "blob", f"Missing or non-blob object: {name}")
+            size = int(header[2])
+            raw = out[end + 1:end + 1 + size]
+            require(len(raw) == size and out[end + 1 + size:end + 2 + size] == b"\n", f"Truncated object: {name}")
+            result.append((header[0], raw))
+            offset = end + 2 + size
+        require(offset == len(out), "Unexpected trailing object output")
+        return result
+
+
+def load_facts(path):
+    raw = frozen(path)
+    facts = json.loads(raw)
+    require(set(facts) == FACT_KEYS, f"Facts keys differ: {sorted(set(facts) ^ FACT_KEYS)}")
+    require(all(len(facts[key]) == 40 and int(facts[key], 16) >= 0 for key in ("base", "candidate")),
+            "Full commit SHAs required")
+    require(facts["prefix"] == f"docs/n1-sources/batch-{facts['batch']}/", "Packet prefix differs from batch")
+    require(facts["members"] and len({item["kanji"] for item in facts["members"]}) == len(facts["members"])
+            and all(len(item["kanji"]) == 1 for item in facts["members"]), "Members must be distinct characters")
+    for kind in ("jmdictSelections", "kanjidic2Selections"):
+        for item in facts[kind]:
+            require(item["mode"] in MODES and isinstance(item["queries"], list) and item["queries"]
+                    and all(isinstance(query, str) and query for query in item["queries"]),
+                    f"Invalid {kind} selection: {item.get('file')}")
+            require(item["mode"] != "contains-member" or len(facts["members"]) == 1,
+                    "contains-member supports a single-member batch only; use contains-any")
+    require(not Path(facts["output"]).exists(), "Preserve existing verification output")
+    return facts, raw
+
+
+def verify_scan(recorded, rows, meanings, title, base, helper, original=None):
+    literal = helper.tokens(meanings)
+    keywords = set(recorded["expandedSemanticKeywords"])
+    require(recorded["baseCommit"] == base and recorded["newSourceMeanings"] == meanings
+            and recorded["newTitle"] == title and recorded["literalGlossTokens"] == sorted(literal)
+            and recorded["caseFoldAndTokenPattern"] == "[a-z]+"
+            and recorded["expandedSemanticKeywords"] == sorted(keywords) and literal <= keywords,
+            "Scan identity or literal-token coverage differs")
+    if original is not None:
+        require(set(original["expandedSemanticKeywords"]) <= keywords, "Expanded scan drops original tokens")
+    actual = helper.matched_rows(rows, keywords)
+    require(recorded["scannedBaselineCards"] == len(rows) and recorded["rows"] == actual
+            and recorded["matches"] == [row["kanji"] for row in actual if row["matchedWords"]],
+            "Recorded baseline scan does not reproduce")
+    return {"tokens": sorted(keywords), "matches": recorded["matches"]}
+
+
+def main(facts_path):
+    facts, facts_raw = load_facts(Path(facts_path))
+    base, candidate, prefix = facts["base"], facts["candidate"], facts["prefix"]
+    frozen(VERIFIER, VERIFIER_SHA)
+    frozen(SCAN_HELPER, SCAN_SHA)
+    verifier = load_module("batch_pinned_source_verifier", VERIFIER)
+    helper = load_module("batch_pinned_scan_helper", SCAN_HELPER)
+    members = [item["kanji"] for item in facts["members"]]
+    if len(members) == 1:
+        verifier.MEMBER = helper.MEMBER = members[0]
+    guard, _ = start_guard(f"B{facts['batch']} generic signed source verification")
+    git = Git(facts["repo"], facts["runner"], guard)
+
+    def blob(path, commit=candidate):
+        return git("show", f"{commit}:{path}")
+
+    def checkout():
+        if facts["requireCheckout"]:
+            require(git("rev-parse", "HEAD").decode().strip() == candidate, "Candidate HEAD changed")
+            require(not git("status", "--porcelain=v1", "--untracked-files=all"), "Worktree is not clean")
+
+    inputs, results, member_proofs = {}, [], []
+    try:
+        checkout()
+        require(git("remote", "get-url", "origin").decode().strip() == ORIGIN, "Wrong origin")
+        require(git("show", "-s", "--format=%P|%G?|%GF|%ae|%ce", candidate).decode().strip()
+                == f"{base}|G|{FINGERPRINT}|{OWNER}|{OWNER}", "Wrong parent, signature or owner identity")
+        signature = git("verify-commit", candidate, include_stderr=True)
+        require(TRAILER in git("show", "-s", "--format=%B", candidate), "Missing trailer")
+        snapshot_raw = blob("docs/n1-source-snapshot.json")
+        require(snapshot_raw == blob("docs/n1-source-snapshot.json", base), "Source snapshot changed")
+        snapshot = json.loads(snapshot_raw)
+        index_raw = blob("docs/n1-sources/source-index.json")
+        require(index_raw == blob("docs/n1-sources/source-index.json", base), "Source index changed")
+        index = {item["kanji"]: item for item in json.loads(index_raw)}
+        sys.path.insert(0, str(WS / "lean"))
+        from n1lib import parse
+
+        tree = {}
+        for entry in git("ls-tree", "-rz", base, "--", "kanji").decode("utf-8").split("\0"):
+            if entry:
+                header, name = entry.split("\t", 1)
+                mode, kind, identity = header.split(" ")
+                require(mode == "100644" and kind == "blob" and name.endswith(".md"), "Unexpected kanji tree entry")
+                tree[name] = identity
+        baseline = json.loads(blob("manifest.json", base))["files"]
+        cards = {}
+        for (name, identity), (actual_id, raw) in zip(tree.items(), git.objects(list(tree.values()))):
+            require(actual_id == identity == hashlib.sha1(f"blob {len(raw)}\0".encode() + raw).hexdigest()
+                    and sha(raw.replace(b"\r\n", b"\n")) == baseline[name], f"Baseline card differs: {name}")
+            metadata, _ = parse(raw.decode("utf-8").replace("\r\n", "\n"))
+            require(metadata is not None, f"Missing metadata: {name}")
+            char = Path(name).stem
+            cards[char] = {"kanji": char, "path": name, "baselineGitBytesSha256": sha(raw), "title": metadata["title"]}
+            guard.check()
+        require(len(cards) == facts["expectedBaselineCards"] and not set(members) & set(cards),
+                "Wrong baseline membership")
+
+        signed_rows = None
+        if len(members) == 1:
+            signed_rows = [json.loads(blob(prefix + "source-row.json"))]
+        selection = json.loads(blob(prefix + "selection.json"))
+        require([item["kanji"] for item in selection["membership"]] == members, "Selection order differs")
+        cards_new, scans = {}, {}
+        for position, item in enumerate(facts["members"]):
+            char = item["kanji"]
+            row = index[char]
+            require(row["statusAtFreeze"] == "pending"
+                    and selection["membership"][position]["sourceRow"] == row["sourceRow"]
+                    and (signed_rows is None or signed_rows[0] == row), f"Wrong source row: {char}")
+            metadata, _ = parse(blob(f"kanji/{char}.md").decode("utf-8").replace("\r\n", "\n"))
+            cards_new[char] = metadata
+            scans[char] = {name: json.loads(blob(prefix + item["scans"][name])) for name in ("original", "expanded")}
+            require(all(scan["newKanji"] == char for scan in scans[char].values()), f"Scan member differs: {char}")
+
+        required_kd = set(members)
+        for char in members:
+            required_kd |= set(cards_new[char]["distractors"]) | set(scans[char]["original"]["matches"]) \
+                | set(scans[char]["expanded"]["matches"])
+        exact_kd = {query for item in facts["kanjidic2Selections"] if item["mode"] == "exact" for query in item["queries"]}
+        require(required_kd <= exact_kd, f"KANJIDIC2 selections omit: {sorted(required_kd - exact_kd)}")
+        jm_member = [item for item in facts["jmdictSelections"] if item["mode"] in {"contains-member", "contains-any"}]
+        require(all(any(char in query for item in jm_member for query in item["queries"]) for char in members),
+                "Every member needs a containing JMdict family selection")
+
+        specs = {"jmdict": facts["jmdictSelections"], "kanjidic2": facts["kanjidic2Selections"]}
+        for kind, (filename, compressed_sha, tag, key) in verifier.INPUTS.items():
+            path = WS / "control" / "inputs" / filename
+            with path.open("rb") as stream:
+                reader = helper.HashedReader(stream, guard)
+                while reader.read(65536):
+                    pass
+            require(reader.digest.hexdigest() == compressed_sha == snapshot["inputs"][filename]["sha256"],
+                    f"Compressed source differs: {kind}")
+            selections = []
+            for item in specs[kind]:
+                raw = blob(prefix + item["file"])
+                selections.append({"name": prefix + item["file"], "sha256": sha(raw), "mode": item["mode"],
+                                   "queries": set(item["queries"]), "expected": verifier.records(raw, tag, key)})
+            with gzip.open(path, "rb") as stream:
+                reader = helper.HashedReader(stream, guard)
+                identities = verifier.verify_stream(reader, tag, key, selections, guard)
+            require(reader.digest.hexdigest() == snapshot[kind]["xmlSha256"], "Decompressed source differs")
+            inputs[kind] = {"filename": filename, "compressedSha256": compressed_sha,
+                            "decompressedXmlSha256": reader.digest.hexdigest()}
+            for selected, matched in zip(selections, identities):
+                results.append({"path": selected["name"], "sha256": selected["sha256"], "input": filename,
+                                "inputSha256": compressed_sha, "mode": selected["mode"],
+                                "queries": sorted(selected["queries"]), "completeMatchingRecords": len(matched),
+                                "identities": matched})
+
+        with gzip.open(WS / "control" / "inputs" / verifier.INPUTS["kanjidic2"][0], "rb") as stream:
+            reader = helper.HashedReader(stream, guard)
+            rows = helper.scan_baseline(reader, cards, guard)
+        require(reader.digest.hexdigest() == inputs["kanjidic2"]["decompressedXmlSha256"], "Baseline scan input changed")
+        comparisons = set()
+        for item in facts["members"]:
+            char = item["kanji"]
+            meanings, title = index[char]["metadata"]["meanings"], cards_new[char]["title"]
+            original = verify_scan(scans[char]["original"], rows, meanings, title, base, helper)
+            expanded = verify_scan(scans[char]["expanded"], rows, meanings, title, base, helper,
+                                   scans[char]["original"])
+            comparisons |= set(cards_new[char]["distractors"]) | set(original["matches"]) | set(expanded["matches"])
+            member_proofs.append({"kanji": char, "sourceRow": index[char]["sourceRow"], "title": title,
+                                  "distractors": cards_new[char]["distractors"],
+                                  "scanFiles": {name: {"path": prefix + file, "sha256": sha(blob(prefix + file))}
+                                                for name, file in item["scans"].items()},
+                                  "originalScan": original, "expandedScan": expanded})
+        packet_cards = {}
+        for entry in git("ls-tree", "-rz", candidate, "--", prefix + "comparison-cards").decode("utf-8").split("\0"):
+            if entry:
+                header, name = entry.split("\t", 1)
+                packet_cards[Path(name).stem] = header.split(" ")[2]
+        require(comparisons <= set(packet_cards), f"Comparison cards missing: {sorted(comparisons - set(packet_cards))}")
+        for char, identity in packet_cards.items():
+            require(identity == tree.get(f"kanji/{char}.md"), f"Comparison differs from actual baseline: {char}")
+        checkout()
+    finally:
+        memory = guard.finish()
+    require(not memory["breach"], "RAM breach")
+    print(json.dumps(freeze_json(Path(facts["output"]), {
+        "batch": facts["batch"], "candidate": candidate, "base": base, "status": "PASS",
+        "facts": {"path": str(Path(facts_path)), "sha256": sha(facts_raw)},
+        "checkoutBound": facts["requireCheckout"],
+        "signatureOutputSha256": sha(signature), "signatureOutput": signature.decode("utf-8", "replace"),
+        "snapshotSha256": sha(snapshot_raw), "sourceIndexSha256": sha(index_raw), "inputs": inputs,
+        "sourceRecords": results, "members": member_proofs, "baselineCards": len(rows),
+        "requiredComparisonCards": sorted(comparisons), "packetComparisonCards": sorted(packet_cards),
+        "memory": memory, "verifierSha256": sha(Path(__file__).read_bytes()),
+        "reusedVerifier": {"path": str(VERIFIER), "sha256": VERIFIER_SHA},
+        "reusedScanHelper": {"path": str(SCAN_HELPER), "sha256": SCAN_SHA},
+        "limits": "Complete pinned-record membership/equality for the declared selections, coverage of members, "
+                  "distractors and every scan match, and actual whole-baseline scan reproduction. Keyword adequacy, "
+                  "linguistic judgments, quiz pools, native/device, review and publication remain separate.",
+    })))
+
+
+if __name__ == "__main__":
+    require(len(sys.argv) == 2, "Usage: verify_batch_sources.py <frozen-facts.json>")
+    main(sys.argv[1])

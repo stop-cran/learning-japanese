@@ -1,0 +1,169 @@
+"""Build projected-successor-009: the 008 core with its two dictionary XML sources losslessly encoded."""
+import json
+import sys
+from pathlib import Path
+
+from common import WS, json_bytes, require, sha, start_guard, write_frozen
+import compact_xml_v1 as codec
+
+ROOT = WS / "scratch-134" / "review" / "fresh-independent-002"
+PRED = ROOT / "projected-successor-008"
+OUT = ROOT / "projected-successor-009"
+PRED_PACKET_SHA = "6f774ec7906cbe8279e972959507d8ccbbea8541273f8cfa51a405dc34fcc5f6"
+PRED_CORE_SHA = "b6e49cbbcb6ebab5886dc87b9cf9557a4b213fda5d3c3b0c7c6ff3f7c18c76b8"
+CODEC_INDEX_SHA = "274bedd21e6d2fa754b90f9cd350dbacb651f52ebe6e283434420d7e15f977b8"
+sys.path.insert(0, str(PRED / "protocol-003"))
+from review_chain_with_optional import build_chain  # noqa: E402
+
+GUIDE = "evidence/compact-xml-v1-reading-guide.md"
+ENCODED = {
+    "evidence/jmdict-families.xml": (
+        "evidence/jmdict-families.compact-xml-v1.txt",
+        dict(root="JMdict", record="entry", separator=1,
+             aliases=["#=ent_seq", "K=k_ele", "R=r_ele", "S=sense", "g=gloss[xml:lang=eng]",
+                      "kp=ke_pri", "rp=re_pri", "ki=ke_inf", "ri=re_inf"],
+             bare={"k_ele": "keb", "r_ele": "reb"})),
+    "evidence/kanjidic2-review-projection.xml": (
+        "evidence/kanjidic2-review-projection.compact-xml-v1.txt",
+        dict(root="kanjidic2", record="character", separator=2,
+             aliases=["rad=rad_value[rad_type=classical]", "on=reading[r_type=ja_on]",
+                      "kun=reading[r_type=ja_kun]", "m=meaning"],
+             bare={"character": "literal"})),
+}
+EXAMPLE_XML = ('<entry><ent_seq>1013030</ent_seq><k_ele><keb>縁</keb></k_ele><r_ele><reb>ゆかり</reb>'
+               '<re_pri>ichi1</re_pri></r_ele><sense><pos>noun (common) (futsuumeishi)</pos>'
+               '<xref>所縁</xref><gloss xml:lang="eng">relation</gloss>'
+               '<gloss g_type="lit" xml:lang="eng">tie</gloss></sense></entry>')
+EXAMPLE_LINE = ("#=1013030 ¦ K 縁 ¦ R ゆかり | rp=ichi1 ¦ S pos=noun (common) (futsuumeishi) | xref=所縁 "
+                "| g=relation | gloss[g_type=lit,xml:lang=eng]=tie")
+
+
+def guide():
+    encoded = codec.encode(f"<JMdict>\n{EXAMPLE_XML}\n</JMdict>\n".encode("utf-8"),
+                           **ENCODED["evidence/jmdict-families.xml"][1])
+    require(encoded.decode("utf-8").split("%end\n", 1)[1] == EXAMPLE_LINE + "\n",
+            "Reading-guide example is not the codec's actual encoding")
+    rows = "\n".join(f"- `{new}` encodes `{old}` (original bytes remain in this packet)."
+                     for old, (new, _) in ENCODED.items())
+    return f"""# compact-xml-v1 reading guide
+
+The two dictionary XML sources of this review core are presented in compact-xml-v1, a
+byte-exact, invertible line encoding used only to fit the complete sources into the review
+context. Nothing was selected, removed, reordered, normalized or summarized:
+
+{rows}
+
+Each encoded file's header states the SHA-256 and byte length of its original XML file. Before
+this core was frozen, the mechanical decoder (`codec/compact_xml_v1.py` in this packet)
+rebuilt both original files byte-for-byte from the encoded files alone.
+
+## Header (lines up to `%end`)
+
+- `%root` / `%record`: the XML root element and the per-line record element.
+- `%separator N`: records were separated by N newlines in the original file.
+- `%alias SHORT=tag[attr=value,...]`: SHORT stands for exactly that tag with exactly those
+  attributes in that order. An alias without brackets has no attributes.
+- `%bare parent=child`: the first child of `parent` is written as plain text without its tag.
+
+## Body
+
+- One record per line, in original order. The record's child elements are separated by ` ¦ `.
+- `name=value` is an element containing only text (`name=` is an empty element).
+- `name a | b | c` (a space after the name) is a record-level element whose child elements
+  are a, b and c, separated by ` | `.
+- `name{{a | b}}` is a deeper element whose child elements are a and b.
+- A tag written as `tag[k=v,...]` carries those attributes in that order; it is not an alias.
+- Values are literal text: no escaping is used, and spaces, `;`, parentheses and quotes are
+  part of the value.
+
+## Example
+
+`{EXAMPLE_LINE}`
+
+is exactly this JMdict record:
+
+`{EXAMPLE_XML}`
+"""
+
+
+def main():
+    require(not OUT.exists(), "projected-successor-009 already exists; preserve it")
+    index_raw = (WS / "scratch-134" / "review" / "continuation-tools-004" / "index.json").read_bytes()
+    require(sha(index_raw) == CODEC_INDEX_SHA, "Codec freeze index changed")
+    index = json.loads(index_raw)
+    codec_raw = Path(codec.__file__).read_bytes()
+    require(sha(codec_raw) == index["files"]["compact_xml_v1.py"]["sha256"], "Codec differs from its freeze")
+    sums_raw = (PRED / "packet" / "SHA256SUMS.json").read_bytes()
+    require(sha(sums_raw) == PRED_PACKET_SHA, "Predecessor packet inventory changed")
+    sums = json.loads(sums_raw)
+    core_raw = (PRED / "fresh-independent-core-001.json").read_bytes()
+    require(sha(core_raw) == PRED_CORE_SHA, "Predecessor core manifest changed")
+    pred_names = [row["source"] for row in json.loads(core_raw)["sources"]]
+    require(len(pred_names) == 89 and all(name in pred_names for name in ENCODED), "Unexpected predecessor core")
+    guard, _ = start_guard("B134 successor-009 lossless core construction")
+    try:
+        packet = {}
+        for name, digest in sums.items():
+            raw = (PRED / "packet" / name).read_bytes()
+            require(sha(raw) == digest, "Predecessor packet file differs: " + name)
+            packet[name] = raw
+            guard.check()
+        on_disk = {p.relative_to(PRED / "packet").as_posix() for p in (PRED / "packet").rglob("*") if p.is_file()}
+        require(on_disk == set(sums) | {"SHA256SUMS.json"}, "Unlisted predecessor packet file")
+        added = {GUIDE: guide().encode("utf-8"), "codec/compact_xml_v1.py": codec_raw}
+        conversions = {}
+        for old, (new, config) in ENCODED.items():
+            encoded = codec.encode(packet[old], **config)
+            require(codec.decode(encoded) == packet[old], "Encoded source does not decode exactly: " + old)
+            added[new] = encoded
+            conversions[old] = {"encoded": new, "config": config, "originalSha256": sha(packet[old]),
+                                "originalBytes": len(packet[old]), "encodedSha256": sha(encoded),
+                                "encodedBytes": len(encoded)}
+        require(not set(added) & set(packet), "New packet file would replace a predecessor file")
+        new_sums = dict(sums)
+        for name, raw in {**packet, **added}.items():
+            write_frozen(OUT / "packet" / name, raw)
+            guard.check()
+        for name, raw in added.items():
+            new_sums[name] = sha(raw)
+        sums_ref = write_frozen(OUT / "packet" / "SHA256SUMS.json", json_bytes(new_sums))
+        names = []
+        for name in pred_names:
+            if name == "evidence/jmdict-families.xml":
+                names.append(GUIDE)
+            names.append(ENCODED[name][0] if name in ENCODED else name)
+        require(len(names) == 90 and len(set(names)) == 90, "Successor source list is malformed")
+        sources_ref = write_frozen(OUT / "core-sources-009.json", json_bytes(
+            {"predecessorCoreSha256": PRED_CORE_SHA, "sources": names}))
+        core_path = OUT / "fresh-independent-core-001.json"
+        core = build_chain([(name, (packet | added)[name], None) for name in names],
+                           OUT / "chains" / "fresh-independent-core-001", core_path, guard,
+                           "B134 fresh independent core successor 009")
+        require([row["source"] for row in core["sources"]] == names, "Chain source order differs")
+        payload = sum(len((packet | added)[name]) for name in names)
+        chain = sum(row["bytes"] for row in core["segments"])
+        write_frozen(OUT / "tools" / "build_b134_successor_009.py", Path(__file__).read_bytes())
+        result = {
+            "status": "FROZEN_LOSSLESS_SUCCESSOR_CORE_NOT_REVIEW_ADMISSION",
+            "predecessor": {"root": str(PRED), "packetSha256": PRED_PACKET_SHA, "coreSha256": PRED_CORE_SHA},
+            "codecFreezeIndexSha256": CODEC_INDEX_SHA, "codecSha256": sha(codec_raw),
+            "conversions": conversions, "addedPacketFiles": {k: sha(v) for k, v in added.items()},
+            "packetInventory": {**sums_ref, "files": len(new_sums)},
+            "sourceList": sources_ref,
+            "coreManifest": {"path": str(core_path), "sha256": sha(core_path.read_bytes())},
+            "sourceCount": len(core["sources"]), "segmentCount": len(core["segments"]),
+            "payloadBytes": payload, "chainBytes": chain,
+            "producerSha256": sha(Path(__file__).read_bytes()),
+            "limits": "Lossless representation change only; every predecessor packet file retained byte-exactly. "
+                      "No tokenizer measurement, capacity admission, semantic review, lifecycle or reviewer launch.",
+        }
+    finally:
+        memory = guard.finish()
+        require(not memory["breach"], "Successor construction RAM breach")
+    result["memory"] = memory
+    print(json.dumps(write_frozen(OUT / "frozen-core-009.json", json_bytes(result)), ensure_ascii=False))
+    print(json.dumps({k: result[k] for k in ("sourceCount", "segmentCount", "payloadBytes", "chainBytes")}))
+
+
+if __name__ == "__main__":
+    main()
