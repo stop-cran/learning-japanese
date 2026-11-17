@@ -1,0 +1,597 @@
+{
+  "schemaVersion": 1,
+  "setId": "connected-text-grammar-intermediate",
+  "grammar": "grammar/connected-text-grammar-intermediate.json",
+  "article": "articles/sentence-composition-and-text-grammar.md",
+  "series": "JLPT N3 grammar series; denominator = 220 Bunpro N3 entries (n3-coverage-matrix, frozen)",
+  "baselineCommit": "e17cb97c",
+  "levelPolicy": "Bunpro precedence (docs/jlpt-levels.md). jlpt 3 where the decisive item is N3 grammar (connectives, なぜなら, である against です in a text); jlpt 4 for transfer items whose decisive form is N4 (passive/causative, てあげる/てもらう, ている/てある/ておいた). No N2 labels: every decisive item has N3 or N4 support.",
+  "primarySources": [
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/すると",
+      "use": "N3 すると: 'and then; thereupon' — what happened next or was found after an action. Meanings and accepted spellings taken over from result-topic-connectives.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/その結果",
+      "use": "N3 その結果: an outcome produced by what came before.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/そこで",
+      "use": "N3 そこで: a step taken in response to the situation.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/ところが",
+      "use": "N3 ところが: contrary to expectation.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/ところで",
+      "use": "N3 ところで: topic change.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/つまり",
+      "use": "N3 つまり: restatement; すなわち accepted as in result-topic-connectives.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/あるいは",
+      "use": "N3 あるいは: alternative 'or'.",
+      "inspectedOnUtc": "see grammar-result-topic-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/却って",
+      "use": "N3 却って: outcome opposite to the intention.",
+      "inspectedOnUtc": "see grammar-correction-contrast-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/一方で",
+      "use": "N3 一方で: two sides both true.",
+      "inspectedOnUtc": "see grammar-correction-contrast-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/代わりに",
+      "use": "N3 代わりに: instead of.",
+      "inspectedOnUtc": "see grammar-correction-contrast-connectives-sources.json"
+    },
+    {
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/vocabs/矢張り",
+      "use": "やはり／矢張り listed by Bunpro as JLPT N3 vocabulary: 'as expected; after all; likewise'. Seen through a search result snippet only (the grammar-point URL returned 404); not fetched.",
+      "inspectedOnUtc": "2026-11-17"
+    }
+  ],
+  "supplementarySources": [
+    {
+      "publisher": "Repository N4 exemplar",
+      "url": "grammar/connected-text-grammar.json",
+      "supports": "Passage + closing-line model and descriptive construction IDs."
+    },
+    {
+      "publisher": "SKM N3 grammar (Part 3, text grammar), as summarised in the frozen plan",
+      "url": "n3-grammar-plan (coordinator work tree), work item N3-16",
+      "supports": "Theme list: connectives in a passage, beginning-end correspondence, narration tense/aspect, tone unity, transfer of voice and giving/receiving."
+    }
+  ],
+  "dispositions": [],
+  "dispositionsNote": "Work item N3-16 owns no rows in set-rows.json. Constructions are text-level decisions; the grammar rows they draw on stay with their owning sets (transferRows), so nothing is double-counted.",
+  "transferRows": [
+    {
+      "entry": "なぜなら〜からだ",
+      "owningSet": "cause-emphasis-purpose",
+      "note": "Used as the decisive item of the text-level construction reason-opener (beginning-end correspondence); not claimed here."
+    },
+    {
+      "entry": "である",
+      "owningSet": "written-register-negation",
+      "note": "Used for register unity in a passage (plain-style); not claimed here."
+    },
+    {
+      "entry": "すると／その結果／そこで／ところが／ところで／つまり／また／あるいは",
+      "owningSet": "result-topic-connectives",
+      "note": "Re-practised as passage connectives with cues after the blank; not claimed here."
+    },
+    {
+      "entry": "かえって／一方で／代わりに",
+      "owningSet": "correction-contrast-connectives",
+      "note": "Re-practised in passages; not claimed here."
+    },
+    {
+      "entry": "Passive, causative, てあげる／てもらう, ている／てある",
+      "owningSet": "N4 sets (passive-participants, causative-perspective, benefactive-requests, transitivity-results)",
+      "note": "N4 transfer items (jlpt 4)."
+    }
+  ],
+  "blankPositions": {
+    "policy": "At least half the exercises have an interior blank whose decisive cue is in a later sentence or spans sentences.",
+    "interiorWithLaterOrSpanningCue": 38,
+    "total": 46,
+    "byExercise": {
+      "connected-text-grammar-intermediate-bakery-afternoon-a": "interior-span",
+      "connected-text-grammar-intermediate-bakery-afternoon-b": "interior-span",
+      "connected-text-grammar-intermediate-kitten-garden-a": "interior-span",
+      "connected-text-grammar-intermediate-kitten-garden-b": "interior-span",
+      "connected-text-grammar-intermediate-street-lights-a": "interior-span",
+      "connected-text-grammar-intermediate-street-lights-b": "closing",
+      "connected-text-grammar-intermediate-trip-email-a": "interior-later",
+      "connected-text-grammar-intermediate-trip-email-b": "interior-later",
+      "connected-text-grammar-intermediate-cooking-class-a": "interior-later",
+      "connected-text-grammar-intermediate-cooking-class-b": "closing",
+      "connected-text-grammar-intermediate-library-rules-a": "interior-later",
+      "connected-text-grammar-intermediate-library-rules-b": "interior-span",
+      "connected-text-grammar-intermediate-library-rules-c": "closing",
+      "connected-text-grammar-intermediate-weekend-survey-a": "interior-later",
+      "connected-text-grammar-intermediate-weekend-survey-b": "interior-span",
+      "connected-text-grammar-intermediate-weekend-survey-c": "closing",
+      "connected-text-grammar-intermediate-early-train-a": "interior-span",
+      "connected-text-grammar-intermediate-early-train-b": "interior-later",
+      "connected-text-grammar-intermediate-sweater-wash-a": "interior-span",
+      "connected-text-grammar-intermediate-sweater-wash-b": "closing",
+      "connected-text-grammar-intermediate-old-cinema-a": "interior-span",
+      "connected-text-grammar-intermediate-old-cinema-b": "interior-later",
+      "connected-text-grammar-intermediate-sisters-study-a": "interior-span",
+      "connected-text-grammar-intermediate-sisters-study-b": "interior-span",
+      "connected-text-grammar-intermediate-bike-station-a": "interior-span",
+      "connected-text-grammar-intermediate-bike-station-b": "closing",
+      "connected-text-grammar-intermediate-empty-houses-a": "interior-later",
+      "connected-text-grammar-intermediate-empty-houses-b": "interior-span",
+      "connected-text-grammar-intermediate-hobby-speech": "interior-later",
+      "connected-text-grammar-intermediate-goal-essay": "interior-later",
+      "connected-text-grammar-intermediate-reading-survey": "interior-span",
+      "connected-text-grammar-intermediate-cleanup-notice": "interior-span",
+      "connected-text-grammar-intermediate-diary-sister": "interior-span",
+      "connected-text-grammar-intermediate-picture-books": "interior-later",
+      "connected-text-grammar-intermediate-meeting-plan": "interior-later",
+      "connected-text-grammar-intermediate-dog-walk": "interior-later",
+      "connected-text-grammar-intermediate-hotel-directions": "interior-later",
+      "connected-text-grammar-intermediate-new-neighbor": "interior-later",
+      "connected-text-grammar-intermediate-suitcase-sister": "interior-span",
+      "connected-text-grammar-intermediate-bike-repair": "interior-span",
+      "connected-text-grammar-intermediate-window-wind": "interior-later",
+      "connected-text-grammar-intermediate-classroom-windows": "interior-later",
+      "connected-text-grammar-intermediate-kitchen-light": "interior-later",
+      "connected-text-grammar-intermediate-late-inn": "interior-later",
+      "connected-text-grammar-intermediate-guest-room": "interior-local",
+      "connected-text-grammar-intermediate-cold-drinks": "interior-local"
+    }
+  },
+  "groups": [
+    {
+      "groupId": "connected-text-grammar-intermediate-what-follows",
+      "foundationRequirements": "none",
+      "reason": "Narrative sequencing of events and responses; time-and-linking already holds sequence connectives.",
+      "chapterSuggestion": "time-and-linking"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-expectation-or-topic",
+      "foundationRequirements": "none",
+      "reason": "ところが／ところで in letters and conversation.",
+      "chapterSuggestion": "reports-and-conversation"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-restate-add-or",
+      "foundationRequirements": "none",
+      "reason": "Summaries, additions and alternatives in notices and reports.",
+      "chapterSuggestion": "reports-and-conversation"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-contrary-or-confirmed",
+      "foundationRequirements": "none",
+      "reason": "Reported experiences measured against an expectation.",
+      "chapterSuggestion": "reports-and-conversation"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-both-sides-or-instead",
+      "foundationRequirements": "none",
+      "reason": "Reports that contrast or replace, decided by later sentences.",
+      "chapterSuggestion": "reports-and-conversation"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-opening-and-closing",
+      "foundationRequirements": "none",
+      "reason": "Reason and consequence sentences in reports and essays.",
+      "chapterSuggestion": "reports-and-conversation"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-register-unity",
+      "foundationRequirements": "none",
+      "reason": "Speeches, essays, reports and notices in one consistent style.",
+      "chapterSuggestion": "reports-and-conversation"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-voice-in-text",
+      "foundationRequirements": "none",
+      "reason": "Narrative transfer of N4 voice; alternative chapters: passive-voice or causation-and-agency.",
+      "chapterSuggestion": "time-and-linking"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-benefit-direction",
+      "foundationRequirements": "none",
+      "reason": "Narrative transfer of N4 giving and receiving; alternative chapter: giving-and-favors.",
+      "chapterSuggestion": "time-and-linking"
+    },
+    {
+      "groupId": "connected-text-grammar-intermediate-state-in-narration",
+      "foundationRequirements": "none",
+      "reason": "Narrative transfer of N4 ている／てある; alternative chapter: actions-results-and-stages.",
+      "chapterSuggestion": "time-and-linking"
+    }
+  ],
+  "counts": {
+    "exercises": 46,
+    "byLevel": {
+      "N3": 32,
+      "N4": 14
+    },
+    "groups": 10,
+    "facets": 23,
+    "relationships": 10,
+    "constructions": 23,
+    "passages": 31
+  },
+  "vocabulary": {
+    "proposal": "n3-work/vocab-connected-text-grammar-intermediate.json",
+    "policy": "Local displayed-form readings/glosses; no canonical word references; blank protected as grammar-target."
+  },
+  "reviewLimits": [
+    "No native-speaker review was performed.",
+    "No physical-device rendering check was performed.",
+    "Model-authored; independent model reviews recorded by the coordinator."
+  ],
+  "independentReview": {
+    "status": "complete",
+    "method": "Three blind single-facet reviews, each by a fresh agent with a different requested model family, given only the frozen render, raw set JSON, article and ledger: A linguistic correctness, B consistency and quiz safety, C learner comprehensibility. Findings were consolidated by the coordinator, applied by the author, and sent back to the original reviewers for a per-finding disposition.",
+    "actualModel": null,
+    "actualModelNote": "The runtime does not expose the served model; the requested model is recorded.",
+    "notPerformed": [
+      "native-speaker review",
+      "physical-phone rendering check",
+      "Android importer run"
+    ],
+    "reviews": [
+      {
+        "facet": "A linguistic correctness",
+        "requestedModel": "gpt-6.1-sol",
+        "originalVerdict": "NEEDS FIX",
+        "finalVerdict": "CLEAN after three rounds",
+        "findings": [
+          {
+            "id": "CTGI-A-01",
+            "severity": "H",
+            "location": "window-air, entrance-light",
+            "claim": "A ように purpose clause plus a later 'mother did it' sentence does not make 開いていた／ついていた wrong; the found state is compatible with the arrangement.",
+            "change": "Both items replaced by classroom-windows (teacher's note) and late-inn (staff waited up): key てあった, intransitive ていた accepted as an additionalCorrectOption, distractor 〜ておいた (wrong with the が-marked subject). Prepared-action items guest-room and cold-drinks added (key ておいた).",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-02",
+            "severity": "M",
+            "location": "construction labels, rationales, article",
+            "claim": "ていた was described as wrong whenever an arrangement existed.",
+            "change": "ていた now reports a state without saying how it arose; てあった foregrounds the arrangement. window-wind and kitchen-light keep ていた because wind or forgetting contradicts an intentional てあった.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-03",
+            "severity": "H",
+            "location": "bakery-afternoon-a/b",
+            "claim": "その結果、店長は〜ことにした is normal Japanese: a decision can be a result.",
+            "change": "The passage became the manager's blog with the plan 〜てみようと思います in bakery-b; round 3 then removed その結果 from bakery-b (see CTGI-A-R2-03).",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-04",
+            "severity": "H",
+            "location": "street-lights-a",
+            "claim": "すると／そうすると also fits the outcome slot.",
+            "change": "すると moved to additionalCorrectOptions; the background sentence now precedes the installation sentence.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-05",
+            "severity": "L",
+            "location": "article 代わりに",
+            "claim": "Only the substitution sense was described.",
+            "change": "Qualified as the substitution sense used here; the exchange/compensation sense is mentioned.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-06",
+            "severity": "L",
+            "location": "article なぜなら",
+            "claim": "なぜなら was tied to 〜からだ only.",
+            "change": "'In these plain-style examples' pairs with 〜からだ／〜からである; polite 〜からです acknowledged.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-07",
+            "severity": "L",
+            "location": "dog-walk",
+            "claim": "つれて行かせる was not accepted.",
+            "change": "Accepted.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-R2-01",
+            "severity": "H",
+            "location": "guest-room",
+            "claim": "開いていた read ひらいていた permits 窓を少し開いていた, so を alone did not exclude the printed distractor.",
+            "change": "The distractor is printed in kana as あいていた (option and instruction); the rationale says 開く read あく is intransitive.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-R2-02",
+            "severity": "M",
+            "location": "guest-room",
+            "claim": "次の朝、起きてきた友達 placed the friend's waking before the stay.",
+            "change": "Now 土曜日の昼に着いた友達は、部屋に入ると…; explanation English updated.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-R2-03",
+            "severity": "H",
+            "location": "bakery-afternoon-b",
+            "claim": "A present intention can itself result from the trial, so その結果 was not categorically wrong before 〜てみようと思います.",
+            "change": "その結果 removed from bakery-b's candidates (すると／そこで, key そこで); the すると rationale says it does not introduce the writer's own decision or plan.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-A-R2-04",
+            "severity": "M",
+            "location": "article, bakery-b explanation, ledger designNotes",
+            "claim": "'その結果 and すると need an outcome that has already happened' is false; both allow prospective consequences.",
+            "change": "All such claims removed; その結果 = causal result, すると = next development or discovery, そこで = deliberate responsive step.",
+            "disposition": "resolved"
+          }
+        ]
+      },
+      {
+        "facet": "B consistency and quiz safety",
+        "requestedModel": "grok-4.7",
+        "originalVerdict": "NEEDS FIX",
+        "finalVerdict": "CLEAN after three rounds; CTGI-B-07 closed by coordinator decision",
+        "findings": [
+          {
+            "id": "CTGI-B-01",
+            "severity": "H",
+            "location": "22 two-/three-way items and bakery-b",
+            "claim": "Each sibling passage printed the other slot's answer, which was a candidate of this item, so items could be solved by elimination ('already used').",
+            "change": "Every untested slot now prints wording outside the item's candidate set or was dropped; n3-work/elimcheck.py reports 0.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-02",
+            "severity": "M",
+            "location": "library-rules vs weekend-survey",
+            "claim": "Both reused one three-slot frame (また＋も, つまり＋ということだ, あるいは＋のどちらか).",
+            "change": "weekend-survey reframed: 〜か、あるいは〜か without のどちらか, また without も, restatement as a closing 〜のだ summary.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-03",
+            "severity": "M",
+            "location": "window-air, entrance-light",
+            "claim": "Both arranged-result contexts shared the ように＋母が〜ておいてくれた frame.",
+            "change": "Replaced by classroom-windows and late-inn with different scenes and cues (see CTGI-A-01).",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-04",
+            "severity": "M",
+            "location": "street-lights-a",
+            "claim": "すると was a printed distractor although it fits.",
+            "change": "Moved to additionalCorrectOptions (see CTGI-A-04).",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-05",
+            "severity": "L",
+            "location": "bike-repair vocabulary",
+            "claim": "いらない lacked headword 要る.",
+            "change": "Headword 要る, gloss 'not need'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-06",
+            "severity": "L",
+            "location": "picture-books vocabulary",
+            "claim": "出して imported 読む.",
+            "change": "Glossed 'putting out (声に出して: aloud)'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-07",
+            "severity": "L",
+            "location": "bakery-a, street-lights-a (later also classroom-windows, late-inn)",
+            "claim": "The instruction names three candidates while choice mode shows two buttons (one accepted answer is an additionalCorrectOption).",
+            "change": "No change: typed mode needs the full candidate list, RTC kekka-factory-output is precedent, and a note would leak the answer.",
+            "disposition": "closed by coordinator decision"
+          },
+          {
+            "id": "CTGI-B-08",
+            "severity": "L",
+            "location": "cold-drinks vocabulary",
+            "claim": "うち in 朝のうちに was glossed 'our (family)'.",
+            "change": "Headword 内, gloss 'within; while (朝のうちに: while it is still morning)'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-B-09",
+            "severity": "L",
+            "location": "weekend-survey-a/b/c vocabulary",
+            "claim": "出す in 紙に書いて出す was glossed 'put out'.",
+            "change": "Glossed 'hand in; submit'.",
+            "disposition": "resolved"
+          }
+        ]
+      },
+      {
+        "facet": "C learner comprehensibility",
+        "requestedModel": "claude-opus-5.5",
+        "originalVerdict": "NEEDS FIX",
+        "finalVerdict": "CLEAN after three rounds; CTGI-C-11 closed by coordinator decision",
+        "findings": [
+          {
+            "id": "CTGI-C-01",
+            "severity": "L",
+            "location": "window-wind",
+            "claim": "ひらいていた not accepted.",
+            "change": "Accepted.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-02",
+            "severity": "L",
+            "location": "つく／つける items",
+            "claim": "付 spellings not accepted.",
+            "change": "付いていた and 付けてあった accepted where the forms are accepted.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-03",
+            "severity": "L",
+            "location": "reading-survey vocabulary",
+            "claim": "中でも was split.",
+            "change": "Glossed as one unit 'among them; above all'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-04",
+            "severity": "M",
+            "location": "article voice",
+            "claim": "The voice cue list did not state the general rule.",
+            "change": "Rule first (に-marked actor affecting the narrator → passive; narrator having someone act → causative), cues as examples.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-05",
+            "severity": "M",
+            "location": "article examples",
+            "claim": "Examples restated exercise scenes and answers.",
+            "change": "New scenes only.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-06",
+            "severity": "L",
+            "location": "article format",
+            "claim": "Examples did not follow the host blockquote format.",
+            "change": "One Japanese sentence plus English line per construction.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-07",
+            "severity": "L",
+            "location": "article placement",
+            "claim": "Heading/placement unspecified.",
+            "change": "One '## Reading a whole passage before filling a blank' section inserted before '## Scope and sources'; intro count and Scope paragraph updated by the coordinator.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-08",
+            "severity": "L",
+            "location": "article wording",
+            "claim": "'A later sentence' was too narrow.",
+            "change": "'If the passage shows…'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-09",
+            "severity": "L",
+            "location": "early-train-a/b, sweater-wash-a/b, diary-sister, kitten-a/b, old-cinema-a",
+            "claim": "Unnatural explanation English.",
+            "change": "Smoothed.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-10",
+            "severity": "L",
+            "location": "vocabulary glosses",
+            "claim": "なお, やさしさ, うれしい, そば lacked suitable glosses.",
+            "change": "なお 'note that; additionally', そば 'beside', うれしい 'glad'; やさしさ/うれしかった no longer occur.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C-11",
+            "severity": "L",
+            "location": "bakery-b, street-lights-a",
+            "claim": "Two buttons vs three listed candidates.",
+            "change": "Same as CTGI-B-07.",
+            "disposition": "closed by coordinator decision"
+          },
+          {
+            "id": "CTGI-C2-01",
+            "severity": "M",
+            "location": "guest-room",
+            "claim": "Timeline and English (see CTGI-A-R2-02).",
+            "change": "Fixed; 'opened the window a little in advance'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C2-02",
+            "severity": "M",
+            "location": "street-lights-a, bakery-a, article",
+            "claim": "'Directly following' does not fit changes over この一年で.",
+            "change": "すると 'simply presents … as what came after'; 'directly' removed.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C2-03",
+            "severity": "L",
+            "location": "street-lights-b",
+            "claim": "'And then, the road was…' unnatural.",
+            "change": "'When I did, I found the road much brighter…'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C2-04",
+            "severity": "L",
+            "location": "kitten-b, guest-room",
+            "claim": "Awkward English.",
+            "change": "Rewritten.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C2-05",
+            "severity": "L",
+            "location": "bike-station-a/b, late-inn vocabulary",
+            "claim": "楽しみ, お疲れさま, 玄関 glossed in the wrong sense.",
+            "change": "'pleasure; something enjoyable', 'you must be tired; thanks for coming all this way', 'front entrance'.",
+            "disposition": "resolved"
+          },
+          {
+            "id": "CTGI-C2-06",
+            "severity": "L",
+            "location": "article",
+            "claim": "Section not yet in the host article; trailing levels paragraph without links.",
+            "change": "Levels paragraph moved into Scope and sources with Bunpro links; intro count updated.",
+            "disposition": "resolved"
+          }
+        ]
+      }
+    ]
+  },
+  "designNotes": [
+    "No elimination by 'already used': in every passage, the sibling slot is printed with wording outside the item's candidate set (instruction list, option labels, additionalCorrectOptions and acceptedAnswers, substrings included). Sibling passages under one example key may differ slightly. elimcheck reports 0.",
+    "Arranged result: てあった is the base answer and the intransitive 〜ていた is an accepted additionalCorrectOption (it reports the state without asserting how it arose). The base distractor is the preparer's action 〜ておいた, which is categorically wrong with a が-marked subject and a narrator who did not prepare it. The two arranged contexts use different scenes and cues (classroom-windows: the teacher's note on the board; late-inn: staff waiting up after a phone call).",
+    "Spontaneous states (window-wind, kitchen-light): the wind or forgetting contradicts a deliberate てあった, so 〜ていた is the only fit.",
+    "Prepared action (guest-room, cold-drinks): the narrator is the doer and the object is marked with を, so the intransitive 〜ていた is grammatically excluded and 〜ておいた is the key. guest-room prints the distractor in kana (あいていた) because 開いていた could be read ひらいていた, which is transitive (窓をひらく).",
+    "bakery-afternoon-b: the blank introduces the writer's own decision (〜てみようと思います). Its candidates are only すると／そこで (round 3): その結果 was removed because a present intention can itself be a result of the trial. すると presents the next development or discovery after an event and does not introduce the writer's own plan; そこで (a deliberate step chosen in response) is the key.",
+    "bakery-afternoon-a and street-lights-a: その結果 is the key; すると／そうすると is also accepted, because it simply presents what came after the event (additionalCorrectOptions, as in result-topic-connectives kekka-factory-output). The instruction names all three candidates for typed mode.",
+    "weekend-survey reframed so it no longer shares the library-rules frame: the alternative is 〜か、あるいは〜か (no のどちらか), the addition has no も, and the restatement is a closing summary without ということだ／ことになる.",
+    "Example keys changed in round 2: window-air -> classroom-windows, entrance-light -> late-inn; new keys guest-room and cold-drinks (prepared-action facet)."
+  ]
+}
