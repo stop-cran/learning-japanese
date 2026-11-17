@@ -776,6 +776,8 @@ The second sentence weighs two features rather than replacing quietness or claim
 A drawback can also come first, as in **家賃が高いかわりに、会社に近い**, "The rent is high, but in return it is close to work."
 Compare **高いかわりに** with **静かなかわりに**; use な after a na-adjective.
 These are not all instances of the same "instead of" translation, and かわり is not a universal replacement for neutral "but."
+At N3, verb + 代わりに (one thing replaces another, or is given in return) is set against 一方で (two facts side by
+side, both true) in [Correction and contrast connectives](correction-and-contrast-connectives.md#3-both-sides-or-instead-一方で-and-代わりに).
 
 ### わりに and くせに: an expected standard or a reproachful contrast
 

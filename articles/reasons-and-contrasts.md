@@ -342,6 +342,8 @@ The hours are an additional feature. Station access is not presented as their ca
 **開いています（あいています）** means is open here; **夜（よる）** is night.
 Do not infer an event sequence or a universal rule that every surrounding judgment must have the same
 positive/negative evaluation.
+At N3, **もっとも** limits what was just said rather than adding to it; it is set against それに in
+[Correction and contrast connectives](correction-and-contrast-connectives.md#もっとも-mind-you-having-said-that).
 
 ### それで: a result, or an invitation to continue
 
