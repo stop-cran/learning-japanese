@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "recordedOnUtc": "2026-11-17",
+  "status": "local-jvm-acceptance-passed; release-gate-open",
+  "contentCommit": "303667c9d4c5b96904fd1718b140fd3b7417def9",
+  "appCommit": "4db1297c50984dff29499768b2da7cc30e18d850",
+  "archive": {
+    "localPathFromWorkspace": "n3-work/acceptance/learning-japanese-303667c9-lf.zip",
+    "command": "git -c core.autocrlf=false archive --format=zip --prefix=repository/ --output=<archive> 303667c9d4c5b96904fd1718b140fd3b7417def9",
+    "sha256": "912a9dfc4e19653bc5eedbbd4aaae55fab5ee6a63060b3293ea71362f5c37e6a",
+    "contentVersion": "9320b98945604bbd",
+    "manifestSha256": "c84439612dba14b2c3b35ef00fd438507e51b0c87204d77f48693e5114169980",
+    "entries": 8805,
+    "files": 8790,
+    "retainedFiles": 8784,
+    "retainedBytes": 49780809,
+    "inflatedBytes": 50049149,
+    "compressedBytes": 31785737,
+    "largestRuntimeFileBytes": 813482,
+    "largestGrammarFileBytes": 478993,
+    "gitBlobVerification": "All 8790 file payloads matched the pinned commit's Git blob IDs; the ZIP comment names that commit.",
+    "publication": "local candidate only; not uploaded and not a public release"
+  },
+  "jvmTests": {
+    "runtime": "Microsoft OpenJDK 17.0.21.0.2+1; Gradle 8.13; Windows",
+    "jdkArchiveSha256": "49154292866386b2f4f09a3ecf3be07ab80a419149c84ec1d4419b9eec9e4b64",
+    "command": "gradlew.bat --no-daemon --console=plain --max-workers=2 -I <isolated-build-dir.gradle> -PcoreOnly -Pkotlin.compiler.execution.strategy=in-process :core:cleanTest :core:test --tests *RealContentTest* --tests *N3ArchiveAcceptanceTest* --tests *GrammarScopeTest* --tests *GrammarReadinessTest*",
+    "buildDirectoryFixture": "isolated-build-dir.gradle",
+    "isolatedInputs": "Extract the pinned archive to <N3_ACCEPTANCE_WORKING_ROOT>/learning-japanese (rename repository/), git init that directory, and create <N3_ACCEPTANCE_WORKING_ROOT>/kanji-cards-android/core. All 8790 extracted payloads and the publication-fixture Git enumeration were verified against the archive. N3_ACCEPTANCE_BUILD_ROOT names a separate disposable output directory. Neither root is the live content working tree.",
+    "testSetup": "Copy N3ArchiveAcceptanceTest.kt into the pinned app core/src/test/kotlin/io/github/stopcran/kanji/core/ for this run only; remove it afterward. The app production sources are unchanged.",
+    "fixture": "N3ArchiveAcceptanceTest.kt",
+    "fixtureSha256": "366c19ee38c319774baee6c91c0d3fe0af9d0918cc59f79d9c1196b805dd215f",
+    "fixtureInput": "N3_ACCEPTANCE_ARCHIVE is required, SHA-256-pinned, and never assumption-skipped.",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "reports": [
+      {
+        "path": "TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+        "tests": 3,
+        "sha256": "f0b6e9407aeb503f825a58acc711d010cc5ffab641b1faa3ef16a3b793eefa14"
+      },
+      {
+        "path": "TEST-io.github.stopcran.kanji.core.N3ArchiveAcceptanceTest.xml",
+        "tests": 4,
+        "sha256": "b7ceb43885fca8a9373c7b09187f8cce2ce9358869a1844da5f2d60683480761"
+      },
+      {
+        "path": "TEST-io.github.stopcran.kanji.core.GrammarScopeTest.xml",
+        "tests": 3,
+        "sha256": "9843b948dc48d411fb516dcc9489b40d63da9d60f856bb64f8b241c6e8a631b7"
+      },
+      {
+        "path": "TEST-io.github.stopcran.kanji.core.GrammarReadinessTest.xml",
+        "tests": 7,
+        "sha256": "798a897f80a72f79651d79a14b100ede01672e15d877a92e8028791feec861fd"
+      }
+    ],
+    "verified": [
+      "Production SafeZip default limits and ContentParser accept the exact complete archive without problems.",
+      "All 108 grammar sets and 3336 exercises import; 1139 exercises are N3-labelled.",
+      "The 20 new sets contain 905 exercises: 888 N3, 14 N4, 3 N5; all 125 new groups resolve to curriculum chapters.",
+      "N3 cumulative new intake contains 2711 N3/N4/N5 exercises and excludes all 104 N2 exercises; started N2 reviews remain available.",
+      "All new groups have coherent N3 intake, including mixed-level groups; real foundation requirements still block new introductions without blocking started reviews.",
+      "Unguided practice remains available; all new accepted answers fit 80 UTF-16 units; 25 deterministic choice samples per new exercise preserve correct labels, accepted alternatives and the 2-4 option range."
+    ],
+    "notEquivalentTo": [
+      "An Android instrumentation or ContentSync/Room run",
+      "Physical-phone UI, IME, accessibility or responsiveness acceptance",
+      "Public network synchronization or native-speaker review"
+    ]
+  },
+  "attempts": [
+    "Initial unchanged RealContentTest: 3 passed, zero skips.",
+    "First combined run failed before tests because Gradle could not delete the synced build/test-results/test/binary directory; no content or app failure was established.",
+    "Retry moved only build outputs outside OneDrive and used --rerun-tasks; all 17 selected tests executed and passed. Production app sources and limits were unchanged.",
+    "After unrelated live-checkout article/manifest edits appeared, a final repeat used isolated inputs extracted from the pinned archive and :core:cleanTest :core:test. All 17 tests executed with zero skips; the retained XML belongs to this isolated-input run, not the live-checkout run."
+  ],
+  "remainingGates": {
+    "V1": "partial: production JVM importer, scope and availability passed; native ContentSync/Room and phone flow unverified",
+    "V2": "blocked: no connected physical phone for large-font passage, scrolling and screen-reader checks",
+    "V3": "partial: all typed variants fit the limit; physical-phone IME and chunk-label usability unverified",
+    "V4": "partial: real choice variants passed; physical-phone layout and feedback unverified; no five- or six-option N3 exercises shipped",
+    "V5": "partial: exact archive budgets and hard limits passed; phone responsiveness at full volume unverified",
+    "publicSync": "not performed: local branch is unpushed; no public release was requested or created",
+    "nativeSpeaker": "not performed; model reviews are not native-speaker acceptance"
+  },
+  "deviceProbe": {
+    "command": "adb devices -l",
+    "version": "37.0.1-15733141",
+    "result": "List of devices attached; no device entries",
+    "physicalPhoneAcceptance": "not performed"
+  }
+}

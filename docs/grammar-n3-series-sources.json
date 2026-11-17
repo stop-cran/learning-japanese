@@ -3,8 +3,8 @@
   "series": "JLPT N3 grammar exercise series (local work items N3-01 to N3-17)",
   "recordedOnUtc": "2026-11-17",
   "baselineCommit": "e17cb97c53ca4e3193dae5e11b52ba517fe86e76",
-  "auditedCommit": "a211954fc657050ccf783f40894fa9839e99d115",
-  "status": "content-complete; model-reviewed; native-speaker review, physical-phone acceptance and Android importer run not performed",
+  "auditedCommit": "303667c9d4c5b96904fd1718b140fd3b7417def9",
+  "status": "content-complete; model-reviewed; production JVM importer verified; release-gate-open",
   "scopeStatement": "No official JLPT grammar list exists. Coverage is defined against the three official grammar item types and a frozen denominator of 220 Bunpro N3 entries, cross-checked against JLPT Sensei N3 and the Shin Kanzen Master N3 grammar syllabus. Levels are editorial estimates; nothing here is a claim of exam readiness.",
   "sources": {
     "primary": "Bunpro N3 (220 entries), per docs/jlpt-levels.md source precedence",
@@ -2611,13 +2611,14 @@
   "gatesNotPerformed": [
     "Native-speaker review: not performed. All reviews were independent model reviews (three facets per set, rotated model families).",
     "Physical-phone acceptance (long passages and composition prompts at large font size): not performed.",
-    "Android importer run against this content revision: not performed.",
-    "Public sync and immutable release ZIP: not performed; the branch is local and unpushed.",
-    "App work item V1-V5 (n3-grammar-plan/app-work-item-n3-grammar.md): not verified on a device."
+    "Native Android ContentSync/Room run: not performed. The production JVM SafeZip/ContentParser importer passed against the pinned archive; see acceptanceRecord.",
+    "Public sync: not performed; the branch is local and unpushed. A complete immutable local ZIP with SHA-256 and exact budgets is recorded in acceptanceRecord; it is not a public release.",
+    "App work item V1-V5 (n3-grammar-plan/app-work-item-n3-grammar.md): partial JVM/static evidence only; physical-phone checks remain open."
   ],
   "limits": [
     "Levels are editorial estimates under Bunpro precedence; JLPT publishes no grammar list.",
     "Typed mode hides options, so every instruction names its candidates; choice mode shows an additional correct label in about 20% of appearances.",
     "Composition and text-grammar items are proxies for the official formats (see officialItemTypes)."
-  ]
+  ],
+  "acceptanceRecord": "docs/grammar-n3-acceptance/receipt.json"
 }
