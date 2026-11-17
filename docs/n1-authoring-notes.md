@@ -111,7 +111,14 @@ the B135 review:
 - Packet check logs carry no reviewer attributions, so a blind reviewer
   cannot tell who asked for a check.
 
-## Batch 135: review closed, publication pending
+## Batch 135: published
+
+Review-closed and published at `7630757f`. The
+[Validate content run 44203191487](https://github.com/stop-cran/learning-japanese/actions/runs/44203191487)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,816 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-135-publication/provenance.json). Delivery is now
+**287/1,228**, with **941 remaining**.
 
 Fifteen absent frozen members: 博 厳 及 姿 履 巡 弾 彫 恵 憶 我 揚 救 暇 模
 (rows 129–577). They are the first fifteen, in source-row order, of the
@@ -145,9 +152,7 @@ warnings on untouched Dictionary lines of existing articles), quiz safety,
 manifest rebuild and budget. The reading-exposure audit reports no
 production, padded-session or one-holder hit apart from three disclosed
 KANJIDIC2 name-only readings. Android JVM tests were not run (no JDK), and no
-native or phone acceptance is claimed. Published delivery stays
-**272/1,228** until CI and ZIP verification; publication would make it
-**287/1,228**, with **941 remaining**.
+native or phone acceptance is claimed.
 
 ## Batch 134: published
 
