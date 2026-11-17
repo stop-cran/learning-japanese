@@ -1,0 +1,59 @@
+{
+  "status": "QUARANTINED_PROMPT_ONLY_AUTOPILOT_LAUNCH_NOT_REVIEW",
+  "run": "N1-B134-CLAUDE-FRESH-002",
+  "session": "adb64370-2aa5-4eb8-9e28-c5cf3111bf2b",
+  "candidate": "355cccb840d22e7313e79f234eb93d1367e00352",
+  "events": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-002-launch-hold-001\\events.jsonl",
+    "sha256": "2377dcd04f035a0239c212542c121c2d5fce8c5bc9af489c33f8db43bb60307c",
+    "bytes": 268928
+  },
+  "eventTypes": {
+    "session.start": 1,
+    "session.permissions_changed": 1,
+    "session.mode_changed": 1,
+    "session.info": 1,
+    "session.warning": 2,
+    "hook.start": 21,
+    "hook.end": 21,
+    "instruction.update": 1,
+    "session.mode_notice_delivered": 1,
+    "user.message": 6,
+    "system.message": 1,
+    "assistant.turn_start": 7,
+    "session.usage_record": 7,
+    "assistant.message": 7,
+    "tool.execution_start": 1,
+    "tool.execution_complete": 1,
+    "assistant.turn_end": 7,
+    "session.usage_checkpoint": 6
+  },
+  "extraAutopilotUserTurns": 5,
+  "promptReads": 1,
+  "coreReads": 0,
+  "actualSelectedModel": "claude-opus-5.5",
+  "contextTier": "long_context",
+  "maxPromptTokens": 952000,
+  "peakInputTokens": 83268,
+  "compactionEvents": [],
+  "reportCreated": false,
+  "reviewAccepted": false,
+  "failureReceipt": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\b134-lifecycle-run-a2b00d975a8f4f62a6b664849527190d\\receipt.json",
+    "sha256": "294fd525bed1b68ab0f00573f28ce2cebac3226e58dfbb40ee4e69281b2f0c24"
+  },
+  "cause": "Coordinator chose autopilot at launch despite a mandatory prompt-only wait. Host continuation prompts violated the frozen launch/bootstrap contract.",
+  "remedy": "Do not reuse this session. A separately admitted FRESH-003 pair must use interactive launch mode, unchanged measured core and all original guards.",
+  "limits": "Raw events remain local. No source review, semantic verdict, closure or delivery credit.",
+  "memory": {
+    "freeRamBeforeBytes": 4838297600,
+    "freeRamAfterBytes": 4832882688,
+    "minimumObservedFreeRamBytes": 4832878592,
+    "peakWorkingSetBytes": 24694784,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  }
+}

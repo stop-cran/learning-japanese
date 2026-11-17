@@ -1,0 +1,117 @@
+{
+  "purpose": "capacity-forecast-only",
+  "reviewAccepted": false,
+  "coreManifestSha256": "49db3ba57325e7913a533b3b11b7ad810e6085123474327b037a6de7c7c31719",
+  "trials": [
+    {
+      "caps": {
+        "D": 25,
+        "E": 10
+      },
+      "measuredCoreBoundIncludingDrift": 422752,
+      "articleForecastIncludingEnvelopes": 155395,
+      "optionalReserve": 20000,
+      "bootstrapAllowance": 80000,
+      "reportAllowance": 30000,
+      "startupForecast": 708147,
+      "outcome": "HOLD_ESTIMATE"
+    },
+    {
+      "caps": {
+        "D": 20,
+        "E": 10
+      },
+      "measuredCoreBoundIncludingDrift": 422752,
+      "articleForecastIncludingEnvelopes": 133798,
+      "optionalReserve": 20000,
+      "bootstrapAllowance": 80000,
+      "reportAllowance": 30000,
+      "startupForecast": 686550,
+      "outcome": "PASS_ESTIMATE"
+    },
+    {
+      "caps": {
+        "D": 15,
+        "E": 10
+      },
+      "measuredCoreBoundIncludingDrift": 422752,
+      "articleForecastIncludingEnvelopes": 111756,
+      "optionalReserve": 20000,
+      "bootstrapAllowance": 80000,
+      "reportAllowance": 30000,
+      "startupForecast": 664508,
+      "outcome": "PASS_ESTIMATE"
+    },
+    {
+      "caps": {
+        "D": 10,
+        "E": 10
+      },
+      "measuredCoreBoundIncludingDrift": 422752,
+      "articleForecastIncludingEnvelopes": 88893,
+      "optionalReserve": 20000,
+      "bootstrapAllowance": 80000,
+      "reportAllowance": 30000,
+      "startupForecast": 641645,
+      "outcome": "PASS_ESTIMATE"
+    },
+    {
+      "caps": {
+        "D": 10,
+        "E": 5
+      },
+      "measuredCoreBoundIncludingDrift": 422752,
+      "articleForecastIncludingEnvelopes": 74277,
+      "optionalReserve": 20000,
+      "bootstrapAllowance": 80000,
+      "reportAllowance": 30000,
+      "startupForecast": 627029,
+      "outcome": "PASS_ESTIMATE"
+    }
+  ],
+  "chosenCaps": {
+    "D": 20,
+    "E": 10
+  },
+  "completionDeviations": [],
+  "method": "Larger exact-core actual input growth across both current model families, plus ten percent and 12000 drift tokens; unchanged full-article bounds and reserves.",
+  "limits": "Not a tokenizer guarantee or reviewer admission. No transfer to changed core bytes. Full lifecycle, bootstrap identity, zero compaction and actual phase-two gates still apply.",
+  "measurements": {
+    "claude": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\meter-011-claude-final-001\\audit.json",
+      "sha256": "bedab1ae4f9121529a5f2309cf2a0e406b20a835291862f2b099262bd07533aa"
+    },
+    "gpt": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\meter-011-gpt-final-001\\audit.json",
+      "sha256": "5162bcc404d35b90a90d9ce75d50667e00dc40effc8549915003c06732e6ed42"
+    }
+  },
+  "preparation": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\token-meter-011-preparation-002\\preparation.json",
+    "sha256": "af7d4568f464f853f77bd7975539e4ee69d36aa3cd45b83a9db0f894e87c3909"
+  },
+  "articleBounds": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\projected-successor-008\\capacity-measurement-002.json",
+    "sha256": "417f0b6f0834129eb6c0a1754279db97c1f78f1e4be99b651fa97db307c278c2"
+  },
+  "losslessVerification": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\successor-011-verification-001\\verification.json",
+    "sha256": "7ad06c861b4af2b2f722e54e6e200531919fb6cad6f8cd81541ea2d291571577"
+  },
+  "memory": {
+    "freeRamBeforeBytes": 4993687552,
+    "freeRamAfterBytes": 4986245120,
+    "minimumObservedFreeRamBytes": 4986245120,
+    "peakWorkingSetBytes": 27066368,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\meter-011-capacity-001\\producer.py",
+    "sha256": "3c988804cc211b2b7f0f5740cf5c9ae726ff05af880a86188e63d831facdf0fc",
+    "bytes": 3743
+  }
+}

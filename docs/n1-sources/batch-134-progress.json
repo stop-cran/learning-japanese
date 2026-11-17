@@ -2,34 +2,86 @@
   "batch": 134,
   "base": "e17cb97c53ca4e3193dae5e11b52ba517fe86e76",
   "governingIssue": 60,
-  "status": "local-unreviewed-authoring-candidate",
-  "members": ["紫"],
-  "sourceRows": [831],
-  "supports": [["紫", "紫"]],
-  "runtimePublished": false,
-  "reviewClosed": [],
+  "status": "textual-review-closed-publication-pending",
+  "members": [
+    "紫"
+  ],
+  "sourceRows": [
+    831
+  ],
+  "supports": [
+    [
+      "紫",
+      "紫"
+    ]
+  ],
+  "initialSnapshot": "ba80afffc20a72d31be68b355b6f90aab36a5726",
+  "reviewedSnapshot": "cc374051efa75199212a87c9abf08d7391419055",
+  "reviewClosed": [
+    "紫"
+  ],
   "published": [],
+  "runtimePublished": false,
+  "manifestSha256": "ded4b9b95c599f2e245852a60014b519c55e00ca4b23371373c9cd8b3d91808c",
+  "contentVersion": "efd618805bd1ebb0",
   "accounting": {
     "frozenPendingRecords": 1228,
     "publishedPendingRecordsWithCards": 271,
     "publishedN1Additions": 265,
     "n2Placements": 6,
     "undelivered": 957,
-    "localUnreviewedDrafts": 1,
+    "reviewClosedPendingRecordsWithCards": 272,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 956,
     "overallN1TaskComplete": false
   },
-  "authorWarnings": {
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "mode": "fresh-independent-reviews-plus-authorized-descendant-confirmations",
+    "originalReviewerConfirmation": false,
+    "finalRuns": [
+      "N1-B134-CLAUDE-FRESH-003",
+      "N1-B134-GPT-FRESH-003"
+    ],
+    "closure": "../n1-reviews/batch-134-closure/provenance.json",
+    "closureProvenanceSha256": "c2bcaa5e8b9fc41968939167501cce9af1afb3e593b43fdb042a7b0e07b445d9",
+    "historicalReportsPreserved": true,
+    "remainingActionableFindings": [],
+    "remainingConsequentialClaims": [],
+    "confirmationRuns": [
+      "N1-B134-CLAUDE-REVISION-002",
+      "N1-B134-GPT-REVISION-002"
+    ],
+    "authorizedDescendantConfirmations": true
+  },
+  "originalAuthorProgress": "../n1-reviews/batch-134-closure/verification/original-progress.json",
+  "originalAuthorWarnings": {
     "initialQuizSafety": "38 warnings for precautions not explicitly named in card Notes; preserved in author-gates-001, corrected by grouped explanation before author-gates-002.",
     "finalQuizSafety": "0 warnings; 11 pre-existing cards use tag-similar fallbacks.",
     "reading": "0 production and 0 padded-session hits; one latent smaller-pool 紫/包 collision for historical つつむ, not drawable in checked pools.",
     "fontCmap": "紫 and its named modern components and radical are present; search-only variant 茈 U+8308 is absent from each of the three bounded bundled font cmaps.",
     "source": "Reused B132 captures; 字通 gives 11 strokes and KANJIDIC2/KanjiVG give 12. Historical ツツム remains uncertain."
   },
+  "publicationGates": [
+    "Owner-signed publication",
+    "CI",
+    "Exact served ZIP/runtime equality"
+  ],
   "limits": [
-    "Author evidence only; no independent review, native or device acceptance, or publication.",
-    "Reading checks cover finite N1, All, Starter and a single additional borrowed holder only; arbitrary/custom and multiple-borrow pools are not accepted.",
-    "Purple/包 has a latent smaller-pool collision on source-only historical つつむ, not drawable in checked pools; scope of the historical reading remains unresolved.",
-    "Font cmap membership and stroke geometry are not rendered, fallback or device acceptance. 字通 reports 11 strokes while pinned KANJIDIC2 and KanjiVG specify 12.",
-    "Full external captures are retained locally and bound by hashes; only bounded attributed excerpts are committed."
-  ]
+    "Both original and FRESH-003 raw verdicts remain unchanged; authorized same-FRESH-003 descendant confirmations are separate roles, not original 001 reviewer confirmations.",
+    "Current correction cc374051 retains 58 exclusions; the prior 355cccb8 snapshot had 56. Readings, curated distractors and support article remain unchanged.",
+    "The mnemonic is invented and non-etymological.",
+    "Historical ツツム scope is unresolved; the latent 紫/包 reading collision is retained as a documented limitation.",
+    "字通 gives 11 strokes versus 12 in KANJIDIC2/KanjiVG; the discrepancy is retained, not resolved.",
+    "51 expected notes warnings and 11 pre-existing fallback cards remain.",
+    "茈 (U+8308) is absent from all three checked font cmaps; no rendered-fallback acceptance.",
+    "No Kotlin, native, device, phone or whole-set acceptance; publication remains pending until the signed closure is pushed and its CI passes.",
+    "Original and FRESH-003 raw verdicts/adjudications remain unchanged. Signed correction and authorized bounded confirmations are separate evidence.",
+    "The twelve confirmation dispositions supplement, never replace, the original twenty-nine.",
+    "Claude F1 may accept the editorial decline while its original withdrawn status and literal new DECLINE ACCEPTED token both remain unchanged.",
+    "Authorization, semantic-tail, source and execution validity were checked by the confirmation collectors and this closure assembler; schema compatibility alone grants no acceptance.",
+    "The 51 Notes warnings and historical reading-pair limitation remain.",
+    "The confirmations grant no native, device, rendered-font, custom-pool or publication credit; delivery credit requires the signed push, CI and served-ZIP equality."
+  ],
+  "priorReviewedSnapshot": "355cccb840d22e7313e79f234eb93d1367e00352"
 }

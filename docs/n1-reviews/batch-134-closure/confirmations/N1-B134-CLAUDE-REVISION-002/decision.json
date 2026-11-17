@@ -1,0 +1,76 @@
+{
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorized-claude-final-003\\final.json",
+    "sha256": "a6c3725ac25317c0d9da61c81ed85c179c65d3d1f2966e0e69500868aaf1b658"
+  },
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorized-claude-confirmation-002\\report\\review.md",
+    "sha256": "217ffa7dd636d8d4583f0ef49f1ced70da86cdd673ccfbf5fea98b19eb7369f7"
+  },
+  "candidate": "cc374051efa75199212a87c9abf08d7391419055",
+  "run": "N1-B134-CLAUDE-REVISION-002",
+  "session": "83324022-f15a-43cd-b54a-b9da86b500ff",
+  "family": "claude",
+  "scope": "Bounded revision of the earlier B134 conclusions only; original raw review verdicts and unresolved obligations are not erased.",
+  "verdict": "CONFIRMED",
+  "reportReadCompletely": true,
+  "claimChecks": [
+    {
+      "claim": "Actual authorized same-reviewer execution and report binding.",
+      "evidence": "Final authorized-claude-final-003 binds the actual session 83324022 stream: exactly one delivered forwarded authorization (turnId 0, interactionId 08809f4e-af05-435a-a49b-ddcafaec0ac6) whose own assistant.turn_start is interactive, delivered 4.7 s after admission; 7/7 chain segments read once; one native write with one verified readback (CRLF-normalized binding note); a single CONFIRMED completion; 0 fetches; zero compactions; peak and last input 628865 within the 740000 pre-phase-2 gate and 952000 max prompt.",
+      "disposition": "Accept execution coverage only. The selected runtime-002 rejected the actual event shape (user.message never carries agentMode); final-001 and the writable-producer final-002 are preserved. Successor runtime-003 changes only that predicate and additionally binds the delivered turn's own interactive turn_start."
+    },
+    {
+      "claim": "F1: the exhaustive grouped Notes exclusion list is not a mandatory correction.",
+      "evidence": "Read the complete new report. Independently re-checked: the cc374051 card diff from 355cccb8 restores no grouped list; own-prior/adjudication.json:18-20 records the withdrawn status and its character-presence-heuristic rationale; own-revision/report.md:9 and own-revision/adjudication.json:24-26 match the cited acceptance. The 51 Notes warnings remain disclosed.",
+      "disposition": "Accept the literal DECLINE ACCEPTED token as acceptance of an editorial decline, not a fix. The original withdrawn status and original raw NEEDS FIX verdict remain unchanged."
+    },
+    {
+      "claim": "O1: optional historical phonetic note.",
+      "evidence": "own-prior/adjudication.json:23-25 and own-revision/report.md:10 match. The cc374051 card diff does not touch the mnemonic/origin text, which still labels its scene invented and not etymology.",
+      "disposition": "DECLINE ACCEPTED; optional status retained and no origin claim added."
+    },
+    {
+      "claim": "O2: optional harder distractors.",
+      "evidence": "Independently verified the cc374051 frontmatter still lists distractors [古, 右, 川], unchanged from 355cccb8; own-prior/adjudication.json:28-30 and own-revision/report.md:11 match.",
+      "disposition": "DECLINE ACCEPTED; safety does not establish optimal N1 difficulty."
+    },
+    {
+      "claim": "O3: optional red/purple asymmetry.",
+      "evidence": "own-prior/adjudication.json:33-35 and own-revision/report.md:12 match; the signed diff changes no red/purple exclusion or note.",
+      "disposition": "DECLINE ACCEPTED; direct exclusions are not transitive."
+    },
+    {
+      "claim": "Four-facet CLEAN with no new finding.",
+      "evidence": "Independently diffed kanji/紫.md 355cccb8..cc374051: the only teaching change appends 濃 and 食 to quiz_exclusions after the 56 prior entries in unchanged order, plus two Notes bullets that explicitly deny general synonymy (deep-purple historical use; broad food versus specific soy-sauce referent). Neither overlaps the distractors. Cited lines own-revision/report.md:14-17, own-revision/adjudication.json:44-46 and 59-64, and proof/retained-dossier.json:551-557 (13/13 read, hold remains, 41 obligations) match.",
+      "disposition": "Accept the bounded CLEAN reconsideration of retained evidence; no new finding."
+    },
+    {
+      "claim": "Citation precision for the prior read/write/readback claim.",
+      "evidence": "The report cites own-revision/read-audit.json:95-104, which are model/responseModel rows. The supporting fields are at lines 109-113 (chainRead 13, chainRequired 13, writes 1, readbacks 1, readbackVerified true); lines 2-3 (status, empty breaches) match.",
+      "disposition": "Imprecise line range only; the underlying claim is true at adjacent lines. Recorded, no finding opened, verdict unaffected."
+    }
+  ],
+  "limitsPreserved": [
+    "Same FRESH003 reviewer's prospective bounded reconsideration of its own retained evidence only; no source was reread and this is not a fresh initial independent review.",
+    "The original raw NEEDS FIX, the withdrawn F1 status and the held pre-authorization result remain unchanged and are not retroactively authorized.",
+    "F1 stays DECLINE ACCEPTED, not RESOLVED. The 51 Notes warnings, 11 fallback cards, the unresolved ツツム/包 reading, the 11-versus-12 stroke-source discrepancy, the missing 茈 font glyph and the invented mnemonic remain.",
+    "Host-only checks: no native, Kotlin, device, rendered-font, custom-pool, multi-borrow, optimal-difficulty or whole-set acceptance.",
+    "Runtime-003 is a disclosed successor to the selected runtime-002 for the actual agentMode shape; failed finals 001 and 002 remain preserved.",
+    "One imprecise read-audit citation range is recorded.",
+    "No closure, integration, publication or delivery credit; the GPT authorized confirmation is still required."
+  ],
+  "acceptedNewFindings": [],
+  "openClaimIds": [],
+  "dispositions": {
+    "F1": "DECLINE ACCEPTED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DECLINE ACCEPTED",
+    "O3": "DECLINE ACCEPTED"
+  },
+  "authorization": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorization-continuation-prep-001\\authorization-event.jsonl",
+    "sha256": "4d69ed0c6e0476b38bba3e22b31b959178d417d8b1ecfaa7d29221660da167cb"
+  },
+  "heldEvidenceTreatment": "retained-not-retroactively-authorized"
+}
