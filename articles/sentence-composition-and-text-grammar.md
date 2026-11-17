@@ -3,7 +3,8 @@
 Knowing a verb ending is only part of using it. A complete sentence must also preserve **who does what,
 which clause belongs to which expression, and which earlier facts still apply**.
 
-This practice adds 16 sentence-composition questions and 12 closing-report questions across six short passages.
+This practice adds 16 sentence-composition questions and 12 closing-report questions across six short passages,
+plus 36 N3 ordering questions built on the patterns in [Ordering sentences with N3 patterns](#ordering-sentences-with-n3-patterns).
 It uses the ordinary choice and typing modes. It is not drag-and-drop, an official JLPT question collection,
 a starred-position shortcut, or a timed exam simulator.
 
@@ -82,6 +83,65 @@ used here even though bare **か** can work in other unrestricted questions.
 The answer explanation gives a canonical completion and discusses allowed orders. A different accepted typed
 order may be displayed separately from that canonical model; it is not a mistake merely because it differs.
 
+## Ordering sentences with N3 patterns
+
+The intermediate composition set uses the same task as the "Composing a whole sentence" section: every chunk is printed, each is used once, and the
+whole sentence is typed without labels, spaces or punctuation. The difference is the glue. Each sentence now hangs on an
+N3 pattern, and the pattern decides which person, item or event goes where. The wrong option is always a grammatical
+sentence built from the same chunks, so only the context can rule it out.
+
+### Noun-phrase frames: which noun takes which marker
+
+Five patterns attach directly after a noun. The learner places two noun chunks and gives each exactly one marker chunk.
+
+| Pattern | Noun directly before the pattern | The other noun |
+|---|---|---|
+| Xは Yに比べて | Y, the standard of comparison | X, marked with は, is described |
+| Xにとって Yの…は | X, whose standpoint counts | Y, owner of the thing judged |
+| Xは Yに対して | Y, at whom the action or attitude is directed | X, marked with は, acts |
+| Yに代わって Xが | Y, who would normally act | X, marked with が, acts instead |
+| Yのおかげで Xは | Y, credited with helping | X, marked with は, gets the result |
+
+Because the markers carry the roles, the two noun phrases may usually come in either order before the predicate:
+
+- 妹は姉に比べて足が速いです。／姉に比べて妹は足が速いです。 — Compared with her older sister, the younger sister runs fast.
+- 店長に代わって私が客に説明しました。／私が店長に代わって客に説明しました。 — I explained it to the customer in place of the store manager.
+
+Swapping the markers is still good Japanese, but it states the opposite: 姉は妹に比べて足が速いです claims that the
+older sister is the faster runner. Check the numbers or events in the context before choosing which noun is described.
+
+### Clause frames: which event comes before the linker
+
+Four patterns join two clauses. The linker goes directly after one complete clause, and the final chunk goes after the
+other, so there is normally a single accepted order.
+
+- 窓を開けたとたん冷たい風が入ってきたんです。 — The moment I opened the window, a cold wind came in. The clause
+  before とたん happened first.
+- 私が電話をかけようとしたとき友達が部屋に来ました。 — Just as I was about to make a phone call, a friend came to my room. The
+  person before ようとしたとき was about to act; the other person interrupted.
+- 日本語の新聞を読むために毎日漢字を練習しています。 — I practise kanji every day in order to read Japanese newspapers.
+  The clause before ために is the goal; the clause after it is the step.
+- この写真を見るたびに子どものころを思い出すんです。 — Every time I look at this photo, I remember my childhood. The clause before
+  たびに is the repeated occasion; the clause after it is what happens each time.
+
+Swapping the two clauses gives a sentence that is still grammatical but reverses the order of events, the goal, or the
+habit. For example, 毎日漢字を練習するために日本語の新聞を読む would make reading newspapers a step towards practising kanji.
+
+### Checking an ordering
+
+1. Find the pattern chunk and the job it gives the noun or clause in front of it.
+2. Use the context to decide which noun or event does that job.
+3. Attach the remaining marker or final chunk to the other noun or clause.
+4. Read the result once as a statement and compare it with the context.
+
+For background on viewpoint and target phrases, see [targets and perspectives](about-targets-and-perspectives.md).
+Comparisons are covered in [comparisons, change and degree](comparisons-change-and-degree.md), and cause and credit in
+[reasons and contrasts](reasons-and-contrasts.md). For purpose and attempts, see
+[volition, plans and goals](volition-plans-and-goals.md).
+
+The JLPT levels attached to these exercises are editorial estimates; Bunpro's N3 list is the primary reference (for
+example its [にとって entry](https://bunpro.jp/grammar_points/に取って)). There is no official JLPT grammar list.
+
 ## Reading across a short passage
 
 Each passage supports two questions, but the questions share one context. Read the complete passage each time;
@@ -121,6 +181,9 @@ For the written connectives that link sentences across a passage (すなわち, 
 The four composition families practise reported instructions, receiving-side favors, current/recalled plans,
 and embedded questions. They are a bounded structural exercise, not comprehensive coverage of every use in
 those families. The six passages add rule/reference and event-stage demands, not a claim of exam readiness.
+
+The N3 composition section practises ordering with に比べて, にとって, に対して, に代わって, のおかげで, たとたん,
+ようとする (ようとしたとき), purpose ために and たびに.
 
 The [JLPT test-item description](https://www.jlpt.jp/e/guideline/testsections.html) distinguishes sentence
 composition and text grammar. The [official sample page](https://www.jlpt.jp/e/samples/forlearners.html) explains
