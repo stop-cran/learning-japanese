@@ -59,6 +59,25 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 133: local unreviewed authoring candidate
+
+琴・鉛・滝 are missing frozen members (rows 707, 1120 and 643).
+Existing N2 琴・滝 and N5 鉛筆 support こと・たき and エン practice;
+each gains exactly one reciprocal wrapper, without a prose exception.
+Complete ordered KANJIDIC2 inventories remain separate from practice.
+The [source packet](n1-sources/batch-133/selection.json) preserves full
+applicable families, supplemental character/native senses, actual baseline
+scan rows and finite two-direction pair dispositions. Direct precautions
+protect unresolved broad labels, not universal synonymy or transitive groups.
+
+Published delivery remains **268/1,228**, with **960 remaining**.
+These three local drafts are not delivery. A five-member source packet was
+split before authoring because its 1,097 families and 146 comparison cards
+exceeded a practical single review context. All original packets remain local.
+The bounded host checks, exact source bindings and font cmaps do not establish
+independent linguistic review, arbitrary/custom or multiple-borrow pools,
+Kotlin/native/device, rendered fallback, whole-set or publication acceptance.
+
 ## Batch 132: local unreviewed authoring candidate
 
 墓 is a missing frozen member (row 197). The existing N3 article 墓
