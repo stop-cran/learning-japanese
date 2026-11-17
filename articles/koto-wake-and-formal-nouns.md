@@ -679,6 +679,8 @@ can all relate an action to what someone said, with context-dependent difference
 Do not make them competing answers solely because one names "conformity" more explicitly.
 The model/context exercises specify their noun list and supply the final に or で; they are controlled practice,
 not a claim that these are the only possible ways to describe following instructions or receiving guidance.
+To choose between **とおり** (matching a model), **に基づいて** ("based on" a source) and **に合わせて**
+("adjusting to fit" something), see [Basis, field and viewpoint](basis-field-and-viewpoint.md#3-basis-に基づいて-に合わせて-and-とおり).
 
 ### うえに and うえで: add a fact or establish a preliminary step
 

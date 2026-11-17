@@ -99,6 +99,10 @@ That is **not** a statement that the bus definitely will not come.
 The positive and negative versions can divide the same possible outcomes, but they frame the proposition differently.
 A drill asking you to preserve 来ません therefore expects the negative predicate, not a reversal of it.
 
+An embedded question can also be the topic of **によって違う／による** ("differs depending on, depends on"):
+**かは〜によって違う** says that the answer varies with something else. See
+[Basis, field and viewpoint](basis-field-and-viewpoint.md#2-かはによって違う-embed-the-question-first).
+
 ## 3. Report information without turning it into proof
 
 > 私は友達から、この町は静かだと聞いた。  

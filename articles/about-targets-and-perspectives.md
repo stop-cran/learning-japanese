@@ -134,6 +134,10 @@ same position; learn the actual construction you use.
 にとっては and にとっても add topic/contrast or inclusion. They do not turn evaluation into a beneficiary
 action. Nor should にとって replace every English "in my opinion": identifying who performs an action,
 reports a fact, or holds a role may require a different construction.
+For a viewpoint named with **から言うと／で言うと** ("judging from…, in terms of…") next to にとって, and for
+**において／における** ("in, within" a setting or field) versus について, see
+[Basis, field and viewpoint](basis-field-and-viewpoint.md#5-viewpoint-で言うと-から言うと-and-にとって) and its
+[field section](basis-field-and-viewpoint.md#4-field-において-and-における-versus-について).
 
 ## One useful neighbor: に関して and に関する
 
