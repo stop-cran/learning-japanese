@@ -2,7 +2,7 @@
   "batch": 136,
   "base": "8563b6fd34be43dcebb1b398e0ca576d3673f41d",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "炊",
     "焦",
@@ -195,14 +195,30 @@
     "隔",
     "駄"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "炊",
+    "焦",
+    "異",
+    "端",
+    "筋",
+    "粗",
+    "納",
+    "脱",
+    "膨",
+    "致",
+    "請",
+    "透",
+    "鉢",
+    "隔",
+    "駄"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 287,
-    "publishedN1Additions": 281,
+    "publishedPendingRecordsWithCards": 302,
+    "publishedN1Additions": 296,
     "n2Placements": 6,
-    "undelivered": 941,
+    "undelivered": 926,
     "reviewClosedPendingRecordsWithCards": 302,
     "localUnreviewedDrafts": 0,
     "notStarted": 926,
@@ -326,6 +342,13 @@
     "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
     "Claude's initial review once had two view calls in flight; GPT's shell and Python reads are not counted in its audit's packet coverage, its live web fetches were made through Python urllib, and three confirmation reads used the parent review-packets folder as a base path for the two allowed packets. GPT's confirmation report names its model only as GPT (OpenAI); the model name comes from the runtime records. Claude's confirmation report places a live 致す re-read in that round; the session events show it in Claude's initial run.",
     "Both confirmations checked においうま in JMdict only through the packet's 駄 family extracts and live jisho.org queries; the author's search of the full pinned JMdict found no entry with that reading.",
-    "The confirmation packets' unittest excerpt lost its final OK line to a PowerShell stderr wrapper (flagged by GPT); the full gate log and a clean rerun at the fix commit both show 436 tests OK."
-  ]
+    "The confirmation packets' unittest excerpt lost its final OK line to a PowerShell stderr wrapper (flagged by GPT); the full gate log and a clean rerun at the fix commit both show 436 tests OK.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "1e91700ee8c0fd3ead08a051c51b1a4c30944c3d",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/1e91700ee8c0fd3ead08a051c51b1a4c30944c3d",
+    "receipt": "../n1-reviews/batch-136-publication/provenance.json"
+  }
 }
