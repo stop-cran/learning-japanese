@@ -120,7 +120,14 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 138: review closed, publication pending
+## Batch 138: published
+
+Review-closed and published at `a2a0f3df`. The
+[Validate content run 44309389145](https://github.com/stop-cran/learning-japanese/actions/runs/44309389145)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,906 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-138-publication/provenance.json). Delivery is now
+**332/1,228**, with **896 remaining**.
 
 Fifteen absent frozen members: 噴 垂 垣 執 堅 塊 墨 壁 壊 奏 契 奨 奪 妨 威
 (rows 174–230), the next fifteen under the selection rule announced on
@@ -179,9 +186,7 @@ but no audited pool can draw; the ninth, 壊 やぶれる, was hidden by the
 `--extra` defect. The older reading-options check still lists ほん for 噴 and
 けつ for 契, because it ignores slots that curated distractors fill; its
 simulation drew only curated readings. Android JVM tests were not run (no
-JDK), and no native or phone acceptance is claimed. Published delivery stays
-**317/1,228** until CI and ZIP verification; publication would make it
-**332/1,228**, with **896 remaining**.
+JDK), and no native or phone acceptance is claimed.
 
 ## Batch 137: published
 

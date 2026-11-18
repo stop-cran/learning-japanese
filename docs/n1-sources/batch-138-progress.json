@@ -2,7 +2,7 @@
   "batch": 138,
   "base": "e7eb6886e0b05cb84d9b60d268513b316ad71a82",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "噴",
     "垂",
@@ -127,14 +127,30 @@
     "妨",
     "威"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "噴",
+    "垂",
+    "垣",
+    "執",
+    "堅",
+    "塊",
+    "墨",
+    "壁",
+    "壊",
+    "奏",
+    "契",
+    "奨",
+    "奪",
+    "妨",
+    "威"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 317,
-    "publishedN1Additions": 311,
+    "publishedPendingRecordsWithCards": 332,
+    "publishedN1Additions": 326,
     "n2Placements": 6,
-    "undelivered": 911,
+    "undelivered": 896,
     "reviewClosedPendingRecordsWithCards": 332,
     "localUnreviewedDrafts": 0,
     "notStarted": 896,
@@ -274,6 +290,13 @@
     "Fix 1 had an earlier local version (f8f488d1) with a different 押妨 gloss, and fix 2 one (a93ce9c0) with a different commit message; neither was reviewed or published.",
     "The reading audits in the original packet and the first confirmation packets left out some --extra readings of 垂, 執, 壊, 奏 and 奪: a second --extra for a kanji replaced the first in the author's audit tools. The tools and gate runner were fixed outside the repository; the corrected audits in the second confirmation packets supersede them and add one latent collision, 壊 やぶれる (9 in all).",
     "The packet builder dropped every blank line from the check outputs it summarized, so the first confirmation packets' quiz-safety.txt had one blank line fewer than the original packet's copy; the second packets copy it byte for byte.",
-    "Neither audit tool models a custom pool without a target's curated distractor cards, where the nine latent readings could be offered as wrong options."
-  ]
+    "Neither audit tool models a custom pool without a target's curated distractor cards, where the nine latent readings could be offered as wrong options.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "a2a0f3dfdf459a95a75ead88b79d3b57971269c7",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/a2a0f3dfdf459a95a75ead88b79d3b57971269c7",
+    "receipt": "../n1-reviews/batch-138-publication/provenance.json"
+  }
 }
