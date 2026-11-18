@@ -120,6 +120,44 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 138: drafted, independent review pending
+
+Fifteen absent frozen members: 噴 垂 垣 執 堅 塊 墨 壁 壊 奏 契 奨 奪 妨 威
+(rows 174–230), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: seventeen existing articles each gain one link to a
+new card. The 張 card's sentence that said 威 had no card now links 威 with
+its title. `n1_linkplan.py verify` checks word articles only, so the
+author's `kanji_remarks.py` checks that this is the only edit to an existing
+card. The [progress file](n1-sources/batch-138-progress.json) records the
+gates and disclosed limits.
+
+Seven cards quiz on readings only and eight quiz kun readings only, because
+the other readings have no declaring word article yet; common ones such as
+堅 ケン, 壁 ヘキ, 奪 ダツ and 奏 かな.でる are listed and illustrated, not
+quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the JMdict kanji-plus-okurigana headwords 垂げ さげ, 垂れ
+しだれ and だれ, 垂れる しだれる, 垂んとす, 執よう, 壊つ, 奏す, 奏する and
+奪る. With tag-similar distractors, the audit found that Starter sessions
+could offer Kanjipedia's 外 readings ホン for 噴 and ケツ for 契. Both cards
+now take three Starter-card distractors whose readings are not their own
+(口 古 買 and 大 天 分), so curated options fill every slot.
+
+Gates on the draft pass: 436 host tests, validation, lint (0 errors; 3
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The reading-exposure audit reports
+no production, padded-session or one-holder hit apart from one disclosed
+KANJIDIC2 name-only reading: 執 し on the シツ prompt in a Starter session.
+The older reading-options check still lists ほん for 噴 and けつ for 契,
+because it ignores slots that curated distractors fill; its simulation drew
+only curated readings. Android JVM tests were not run (no JDK), and no native
+or phone acceptance is claimed. Published delivery stays **317/1,228** until
+review closure, CI and ZIP verification.
+
 ## Batch 137: published
 
 Review-closed and published at `c1d2e3a7`. The
