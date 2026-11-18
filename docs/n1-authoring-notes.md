@@ -84,10 +84,11 @@ disclosed choices:
   the publication receipt.
 - Android JVM tests stay **not run** until a JDK is available. No native,
   device or phone acceptance is claimed.
-- `bf9aa740`, `2cdae679` and `c5cdc604` are signed with key
+- `bf9aa740`, `2cdae679` and `c5cdc604`, and batch 136's closure
+  `1e91700e` and receipt `c79aa930`, are signed with key
   `AD3E63ADB89CAE86`, which GitHub does not associate with the account, so
-  they show as Unverified there; later commits use the registered key
-  `9D94B9D311BD26A7`.
+  they show as Unverified there. The other commits from `afed6694` on use
+  the registered key `9D94B9D311BD26A7`. History is not rewritten.
 
 From B136, these are standing steps before a batch is frozen, adopted from
 the B135 review:
