@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:19:46.066782+00:00",
+  "finished": "2026-11-16T01:19:47.143115+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import importlib.util\nimport sys\nimport unittest\nfrom pathlib import Path\nroot = Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\scratch-126\\review')\nsys.path.insert(0, str(root))\nsuite = unittest.TestSuite()\nfor name in ('test-guarded-test-v2', 'test-review-chain', 'test-report-structure', 'test-review-audit'):\n    spec = importlib.util.spec_from_file_location(name.replace('-', '_'), root / (name + '.py'))\n    module = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(module)\n    cases = unittest.defaultTestLoader.loadTestsFromModule(module)\n    assert cases.countTestCases() > 0, name\n    suite.addTests(cases)\nprint('Explicitly loaded', suite.countTestCases(), 'tests', flush=True)\nresult = unittest.TextTestRunner(verbosity=1).run(suite)\nraise SystemExit(0 if result.wasSuccessful() else 1)"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 11136,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "27dccd719d3f6805972ab118c10c8f113e12024bbbeedab362bc36b9a3456327",
+  "memory": {
+    "freeRamBeforeBytes": 5526347776,
+    "freeRamAfterBytes": 5523296256,
+    "minimumObservedFreeRamBytes": 5495042048,
+    "peakWorkingSetBytes": 23027712,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

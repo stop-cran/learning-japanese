@@ -1,0 +1,172 @@
+{
+  "status": "BOUND_IMPORT_ONLY_RUNTIME_REPAIR_NOT_REVIEW_ACCEPTANCE",
+  "candidate": "355cccb840d22e7313e79f234eb93d1367e00352",
+  "repair": "Supply BASE, CANDIDATE and INITIALS from their original modules to the unchanged auditor main; redirect only the original controller auditor executable path/hash.",
+  "sourceFiles": [
+    {
+      "archivePath": "protocol/runtime-repair/original-auditor.py",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\protocol-014\\audit-review-b134-014.py",
+      "sha256": "1fbc57b7f26cfbf099de828dbeb9b34d643a643262b5fa1b2c42329bedde81f6",
+      "bytes": 40331
+    },
+    {
+      "archivePath": "protocol/runtime-repair/original-controller.py",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\protocol-014\\step-b134-014.py",
+      "sha256": "940638df7a5ef763f2e5b932115bb447d85129577d3a0770b72138f6baa605df",
+      "bytes": 32680
+    },
+    {
+      "archivePath": "protocol/runtime-repair/audit-entry.py",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-001\\audit-entry.py",
+      "sha256": "9e5b4466dc0f095dac12c505269b64c89401ae2366bc9c2e823a1f161f501479",
+      "bytes": 1056
+    },
+    {
+      "archivePath": "protocol/runtime-repair/controller-entry.py",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-001\\controller-entry.py",
+      "sha256": "8fa17d56513e9452bf41c7562e59e38f6a3ed6960113c92c34f70aadd67d69c4",
+      "bytes": 940
+    }
+  ],
+  "unchangedConfigs": {
+    "claude": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\audit-configs-020\\audit-claude-fresh-003.json",
+      "sha256": "05688385b07d0b00a9a98077014a26aae23a6e06713c7ddb29e78855a3d12d22",
+      "bytes": 13950
+    },
+    "gpt": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\audit-configs-020\\audit-gpt-fresh-003.json",
+      "sha256": "387f8763fd7514704baaa1fe2c8b7a7fcbd39ac28917ba06600d79e670308571",
+      "bytes": 13922
+    }
+  },
+  "realCliRegression": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-001\\actual-cli-regression.json",
+    "sha256": "29f701f8af608a13636b7fe0e66ded904cbdd17683df0eb310bad5a07913165b",
+    "bytes": 909
+  },
+  "regressionEventsLocalOnly": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\N1-B134-CLAUDE-FRESH-003\\audit-20261117T125902960903\\events.jsonl",
+    "sha256": "d825c0a0ac290ffa539a647e015c9550436c4ac51ff273b57c130ae6e93946f1",
+    "bytes": 2541877
+  },
+  "actualPhase1": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\N1-B134-CLAUDE-FRESH-003-phase1.json",
+    "sha256": "efc3e6185dba80e19deb2cf827de0fee7da7c95719488352b03f5cf10c48ec53",
+    "bytes": 3702
+  },
+  "failedExecutions": [
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\b134-lifecycle-run-de2e31b0a5da4d1da578b5177262e6e0\\receipt.json",
+        "sha256": "28a3d1a345991414f231726b8ba08f626c48c7ae7ab81cdf043b73c90165d1d1",
+        "bytes": 1429
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\b134-lifecycle-run-de2e31b0a5da4d1da578b5177262e6e0\\output.log",
+        "sha256": "5c4fe56b5f68b7cb4b25bb114e0856b66c6a38b8292ea8127c1e9c9c40c3c932",
+        "bytes": 1296
+      },
+      "exitCode": 1,
+      "disposition": "Original controller failed because the auditor main lacked imports; not reviewer misconduct.",
+      "rawExecutionRemainsLocal": true
+    },
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\b134-lifecycle-execution-a741def6fc394925b875025a97551119\\receipt.json",
+        "sha256": "0912e181d964d93061382226e3948f136546732833acefcbe1bf16b41842e92e",
+        "bytes": 1662
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\b134-lifecycle-execution-a741def6fc394925b875025a97551119\\output.log",
+        "sha256": "474adedb521336759f3a338b3d3fe3c49bdf9717b2dc8b46a393bbc3c8dc5cde",
+        "bytes": 559
+      },
+      "exitCode": 1,
+      "disposition": "Original auditor raised NameError before creating an audit.",
+      "rawExecutionRemainsLocal": true
+    },
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-cli-test-001\\receipt.json",
+        "sha256": "2afe630d1f5dcc472f91a03eb43eb5e035c76418460da53329bc65663ce22953",
+        "bytes": 1334
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-cli-test-001\\output.log",
+        "sha256": "2abf9aa244452652f7c3cd0ec87acc6c7c7acc1ab15a0db0e7ad9535aaa8cbe3",
+        "bytes": 450
+      },
+      "exitCode": 1,
+      "disposition": "The first regression assertion confused 90 sources with 64 segments; failure retained.",
+      "rawExecutionRemainsLocal": true
+    },
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\coordinator-runtime-repair-retention-execution-001\\receipt.json",
+        "sha256": "015cf1e5cd7b4d7c37bb5636afb2a50ffa36e9edc85c318ad20845741a56b273",
+        "bytes": 1349
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\coordinator-runtime-repair-retention-execution-001\\output.log",
+        "sha256": "85bbdcbe2f329ad048d3eee355ce4830f1c355879ee5a79b478739bc52a01014",
+        "bytes": 1257
+      },
+      "exitCode": 1,
+      "disposition": "Retention initially rejected the still-writable completed regression-failure receipt; verified and frozen before retry.",
+      "rawExecutionRemainsLocal": true
+    },
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\coordinator-runtime-repair-retention-execution-002\\receipt.json",
+        "sha256": "504bf8f91fef623e7219f3b64fc404643f725f0cc8b0d92aa3de9e43520ea610",
+        "bytes": 1349
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\coordinator-runtime-repair-retention-execution-002\\output.log",
+        "sha256": "d32d45efa207981991ae904fae983fb2362229296fa2e63e3f7338fc0a9ad8b6",
+        "bytes": 1257
+      },
+      "exitCode": 1,
+      "disposition": "Retention then rejected the still-writable successful regression receipt; all completed receipt/log pairs verified and frozen before retry.",
+      "rawExecutionRemainsLocal": true
+    }
+  ],
+  "successfulExecutions": [
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-cli-test-002\\receipt.json",
+        "sha256": "26fc107c07007297c5eab71aadeae24ba3ec482d889abab042ae941d2bf0a006",
+        "bytes": 1338
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-cli-test-002\\output.log",
+        "sha256": "3f3c9c2563bea81058b831bb411a9ce498201f8cc7b09a63a522b291da98b08e",
+        "bytes": 99
+      },
+      "exitCode": 0,
+      "disposition": "Real repaired CLI regression passed on the immutable phase-one event stream.",
+      "rawExecutionRemainsLocal": true
+    },
+    {
+      "receipt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-phase1-001\\receipt.json",
+        "sha256": "7d9fd1d4019593eea4ed55c1161afc2cbf0d813b1b064142febd51377e43adbb",
+        "bytes": 1411
+      },
+      "log": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\lifecycle-runtime-repair-phase1-001\\output.log",
+        "sha256": "17b7e5a3165bdb593919df5c7e13e109e71d7ce6b6e2266759fa6569b73963dd",
+        "bytes": 694
+      },
+      "exitCode": 0,
+      "disposition": "Actual repaired controller passed phase one and prepared the selected extension.",
+      "rawExecutionRemainsLocal": true
+    }
+  ],
+  "limits": [
+    "Original files, bootstrap authorization and core are not replaced or rebound.",
+    "Raw events, receipts and logs remain local; hashes retain their exact provenance.",
+    "Final reviewer event audits, substantive adjudication, serial GPT review and publication remain separate requirements."
+  ]
+}

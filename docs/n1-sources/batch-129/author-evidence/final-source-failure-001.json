@@ -1,0 +1,11 @@
+{
+  "producer": "final_sources_b129_attempt001.py",
+  "memoryReceipt": "final-source-memory-001.json",
+  "exitCode": 1,
+  "error": "xml.etree.ElementTree.ParseError: not well-formed (invalid token): line 6, column 11",
+  "location": "final_sources_b129.py line 73, reparsing complete-record serialization",
+  "cause": "The producer emitted XML encoding declaration utf8 instead of the supported utf-8 spelling.",
+  "preservation": "Original producer and RAM receipt retained. No final XML output was written; the canonical reparse failed before write. The chained stroke-generation command did not run.",
+  "correction": "Use utf-8 for ElementTree serialization and a new memory receipt for the second attempt.",
+  "stdoutLimit": "The original traceback is in the conversation tool result; this record transcribes the error, not a raw captured stderr file."
+}

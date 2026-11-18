@@ -8,7 +8,7 @@ experience, but they do not use the same construction.
 The twelve-word core set practises **a familiar word, one selected sense, and a sentence frame
 together**. The focused sets below extend that approach across the first 203 words in the
 [onomatopoeia collection](japanese-onomatopoeia.md). The later [みっちり](../words/みっちり.md)
-card is not included in these exercises. Neither the core nor the expansion is a
+and [のびのび](../words/のびのび.md) cards are not included in these exercises. Neither the core nor the expansion is a
 suffix chart that works for every word or every dictionary sense.
 
 ## Before a verb: keep the action

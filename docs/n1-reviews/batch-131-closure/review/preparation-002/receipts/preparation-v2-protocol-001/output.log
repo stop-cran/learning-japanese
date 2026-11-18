@@ -1,0 +1,29 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\build_b131_protocol_002.py", "sha256": "684b46a540a7f8384f93de76eea547cb058ba2f87889e4e79a797d241c942b70", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\build_b131_protocol_002.py", line 271, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\build_b131_protocol_002.py", line 96, in main
+    adapt(TOOLS / "b131_review_admission_001.py", TOOLS / "b131_review_admission_002.py", admission)
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\build_b131_protocol_002.py", line 29, in adapt
+    text = transform(raw.decode("utf-8"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\build_b131_protocol_002.py", line 95, in admission
+    return replace_once(text, anchor, replacement)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\build_b131_protocol_002.py", line 15, in replace_once
+    require(text.count(before) == 1, "Adaptation anchor differs: " + before[:90])
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Adaptation anchor differs:         verify_packet(config, guard)
+

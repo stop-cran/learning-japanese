@@ -1,0 +1,36 @@
+{
+  "session": "e0a1d14d-3063-4348-8a4c-6c3ebb938cbb",
+  "snapshot": "737cb0201bb3ca76b327504d95b17e64f1a79869",
+  "report": "confirm-claude.md",
+  "reportBytes": 6682,
+  "reportSha256": "b48f2031372c6e5cc067025471645b8bb221e53d10efeaf2f480d7223383531c",
+  "automaticAudit": "audit-confirm-claude.json",
+  "acceptedAsCompleteConfirmation": false,
+  "actualModel": "claude-opus-5.5",
+  "toolSeriality": "13 calls, maximum 1 in flight",
+  "observations": [
+    {
+      "kind": "resource-instruction-breach",
+      "event": "toolu_0118aFPi2XDX59DhSEFWKkr4",
+      "timestamp": "2026-11-13T06:20:35.739Z",
+      "evidence": "Python enumerated os.listdir(os.path.join(O,'repo','kanji')) and opened every enumerated file, then iterated cards.items() for distractor/exclusion checks and title-token overlaps. The report explicitly identifies a scan of all 1,191 original kanji.",
+      "required": "No corpus scans; small named-file reads only.",
+      "auditLimit": "The automatic corpusScans array was empty. Its detector did not recognize this os.listdir-based scan; the complete tool arguments and report establish it."
+    },
+    {
+      "kind": "incomplete-semantic-read-coverage",
+      "event": "toolu_01GVAZMVfQ9ighBefZ8E6kjd",
+      "timestamp": "2026-11-13T06:21:05.721Z",
+      "evidence": "The eight revised cards were loaded by PowerShell, but only their titles and filtered Notes sections were returned to the model. The earlier Python scan parsed only front matter. The patch and author summaries provided changed hunks, not the full eight revised bodies.",
+      "required": "Read every revised card in full to check contradictions with unchanged text.",
+      "auditLimit": "Automatic coverage also undercounts variable-based shell reads. Its 'none' labels do not mean no content was seen, but the executed commands do not establish the required complete card reads."
+    }
+  ],
+  "disposition": "Preserve the report and audit unchanged. Stop the cycle before GPT, return the reviewer allocation, and require a fresh reservation for a narrowly bounded corrective read.",
+  "limits": [
+    "The report's textual findings are none; its UNVERIFIED verdict is attributed to runtime L1, not to the additional coverage failure identified here.",
+    "No JVM, Gradle, emulator, ADB, browser or native execution was performed.",
+    "The report discloses a harness-created oversized-output temporary artifact; no intentional reviewer temporary-file write was identified.",
+    "No new content defect is inferred merely from these process failures."
+  ]
+}

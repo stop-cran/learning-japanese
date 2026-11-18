@@ -1,0 +1,19 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b130_claude004_control.py", "sha256": "d2d1a2c775bba1482ae1538987b52a3836e0c957abb8372330caf0061b7a767a", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b130_claude004_control.py", line 71, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b130_claude004_control.py", line 44, in main
+    tests = replace_once(tests, '\n\nif __name__ == "__main__":', '''
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b130_followup_engine.py", line 9, in replace_once
+    require(text.count(before) == 1, "Follow-up derivation anchor changed")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Follow-up derivation anchor changed

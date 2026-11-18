@@ -42,6 +42,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [About, towards, and from someone's perspective](articles/about-targets-and-perspectives.md) | How do について, に対して, にとって, and に関して differ, and how do they connect to こと, ため, 場合, and nominalized clauses? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
+| Vocabulary | [気 expressions: attention, concern, liking, and feelings](articles/ki-expressions-attention-and-feelings.md) | How do 気になる, 気にする, 気に入る, 気づく, and related 気 expressions differ, and what do common 気 compounds mean? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
 | Vocabulary | [Japanese onomatopoeia: 201 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
 | Vocabulary | [Onomatopoeia sound patterns](articles/onomatopoeia-sound-patterns.md) | What can repetition, endings, and voiced consonants suggest without becoming rigid meaning rules? |
@@ -470,7 +471,7 @@ The [article-subject snapshot](docs/article-subjects-source-snapshot.json) recor
 17 new word cards, and reuse of 訳 for わけ, including dictionary-reading caveats and the 妖 level exception.
 作家 is shared with the N3 vocabulary expansion, so merging these additions adds 16 distinct word cards to that collection.
 
-Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, 1,739 N2 and two N1 articles, independently of the kanji they contain.
+Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, 1,739 N2 and three N1 articles, independently of the kanji they contain.
 This article-level label does not assign every subsidiary sense or reading to that level. The remaining 277 articles have no
 sourced word-level label. In particular, the pinned list's N1 labels for くらい and だけ are not recommendations to postpone these basic particles.
 Vocabulary-aware app versions use explicit levels first and retain kanji-based inference only when the

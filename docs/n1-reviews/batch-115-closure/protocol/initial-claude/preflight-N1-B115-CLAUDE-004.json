@@ -1,0 +1,114 @@
+{
+  "run": "N1-B115-CLAUDE-004",
+  "candidate": "f36cd819dcf6ac8b4a3ee8ee29b6e750cd6f09ab",
+  "candidateClean": true,
+  "decisionOrigin": "Coordinator agent decisions, not a claimed new human instruction.",
+  "decisionSourceToolCallIds": [
+    "toolu_01B8DT9FsCZsZZH2GwhsUX43",
+    "toolu_018CchGb6kdptPTWAvmWP2HW"
+  ],
+  "decisionCoordinator": "e1ee36b6-cb53-4c64-854e-cec8a61c1dfb",
+  "order": "Claude-004 first; the blind GPT review only after Claude-004 is accepted.",
+  "attemptLimit": 1,
+  "failureAction": "Hold, stop and report for a new decision; no retry.",
+  "acceptance": [
+    "mechanical audit passes",
+    "completion message is exactly CLEAN, NEEDS FIX or UNVERIFIED",
+    "report passes report-structure-v1",
+    "claim adjudication"
+  ],
+  "completionContract": "entire-message-enum-v1",
+  "completionContractScope": "coordinator-tool-message-only",
+  "isolatedFinalSummaryPermitted": true,
+  "finalSummaryIsReviewEvidence": false,
+  "reportStructureContract": "report-structure-v1",
+  "templateStructureOnly": true,
+  "templateUsesContentFrom001To003": false,
+  "changedPromptLines": [
+    1,
+    9,
+    22
+  ],
+  "insertedPromptLines": [
+    221,
+    258
+  ],
+  "changedScope": "Fresh run/report/instruction-file identity plus the structure-only report template.",
+  "packetFilesVerified": 1299,
+  "coreSegmentsVerified": 30,
+  "packetManifestSha256": "36931780d7bc4c416b697686453d910a9b7972ec62028531f52f19129d445542",
+  "coreManifestSha256": "ce2c6e50218d6cb8cb6fa571748a2c586887fbcef4a1a379c4f261f90feac1d4",
+  "baseConfigSha256": "6247b9de5c31124e25b2fec822a220277e3b592c496fce3f552ec1ffe375d42a",
+  "prompt": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\initial-claude-115-004.txt",
+    "sha256": "9f687a696c43fb78433cd6a8f91201da378b90255f01dfc50a0827d14077a8bd",
+    "bytes": 21121
+  },
+  "kickoff": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\kickoff-claude-115-004.txt",
+    "sha256": "ba7aa991a320c0d758ddd45309a1b039953ecf76d773bf179129350cea22a68d",
+    "bytes": 231
+  },
+  "auditConfig": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\audit-config-N1-B115-CLAUDE-004.json",
+    "sha256": "2170eba7fb86ca71829a338b631d9f640d89e90e4de21036ffdc431c69147c07",
+    "bytes": 4427
+  },
+  "report": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-115\\initial-claude-004.md",
+  "reportAbsent": true,
+  "tooling": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\check-report-structure.py",
+      "sha256": "0b03424c7d4769c08b3d50a9b3fa6e3a716ce57474ee78afa78fe21e9a9a0c13"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\test-report-structure.py",
+      "sha256": "da9929eac1fdf2555ac2b4c1358351eaa3b1fa2e74410e4907859b6e978bfe3c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prepare-claude-004.py",
+      "sha256": "2603860ef26556a91bc283db87ae3b18912526c25fb63625420765c3db1537b4"
+    }
+  ],
+  "tests": {
+    "count": 35,
+    "inputs": "Fabricated only; no real review records.",
+    "log": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\test-report-structure.txt",
+      "sha256": "98bfd159bdef0dc8d063c6e1bff29016ecb9ed4af56efe693c193f8efde3513f"
+    }
+  },
+  "eventAuditStart": "Byte zero; no excluded prefix.",
+  "quarantinedRuns": [
+    "N1-B115-CLAUDE-001",
+    "N1-B115-CLAUDE-002"
+  ],
+  "quarantinedAdjudications": {
+    "001": "8b4d2700a264a7c74bceb80cd0c175396da739f8209dd2ee9cb33ca53cf9534d",
+    "002": "b9dacaf34403875b53dc8ea09526af6fb18198509ad673231eadc4af2df6836c"
+  },
+  "unacceptedRuns": {
+    "N1-B115-CLAUDE-003": {
+      "hold": "0d65b32fa7a9c1da26162fe8138b6a4f8ec7bfc8fcd314cb0bf11c1ad57bbfa1",
+      "report": "adb686689fb0ba8f437d872c1d7c5c716bbd3a483c6571664331097bc496aacc"
+    }
+  },
+  "excludedFromAllReviewerInputs": [
+    "001",
+    "002",
+    "003"
+  ],
+  "voidObservationsUsed": false,
+  "syntheticDeliveryProbe": false,
+  "memory": {
+    "freeRamBeforeBytes": 5046476800,
+    "freeRamAfterBytes": 5027487744,
+    "minimumObservedFreeRamBytes": 5027483648,
+    "peakWorkingSetBytes": 27648000,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  }
+}

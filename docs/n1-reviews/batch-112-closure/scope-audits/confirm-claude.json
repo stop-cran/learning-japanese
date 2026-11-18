@@ -1,0 +1,215 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "e0a1d14d-3063-4348-8a4c-6c3ebb938cbb",
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-13T06:20:00.858Z",
+  "last": "2026-11-13T06:22:00.184Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-13T06:20:00.858Z",
+   "chars": 2858,
+   "sha256": "f4fdb881c790290307f8ecf606f7ad4843fefdad1ac23d65c5d8c477d276fdce"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "claude-opus-5.5",
+   "responseModel": "claude-opus-5-5",
+   "apiRequests": 13
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 1638051,
+  "outputTokens": 9938,
+  "cacheReadTokens": 1496223,
+  "cacheWriteTokens": 141800,
+  "reasoningTokens": 2951,
+  "costMultiplierSum": 195.0
+ },
+ "toolCalls": {
+  "total": 13,
+  "byTool": {
+   "powershell": 8,
+   "view": 2,
+   "create": 1,
+   "send_session_message": 1,
+   "task_complete": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude\\snapshot\\kanji"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "none": 15,
+   "notFullyRead": [
+    "snapshot/kanji/健.md",
+    "snapshot/kanji/妙.md",
+    "snapshot/kanji/射.md",
+    "snapshot/kanji/就.md",
+    "snapshot/kanji/展.md",
+    "snapshot/kanji/微.md",
+    "snapshot/kanji/態.md",
+    "snapshot/kanji/盤.md",
+    "snapshot/kanji/看.md",
+    "snapshot/kanji/至.md",
+    "snapshot/kanji/診.md",
+    "snapshot/kanji/酸.md",
+    "snapshot/kanji/障.md",
+    "snapshot/kanji/離.md",
+    "snapshot/kanji/響.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "none": 3,
+   "notFullyRead": [
+    "diffs/changed-files.txt",
+    "diffs/changed-lines.txt",
+    "diffs/fix.patch"
+   ]
+  },
+  "checks": {
+   "files": 9,
+   "none": 9,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/link-targets.tsv",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/quiz-safety.txt",
+    "checks/reading-exposure.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 3,
+   "none": 2,
+   "shell": 1,
+   "notFullyRead": [
+    "evidence/QuizBuilder.kt",
+    "evidence/README.md",
+    "evidence/jmdict-cited-entries.xml"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full"
+ },
+ "outsidePaths": [],
+ "alsoReadAllowed": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\reports-112\\initial-claude.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-112-d6ad96eb"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-112-d6ad96eb"
+ ],
+ "alsoReadCount": 1,
+ "writes": [
+  {
+   "tool": "create",
+   "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-112\\confirm-claude.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "$d='C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude'; Get-ChildItem $d -Name; foreach($f in 'INSTRUCTIONS.md','CHANGES.md','RESPONSE.md'){ \"===== $f\"; Get-Content \"$d\\$f\" -Raw -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "$d='C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude'; Get-Content \"$d\\CHANGES.md\" -Raw -Encoding UTF8; \"===== dirs\"; foreach($s in 'checks','diffs','evidence','snapshot','snapshot\\kanji'){ \"-- $s\"; Get-ChildItem \"$d\\$s\" -Name }; \"===== evidence README\"; Get-Content \"$d\\evidence\\README.md\" -Raw -Encoding UTF8",
+   "writeLike": false
+  },
+  {
+   "command": "$d='C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude'; Get-Content \"$d\\diffs\\fix.patch\" -Raw -Encoding UTF8",
+   "writeLike": false
+  },
+  {
+   "command": "$d='C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude'; $q=Get-Content \"$d\\evidence\\QuizBuilder.kt\" -Encoding UTF8; $i=0; $q | % { $i++; \"{0,3}: {1}\" -f $i,$_ }; \"===== quiz-safety\"; $i=0; Get-Content \"$d\\checks\\quiz-safety.txt\" -Encoding UTF8 | % { $i++; \"{0,3}: {1}\" -f $i,$_ }",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport os,re,sys,io\nsys.stdout=io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')\nO=r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-112-d6ad96eb'\nC=r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude'\ndef parse(t):\n    g=lambda k:(re.search(r'^'+k+r':\\s*(.*)$',t,re.M) or [None,''])[1].strip()\n    L=lambda s:[x.strip() for x in s.strip('[]').split(',') if x....",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport re,sys,io\nsys.stdout=io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')\nt=open(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude\\evidence\\jmdict-cited-entries.xml',encoding='utf-8').read()\nfor e in re.findall(r'<entry>.*?</entry>',t,re.S):\n    seq=re.search(r'<ent_seq>(\\d+)',e).group(1)\n    print('==',seq)\n    for k in re.findall(r'<k_ele>(.*?)</k_ele>',e,r...",
+   "writeLike": false
+  },
+  {
+   "command": "$d='C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-112-737cb020-claude\\snapshot\\kanji'; foreach($k in '妙','就','展','微','態','盤','診','障'){ $l=Get-Content \"$d\\$k.md\" -Encoding UTF8; $j=($l | Select-String '^## Notes').LineNumber; \"===== $k (title: $(($l|Select-String '^title:').Line)) notes from line $j\"; $l[($j)..($l.Count-1)] | Select-String -NotMatch '^(Metadata|Character|Standard|Word fa...",
+   "writeLike": false
+  },
+  {
+   "command": "$f='C:\\Users\\stop-\\n1-kanji-workspace\\reports-112\\confirm-claude.md'; (Get-Item $f).Length; (Get-FileHash $f -Algorithm SHA256).Hash.ToLower()",
+   "writeLike": false
+  }
+ ],
+ "web": [],
+ "otherTools": [
+  {
+   "tool": "send_session_message",
+   "args": "{\"session_id\": \"2451b10d-02a9-46ab-82d5-d90993f0cb8b\", \"message\": \"confirm-claude.md written (6682 bytes, sha256 b48f2031372c6e5cc067025471645b8bb221e53d10efeaf2f480d7223383531c): UNVERIFIED solely be"
+  }
+ ],
+ "final": {
+  "finalMessageChars": 1246,
+  "reportFile": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-112\\confirm-claude.md",
+  "reportExists": true,
+  "reportChars": 6433,
+  "reportBytes": 6682,
+  "reportSha256": "b48f2031372c6e5cc067025471645b8bb221e53d10efeaf2f480d7223383531c",
+  "finalSource": "task_complete.summary",
+  "finalEqualsReport": false,
+  "finalContainsReport": false,
+  "similarity": 0.3187
+ },
+ "flags": [
+  "other tools used: ['send_session_message']"
+ ]
+}

@@ -1,0 +1,34 @@
+COMMAND: python -m unittest discover -s tools -p test_*.py
+generated a.webp 552 bytes
+kept a.webp
+recovered completion receipt a.webp
+kept a.webp
+generated a.webp 552 bytes
+HTTP 429; retry in 0s (1/6)
+HTTP 429; retry in 0s (2/6)
+HTTP 429; retry in 0s (3/6)
+HTTP 429; retry in 0s (4/6)
+HTTP 429; retry in 0s (5/6)
+HTTP 429; retry in 0s (6/6)
+generated a.webp 552 bytes
+...............................................................................................................................................................................................................................................................................................................................................................................................................................................
+Applied 1 catalogs; lexical cards and legacy fields were not rewritten.
+Exported approved packages only. Validate content, rebuild the manifest and check archive budgets before publishing.
+Exported approved packages only. Validate content, rebuild the manifest and check archive budgets before publishing.
+Exported approved packages only. Validate content, rebuild the manifest and check archive budgets before publishing.
+Exported approved packages only. Validate content, rebuild the manifest and check archive budgets before publishing.
+----------------------------------------------------------------------
+Ran 431 tests in 68.953s
+
+OK
+COMMAND: python tools\validate.py
+0 error(s)
+COMMAND: python tools\check_content_budget.py
+warning: unable to access 'docs/n1-reviews/batch-131-closure/review/confirm-003/N1-B131-CLAUDE-CONFIRM-001/snapshot/docs/n1-sources/batch-131-reconciliation/responses/.gitattributes': Filename too long
+warning: unable to access 'docs/n1-reviews/batch-131-closure/review/confirm-003/N1-B131-CLAUDE-CONFIRM-002/snapshot/docs/n1-sources/batch-131-reconciliation/responses/.gitattributes': Filename too long
+warning: unable to access 'docs/n1-reviews/batch-131-closure/review/confirm-003/N1-B131-CLAUDE-CONFIRM-003/snapshot/docs/n1-sources/batch-131-reconciliation/responses/.gitattributes': Filename too long
+{'files': 8790, 'entries': 8805, 'retainedBytes': 49780809, 'inflatedBytes': 50049149, 'localZipBytes': 31631639, 'listeningTaskMediaBytes': 5893602}
+COMMAND: python tools\grammar_vocabulary.py check
+Vocabulary coverage: 3201/3336 reviewed prompts; stage=pilot
+COMMAND: python tools\build_manifest.py
+manifest.json: 8783 files incl. 401 images, 203 scene catalogs, 36 listening passages, 1 curriculum catalogs, 40 listening tasks, version 9320b98945604bbd

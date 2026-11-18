@@ -1,0 +1,32 @@
+{
+  "started": "2026-11-16T03:50:27.842496+00:00",
+  "finished": "2026-11-16T03:50:27.925107+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json, stat\nfrom common import *\nroot=review_dir(127)\nitems=json.loads(frozen(root/'finalizer-support-001.json'))['supportingArtifacts']\ndef capture(path, archive_path):\n    raw=Path(path).read_bytes(); digest=sha(raw); Path(path).chmod(stat.S_IREAD)\n    require(frozen(path,digest)==raw,'Capture mismatch')\n    items.append({'path':str(path),'sha256':digest,'archivePath':archive_path})\nrun='N1-B127-GPT-CONFIRM-001'\nfor name,archive in [(f'confirm/{run}-adjudication.json',f'verification/confirmations/{run}-adjudication.json'),(f'confirm/{run}-acceptance.json',f'verification/confirmations/{run}-acceptance.json'),(f'confirm/{run}-final.json',f'verification/confirmations/{run}-final.json')]: capture(root/name,archive)\ncapture(WS/'reports-127'/f'{run}.md',f'runs/{run}/report-source.md')\nfolder=root/'confirmation-gpt-final-001'; receipt=json.loads((folder/'receipt.json').read_bytes()); log=(folder/'output.log').read_bytes()\nrequire(receipt['logSha256']==sha(log) and receipt['exitCode']==receipt['childExitCodeAfterCleanup']==0 and not receipt['memory']['breach'],'GPT final receipt invalid')\nfor filename in ('receipt.json','output.log'): capture(folder/filename,f'verification/executions/confirmation-gpt-final-001/{filename}')\nfailed=root/'finalizer-support-preparation-001'; fr=json.loads(frozen(failed/'receipt.json')); fl=frozen(failed/'output.log')\nrequire(fr['exitCode']==fr['childExitCodeAfterCleanup']==1 and fr['logSha256']==sha(fl),'Failed preparation receipt mismatch')\nfor filename in ('receipt.json','output.log'): capture(failed/filename,f'verification/executions/finalizer-support-preparation-001/{filename}')\nrequire(len(items)==len({i['archivePath'] for i in items}),'Duplicate support path')\nsupport=freeze_json(root/'finalizer-support-002.json',{'candidate':'6541c81fa9d58f25849562f19ab7b04282f392e3','supportingArtifacts':items,'supersedes':'finalizer-support-001.json','reason':'Adds the final GPT report/adjudication/acceptance and successful hash-verified completed execution receipt/log. Preserves the failed first capture attempt and its explicit failure; its transient permission issue is not retried destructively.','reviewAccepted':True,'published':False})\nspec={'candidate':'6541c81fa9d58f25849562f19ab7b04282f392e3','verification':{'path':str(root/'reconciliation-001-independent-proof.json'),'sha256':'6d63b9a10b3059a2a39ab7481e17a76ae628afc2255c7e5f0128d241cac1d6cb'},'archiveVerification':{'path':str(root/'closure-archive-verification-001.json'),'sha256':sha(frozen(root/'closure-archive-verification-001.json'))},'supportingArtifacts':items}\nrequire(json.loads(frozen(spec['archiveVerification']['path']))['provenanceSha256']=='dc08b998e40064ad1b3c7153c6e87df60f5f86fce25fe4a94a5ff7823bb1dbf0','Archive provenance mismatch')\nprint(freeze_json(root/'finalizer-spec-001.json',spec))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b127-worktree",
+  "exitCode": 1,
+  "childPid": 22244,
+  "childExitCodeAfterCleanup": 1,
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "cleanupScope": "Immediate child PID only; not descendant-process acceptance.",
+  "cleanupError": null,
+  "logSha256": "8fa773bb195ff29b79303d3a6f64aff6bb54aa44d2e22a3886d1d53e209418a9",
+  "memory": {
+    "freeRamBeforeBytes": 5126160384,
+    "freeRamAfterBytes": 5120974848,
+    "minimumObservedFreeRamBytes": 5120970752,
+    "peakWorkingSetBytes": 23351296,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "e2695e2517918ef6a292648708edad7db7d2cdd018e3f608f4e4cd8b059ce153",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

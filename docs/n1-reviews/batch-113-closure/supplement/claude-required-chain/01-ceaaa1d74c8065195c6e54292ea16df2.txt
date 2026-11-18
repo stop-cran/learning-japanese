@@ -1,0 +1,286 @@
+B113 CLAUDE FIRST-REVIEW READ CHAIN | segment 1 of 56 (required)
+Byte-exact copies of files from the original packet batch-113-fdec1c02 (plus the title-index supplement). In each part,
+the stated segment lines equal the stated source lines; cite findings by source path and source line numbers.
+
+=== PART 1.1 | REVIEW.md ===
+source sha256 fa02806dfa2cbf4959d81c720d1c423280f5d27680eb70850ca9910653d89b2a | 6853 bytes | 119 lines | complete file
+segment lines 9-127 = source lines 1-119
+<<<BEGIN PAYLOAD>>>
+# Independent B113 review packet
+
+Snapshot: fdec1c02f9b02f29659b56551cd0a1fd927cced1
+Base: c42d80306926e99ec6436c80c0574e3a858a4286
+
+Review the fifteen new kanji cards, their generated stroke references, the
+30 backlink additions across 30 existing word articles (one of which also has
+a narrow non-link text edit), and narrow edits to two existing kanji cards
+(応 and 統). There are no new word/article files. The exact file list is in
+packet.json. The two independent reviewers receive the same snapshot, rubric
+and source access and work serially.
+
+## Boundaries
+
+Work read-only and blind. Do not edit/stage/commit/push, start other agents,
+start background processes, or run JVM/Gradle/emulator work. Write only the
+report path specified in your assignment, outside this packet.
+Use one tool call/command at a time; large reads need bounded ranges.
+Do not open other packets, reports, live checkouts, session histories,
+batch progress records, author design notes or author-review rationale.
+Public dictionary/source lookups are allowed; inspect actual relevant entries.
+
+snapshot\ contains the 62 changed teaching/geometry files from the exact Git
+commit. diffs\existing.diff contains only the 32 existing-file changes.
+repo\kanji (1,206 cards) and repo\words (5,082 articles) are complete
+same-commit context exports, not additional editing/review scope. They permit
+actual comparison-article, backlink, title, source-word and reading-list
+inspection. Other runtime assets are not exported. The manifest is supplied
+for scope/hash checks. The repo README's publication counts still describe
+the previously published checkpoint; packet.json gives this draft tree's
+counts. Publication closure documentation has not been written yet.
+
+## Review contract
+
+Read rubric\copilot-instructions.md and
+rubric\content-structure.instructions.md, plus repo\docs\content-format.md's
+kanji/quiz contracts. Cover correctness, scoped coverage, consistency/quiz
+safety and comprehensibility for the complete shared scope. Do not split
+the fifteen cards into disjoint reviewer assignments.
+
+Inspect complete applicable dictionary entries and actual reused/comparison
+articles, including spelling/reading restrictions and sense-local flags.
+evidence\jmdict-families.xml preserves all elements of 91 applicable families;
+dictionary-index.json maps the 102 queried spellings to entries (an empty
+list means no entry with exactly that spelling was found). Source readings,
+counts and radicals are in source-metadata.json and the full KANJIDIC2
+records. evidence\kanjivg has the pinned SVGs. The official Joyo PDF and
+extracted rows are provided. Provenance lists hashes, attribution and public
+character-entry URLs, without author conclusions. Consult independent public
+sources as needed; a filename, digest or successful fetch alone does not
+verify a linguistic claim.
+
+Retain raw source readings separately from quiz selections; selected
+readings need their own linked and dictionary-supported examples.
+Judge the actual displayed meaning labels and ordinary secondary senses,
+not title-string inequality. Exclusions are direct pairs, not transitive
+cliques. No invented phonetic/etymological claims or constituent readings
+for irregular whole words. Keep register and spelling qualifications
+attached to the relevant reading/sense. Do not demand exhaustive history
+or unrelated vocabulary.
+
+## Mechanical-evidence limits
+
+checks\ contains host outputs, not linguistic verdicts. The reading audit
+(reading-exposure.txt; reading-exposure-noextra.txt repeats it without the
+extra readings) is a Python port with full N1/All pools of 1,206 cards and
+Starter sessions plus one borrowed target. Its legacy prose claiming these
+are all actual app pools, or that custom pools are not built by an app, is
+NOT established by the run. Custom and caller-built pools, multiple borrowed
+Starter cards, actual Kotlin draws, native execution and installed-client
+compatibility are unverified. Do not infer a universal safety guarantee from
+zero modeled hits.
+
+The audit reports 0 modeled hits and 7 latent entries: three nanori-only
+entries (謝 さ/ざ/さ, outside the lexical teaching scope) and four
+dictionary/character readings (縫 ぶ, 討 たずねる, 寧 にょう, 援 おん).
+The helper labels every extra reading it was given "(card text)" regardless
+of origin. Those extras come from the cards' own text (飢 かつ.える, 需
+もと.める, 徹 とお.る/とお.す, 討 たず.ねる, 寧 ニョウ, 援 たす.ける/ひ.く)
+and from saved public Wiktionary snippets that the cards do not state (縫 ブ,
+徹 テチ, 誕 ダン/いつわ.る, 援 たす.け/オン). In a hypothetical Starter session
+that also borrows one further holder card, the 援 on-prompt エン could draw
+おん with the holders 恩, 温 or 音; the other six latent entries are not
+drawable with any single extra holder. The 徹 on-prompt (テツ) has one info
+line for the name-only reading つ (holders 子 通 都), drawable only in the
+padded Starter session.
+
+Quiz-safety fallback: in the full N1 and All pools exactly three prompts use
+the fallback for one of the three wrong readings, each with two curated
+options: 飢 kun う.える and 握 kun にぎ.る (the curated 凡 and 掲 have empty
+quizKunyomi), and 誕 on タン (the curated 談 reads ダン, a voiced variant of
+タン). Every other N1/All prompt is filled by the three curated options.
+Starter practice sessions fill from the fallback.
+
+The author's automated title/meaning-overlap scans and design-time review
+are not a complete card-by-card read inventory of the comparison cards; read
+the relevant comparison cards yourself.
+JVM/emulator work is held. The last delivered 5c000bd APK predates kanji
+quiz_exclusions; neither this packet nor host checks establish phone acceptance.
+The manifest lists 7,777 entries in its files dictionary (8,631 runtime
+entries across all nine sections); the tree has 1,206 kanji and 5,082 word
+articles.
+
+## Report
+
+Snapshot: <full candidate SHA; actual model if verifiable>
+Scope: <files inspected; clearly disclose any unread or partial scope>
+Verdicts: <correctness, scoped coverage, consistency/quiz safety,
+comprehensibility: CLEAN | NEEDS FIX | UNVERIFIED, per card where different>
+Findings: <severity; facet; file:lines; claim/impact; remedy; precise source;
+confidence>
+Optional: <nonblocking expansion or polish, or none>
+Limits: <unverified claims and evidence/execution limitations, or none>
+
+CLEAN means no actionable defect established within the inspected scope,
+not exhaustive correctness. Do not label consequential unresolved claims
+CLEAN. No finding quota. Separate established defects from hypotheses and
+optional polish. If file output truncates, finish the necessary range
+before claiming a complete read. Preserve a clear record of the actual scope.
+<<<END PAYLOAD>>>
+
+=== PART 1.2 | packet.json ===
+source sha256 02dbc370464fab977d839c88584923e244d4b678c70758afe61e5cc02dd36d0e | 3589 bytes | 148 lines | complete file
+segment lines 134-281 = source lines 1-148
+<<<BEGIN PAYLOAD>>>
+{
+  "batch": 113,
+  "candidate": "fdec1c02f9b02f29659b56551cd0a1fd927cced1",
+  "base": "c42d80306926e99ec6436c80c0574e3a858a4286",
+  "newKanji": [
+    "慢",
+    "縫",
+    "飢",
+    "恩",
+    "盆",
+    "誕",
+    "隊",
+    "需",
+    "系",
+    "徹",
+    "討",
+    "謝",
+    "握",
+    "寧",
+    "援"
+  ],
+  "newWords": [],
+  "modifiedExisting": [
+    "kanji/応.md",
+    "kanji/統.md",
+    "words/丁寧.md",
+    "words/体系.md",
+    "words/兵隊.md",
+    "words/寧ろ.md",
+    "words/徹夜.md",
+    "words/徹底.md",
+    "words/必需品.md",
+    "words/応援.md",
+    "words/恩.md",
+    "words/恩恵.md",
+    "words/感謝.md",
+    "words/我慢.md",
+    "words/握る.md",
+    "words/握手.md",
+    "words/援助.md",
+    "words/検討.md",
+    "words/盆.md",
+    "words/盆地.md",
+    "words/系統.md",
+    "words/縫う.md",
+    "words/自慢.md",
+    "words/裁縫.md",
+    "words/討つ.md",
+    "words/誕生.md",
+    "words/誕生日.md",
+    "words/謝る.md",
+    "words/軍隊.md",
+    "words/需要.md",
+    "words/飢える.md",
+    "words/飢饉.md"
+  ],
+  "manifestFilesDictionaryEntries": 7777,
+  "manifestRuntimeEntries": 8631,
+  "manifestSha256": "1c093f7cbed9121e95ed858db29042a491c72b85de820b9f8a25ea16795d12a8",
+  "manifestContentVersion": "520b87f6a026b41e",
+  "kanjiArticles": 1206,
+  "wordArticles": 5082,
+  "declaredKanjiWordPairs": 30,
+  "distinctMappedWordArticles": 30,
+  "sourceRows": [
+    384,
+    859,
+    1191,
+    361,
+    734,
+    1017,
+    1157,
+    1172,
+    819,
+    349,
+    999,
+    1031,
+    447,
+    260,
+    449
+  ],
+  "snapshotFiles": {
+    "kanji/寧.md": "A",
+    "kanji/徹.md": "A",
+    "kanji/応.md": "M",
+    "kanji/恩.md": "A",
+    "kanji/慢.md": "A",
+    "kanji/握.md": "A",
+    "kanji/援.md": "A",
+    "kanji/盆.md": "A",
+    "kanji/系.md": "A",
+    "kanji/統.md": "M",
+    "kanji/縫.md": "A",
+    "kanji/討.md": "A",
+    "kanji/誕.md": "A",
+    "kanji/謝.md": "A",
+    "kanji/隊.md": "A",
+    "kanji/需.md": "A",
+    "kanji/飢.md": "A",
+    "strokes/寧.json": "A",
+    "strokes/徹.json": "A",
+    "strokes/恩.json": "A",
+    "strokes/慢.json": "A",
+    "strokes/握.json": "A",
+    "strokes/援.json": "A",
+    "strokes/盆.json": "A",
+    "strokes/系.json": "A",
+    "strokes/縫.json": "A",
+    "strokes/討.json": "A",
+    "strokes/誕.json": "A",
+    "strokes/謝.json": "A",
+    "strokes/隊.json": "A",
+    "strokes/需.json": "A",
+    "strokes/飢.json": "A",
+    "words/丁寧.md": "M",
+    "words/体系.md": "M",
+    "words/兵隊.md": "M",
+    "words/寧ろ.md": "M",
+    "words/徹夜.md": "M",
+    "words/徹底.md": "M",
+    "words/必需品.md": "M",
+    "words/応援.md": "M",
+    "words/恩.md": "M",
+    "words/恩恵.md": "M",
+    "words/感謝.md": "M",
+    "words/我慢.md": "M",
+    "words/握る.md": "M",
+    "words/握手.md": "M",
+    "words/援助.md": "M",
+    "words/検討.md": "M",
+    "words/盆.md": "M",
+    "words/盆地.md": "M",
+    "words/系統.md": "M",
+    "words/縫う.md": "M",
+    "words/自慢.md": "M",
+    "words/裁縫.md": "M",
+    "words/討つ.md": "M",
+    "words/誕生.md": "M",
+    "words/誕生日.md": "M",
+    "words/謝る.md": "M",
+    "words/軍隊.md": "M",
+    "words/需要.md": "M",
+    "words/飢える.md": "M",
+    "words/飢饉.md": "M"
+  },
+  "blinding": "No author design notes, draft rationale, prior review reports, progress ledgers, commit message or authoring scans are included. Both reviewers receive this same packet.",
+  "publication": "Local signed review freeze only; not pushed and not review-closed."
+}
+<<<END PAYLOAD>>>
+
+=== END OF SEGMENT 1 of 56 ===
+NEXT SEGMENT (view exactly this one path next, as the only tool call of that response):
+C:\Users\stop-\n1-kanji-workspace\review-chains\b113-claude-v4\02-ac5a0618b8af3c65d4310bff79be8ac1.txt

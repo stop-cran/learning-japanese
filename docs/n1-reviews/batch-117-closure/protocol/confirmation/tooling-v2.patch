@@ -1,0 +1,41 @@
+--- confirm.py
++++ confirm_v2.py
+@@ -68,6 +68,17 @@
+     git(config, "merge-base", "--is-ancestor", config["candidate"], candidate)
+ 
+ 
++def revision_diff(config, candidate):
++    names = git(config, "diff", "--name-only", "--no-renames", "-z",
++                config["candidate"], candidate).decode("utf-8").split("\0")
++    omitted = [p for p in names if p == "manifest.json" or p.startswith("docs/")]
++    # Contributor receipts can contain the other reviewer's findings.
++    delta = git(config, "diff", "--no-color", config["candidate"], candidate, "--",
++                ".", ":(exclude)manifest.json", ":(exclude)docs")
++    require(delta, "No non-contributor revision to confirm")
++    return delta, omitted
++
++
+ def build(spec_path):
+     spec = json.loads(frozen(spec_path))
+     config = load_batch(spec["batch"])
+@@ -89,9 +100,7 @@
+     sources = [(f"initial-report/{Path(accepted['report']['path']).name}", original, None)]
+     bindings = [binding(spec_path), spec["acceptance"], accepted["report"]]
+     revised = dict(config, candidate=spec["candidate"])
+-    delta = git(config, "diff", "--no-color", config["candidate"], spec["candidate"], "--",
+-                ".", ":(exclude)manifest.json")
+-    require(delta, "No revision to confirm")
++    delta, omitted = revision_diff(config, spec["candidate"])
+     diff_path = out / f"{run}-fix.patch"
+     bindings.append(write_frozen(diff_path, delta))
+     sources.append(("diffs/fix.patch", delta, None))
+@@ -139,6 +148,9 @@
+     result = {"run": run, "batch": spec["batch"], "session": spec["session"], "candidate": spec["candidate"],
+               "config": config_binding, "kickoff": binding(kickoff_path), "chain": binding(chain_path),
+               "segments": len(chain["segments"]), "sourceCount": len(sources),
++              "diffOmittedPaths": omitted,
++              "diffScope": "All changes except generated manifest and contributor docs. "
++                           "Reviewer-specific responses and neutral evidence are explicitly selected in the spec.",
+               "memory": memory, "preparedOnly": True}
+     print(json.dumps(freeze_json(out / f"{run}-preflight.json", result)))
+ 

@@ -285,6 +285,8 @@ The pair does not mean that both alternatives simultaneously hold, nor does ever
 English "neither ... nor." Keep the actual main predicate.
 The new formation tasks cover noun/adjective alternatives and an affirmative-versus-negative second case.
 They are not unrestricted synonym-selection tasks or a replacement for the existing のに contrasts.
+**たとえ／いくら／どんなに〜ても**, "even if / however much," and further ても〜なくても practice are in
+[Concession and supposition](concession-and-supposition.md#2-adverbs-that-set-up-the-clause-たとえ-いくら-どんなに-もしも).
 
 ## Whole-sentence connections: しかし, でも, そして and それから
 
@@ -311,6 +313,8 @@ The added desk description is not necessarily a later event. **そして** and *
 neither automatically means "because." **それから** can also mean "since then" when it refers back to a time point.
 **しかし** and **でも** can both fit the library contrast; stylistic preferences are not a unique grammar key.
 These are support words here, not separately scored synonym-definition questions.
+For the N3 connective **ところが**, which reports an outcome that went against expectation, see
+[Result and topic connectives](result-and-topic-connectives.md#against-expectation-ところが).
 
 This conjunction **でも** is different from example-giving **お茶でも**, "tea or something," and concessive
 **ても／でも**, "even if/when." For example-giving, see the
@@ -340,6 +344,8 @@ The hours are an additional feature. Station access is not presented as their ca
 **開いています（あいています）** means is open here; **夜（よる）** is night.
 Do not infer an event sequence or a universal rule that every surrounding judgment must have the same
 positive/negative evaluation.
+At N3, **もっとも** limits what was just said rather than adding to it; it is set against それに in
+[Correction and contrast connectives](correction-and-contrast-connectives.md#もっとも-mind-you-having-said-that).
 
 ### それで: a result, or an invitation to continue
 
@@ -364,6 +370,8 @@ A fuller follow-up can be **それで、どちらが勝ったの？**
 A quoted version of that question remains a request for further information even inside an outer report.
 **それでは／それじゃ** belongs to a related but different "well then/in that case" use;
 it is not merely a spelling variant accepted in place of every それで.
+For **なぜなら** ("the reason is…", announcing a reason in the next sentence) and **そのため** ("for that reason",
+a result), see [Emphatic causes and reason connectives](emphatic-causes-and-reason-connectives.md#linking-reasons-across-sentences-なぜなら-and-そのため).
 
 ### それでも: retain the following stance despite the background
 

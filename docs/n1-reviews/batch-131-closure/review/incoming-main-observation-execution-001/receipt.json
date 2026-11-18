@@ -1,0 +1,32 @@
+{
+  "started": "2026-11-16T16:18:30.023366+00:00",
+  "finished": "2026-11-16T16:18:37.051705+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json,subprocess,sys\nfrom datetime import datetime,timezone\nfrom pathlib import Path\nsys.path.insert(0,r'C:\\Users\\stop-\\n1-kanji-workspace\\review-tools')\nfrom common import WS,freeze_json,require,start_guard\nfrom verify_b130_sources import Git\nrunner={'path':str(WS/'scratch-131'/'review'/'guarded-test-v3.py'),'sha256':'da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b'}\nbase='6da1184b82b60553f9b65c57f53289c779f96f7c'\ncommits=['1f13ea1108a8661a1f98dab6f7713dc36cc3518d','cb0f5581bdda84f7e673225c19126c85e242e57b']\nguard,_=start_guard('B131 incoming-main observation')\ngit=Git(WS/'b130-worktree',runner,guard)\ndef gh(*args):\n    p=subprocess.Popen(['gh',*args],stdout=subprocess.PIPE,stderr=subprocess.PIPE)\n    out,err=git.wait(p)\n    require(p.returncode==0,err.decode('utf-8','replace'))\n    return json.loads(out)\ntry:\n    require(git('remote','get-url','origin').decode().strip()=='https://github.com/stop-cran/learning-japanese.git','Unexpected remote')\n    require(gh('api','user')['login']=='stop-cran','Wrong account')\n    git('fetch','--quiet','origin','main')\n    require(git('rev-parse','FETCH_HEAD').decode().strip()==commits[-1],'Main advanced again')\n    metadata=[]\n    parent=base\n    for commit in commits:\n        require(git('show','-s','--format=%P',commit).decode().strip()==parent,'Incoming ancestry differs')\n        require(git('show','-s','--format=%G?|%GF|%ae|%ce',commit).decode().strip()=='G|D4C9A275A218AF747B787AFA9D94B9D311BD26A7|stop-cran@list.ru|stop-cran@list.ru','Owner signature differs')\n        git('verify-commit',commit,include_stderr=True)\n        metadata.append(gh('api',f'repos/stop-cran/learning-japanese/commits/{commit}','--jq','{sha,html_url,author:.author.login,committer:.committer.login,verification:.commit.verification.verified,reason:.commit.verification.reason,parents:[.parents[].sha]}'))\n        parent=commit\n    changed=git('diff','--name-status','--no-renames',base,commits[-1]).decode('utf-8').splitlines()\n    runtime={}\n    for commit in [base,commits[-1]]:\n        runtime[commit]=json.loads(git('show',commit+':manifest.json'))\n    before,after=(runtime[x]['files'] for x in [base,commits[-1]])\n    delta=[{'path':p,'before':before.get(p),'after':after.get(p)} for p in sorted(before.keys()|after.keys()) if before.get(p)!=after.get(p)]\n    ci=gh('run','list','--repo','stop-cran/learning-japanese','--commit',commits[-1],'--json','databaseId,headSha,status,conclusion,url,name','--limit','5')\nfinally:\n    memory=guard.finish()\nrequire(not memory['breach'],'Incoming observation breached RAM')\nrecord={'status':'OBSERVED_NOT_ACCEPTED_FOR_B131','observedAt':datetime.now(timezone.utc).isoformat(),'base':base,'incoming':commits[-1],'commits':metadata,'changed':changed,'runtimeBefore':len(before),'runtimeAfter':len(after),'runtimeDelta':delta,'contentVersion':runtime[commits[-1]]['contentVersion'],'ci':ci,'memory':memory,'limits':'Read-only Git object observation and fetch only; no author checkout touched, no candidate or unrelated linguistic acceptance.'}\nprint(json.dumps(record,ensure_ascii=False))\nprint(json.dumps(freeze_json(WS/'scratch-131'/'review'/'incoming-main-observation-001.json',record)))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b131-worktree",
+  "exitCode": 0,
+  "childPid": 3556,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "cleanupScope": "Immediate child PID only; not descendant-process acceptance.",
+  "cleanupError": null,
+  "logSha256": "7bee20242ffa03b1188f4792873f4481b90550595555fa8cb9afd58a87968742",
+  "memory": {
+    "freeRamBeforeBytes": 4610437120,
+    "freeRamAfterBytes": 4590997504,
+    "minimumObservedFreeRamBytes": 4555894784,
+    "peakWorkingSetBytes": 23216128,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

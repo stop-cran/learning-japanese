@@ -1,0 +1,18 @@
+....E
+======================================================================
+ERROR: test_explicit_protocol_tests_and_exclusive_recovery_namespace (test_b131_confirmation_engine_002.B131ConfirmationProtocolTests.test_explicit_protocol_tests_and_exclusive_recovery_namespace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\test_b131_confirmation_engine_002.py", line 10, in test_explicit_protocol_tests_and_exclusive_recovery_namespace
+    text = corrected_text(frozen(SOURCE, SOURCE_SHA).decode("utf-8"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\prepare_b131_confirmation_engine_002.py", line 27, in corrected_text
+    require(text.count(' / "confirm"') == 2, "Unexpected confirmation output routing")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Unexpected confirmation output routing
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.023s
+
+FAILED (errors=1)

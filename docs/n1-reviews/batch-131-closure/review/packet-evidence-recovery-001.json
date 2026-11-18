@@ -1,0 +1,56 @@
+{
+  "status": "PREPARATION_ONLY",
+  "derivation": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b131_packet_evidence.py",
+      "sha256": "b7de738bc79f8d879d81f2b47f288ab9d4b0d6e376c7f947d48688c6c2df8e56"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b131_packet_evidence_v2.py",
+      "sha256": "052f2752da8f3a3bd3b07fca55b9383b16b605b12e6a899cdb0c31196fdbdcc2",
+      "bytes": 13835
+    },
+    "substitutions": [
+      {
+        "before": "HERE / \"packet-verification-001\"",
+        "after": "HERE / \"packet-verification-002\"",
+        "count": 1
+      },
+      {
+        "before": "            comparisons[char] = metadata[\"title\"], sha(raw)\n            teaching.append(raw.decode(\"utf-8\"))\n",
+        "after": "            comparisons[char] = (metadata[\"title\"], sha(raw))\n",
+        "count": 1
+      },
+      {
+        "before": "                and set(re.findall(\"[\\u3400-\\u4dbf\\u4e00-\\u9fff]\", \"\\n\".join(teaching))) <= chars,\n",
+        "after": "                and (set(re.findall(\"[\\u3400-\\u9fff]\", \"\\n\".join(teaching)))\n                     | set(comparisons) | set(\"\\u5f73\\u4e8d\\u97cb\\u884c\\u7f8a\\u96e8\\u76f8\\u6728\\u76ee\")) == chars,\n",
+        "count": 1
+      },
+      {
+        "before": "        points = fonts[\"codePoints\"]\n",
+        "after": "        require(fonts[\"producerSha256\"] == signed[PREFIX + \"producers/font_final_b131.py\"]\n                and fonts[\"initialGenerationEvidenceSha256\"] == signed[PREFIX + \"stroke-font-evidence.json\"],\n                \"Font producer or initial generation binding differs\")\n        points = fonts[\"codePoints\"]\n",
+        "count": 1
+      },
+      {
+        "before": "\"fontMissingCodePoints\": missing, \"memory\": memory,",
+        "after": "\"fontMissingCodePoints\": missing,\n        \"fontScope\": \"All Han in the three new cards, all comparison identifiers and explicit \"\n                     \"mnemonic/radical components; not every legacy comparison article body.\",\n        \"memory\": memory,",
+        "count": 1
+      }
+    ],
+    "reverseExact": true
+  },
+  "failedReceiptSha256": "6dc71f7e0dbd6486f03269fbc6c124d1ed4069d692617f5c06048f72a951e853",
+  "producerSha256": "667470115666a53130e85b9e4808ca98f6dfe0add8dbad48134afc20626674ef",
+  "memory": {
+    "freeRamBeforeBytes": 5566816256,
+    "freeRamAfterBytes": 5564182528,
+    "minimumObservedFreeRamBytes": 5564178432,
+    "peakWorkingSetBytes": 25473024,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "qualification": "The predecessor incorrectly demanded font coverage evidence for all Han throughout 179 legacy article bodies. The actual signed producer probes all Han in the new cards, the 179 comparison identifiers and explicit components. V2 exactly reproduces that finite set and records its limits; no author evidence or teaching changed, and rendered fallback remains unverified."
+}

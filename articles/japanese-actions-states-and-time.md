@@ -140,6 +140,8 @@ ongoing at that past reference time. Ordinary **読んでる／食べてる** co
 The [existing interval practice](koto-wake-and-formal-nouns.md#うち-and-あいだ-a-window-a-developing-change-or-a-continuing-state) keeps that
 framing contrast. It is not a universal rule that に forbids every lasting activity or は every single event.
 The new formation drills add whole verb-plus-interval assembly rather than duplicate the old particle blanks.
+For the N3 contrasts **うちに** versus **間に**, **最中に**, **たとたん（に）**, **次第** and **と同時に**, see
+[Time spans, immediacy and prerequisites](time-spans-and-immediacy.md#3-うちに-or-間に-a-window-that-closes-or-an-interval-with-edges).
 
 ## ないで and なくて
 
@@ -158,6 +160,8 @@ For **なくて**, connect the negative through **なく + て**:
 The distinction is useful, but **not an absolute division of all sentences**.
 なくて commonly connects a negative reason to feelings, inability or another consequence.
 ないで commonly presents the circumstances or manner of doing the main action.
+In writing, this ないで often becomes **ずに** (**払わずに**（はらわずに）, "without paying"); see
+[ずに, ないで and なくて](written-register-and-casual-markers.md#5-ずに-ないで-and-なくて).
 Both fit some evaluative expressions, including the
 [negative gladness forms](necessity-advice-and-instructions.md#てよかった-glad-about-what-happened-or-did-not-happen).
 The named formation drills distinguish the requested connection, not every possible way to word that situation.

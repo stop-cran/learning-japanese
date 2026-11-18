@@ -1,0 +1,30 @@
+{
+  "contract": "report-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "Line 1 must be '# B131 initial review — N1-B131-GPT-004'",
+    "Level-2 headings must be exactly, in order: Overall verdict; Facet verdicts; Segments read; Phase-1 D/E lists; D/E cards read; Per-card results; Findings; Optional points; Limits",
+    "Overall verdict: expected exactly one 'Verdict:' line, found 0",
+    "Facet verdicts: level-3 headings must be exactly, in order: Correctness; Scoped coverage; Consistency/quiz safety; Comprehensibility",
+    "Segments read: expected exactly one 'Core chain:' line, found 0",
+    "Segments read: expected exactly one 'Extension chain:' line, found 0",
+    "Phase-1 D/E lists: expected exactly one 'D:' line, found 0",
+    "Phase-1 D/E lists: expected exactly one 'E:' line, found 0",
+    "Phase-1 D/E lists: expected exactly one 'Missing entries:' line, found 0",
+    "D/E cards read: a table row is required for every D/E card read",
+    "Per-card results: exactly one row for each new card is required",
+    "Findings: write either the single line 'None.' or numbered items",
+    "Optional points: write either the single line 'None.' or numbered items",
+    "Limits: at least one numbered limit is required",
+    "The coordinator completion message is not an exact verdict"
+  ],
+  "overall": null,
+  "facets": {},
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 0,
+  "deRows": 0,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+
+{"started": "2026-11-16T19:24:47.618660+00:00", "finished": "2026-11-16T19:24:47.735781+00:00", "command": ["C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe", "-B", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\check-report-structure.py", "--report", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation004-coordinator-controls-001\\fixtures\\025-test_real_structure_checker_subprocess_imports\\synthetic-structure-report.md", "--core-manifest", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-002\\core-chain-compact-002.json", "--extension", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation004-coordinator-controls-001\\fixtures\\025-test_real_structure_checker_subprocess_imports\\N1-B131-GPT-004-extension.json", "--reference", "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-131-1359b467-compact-002\\eligibility-reference.json", "--phase1-list", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation004-coordinator-controls-001\\fixtures\\025-test_real_structure_checker_subprocess_imports\\N1-B131-GPT-004\\audit-synthetic\\phase1-list.txt", "--phase2-message", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation004-coordinator-controls-001\\fixtures\\025-test_real_structure_checker_subprocess_imports\\N1-B131-GPT-004-phase2-message.txt", "--audit", "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation004-coordinator-controls-001\\fixtures\\025-test_real_structure_checker_subprocess_imports\\N1-B131-GPT-004\\audit-synthetic\\audit.json", "--run", "N1-B131-GPT-004"], "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b131-worktree", "exitCode": 1, "childPid": 21388, "childExitCodeAfterCleanup": 1, "waitTimeoutSeconds": 0.1, "cleanupTimeoutSecondsPerStage": 10, "cleanupScope": "Immediate child PID only; not descendant-process acceptance.", "cleanupError": null, "logSha256": "570f78d61f5aaf6ea54d24b7b671f652890202c6124036dfca75a13c6d9aa96c", "memory": {"freeRamBeforeBytes": 4052267008, "freeRamAfterBytes": 4045840384, "minimumObservedFreeRamBytes": 4045840384, "peakWorkingSetBytes": 23457792, "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.", "abortThresholdBytes": 1073741824, "samplingIntervalSeconds": 0.25, "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.", "breach": null}, "runnerSha256": "da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b", "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"}

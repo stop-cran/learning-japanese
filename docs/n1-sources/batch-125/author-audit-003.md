@@ -1,0 +1,7 @@
+# B125 reconciliation audit revision 3
+
+The signed prior correction and all its artifacts remain unchanged. Q4 凌 and Q9 占 were previously open; they are now guarded conservatively using independently captured Kanji Pedia character entries documented in `../batch-125-reconciliation-002/source-receipt.json`. A violation/disrespect branch for 凌 and an occupation/possession branch for 占 are character-level evidence; neither shared readings nor whole-word glosses alone establish the comparison. The guards avoid broad answer ambiguity in both directions without asserting that all senses coincide or that occupation requires invasion.
+
+The target entry separately reports an appearance-related branch and a nonstandard-marked reading absent from frozen KANJIDIC2 metadata. It has not been incorporated into teaching or evaluated across the quiz corpus. This is a consequential source discrepancy and remains a review limit, not a frequency or absence claim.
+
+The additive family-specific responses remove references to the other review family while preserving the original findings, the source-backed Q1 rationale, the correction to the E5 citation, and the original reports. They do not constitute confirmations. The complete finite inventory and the preceding source/disposition bindings are in `../batch-125-reconciliation-002/dispositions.json`. Other unread comparisons, native/device and publication acceptance remain open.

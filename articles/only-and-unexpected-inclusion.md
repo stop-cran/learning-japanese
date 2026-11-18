@@ -72,6 +72,10 @@ Nor does だけ always mean "a small amount." **好きなだけ**, "as much as y
 The [formal-noun and particle-neighbor article](koto-wake-and-formal-nouns.md) covers those,
 along with ばかり. ばかり can express concentration or repetition and sometimes overlaps with restriction;
 it is not simply a wrong spelling of だけ.
+**N ばかり**, "mostly N," next to だけ and しか, and the additive **ばかりでなく／だけでなく**, "not only," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#n-ばかり-だけ-and-しか).
+The intermediate **だけしか～ない**, the singling-out **こそ** and the playing-down **なんか／なんて**
+are practised in [Focus, limits and intervals](focus-limits-and-intervals.md).
 
 ## しか: the negative excludes the alternatives
 
@@ -202,6 +206,8 @@ uses. For the teacher example, **先生すら / 先生ですら / 先生だっ�
 すら is less usual than さえ; だって is conversational.
 Their other uses and combinations are not interchangeable, and sentence-initial だって can instead give
 a reason or objection. These alternatives are acknowledged, not a demand to master every register now.
+In a condition, **さえ〜ば** means "as long as": 練習さえすれば, "as long as you practise." It is practised in
+[Concession and supposition](concession-and-supposition.md#1-three-roles-for-a-condition).
 
 ## でも: an unlikely example, not always an actual surprise
 

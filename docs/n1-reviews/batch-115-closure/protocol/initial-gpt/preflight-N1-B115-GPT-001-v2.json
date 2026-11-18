@@ -1,0 +1,87 @@
+{
+  "run": "N1-B115-GPT-001",
+  "candidate": "f36cd819dcf6ac8b4a3ee8ee29b6e750cd6f09ab",
+  "candidateClean": true,
+  "decisionOrigin": "Coordinator agent, not a claimed new human instruction.",
+  "decisionSourceToolCallIds": [
+    "toolu_01B8DT9FsCZsZZH2GwhsUX43",
+    "toolu_018CchGb6kdptPTWAvmWP2HW",
+    "toolu_016SdDhitDUXQD3FFtPyXnFK"
+  ],
+  "claudeAcceptance": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\N1-B115-CLAUDE-004-final-adjudication.json",
+    "sha256": "1c6f53dd2e1ba3b5daf4ff366b11ec12398fa39e3ab3dea81e824bdfc14a4dd6"
+  },
+  "order": "Accepted Claude-004, then this blind GPT review.",
+  "attemptLimit": 1,
+  "failureAction": "Hold and report; no automatic retry.",
+  "expectedFamily": "gpt",
+  "completionContract": "entire-message-enum-v1",
+  "completionContractScope": "coordinator-tool-message-only",
+  "reportStructureContract": "report-structure-v1",
+  "isolatedFinalSummaryPermitted": true,
+  "finalSummaryIsReviewEvidence": false,
+  "changedPromptLines": [
+    1,
+    9,
+    22,
+    224
+  ],
+  "insertedPromptLines": [
+    257
+  ],
+  "prospectiveStructureOnlySentence": "Verdict cells contain only the exact enum, with no annotations or finding IDs.",
+  "changedScope": "Run/report/instruction identity and one approved structure-only sentence; same frozen template and checker.",
+  "removingSentenceAndReversingIdentityReproducesBasePrompt": true,
+  "reviewerInputIncludesClaudeReviewOutput": false,
+  "packetFilesVerified": 1299,
+  "coreSegmentsVerified": 30,
+  "prompt": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\initial-gpt-115-001-v2.txt",
+    "sha256": "1e7f1c64d01d6ef9398d8fe17da6f061a3a25fb6eecf9496744ff1b264ecfe37",
+    "bytes": 21187
+  },
+  "kickoff": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\kickoff-gpt-115-001-v2.txt",
+    "sha256": "5188be6666726615841c2489cc00bacf0505db620574d6c052ee1b1e3ccccfe7",
+    "bytes": 231
+  },
+  "auditConfig": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\audit-config-N1-B115-GPT-001-v2.json",
+    "sha256": "d8c27b50e890b19da610743b8a41955188f1db50b203d9bf83fde2262e12cd56",
+    "bytes": 4600
+  },
+  "report": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-115\\initial-gpt.md",
+  "reportAbsent": true,
+  "tooling": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prepare-gpt-001-v2.py",
+    "sha256": "aa82448f8e5b88de75f26f2148e3603cbbe354d8060adcd0581f17b4a6130789"
+  },
+  "preservedOriginalGptBindings": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\initial-gpt-115-001.txt",
+      "sha256": "64b101300f87cf1899265dafbf5c8afa1849b8eaea54292792dac93d4b9f2ce6"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\kickoff-gpt-115-001.txt",
+      "sha256": "d04fcf2f703b67d6e41023a2afe8d6758fa0710d77a552955293bcc77f75c74e"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\prompts-115\\audit-config-N1-B115-GPT-001.json",
+      "sha256": "b949198b281552c4002b05aac27d9707d86aa956002bdae66f25ac16d1f5f35c"
+    }
+  ],
+  "eventAuditStart": "Byte zero; no excluded prefix.",
+  "syntheticDeliveryProbe": false,
+  "memory": {
+    "freeRamBeforeBytes": 4469788672,
+    "freeRamAfterBytes": 4443549696,
+    "minimumObservedFreeRamBytes": 4443545600,
+    "peakWorkingSetBytes": 28667904,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  }
+}

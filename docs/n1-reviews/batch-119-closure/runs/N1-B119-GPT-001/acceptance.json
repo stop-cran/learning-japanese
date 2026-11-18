@@ -1,0 +1,47 @@
+{
+  "run": "N1-B119-GPT-001",
+  "batch": 119,
+  "candidate": "8a30e1729c270f025c186ff71d41f1153a276bfa",
+  "createdAt": "2026-11-15T09:23:19.666601+00:00",
+  "preflightSha256": "447c8f875e96a361b6ccca0c3911a983c94312d4077d24d82967067a5f298731",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step.py",
+    "sha256": "a5a2a9c45bb0de68cf3baa8056267ddd3649375e8b06bd0ad520beb31b672544"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "The complete pinned English record gives 妥 gentle and peace, while Daijisen explicitly defines a matter becoming settled. The actual displayed 優 gentle, 寧 peaceful, 定 settle, 済 settle and 了 settling labels overlap those independently sourced senses. All five direct pairs are absent at both endpoints. This conclusion is supported by the actual labels and target senses, not by transitivity through an existing guard.",
+      "fix": "Append 優, 寧, 定, 済 and 了 to 妥's exclusions, preserving its original nine and legitimate meanings. Keep the calm-versus-kindness qualification for 優; this is a conservative label safeguard rather than universal lexical equivalence."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted-with-bounded-semantic-qualification",
+      "basis": "Daijisen gives 循 following a fixed rule and going around. 則 displays following a model, 準 conformity, 応 compliance, and 転 turning. The full opened 応 article treats acting in line with a call or demand separately from answering, consent and suitability. 転 explicitly teaches turning as well as rolling or changes of situation. The broad follow and turn labels can therefore be defended from the supplied target senses. The Spanish target glosses are corroboration, not substituted English metadata. None of these four direct pairs exists.",
+      "fix": "Append 則, 準, 応 and 転 to 循's exclusions. Explain the particular rule/compliance and going-around overlaps without equating every response with obedience or every turn with a complete cycle. Retain the existing six guards and the separately accepted 倣 guard.",
+      "scope": "A bounded direct-pair safeguard; no reproduced arbitrary-pool collision or native runtime acceptance is claimed."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted",
+      "basis": "The rubric asks for named components even when history is unverified. The two current mnemonics identify only upper strokes and layered strokes. The supplied complete KanjiVG group derivative identifies a top variant of 爪 above 女 in 妥, and 盾 on the right of 彳 in 循. Naming these modern shapes fixes the concrete omission without treating KanjiVG phon attributes as verified historical phonetics.",
+      "fix": "Name 妥's 爪-shaped upper component and 循's 盾-shaped right component in the existing mnemonic sentences. Preserve their explicit not-etymology qualification, structure-unclassified tags, radical metadata and generated strokes. Prefer the ordinary 爪 character plus a shape-variant explanation over introducing the standalone radical code point solely for this fix; if new component code points are introduced, perform the established font-coverage check."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-119\\initial-gpt-001.md",
+    "sha256": "3b42172760e7dea49c1d93fa2efb1b1f125c826465ddebfa5b57634eae68adcd"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-GPT-001-final.json",
+    "sha256": "989da751ca78b02012703b093e74aee8a2cf15b8cd5865b0a7207e3d6dd55c55"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-GPT-001-adjudication.json",
+    "sha256": "ae6d7092c8867dbb99035b6bf6714e7dbea10a62047260cbeac8ff1fd4eb9868"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

@@ -1,0 +1,74 @@
+{
+  "contract": "confirm-structure-v1",
+  "status": "PASS",
+  "errors": [],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "The coordinator completion message is not an exact confirmation verdict"
+  ],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "Report is absent"
+  ]
+}
+...........E.........
+======================================================================
+ERROR: test_slice_binding_integrity_and_errors (test-audit-confirm.MainTests.test_slice_binding_integrity_and_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-124\review\confirm\test-audit-confirm.py", line 280, in test_slice_binding_integrity_and_errors
+    code, result = self.run_main(b"x" + self.prefix[1:] + body)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-124\review\confirm\test-audit-confirm.py", line 266, in run_main
+    code = module.main(args)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-124\review\confirm\audit-confirm.py", line 395, in main
+    root.mkdir(parents=True)
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\stop-\\AppData\\Local\\Temp\\tmptdom1fvd\\audits\\FIXTURE-RUN\\audit-20261115T212228225118'
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.307s
+
+FAILED (errors=1)

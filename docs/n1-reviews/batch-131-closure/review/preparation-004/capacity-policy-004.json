@@ -1,0 +1,27 @@
+{
+  "status": "PREDECLARED_FAMILY_SPECIFIC_CAPACITY",
+  "profiles": {
+    "claude": {
+      "selectedModel": "claude-opus-5.5",
+      "maxPromptTokens": 952000,
+      "prePhase2Gate": 740000
+    },
+    "gpt": {
+      "selectedModel": "gpt-6.1-sol",
+      "maxPromptTokens": 922000,
+      "prePhase2Gate": 710000
+    }
+  },
+  "startupGate": 700000,
+  "forecastSha256": "1d524f25ed065fb5a2c9f4ecfbad1e28a25b4b54d0b058c6bbcd1619283ca3bb",
+  "neutralTelemetrySha256": "858bcef9314908bdfc40b5ca5d714837b611ee4b8fb6cedb91e2b468d2d9fb1a",
+  "forecastUnchanged": true,
+  "gptHeadroom": {
+    "compactionTriggerEstimate": 737600,
+    "prePhase2Gate": 710000,
+    "marginBelowEstimatedTrigger": 27600
+  },
+  "formula": "lastInputTokens +7000 +complete article/JMdict source/header cost +30000 <=family gate",
+  "scope": "Exact supported limits; mixed/unknown limits HOLD. Forecast coefficients, caps, sources and startup worst-case unchanged. GPT003 remains HOLD and cannot resume.",
+  "limits": "Neither capacity forecast nor estimated compaction trigger is a guarantee."
+}

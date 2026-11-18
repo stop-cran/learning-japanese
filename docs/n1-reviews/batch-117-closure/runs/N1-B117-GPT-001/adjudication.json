@@ -1,0 +1,65 @@
+{
+  "run": "N1-B117-GPT-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-117\\initial-gpt-001.md",
+    "sha256": "702bc49f60ca059ec6f0f7d4efcc2c445ffed83571908a7eb8f8a4ef0f2cdae6"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-GPT-001-final.json",
+    "sha256": "00d470a0e0dc5d729c7937df189a23236fd685d6d54a245603b4d4b0c02d4a8d"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-GPT-001-evidence-check.json",
+    "sha256": "af06ba1aca783c6e82832b3ae18224f3c6a239d425bcdedb10baa3abadde131c",
+    "issues": 0
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "Complete Daijisen character senses 1-6 expressly support rule/code, ordered recording and chronological/geological meanings. The actual labels and secondary senses support the requested direct guards. Omitting a sense from the chosen title or from KANJIDIC2 English glosses does not establish harmlessness.",
+      "fix": "Declare 紀 pairs with 歴,書,規,律,則,整,年,期,代 while preserving the initial 史,記,誌,録. Preserve century/geology qualifications."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted",
+      "basis": "The supplied Daijisen definition 探し求める and the KANJIDIC2 searching/inquiring senses positively support the actual search, seek and question labels.",
+      "fix": "Declare 索 pairs with 捜,探,求,問 while preserving 緒."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted",
+      "basis": "The full character definition supplies つな,糸すじ and つなぎとめる, not merely the whole-word English gloss of 維持. These support the requested cord, thread, binding and hold-fast comparisons.",
+      "fix": "Declare 維 pairs with 索,緒,糸,結,括,保,持,留. Keep physical-cord and broader hold-fast uses distinct; pairs are guards, not unrestricted synonym claims."
+    },
+    {
+      "id": "F4",
+      "disposition": "accepted",
+      "basis": "Complete 賃 entries give fee, charge, wages, payment and monetary consideration. Actual comparison titles include pay/price/expense, and 代 explicitly teaches fee. No transitive protection can be inferred.",
+      "fix": "Declare 賃 pairs with 代,俸,給,費,価,値,払 while preserving 借,料."
+    },
+    {
+      "id": "F5",
+      "disposition": "accepted-and-reproduced",
+      "basis": "The unchanged source log explicitly permits 由's ゆい in N1/All. The coordinator independently reproduced one production hit using the unchanged model plus source-attested --extra 維=ゆい. Daijisen positively attests ユイ as an on-reading even though KANJIDIC2 classifies ゆい under nanori.",
+      "fix": "Remove the false nondrawability claim, explain the source distinction without changing preserved reading metadata, and remove the demonstrated fallback-slot deficit with a reviewed on-capable curated option. Verify the supplemental reading explicitly in the revised audit."
+    }
+  ],
+  "openForReconciliation": [
+    "紀/籍", "紀/述", "紀/世",
+    "索/査", "索/究", "索/糸",
+    "維/整", "維/支", "維/続",
+    "賃/雇", "賃/償"
+  ],
+  "otherReconciliationInputs": [
+    "Retain and reassess Claude's tentative comparisons, including 紀/典 and 索/調, rather than automatically clearing them.",
+    "Coordinator C2 fixes only the new prose's mistyped B116 SHA.",
+    "Coordinator C4 supersedes the prior inference that KANJIDIC2's omission settles 紀's independent rules/chronological senses.",
+    "Correct the authored receipt's inaccurate reading-exposure narrative in a separate reconciliation receipt; preserve the historical original and raw logs.",
+    "Unread index leads are leads, not automatic findings or proof of harmlessness; inspect consequential leads proportionately."
+  ],
+  "actualModels": ["gpt-6.1-sol"],
+  "publicationAccepted": false,
+  "limit": "Accepted as bounded independent evidence after clean execution/context/structure/source-binding checks. Findings and consequential unresolved comparisons still require signed reconciliation and both confirmations; this is not acceptance of the candidate for publication."
+}

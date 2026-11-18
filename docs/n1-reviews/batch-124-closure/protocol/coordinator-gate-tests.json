@@ -1,0 +1,47 @@
+{
+  "batch": 124,
+  "passingTests": 78,
+  "reviewProtocolTests": 75,
+  "liveGuardTests": 3,
+  "verifiedDerivedFiles": 9,
+  "testRuns": [
+    {
+      "directory": "derive-review-tools-001",
+      "receiptSha256": "2b944818121259cb373a8a30581d4c9c848974c6250bacc83cdb511b37061c0f",
+      "logSha256": "66a195639fd14e2303858a9b4aaf9aa30dbd11469b8c2b548332fe73b21359ec",
+      "exitCode": 0,
+      "memoryBreach": null
+    },
+    {
+      "directory": "review-tool-tests-002",
+      "receiptSha256": "e8905d83ee3f42049928f67d728d0fc2210f2100b16f5b30349497fff0245def",
+      "logSha256": "26b887d3ba0a45df3d82ee5fc0818b804538b89cb0109190d7bae4d84ecca082",
+      "exitCode": 0,
+      "memoryBreach": null
+    }
+  ],
+  "preservedFailedAttempt": {
+    "directory": "review-tool-tests-001",
+    "receiptSha256": "e4e409dad93648d8bc329e7f4768b314c3796b675c3471ba248d7abb45f43b70",
+    "logSha256": "b0281afc5a8f851fedc2bba09c88d720f4dcc47a2a487e40928c779cb967ff8c",
+    "exitCode": 5,
+    "memoryBreach": null,
+    "reason": "unittest discovery ran zero tests because the inherited test filenames contain hyphens.",
+    "resolution": "Explicit module invocation ran all 78 tests successfully in a new output directory; no source, fixture or gate changes."
+  },
+  "reviewToolDerivationSha256": "e2cde379834edcecf23d2d204fc2302ca6739c0422e1f10e801356f3355ca8d9",
+  "guardedRunnerDerivationSha256": "c06d7612983b9215496b3ddd88baa0b507900969266e20c1701bbd92f9dca9aa",
+  "guardedRunnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "memory": {
+    "freeRamBeforeBytes": 3817451520,
+    "freeRamAfterBytes": 3817168896,
+    "minimumObservedFreeRamBytes": 3817168896,
+    "peakWorkingSetBytes": 22454272,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "breach": null
+  },
+  "capture": "Derived inputs were ReadOnly during verification. Outer run receipts and logs are post-run ReadOnly captures after exact hash verification, not execution-time ReadOnly files.",
+  "scope": "Coordinator-only fixtures; no author-worktree edits, candidate/source acceptance, reviewer launch or publication."
+}

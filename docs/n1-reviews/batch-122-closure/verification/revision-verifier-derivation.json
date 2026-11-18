@@ -1,0 +1,153 @@
+{
+  "batch": 122,
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b121_revision_v2.py",
+        "sha256": "80f5d0feb422d66ca6b051d56cabebe8cbd48c219f289f965c8437d7b9e89408"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b122_revision.py",
+        "sha256": "30d8327042e183a61324365138a3594ebfdb962d35e8a1b194f3d494db439fd7",
+        "bytes": 12004
+      },
+      "changes": [
+        {
+          "old": "\\u5fb3",
+          "new": "\\u60a0",
+          "count": 6
+        },
+        {
+          "old": "words/\\u9053\\u60a0.md",
+          "new": "words/\\u60a0\\u3005.md",
+          "count": 1
+        },
+        {
+          "old": "(\"\\u60a0\", \"\\u30c8\\u30af\", \"\\u304a\\u3057\\u3048\", \"\\u3068\\u3063\")",
+          "new": "(\"\\u60a0\", \"\\u30e6\\u30a6\", \"\\u306f\\u308b\\u304b\", \"\\u3068\\u304a\\u3044\", \"\\u3086\")",
+          "count": 1
+        },
+        {
+          "old": "\\u5e78\\u8ca1\\u5049",
+          "new": "\\u5e38\\u7d9a",
+          "count": 1
+        },
+        {
+          "old": "allowed = {\"distractors\", \"quiz_exclusions\"}",
+          "new": "allowed = {\"quiz_exclusions\"}",
+          "count": 1
+        },
+        {
+          "old": "batch-121/reconciliation-001/",
+          "new": "batch-122-reconciliation/",
+          "count": 1
+        },
+        {
+          "old": "B121",
+          "new": "B122",
+          "count": 2
+        },
+        {
+          "old": "load_batch(121)",
+          "new": "load_batch(122)",
+          "count": 1
+        },
+        {
+          "old": "len(current) == 8704",
+          "new": "len(current) == 8706",
+          "count": 1
+        },
+        {
+          "old": "count(runtime(before)) == 250 and count(current) == 251",
+          "new": "count(runtime(before)) == 251 and count(current) == 252",
+          "count": 1
+        },
+        {
+          "old": "\"batch\": 121",
+          "new": "\"batch\": 122",
+          "count": 1
+        },
+        {
+          "old": "\"sourceMembersPublishedBeforeBatch\": 250, \"sourceMembersInCandidate\": 251",
+          "new": "\"sourceMembersPublishedBeforeBatch\": 251, \"sourceMembersInCandidate\": 252",
+          "count": 1
+        }
+      ],
+      "reverseExact": true
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b121_revision.py",
+        "sha256": "25a8107f1478d375d031393fc46235ec662e102391c383cdebfb23b6f3cfad3f"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b122_revision.py",
+        "sha256": "8f10fd32d6f111017de90a4ec6d59e4cde5882680ade0f7bb730a28a0217398d",
+        "bytes": 5281
+      },
+      "changes": [
+        {
+          "old": "verify_b121_revision",
+          "new": "verify_b122_revision",
+          "count": 5
+        },
+        {
+          "old": "\\u30c8\\u30af",
+          "new": "\\u30e6\\u30a6",
+          "count": 2
+        },
+        {
+          "old": "\\u5e78\\u8ca1\\u5049",
+          "new": "\\u5e38\\u7d9a",
+          "count": 2
+        },
+        {
+          "old": "\"\\u8ca1\"",
+          "new": "\"\\u5e38\"",
+          "count": 1
+        },
+        {
+          "old": "while_replacing_options",
+          "new": "while_preserving_options",
+          "count": 1
+        },
+        {
+          "old": "new = {**old, \"distractors\": [\"d\", \"e\", \"f\"],",
+          "new": "new = {**old, \"distractors\": [\"a\", \"b\", \"c\"],",
+          "count": 1
+        },
+        {
+          "old": "(\"distractors\", [\"d\", \"d\", \"f\"]),",
+          "new": "(\"distractors\", [\"d\", \"e\", \"f\"]),\n                           (\"distractors\", [\"d\", \"d\", \"f\"]),",
+          "count": 1
+        }
+      ],
+      "reverseExact": true
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b121_revision_v2.py",
+        "sha256": "305fd6c13ac295610f32a657994b80ef070bbbe83bb22e85c836b1270f7944ec"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b122_revision_summary.py",
+        "sha256": "3a2c4275851cd24683f52856ecda2d77441464ab58f14cea0b52cb0536aa54cb",
+        "bytes": 1593
+      },
+      "changes": [
+        {
+          "old": "verify_b121_revision_v2",
+          "new": "verify_b122_revision",
+          "count": 1
+        }
+      ],
+      "reverseExact": true
+    }
+  ],
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b122_revision.py",
+    "sha256": "e3ef3311cca1ca71838db88cd185b14fec406d13e626812cfe379c54a32e9739"
+  },
+  "scope": "B122 identities, source directory, accounting and supplemental readings. Preserve curated options as well as all original metadata and guards. The original signed-delta, complete-record and committed-gate checks remain intact.",
+  "publicationAccepted": false
+}

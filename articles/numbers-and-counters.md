@@ -37,6 +37,24 @@ such as 三十歳. The answer screen lists the spellings and readings accepted f
 that exact expression.
 
 **歳 / 才** counts age. 歳 is the usual full spelling and 才 a common simpler one.
+It is valid for young children too: 一歳（いっさい）, 四歳（よんさい）,
+八歳（はっさい）and 十歳（じゅっさい／じっさい）are all correct.
+**歳 does not start only at eleven.**
+See the [歳 counting table](https://guidetojapanese.org/learn/grammar/numbers)
+for the age-counter readings from one through ten.
+
+[Children's ages can also use the native series](https://www.tofugu.com/japanese/japanese-counter-tsu/#ages-19):
+一つ（ひとつ）, 二つ（ふたつ）,
+三つ（みっつ）, 四つ（よっつ）, 五つ（いつつ）, 六つ（むっつ）,
+七つ（ななつ）, 八つ（やっつ）and 九つ（ここのつ）.
+[十（とお）](https://kotobank.jp/word/%E5%8D%81-515445) can also mean age ten,
+with no final つ.
+From eleven, use forms such as 十一歳（じゅういっさい）, not 十一つ.
+
+The age-writing prompts for 1, 4, 8 and 10 accept both constructions, including
+Arabic-digit spellings. Reading practice still asks for the **displayed expression**:
+よっつ reads 四つ, not 四歳; とお reads 十, not 十歳.
+
 [二十歳（はたち）](../words/二十歳.md) has a special everyday reading; the regular
 にじゅっさい / にじっさい readings are also possible. 何歳（なんさい） asks age.
 おいくつ is another polite age question when it refers to a person; it is not a
@@ -450,6 +468,22 @@ A cup and its matching saucer can be one set even though they are two
 physical pieces. 組み is also used for sets. In contrast, the numbered
 school labels 一組 and 二組 are **いちくみ** and **にくみ**.
 The label identifies a class; it does not count how many classes exist.
+
+A full class name usually puts the school year first:
+三年二組（さんねんにくみ）is “Year 3, Class 2.” Here 三年 is the third
+year at that school level (elementary, junior high or high school), not a
+period of three years; 三年生（さんねんせい）is a third-year student.
+Some schools label parallel classes with letters
+instead: 三年A組 and 三年B組 are “Year 3, Class A” and “Year 3, Class B.”
+Numbered school classes normally use **くみ** (さんねんにくみ), but lettered classes are
+heard with both **くみ** and **ぐみ**:
+三年A組（さんねんエーくみ／さんねんエーぐみ）. The TV drama
+3年B組金八先生（さんねんビーぐみきんぱちせんせい）, set in a junior high
+school, uses ぐみ. Named classes, common in nursery schools, usually take
+ぐみ, as in ほしぐみ “Star class.” For a real school, follow the reading its own
+members use. See the
+[NINJAL Q&A on くみ and ぐみ](https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-213/)
+(in Japanese) for these patterns and their tentative explanations.
 
 **人組** describes membership size:
 二人組（ふたりぐみ／ににんぐみ）, 三人組（さんにんぐみ）and

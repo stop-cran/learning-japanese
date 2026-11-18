@@ -1,0 +1,552 @@
+{
+  "run": "N1-B123-GPT-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-123\\initial-gpt-001.md",
+    "sha256": "216f031815b75d1ef1ed72f36484b684f0947a1fe778ce7d1b6eeca0723dd204"
+  },
+  "verdict": "NEEDS FIX",
+  "formalCitations": [
+    {
+      "item": "F1",
+      "reportLine": 120,
+      "citation": "evidence/jmdict-families.xml:3548-3568",
+      "opened": true,
+      "exactSourceText": "  </entry>\n  <entry>\n    <ent_seq>2713240</ent_seq>\n    <k_ele>\n      <keb>例</keb>\n    </k_ele>\n    <k_ele>\n      <keb>様</keb>\n    </k_ele>\n    <k_ele>\n      <keb>例し</keb>\n      <ke_inf>irregular okurigana usage</ke_inf>\n    </k_ele>\n    <r_ele>\n      <reb>ためし</reb>\n    </r_ele>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <gloss xml:lang=\"eng\">precedent</gloss>\n      <gloss xml:lang=\"eng\">example</gloss>\n    </sense>"
+    },
+    {
+      "item": "F1",
+      "reportLine": 120,
+      "citation": "evidence/external-snapshots/01-extract.txt:16-25",
+      "opened": true,
+      "exactSourceText": "はん【範】\n読み方：はん\n［常用漢字］　［音］ハン（漢）　［訓］のり\n１ 基準となる一定の型。手本。「範式・範例／規範・師範・垂範・典範・文範・模範」\n２ 区切られた枠。「範囲・範疇(はんちゅう)」\n３ 広く行き渡る。「広範」\n［名のり］すすむ\nはん【範】\n読み方：はん\n手本。模範。「―を後世に残す」「工業先進国に―をとる」"
+    },
+    {
+      "item": "F1",
+      "reportLine": 120,
+      "citation": "snapshot/kanji/範.md:3-14",
+      "opened": true,
+      "exactSourceText": "title: model; standard\njlpt: 1\ntags: [jlpt-n1, grade-8, structure-unclassified]\nstrokes: 15\nradical: 竹\nradicalNumber: 118\nonyomi: [ハン]\nkunyomi: []\nquizOnyomi: [ハン]\nquizKunyomi: []\ndistractors: [車, 書, 達]\nquiz_exclusions: [型, 例, 規, 則, 法, 典, 式, 幅, 準, 律, 憲, 域, 般, 類, 師, 象, 儀, 制, 程, 令]"
+    },
+    {
+      "item": "F1",
+      "reportLine": 120,
+      "citation": "repo/kanji/様.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 様\ntitle: manner; honorific suffix\njlpt: 3\ntags: [jlpt-n3, grade-3, structure-unclassified]\nstrokes: 14\nradical: 木\nradicalNumber: 75\nonyomi: [ヨウ, ショウ]\nkunyomi: [さま, さん]\ndistractors: [洋, 横, 杯]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 120,
+      "citation": "repo/docs/content-format.md:93-113",
+      "opened": true,
+      "exactSourceText": "\n### Quiz authoring\n\nThe meaning quiz displays a kanji and offers other cards' English titles as answers. For new cards, curate **three** semantically\ndistinct wrong options for the default four-choice quiz. Two remain structurally valid for older cards, but the app fills missing\nchoices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:\ndifferent English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when\nthey are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "evidence/jmdict-families.xml:1533-1576",
+      "opened": true,
+      "exactSourceText": "    <ent_seq>1205270</ent_seq>\n    <k_ele>\n      <keb>格</keb>\n      <ke_pri>ichi1</ke_pri>\n      <ke_pri>news1</ke_pri>\n      <ke_pri>nf19</ke_pri>\n    </k_ele>\n    <r_ele>\n      <reb>かく</reb>\n      <re_pri>ichi1</re_pri>\n      <re_pri>news1</re_pri>\n      <re_pri>nf19</re_pri>\n    </r_ele>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <pos>noun, used as a suffix</pos>\n      <gloss xml:lang=\"eng\">status</gloss>\n      <gloss xml:lang=\"eng\">position</gloss>\n      <gloss xml:lang=\"eng\">rank</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <gloss xml:lang=\"eng\">method</gloss>\n      <gloss xml:lang=\"eng\">way</gloss>\n      <gloss xml:lang=\"eng\">style</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <gloss xml:lang=\"eng\">rule</gloss>\n      <gloss xml:lang=\"eng\">regulation</gloss>\n      <gloss xml:lang=\"eng\">law</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <field>grammar</field>\n      <gloss xml:lang=\"eng\">case</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <field>logic</field>\n      <gloss xml:lang=\"eng\">figure (form of a syllogism)</gloss>\n    </sense>\n  </entry>\n  <entry>"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "evidence/jmdict-families.xml:188-236",
+      "opened": true,
+      "exactSourceText": "  <entry>\n    <ent_seq>1438050</ent_seq>\n    <k_ele>\n      <keb>法</keb>\n    </k_ele>\n    <k_ele>\n      <keb>則</keb>\n    </k_ele>\n    <k_ele>\n      <keb>典</keb>\n    </k_ele>\n    <k_ele>\n      <keb>範</keb>\n    </k_ele>\n    <k_ele>\n      <keb>矩</keb>\n    </k_ele>\n    <r_ele>\n      <reb>のり</reb>\n    </r_ele>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <gloss xml:lang=\"eng\">rule</gloss>\n      <gloss xml:lang=\"eng\">law</gloss>\n      <gloss xml:lang=\"eng\">regulation</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <gloss xml:lang=\"eng\">model</gloss>\n      <gloss xml:lang=\"eng\">pattern</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <field>Buddhism</field>\n      <gloss xml:lang=\"eng\">teachings of Buddha</gloss>\n      <gloss xml:lang=\"eng\">Buddhist doctrine</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <gloss xml:lang=\"eng\">transverse measurement</gloss>\n      <gloss xml:lang=\"eng\">measurement across</gloss>\n    </sense>\n    <sense>\n      <pos>noun (common) (futsuumeishi)</pos>\n      <field>engineering</field>\n      <gloss xml:lang=\"eng\">side-slope</gloss>\n      <gloss xml:lang=\"eng\">slope</gloss>\n    </sense>\n  </entry>"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "evidence/external-snapshots/01-extract.txt:7-8",
+      "opened": true,
+      "exactSourceText": "１ 守るべき規範。法律。おきて。「―を守る」\n２ 手本。模範。「後進に―を示す」"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "evidence/external-snapshots/01-extract.txt:19-20",
+      "opened": true,
+      "exactSourceText": "１ 基準となる一定の型。手本。「範式・範例／規範・師範・垂範・典範・文範・模範」\n２ 区切られた枠。「範囲・範疇(はんちゅう)」"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "repo/kanji/格.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 格\ntitle: rank; character\njlpt: 3\ntags: [jlpt-n3, grade-5, structure-unclassified]\nstrokes: 10\nradical: 木\nradicalNumber: 75\nonyomi: [カク, コウ, キャク, ゴウ]\nkunyomi: []\ndistractors: [校, 杯, 果]\n---"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "snapshot/kanji/範.md:3-14",
+      "opened": true,
+      "exactSourceText": "title: model; standard\njlpt: 1\ntags: [jlpt-n1, grade-8, structure-unclassified]\nstrokes: 15\nradical: 竹\nradicalNumber: 118\nonyomi: [ハン]\nkunyomi: []\nquizOnyomi: [ハン]\nquizKunyomi: []\ndistractors: [車, 書, 達]\nquiz_exclusions: [型, 例, 規, 則, 法, 典, 式, 幅, 準, 律, 憲, 域, 般, 類, 師, 象, 儀, 制, 程, 令]"
+    },
+    {
+      "item": "F2",
+      "reportLine": 128,
+      "citation": "repo/docs/content-format.md:93-113",
+      "opened": true,
+      "exactSourceText": "\n### Quiz authoring\n\nThe meaning quiz displays a kanji and offers other cards' English titles as answers. For new cards, curate **three** semantically\ndistinct wrong options for the default four-choice quiz. Two remain structurally valid for older cards, but the app fills missing\nchoices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:\ndifferent English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when\nthey are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n"
+    }
+  ],
+  "issues": [],
+  "comparisons": [
+    {
+      "id": "D1",
+      "card": "格",
+      "reportLine": 71,
+      "displayedTitle": "rank; character",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The full 格/かく entry includes unrestricted rule, regulation and law, not just rank or personality; 範/のり independently has the same normative branch and model/pattern. evidence/jmdict-families.xml:1533-1576; evidence/jmdict-families.xml:188-236.",
+      "disposition": "Collision-needing-exclusion, F2: ordinary normative-standard overlap, despite the different title. No direct declaration on either endpoint; not a current curated pair."
+    },
+    {
+      "id": "D2",
+      "card": "標",
+      "reportLine": 72,
+      "displayedTitle": "mark; signpost; goal",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "標's article explicitly includes 標準 standard/norm, 標本 sample/example and a claimed standard branch, not only signposts. The corresponding independent families or character extract are not supplied. repo/kanji/標.md:21-25; repo/kanji/標.md:32-44; repo/kanji/標.md:53-58.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: neither a compound-only dismissal nor a positive constituent claim is established. No direct pair on either endpoint; 標's guards with 準 and 規 are not transitive. Not curated."
+    },
+    {
+      "id": "D3",
+      "card": "様",
+      "reportLine": 73,
+      "displayedTitle": "manner; honorific suffix",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Beyond descriptive さま and decorative 模様, JMdict independently lists 様 with 例 as ためし, precedent/example, without a rare-spelling or sense restriction on 様. 範's character entry and noun entry supply model/example. evidence/jmdict-families.xml:3548-3568; evidence/external-snapshots/01-extract.txt:16-25.",
+      "disposition": "Collision-needing-exclusion, F1: model/example is a defensible ordinary secondary interpretation, not merely shared visual patterning. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D4",
+      "card": "形",
+      "reportLine": 74,
+      "displayedTitle": "shape; form",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Read physical outline, abstract form/manner, resultant state, behavior, suffix form/style and the collateral/coin senses. These cannot be restricted to physical shape; a normative template is a different issue. evidence/jmdict-families.xml:1723-1811; evidence/jmdict-families.xml:3217-3280; repo/kanji/形.md:19-22.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the supplied senses do not settle whether model/standard or bounded frame gives a defensible alternative to the broad form label. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "D5",
+      "card": "本",
+      "reportLine": 75,
+      "displayedTitle": "book, origin",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "本's article includes base, main, real, a counter and 手本. The 範式 family cross-reference to 手本 confirms the whole-word association, not 本's constituent sense. repo/kanji/本.md:19-28; evidence/jmdict-families.xml:1210-1284.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: model as an ordinary 本 sense lacks independent evidence here. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "D6",
+      "card": "倣",
+      "reportLine": 76,
+      "displayedTitle": "imitate; emulate",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The complete article gives following an existing model, including an abstract precedent, rather than merely physical copying. Its cited 倣う/模倣 families are not in the supplied independent families. repo/kanji/倣.md:21-24; repo/kanji/倣.md:43-55.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: model versus following a model is relevant but the noun/action distinction alone cannot certify harmlessness. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D7",
+      "card": "像",
+      "reportLine": 77,
+      "displayedTitle": "image; statue",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes likeness, representation and mental imagination as well as statues; it is not exclusively physical. Independent 像/想像 entries were unavailable. repo/kanji/像.md:19-20; repo/kanji/像.md:33-41.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: a representational model is not automatically a normative model, but the supplied evidence does not settle ordinary secondary overlap. Neither endpoint declares the pair; not curated."
+    },
+    {
+      "id": "D8",
+      "card": "囲",
+      "reportLine": 78,
+      "displayedTitle": "surround; enclose",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "囲 includes the noun enclosure/fence and abstract 範囲, not only the enclosing action. Daijisen independently gives 範 a delimited frame, and JMdict gives the whole word 範囲 scope/range. repo/kanji/囲.md:19-20; repo/kanji/囲.md:30-43; evidence/external-snapshots/01-extract.txt:19-21; evidence/jmdict-families.xml:252-276.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: independent 囲 sense/allocation evidence is missing; physical/abstract or action/object shortcuts do not settle the pair. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "D9",
+      "card": "限",
+      "reportLine": 79,
+      "displayedTitle": "limit",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "限's article covers limits of amount, time and eligibility. 範's independently attested delimited frame makes a bounds comparison plausible, but frame versus terminal limit needs lexical assessment. repo/kanji/限.md:19-21; repo/kanji/限.md:36-44; evidence/external-snapshots/01-extract.txt:19-21.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: no independent 限 family was supplied, and abstract limits were not dismissed as physical boundaries. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D10",
+      "card": "境",
+      "reportLine": 80,
+      "displayedTitle": "boundary; border",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes region/environment as well as a boundary line; 範's delimited-frame branch is independently attested. repo/kanji/境.md:19-20; repo/kanji/境.md:32-42; evidence/external-snapshots/01-extract.txt:19-21.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the region/bounds secondary sense needs independent 境 evidence, not an exclusively physical interpretation. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "D11",
+      "card": "界",
+      "reportLine": 81,
+      "displayedTitle": "world, boundary",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The complete card also includes sphere of activity and limit, not just the earth/world. Compare 範's bounded-frame branch and 範囲 sphere/scope. repo/kanji/界.md:19-20; repo/kanji/界.md:32-40; evidence/external-snapshots/01-extract.txt:19-21; evidence/jmdict-families.xml:252-276.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: independent character/word evidence for 界's domain and limit senses is missing. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D12",
+      "card": "広",
+      "reportLine": 82,
+      "displayedTitle": "wide, spacious",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Daijisen explicitly gives 範 広く行き渡る, beyond model/frame; JMdict preserves broad/extensive/widespread 広範 and its alternate spellings. 広's article includes spreading/dissemination, not just room size. evidence/external-snapshots/01-extract.txt:19-21; evidence/jmdict-families.xml:29-58; repo/kanji/広.md:19-20; repo/kanji/広.md:29-33.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the exact wide/spacious label versus widespread sense needs further independent 広 evidence; the secondary branch is not dismissed as only a compound. Neither endpoint guards the pair; not curated."
+    },
+    {
+      "id": "D13",
+      "card": "方",
+      "reportLine": 83,
+      "displayedTitle": "direction, method",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The complete independent 方/ほう family includes type/category, field, method/manner and length, beyond direction or a respectful person. 範 has a delimited-frame/category association, but 範疇's whole-word gloss does not automatically allocate category to 範. evidence/jmdict-families.xml:2511-2604; evidence/external-snapshots/01-extract.txt:19-21; repo/kanji/方.md:19-20.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: normative method/category overlap is not settled by the available character evidence. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D14",
+      "card": "度",
+      "reportLine": 84,
+      "displayedTitle": "degree, number of times",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "度's article includes degree/temperature, count, occasion and the qualified 目出度い spelling. 範/のり independently has standard length/scale and measurement, but those do not automatically mean degree or occurrence. repo/kanji/度.md:19-20; repo/kanji/度.md:28-45; evidence/external-snapshots/01-extract.txt:11-15.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: no independent 度 family settles the secondary measure/extent comparison. Neither endpoint declares the pair; not curated."
+    },
+    {
+      "id": "D15",
+      "card": "道",
+      "reportLine": 85,
+      "displayedTitle": "road, way",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The full card includes method/principle. Daijisen's のり entry independently includes human normative conduct and a distance branch, with its quoted historical example; these are not interchangeable with every road. repo/kanji/道.md:19-22; evidence/external-snapshots/01-extract.txt:4-15.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: independent 道 evidence and spelling/sense applicability are missing. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D16",
+      "card": "計",
+      "reportLine": 86,
+      "displayedTitle": "measure; plan",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes measuring, calculating and planning; the independent 計 entry includes plan, measuring device and total. 範/のり's transverse measurement/scale is a plausible comparison, not proof of the same measuring action. repo/kanji/計.md:19-21; evidence/jmdict-families.xml:1812-1854; evidence/jmdict-families.xml:225-235.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the relevant 計る family is absent, and action versus scale alone cannot exclude ordinary overlap. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "D17",
+      "card": "測",
+      "reportLine": 87,
+      "displayedTitle": "measure, gauge",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The complete card explicitly includes prediction/estimation as well as surveying/physical measurement; no independent 測る or prediction family is supplied. Compare 範/のり scale/transverse measurement. repo/kanji/測.md:19-20; repo/kanji/測.md:29-43; evidence/external-snapshots/01-extract.txt:11-13.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: neither an exclusively physical restriction nor an ordinary normative sense is established. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D18",
+      "card": "量",
+      "reportLine": 88,
+      "displayedTitle": "quantity; amount",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The full article includes noun amount and measuring/weighing, including surveying and its spelling qualifications. Independent relevant 量 families are absent; the supplied はか/progress family is not evidence for measuring. repo/kanji/量.md:19-20; repo/kanji/量.md:29-43; evidence/external-snapshots/01-extract.txt:11-13.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: measurement result versus scale/standard is not settled. No direct declaration on either endpoint; not curated."
+    },
+    {
+      "id": "D19",
+      "card": "坂",
+      "reportLine": 89,
+      "displayedTitle": "slope; incline",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "JMdict's のり family lists 範 and an engineering side-slope/slope sense without a spelling restriction; Daijisen marks the 範 spelling with ▽ and describes earthwork slope. This cannot simply be erased because it is not the selected ハン reading. evidence/jmdict-families.xml:188-236; evidence/external-snapshots/01-extract.txt:4-15; repo/kanji/坂.md:3; repo/kanji/坂.md:19-20.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: the technical, nonpreferred-spelling sense's ordinary meaning-quiz applicability needs evidence; no engineering-to-everyday equivalence is claimed. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "D20",
+      "card": "理",
+      "reportLine": 90,
+      "displayedTitle": "reason, logic",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes principle/arrangement rather than only logical inference. Daijisen includes human normative 道理 for のり; independent 理/ことわり evidence was not supplied. repo/kanji/理.md:19-20; repo/kanji/理.md:26-39; evidence/external-snapshots/01-extract.txt:7-10.",
+      "disposition": "UNVERIFIED possible collision-needing-exclusion: logical explanation and normative principle are not automatically equivalent, and the secondary comparison remains unsettled. No direct guard on either endpoint; not curated."
+    },
+    {
+      "id": "E1",
+      "card": "型",
+      "reportLine": 91,
+      "displayedTitle": "mold; type",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 型 senses include model, pattern, template and standard form as well as size and martial-arts forms; Daijisen defines 範 through a standard 型. evidence/jmdict-families.xml:1680-1741; evidence/external-snapshots/01-extract.txt:19-20; repo/kanji/型.md:19-20.",
+      "disposition": "Already handled: model/standard-pattern ambiguity needs this direct guard, declared on 範, not 型. Not a current curated pair."
+    },
+    {
+      "id": "E2",
+      "card": "例",
+      "reportLine": 92,
+      "displayedTitle": "example; precedent",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 例 includes example/precedent and customary usage; independent 範/はん is example/model. evidence/jmdict-families.xml:2930-2982; evidence/jmdict-families.xml:579-602; repo/kanji/例.md:3.",
+      "disposition": "Already handled: displayed example overlaps 範's ordinary example sense; direct declaration is on 範, not 例. Not curated."
+    },
+    {
+      "id": "E3",
+      "card": "規",
+      "reportLine": 93,
+      "displayedTitle": "standard; rule",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Actual standard/rule title overlaps independently attested 範 standard/template and normative のり. The supplied 規範 family confirms model/standard/norm at the whole-word level, not every constituent claim. repo/kanji/規.md:3; evidence/external-snapshots/01-extract.txt:7-8; evidence/external-snapshots/01-extract.txt:19-20; evidence/jmdict-families.xml:332-364.",
+      "disposition": "Already handled: standard is a defensible displayed option for 範; direct guard is on 範, not 規. Full independent 規 teaching verification remains limited. Not curated."
+    },
+    {
+      "id": "E4",
+      "card": "則",
+      "reportLine": 94,
+      "displayedTitle": "rule; follow a model",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "則 and 範 share the independent のり rule/law/model family; 則's full card includes following a model, source-only rule and qualified rare 則ち. evidence/jmdict-families.xml:188-236; repo/kanji/則.md:19-20; repo/kanji/則.md:30-46.",
+      "disposition": "Already handled: direct normative/model guard is declared on 範, not 則; its other senses do not erase overlap. Not curated."
+    },
+    {
+      "id": "E5",
+      "card": "法",
+      "reportLine": 95,
+      "displayedTitle": "law; method",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 法/ほう includes law, principle, method and restricted Buddhist/grammar senses; 法 and 範 additionally share のり rule/model. evidence/jmdict-families.xml:188-236; evidence/jmdict-families.xml:2617-2656; repo/kanji/法.md:19-22.",
+      "disposition": "Already handled: ordinary normative overlap is guarded directly on 範, not 法; this is not a claim that all methods are laws. Not curated."
+    },
+    {
+      "id": "E6",
+      "card": "典",
+      "reportLine": 96,
+      "displayedTitle": "reference texts; rules; ceremony",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 典 includes law code and shares 範's のり rule/model family; its Sweden abbreviation and ceremony branch are distinct. The opened card qualifies source-only kun use. evidence/jmdict-families.xml:188-236; evidence/jmdict-families.xml:2480-2510; repo/kanji/典.md:21-27; repo/kanji/典.md:40-46.",
+      "disposition": "Already handled: displayed rules and secondary model overlap; direct declaration is on 範, not 典. Not curated."
+    },
+    {
+      "id": "E7",
+      "card": "準",
+      "reportLine": 97,
+      "displayedTitle": "standard, conform",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Actual standard/conform label and full card's semi-/quasi-, model-after and source-only qualifications were read. 範 independently denotes a standard model. JMdict's supplied 準 entry verifies only the prefix, not all character senses. repo/kanji/準.md:3; repo/kanji/準.md:19-20; repo/kanji/準.md:29-37; evidence/external-snapshots/01-extract.txt:19-20.",
+      "disposition": "Already handled: displayed standard is defensible for 範; direct declaration is on 範, not 準. Independent verification of all 準 secondary claims remains limited. Not curated."
+    },
+    {
+      "id": "E8",
+      "card": "師",
+      "reportLine": 98,
+      "displayedTitle": "teacher; specialist",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 師 is teacher/master/mentor, leader/specialist and a historical brigade; 師範 independently has a model/exemplar/pattern/paragon secondary sense. Neither proves the asserted character-dictionary model sense of 師 itself. evidence/jmdict-families.xml:3118-3174; evidence/jmdict-families.xml:79-111; repo/kanji/師.md:19-22.",
+      "disposition": "Already handled conservatively: direct guard is on 範, not 師. Whether an ordinary constituent model sense independently requires it is UNVERIFIED; teacher versus exemplar is not resolved from a different title. Not curated."
+    },
+    {
+      "id": "E9",
+      "card": "象",
+      "reportLine": 99,
+      "displayedTitle": "elephant; image; shape",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 象 has animal and form/appearance entries; 象る includes modeling on, imitation, taking shape and representing, with kana-use qualification. A modeling action need not be a normative object. evidence/jmdict-families.xml:2046-2085; evidence/jmdict-families.xml:2983-3020; repo/kanji/象.md:30-43.",
+      "disposition": "Already handled conservatively: the direct model-related guard is declared on 範, not 象. Exact representational-versus-normative ambiguity remains UNVERIFIED, not dismissed by part of speech. Not curated."
+    },
+    {
+      "id": "E10",
+      "card": "儀",
+      "reportLine": 100,
+      "displayedTitle": "ceremony; formal conduct",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "範": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 儀 includes ceremony, matter/affair/case and a restricted formal suffix. 儀範 means precedent/model and 地球儀 Earth globe/model, but whole-word meanings alone do not establish constituent 儀=model. evidence/jmdict-families.xml:2-15; evidence/jmdict-families.xml:1577-1606; evidence/jmdict-families.xml:2323-2345; repo/kanji/儀.md:49-56.",
+      "disposition": "Already handled conservatively: direct declaration is on 範, not 儀. Necessity from an ordinary constituent model sense is UNVERIFIED, not disproved by ceremony coming first. Not curated."
+    }
+  ],
+  "sourceFilesRehashed": 63,
+  "newTitles": {
+    "範": "model; standard"
+  },
+  "acceptanceLimit": "Mechanics and factual source bindings only; no linguistic verdict is inferred."
+}

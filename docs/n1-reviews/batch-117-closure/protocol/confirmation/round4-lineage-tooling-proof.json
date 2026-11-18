@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "tests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\round4-lineage-tooling-tests.txt",
+    "sha256": "d4f89663caf658107bed3da70695e92c7ae6110252b53a8796d72748da164bcf",
+    "bytes": 102
+  },
+  "exitCode": 0,
+  "actualLineageChecks": [
+    {
+      "run": "N1-B117-GPT-CONFIRM-003",
+      "priorSha256": "ee5f5df9bb52f47ffe8fe98912429e384ec091e2c79463438436911213587fb7",
+      "basis": "confirmation",
+      "identityAndHistoricalState": "PASS"
+    },
+    {
+      "run": "N1-B117-CLAUDE-REPLACEMENT-CONFIRM-004",
+      "priorSha256": "4c5ac17f13dd5e9c1680e0f35a62784418f7852cab2639b0177a23ae24d218e2",
+      "basis": "accepted-confirmation",
+      "identityAndHistoricalState": "PASS"
+    }
+  ],
+  "frozenTools": {
+    "confirm_v4.py": "f7c05a12632220167eb568b6187fe5c8e92ef550358e2d88ece2cc749758d27c",
+    "confirm_v5.py": "a702e7eb1efa46e8cc847f4228d04d9dfd02adff67a13df0dbbd05d8f3d9f69b",
+    "close_v3.py": "891f97651e4bf222b892185e192aa36d47230b7b8025c3267f350e3ca476d323",
+    "close_v4.py": "1776edceeb500abf454d3c5e86836967203cc51fad2ec8bc118e09a4f3136150",
+    "test_accepted_followup.py": "cdc2fe7ec4d0368050bcac69a650582f2fcedc3a8af6cf1d7cb0449fda9ea766",
+    "replacement_lineage.py": "997f0a132edafe3e4bf1ea2336ccdba70b981c31838353227afe4f475e8e61dd"
+  },
+  "scope": "Add accepted-confirmation follow-up basis and preserve accepted historical snapshots as non-final lineage entries. Existing admission, execution, context, report structure, two-final-family and source gates remain unchanged. No candidate acceptance or publication."
+}

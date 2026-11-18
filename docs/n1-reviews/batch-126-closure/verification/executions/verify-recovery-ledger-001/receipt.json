@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:32:19.378852+00:00",
+  "finished": "2026-11-16T01:32:19.455611+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nimport sys\nfrom pathlib import Path\nsys.path.insert(0, r'C:\\Users\\stop-\\n1-kanji-workspace\\review-tools')\nfrom common import frozen, require, sha\npath = Path(r'C:\\Users\\stop-\\.copilot\\session-state\\2451b10d-02a9-46ab-82d5-d90993f0cb8b\\files\\b126-authoring-assignment.json')\nledger = json.loads(path.read_bytes())\nroot = Path(ledger['scratch']) / 'review'\nrequire(ledger['status'] == 'claude-initial-phase1-running' and ledger['overallN1TaskComplete'] is False, 'Ledger state differs')\nreview = ledger['independentReview']\nfrozen(review['promptsPreflight'], review['promptsPreflightSha256'])\nfor item in review['reviewersLaunched']:\n    launch = json.loads(frozen(root / (item['run'] + '-launch.json'), item['launchVerificationSha256']))\n    require(launch['session'] == item['session'] and launch['model'] == item['model'] and launch['contextTier'] == item['contextTier'], 'Launch ledger differs')\n    frozen(root / (item['run'] + '-admission.json'), item['admissionSha256'])\nrequire(ledger['deliveredBeforeBatch'] == 255 and ledger['remainingBeforeBatch'] == 973, 'Published accounting changed')\nprint(json.dumps({'ledgerSha256': sha(path.read_bytes()), 'state': ledger['status'], 'reviewer': review['reviewersLaunched'][0]['session'], 'publicationAccepted': ledger['candidateVerification']['publicationAccepted']}))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 1852,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "99b3f60f3279addccdee1bc295067e4bd4808c52e7549c3e71cc25e285ebf386",
+  "memory": {
+    "freeRamBeforeBytes": 5467619328,
+    "freeRamAfterBytes": 5461520384,
+    "minimumObservedFreeRamBytes": 5461520384,
+    "peakWorkingSetBytes": 23179264,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

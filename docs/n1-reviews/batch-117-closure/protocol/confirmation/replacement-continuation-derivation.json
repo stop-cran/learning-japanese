@@ -1,0 +1,94 @@
+{
+  "reason": "Continue a mechanically valid but substantively held fresh replacement with its own context; archive its intermediate and final identity without attributing it to the original reviewer.",
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_v3.py",
+        "sha256": "85d2f613d413c359bd075ff7ac0272dadea911e0a80a521d22c82376b01a630f"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_v4.py",
+        "sha256": "f7c05a12632220167eb568b6187fe5c8e92ef550358e2d88ece2cc749758d27c",
+        "bytes": 10205
+      },
+      "reverseExact": true,
+      "edits": [
+        {
+          "before": "from confirm_v2 import admit, binding, clean, final, revision_diff",
+          "after": "from confirm_v2 import admit, binding, clean, final, revision_diff\r\nfrom replacement_lineage import require_followup_identity"
+        },
+        {
+          "before": "    require(launch[\"session\"] == spec[\"session\"], \"Follow-up changes the original reviewer\")",
+          "after": "    require_followup_identity(spec, initial, launch, records)"
+        },
+        {
+          "before": "    bindings = [binding(spec_path), spec[\"acceptance\"], spec[\"prior\"], prior[\"report\"], initial[\"report\"]]",
+          "after": "    bindings = [binding(spec_path), spec[\"acceptance\"], spec[\"prior\"], prior[\"report\"], initial[\"report\"]]\r\n    if \"reviewerOrigin\" in spec:\r\n        bindings.append(spec[\"reviewerOrigin\"])\r\n    bindings.append(binding(Path(__file__).with_name(\"replacement_lineage.py\")))"
+        },
+        {
+          "before": "    prompt = renderer.render_prompt(renderer_spec, packet_info, chain, prompt_path).encode(\"utf-8\")",
+          "after": "    prompt_text = renderer.render_prompt(renderer_spec, packet_info, chain, prompt_path)\r\n    if \"reviewerOrigin\" in spec:\r\n        prompt_text += (\"\\nCONTINUING REPLACEMENT IDENTITY\\n\"\r\n                        \"You are continuing your own prior replacement confirmation. The original \"\r\n                        \"initial report was written by another reviewer of the same family; do not \"\r\n                        \"claim firsthand authorship of it or retained context from that session. \"\r\n                        \"Your own previous confirmation and its consequential open claims are the \"\r\n                        \"basis for this bounded follow-up. Preserve all prior limits.\\n\")\r\n    prompt = prompt_text.encode(\"utf-8\")"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_v2.py",
+        "sha256": "2f1a60bf07a17b1d8b04b027e99e7b11d1d29258efb3bc9f9563742e7ca9699a"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_v3.py",
+        "sha256": "891f97651e4bf222b892185e192aa36d47230b7b8025c3267f350e3ca476d323",
+        "bytes": 17038
+      },
+      "reverseExact": true,
+      "edits": [
+        {
+          "before": "from confirm_v3 import run_number",
+          "after": "from confirm_v3 import run_number\r\nfrom replacement_lineage import require_followup_identity"
+        },
+        {
+          "before": "def require_identity(spec, session, original, launch, held=None, context=None, prior=None):",
+          "after": "def require_identity(spec, session, original, launch, held=None, context=None, prior=None, records=None):"
+        },
+        {
+          "before": "    else:\r\n        require(spec[\"session\"] == launch[\"session\"], \"Confirmation changed reviewer without provenance\")",
+          "after": "    elif \"reviewerOrigin\" in spec:\r\n        require(records is not None, \"Continuing replacement lacks archived records\")\r\n        require_followup_identity(spec, original, launch, records)\r\n    else:\r\n        require(spec[\"session\"] == launch[\"session\"], \"Confirmation changed reviewer without provenance\")"
+        },
+        {
+          "before": "                require_identity(spec, mechanics[\"session\"], original, launch)",
+          "after": "                require_identity(spec, mechanics[\"session\"], original, launch, records=records)"
+        },
+        {
+          "before": "                     \"closure-v2-derivation.json\", \"closure-v2-tests.txt\"):",
+          "after": "                     \"closure-v2-derivation.json\", \"closure-v2-tests.txt\",\r\n                     \"replacement-continuation-derivation.json\", \"replacement-continuation-tests.txt\"):"
+        },
+        {
+          "before": "                     \"confirm_replacement.py\", \"test_confirm_replacement.py\", \"close_v2.py\", \"test_close_v2.py\"):",
+          "after": "                     \"confirm_replacement.py\", \"test_confirm_replacement.py\", \"close_v2.py\", \"test_close_v2.py\",\r\n                     \"confirm_v4.py\", \"close_v3.py\", \"replacement_lineage.py\",\r\n                     \"test_replacement_lineage.py\", \"derive_replacement_continuation.py\"):"
+        },
+        {
+          "before": "                        \"replacementFor\": replacement_for, \"finalAcceptance\": kind == \"final\",",
+          "after": "                        \"replacementFor\": replacement_for,\r\n                        \"reviewerOrigin\": spec.get(\"reviewerOrigin\") if confirmation else None,\r\n                        \"finalAcceptance\": kind == \"final\","
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\replacement-continuation-tests.txt",
+    "sha256": "5829bcf69fc2aa4c36dbb97b6f2ae925d872875a9aa8f135f8da82908592ba2b",
+    "bytes": 102
+  },
+  "exitCode": 0,
+  "unchangedGates": [
+    "confirm_v2.admit",
+    "confirm_v2.final",
+    "audit-confirm.py",
+    "check-confirm-structure.py",
+    "check-run-context.py"
+  ],
+  "helper": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\replacement_lineage.py",
+    "sha256": "997f0a132edafe3e4bf1ea2336ccdba70b981c31838353227afe4f475e8e61dd"
+  }
+}

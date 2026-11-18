@@ -134,6 +134,10 @@ same position; learn the actual construction you use.
 にとっては and にとっても add topic/contrast or inclusion. They do not turn evaluation into a beneficiary
 action. Nor should にとって replace every English "in my opinion": identifying who performs an action,
 reports a fact, or holds a role may require a different construction.
+For a viewpoint named with **から言うと／で言うと** ("judging from…, in terms of…") next to にとって, and for
+**において／における** ("in, within" a setting or field) versus について, see
+[Basis, field and viewpoint](basis-field-and-viewpoint.md#5-viewpoint-で言うと-から言うと-and-にとって) and its
+[field section](basis-field-and-viewpoint.md#4-field-において-and-における-versus-について).
 
 ## One useful neighbor: に関して and に関する
 
@@ -283,6 +287,8 @@ In shared topic tasks, fitting について, に関して, and のことを form
 An interpretation label outside a quoted sentence is not a connector to insert inside that sentence.
 Comparative attachment beyond the demonstrated patterns, the full range of ため/場合, and further relations
 such as において, として, によって, and をめぐって remain outside this lesson's practiced scope.
+**として**, "as (in the role of)," is practised next to **に代わって**, "in place of," in
+[Comparison, role and particle relations](comparison-and-role-relations.md#6-として-and-に代わって-as-or-in-place-of).
 
 Kana **について**, **にとって**, and **こと** are the ordinary models here.
 The recognized spellings **に就いて**, **に取って**, and **事** may occur; recognition is not equal frequency.

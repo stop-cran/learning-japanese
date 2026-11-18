@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b122_revision_v2.py", line 219, in <module>
+    verify(sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3]))
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\verify_b122_revision_v2.py", line 187, in verify
+    summary_raw = frozen(gates / "summary.json")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 44, in frozen
+    require(readonly(path), f"Writable frozen input: {path}")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Writable frozen input: C:\Users\stop-\n1-kanji-workspace\scratch-122\reconciliation-committed-gates-001\summary.json

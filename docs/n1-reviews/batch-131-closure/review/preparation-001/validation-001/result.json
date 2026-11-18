@@ -1,0 +1,32 @@
+{
+  "status": "FAIL",
+  "batch": 131,
+  "candidate": "1359b467e0edee8822c665614d6ca57e42785c4d",
+  "testsRun": 84,
+  "failures": [
+    [
+      "test_duplicates_and_order (b131_test_review_chain_py.ReviewChainTests.test_duplicates_and_order)",
+      "Traceback (most recent call last):\n  File \"C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-chain.py\", line 43, in test_duplicates_and_order\n    self.assertTrue(result[\"valid\"])\nAssertionError: False is not true\n"
+    ]
+  ],
+  "errors": [
+    [
+      "test_cli_rejects_config_without_fetch_limit (b131_test_review_audit_py.NoFetchAndFinalGateTests.test_cli_rejects_config_without_fetch_limit)",
+      "Traceback (most recent call last):\n  File \"C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-audit.py\", line 490, in test_cli_rejects_config_without_fetch_limit\n    module.main([\"--session\", \"fixture-0001\", \"--config\", str(path)])\n  File \"C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\audit-review.py\", line 425, in main\n    config = json.loads(require_frozen(args.config))\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\audit-review.py\", line 402, in require_frozen\n    raise IntegrityError(f\"Frozen input is writable: {path}\")\nreview_audit_v4.IntegrityError: Frozen input is writable: C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\validation-001\\fixture-temporary\\tmpq6hvp5wk\\no-limit-config.json\n"
+    ]
+  ],
+  "memory": {
+    "freeRamBeforeBytes": 4530905088,
+    "freeRamAfterBytes": 4526333952,
+    "minimumObservedFreeRamBytes": 4517531648,
+    "peakWorkingSetBytes": 41271296,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "fixtures": "Synthetic-only events/extension; no real reviewer launched.",
+  "packetManifestSha256": "454c924ce460d050d31eedca225b9553d42790a0060df474088e38c7ca049b39",
+  "producerSha256": "0dee204e6221013f3d45cddb48ecd266c53cb2cb5c6c7731bb80fbd067bff760"
+}

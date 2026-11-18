@@ -1,0 +1,219 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "b16a90b3-d53c-4b56-9aa3-75353d3971ed",
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-12T16:20:45.770Z",
+  "last": "2026-11-12T16:32:13.740Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-12T16:20:45.797Z",
+   "chars": 2448,
+   "sha256": "26dfd02e181eaab6cdfe9b4ffc97a8ed068c11c5b8b61fe4830c12f8b355270d"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 57
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 10029203,
+  "outputTokens": 23358,
+  "cacheReadTokens": 9755096,
+  "cacheWriteTokens": 273936,
+  "reasoningTokens": 15605,
+  "costMultiplierSum": 57.0
+ },
+ "toolCalls": {
+  "total": 57,
+  "byTool": {
+   "view": 39,
+   "web_fetch": 9,
+   "powershell": 5,
+   "rg": 2,
+   "apply_patch": 1,
+   "task_complete": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full (ranges)": 6,
+   "none": 9,
+   "notFullyRead": [
+    "snapshot/kanji/修.md",
+    "snapshot/kanji/句.md",
+    "snapshot/kanji/授.md",
+    "snapshot/kanji/旬.md",
+    "snapshot/kanji/標.md",
+    "snapshot/kanji/独.md",
+    "snapshot/kanji/率.md",
+    "snapshot/kanji/製.md",
+    "snapshot/kanji/養.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full (ranges)": 2,
+   "none": 1,
+   "notFullyRead": [
+    "diffs/changed-files.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 6,
+   "full (ranges)": 5,
+   "shell": 1,
+   "notFullyRead": [
+    "evidence/jmdict-cited-entries.xml"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full (ranges)"
+ },
+ "outsidePaths": [],
+ "alsoReadAllowed": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-111-gpt\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\evidence\\jmdict-families.xml",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\repo\\kanji\\混.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\repo\\kanji\\税.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\snapshot\\kanji\\句.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\snapshot\\kanji\\旬.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\snapshot\\kanji\\義.md",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\titles\\kanji-titles.tsv",
+  "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\titles\\word-titles.tsv"
+ ],
+ "alsoReadCount": 8,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-111-gpt\\confirm-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nimport sys,xml.etree.ElementTree as ET\nsys.stdout.reconfigure(encoding='utf-8')\nf=r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-111-bf9ee962-gpt\\evidence\\jmdict-cited-entries.xml'\nwanted={'2845184','1386140','1490070','2862467','1497060','1497020','1497030','1497040','1291990','1500150'}; seen=set()\nfor _,e in ET.iterparse(f,events=('end',)):\n if e.tag=='entry' and e.findtext('ent_...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport sys\nsys.stdout.reconfigure(encoding='utf-8')\np=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-111-bf9ee962-gpt\\snapshot\\kanji\\義.md')\nlines=p.read_text(encoding='utf-8').splitlines()\nprint('Revised overlap bullet (line 52), whitespace-separated tokens:',len(lines[51].split()))\nprose=[(i+1,len(l.split())) for i,l in enumerate(lines) if i>=21 and l ...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport sys\nsys.stdout.reconfigure(encoding='utf-8')\np=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\snapshot\\kanji\\義.md')\nlines=p.read_text(encoding='utf-8').splitlines()\nprint('Original overlap bullet, line 52:',len(lines[51].split()),'whitespace-separated tokens')\nprint('Original exclusions:',lines[13])\nprint('Original longest teaching par...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport sys,xml.etree.ElementTree as ET\nsys.stdout.reconfigure(encoding='utf-8')\nf=r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-111-3b30803e\\evidence\\jmdict-families.xml'\nwanted={'房州','房総'}; matches=[]\nfor _,e in ET.iterparse(f,events=('end',)):\n if e.tag=='entry':\n  forms={k.text for k in e.findall('k_ele/keb')}\n  if forms&wanted: matches.append((e.findtext('ent_seq'),sorted(forms&w...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport re,sys\nfrom pathlib import Path\nsys.stdout.reconfigure(encoding='utf-8')\nf=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\confirm-111-bf9ee962-gpt\\checks\\reading-options.txt')\nvoicing={**dict(zip('かきくけこさしすせそたちつてとがぎぐげござじずぜぞだでどばびぶべぼぱぴぷぺぽ',['が','ぎ','ぐ','げ','ご','ざ','じ','ず','ぜ','ぞ','だ','じ','ず','で','ど','か','き','く','け','こ','さ','し','す','せ','そ','た','て','と','は','ひ','ふ','へ','ほ','は','ひ','ふ'...",
+   "writeLike": false
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%88%BF",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E6%95%B7",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%88%A4",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E9%8F%A1",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E9%8F%A1",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/api/v1/search/words?keyword=%E7%9C%BC%E9%8F%A1",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/api/v1/search/words?keyword=%E7%AF%80",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/api/v1/search/words?keyword=%E6%97%AC",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.edrdg.org/kanjidic/kanjidic2_dtdh.html",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 82,
+  "reportFile": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\reports-111-gpt\\confirm-gpt.md",
+  "reportExists": true,
+  "reportChars": 9660,
+  "reportSha256": "1d8a0375a5c50d75c3527e941a1d302adb9536e2223fee78af601d9f9e1f1556",
+  "finalSource": "task_complete.summary",
+  "finalEqualsReport": false,
+  "finalContainsReport": false,
+  "similarity": 0.0169
+ },
+ "flags": []
+}

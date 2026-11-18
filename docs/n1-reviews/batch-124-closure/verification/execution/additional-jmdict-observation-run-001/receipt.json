@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T20:56:56.723240+00:00",
+  "finished": "2026-11-15T20:57:02.969197+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import copy, gzip, hashlib, json\nimport xml.etree.ElementTree as ET\nfrom common import WS, freeze_json, frozen, load_module, require, sha, start_guard, write_frozen\nroot = WS / 'scratch-124' / 'review'\nsource = WS / 'control' / 'inputs' / 'n1-implementation-JMdict_e.gz'\nqueries = {'福', '多い', '栄える', '資産', '資金', '宝', '財貨', '広い'}\nout = root / 'additional-jmdict-observation-001.xml'\nreceipt = root / 'additional-jmdict-observation-001.json'\nrequire(not out.exists() and not receipt.exists(), 'Preserve prior observation')\nverifier_path = root / 'verify-source-records.py'\nfrozen(verifier_path, '21842b6d2d6040d2deb4a9f8c6d15f2c28c17386a443da52780a7ef7cc169c62')\nverify = load_module('b124_observation_verifier', verifier_path)\nguard, _ = start_guard('B124 additional exact JMdict families')\nclass Reader:\n    def __init__(self, stream):\n        self.stream, self.digest = stream, hashlib.sha256()\n    def read(self, size=-1):\n        guard.check()\n        data = self.stream.read(size)\n        self.digest.update(data)\n        return data\ntry:\n    digest = hashlib.sha256()\n    with source.open('rb') as stream:\n        while chunk := stream.read(1024 * 1024):\n            guard.check()\n            digest.update(chunk)\n    require(digest.hexdigest() == '2dbbfe0b1214911766bbc128a0935618b925be917e7d1c50f3536a89b0e8786d', 'Compressed source changed')\n    selected = ET.Element('JMdict')\n    found = {query: [] for query in sorted(queries)}\n    with gzip.open(source, 'rb') as stream:\n        reader = Reader(stream)\n        parser = ET.iterparse(reader, events=('start', 'end'))\n        _, document = next(parser)\n        for event, node in parser:\n            if event != 'end' or node.tag != 'entry':\n                continue\n            matched = queries & {n.text for n in node.findall('k_ele/keb')}\n            if matched:\n                selected.append(copy.deepcopy(node))\n                for query in matched:\n                    found[query].append(node.findtext('ent_seq'))\n            node.clear()\n            document.clear()\n            guard.check()\n        require(reader.digest.hexdigest() == '107079c692f2e49c08d45da1da227b7e021298f247d16578b44dfaa2ec9002c4', 'Decompressed source changed')\n    raw = ET.tostring(selected, encoding='utf-8', xml_declaration=True)\n    expected = verify.records(raw, 'entry', 'ent_seq')\n    with gzip.open(source, 'rb') as stream:\n        verify.verify_stream(stream, 'entry', 'ent_seq', [{'name': 'additional-exact-comparisons', 'mode': 'exact', 'queries': queries, 'expected': expected}], guard)\n    written = write_frozen(out, raw)\nfinally:\n    memory = guard.finish()\nrequire(not memory['breach'], 'RAM breach')\nresult = {'status': 'COMPLETE_EXACT_FAMILIES_VERIFIED', 'batch': 124, 'candidate': 'c8db34902d1a478d2d1de4b761dd3cdbb4585896', 'selection': written, 'matchingEntryIdsByQuery': found, 'completeRecords': len(expected), 'compressedSha256': digest.hexdigest(), 'decompressedSha256': reader.digest.hexdigest(), 'memory': memory, 'license': 'Copyright James William Breen and EDRDG; CC BY-SA 4.0.', 'limits': 'Additive coordinator evidence, not part of either initial review input and not a linguistic verdict. Complete matching families include every spelling, reading and sense restriction. Does not establish constituent senses from whole-word glosses.'}\nprint(json.dumps(freeze_json(receipt, result)))\nprint(json.dumps({'records': len(expected), 'queries': found}, ensure_ascii=False))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 9228,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "28c0e3604364789bc0edebc64b6531afc92ea2f31cfb7d641e67e848542ad0ef",
+  "memory": {
+    "freeRamBeforeBytes": 6512263168,
+    "freeRamAfterBytes": 6508208128,
+    "minimumObservedFreeRamBytes": 6490316800,
+    "peakWorkingSetBytes": 23224320,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

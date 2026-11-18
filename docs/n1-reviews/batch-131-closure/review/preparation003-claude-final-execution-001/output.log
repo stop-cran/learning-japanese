@@ -1,0 +1,27 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_005.py", "sha256": "0d52040fa4208ddd3005784b0fc72d70f116743ffc55f9a8b8809a880937f08a", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+B131 lifecycle receipt: C:\Users\stop-\n1-kanji-workspace\scratch-131\review\preparation-v3-lifecycle-63db97b6e5fd440aadef329debea7cec\captured\child-receipt.json
+B131 lifecycle receipt: C:\Users\stop-\n1-kanji-workspace\scratch-131\review\preparation-v3-lifecycle-1d87a6c9c54149749abfda03a6b76acc\captured\child-receipt.json
+B131 lifecycle receipt: C:\Users\stop-\n1-kanji-workspace\scratch-131\review\preparation-v3-lifecycle-43177d0d73744a14b09f6a7654bf65b7\captured\child-receipt.json
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\step_b131_neutral_005.py", line 302, in <module>
+    sys.exit(main(*sys.argv[1:]))
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\step_b131_neutral_005.py", line 181, in main
+    structure = json.loads(stdout)
+                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

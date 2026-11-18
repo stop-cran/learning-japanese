@@ -1,0 +1,76 @@
+{
+  "run": "N1-B123-CLAUDE-001",
+  "candidate": "3bda01ae9baec4b25f80a46c8f1ea6ba5642ea93",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-123\\initial-claude-001.md",
+    "sha256": "c3e5ce5cb972884b3ced9e46c0dff50ec7011d01e538389456c24ff2312f36f6"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\N1-B123-CLAUDE-001-final.json",
+    "sha256": "5320c1f534cb357a291f9a3eb1bdfa4677f5b9dfaef3c2865b288c25a3a079e0"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\N1-B123-CLAUDE-001-evidence-check.json",
+    "sha256": "06b553c8f2ce5b6bf4cc5ab7e2b8b0a4d8523a125b5f374e911a0446cd4c72e6",
+    "mechanicalCitationIssues": 0,
+    "formalCitations": 32,
+    "comparisonRows": 35,
+    "sourceFilesRehashed": 68
+  },
+  "verdict": "NEEDS FIX",
+  "verdictScope": "The unchanged raw review verdict. Coordinator acceptance below is bounded to the listed findings after checking their cited sources; it is not publication approval.",
+  "acceptedFindings": [
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "findingAdjudication": {
+    "F1": {
+      "decision": "accepted",
+      "basis": "Verified verbatim. 標 displays mark/signpost/goal but its own card states that 標 and its words carry 'standard' and excludes 準 and 規 for that overlap (repo/kanji/標.md:14; :23; :54). 紀's card teaches Daijisen's rules/code-of-conduct sense and guards 規 律 則 典 法 制 憲, and 準 explicitly at the standard/rule boundary (repo/kanji/紀.md:14; :23; :46; :48). 範 displays 'model; standard', is supported by Daijisen sense 1 基準となる一定の型 and のり 守るべき規範 (evidence/external-snapshots/01-extract.txt:4-8; :19), and itself guards the same 規/準/律/則/法/典/制/憲 set (snapshot/kanji/範.md:14). Neither pair is declared on either endpoint. Exclusions are symmetric, so one declaration suffices (repo/docs/content-format.md:105; :177).",
+      "required": "Declare the direct 範/標 and 範/紀 meaning exclusions on either endpoint (scoping the change to the new 範 card is preferred), with bounded note text. Preserve every existing guard, the curated distractors and metadata. Do not claim the characters are interchangeable or that exclusions are transitive."
+    },
+    "F2": {
+      "decision": "accepted",
+      "basis": "Verified verbatim. 鏡's card teaches Daijisen's third sense, a model to learn from (鏡鑑), and excludes 例 and 則 for serving as a model (repo/kanji/鏡.md:14; :25; :54). 範's displayed title begins with 'model' and Daijisen gives 手本 for 範 (01-extract.txt:19; :25). The direct pair is declared on neither endpoint.",
+      "required": "Declare the direct 範/鏡 meaning exclusion on either endpoint, with bounded note text; do not imply that 鏡 is a general word for a standard."
+    },
+    "F3": {
+      "decision": "accepted-low-severity",
+      "basis": "Daijisen gives 範 a character sense 区切られた枠 illustrated by 範囲 and 範疇 (01-extract.txt:20), and the linked 範囲 article says 範 contributes 'bounds' (snapshot/words/範囲.md:25). 範 guards 域 (region; range, body including limit), 程 and 幅 for that branch (snapshot/kanji/範.md:14; :43; :45) but not 限 'limit' or 境 'boundary; border' (repo/kanji/限.md:3; :20; repo/kanji/境.md:3; :20). The learner risk is limited because the card does not foreground the bounds sense, hence low severity.",
+      "required": "Choose one source-backed remedy: declare 範/限 and 範/境, or narrow the card's bounds rationale and record why 域, 程 and 幅 need guards while 限 and 境 do not. Under either option, give 界 (displayed 'world, boundary'; repo/kanji/界.md:3; :20) an explicit bounded disposition consistent with the chosen rationale, because its displayed title contains 'boundary'. Any change to the existing 範囲 article must be minimal and source-justified."
+    }
+  },
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "disposition": "optional-accepted-as-reasonable",
+      "basis": "JMdict 1956840 (範 はん, example; model) is in the supplied family (evidence/jmdict-families.xml:599) and Daijisen lists standalone 範 手本。模範 (01-extract.txt:23-25). Citing it would directly support the title; not required."
+    },
+    {
+      "id": "O2",
+      "disposition": "source-resolved-attribution-polish-optional",
+      "basis": "The reviewer's UNVERIFIED limit is correct for the packet scope. The coordinator checked the pinned complete KANJIDIC2 師 record: it lists model and exemplar (b123-worktree/docs/n1-sources/batch-123/kanjidic2-comparison-records.xml:829; :886-887; audit.md:19). The note's claim is therefore supported. Because the card's metadata line names Digital Daijisen as the character source, naming KANJIDIC2 at the note is recommended to avoid misattribution; not required."
+    },
+    {
+      "id": "O3",
+      "disposition": "optional",
+      "basis": "Accurate observation; may be combined with whichever F3 remedy the author chooses."
+    },
+    {
+      "id": "O4",
+      "disposition": "optional-not-required",
+      "basis": "倣, 格 and 普 displayed titles are not defensible answers for 'model; standard' on the supplied cards. 憲's guards of 格 and 度 do not transfer to 範 because exclusions are not transitive (repo/docs/content-format.md:105); the Daijisen standard senses for 格/度 remain UNVERIFIED and are preserved as limits, not required changes."
+    }
+  ],
+  "otherDispositions": {
+    "harmlessDispositions": "D3, D4, D6-D8, D10, D12-D17 and D19-D25 harmless/low-confidence dispositions are accepted as bounded review evidence; D10 界 is superseded by the F3 disposition requirement above. These are not exhaustive whole-corpus safety claims.",
+    "existingExclusions": "E1-E10 are retained. Their declarations on 範 only are sufficient under the symmetric contract.",
+    "correctnessAndCoverage": "Metadata, readings, のり/すすむ qualifications, stroke binding and the 範囲 wrapper were found CLEAN; the coordinator's independent mechanical verification agrees. No teaching change is required beyond F1-F3.",
+    "limits": "L1-L8 preserved verbatim in the raw report. L3 (comparison Daijisen entries not supplied) bounds F1/F2 confidence, but both rest on reviewed comparison cards' own source-backed text, which is the consistency standard applied in prior batches.",
+    "preservation": "The raw report, phase-1 request, chains, source bytes and failures remain unchanged. No author reconciliation starts before the independent GPT review finishes."
+  },
+  "reviewLimits": "Mechanics, context and structure passed: 21 core plus 11 extension segments, exactly two expected messages, one report write with verified readback, zero fetches, no breaches, idle completion, long_context with no compaction; response model claude-opus-5-5. These are bounded execution facts, not whole-set, arbitrary-pool, native/device, installed-APK or publication acceptance.",
+  "next": "Admit and launch frozen GPT001 independently on the unchanged candidate. Do not supply this report, this adjudication or any finding to that reviewer. Reconcile both reviews only after GPT completes.",
+  "publicationAccepted": false
+}

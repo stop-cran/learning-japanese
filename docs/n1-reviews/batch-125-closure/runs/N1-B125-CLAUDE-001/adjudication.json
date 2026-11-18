@@ -1,0 +1,77 @@
+{
+  "run": "N1-B125-CLAUDE-001",
+  "candidate": "483bb066e68faf354779f7d5fc73c4594605cdd7",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-125\\initial-claude-001.md",
+    "sha256": "3c3f058db413dca590555a303cd4eae704624c08f8097b45b9a01dcc15e50a7c"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-CLAUDE-001-evidence-check.json",
+    "sha256": "9a96734d70e1926d6643509e5d15060c9493acf2918c480b8fc9904e5fd49988",
+    "mechanicalCitationIssues": 0,
+    "formalCitations": 14,
+    "comparisonRows": 14,
+    "sourceFilesRehashed": 47
+  },
+  "verdict": "NEEDS FIX",
+  "verdictScope": "Accepts bounded independent review evidence, not every semantic negative and not publication approval.",
+  "acceptedFindings": ["F1"],
+  "findingAdjudication": {
+    "F1": {
+      "decision": "accepted-medium-confidence-conservative-pair",
+      "basis": "Both complete endpoints and every formal citation were checked. Neither endpoint declares the pair. The target itself uses attack/aggression to justify its existing direct guards; 討's displayed attack sense and its 討つ/討伐 teaching provide positive evidence for the same conservative ambiguity concern. JMdict 1359800 has raid for 侵す and 1359850 has raid/aggression for 侵入. This supports a direct guard for the current teaching, not a claim that every invasion is an attack or that compound meanings automatically belong to each character.",
+      "required": "Declare the direct 侵/討 pair on one endpoint and explain the bounded overlap without synonym overstatement. Preserve existing guards and source metadata, regenerate the manifest, and verify the direct pair. Do not edit the frozen initial snapshot before both independent initial reviews finish.",
+      "citationQualification": "The reference evidence/title-index.txt:75 proves only the displayed 侵 title, not the 討 title or tag-preferring fallback behavior. Those endpoint facts are separately present in the opened card metadata. No native fallback execution was established by this pass."
+    }
+  },
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "disposition": "optional-suggestion-with-required-source-backed-disposition",
+      "basis": "The harm sense is positively recorded for 侵す and 損なう/損ねる. Its third position and omission from the displayed 侵 title do not establish rarity or harmlessness. Preserve the raw low-confidence optional suggestion, but resolve Q1 rather than accepting the optional-only dismissal."
+    },
+    {
+      "id": "O2",
+      "disposition": "optional-bounded-with-source-qualification",
+      "basis": "略 explicitly teaches a taking/plundering range, but qualifies おか.す as source-only without an established suitable JMdict example. Shared reading or membership in 侵略 alone does not prove an ordinary quiz collision. Resolve Q2 on ordinary meanings rather than automatically adding a guard or treating a lookup reading as productive."
+    }
+  ],
+  "openClaimIds": ["Q1", "Q2", "Q3"],
+  "comparisonHolds": [
+    {
+      "id": "Q1",
+      "pair": ["侵", "損"],
+      "reviewRow": "D5/O1",
+      "basis": "The complete 損 card teaches harm/damage, and JMdict 1359800 positively gives harm/afflict for 侵す. Give the direct pair a source-backed disposition under actual displayed labels and ordinary secondary senses. Sense order and absence from a title are insufficient negative evidence."
+    },
+    {
+      "id": "Q2",
+      "pair": ["侵", "略"],
+      "reviewRow": "D2/O2",
+      "basis": "Distinguish 略's positively taught taking/plundering range from its source-only reading rows. Establish whether the actual invade/encroach label is defensible for the ordinary character senses; no automatic transitive exclusion or compound-to-component inference."
+    },
+    {
+      "id": "Q3",
+      "pair": ["侵", "戦"],
+      "reviewRow": "L2",
+      "basis": "The reviewer identifies 戦 as its strongest unread comparison under the attack rationale. The complete opened 攻 and 討 cards already discuss their direct 戦 guards. Read the actual 戦 endpoint and ordinary source evidence before giving this specific pair a disposition; those other declarations are not transitive protection or proof of equivalence."
+    }
+  ],
+  "rejectedReportAssertions": [
+    {
+      "location": "D/E table E5",
+      "claim": "侵撃 invading and attacking (repo/kanji/撃.md:23)",
+      "disposition": "unsupported-as-cited",
+      "basis": "The actual cited line teaches 攻撃, 反撃, 衝撃, 目撃 and 撃つ, not 侵撃. Preserve the report unchanged and explicitly correct this attribution in reconciliation. The existing 侵/撃 declaration and the ordinary attack sense are independently present, so this does not invalidate F1 or require removing the existing guard."
+    }
+  ],
+  "otherDispositions": {
+    "remainingComparisons": "All fourteen D/E cards were read in full for adjudication. D3, D4, D6, D7 and D8 are retained as bounded observations about the supplied card teaching, not accepted as exhaustive absence-of-sense claims. In particular, teaching focused on physical tearing, difference or roughness does not establish the absence of ordinary secondary senses.",
+    "existingExclusions": "All six declarations on 侵 are present; the opened 犯, 冒, 害, 攻, 撃 and 入 cards support the stated broad comparisons. E5's erroneous compound attribution is rejected separately. This is not a universal synonym assertion.",
+    "mechanicalAndScope": "Final execution, context, structure and source-line audits passed with no reported problems. The separate signed-candidate and complete-source proofs support metadata, generated strokes and the one reciprocal wrapper. Initial CLEAN facet judgments remain limited to this card and supplied evidence.",
+    "preservation": "Raw report, phase-1 list, chains and frozen teaching remain unchanged. Reconciliation waits until GPT independently reviews the identical candidate without these findings or holds."
+  },
+  "reviewLimits": "Twenty core and four extension segments, one report write/readback, two exact messages, zero fetches, no execution breaches, long context and no compaction. Preserve all raw L1-L6 limits and the unread-candidate list. The report's historical APK reference is not a fresh determination of the phone's installed version. No whole-set, arbitrary-pool, native/device or publication acceptance.",
+  "next": "Admit the frozen GPT001 initial run serially on the identical signed candidate, without exposing this report, adjudication, holds or author rationale.",
+  "publicationAccepted": false
+}

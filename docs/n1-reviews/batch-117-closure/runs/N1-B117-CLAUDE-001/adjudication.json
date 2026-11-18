@@ -1,0 +1,59 @@
+{
+  "run": "N1-B117-CLAUDE-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-117\\initial-claude-001.md",
+    "sha256": "ed135a7f3da9ae83f4c523da0da499b92f1a15f12277187ca05e118db61365df"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-CLAUDE-001-final.json",
+    "sha256": "ae84459e90661819fe6795418b479b52f13240b7deb5a8fedc8564d83b32b9ef"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-CLAUDE-001-evidence-check.json",
+    "sha256": "f0a387ac3d6e0249a5654131d5bbcc1350cfe173ab98ff11ae4610bf0f5e5ca7",
+    "issues": 0
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "KANJIDIC2 gives 維 rope (source-metadata.json:69-71); 索 title is rope; 緒 title is cord; 維 quiz_exclusions is []; exclusions are not transitive. Overlaps coordinator observation C3.",
+      "fix": "Declare 索 and 緒 on 維 with a concise Notes distinction."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted",
+      "basis": "KANJIDIC2 gives 紀 history and annals; 紀 already excludes 史 for the same label; 歴 title 'history; passage of time' is undeclared.",
+      "fix": "Declare 歴 on 紀 and extend the exclusion note."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted",
+      "basis": "KANJIDIC2 searching/inquiring; Daijisen sense 2 searching; the 索 card and the newly linked 索引 article both teach the searching sense; 捜 and 探 titles display it directly.",
+      "fix": "Declare 捜 and 探 on 索 and extend the exclusion note."
+    },
+    {
+      "id": "F4",
+      "disposition": "accepted",
+      "basis": "JMdict/KANJIDIC2 fee, charge, wages; the 代 card teaches charge or fee; 俸 salary and 給 pay display the wages sense.",
+      "fix": "Declare 代, 俸 and 給 on 賃 and extend the exclusion note."
+    }
+  ],
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "disposition": "deferred",
+      "basis": "Reviewer states the omission is not a demonstrated defect; the discipline sense is absent from KANJIDIC2 English glosses, and teaching it would add a new unreviewed collision surface (規/律/則/典). No change in this batch."
+    },
+    {
+      "id": "O2",
+      "disposition": "accepted",
+      "basis": "Daijisen 維 sense 3 つなぎとめる「維持」 (03-extract.txt:21) reconciles the 維持 article with the card.",
+      "fix": "Add one qualified clause to the 維 card noting the hold-fast sense in 維持 while keeping maintenance as a whole-word meaning."
+    }
+  ],
+  "uncheckedByReviewer": "Coordinator observations C1 (維 ユイ drawability claim) and C2 (mistyped B116 SHA) were not reported by this reviewer; they remain established coordinator observations and will be fixed in the same revision.",
+  "unverifiedPairsPreserved": "L7 UNVERIFIED pairs are not promoted to findings; they stay open for the GPT independent review.",
+  "limit": "Bounded acceptance of independent evidence; not publication approval."
+}

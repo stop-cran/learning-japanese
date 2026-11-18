@@ -1,0 +1,80 @@
+B131 preparation-only coordinator handoff
+
+Candidate 1359b467e0edee8822c665614d6ca57e42785c4d; direct parent cb0f5581bdda84f7e673225c19126c85e242e57b.
+No reviewer is admitted or launched. No content/teaching edit, commit, push or publication occurred.
+Use ONLY prompts/preflight-compact-003.json and review-tools/step_b131_neutral_003.py.
+Older 001/002 lifecycle/preflight files are preserved preparation predecessors, not launch instructions.
+The actual frozen prompt text is initial-claude-002.txt / initial-gpt-002.txt.
+The run IDs remain N1-B131-CLAUDE-001 / N1-B131-GPT-001; neither has run.
+
+All shell commands below are guidance, NOT executed reviewer operations:
+
+$env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'; $env:PYTHONDONTWRITEBYTECODE='1'
+$ws='C:\Users\stop-\n1-kanji-workspace'
+$guard="$ws\scratch-131\review\guarded-test-v3.py"
+$adapter="$ws\review-tools\run_b127_tool.py"
+$step="$ws\review-tools\step_b131_neutral_003.py"
+$prep="$ws\scratch-131\review\preparation-001"
+$preflight="$prep\prompts\preflight-compact-003.json"
+
+Safe next read-only verification, with NEW absent output names:
+python -B $guard "$ws\scratch-131\review\preparation-coordinator-check-001" python -B $adapter "$ws\review-tools\verify_b131_preparation_001.py" "$prep\coordinator-verification-001.json"
+
+Before any reviewer: obtain fresh FULL, UNFILTERED get_sessions_status and list_sessions_and_chats
+snapshots; save exact tool outputs to NEW local files. No omitted idle, archived, unrelated or
+unknown rows. Roster may retain its tool preamble; the parser locates its JSON array.
+Create a new request JSON with exactly:
+{"statusPath":"<absolute exact status JSON path>","rosterPath":"<absolute exact roster output path>","observedAt":"<actual RFC3339 observation time with timezone>"}
+The requester must use actual observation time, not file-copy time. The admission enforces matching
+full IDs/counts, no duplicates, age under120s, no unknown/active session except coordinator, no
+duplicate reviewer name, no prior run artifacts, signed clean candidate, all five actual proofs,
+packet bytes and >2GiB free RAM. It is an observation, not a reservation.
+
+Admission command (do not execute until fresh actual observations exist):
+python -B $guard "$ws\scratch-131\review\preparation-claude-admit-001" python -B $adapter $step 131 claude admit "<absolute NEW request.json>" $preflight
+
+Only after admission, the coordinator may use app create_session with the EXACT kickoffText
+and launch settings from preflight.runs.claude. Never invent/truncate the kickoff, enable
+extra tools or grant inherited B113 permissions. One active reviewer, interactive, long_context,
+model claude-opus-5.5. Startup must be checked within120s of admission. Capture actual desktop
+session identity separately from the runtime CLI session-state ID; lifecycle arguments below
+require the actual runtime ID whose events.jsonl exists, not a guessed desktop ID.
+No launch is performed or requested by this preparation handoff.
+
+Future lifecycle commands (each output directory must be NEW and absent):
+python -B $guard "$ws\scratch-131\review\preparation-claude-launch-audit-001" python -B $adapter $step 131 claude launch "<actual runtime session ID>" $preflight
+python -B $guard "$ws\scratch-131\review\preparation-claude-phase1-audit-001" python -B $adapter $step 131 claude phase1 "<same actual runtime session ID>" $preflight
+
+phase1 must report readyForPhase2=true after full execution and context checks. It mechanically
+builds only that reviewer's D/E extension. Send the ENTIRE frozen
+$prep\N1-B131-CLAUDE-001-phase2-message.txt as ONE exact coordinator message:
+line1 is the extension first-segment path; line2 is Missing entries: none, OR Missing entries:
+followed by every missing request line verbatim. Sending only line1 voids the pass.
+No substitutes, selection hints, later-added candidates or unrequested material.
+
+python -B $guard "$ws\scratch-131\review\preparation-claude-final-audit-001" python -B $adapter $step 131 claude final "<same actual runtime session ID>" $preflight
+
+Final mechanics, actual family, exact full phase messages, ordered complete reads, one report
+creation/readback, zero fetches, exact completion enum, report structure and no-compaction
+context must all pass. Mechanical status is NOT content acceptance. The coordinator must
+adjudicate all claims, notes, source citations and evidence issues explicitly before a frozen
+adjudication binds candidate/run/report and finalSha256, claimsAdjudicated=true, verdict and
+acceptedFindings. Do not execute accept against a placeholder or unadjudicated report.
+python -B $guard "$ws\scratch-131\review\preparation-claude-accept-001" python -B $adapter $step 131 claude accept "<actual frozen substantive adjudication.json>" $preflight
+
+Only after the first run's accepted bounded evidence and fresh complete app/RAM admission:
+repeat the process for gpt, using its untouched kickoffText and gpt-6.1-sol long_context,
+fresh session, and entirely independent D/E choices. Never put the first report, selections,
+findings or author pair/source conclusions in the second initial packet.
+
+Required core: 114 serial complete segments, all below16000 bytes;
+52 full sources; total 1510814 segment bytes.
+No token-budget/compaction guarantee is inferred from size. Actual context audit remains mandatory.
+If any gate fails: preserve raw execution, mark HOLD/VOID as applicable, quarantine observations,
+do not fix the report, send hints, relax a gate or silently retry a reviewer.
+
+Preparation limitations: complete source records and mechanical checks only; not linguistic/native/
+rendered/device, arbitrary/custom/multiple-borrow, Kotlin, review acceptance or publication.
+Font scope is209 finite code points, NOT all text of179 legacy articles. Five points are absent
+in all3 bundled cmaps; no rendered fallback is claimed. Published membership stays264/1228,
+964 remaining; no B131 delivery is credited.

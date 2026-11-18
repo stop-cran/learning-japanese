@@ -1,0 +1,21 @@
+{
+  "base": "cb0f5581bdda84f7e673225c19126c85e242e57b",
+  "activePreservationProducer": "producers/preserve_b131_002.py",
+  "activeEvidenceInventory": "evidence-inventory-002.json",
+  "previousEvidenceInventory": {
+    "file": "evidence-inventory.json",
+    "sha256": "58f0dcc221a4a2868a156fd7c1767a614340ec59e60bbd11c16a3058261710fc"
+  },
+  "preservation001Failure": {
+    "producer": "producers/preserve_b131.py",
+    "producerSha256": "a3f46cdf66d3bf38c56067e5e47e3549e4ca273479fcc2f7c9d24a7392af7ec6",
+    "assertion": "FileNotFoundError for docs/wazawaza-sources.json at incoming-worktree-byte check.",
+    "qualification": "Failure text recorded from tool output, not byte-for-byte redirected stderr. Actual failed producer and memory preserved; all preceding runtime/source/scan checks had succeeded.",
+    "cause": "Incoming ledger is correctly skip-worktree in the existing sparse checkout, not missing from Git.",
+    "resolution": "Successor first requires exact baseline/index blob equality for each incoming path; checks local bytes when present, otherwise requires actual S skip-worktree flag. No sparse/shared checkout configuration changed."
+  },
+  "lineEndings": "Existing touched text uses CRLF. Process-local git -c core.whitespace=cr-at-eol diff --check passes; no shared Git setting or unrelated line-ending rewrite.",
+  "sourceAndRuntime": "No learner/runtime changes after author-gates-003. Later additions are evidence and the directly related authoring-notes insertion/progress ledger. Final pre-sign and committed gates/preservation remain required.",
+  "boundaries": "Original failure and evidence inventory unchanged; successor adds a new inventory covering the historical inventory and new verifier. No signature/push/review/publication acceptance implied.",
+  "producerSha256": "f8a6ff42dc1427c29a80e3e39243986eb10f1948d168aa921fa5ee5a52efccf2"
+}

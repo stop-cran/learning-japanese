@@ -1,0 +1,34 @@
+{
+  "batch": 131,
+  "run": "N1-B131-CLAUDE-001",
+  "family": "claude",
+  "session": "94a1b0ae-e1c1-462a-ba0f-9a23171211b7",
+  "candidate": "1359b467e0edee8822c665614d6ca57e42785c4d",
+  "status": "HOLD_CONTEXT_COMPACTED-not-accepted",
+  "reviewAccepted": false,
+  "finalAcceptance": false,
+  "audits": [
+    {
+      "summary": "review/preparation-001/N1-B131-CLAUDE-001/audit-20261116T174509032926/audit-summary.json",
+      "status": "PHASE1_READY",
+      "originalAuditSha256": "b02636bb60c0adaac3ae6d8d8193b83bc6b0097bf51663a917329b8341daf273"
+    }
+  ],
+  "quarantinedPhase1Lists": [
+    "review/preparation-001/N1-B131-CLAUDE-001/audit-20261116T174509032926/phase1-list.txt"
+  ],
+  "runFiles": [
+    "review/preparation-001/N1-B131-CLAUDE-001-admission-request.json",
+    "review/preparation-001/N1-B131-CLAUDE-001-admission.json",
+    "review/preparation-001/N1-B131-CLAUDE-001-launch.json",
+    "review/preparation-001/N1-B131-CLAUDE-001-phase1.json"
+  ],
+  "rootCause": "Coordinator/preparer admitted a 114-segment 1,510,814-byte core without a capacity forecast. Measured Claude rates: docs~0.33-0.44, KANJIDIC~0.52-0.54, JMdict~0.53-0.56, title index up to0.74 tokens/byte; base77805 before segment1. Core alone projected~860k > observed~761.6k (80% of952000) compaction trigger.",
+  "quarantine": "Phase-1 D/E list and any reviewer observations are quarantined: not review evidence, not shared with author, preparer or later reviewers, and not used for packet design. Coordinator computed only the aggregate article byte total of that selection as a sizing sanity check; compact-002 gates use selection-independent statistics.",
+  "next": "Do not send phase2 or reuse this session. Prepare capacity-gated compact-002 packet/core and fresh Claude002/GPT002 prompts; serial fresh admissions.",
+  "ledger": {
+    "key": "reviewClaude001",
+    "sha256": "72cfa850cd8a7ed660d7ac36f57f7dbaf2f4d0901c4bda4179d139ed4db66261"
+  },
+  "evidenceStatus": "Preserved for audit only. Quarantined lists, messages and observations are not review evidence and were not shared with the author, preparer or later reviewers."
+}

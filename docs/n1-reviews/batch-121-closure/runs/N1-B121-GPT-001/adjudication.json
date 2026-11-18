@@ -1,0 +1,75 @@
+{
+  "run": "N1-B121-GPT-001",
+  "candidate": "b5302617bf4c7232bab5bcd1e76b8ae6b938bc3a",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-121\\initial-gpt-001.md",
+    "sha256": "82621db8b83df0c3c8ea9274bccff00a3c98c19114d9deb7972efa5604d55d98"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-GPT-001-evidence-check.json",
+    "sha256": "acf3c81adc0b3271358542a486df45d0997aec1fa840397ac862824b4ffa2030",
+    "mechanicalCitationIssues": 0,
+    "comparisonRows": 23
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted-as-direct-display-safeguards",
+      "pairs": [["徳", "財"], ["徳", "偉"]],
+      "basis": "The complete same-snapshot 財 card displays wealth; property and explicitly teaches assets. Daijisen lists wealth/property as a 徳 noun sense at evidence/external-snapshots/01-extract.txt:25-26. The complete 偉 card displays admirable; great and explains deserving admiration and praise of conduct at repo/kanji/偉.md:20-22. Daijisen gives excellent conduct/character and an excellent person at extract:15-16, and the complete KANJIDIC2 徳 record independently gives commanding respect at evidence/kanjidic2-records.xml:59. Neither pair is declared on either endpoint. These are direct source/label comparisons, not transitive deductions from 富, 優 or 人.",
+      "fix": "Append 財 and 偉 to the new card's direct exclusions, retaining existing guards and concise limited-comparison explanations. Preserve distinctions between moral virtue, admiration/rank and financial wealth. Qualify the wealth evidence without claiming modern frequency or exclusively historical status from a historical example alone.",
+      "confidence": "Supported bounded safeguards. No actual current default-pool or native collision was reproduced.",
+      "crossReview": "The independently obtained Claude002 F1/F2 support the same two pairs; this agreement is corroboration, not the basis of acceptance."
+    }
+  ],
+  "requiredEvidenceFollowup": [
+    {
+      "id": "D5-D11/D13-D16/L2",
+      "status": "unresolved-semantic-necessity",
+      "characters": ["厚", "礼", "愛", "助", "援", "幸", "豊", "品", "訓", "授", "者"],
+      "required": "The author must resolve each direct pair from complete applicable independent character/word evidence and the actual displayed labels in both offered directions. Preserve restrictions and relevant secondary senses. Neither the lack of a current curated collision, third-card exclusions, differing primary titles, a compound's shared topic, nor a noun-versus-verb distinction alone closes these questions. Record accepted guards or reasoned non-collisions, with source citations and limits; unresolved consequential claims cannot be labelled closed.",
+      "specifics": {
+        "厚": "Cordiality/kindness versus directly sourced benevolence; inspect applicable 厚/厚意 evidence.",
+        "礼": "Reward/gift secondary senses versus benefit/grace; do not reduce the card to bowing.",
+        "愛": "Affection/care versus benevolence; Christian 愛徳 is not automatically a standalone 愛 gloss.",
+        "助": "Help/rescue and relief versus grace/protection; identify actual semantic overlap rather than shared beneficence.",
+        "援": "Aid/rescue versus grace/protection, keeping example citation separate.",
+        "幸": "Fortune/blessing comparison; Claude002's accepted guard still needs the comparison's full source evidence in reconciliation, not a transitive 福 argument.",
+        "豊": "Financial richness and broader abundance versus wealth/property, not agriculture alone.",
+        "品": "Refinement/dignity versus moral character, not goods alone.",
+        "訓": "Instruction/precepts versus source-specific おしえ; a reading is not sufficient proof of an ordinary meaning.",
+        "授": "Bestowal/teaching versus grace and おしえ; establish the actual sense relation.",
+        "者": "A role based on a characteristic versus the excellent-person character sense; 人 does not supply transitive protection."
+      }
+    },
+    {
+      "id": "L4-and-Claude002-O3",
+      "status": "source-based-screening-required",
+      "characters": ["師", "与", "給", "贈", "受", "拝", "儀", "資", "金", "宝", "能", "性", "格"],
+      "required": "Resolve the explicitly identified but unopened candidates where consequential, not the entire corpus. Inspect complete actual cards and applicable dictionary families before calling them harmless or adding guards. In particular, reconcile wealth/assets candidates 資/金/宝 consistently with the accepted 財 guard, and nature/ability candidates 能/性/格 consistently with Daijisen sense 5. Record the register uncertainty honestly; a historical quotation alone establishes neither current frequency nor exclusive obsolescence."
+    },
+    {
+      "id": "E6/L3",
+      "status": "guarded-but-evidence-limited",
+      "characters": ["優", "功", "富", "享", "人", "教"],
+      "required": "Retain existing direct guards. Supply complete relevant sources for any affirmative teaching/comparison claim used in the revised card and reconciliation. GPT did not read every endpoint in L3 and did not establish independent 優 family necessity; do not turn those disclosed limits into fresh review claims."
+    },
+    {
+      "id": "D1-D3/L1",
+      "status": "absent-in-this-snapshot",
+      "characters": ["善", "恵", "仁"],
+      "required": "Retain the exact absence record. These cards are not present in the frozen snapshot; do not invent labels, add unresolved exclusion IDs, supply substitutes or expand B121 membership to address them."
+    }
+  ],
+  "coordinatorDisposition": {
+    "curatedOptions": "GPT establishes semantic and reading safety for the current three options but explicitly makes no fresh visual-confusability judgment. Its F1 instruction to preserve distinct options does not resolve Claude002 O2's repository-contract concern. The author must provide three defensibly wrong, suitable visual contrasts with complete source/reading checks; replacement suggestions are not pre-approved.",
+    "minorQuote": "Correct the new card's 教 title quote to teach, instruct while reconciling it, as accepted under Claude002 O1.",
+    "history": "Keep structure-unclassified and the explicit modern-shape mnemonic disclaimer. No etymology expansion is required.",
+    "heldReport": "Preserve held Claude001 and its structural hold unchanged. Its consequential observations need separate dispositions, particularly 愛 and 厚; the held review is not accepted lineage.",
+    "publication": "Both original reports remain unchanged. Acceptance here is acceptance of bounded review evidence only, not candidate acceptance, confirmation, permission to skip repairs or publication."
+  },
+  "reviewLimits": "Final execution, context and structure passed: 22 core and 6 extension segments, two expected messages, one report write and one verified readback, zero fetches, no breaches, idle completion, gpt-6.1-sol runtime model. Missing requested cards and unverified comparisons remain explicitly bounded. No arbitrary-pool, whole-set linguistic, fresh geometry, font-rendering, Kotlin/native/device, installed-APK compatibility or publication acceptance is inferred.",
+  "next": "Return both accepted original reports, their separate adjudications and the held initial to the original B121 author for source-based reconciliation. Verify its owner-signed revision and unchanged gates before serial original-reviewer confirmations.",
+  "publicationAccepted": false
+}

@@ -1,0 +1,73 @@
+{
+  "parent": "7c662b37c647a9b300278abe2e3079fe57f09f83",
+  "preservedInventory001Sha256": "9857cecc9be0a9bc37dc3447ed28920a369e3bc41ff0334b2b9dcf57d8176185",
+  "failure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\signing-attempt-001.json",
+    "sha256": "96cf4ae28f7ae772d975d23f6572da6b62058d5c083a08a54d156c7a0cc7d939",
+    "phase": "Pre-sign staged whitespace check, before staging receipt and before commit/GPG subprocess.",
+    "commitOrGpgProcessLaunched": false,
+    "exitCodeField": null,
+    "initialSignerSha256": "415dcb4c8cab5057725711abfa3965265568b13a5df1fbbefc297bb05ba7ae66",
+    "trace": "sign.py:36 -> b129_common.py:81 RuntimeError; git diff --cached --check exited2. Its stdout was not retained by the old helper, so the exact readonly check is captured separately rather than pretending the empty signer stdout was the diagnostic."
+  },
+  "whitespace": {
+    "fullCheck": {
+      "command": [
+        "git",
+        "-c",
+        "core.quotepath=false",
+        "-c",
+        "core.whitespace=cr-at-eol",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exitCode": 2,
+      "stdout": "docs/n1-sources/batch-129-reconciliation/teaching-diff.patch:10: trailing whitespace.\n+ \ndocs/n1-sources/batch-129-reconciliation/teaching-diff.patch:18: trailing whitespace.\n+ \ndocs/n1-sources/batch-129-reconciliation/teaching-diff.patch:29: trailing whitespace.\n+ \ndocs/n1-sources/batch-129-reconciliation/teaching-diff.patch:40: trailing whitespace.\n+ \n",
+      "stderr": "",
+      "stdoutSha256": "c9e52320aaa056bbaf1b5448d236ce5ccb4902d439de53cf3368d7e8782fddaa",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "allOtherStagedFilesCheck": {
+      "command": [
+        "git",
+        "-c",
+        "core.quotepath=false",
+        "-c",
+        "core.whitespace=cr-at-eol",
+        "diff",
+        "--cached",
+        "--check",
+        "--",
+        ".",
+        ":(exclude)docs/n1-sources/batch-129-reconciliation/teaching-diff.patch"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptedPatchLines": [
+      10,
+      18,
+      29,
+      40
+    ],
+    "patchSha256": "0d290738ada6de8b1035aca6edba4c812039abc4694c1dacb7111ca8d9f3ae3a",
+    "disposition": "Exactly four 0x20 blank-context delimiter lines in a byte-regenerated unified diff are accepted as patch syntax, not removed or fixed. All other staged paths pass; no global whitespace check/configuration is disabled."
+  },
+  "unchangedStructuralProof": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\author-preservation-001\\summary.json",
+    "summarySha256": "d6c2ab685d1de65c5351e497d0cfd12016320983a17c25b49318a318c4f403f5",
+    "runtimeHashesPath": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\reconciliation-001\\author-preservation-001\\runtime-hashes.json",
+    "runtimeHashesSha256": "ee1090bf9758ee4fe97c59568f7eb32ed719ee36821b97e546f469b6463bfb7f"
+  },
+  "payloadDisposition": "No learner, manifest, original-source, original-inventory or failed-attempt bytes changed. Only additive contributor evidence and explicit bounded patch-syntax acceptance were added.",
+  "signingPolicy": "No actual GPG attempt has occurred. The resumed preflight may launch one actual owner-signing operation; on a popup stall preserve staged work and yield without retry or bypass.",
+  "finalBinding": {
+    "inventory": "evidence-inventory-002.json",
+    "changedPaths": "changed-file-inventory-002.json",
+    "validationPlan": "validation-plan-002.json"
+  }
+}

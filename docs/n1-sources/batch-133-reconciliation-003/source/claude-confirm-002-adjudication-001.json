@@ -1,0 +1,76 @@
+{
+  "run": "N1-B133-CLAUDE-CONFIRM-002",
+  "candidate": "d7d6cff92afe8220c16a5daa76f1c3f00a2bef30",
+  "reviewerOrigin": "fresh-context-replacement",
+  "session": "928ed3cb-7f93-476e-85cb-1b7b6f05f1ef",
+  "originalSession": "83ee993b-d768-4da6-94b0-9b5e584fc044",
+  "finalSha256": "8018b596365bfc6ebf8c35e06ef9327c38bd9a27cd4a651787d56a717c033e20",
+  "reportSha256": "9327ee1d95393fa26bacbadf26099f73a0be0091e1ce30c4fc5388aafaf76bb5",
+  "confirmation": "UNVERIFIED",
+  "status": "EVIDENCE_ONLY_NOT_ACCEPTED_AS_CONFIRMATION",
+  "methodology": {
+    "auditSha256": "dd4e7557132d5267485dccb8e002e607d04367da34a85f033724e33320bcf688",
+    "chainRead": 29,
+    "chainRequired": 29,
+    "fetches": 0,
+    "breaches": [],
+    "contextSha256": "fd6174c8f67371d676a9a8d8b8ffdc12878a32e9d9fa15c9102fd9cb73881e8c",
+    "actualPeakInputTokens": 259398,
+    "compactions": [],
+    "structureSha256": "d10215595dbf7099506551ef8830a6191273ea896d90d9dfed818dfb622d716c",
+    "finalExecution": "scratch-133\\review\\claude-confirm-002-final-001",
+    "disposition": "Methodologically admissible bounded confirmation; mechanical pass only."
+  },
+  "dispositions": {
+    "O1": "Reviewer DECLINE ACCEPTED (鉛 title qualifier) is accepted as evidence.",
+    "O2": "Reviewer DECLINE ACCEPTED (structure-unclassified; labelled modern-shape mnemonics) is accepted as evidence.",
+    "O3": "Reviewer DECLINE ACCEPTED (滝 title keeps rapids with archaic disclosure) is accepted as evidence.",
+    "O4": "Reviewer DECLINE ACCEPTED (ロウ/ソウ retained, not practised) is accepted as evidence.",
+    "C1": "Reviewer RESOLVED (鉛-鉱 added) is accepted as evidence.",
+    "C2": "Reviewer RESOLVED (鉛-鉄 retained) is accepted as evidence.",
+    "C3": "Reviewer RESOLVED (滝-速 added) is accepted as evidence.",
+    "precautionsAndRetainedDistinctions": "Reviewer confirmation of all twelve added precautions, all six retained distinctions, the 鉛-具 cross-pair and the five reconciliation JMdict identities is accepted as evidence.",
+    "L8": "Coordinator acknowledges that evidence/coordinator-dispositions-002.json 液 line pointers (:12, :17) are offset by one from 液-extract.txt :13/:18 in the CONFIRM-002 chain numbering. Record-only; frozen records are not rewritten."
+  },
+  "optionalPointEscalation": {
+    "id": "O1",
+    "reviewerSeverity": "optional",
+    "coordinatorClassification": "CORRECTNESS_DEFECT",
+    "claim": "滝.md:26-27 (Meaning, unchanged since ad047ace) and 滝.md:73-74 (reconciliation-002 液 Note) gloss 滝水 as 'water from a waterfall'.",
+    "coordinatorSourceCheck": {
+      "directory": "scratch-133\\review\\claude-confirm-002-adjudication-sources-001",
+      "url": "https://kotobank.jp/word/%E6%BB%9D%E6%B0%B4-1447140",
+      "captureFile": "takisui-kotobank.html",
+      "captureSha256": "5100a307551e7d6bf0f92665c5783cdd010fe85c6a49b9cbdc618af3d440099f",
+      "sectionsFile": "takisui-sections.txt",
+      "sectionsSha256": "38244158be21a6a1aac5cfa5b5b94ad8493b0a9e45e606ec3bb269bba332d0c8",
+      "failedAttempts": [
+        "First curl to a non-ASCII output filename failed with curl error 23 before writing any file; retried with an ASCII filename. The failed attempt is not cited."
+      ],
+      "findings": [
+        "takisui-sections.txt:4-5 精選版 日本国語大辞典 たきすい【滝水】: 江戸神田和泉町の酒屋、四方(よも)久兵衛で売っていた銘酒。滝の水。 Example from 談義本・根無草 (1763-69).",
+        "takisui-sections.txt:6-7 たき‐みず【滝水】: 滝となって流れ落ちる水 (waterfall water) is a different reading.",
+        "takisui-sections.txt:8-9 ろう‐すい【滝水】: 滝の水。滝。 is a different reading.",
+        "Frozen 滝-nikkoku.txt (teaching-reconciliation-002 source-sections) 滝 [2]: 「たきすい（滝水）」の略, with the 洒落本・仕懸文庫 (1791) example 「たきがあらばちっとわってくんねへ」."
+      ],
+      "conclusion": "日本国語大辞典 explicitly makes 滝 [2] an abbreviation of the reading たきすい, whose only 日国 sense is an Edo brand of sake. The waterfall-water senses belong to たきみず and ろうすい, not to the abbreviated word. The learner-facing gloss 'water from a waterfall' for the abbreviation is therefore contradicted, not merely unsupported."
+    },
+    "priorRecordNote": "Coordinator adjudication 987fb5f9 (GPT-CONFIRM-001) cited 滝.md:23-27 teaching 滝水 as water from a waterfall as part of its 滝-液 rationale. That part of the rationale is withdrawn by this record; the frozen record is not rewritten. The 滝-液 precaution stands on the remaining direct grounds: 滝 [1] is a flow of water, 字通 records ひたす/うるおす, and 滝 [2] names a drink."
+  },
+  "acceptedResiduals": [
+    {
+      "id": "O1-gloss",
+      "pair": null,
+      "decision": "CORRECT_UNSUPPORTED_GLOSS",
+      "scope": "kanji/滝.md Meaning sentence and 液 Note rationale only"
+    },
+    {
+      "id": "O1-sake",
+      "pair": "滝-酒",
+      "decision": "ADD_QUALIFIED_DIRECT_PRECAUTION",
+      "basis": "日国 滝 [2] abbreviates たきすい, an Edo brand of sake; 酒's title is 'alcohol; sake'. Follows the existing conservative precedent 霜-酒 (隠語 alcoholic-drink sense) and historical/secondary-sense guards 遅, 円, 岩 and 険. A precaution, not a synonymy claim."
+    }
+  ],
+  "findings": [],
+  "consequence": "B133 cannot close on d7d6cff9. Owner-signed reconciliation-003 must correct the 滝水 gloss in 滝.md Meaning and the 液 Note rationale and append 酒 to 滝 quiz_exclusions after 液 with a qualified Note and the frozen 滝水 citation. Then the GPT original reviewer and the fresh-context Claude reviewer must both confirm the cumulative delta."
+}

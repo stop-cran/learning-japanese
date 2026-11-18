@@ -1,0 +1,67 @@
+[
+  {
+    "family": "claude",
+    "run": "N1-B134-CLAUDE-REVISION-002",
+    "step": "prepare",
+    "status": "SUPERSEDED_PREPARATION_NOT_REVIEW",
+    "reason": "Superseded runtime-001 preparation; its preflight was never admitted, delivered or reviewed.",
+    "runtimeSha256": "2bd57bc4fbdd17295953996a0bd77ec68fefb786aa8d01122f23f2629b4d8035",
+    "receiptSha256": "8bb92be6063b046e2f2471f86865c77951da8c6188bd976295815610e4cc99f1",
+    "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exitCode": 0,
+    "reviewAccepted": false,
+    "deliveryCredit": 0
+  },
+  {
+    "family": "gpt",
+    "run": "N1-B134-GPT-REVISION-002",
+    "step": "prepare",
+    "status": "SUPERSEDED_PREPARATION_NOT_REVIEW",
+    "reason": "Superseded runtime-001 preparation; its preflight was never admitted, delivered or reviewed.",
+    "runtimeSha256": "2bd57bc4fbdd17295953996a0bd77ec68fefb786aa8d01122f23f2629b4d8035",
+    "receiptSha256": "08c3b24b8ff7023ca8dd86389ae02f5e5d410c857c1d34154624101df556c79e",
+    "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exitCode": 0,
+    "reviewAccepted": false,
+    "deliveryCredit": 0
+  },
+  {
+    "family": "claude",
+    "run": "N1-B134-CLAUDE-REVISION-002",
+    "step": "final",
+    "status": "FAILED_ATTEMPT_NOT_ACCEPTED",
+    "reason": "Runtime-002 required an agentMode field that actual App-forwarded user.message events omit; runtime-003 instead requires the delivered turn's own turn_start to be interactive. No re-delivery.",
+    "runtimeSha256": "65956a69b4f0c0cf4849228f8a554cd9c6d13afefdcf4a1427682cfea24964a1",
+    "receiptSha256": "28f941f301d5f3753a151c9d9b91f2a0d06f5aa6350731a6a6e7ce0d03eace97",
+    "logSha256": "2993b1fbf37b81ededdd64aec487179316aa2c2c445a5b275912d9096843cc04",
+    "exitCode": 1,
+    "reviewAccepted": false,
+    "deliveryCredit": 0
+  },
+  {
+    "family": "claude",
+    "run": "N1-B134-CLAUDE-REVISION-002",
+    "step": "final",
+    "status": "FAILED_ATTEMPT_NOT_ACCEPTED",
+    "reason": "Runtime-003 was still writable; the unchanged file was made read-only and the same audit rerun.",
+    "runtimeSha256": "b76bd7c306a7911c7bce6c31f159dfa396ee17eff8584c7eec847e48f82568fc",
+    "receiptSha256": "acccaa8817a6134aaeea7fc2c82d799a4fd0da0bf19760464054bf0369062c15",
+    "logSha256": "72f9d43ab7a481c30e9b93209e00e73b8fb5af112b222ad943cc12463a146a64",
+    "exitCode": 1,
+    "reviewAccepted": false,
+    "deliveryCredit": 0
+  },
+  {
+    "family": "gpt",
+    "run": "N1-B134-GPT-REVISION-002",
+    "step": "final",
+    "status": "FAILED_ATTEMPT_NOT_ACCEPTED",
+    "reason": "Runtime-003 rejected the actual single apply_patch report write carried with LF-to-CRLF transport; runtime-004 binds exactly that transport and the same audit was rerun.",
+    "runtimeSha256": "b76bd7c306a7911c7bce6c31f159dfa396ee17eff8584c7eec847e48f82568fc",
+    "receiptSha256": "97da198eef7cb42151daaacdb7a255a5fef08e17f3b47eee1f0fc237a7fad947",
+    "logSha256": "a0ad86797b8236f5e1c38db949d3cfecdb86c5be461d2bd29440ad9abafcb417",
+    "exitCode": 1,
+    "reviewAccepted": false,
+    "deliveryCredit": 0
+  }
+]

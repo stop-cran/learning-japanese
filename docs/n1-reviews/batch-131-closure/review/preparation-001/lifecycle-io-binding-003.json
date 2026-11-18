@@ -1,0 +1,46 @@
+{
+  "status": "PREPARED_REQUIRES_VALIDATION",
+  "preflight": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\prompts\\preflight-compact-003.json",
+    "sha256": "2b15ce409ae7260877bb3971ca9338fd94eb77fd32d073f2d2ff9daec88e43f3",
+    "bytes": 9571
+  },
+  "lifecycle": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_003.py",
+    "sha256": "65af9a29e5d878ff91bf58770f113c83b932d9019df1a41347125ca03e64e177",
+    "bytes": 16950
+  },
+  "validation": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b131_neutral_preparation_003.py",
+    "sha256": "d805cc7dc8e863a6a94fefd4ae065a05e2c7c11a8c726e087847f42316cfc08e",
+    "bytes": 15278
+  },
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_002.py",
+    "sha256": "2d0a38433e6599934c3619d8aa9021345b0795eb564d915e4a74ecef3e668210"
+  },
+  "changes": [
+    [
+      "from b131_lifecycle_process_001 import python",
+      "from b131_lifecycle_process_002 import python"
+    ],
+    [
+      "\"preflight-compact-002.json\"",
+      "\"preflight-compact-003.json\""
+    ],
+    [
+      "str(TOOLS / \"step_b131_neutral_002.py\")",
+      "str(TOOLS / \"step_b131_neutral_003.py\")"
+    ],
+    [
+      "sha((TOOLS / \"step_b131_neutral_002.py\").read_bytes())",
+      "sha((TOOLS / \"step_b131_neutral_003.py\").read_bytes())"
+    ]
+  ],
+  "reason": "Code-path inspection found that the first adapter returned runner-envelope stdout to consumers expecting child JSON. The successor returns verified raw child bytes, while retaining the raw runner streams and actual memory/exit receipts separately. The synthetic success/refusal test exercises the real adapter; no session is launched.",
+  "supersededForLaunch": [
+    "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\prompts\\preflight-compact-002.json",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_002.py",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b131_lifecycle_process_001.py"
+  ]
+}

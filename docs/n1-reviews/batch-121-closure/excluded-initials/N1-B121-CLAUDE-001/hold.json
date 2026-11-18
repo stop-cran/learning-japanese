@@ -1,0 +1,40 @@
+{
+  "run": "N1-B121-CLAUDE-001",
+  "batch": 121,
+  "candidate": "b5302617bf4c7232bab5bcd1e76b8ae6b938bc3a",
+  "session": "312303c0-a190-4895-9016-b22d0ba1934d",
+  "status": "HOLD_STRUCTURE_FAILED",
+  "reviewAccepted": false,
+  "rawVerdict": "NEEDS FIX",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-121\\initial-claude-001.md",
+    "sha256": "fb7d8239b1743bb815d3f2b95e240d827993ba0bc5225001d44f9132936bfa33"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-CLAUDE-001-final.json",
+    "sha256": "966e80b9c8931c7146099d730463912577fad99006be5269bbe9aa7bd05f608c"
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-CLAUDE-001-structure.json",
+    "sha256": "9fa443022dad76f0481a002cadaf727d2129b9415354f79272913f1cc3e85d7f",
+    "bytes": 496
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-CLAUDE-001-context.json",
+    "sha256": "35abd547c4bd0a71f919d1cf4dc2b4af8d033e8e51c9c6b3555f4144b5e64119",
+    "bytes": 452
+  },
+  "finalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-CLAUDE-001\\audit-20261115T124802953375\\audit.json",
+    "sha256": "7b39bd06dabecb8791feea8bf1772299f693ea9c5c0d3b6d785928e7d55db17c"
+  },
+  "structureErrors": [
+    "O3: citation 'rubric/content-structure.instructions.md:97-99' is outside source lines 1-85"
+  ],
+  "inconsistency": "O3 cites source lines 97-99 in an 85-line rubric. The cited file was independently read; no report correction or gate bypass is applied.",
+  "mechanicalExecution": "Complete 22-core/6-extension execution, one write/readback, zero fetches, no breaches or compaction. Only report structure failed.",
+  "claimAdjudication": "No acceptance adjudication. Retain F1 and O1-O3 as unresolved observations for later source-based disposition; a replacement review cannot erase the original report.",
+  "disposition": "One fresh blind same-family clean-path attempt 002 on the identical packet. Only run identities change. No held report, verdict, finding, citation correction or author response is supplied.",
+  "limits": "Maximum three clean-path attempts; park if the same mechanical failure class repeats twice. A substantive NEEDS FIX alone never triggers a replacement initial.",
+  "gpt": "Not admitted until the selected Claude initial passes mechanical and substantive review-evidence acceptance."
+}

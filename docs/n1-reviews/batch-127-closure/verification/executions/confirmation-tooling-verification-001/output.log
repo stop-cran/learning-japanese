@@ -1,0 +1,87 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_confirmation_tools.py", "sha256": "256a3d8b417d93e325878664d402b7e2d3138dd2c980485e39473e17297144c2", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+3 confirmation skeleton checks passed
+{
+  "contract": "confirm-structure-v1",
+  "status": "PASS",
+  "errors": [],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "The coordinator completion message is not an exact confirmation verdict"
+  ],
+  "confirmation": "CONFIRMED",
+  "facets": {
+    "Correctness": "CLEAN",
+    "Scoped coverage": "CLEAN",
+    "Consistency and quiz safety": "CLEAN",
+    "Comprehensibility": "CLEAN"
+  },
+  "dispositions": {
+    "F1": "RESOLVED",
+    "O1": "DECLINE ACCEPTED",
+    "O2": "DISPUTE ACCEPTED"
+  },
+  "nonAccepting": [],
+  "findings": 0,
+  "optionalPoints": 0,
+  "limits": 1,
+  "acceptanceLimit": "Structure only; not linguistic acceptance."
+}
+{
+  "contract": "confirm-structure-v1",
+  "status": "FAIL",
+  "errors": [
+    "Report is absent"
+  ]
+}
+test_bad_completion_messages_are_void (b127_confirmation_fixture_0.AuditTests.test_bad_completion_messages_are_void) ... ok
+test_bootstrap_truncation_order_and_scope (b127_confirmation_fixture_0.AuditTests.test_bootstrap_truncation_order_and_scope) ... ok
+test_complete_run_needs_claim_check_and_ended_turn (b127_confirmation_fixture_0.AuditTests.test_complete_run_needs_claim_check_and_ended_turn) ... ok
+test_contract_is_required (b127_confirmation_fixture_0.AuditTests.test_contract_is_required) ... ok
+test_each_verdict_and_crlf_patch (b127_confirmation_fixture_0.AuditTests.test_each_verdict_and_crlf_patch) ... ok
+test_fetch_rules (b127_confirmation_fixture_0.AuditTests.test_fetch_rules) ... ok
+test_kickoff_bytes_provenance_and_prekickoff_activity (b127_confirmation_fixture_0.AuditTests.test_kickoff_bytes_provenance_and_prekickoff_activity) ... ok
+test_post_message_and_task_complete_rules (b127_confirmation_fixture_0.AuditTests.test_post_message_and_task_complete_rules) ... ok
+test_report_tamper_is_void (b127_confirmation_fixture_0.AuditTests.test_report_tamper_is_void) ... ok
+test_unexpected_user_holds_and_model_family (b127_confirmation_fixture_0.AuditTests.test_unexpected_user_holds_and_model_family) ... ok
+test_write_before_coverage_and_double_write (b127_confirmation_fixture_0.AuditTests.test_write_before_coverage_and_double_write) ... ok
+test_slice_binding_integrity_and_errors (b127_confirmation_fixture_0.MainTests.test_slice_binding_integrity_and_errors) ... ok
+test_cli (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_cli) ... ok
+test_completion_message (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_completion_message) ... ok
+test_disposition_errors (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_disposition_errors) ... ok
+test_item_errors (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_item_errors) ... ok
+test_limits_errors (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_limits_errors) ... ok
+test_markup_dashes_aliases_and_none_limits_pass (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_markup_dashes_aliases_and_none_limits_pass) ... ok
+test_skeleton_errors (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_skeleton_errors) ... ok
+test_valid_reports_pass (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_valid_reports_pass) ... ok
+test_verdict_and_consistency_errors (b127_confirmation_fixture_1.CheckConfirmStructureTest.test_verdict_and_consistency_errors) ... ok
+test_breach_and_cleanup_failure_preserve_original_error (b127_confirmation_process_fixtures.LifecycleProcessTests.test_breach_and_cleanup_failure_preserve_original_error) ... ok
+test_extension_uses_bounded_git_adapter (b127_confirmation_process_fixtures.LifecycleProcessTests.test_extension_uses_bounded_git_adapter) ... ok
+test_start_failure_finishes_guard (b127_confirmation_process_fixtures.LifecycleProcessTests.test_start_failure_finishes_guard) ... ok
+test_timeout_then_utf8_result_preserves_nonzero_exit (b127_confirmation_process_fixtures.LifecycleProcessTests.test_timeout_then_utf8_result_preserves_nonzero_exit) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.428s
+
+OK
+
+{"path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\review\\confirm\\tooling-preflight-recovery-001.json", "sha256": "25ac6ceb9d32b458735cb71d52f38b4f37f0aac870df52de4008333c1073b86f", "bytes": 6070}

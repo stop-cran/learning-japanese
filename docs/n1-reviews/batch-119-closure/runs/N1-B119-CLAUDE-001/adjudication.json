@@ -1,0 +1,86 @@
+{
+  "run": "N1-B119-CLAUDE-001",
+  "candidate": "8a30e1729c270f025c186ff71d41f1153a276bfa",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-119\\initial-claude-001.md",
+    "sha256": "a4e440f16ba49ebfc3cb9e8c496aaef67b39bd095dd78e2d58b4faab74d8b0c6"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-CLAUDE-001-final.json",
+    "sha256": "4cfbe6ae0d766499abfc26ac9b8ab11487f7ad6d2fa2aff30bd52cb0b97c1b11"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-CLAUDE-001-evidence-check.json",
+    "sha256": "6fcad44abfdecff237e0e0cb437a30d080992aa15addfa713cf63b035d87c156",
+    "mechanicalCitationIssues": 0,
+    "comparisonRows": 37,
+    "substantiveCitationCaveats": [
+      "F1, O1 and O3 cite external-snapshots/01-extract.txt:8 for the settled meaning or compounds, but line 8 is the nanori. The actual Daijisen definition and compound examples are at line 7.",
+      "F3 cites kanjidic2-records.xml:57-58, which contains French meanings. The English gentle and peace meanings are at lines 53-54; source-metadata.json:19-20 independently records them.",
+      "O3 cites external-snapshots/02-extract.txt:55 for a recognition compound; that line is a different example. The examples section explicitly warns of machine-generated items. Its occurrence counts do not establish frequent use. No frequency conclusion is accepted."
+    ]
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted-with-citation-caveat",
+      "basis": "Daijisen defines 妥 at character level as calmly settling and a matter becoming settled (01-extract.txt:7), consistent with its displayed settled title. 了, 定 and 済 display settling/settle; their cited bodies support this sense. 決's complete cited meaning paragraph explicitly describes deciding or settling and becoming settled. Neither endpoint declares any of the four direct pairs. The shared substantive settlement sense, not an exclusion inherited through a third card, justifies these guards.",
+      "fix": "Append 了, 定, 済 and 決 to 妥's exclusions, preserving the original nine and the sourced settled sense. Briefly distinguish the relevant settlement senses without claiming word interchangeability.",
+      "scope": "Bounded semantic safeguards, not a reproduced default-pool collision or arbitrary-pool/native acceptance."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted",
+      "basis": "Daijisen 循 sense 1 is following a set rule (02-extract.txt:7). 則 explicitly displays follow a model and teaches following a rule, precedent or model. 倣 teaches following an existing model or precedent; 準 teaches conformity to a model and glosses 準じる/準ずる as conform to. The title follow is therefore defensible for these comparison prompts. The audit verifies that none of the three direct pairs is declared.",
+      "fix": "Append 則, 倣 and 準 to 循's exclusions, preserving the original six; explain the particular rule/model-following overlap. Do not infer these pairs merely from existing 守 or 追 exclusions.",
+      "scope": "The safeguard does not identify following a rule with every act of imitation or every meaning of 準."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted-with-citation-caveat",
+      "basis": "The actual English KANJIDIC2 peace gloss for 妥 is present at line 54. 妥's note teaches it, while 寧 displays peaceful and explicitly teaches calm, settled peace. 妥's Daijisen settled definition independently supports the overlap. Neither endpoint declares the pair; shared exclusions with other peace cards do not resolve it.",
+      "fix": "Append 寧 to 妥's exclusions and include it in the qualified peace comparison."
+    },
+    {
+      "id": "F4",
+      "disposition": "accepted",
+      "basis": "The complete frozen 応 card explicitly attributes being suitable or well matched to the Daijisen character entry (line 25), not merely to a substring inference from 相応. This makes 妥's displayed appropriate a plausible meaning answer for 応. The pair is absent on both endpoints. Existing 適 declarations are corroborating author context, not transitive proof.",
+      "fix": "Append 応 to 妥's exclusions with a qualified appropriateness comparison. Preserve the exact 応 comparison card and applicable dictionary evidence in reconciliation; do not rewrite the earlier card."
+    },
+    {
+      "id": "F5",
+      "disposition": "accepted-as-conservative-direct-safeguard",
+      "basis": "KANJIDIC2 explicitly gives 妥 the English gloss gentle (line 53; source-metadata.json:19), and the new card teaches this. 優 displays gentle and supplies kind/gentle examples. Calmness and kindness are not identical Japanese senses, but the unqualified displayed gentle label remains defensible from the taught gloss. Neither endpoint declares the pair.",
+      "fix": "Append 優 to 妥's exclusions and qualify the calm-versus-kindness distinction. Do not erase or suppress the pinned gentle metadata or its disclosure merely to avoid the overlap.",
+      "confidence": "medium; a cautious displayed-label safeguard, not a universal lexical-equivalence claim"
+    }
+  ],
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "disposition": "optional-investigation-with-open-dispositions",
+      "basis": "The secondary settle glosses for 治 and 収 are real, and the relevant 妥 definition is at 01-extract.txt:7 rather than line 8. Different displayed titles alone cannot prove safety in the reverse prompt direction.",
+      "suggestion": "Have the author disposition 妥/治 and 妥/収 against complete applicable sources and exact comparison cards during reconciliation. This report alone does not settle them or mandate a guard."
+    },
+    {
+      "id": "O2",
+      "disposition": "open-evidence-questions-not-confirmed-defects",
+      "basis": "The report marks 循/応 and 循/番 UNVERIFIED and 循/転 harmless with low confidence. Comparison with an already-excluded third card does not establish any pair.",
+      "suggestion": "Require individual source-backed dispositions for 循/応, 循/番 and 循/転 before textual closure. Do not upgrade these to confirmed defects or universally safe pairs without the missing evidence."
+    },
+    {
+      "id": "O3",
+      "disposition": "optional-no-expansion-required",
+      "basis": "The Joyo rows support the listed 妥協, 妥結 and 因循 recognition examples, but supplied generated examples do not establish frequency. Existing 妥当 and 循環 coverage satisfies this batch's scope.",
+      "suggestion": "No new compound, support article or frequency statement is required. Preserve the citation and frequency caveats rather than modifying the raw report."
+    }
+  ],
+  "remainingReviewQuestions": [
+    "Low-confidence harmless dispositions, especially 妥/柔 and the O1/O2 pairs, are not blanket safety approval. The author must retain explicit, evidence-based dispositions for consequential questions after both independent initial reviews.",
+    "L3 unrequested exclusion targets and L4 unread screening candidates are disclosed limits, not established findings. Any consequential candidate identified by the second review must be reconciled directly rather than inferred safe from its absence in the first review."
+  ],
+  "reviewLimits": "Accepted only as bounded independent NEEDS FIX evidence. The audit verifies Claude-family execution, 15 core and 9 extension reads, one write/readback, zero fresh fetches or unexpected user messages, idle completion, and full-context/structure PASS. Its CRLF-normalized report-write equality note is preserved. Localized citation defects do not invalidate the independently verified findings. No native, phone, geometry, frequency, arbitrary-pool or installed-client acceptance is claimed.",
+  "next": "Obtain the blind GPT initial review on the unchanged signed candidate before author reconciliation. Do not supply this report, its findings or this adjudication to GPT.",
+  "publicationAccepted": false
+}

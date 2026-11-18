@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "batch": "124",
+  "revision": 2,
+  "baseCommit": "2655539b587c1ab57e64ab74a97cddaf81bb81c6",
+  "supersedes": "author-audit.json only for the 厚 baseline overlap disposition",
+  "coordinatorCorrection": {
+    "kind": "source-backed disposition correction, not an independent reviewer verdict",
+    "previousDispositionPreserved": "author-audit.json and selection-002.json remain unchanged as the initial no-guard decision.",
+    "reason": "The complete JMdict record establishes an ordinary abundant sense for 厚い, so the baseline article's shorter teaching scope does not dispose of that real secondary sense."
+  },
+  "baselineEvidence": {
+    "exactGlossScan": {
+      "path": "scratch-124/comparison-scan-001.json",
+      "sha256": "4b3a4b61515667e7b1e6b948d826ab759748f2fb2f2d137ab7969eee541418c6",
+      "baselineKanjiFilesScanned": 1243,
+      "exactGlossHits": [
+        "厚",
+        "富",
+        "豊"
+      ]
+    },
+    "coordinatorScan": {
+      "path": "scratch-124/review/baseline-gloss-overlap-001.json",
+      "sha256": "5f394f4ae603bf2e51baa6dca7a3394a87127bc9f052e402218d2e5209816fb8",
+      "disposition": "Referenced without creating, changing, or copying coordinator-owned review files."
+    },
+    "厚SenseEvidence": {
+      "baselineTitle": "thick; cordial",
+      "baselineArticleScope": "physical thickness and kindness/courtesy",
+      "KANJIDIC2": {
+        "record": "厚",
+        "englishGloss": "rich",
+        "completeRecordPath": "comparison-supplement-001/kanjidic2-records.xml"
+      },
+      "JMdict": {
+        "entry": "1275320",
+        "writtenForm": "厚い",
+        "restriction": "stagk=厚い",
+        "gloss": "abundant",
+        "senseFlags": [],
+        "completeRecordPath": "comparison-supplement-001/jmdict-records.xml",
+        "recordLocation": "entry 1275320; the complete record is retained in the source packet"
+      },
+      "disposition": "Direct quiz guard with 裕. The ordinary spelling-restricted sense is source-supported and has no rare/archaic flag; the fact that the baseline card's short title foregrounds other senses is not used to dismiss it. The pair is excluded symmetrically because 厚 is a plausible glyph answer to 裕's abundance/rich prompt."
+    },
+    "updatedDirectMeaningGuards": [
+      "厚",
+      "富",
+      "豊",
+      "財"
+    ],
+    "unchangedSemanticExpansion": {
+      "kanji": "財",
+      "displayedTitle": "wealth; property",
+      "ordinaryTeaching": "wealth, property, or assets",
+      "disposition": "Direct guard with 裕 because rich/wealth overlap is a plausible answer-label equivalence."
+    },
+    "unchangedCuratedDistractors": [
+      {
+        "kanji": "容",
+        "title": "contain; appearance",
+        "reason": "Neither containing nor appearance means abundance, wealth, or fertility, and 裕 does not mean containment or appearance."
+      },
+      {
+        "kanji": "補",
+        "title": "supplement; make good",
+        "reason": "Supplying what is missing is an action rather than an abundant state, and 裕 does not mean supplement or make good."
+      },
+      {
+        "kanji": "複",
+        "title": "multiple; compound",
+        "reason": "Multiplicity or compound structure is distinct from plenty, wealth, or fertility, and 裕 does not mean multiple or compound."
+      }
+    ]
+  },
+  "unchangedOtherDispositions": {
+    "富": "Direct guard for direct wealth/abundance overlap.",
+    "豊": "Direct guard for direct abundant/bountiful overlap.",
+    "余": "No guard: remaining/excess in 余裕 complements 裕's plenty or roominess; the labels are not interchangeable.",
+    "満": "No guard: a filled/occupied state or satisfaction is distinct from abundant supply or prosperity.",
+    "剰": "No guard: a remainder/excess beyond need is narrower than general abundance, wealth, or fertility.",
+    "多": "No guard: count or amount differs from the target's plenty/richness/fertility senses.",
+    "残": "No guard: what remains after use differs from an abundant or rich state.",
+    "諸": "No guard: variety, plurality, or togetherness differs from the target senses."
+  },
+  "runtimeChange": {
+    "kanji": "裕",
+    "quiz_exclusions": [
+      "厚",
+      "富",
+      "豊",
+      "財"
+    ],
+    "otherLegacyCardsChanged": false
+  },
+  "evidenceBindings": {
+    "sourceReceipt": "source-receipt.json",
+    "comparisonSupplementReceipt": "comparison-supplement-001/receipt.json",
+    "previousAuthorAudit": "author-audit.json",
+    "previousSelection": "selection-002.json",
+    "currentSelection": "selection-003.json"
+  },
+  "limits": [
+    "The source record is complete parsed/reserialized JMdict evidence, not a byte-identical compressed-file slice.",
+    "The direct guard is pairwise and symmetric; no transitive propagation or arbitrary-pool acceptance is claimed.",
+    "This correction is coordinator-supplied source reasoning; it is not an independent review or reviewer verdict."
+  ]
+}

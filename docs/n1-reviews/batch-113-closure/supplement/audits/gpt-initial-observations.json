@@ -1,0 +1,23 @@
+{
+  "grant": "RU-N1-B113-REVIEW-20261113-003",
+  "session": "9603a29a-3213-4410-a195-7983e08f4132",
+  "model": "gpt-6.1-sol (runtime-reported; api=230)",
+  "promptReceivedAt": "2026-11-13T10:08:41.577Z",
+  "reportWrittenAt": "2026-11-13T10:41:13Z",
+  "report": {"path": "reports-113\\initial-gpt.md", "bytes": 30501, "sha256": "608d4ee7a2074000e48b68feab5b00f42a828f00d0588ce5d6b797af01f35c45"},
+  "execution": {"toolCalls": 230, "maxInFlight": 1, "parallelBatches": 0, "missingFullCoverage": 0, "indexRanges": [[1,603],[604,1206]],
+    "C": 45, "D": 40, "E": 10, "webFetches": 3,
+    "candidateListPublishedAt": "2026-11-13T10:18:34.088Z", "candidateListBeforeFirstCandidateRead": true,
+    "everyExclusionAndFetchPubliclyAnnouncedBeforeRead": true,
+    "otherTools": ["send_session_message (completion notice to coordinator)", "task_complete"]},
+  "deviations": [
+    {"item": "Report written with one apply_patch call instead of the prompt's 'one create call'.",
+     "disposition": "Accepted as tool substitution, not a scope breach: the session's toolset did not offer a create tool; the single patch contained exactly one '*** Add File' for the designated report path, recorded by the runtime as fileEdits kind=create; no other file was written."}
+  ],
+  "postRunIntegrity": {"packetFiles": 6393, "packetBytes": 16963714, "packetManifestSha256": "aea68d97bfc52944dc6e63fc309e47d08c328990c997cc73fb651ab6b73554d0",
+    "titleIndexSha256": "db2bdb13227ca6bef0a7c0d43160ae566e1c10ff6918f9f55eb7816093d71054", "titleIndexReadOnly": true,
+    "claudeInitialSha256": "ea6d932a76e519c28ef27b4338470736346ba1a76b010b03d91df7e68c9e17ed",
+    "claudeCoverageSha256": "b9f863eb55f25afbaa1a56db0f9640c356c99a81993cd5e6d6643faeef02094b"},
+  "reportClaimsChecked": "Scope, read counts, no searches/scripts/listings, three fetch URLs and the single write match the execution log.",
+  "decision": "Compliant independent initial review under grant -003. Both Claude runs remain rejected and are not retroactively accepted. Findings F1-F3, O1, L1-L3 go to reconciliation."
+}

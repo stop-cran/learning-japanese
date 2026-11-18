@@ -1,0 +1,67 @@
+{
+  "reason": "Bind the additive reconciliation-003 complete-source proof to signed 5100ec3e; prior round proofs remain bound to their own signed revisions and earlier evidence must be byte-identical in the new revision. JMdict entries beyond exact-written queries are accepted only when they equal the IDs cited by the bound counterpart cards.",
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\verify-round2-sources.py",
+    "sha256": "2ad9f5a0ca226a5edec86fda8e454a4d656ffc0ac878f3bd17c9ab813f031714"
+  },
+  "output": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\verify-round3-sources.py",
+    "sha256": "184d3bbedc955d976d8a05d1fd9e465d2bd1e689b9ca2741113f0b7d31d856af",
+    "bytes": 9767
+  },
+  "reverseExact": true,
+  "supersedesAbortedAttempt": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\aborted-round3-verifier-001\\abort-note.json",
+    "sha256": "cfa37ada1c3e0f78d2f5b9c9d8cb70dadff5235305149eeee5bf8435d10da36e"
+  },
+  "edits": [
+    {
+      "before": "\"\"\"Verify the signed second correction against its complete pinned source families.\"\"\"\nimport gzip\n",
+      "after": "\"\"\"Verify the signed third correction against its complete pinned source families.\"\"\"\nimport gzip\nimport re\n"
+    },
+    {
+      "before": "PARENT = \"8c40423d66d176580a4b3f89d11c3ba077cbb829\"",
+      "after": "PARENT = \"1c2fc20527c935306d241ad7bf8d68b27c12140a\""
+    },
+    {
+      "before": "ROOT = \"docs/n1-sources/batch-117/reconciliation-002\"",
+      "after": "ROOT = \"docs/n1-sources/batch-117/reconciliation-003\""
+    },
+    {
+      "before": "    require(correction[\"sourceEvidence\"][\"indexSha256\"] == sha(index_raw), \"Receipt index differs\")\n",
+      "after": "    require(correction[\"sourceEvidence\"][\"indexSha256\"] == sha(index_raw), \"Receipt index differs\")\n    require(correction[\"batch\"] == 117 and correction[\"parent\"] == PARENT, \"Receipt ancestry differs\")\n    added = correction[\"addedGuards\"]\n    declined = correction[\"declinedComparisons\"]\n    sources_expected = set(added) | {pair.split(\"/\")[0] for pair in declined}\n    counterparts_expected = {c for values in added.values() for c in values} | {\n        pair.split(\"/\")[1] for pair in declined}\n    card_citations = set()\n    for record in index[\"comparisonCards\"].values():\n        card_citations |= set(re.findall(r\"(?<!\\d)\\d{7}(?!\\d)\", blob(record[\"path\"]).decode(\"utf-8\")))\n"
+    },
+    {
+      "before": "    guard, _ = start_guard(\"B117 round-2 signed sources\")",
+      "after": "    guard, _ = start_guard(\"B117 round-3 signed sources\")"
+    },
+    {
+      "before": "                require(set(expected) == set(index[field][\"characters\"])\n                        == set(index[\"comparisonCards\"]) | set(config[\"members\"]),\n                        \"Character membership differs\")",
+      "after": "                require(set(expected) == set(index[field][\"characters\"])\n                        == set(index[\"comparisonCards\"]) == counterparts_expected,\n                        \"Character membership differs\")"
+    },
+    {
+      "before": "            if queries:\n                require(all(actual_queries[q] == set(ids) for q, ids in queries.items())\n                        and set(expected) == set().union(*actual_queries.values()),\n                        \"Incomplete exact-written JMdict family\")",
+      "after": "            if queries:\n                cited = set(index[\"jmdict\"][\"counterpartCardCitedIds\"])\n                require(cited == card_citations, \"Counterpart-cited JMdict IDs differ from the cards\")\n                require(set(expected) == set(index[\"jmdict\"][\"entryIds\"]), \"JMdict entry list differs\")\n                require(all(actual_queries[q] == set(ids) for q, ids in queries.items())\n                        and set(expected) == set().union(*actual_queries.values()) | cited,\n                        \"Incomplete exact-written JMdict family\")"
+    },
+    {
+      "before": "        require({item[\"source\"] for item in index[\"characterSources\"]} == set(config[\"members\"])\n                and len(index[\"characterSources\"]) == 4, \"Character-source coverage differs\")",
+      "after": "        for item in index[\"existingTargetSourceRecords\"]:\n            existing = blob(item[\"path\"])\n            require(existing == git(config, \"show\", f\"{PARENT}:{item['path']}\")\n                    and sha(existing) == item[\"sha256\"], f\"Existing target record differs: {item['path']}\")\n        require({item[\"source\"] for item in index[\"characterSources\"]} == sources_expected\n                and len(index[\"characterSources\"]) == len(sources_expected),\n                \"Character-source coverage differs\")"
+    },
+    {
+      "before": "        require(runtime == {f\"kanji/{c}.md\" for c in config[\"members\"]} | {\"manifest.json\"},\n                \"Correction changes unrelated files\")",
+      "after": "        require(runtime == {f\"kanji/{c}.md\" for c in added} | {\"manifest.json\"},\n                \"Correction changes unrelated files\")\n        for character, guards in added.items():\n            path = f\"kanji/{character}.md\"\n            line = lambda rev: next(l for l in git(config, \"show\", f\"{rev}:{path}\").decode(\"utf-8\")\n                                    .splitlines() if l.startswith(\"quiz_exclusions:\"))\n            before, after = line(PARENT), line(candidate)\n            require(after == before[:-1] + \"\".join(f\", {g}\" for g in guards) + \"]\",\n                    f\"Guard change is not an exact append: {character}\")"
+    },
+    {
+      "before": "              \"comparisonCardsVerified\": len(index[\"comparisonCards\"]), \"characterSourcesVerified\": 4,",
+      "after": "              \"comparisonCardsVerified\": len(index[\"comparisonCards\"]),\n              \"characterSourcesVerified\": len(index[\"characterSources\"]),\n              \"existingTargetRecordsVerified\": len(index[\"existingTargetSourceRecords\"]),\n              \"counterpartCardCitedIdsVerified\": sorted(card_citations),\n              \"guardAppendsVerified\": added, \"declinedComparisons\": declined,"
+    }
+  ],
+  "unchanged": [
+    "pinned-input hashing",
+    "complete record parsing",
+    "exact-written JMdict families",
+    "byte-exact counterpart cards",
+    "prior evidence preservation",
+    "RAM guard"
+  ]
+}

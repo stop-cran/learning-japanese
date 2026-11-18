@@ -1,0 +1,112 @@
+{
+ "batch": 124,
+ "createdAt": "2026-11-15T20:40:47.054192+00:00",
+ "packetManifestSha256": "9c93d0d33d31f871dbfc99ee1bd660bc43721b6d5523a0ca1bfa73c843e1b3fe",
+ "coreChainSha256": "ab48edf849ec3f7cd1ad09a09f39189da9c16336d663ec62f0f8fa20237401c6",
+ "template": {
+  "source": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\prompts-116\\initial-gpt-116-004.txt",
+  "sourceSha256": "0504bacc8d11cea917d7504d8631774f90913cbd569fe5f561562f70a665caaf",
+  "templateSha256": "38c2c85fdd2b16f17c8d2590a10b5a54230232490b969eef15af20b3642a4f6b",
+  "replacements": [
+   {
+    "literal": "| 憲 | <憲-correctness-verdict> | <憲-coverage-verdict> | <憲-consistency-verdict> | <憲-comprehensibility-verdict> | <憲-evidence> |\n| 監 | <監-correctness-verdict> | <監-coverage-verdict> | <監-consistency-verdict> | <監-comprehensibility-verdict> | <監-evidence> |\n| 督 | <督-correctness-verdict> | <督-coverage-verdict> | <督-consistency-verdict> | <督-comprehensibility-verdict> | <督-evidence> |\n",
+    "placeholder": "{{CARD_ROWS}}",
+    "count": 1
+   },
+   {
+    "literal": "All 9 curated distractor slots (9 distinct repo\\kanji copies): 憲: 寄 害 寒 / 監: 白 人 小 / 督: 目 眠 且.\n",
+    "placeholder": "{{C_LINE}}{{EXTRA_READS}}\n",
+    "count": 1
+   },
+   {
+    "literal": "Check the three link wrappers across two word-article changes in diffs\\existing.diff against the complete changed articles, for correct targets and no other change. Both 監 and 督 links are added to the same 監督 article. Use unchanged 責める as supporting evidence, not a new or modified article.",
+    "placeholder": "{{WRAPPER_CHECK}}",
+    "count": 1
+   },
+   {
+    "literal": "the two changed snapshot\\words articles (three wrappers in total); the complete unchanged repo\\words\\責める.md as supporting evidence; ",
+    "placeholder": "{{WORDS_READS}}",
+    "count": 1
+   },
+   {
+    "literal": "the three new kanji (憲 監 督)",
+    "placeholder": "{{NEW_KANJI_PHRASE}}",
+    "count": 1
+   },
+   {
+    "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1",
+    "placeholder": "{{PACKET}}",
+    "count": 1
+   },
+   {
+    "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\prompts-116\\initial-gpt-116-004.txt",
+    "placeholder": "{{PROMPT_PATH}}",
+    "count": 1
+   },
+   {
+    "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-116\\initial-gpt-004.md",
+    "placeholder": "{{REPORT}}",
+    "count": 1
+   },
+   {
+    "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\review-chains\\b116-initial-s1\\01-8fe76e37617848098ebefda668a9464c.txt",
+    "placeholder": "{{FIRST_SEGMENT}}",
+    "count": 1
+   },
+   {
+    "literal": "9e18d940427d71ef1512a71e808bc40499c1914f",
+    "placeholder": "{{SNAPSHOT}}",
+    "count": 1
+   },
+   {
+    "literal": "8f35f34ccb10f166fbf6700c6c95d67f953026e3",
+    "placeholder": "{{BASE}}",
+    "count": 1
+   },
+   {
+    "literal": "c9978b0965138472de5147312c313d71e428a4a6864b67807f162ba60b5fd841",
+    "placeholder": "{{SUMS}}",
+    "count": 1
+   },
+   {
+    "literal": "ed9a4ac4163bc6117ef072dc1d1b1242df6060431a08101311aae366e82254c8",
+    "placeholder": "{{TITLE_SHA}}",
+    "count": 1
+   },
+   {
+    "literal": "lint, quiz-safety, linkplan, reading-exposure-final, unittest, validate, manifest, manifest-rebuild, budget, vocabulary",
+    "placeholder": "{{CHECKS}}",
+    "count": 1
+   },
+   {
+    "literal": "N1-B116-GPT-004",
+    "placeholder": "{{RUN}}",
+    "count": 3
+   },
+   {
+    "literal": "all 18 segments",
+    "placeholder": "all {{SEGMENTS}} segments",
+    "count": 1
+   },
+   {
+    "literal": "segment 18 ends",
+    "placeholder": "segment {{SEGMENTS}} ends",
+    "count": 1
+   },
+   {
+    "literal": "all 18 core segments",
+    "placeholder": "all {{SEGMENTS}} core segments",
+    "count": 2
+   },
+   {
+    "literal": "their three snapshot\\strokes",
+    "placeholder": "their {{N_WORD}} snapshot\\strokes",
+    "count": 1
+   },
+   {
+    "literal": "three new cards",
+    "placeholder": "{{N_WORD}} new cards",
+    "count": 5
+   },
+   {
+    "literal": "the 1232 s

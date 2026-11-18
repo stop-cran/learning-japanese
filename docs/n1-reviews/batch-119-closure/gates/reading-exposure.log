@@ -1,0 +1,43 @@
+Source-only extras: 妥 タ (Wiktionary non-Joyo on), やす (Wiktionary kun), やすい and おだやか (kanji dictionary kun); 循 シュン (Wiktionary non-Joyo on), したがう (Daijisen and kanji dictionary kun).
+Reading-exposure audit: pools as built by the app (content.inStack): N1 stack = 1239 cards; All stack = 1239 cards.
+N1 stack = every card tagged jlpt-n1 .. jlpt-n5 (Stacks.includes); All = every card in kanji/. The pool is the whole shipped content of the stack.
+Starter practice session = the 118 cards tagged starter plus the borrowed target (the Starter stack borrows started cards of other stacks to pad a short "Practice more" session; the All and JLPT stacks borrow nothing).
+
+== 妥 (appropriate; settled)   curated option cards: 女 母 子   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 女: tags jlpt-n5 grade-1 pictograph starter; in pools: N1 stack, All stack, Starter practice session; on ジョ ニョ ニョウ | kun おんな め
+   curated 母: tags jlpt-n5 grade-2 indicative starter; in pools: N1 stack, All stack, Starter practice session; on ボ | kun はは も
+   curated 子: tags jlpt-n5 grade-1 pictograph starter; in pools: N1 stack, All stack, Starter practice session; on シ ス ツ | kun こ -こ ね
+   JMdict single-kanji entries: none
+   unlisted readings attested for 妥: やす (KANJIDIC2 name reading, card text)  た (card text)  やすい (card text)  おだやか (card text)
+   on prompt ダ (key だ)
+       N1 stack: curated 女 母 子 -> 9 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 7 drawable wrong options (7 curated, 0 fallback)
+       All stack: identical to N1 stack
+       Starter practice session: identical to N1 stack
+       attested reading た (card text) is offered by 他 多 太; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [妥 他] -> た; [妥 多] -> た
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (3 holders tried)
+       sampling N1 stack: 100 seeds, 7 of 7 drawable wrong options seen
+       sampling All stack: 100 seeds, 7 of 7 drawable wrong options seen
+       sampling Starter practice session: 100 seeds, 7 of 7 drawable wrong options seen
+   kun: no reading prompts
+
+== 循 (follow; cycle)   curated option cards: 休 人 本   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 休: tags jlpt-n5 grade-1 compound starter; in pools: N1 stack, All stack, Starter practice session; on キュウ | kun やす.む やす.まる やす.める
+   curated 人: tags jlpt-n5 grade-1 pictograph starter; in pools: N1 stack, All stack, Starter practice session; on ジン ニン | kun ひと -り -と
+   curated 本: tags jlpt-n5 grade-1 indicative starter; in pools: N1 stack, All stack, Starter practice session; on ホン | kun もと
+   JMdict single-kanji entries: none
+   unlisted readings attested for 循: したがう (card text)
+   on prompt ジュン (key じゅん)
+       N1 stack: curated 休 人 本 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+       All stack: identical to N1 stack
+       Starter practice session: identical to N1 stack
+       sampling N1 stack: 100 seeds, 4 of 4 drawable wrong options seen
+       sampling All stack: 100 seeds, 4 of 4 drawable wrong options seen
+       sampling Starter practice session: 100 seeds, 4 of 4 drawable wrong options seen
+   kun: no reading prompts
+
+0 production hit(s) (N1 / All stack pools); 0 padded-session hit(s) (Starter practice session only); 1 latent collision(s) (attested reading offered by another card, not drawable in any of these pools)
+Targeted Starter+妥+他: curated=['女', '母', '子'], deficits={0: 9}, reachable=['し', 'じょ', 'す', 'つ', 'にょ', 'にょう', 'ぼ'], supplemental intersections=[]
+Targeted Starter+循+春: curated=['休', '人', '本'], deficits={0: 2}, reachable=['きゅう', 'じん', 'にん', 'ほん'], supplemental intersections=[]
+This bounded host model does not establish native, arbitrary-pool, or multi-borrow acceptance.
+Supplemental-holder derivation: 春 offers シュン; normalized しゅん is a voicing mutation of 循 ジュン and is excluded before fallback. This is the bounded host model, not native reachability.

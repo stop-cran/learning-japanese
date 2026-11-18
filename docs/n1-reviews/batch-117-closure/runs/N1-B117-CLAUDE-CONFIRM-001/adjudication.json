@@ -1,0 +1,107 @@
+{
+  "run": "N1-B117-CLAUDE-CONFIRM-001",
+  "family": "claude",
+  "session": "e0cd3b5f-3441-4848-a66c-6806273b16b4",
+  "candidate": "8c40423d66d176580a4b3f89d11c3ba077cbb829",
+  "freeze": "93c6e09770a5272529ce2b324873768c36a94f71",
+  "scope": [
+    "紀",
+    "索",
+    "維",
+    "賃"
+  ],
+  "status": "NEEDS_FIX_ACCEPTED",
+  "verdict": "NEEDS FIX",
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": false,
+  "publicationAccepted": false,
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\N1-B117-CLAUDE-CONFIRM-001-final.json",
+    "sha256": "3041427d229df90ea5d5045dc21549dea8ea2c15f383fa6c668de0747bb12077"
+  },
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-117\\N1-B117-CLAUDE-CONFIRM-001.md",
+    "sha256": "4c7b789a2245b1be50774827ba6274f16b3cdbc8975930ff3f29dd0f8ca61869"
+  },
+  "finalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\N1-B117-CLAUDE-CONFIRM-001\\audit-20261115T001645134706\\audit.json",
+    "sha256": "31fb2c892bb01a9470c648b5d8218bbd0d8c58ff72d0884c0f9c2d0f28574890"
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\N1-B117-CLAUDE-CONFIRM-001-context.json",
+    "sha256": "e1df8fa4d1e6116660ea3d0b2ea89e7a9b47440bccec33ce44957746b01e1e8c",
+    "bytes": 382
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\N1-B117-CLAUDE-CONFIRM-001-structure.json",
+    "sha256": "dcd0a87d13c4fe3868f4585bca00688dddf0abf502ae7f19c960aeeab29ffbe5",
+    "bytes": 568
+  },
+  "eventsSha256": "817f2f2c9da8d72378b68a1a66ff1acdd6795fc8bd818016b801a9cfacf75917",
+  "sliceSha256": "855f2b8313c56f630b5e0c463d0963dd4aad9180a0ea3933b875d1924b9306be",
+  "actualResponseModels": [
+    "claude-opus-5-5"
+  ],
+  "acceptedDispositions": {
+    "F1": "RESOLVED",
+    "F2": "RESOLVED",
+    "F3": "RESOLVED",
+    "F4": "RESOLVED",
+    "O1": "RESOLVED",
+    "O2": "RESOLVED"
+  },
+  "acceptedNewFindings": [
+    "F1"
+  ],
+  "claimVerification": [
+    "Actual signed revision 8c40423d: 紀 excludes 書 ('write') and 齢 ('age; years lived'); 索 excludes 査 ('investigate; inspect').",
+    "Counterpart titles at 8c40423d: 著 'write; remarkable', 歳 'years of age', 偵 'spy; covert investigation'. None of 紀/著, 紀/歳 or 索/偵 is declared on either endpoint, and none has an individual entry in reconciliation-001/pair-dispositions.json.",
+    "F1 is therefore an established internal-consistency defect under the revision's own guard criteria. Severity minor is accepted; the required change (guard or source-backed decline) is proportionate."
+  ],
+  "openClaims": [
+    {
+      "id": "L3",
+      "pairs": [
+        "紀/筆",
+        "紀/文"
+      ],
+      "reason": "Reported UNVERIFIED. 筆 'brush; writing' and 文 'sentence, writing' share the writing head word with the excluded 書/述 family; a consequential comparison cannot stay unverified at CONFIRMED.",
+      "consequential": true
+    }
+  ],
+  "openClaimIds": [
+    "F1",
+    "L3"
+  ],
+  "retainedLimits": [
+    "L1",
+    "L2",
+    "L4",
+    "L5",
+    "L6"
+  ],
+  "limitNotes": {
+    "L4": "Reviewer self-correction is accepted: the original 由/ユイ exposure was missed initially and is fixed at 8c40423d for the modeled N1/All pools. The single-borrow Starter case remains a disclosed limit on the 維 card.",
+    "L6": "Accepted as non-defect; the geological-period use remains in 紀 Meaning."
+  },
+  "coordinatorScan": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\b117-coordinator-observations-003.json",
+    "sha256": "9773e5b2fb1672d1a60553e0641cb78fa284fbe4b67754e37b2f49b6e6a4f858",
+    "role": "Coordinator gloss-overlap scan sent to the author in the same reconciliation round. It is not a reviewer finding and is not attributed to this run."
+  },
+  "reconciliationDirection": "Author adds guards or individual source-backed declines for 紀/著, 紀/歳, 索/偵 and L3 紀/筆, 紀/文 on top of 8c40423d (no history rewrite), in additive reconciliation-002 evidence, with fresh gates and a signed revision. The same reviewer then confirms the delta.",
+  "acceptanceLimit": "Mechanics pass and the NEEDS FIX report is accepted as review evidence only. The candidate is not confirmed; raw report bytes are preserved.",
+  "spec": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\N1-B117-CLAUDE-CONFIRM-001-spec.json",
+    "sha256": "6da0203d16b046f1ddaaaf51e10b81e5ba15cb4c8c183873432cf5d02b4592d8"
+  },
+  "initialAcceptance": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-CLAUDE-001-acceptance.json",
+    "sha256": "7f06fa4152415cabce15e70e6418391f9d02576b1d7d79f7186837965adc3421"
+  },
+  "recordedAt": "2026-11-15T05:19:31.334293+00:00",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\confirm\\record-claude-confirm-001-adjudication.py",
+    "sha256": "9d7e323b313aac2a8da0fc102ca9291060c2e98f31031b08dfbba034af82792c"
+  }
+}

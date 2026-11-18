@@ -1,0 +1,1120 @@
+{
+ "kind": "capacity-calibration",
+ "batch": 131,
+ "model": "claude-opus-5.5 (response claude-opus-5-5), long_context",
+ "scope": "Mechanical token telemetry of N1-B131-CLAUDE-001 core reading only. Contains no reviewer text, selection, findings or extension data; the reviewer's phase-1 list and observations stay quarantined and are not represented here.",
+ "eventsSha256": "11c417ef912e2f004dece4a9c8f78e22162d5ef1f66dd14eaef16be9b98534c5",
+ "coreChain": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\core-chain-compact-001.json",
+ "coreChainSha256": "1226ce87e7d7a92685de6845406678dac668ece7508002f4389b4f8ab97df32b",
+ "maxPromptTokens": 952000,
+ "firstCallInputTokens": 66992,
+ "inputTokensBeforeSegment1": 77805,
+ "observedCompactionTriggers": {
+  "B129-claude": 764224,
+  "B130-claude": 766999,
+  "B131-claude001-currentTokens": 765251
+ },
+ "compactionEvents": [
+  {
+   "type": "session.compaction_start",
+   "timestamp": "2026-11-16T17:43:16.903Z",
+   "currentTokens": 765251,
+   "tokenLimit": 952000,
+   "trigger": "threshold"
+  },
+  {
+   "type": "session.compaction_complete",
+   "timestamp": "2026-11-16T17:44:18.083Z",
+   "tokenLimit": 952000,
+   "trigger": "threshold",
+   "preCompactionTokens": 781206,
+   "postCompactionTokens": 85785
+  }
+ ],
+ "derivedTriggerModel": "background compaction at currentTokens ~= 0.8*maxPromptTokens (761600 for 952000); currentTokens ~= last inputTokens + ~7k",
+ "measuredCoreTokensExcludingCompactionSpan": 738155,
+ "unmeasuredSegments": [
+  103,
+  105
+ ],
+ "fittedTokensPerByteNNLS": {
+  "cards": 0.502,
+  "docs": 0.354,
+  "evjson": 0.522,
+  "extract": 0.446,
+  "jlpt": 0.374,
+  "jmdict": 0.543,
+  "kanjidic": 0.526,
+  "titleidx": 0.531
+ },
+ "segmentMethod": "token delta = inputTokens of the usage record after the segment's view call minus the preceding usage record; the call spanning compaction is excluded",
+ "segments": [
+  {
+   "index": 1,
+   "sha256": "b621de9c1979d3e1612876085a0b5df211669dcf762c2ee1c919ba2dd3ef95b7",
+   "bytes": 13201,
+   "sources": [
+    "REVIEW.md",
+    "packet.json",
+    "rubric/copilot-instructions.md"
+   ],
+   "measuredInputTokenDelta": 5028
+  },
+  {
+   "index": 2,
+   "sha256": "5cb5e32c1352f72c4c7386cfd48afe6d20d3d51053e957b9446162c75ea5fd31",
+   "bytes": 14238,
+   "sources": [
+    "rubric/copilot-instructions.md"
+   ],
+   "measuredInputTokenDelta": 5040
+  },
+  {
+   "index": 3,
+   "sha256": "f4edc0f392d293e157c43cb72eb740c5f0d8dab654bac286edc9dc50262e0131",
+   "bytes": 13725,
+   "sources": [
+    "rubric/content-structure.instructions.md",
+    "rubric/copilot-instructions.md"
+   ],
+   "measuredInputTokenDelta": 5112
+  },
+  {
+   "index": 4,
+   "sha256": "afcb5c893451530c3465bcbe948870424b254b4cd751c2a0cbbe60bc30445dbd",
+   "bytes": 14099,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 5180
+  },
+  {
+   "index": 5,
+   "sha256": "5b71c88ac9392514c53b05fbdad2313ef0fed9dea4f482f8abdf8194ab715740",
+   "bytes": 14283,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 5200
+  },
+  {
+   "index": 6,
+   "sha256": "f0c164939b38ea9f66b03acaca4690681a348f889fa65607626466997254de97",
+   "bytes": 14276,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 5474
+  },
+  {
+   "index": 7,
+   "sha256": "b1f8945ac312a65d7658dc5f3c3942a391f592e756bcfcdb78d940478c4e7bcd",
+   "bytes": 14221,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 5188
+  },
+  {
+   "index": 8,
+   "sha256": "e0878340e9ad68e16a24c466e11006f5ef694904fdff07dd8822f0723bd7b45a",
+   "bytes": 14288,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 5073
+  },
+  {
+   "index": 9,
+   "sha256": "01e75bb6c6150f8ed98e006264132bc208be68b76660ba546002726b5e7ae60d",
+   "bytes": 14208,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 4623
+  },
+  {
+   "index": 10,
+   "sha256": "a748553463800c1ffd08972b1f4a110f9966b56655dad5215d4b7b1b6b021982",
+   "bytes": 14233,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 4772
+  },
+  {
+   "index": 11,
+   "sha256": "0fae087d1ad785a6ba5e7dc6c5dacdfde2f925d84bd6a7dc1ec1cce3840937fc",
+   "bytes": 14217,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 4722
+  },
+  {
+   "index": 12,
+   "sha256": "9aa32ffc886fe49e492093928991bd6d17696e1ef4792424d5bacc1d5ec5a378",
+   "bytes": 14304,
+   "sources": [
+    "repo/docs/content-format.md"
+   ],
+   "measuredInputTokenDelta": 4952
+  },
+  {
+   "index": 13,
+   "sha256": "0da7aadfcc3eea9da8cb55b561818ba237249e19a31b09155a9c16106bc15595",
+   "bytes": 13778,
+   "sources": [
+    "repo/docs/content-format.md",
+    "repo/docs/jlpt-levels.md"
+   ],
+   "measuredInputTokenDelta": 5015
+  },
+  {
+   "index": 14,
+   "sha256": "cd5780872c916c1eb5bb6ea8996fe6249af90b666366000ec00ad6ef835a96c7",
+   "bytes": 14257,
+   "sources": [
+    "repo/docs/jlpt-levels.md"
+   ],
+   "measuredInputTokenDelta": 5496
+  },
+  {
+   "index": 15,
+   "sha256": "04388c9b349b67e81d547e34a57c96ebb74ef38e0439619f352985d89294bd1a",
+   "bytes": 14286,
+   "sources": [
+    "repo/docs/jlpt-levels.md"
+   ],
+   "measuredInputTokenDelta": 5247
+  },
+  {
+   "index": 16,
+   "sha256": "c492b0398aec9def6e360c5f2239625cffd158058c8d2712076f91f63f62dc38",
+   "bytes": 12956,
+   "sources": [
+    "repo/docs/jlpt-levels.md",
+    "snapshot/kanji/羊.md",
+    "snapshot/kanji/衛.md"
+   ],
+   "measuredInputTokenDelta": 5698
+  },
+  {
+   "index": 17,
+   "sha256": "8890776224d414ffd7e46f5081a8d45b8d890072846ed82cafcf5d48a18a6ec9",
+   "bytes": 10590,
+   "sources": [
+    "snapshot/kanji/霜.md",
+    "snapshot/strokes/羊.json",
+    "snapshot/strokes/衛.json"
+   ],
+   "measuredInputTokenDelta": 6373
+  },
+  {
+   "index": 18,
+   "sha256": "70a38271e2a9004368f73d9af9a0f395b4ad8a901389250ebe9a24feee914c1a",
+   "bytes": 11094,
+   "sources": [
+    "diffs/existing.diff",
+    "snapshot/strokes/霜.json",
+    "snapshot/words/自衛.md",
+    "snapshot/words/衛星.md"
+   ],
+   "measuredInputTokenDelta": 6306
+  },
+  {
+   "index": 19,
+   "sha256": "d5ab376d16b214e92f65aace1688069f15a645b30e504cef05b2afd14ff4022b",
+   "bytes": 5675,
+   "sources": [
+    "checks/linkplan.txt",
+    "checks/lint.txt",
+    "checks/quiz-safety.txt",
+    "snapshot/words/羊毛.md",
+    "snapshot/words/霜.md"
+   ],
+   "measuredInputTokenDelta": 2702
+  },
+  {
+   "index": 20,
+   "sha256": "68795e6bce4618b86f9173e7ff0d65025b99ff594a49ea234515f177ca0fdc84",
+   "bytes": 11564,
+   "sources": [
+    "checks/manifest-rebuild.txt",
+    "checks/manifest.txt",
+    "checks/reading-exposure.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt"
+   ],
+   "measuredInputTokenDelta": 5105
+  },
+  {
+   "index": 21,
+   "sha256": "93c51bcd81345e7a077c4b4152c7aae198d20b9b9f2d97412f54479e821bc33a",
+   "bytes": 13233,
+   "sources": [
+    "checks/budget.txt",
+    "checks/vocabulary.txt",
+    "evidence/xml-presentation.json"
+   ],
+   "measuredInputTokenDelta": 5765
+  },
+  {
+   "index": 22,
+   "sha256": "ee3e5fb6d4f049e1d2748a9696a045fd42498ff88817c1d48562f4e80a659ebf",
+   "bytes": 14313,
+   "sources": [
+    "evidence/xml-presentation.json"
+   ],
+   "measuredInputTokenDelta": 5797
+  },
+  {
+   "index": 23,
+   "sha256": "58a2ce8b39f28c369f85b15c2c043e54a1aad9b29f2c6b7d6c09b75b48230787",
+   "bytes": 13786,
+   "sources": [
+    "evidence/baseline-title-index.txt",
+    "evidence/xml-presentation.json"
+   ],
+   "measuredInputTokenDelta": 6331
+  },
+  {
+   "index": 24,
+   "sha256": "d1803fc79aa339016b8cfddf98715706da232076edfa4fdf643a8a90c6bca9ce",
+   "bytes": 14310,
+   "sources": [
+    "evidence/baseline-title-index.txt"
+   ],
+   "measuredInputTokenDelta": 8575
+  },
+  {
+   "index": 25,
+   "sha256": "806a94efdae825599e3e9eb682e1d4ddd2212fc31c87b213311ed26ca11b3576",
+   "bytes": 13767,
+   "sources": [
+    "evidence/baseline-title-index.txt",
+    "evidence/font-cmap.json"
+   ],
+   "measuredInputTokenDelta": 10216
+  },
+  {
+   "index": 26,
+   "sha256": "3286052150e5def63e35a9274161ae581d04d628e86a14e658e0c99d336f45c9",
+   "bytes": 14268,
+   "sources": [
+    "evidence/font-cmap.json"
+   ],
+   "measuredInputTokenDelta": 7615
+  },
+  {
+   "index": 27,
+   "sha256": "eb869c3dd648e22ba19316c84e80cdebb646c5cd9bd018bdd54336988a15c74a",
+   "bytes": 14306,
+   "sources": [
+    "evidence/font-cmap.json"
+   ],
+   "measuredInputTokenDelta": 7672
+  },
+  {
+   "index": 28,
+   "sha256": "725eec9710924d45b0babd52e2c0122837494507bf0eadc56fec6d9d08a35bdd",
+   "bytes": 11017,
+   "sources": [
+    "baseline/words/羊毛.md",
+    "baseline/words/自衛.md",
+    "baseline/words/衛星.md",
+    "baseline/words/霜.md",
+    "evidence/font-cmap.json",
+    "evidence/kanjidic2-records.xml",
+    "evidence/source-metadata.json"
+   ],
+   "measuredInputTokenDelta": 5008
+  },
+  {
+   "index": 29,
+   "sha256": "80635265dbdc5cd6d0bbae4a5616255909ce740489f1149d4a5bc813625cb824",
+   "bytes": 12759,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6837
+  },
+  {
+   "index": 30,
+   "sha256": "572ac8d3eae8c10dfba0107a4b96d7a2d1cf79b5368121e42da8f19144818946",
+   "bytes": 12957,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7032
+  },
+  {
+   "index": 31,
+   "sha256": "3938b0d8843ab8b564d4e6c2b89a53617478dc11131d7278c0f82818e7939c98",
+   "bytes": 12502,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6517
+  },
+  {
+   "index": 32,
+   "sha256": "066c50a79147375fdfec4544a4917c0e2b3c19fdf2d93d8bf42529b993a735a3",
+   "bytes": 14241,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7421
+  },
+  {
+   "index": 33,
+   "sha256": "0c2aa8c72d537c0c5699f7ed367528f2790a172bbf86c9489461dcafc6d28b1e",
+   "bytes": 14274,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7454
+  },
+  {
+   "index": 34,
+   "sha256": "38537701c5cce9cbf02fe755f87810440f7872a88a342e0e114a0ed63205fadb",
+   "bytes": 11073,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 5998
+  },
+  {
+   "index": 35,
+   "sha256": "26a728e973078fed6b719bc3239f95178786867408f03f3f60ff5bda237d0fe0",
+   "bytes": 12487,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6556
+  },
+  {
+   "index": 36,
+   "sha256": "3bb30a119130c4cad208fad8a41a04c0c306cf65f73405897217313a5a1bb21d",
+   "bytes": 12315,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6473
+  },
+  {
+   "index": 37,
+   "sha256": "3b838407a76e6596402c7384e4c8dfe8284297f94477241cb98bb86df4f35d2d",
+   "bytes": 12948,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6798
+  },
+  {
+   "index": 38,
+   "sha256": "b01cc4fc1396dd26f24d8867c105d2b0c30a039fc4ff789d78288ae4aef0d89f",
+   "bytes": 13648,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7099
+  },
+  {
+   "index": 39,
+   "sha256": "d8d6745440d4d822de284c8d288556c1fc84b2e36ba263fdc37c0d4d43a18524",
+   "bytes": 13835,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7238
+  },
+  {
+   "index": 40,
+   "sha256": "1ad2c856472126196aa25913478e6c9cea5d5cf7feecea756577bc6960bf4355",
+   "bytes": 12309,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6485
+  },
+  {
+   "index": 41,
+   "sha256": "95787860260a8a02a79a9ad4431a66bb9b95aca04d6b56a00f47b16bc500ae6a",
+   "bytes": 13625,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7125
+  },
+  {
+   "index": 42,
+   "sha256": "481bd05559b54b0a5cadd98d6913e660c87d10834b58c122bde6c2fdc6b6d13f",
+   "bytes": 13338,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7033
+  },
+  {
+   "index": 43,
+   "sha256": "6e0ce82375bf423057e038d04658cdde67fdf5926deeca4c8498d1aaa67c1545",
+   "bytes": 13609,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7128
+  },
+  {
+   "index": 44,
+   "sha256": "fe90dc01e4ce231263c65c10937033e2e53bcd0b1fea3a6b3ff21068b803c04f",
+   "bytes": 13989,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7309
+  },
+  {
+   "index": 45,
+   "sha256": "efd81755765eb7174e696958d807e0172cf634cce6f06c3fc7b4fc80e193997d",
+   "bytes": 12654,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6677
+  },
+  {
+   "index": 46,
+   "sha256": "6de1a88d144c5d59c83b88c53d17ae7b78795c565bab14248a717a3d9dd159c3",
+   "bytes": 13344,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6973
+  },
+  {
+   "index": 47,
+   "sha256": "18f52d709f04c63db1585a9d496f971fd0b55ee8f86651ea0d4c8f5bcf1fd65c",
+   "bytes": 14056,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7324
+  },
+  {
+   "index": 48,
+   "sha256": "5ad49be22c286c08bd3fc29e2f9294a9768ebb0f01dab8e99af17f40c1f5a2ec",
+   "bytes": 11890,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6258
+  },
+  {
+   "index": 49,
+   "sha256": "a35cd789974c711992af3f336ba1833aafdfb7cfabceb333f6e37d46105c23d9",
+   "bytes": 12458,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6581
+  },
+  {
+   "index": 50,
+   "sha256": "3c4f5224c76ec1633314b22f7746fb2137b3075f7b353148292cfe0deeeb7356",
+   "bytes": 13768,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7225
+  },
+  {
+   "index": 51,
+   "sha256": "4d6271967c80668bb6be67ad0582d612b131eb06b229ad056b249209250d33ac",
+   "bytes": 13919,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7427
+  },
+  {
+   "index": 52,
+   "sha256": "6659a97a4b1233dc40ef31fad00b2aee4e4e83d263613314d5c4332f0cbfccce",
+   "bytes": 12378,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6516
+  },
+  {
+   "index": 53,
+   "sha256": "a0b6e37ef22edbe2ecd87f053660d736129c6823afa3a0399233a6ddcdef02fb",
+   "bytes": 12288,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6531
+  },
+  {
+   "index": 54,
+   "sha256": "74751585fefbc563cd9a9ffe2633d35e17c914dce3f27a66f10dfa6697325c0c",
+   "bytes": 12157,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6430
+  },
+  {
+   "index": 55,
+   "sha256": "8e36b5f2cc4dd4cc0000cb539a6d32e142b8e5055761fb38c0a7bffdbb966273",
+   "bytes": 13499,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7079
+  },
+  {
+   "index": 56,
+   "sha256": "f9674926987cd8cd81f5f2348f3351ea13984c42071759d511227bfda574851a",
+   "bytes": 12862,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6778
+  },
+  {
+   "index": 57,
+   "sha256": "4460c13c0ff65de9e49780845e3b12fff7c7b0e7095ee4c31eb60457169430f6",
+   "bytes": 12367,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6435
+  },
+  {
+   "index": 58,
+   "sha256": "6035ce7a6bf057913a328bd3f84ebfbb93169f9e5843259a9a5d7c80acd5f155",
+   "bytes": 11737,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6103
+  },
+  {
+   "index": 59,
+   "sha256": "6aa3c03f9a5d6c7a1e6191df79f9ca39d0951167d3e5e46f7fb13e16e0ae4749",
+   "bytes": 13276,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6961
+  },
+  {
+   "index": 60,
+   "sha256": "43d4df14c9fe683d5365b9552df67b7b781d61b601f828613af12f03b3990e10",
+   "bytes": 13156,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6886
+  },
+  {
+   "index": 61,
+   "sha256": "0f54148aa9de56c44099b54c4ea4eddaa86e323e857d6774ff101c6f9bba3993",
+   "bytes": 13720,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7161
+  },
+  {
+   "index": 62,
+   "sha256": "88f36812c8652acac5508810cf3043298c3b552dba8c1ebefa7f62851b1c8bec",
+   "bytes": 11820,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 6260
+  },
+  {
+   "index": 63,
+   "sha256": "f672d3d0170ff6e37f586fa3f395bca4c5961bcb681b4f27403481e03118cd02",
+   "bytes": 13922,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7407
+  },
+  {
+   "index": 64,
+   "sha256": "82a48614e35fb0328f68ee753adf6dd4ba99e94333213cc58bc21826f6480dd0",
+   "bytes": 14212,
+   "sources": [
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7487
+  },
+  {
+   "index": 65,
+   "sha256": "ac2cfc7cb462556a21d566417f943a381162af9902a2bd907fe6cbd71b6bd1f2",
+   "bytes": 13754,
+   "sources": [
+    "evidence/jmdict-families.xml",
+    "evidence/kanjidic2-records.xml"
+   ],
+   "measuredInputTokenDelta": 7575
+  },
+  {
+   "index": 66,
+   "sha256": "8c00d2b03c7d68e51269bc0a925667f709bc05bf83b46c45e75de438772292e4",
+   "bytes": 12961,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7140
+  },
+  {
+   "index": 67,
+   "sha256": "1421082f364abd49924ca35899b8bb0a91c60f40f609845c20d89d4b1ba58495",
+   "bytes": 14252,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7813
+  },
+  {
+   "index": 68,
+   "sha256": "e73fab3649a8e976d18602817c229c0dc1dbd12b88c1c7d09546dbec76ea542b",
+   "bytes": 14000,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7915
+  },
+  {
+   "index": 69,
+   "sha256": "f20042533b8e70604d383be21693d439a1f3eabb8767519bb8f1db37ca99fba1",
+   "bytes": 13605,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7511
+  },
+  {
+   "index": 70,
+   "sha256": "2685899e56f0e5d89e7286dda5a8de638a9d838c6a764973ea5f947994362ffc",
+   "bytes": 14192,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7823
+  },
+  {
+   "index": 71,
+   "sha256": "ea5ec8fc91b4a30a4a0def2d7c6ebf39a288b82cfb9d48446cfedb233636a8ff",
+   "bytes": 12251,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 6716
+  },
+  {
+   "index": 72,
+   "sha256": "d8b98c03ed0296b0df115b872cbcd9dca37e8214987df29ab6ff0570dd470912",
+   "bytes": 14163,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7743
+  },
+  {
+   "index": 73,
+   "sha256": "6c2b713c6bada69e6bd437b53fb9af6e7998318caeda93b1450890b3a83a448b",
+   "bytes": 13937,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7656
+  },
+  {
+   "index": 74,
+   "sha256": "b4c9229e2aaafa73726d1b06e696c527e717b89946a702f21f5e2ca4db5fff0c",
+   "bytes": 14253,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7847
+  },
+  {
+   "index": 75,
+   "sha256": "f6f6a9e3852d113b16206cfccf7ebfc5fd9be4c24025455197d7cef30eb5fa92",
+   "bytes": 13614,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7580
+  },
+  {
+   "index": 76,
+   "sha256": "8f8dc0310aceaf843e226b7cc6a38ad802e34dc18ee3c58a2a65241c54b49172",
+   "bytes": 13494,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7620
+  },
+  {
+   "index": 77,
+   "sha256": "5be98b89efd46f20e77187663728be2db5b685643d0569b88e329b2b8a353482",
+   "bytes": 13580,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7647
+  },
+  {
+   "index": 78,
+   "sha256": "f02ed9ce0607169d93c790d3a0b5457656c8e52e247eefac5badf2693991d9b3",
+   "bytes": 13646,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7518
+  },
+  {
+   "index": 79,
+   "sha256": "36b94b3de2f31afce4476ea32f12500fb629d1b66e5584436c52cfc2d50a6933",
+   "bytes": 14282,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7812
+  },
+  {
+   "index": 80,
+   "sha256": "e5392136106e5904835aaf9cfe430a87799a12f5e862e31e22731ff3aee199ae",
+   "bytes": 14135,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7751
+  },
+  {
+   "index": 81,
+   "sha256": "c9c2deca13ffc872b53d07bad32f79fded095a23d453b2168353d1d815d95e24",
+   "bytes": 14099,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7659
+  },
+  {
+   "index": 82,
+   "sha256": "835a7e578e614c94501cdf329641d9a14f50e9b19d78425590be7d98a3537e99",
+   "bytes": 13530,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7248
+  },
+  {
+   "index": 83,
+   "sha256": "64b0c57308f027089aca2491a6c837eab19fa381046e4bc2b0fa0abf4f47d00a",
+   "bytes": 14174,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7454
+  },
+  {
+   "index": 84,
+   "sha256": "80dcc4fa2deb791e90e2b6703859da51162e4ec6f7b030adb0b28b908953976f",
+   "bytes": 14173,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7842
+  },
+  {
+   "index": 85,
+   "sha256": "88bd817d794d07189d47f7d1492154a333ecbcb477aecc48ba54e6107df1d5aa",
+   "bytes": 13847,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7432
+  },
+  {
+   "index": 86,
+   "sha256": "d22f8bc178033f8ab71f9b69c75fb64c31f30bafa8d30e583508f4008d69183a",
+   "bytes": 13772,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7201
+  },
+  {
+   "index": 87,
+   "sha256": "93708591092c021eb7a728130c6cdc22c746286aa9a9066f5a161cd6788c67c5",
+   "bytes": 14123,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7542
+  },
+  {
+   "index": 88,
+   "sha256": "7be08f24ac0b3bd5c186b9d29dc80bffee26d030f551a990f38ab5fa980b26ad",
+   "bytes": 14143,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7603
+  },
+  {
+   "index": 89,
+   "sha256": "c0cf69b380081b079aee68b2f7f59f4a5305419c57e78237936dccb3879e4f06",
+   "bytes": 14229,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7598
+  },
+  {
+   "index": 90,
+   "sha256": "d2f5dcb271fc71633b149a6a181b853e3dec208d64ee7a2cd3e21b21d12ac67c",
+   "bytes": 14176,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7556
+  },
+  {
+   "index": 91,
+   "sha256": "247f6caafbf1c81248083a82775ab838cd07b004301bbf2d0815686977da11ce",
+   "bytes": 14189,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7548
+  },
+  {
+   "index": 92,
+   "sha256": "d30604ea2901cd51142a20414b24b5afc40e1554f9200d549a17afc23db6f220",
+   "bytes": 14210,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7512
+  },
+  {
+   "index": 93,
+   "sha256": "6ef10febc26476be41f3dc0e9cdce93c1237a46244bc2462f94b34ebd4b10e1c",
+   "bytes": 14074,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7539
+  },
+  {
+   "index": 94,
+   "sha256": "d3e85b7c7c2916d717e3ff493fde6e354c89e37b41db02452ec9adc7ae19607a",
+   "bytes": 13962,
+   "sources": [
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 6987
+  },
+  {
+   "index": 95,
+   "sha256": "eaad08a980a1fb96e0b56cbcb24dac456f7891ebf2708226eaf5d97b87492903",
+   "bytes": 13787,
+   "sources": [
+    "evidence/dictionary-index.json",
+    "evidence/jmdict-families.xml"
+   ],
+   "measuredInputTokenDelta": 7188
+  },
+  {
+   "index": 96,
+   "sha256": "016c387f21b42bd1011fefff625d4936da71c7799d930ccb4afcfc2d1f8295f5",
+   "bytes": 11805,
+   "sources": [
+    "evidence/dictionary-index.json",
+    "evidence/joyo-rows.json"
+   ],
+   "measuredInputTokenDelta": 6354
+  },
+  {
+   "index": 97,
+   "sha256": "93b71995af9178cfbbc58f5dadeac519129670735b75893b16a51cf9f381f02d",
+   "bytes": 13248,
+   "sources": [
+    "evidence/provenance.json",
+    "evidence/shape-evidence.json",
+    "evidence/title-index.txt"
+   ],
+   "measuredInputTokenDelta": 7219
+  },
+  {
+   "index": 98,
+   "sha256": "71e8b698896c86a9df1437b99c964d34202c9e258e6918352c14e947d7ab7e72",
+   "bytes": 14293,
+   "sources": [
+    "evidence/title-index.txt"
+   ],
+   "measuredInputTokenDelta": 7077
+  },
+  {
+   "index": 99,
+   "sha256": "c7cf20c86e3b56c5a2a29d742ecaec01a53ce71a5b5308669dfd853c080feb67",
+   "bytes": 10466,
+   "sources": [
+    "evidence/title-index.txt",
+    "repo/kanji/古.md",
+    "repo/kanji/右.md",
+    "repo/kanji/川.md"
+   ],
+   "measuredInputTokenDelta": 4905
+  },
+  {
+   "index": 100,
+   "sha256": "e6e46b5acb7e4f96f053904393b183e17a17a5a77589a309c0c42ae91a60d1a9",
+   "bytes": 5436,
+   "sources": [
+    "evidence/external-snapshots/manifest.json"
+   ],
+   "measuredInputTokenDelta": 2963
+  },
+  {
+   "index": 101,
+   "sha256": "10318294097b796fe41572921ee14e9b9df9e77c1d6a122cfddf573e51f904e3",
+   "bytes": 13706,
+   "sources": [
+    "evidence/external-snapshots/01-extract.txt",
+    "evidence/external-snapshots/02-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5718
+  },
+  {
+   "index": 102,
+   "sha256": "cf29c7435bd5d91bafbd0661e3fefdffd8d19b6a5ebfd6d41558832a7410658c",
+   "bytes": 12391,
+   "sources": [
+    "evidence/external-snapshots/02-extract.txt"
+   ],
+   "measuredInputTokenDelta": 6423
+  },
+  {
+   "index": 103,
+   "sha256": "1a82b48a7fb8ed2bb1b35be0f88a7bdeba0713894ab4c53f9d1c780bca482abb",
+   "bytes": 13133,
+   "sources": [
+    "evidence/external-snapshots/03-extract.txt",
+    "evidence/external-snapshots/04-extract.txt"
+   ],
+   "measuredInputTokenDelta": null
+  },
+  {
+   "index": 104,
+   "sha256": "054d6f731fe0f8a73af38a76b4c677204f7edd920ba3ded4d8fd6c0d5a1c37c1",
+   "bytes": 13939,
+   "sources": [
+    "evidence/external-snapshots/04-extract.txt"
+   ],
+   "measuredInputTokenDelta": 10741
+  },
+  {
+   "index": 105,
+   "sha256": "3cde2f32af8b2c669b61325ea5f70ce84ea887452fa40d2f5cc1b66f48b75ddd",
+   "bytes": 13847,
+   "sources": [
+    "evidence/external-snapshots/04-extract.txt"
+   ],
+   "measuredInputTokenDelta": null
+  },
+  {
+   "index": 106,
+   "sha256": "3555216002a896b0bfc420b97e981a34fade63414a6248c46a3b5b8f77b21d56",
+   "bytes": 14317,
+   "sources": [
+    "evidence/external-snapshots/04-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5266
+  },
+  {
+   "index": 107,
+   "sha256": "1d4233c5ed5ba025ec6f075f4419e208c289840b187f0004db807424f5c16c70",
+   "bytes": 14293,
+   "sources": [
+    "evidence/external-snapshots/04-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5615
+  },
+  {
+   "index": 108,
+   "sha256": "0b13952ea79ea571e7758930b212169c1f96d18bd3f764e0f80d8c238a05685b",
+   "bytes": 13789,
+   "sources": [
+    "evidence/external-snapshots/04-extract.txt",
+    "evidence/external-snapshots/05-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5947
+  },
+  {
+   "index": 109,
+   "sha256": "779cecedddb06b0a7fc0a01004aad25aedf3995b6c523df67c20633c78eccdfe",
+   "bytes": 13803,
+   "sources": [
+    "evidence/external-snapshots/05-extract.txt",
+    "evidence/external-snapshots/06-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5209
+  },
+  {
+   "index": 110,
+   "sha256": "adf3b0cac448007e4f33ad00ac8c3ab474417f9b4fd4cb43b664f69c04d07021",
+   "bytes": 13987,
+   "sources": [
+    "evidence/external-snapshots/06-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5481
+  },
+  {
+   "index": 111,
+   "sha256": "8ea7e7b8837a3cefacfcce7981e74bf4e30f1456fc59718f032731702cdd431b",
+   "bytes": 14141,
+   "sources": [
+    "evidence/external-snapshots/06-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5271
+  },
+  {
+   "index": 112,
+   "sha256": "4a7e07a2e5fddfe6850384e7c920114ffc84518b7dcaf3fd4d9b03c9f15423f8",
+   "bytes": 14325,
+   "sources": [
+    "evidence/external-snapshots/06-extract.txt"
+   ],
+   "measuredInputTokenDelta": 5772
+  },
+  {
+   "index": 113,
+   "sha256": "8cc61835e4acf4a06b5d0a0cccea3ab07fa22d53fa7e8d9b5d85ec71693d70b5",
+   "bytes": 14314,
+   "sources": [
+    "evidence/external-snapshots/06-extract.txt"
+   ],
+   "measuredInputTokenDelta": 6892
+  },
+  {
+   "index": 114,
+   "sha256": "3e2dae93605a88a026831d628c7fba35d59f4ce087b3090d1ad61897addb22b2",
+   "bytes": 3089,
+   "sources": [
+    "evidence/external-snapshots/06-extract.txt"
+   ],
+   "measuredInputTokenDelta": 1439
+  }
+ ]
+}

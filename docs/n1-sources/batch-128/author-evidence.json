@@ -1,0 +1,72 @@
+{
+  "status": "author-gates-passed-independent-review-pending",
+  "base": "bd0f4b842c588e581ccb31ad946eecedb63d32b8",
+  "gateDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\author-gates-002",
+  "gateSummarySha256": "599b2937332fcdd0017a56c27b94017660ccf1f9cb0ba42b45344b3034779ef3",
+  "preservationDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\preservation-author-001",
+  "preservationSummarySha256": "ea3f2f998b454c94e52742738759a44f73ceda57c298d84685ff29c37ffe4727",
+  "tenSerialChecks": [
+    "lint",
+    "quiz-safety",
+    "linkplan",
+    "reading-exposure",
+    "validate",
+    "manifest",
+    "unittest",
+    "budget",
+    "vocabulary",
+    "manifest-rebuild"
+  ],
+  "manifestSha256": "efb23aed6b0a16ea9ce8810255faaff5456e7ff63c036accea21484402e37989",
+  "contentVersion": "97622af4e498474d",
+  "manifestMappedRuntimeEntries": 8718,
+  "baselineMappedRuntimeEntries": 8716,
+  "localArchiveBudget": {
+    "entriesIncludingPackagingAndDirectories": 8740,
+    "retainedBytes": 45446824,
+    "inflatedBytes": 45715162,
+    "localZipBytes": 30881842
+  },
+  "sourcePacket": "source-receipt.json",
+  "completeRecordVerification": "complete-source-verification-002.json",
+  "completeRecords": {
+    "jmdict": 103,
+    "kanjidic2": 46
+  },
+  "scanBaselineCards": 1247,
+  "scanPairs": 42,
+  "actualComparisonCardsRead": 45,
+  "warnings": {
+    "finalScopedLint": 0,
+    "finalQuizSafety": 0,
+    "validationErrors": 0,
+    "initialQuizSafety": 1,
+    "fontMissing": "脣 U+8123 absent from all three bundled subsets; no rendered fallback acceptance"
+  },
+  "preservedFailures": [
+    {
+      "gate": "linkplan",
+      "attempt": "author-gates-001",
+      "cause": "Runner lacked existing --remarks allowance for the stale no-card sentence.",
+      "disposition": "Use exact one-occurrence stale-remark input; no validator weakened. Original runner/logs/receipts preserved in pre-remarks-fix-001."
+    }
+  ],
+  "readingExposure": {
+    "explicitExtras": [
+      "唇=おどろく,ほとり,くちひる,ふるえる,しん"
+    ],
+    "productionHits": 0,
+    "starterPaddingHits": 0,
+    "latentCollisions": 2,
+    "seedsPerPool": 100,
+    "scope": "Full N1/All and restricted Starter padding host model only; 石 is not Starter-tagged, leaving one analyzed fallback slot."
+  },
+  "resourcePolicy": {
+    "admitAboveBytes": 2147483648,
+    "abortBelowBytes": 1073741824,
+    "sampleSeconds": 0.25,
+    "maxChildWaitSeconds": 0.1,
+    "cleanupTimeoutSecondsPerStage": 10
+  },
+  "limits": "No independent review or publication. Committed checks and signature/cleanliness bind separately in final scratch handoff, avoiding self-referential commit hashes. Vocabulary remains pilot-stage coverage 2122/2431, not whole-set closure."
+}

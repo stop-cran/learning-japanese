@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "batch": 140,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "fe70abbfb97a14d4bcc5d08326f2df48c4d15a4e",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/fe70abbfb97a14d4bcc5d08326f2df48c4d15a4e",
+  "base": "f37cd97f43e8e2b2792cbe3d89e728c76e453646",
+  "initialSnapshot": "28831314c9b8203cf7dd66c4eec16f23ef0fef22",
+  "reviewedSnapshot": "1b24a5f97a396d7121689f3928c7aa500e0054ef",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44382086589",
+    "runId": 44382086589,
+    "receiptSha256": "0227719132d16ca5d2c4ee0bbb98f2dd2ecf008c64c039b0af52b1acb1d97e77"
+  },
+  "archive": {
+    "zipSha256": "b42fdd35b2a2070d5befb3526610196368a8beb47b3bf852aea7f6f9ab0316ed",
+    "receiptSha256": "920836b405c4cd82a7023ad53d458ab74714485069c043ed89fffb14d1daa73c",
+    "verifiedRuntimeHashes": 8966,
+    "contentVersion": "bdbcfcd0793f69a5",
+    "manifestSha256": "ddab2e887bee777dbfeb2896602da3db4e150b6cf21cd6f9971f2ae12e7b30d3"
+  },
+  "reviewIdentity": "B140 textual review closed on 1b24a5f9 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of 28831314; the confirmations of 1b24a5f9 (both reviewers) were later turns of the same two reviewer agents, not fresh agents (see batch-140-closure). Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 362,
+    "n1Additions": 356,
+    "n2Placements": 6,
+    "remaining": 866,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "4 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 幣 まい, 弁 とく, 従 ひろい, and the KANJIDIC2 name reading 志 じん.",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools.",
+    "幣 uses Starter-card distractors (中 南 雨) so that all three wrong options are curated in every pool; with tag-similar distractors, まい, a reading JMdict (2789910) and Daijisen give for 幣, could be offered in Starter sessions by 毎, 米, 枚, 妹 or 埋. The frozen draft used 中 内 南; the fix replaced 内, whose title \"within, inner\" overlaps 中's \"middle, inside\", with 雨. The shape look-alikes 常, 帯 and 希 stay in the card's Notes.",
+    "4 lint warnings on existing word articles' Dictionary lines (往復, 従姉妹, 直径, 通帳) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 巣 ソウ, 幕 バク, 従 ジュウ, ショウ and したが.える, 志 こころざ.す and こころざし, 怠 タイ, and 恨 コン and うら.めしい; ten cards quiz only their on reading and five only their kun readings. The いとこ of 従兄弟 and 従姉妹 is gikun and is not quizzed.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards, word articles and stroke files as unread that the reports say were read; the author checked those claims against the session events.",
+    "Claude's initial and confirmation reports each say every response made one tool call, but the session events show one response in each run with two parallel view calls on adjacent ranges of one packet file; both were read-only.",
+    "initial-gpt's scope audit flags a recursive scan, but the matched ** was Python exponentiation in a stroke-geometry calculation; confirm-gpt's audit flags the review-packets folder because a Python script used it as a base path to reach its own packets. Both flags are false positives.",
+    "The fix had two earlier local versions (775debde, 88ab6f48), both differing only in 幣; the first used the distractors 常 帯 希, whose audit showed a Starter padded-session hit on まい, and the second lacked the ぜに and にきて sentence. Neither was reviewed or published; the confirmation packets keep the first version's audit lines as evidence.",
+    "The GPT confirmation did not search the whole corpus for the old 弁 title; the author's git grep for it over kanji/, words/ and docs/ at the fix snapshot finds no quotation outside the batch.",
+    "Claude's confirmation did not reopen QuizBuilder.kt and checked 幣's Notes, 徴 line 56 and 従's front matter through the fix patch and link-target table rather than full rereads.",
+    "The GPT reviewers also read Weblio, Kanjipedia, jisho.org, kanjiapi.dev (HTTP 403) and the pinned KanjiVG revision, partly through Python; the scope audits list only web_fetch calls, and the reports describe these reads.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

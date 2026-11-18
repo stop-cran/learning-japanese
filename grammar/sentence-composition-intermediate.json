@@ -1,0 +1,5688 @@
+{
+  "schemaVersion": 1,
+  "id": "sentence-composition-intermediate",
+  "title": "Sentence composition with N3 patterns",
+  "article": "articles/sentence-composition-and-text-grammar.md",
+  "constructions": [
+    {
+      "id": "kurabete-a",
+      "label": "Chunk A is the item described with は"
+    },
+    {
+      "id": "kurabete-b",
+      "label": "Chunk B is the item described with は"
+    },
+    {
+      "id": "nitotte-a",
+      "label": "Chunk A takes にとって as the person whose standpoint counts"
+    },
+    {
+      "id": "nitotte-b",
+      "label": "Chunk B takes にとって as the person whose standpoint counts"
+    },
+    {
+      "id": "taishite-a",
+      "label": "Chunk A is the は-marked person who acts or holds the attitude"
+    },
+    {
+      "id": "taishite-b",
+      "label": "Chunk B is the は-marked person who acts or holds the attitude"
+    },
+    {
+      "id": "kawatte-a",
+      "label": "Chunk A is the が-marked substitute"
+    },
+    {
+      "id": "kawatte-b",
+      "label": "Chunk B is the が-marked substitute"
+    },
+    {
+      "id": "totan-a",
+      "label": "Chunk A is the first event, before とたん"
+    },
+    {
+      "id": "totan-b",
+      "label": "Chunk B is the first event, before とたん"
+    },
+    {
+      "id": "yoto-a",
+      "label": "Chunk A is the person who was about to act"
+    },
+    {
+      "id": "yoto-b",
+      "label": "Chunk B is the person who was about to act"
+    },
+    {
+      "id": "okage-a",
+      "label": "Chunk A is the person credited with のおかげで"
+    },
+    {
+      "id": "okage-b",
+      "label": "Chunk B is the person credited with のおかげで"
+    },
+    {
+      "id": "tame-a",
+      "label": "Chunk A is the purpose, before ために"
+    },
+    {
+      "id": "tame-b",
+      "label": "Chunk B is the purpose, before ために"
+    },
+    {
+      "id": "tabi-a",
+      "label": "Chunk A is the repeated occasion, before たびに"
+    },
+    {
+      "id": "tabi-b",
+      "label": "Chunk B is the repeated occasion, before たびに"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "kurabete",
+      "label": "Ordering a に比べて comparison",
+      "constructions": [
+        "kurabete-a",
+        "kurabete-b"
+      ]
+    },
+    {
+      "id": "nitotte",
+      "label": "Ordering an にとって viewpoint frame",
+      "constructions": [
+        "nitotte-a",
+        "nitotte-b"
+      ]
+    },
+    {
+      "id": "taishite",
+      "label": "Ordering an に対して target phrase",
+      "constructions": [
+        "taishite-a",
+        "taishite-b"
+      ]
+    },
+    {
+      "id": "kawatte",
+      "label": "Ordering an に代わって substitution",
+      "constructions": [
+        "kawatte-a",
+        "kawatte-b"
+      ]
+    },
+    {
+      "id": "totan",
+      "label": "Ordering events around たとたん",
+      "constructions": [
+        "totan-a",
+        "totan-b"
+      ]
+    },
+    {
+      "id": "yoto",
+      "label": "Ordering a ようとしたとき interruption",
+      "constructions": [
+        "yoto-a",
+        "yoto-b"
+      ]
+    },
+    {
+      "id": "okage",
+      "label": "Ordering a のおかげで credit phrase",
+      "constructions": [
+        "okage-a",
+        "okage-b"
+      ]
+    },
+    {
+      "id": "tame",
+      "label": "Ordering a purpose ために sentence",
+      "constructions": [
+        "tame-a",
+        "tame-b"
+      ]
+    },
+    {
+      "id": "tabi",
+      "label": "Ordering a たびに repeated-occasion sentence",
+      "constructions": [
+        "tabi-a",
+        "tabi-b"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "sentence-composition-intermediate-station-distance",
+      "jlpt": 3,
+      "target": "kurabete-a",
+      "relationship": "kurabete",
+      "prompt": "駅まで、私の家からは歩いて5分、姉の家からは20分です。\n〔E：駅に近いです〕〔D：に比べて〕〔C：は〕〔B：姉の家〕〔A：私の家〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one compared item and に比べて to the OTHER; the statement must agree with the facts in the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: It is a five-minute walk to the station from my house and twenty minutes from my older sister's house. Completed sentence: Compared with my sister's house, my house is close to the station. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate.",
+      "answer": "kurabete-a",
+      "acceptedAnswers": [
+        "私の家は姉の家に比べて駅に近いです",
+        "姉の家に比べて私の家は駅に近いです"
+      ],
+      "options": [
+        {
+          "id": "kurabete-a",
+          "label": "私の家は姉の家に比べて駅に近いです",
+          "rationale": "Context: It is a five-minute walk to the station from my house and twenty minutes from my older sister's house. Completed sentence: Compared with my sister's house, my house is close to the station. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate."
+        },
+        {
+          "id": "kurabete-b",
+          "label": "姉の家は私の家に比べて駅に近いです",
+          "rationale": "This makes the standard of comparison the item described, which reverses the facts stated in the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "88fb2f633ab03761a2b6ce384c9fa4f05f28a56e4f1543c69228f8704860461d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "house"
+          },
+          {
+            "start": 10,
+            "end": 13,
+            "text": "歩いて",
+            "reading": "あるいて",
+            "headword": "歩く",
+            "gloss": "walk; connecting form"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "5分",
+            "reading": "ごふん",
+            "headword": "5分",
+            "gloss": "five minutes"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 18,
+            "end": 19,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "house"
+          },
+          {
+            "start": 22,
+            "end": 25,
+            "text": "20分",
+            "reading": "にじゅっぷん",
+            "headword": "20分",
+            "gloss": "twenty minutes"
+          },
+          {
+            "start": 32,
+            "end": 33,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 34,
+            "end": 36,
+            "text": "近い",
+            "reading": "ちかい",
+            "headword": "近い",
+            "gloss": "near"
+          },
+          {
+            "start": 55,
+            "end": 56,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 57,
+            "end": 58,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "house"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 64,
+            "end": 65,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "house"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-apple-prices",
+      "jlpt": 3,
+      "target": "kurabete-b",
+      "relationship": "kurabete",
+      "prompt": "りんごは、駅前の店では一つ200円ですが、この店では100円です。\n〔E：りんごが安いです〕〔D：に比べて〕〔C：は〕〔B：この店〕〔A：駅前の店〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one compared item and に比べて to the OTHER; the statement must agree with the facts in the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: Apples cost 200 yen each at the shop in front of the station but 100 yen at this shop. Completed sentence: Compared with the shop in front of the station, apples are cheap at this shop. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate.",
+      "answer": "kurabete-b",
+      "acceptedAnswers": [
+        "この店は駅前の店に比べてりんごが安いです",
+        "駅前の店に比べてこの店はりんごが安いです"
+      ],
+      "options": [
+        {
+          "id": "kurabete-a",
+          "label": "駅前の店はこの店に比べてりんごが安いです",
+          "rationale": "This makes the standard of comparison the item described, which reverses the facts stated in the context."
+        },
+        {
+          "id": "kurabete-b",
+          "label": "この店は駅前の店に比べてりんごが安いです",
+          "rationale": "Context: Apples cost 200 yen each at the shop in front of the station but 100 yen at this shop. Completed sentence: Compared with the shop in front of the station, apples are cheap at this shop. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c0e37705d4a8f7b5800160dea7ae1ad445bb25abf9e9c8a99432902283b87812",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "りんご",
+            "reading": "りんご",
+            "headword": "りんご",
+            "gloss": "apple"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "駅前",
+            "reading": "えきまえ",
+            "headword": "駅前",
+            "gloss": "in front of the station"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "一つ",
+            "reading": "ひとつ",
+            "headword": "一つ",
+            "gloss": "one (item)"
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "text": "200円",
+            "reading": "にひゃくえん",
+            "headword": "200円",
+            "gloss": "200 yen"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 23,
+            "end": 24,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 26,
+            "end": 30,
+            "text": "100円",
+            "reading": "ひゃくえん",
+            "headword": "100円",
+            "gloss": "100 yen"
+          },
+          {
+            "start": 37,
+            "end": 40,
+            "text": "りんご",
+            "reading": "りんご",
+            "headword": "りんご",
+            "gloss": "apple"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "安い",
+            "reading": "やすい",
+            "headword": "安い",
+            "gloss": "cheap"
+          },
+          {
+            "start": 62,
+            "end": 64,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 64,
+            "end": 65,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "text": "駅前",
+            "reading": "えきまえ",
+            "headword": "駅前",
+            "gloss": "in front of the station"
+          },
+          {
+            "start": 72,
+            "end": 73,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-summer-heat",
+      "jlpt": 3,
+      "target": "kurabete-a",
+      "relationship": "kurabete",
+      "prompt": "夏の気温は、東京では35度ぐらいですが、この町では25度ぐらいです。\n〔E：夏が涼しいです〕〔D：に比べて〕〔C：は〕〔B：東京〕〔A：この町〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one compared item and に比べて to the OTHER; the statement must agree with the facts in the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: In summer it is about 35 degrees in Tokyo but about 25 degrees in this town. Completed sentence: Compared with Tokyo, this town is cool in summer. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate.",
+      "answer": "kurabete-a",
+      "acceptedAnswers": [
+        "この町は東京に比べて夏が涼しいです",
+        "東京に比べてこの町は夏が涼しいです"
+      ],
+      "options": [
+        {
+          "id": "kurabete-a",
+          "label": "この町は東京に比べて夏が涼しいです",
+          "rationale": "Context: In summer it is about 35 degrees in Tokyo but about 25 degrees in this town. Completed sentence: Compared with Tokyo, this town is cool in summer. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate."
+        },
+        {
+          "id": "kurabete-b",
+          "label": "東京はこの町に比べて夏が涼しいです",
+          "rationale": "This makes the standard of comparison the item described, which reverses the facts stated in the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ba5fa6627c0dc3f3da28d7be75a631dc9971f79138bd1678d9ab63850278b3ea",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "夏",
+            "reading": "なつ",
+            "headword": "夏",
+            "gloss": "summer"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "気温",
+            "reading": "きおん",
+            "headword": "気温",
+            "gloss": "air temperature"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "東京",
+            "reading": "とうきょう",
+            "headword": "東京",
+            "gloss": "Tokyo"
+          },
+          {
+            "start": 10,
+            "end": 13,
+            "text": "35度",
+            "reading": "さんじゅうごど",
+            "headword": "35度",
+            "gloss": "35 degrees"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 22,
+            "end": 23,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "text": "25度",
+            "reading": "にじゅうごど",
+            "headword": "25度",
+            "gloss": "25 degrees"
+          },
+          {
+            "start": 38,
+            "end": 39,
+            "text": "夏",
+            "reading": "なつ",
+            "headword": "夏",
+            "gloss": "summer"
+          },
+          {
+            "start": 40,
+            "end": 43,
+            "text": "涼しい",
+            "reading": "すずしい",
+            "headword": "涼しい",
+            "gloss": "cool"
+          },
+          {
+            "start": 62,
+            "end": 64,
+            "text": "東京",
+            "reading": "とうきょう",
+            "headword": "東京",
+            "gloss": "Tokyo"
+          },
+          {
+            "start": 68,
+            "end": 70,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 70,
+            "end": 71,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-brothers-height",
+      "jlpt": 3,
+      "target": "kurabete-b",
+      "relationship": "kurabete",
+      "prompt": "兄は身長が170センチで、弟は180センチです。\n〔E：背が高いです〕〔D：に比べて〕〔C：は〕〔B：弟〕〔A：兄〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one compared item and に比べて to the OTHER; the statement must agree with the facts in the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: My older brother is 170 cm tall and my younger brother is 180 cm. Completed sentence: Compared with my older brother, my younger brother is tall. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate.",
+      "answer": "kurabete-b",
+      "acceptedAnswers": [
+        "弟は兄に比べて背が高いです",
+        "兄に比べて弟は背が高いです"
+      ],
+      "options": [
+        {
+          "id": "kurabete-a",
+          "label": "兄は弟に比べて背が高いです",
+          "rationale": "This makes the standard of comparison the item described, which reverses the facts stated in the context."
+        },
+        {
+          "id": "kurabete-b",
+          "label": "弟は兄に比べて背が高いです",
+          "rationale": "Context: My older brother is 170 cm tall and my younger brother is 180 cm. Completed sentence: Compared with my older brother, my younger brother is tall. The は-marked item is the one the predicate describes; the に比べて item is the standard. The は phrase and the に比べて phrase may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "04bc5d3b2825826d59b5d1f8edc28a70e641c6e35536db507b44359d65f468e9",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "身長",
+            "reading": "しんちょう",
+            "headword": "身長",
+            "gloss": "height"
+          },
+          {
+            "start": 5,
+            "end": 11,
+            "text": "170センチ",
+            "reading": "ひゃくななじゅっせんち",
+            "headword": "170センチ",
+            "gloss": "170 cm"
+          },
+          {
+            "start": 13,
+            "end": 14,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "text": "180センチ",
+            "reading": "ひゃくはちじゅっせんち",
+            "headword": "180センチ",
+            "gloss": "180 cm"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": "背",
+            "reading": "せ",
+            "headword": "背",
+            "gloss": "height (stature)"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "高い",
+            "reading": "たかい",
+            "headword": "高い",
+            "gloss": "tall"
+          },
+          {
+            "start": 51,
+            "end": 52,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 56,
+            "end": 57,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-daughter-letters",
+      "jlpt": 3,
+      "target": "nitotte-a",
+      "relationship": "nitotte",
+      "prompt": "外国に住む娘は毎月手紙を書きます。母はその手紙を全部大切にしまっています。\n〔E：宝物です〕〔D：の手紙は〕〔C：にとって〕〔B：娘〕〔A：母〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach にとって to one person and the printed の…は chunk to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The daughter who lives abroad writes a letter every month. Her mother carefully keeps every one of them. Completed sentence: For the mother, her daughter's letters are a treasure. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate.",
+      "answer": "nitotte-a",
+      "acceptedAnswers": [
+        "母にとって娘の手紙は宝物です",
+        "娘の手紙は母にとって宝物です"
+      ],
+      "options": [
+        {
+          "id": "nitotte-a",
+          "label": "母にとって娘の手紙は宝物です",
+          "rationale": "Context: The daughter who lives abroad writes a letter every month. Her mother carefully keeps every one of them. Completed sentence: For the mother, her daughter's letters are a treasure. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "nitotte-b",
+          "label": "娘にとって母の手紙は宝物です",
+          "rationale": "This swaps the person whose standpoint is meant and the person who owns the thing described, relative to the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6f35468f79b93b0decba5259f70862c3ae50fed5fc6da439d744ae052c77b438",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "外国",
+            "reading": "がいこく",
+            "headword": "外国",
+            "gloss": "foreign country"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "住む",
+            "reading": "すむ",
+            "headword": "住む",
+            "gloss": "live (reside)"
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": "娘",
+            "reading": "むすめ",
+            "headword": "娘",
+            "gloss": "daughter"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "毎月",
+            "reading": "まいつき",
+            "headword": "毎月",
+            "gloss": "every month"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "書きます",
+            "reading": "かきます",
+            "headword": "書く",
+            "gloss": "write"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "その",
+            "reading": "その",
+            "headword": "その",
+            "gloss": "that"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "全部",
+            "reading": "ぜんぶ",
+            "headword": "全部",
+            "gloss": "all"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "text": "大切に",
+            "reading": "たいせつに",
+            "headword": "大切",
+            "gloss": "carefully; with care"
+          },
+          {
+            "start": 29,
+            "end": 36,
+            "text": "しまっています",
+            "reading": "しまっています",
+            "headword": "しまう",
+            "gloss": "keep put away"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "宝物",
+            "reading": "たからもの",
+            "headword": "宝物",
+            "gloss": "treasure"
+          },
+          {
+            "start": 50,
+            "end": 52,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          },
+          {
+            "start": 65,
+            "end": 66,
+            "text": "娘",
+            "reading": "むすめ",
+            "headword": "娘",
+            "gloss": "daughter"
+          },
+          {
+            "start": 70,
+            "end": 71,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-senior-explanation",
+      "jlpt": 3,
+      "target": "nitotte-b",
+      "relationship": "nitotte",
+      "prompt": "新人が仕事について質問すると、先輩が説明しました。新人はすぐに理解できました。\n〔E：とても分かりやすかったです〕〔D：の説明は〕〔C：にとって〕〔B：新人〕〔A：先輩〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach にとって to one person and the printed の…は chunk to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: When the newcomer asked about the work, the senior colleague explained it. The newcomer understood at once. Completed sentence: For the newcomer, the senior colleague's explanation was very easy to understand. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate.",
+      "answer": "nitotte-b",
+      "acceptedAnswers": [
+        "新人にとって先輩の説明はとても分かりやすかったです",
+        "先輩の説明は新人にとってとても分かりやすかったです"
+      ],
+      "options": [
+        {
+          "id": "nitotte-a",
+          "label": "先輩にとって新人の説明はとても分かりやすかったです",
+          "rationale": "This swaps the person whose standpoint is meant and the person who owns the thing described, relative to the context."
+        },
+        {
+          "id": "nitotte-b",
+          "label": "新人にとって先輩の説明はとても分かりやすかったです",
+          "rationale": "Context: When the newcomer asked about the work, the senior colleague explained it. The newcomer understood at once. Completed sentence: For the newcomer, the senior colleague's explanation was very easy to understand. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8d980efbba417b7cd62442d5382f4780a783c25cfbc4cd1e42b9db2b5b4a5361",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "新人",
+            "reading": "しんじん",
+            "headword": "新人",
+            "gloss": "newcomer"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "仕事",
+            "reading": "しごと",
+            "headword": "仕事",
+            "gloss": "work"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "text": "質問する",
+            "reading": "しつもんする",
+            "headword": "質問する",
+            "gloss": "ask a question"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "先輩",
+            "reading": "せんぱい",
+            "headword": "先輩",
+            "gloss": "senior colleague"
+          },
+          {
+            "start": 18,
+            "end": 24,
+            "text": "説明しました",
+            "reading": "せつめいしました",
+            "headword": "説明する",
+            "gloss": "explained"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "新人",
+            "reading": "しんじん",
+            "headword": "新人",
+            "gloss": "newcomer"
+          },
+          {
+            "start": 28,
+            "end": 31,
+            "text": "すぐに",
+            "reading": "すぐに",
+            "headword": "すぐに",
+            "gloss": "at once"
+          },
+          {
+            "start": 31,
+            "end": 38,
+            "text": "理解できました",
+            "reading": "りかいできました",
+            "headword": "理解する",
+            "gloss": "could understand"
+          },
+          {
+            "start": 43,
+            "end": 46,
+            "text": "とても",
+            "reading": "とても",
+            "headword": "とても",
+            "gloss": "very"
+          },
+          {
+            "start": 46,
+            "end": 54,
+            "text": "分かりやすかった",
+            "reading": "わかりやすかった",
+            "headword": "分かりやすい",
+            "gloss": "easy to understand (past)"
+          },
+          {
+            "start": 61,
+            "end": 63,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "text": "新人",
+            "reading": "しんじん",
+            "headword": "新人",
+            "gloss": "newcomer"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "text": "先輩",
+            "reading": "せんぱい",
+            "headword": "先輩",
+            "gloss": "senior colleague"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-grandchild-smile",
+      "jlpt": 3,
+      "target": "nitotte-b",
+      "relationship": "nitotte",
+      "prompt": "入院中の祖父は、孫が会いに来て笑うと、とても元気になります。\n〔E：いちばんの薬です〕〔D：の笑顔は〕〔C：にとって〕〔B：祖父〕〔A：孫〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach にとって to one person and the printed の…は chunk to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The grandfather in hospital becomes very lively when his grandchild visits and smiles. Completed sentence: For the grandfather, his grandchild's smile is the best medicine. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate.",
+      "answer": "nitotte-b",
+      "acceptedAnswers": [
+        "祖父にとって孫の笑顔はいちばんの薬です",
+        "孫の笑顔は祖父にとっていちばんの薬です"
+      ],
+      "options": [
+        {
+          "id": "nitotte-a",
+          "label": "孫にとって祖父の笑顔はいちばんの薬です",
+          "rationale": "This swaps the person whose standpoint is meant and the person who owns the thing described, relative to the context."
+        },
+        {
+          "id": "nitotte-b",
+          "label": "祖父にとって孫の笑顔はいちばんの薬です",
+          "rationale": "Context: The grandfather in hospital becomes very lively when his grandchild visits and smiles. Completed sentence: For the grandfather, his grandchild's smile is the best medicine. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0870c0a9f66908ebbf0d62f18d220349ce8183f462d8ab89eacef91cbefe7b23",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "入院中",
+            "reading": "にゅういんちゅう",
+            "headword": "入院中",
+            "gloss": "in hospital"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "祖父",
+            "reading": "そふ",
+            "headword": "祖父",
+            "gloss": "grandfather"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "孫",
+            "reading": "まご",
+            "headword": "孫",
+            "gloss": "grandchild"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "会いに来て",
+            "reading": "あいにきて",
+            "headword": "会いに来る",
+            "gloss": "come to see; connecting form"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "笑う",
+            "reading": "わらう",
+            "headword": "笑う",
+            "gloss": "smile; laugh"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "text": "とても",
+            "reading": "とても",
+            "headword": "とても",
+            "gloss": "very"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "元気",
+            "reading": "げんき",
+            "headword": "元気",
+            "gloss": "lively; well"
+          },
+          {
+            "start": 34,
+            "end": 38,
+            "text": "いちばん",
+            "reading": "いちばん",
+            "headword": "いちばん",
+            "gloss": "the most; best"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": "薬",
+            "reading": "くすり",
+            "headword": "薬",
+            "gloss": "medicine"
+          },
+          {
+            "start": 47,
+            "end": 49,
+            "text": "笑顔",
+            "reading": "えがお",
+            "headword": "笑顔",
+            "gloss": "smiling face"
+          },
+          {
+            "start": 62,
+            "end": 64,
+            "text": "祖父",
+            "reading": "そふ",
+            "headword": "祖父",
+            "gloss": "grandfather"
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "text": "孫",
+            "reading": "まご",
+            "headword": "孫",
+            "gloss": "grandchild"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-sister-cooking",
+      "jlpt": 3,
+      "target": "nitotte-a",
+      "relationship": "nitotte",
+      "prompt": "姉はよく料理を作ります。妹はそれを食べるのが何よりも楽しみです。\n〔E：いちばんのごちそうです〕〔D：の料理は〕〔C：にとって〕〔B：姉〕〔A：妹〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach にとって to one person and the printed の…は chunk to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The older sister often cooks. Eating her food is what the younger sister looks forward to more than anything. Completed sentence: For the younger sister, her older sister's cooking is the finest treat. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate.",
+      "answer": "nitotte-a",
+      "acceptedAnswers": [
+        "妹にとって姉の料理はいちばんのごちそうです",
+        "姉の料理は妹にとっていちばんのごちそうです"
+      ],
+      "options": [
+        {
+          "id": "nitotte-a",
+          "label": "妹にとって姉の料理はいちばんのごちそうです",
+          "rationale": "Context: The older sister often cooks. Eating her food is what the younger sister looks forward to more than anything. Completed sentence: For the younger sister, her older sister's cooking is the finest treat. にとって marks the person from whose standpoint the judgement holds; the other person owns the thing described with の…は. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "nitotte-b",
+          "label": "姉にとって妹の料理はいちばんのごちそうです",
+          "rationale": "This swaps the person whose standpoint is meant and the person who owns the thing described, relative to the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8b310a6e517474c300d2a8a4ff8036081b7c06b919963713d384bb73c5c77a70",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "よく",
+            "reading": "よく",
+            "headword": "よく",
+            "gloss": "often"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "料理",
+            "reading": "りょうり",
+            "headword": "料理",
+            "gloss": "cooking; food"
+          },
+          {
+            "start": 7,
+            "end": 11,
+            "text": "作ります",
+            "reading": "つくります",
+            "headword": "作る",
+            "gloss": "make"
+          },
+          {
+            "start": 12,
+            "end": 13,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "それ",
+            "reading": "それ",
+            "headword": "それ",
+            "gloss": "that"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "食べる",
+            "reading": "たべる",
+            "headword": "食べる",
+            "gloss": "eat"
+          },
+          {
+            "start": 22,
+            "end": 23,
+            "text": "何",
+            "reading": "なに",
+            "headword": "何",
+            "gloss": "what; anything"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "text": "楽しみ",
+            "reading": "たのしみ",
+            "headword": "楽しみ",
+            "gloss": "something looked forward to"
+          },
+          {
+            "start": 36,
+            "end": 40,
+            "text": "いちばん",
+            "reading": "いちばん",
+            "headword": "いちばん",
+            "gloss": "the most; best"
+          },
+          {
+            "start": 41,
+            "end": 45,
+            "text": "ごちそう",
+            "reading": "ごちそう",
+            "headword": "ごちそう",
+            "gloss": "treat; feast"
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "text": "料理",
+            "reading": "りょうり",
+            "headword": "料理",
+            "gloss": "cooking; food"
+          },
+          {
+            "start": 67,
+            "end": 68,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 72,
+            "end": 73,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-angry-customer",
+      "jlpt": 3,
+      "target": "taishite-a",
+      "relationship": "taishite",
+      "prompt": "店で客が怒りました。店員の佐藤さんは「申し訳ありません」と言って頭を下げました。\n〔E：丁寧に謝りました〕〔D：に対して〕〔C：は〕〔B：客〕〔A：佐藤さん〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one person and に対して to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: A customer got angry in the shop. The clerk, Sato, said 'I am very sorry' and bowed. Completed sentence: Sato apologised politely to the customer. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate.",
+      "answer": "taishite-a",
+      "acceptedAnswers": [
+        "佐藤さんは客に対して丁寧に謝りました",
+        "客に対して佐藤さんは丁寧に謝りました"
+      ],
+      "options": [
+        {
+          "id": "taishite-a",
+          "label": "佐藤さんは客に対して丁寧に謝りました",
+          "rationale": "Context: A customer got angry in the shop. The clerk, Sato, said 'I am very sorry' and bowed. Completed sentence: Sato apologised politely to the customer. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "taishite-b",
+          "label": "客は佐藤さんに対して丁寧に謝りました",
+          "rationale": "This makes the person who receives the action or attitude its source, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "80beb3d2204603000411d0c0f9c0428c167a2523ebda91d39ccbb08ef7207d2d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "客",
+            "reading": "きゃく",
+            "headword": "客",
+            "gloss": "customer"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": "怒りました",
+            "reading": "おこりました",
+            "headword": "怒る",
+            "gloss": "got angry"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "店員",
+            "reading": "てんいん",
+            "headword": "店員",
+            "gloss": "shop clerk"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "佐藤",
+            "reading": "さとう",
+            "headword": "佐藤",
+            "gloss": "Sato (family name)"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 19,
+            "end": 27,
+            "text": "申し訳ありません",
+            "reading": "もうしわけありません",
+            "headword": "申し訳ない",
+            "gloss": "I am very sorry"
+          },
+          {
+            "start": 29,
+            "end": 32,
+            "text": "言って",
+            "reading": "いって",
+            "headword": "言う",
+            "gloss": "say; connecting form"
+          },
+          {
+            "start": 32,
+            "end": 33,
+            "text": "頭",
+            "reading": "あたま",
+            "headword": "頭",
+            "gloss": "head"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "text": "下げました",
+            "reading": "さげました",
+            "headword": "下げる",
+            "gloss": "lowered (bowed)"
+          },
+          {
+            "start": 44,
+            "end": 47,
+            "text": "丁寧に",
+            "reading": "ていねいに",
+            "headword": "丁寧",
+            "gloss": "politely; carefully"
+          },
+          {
+            "start": 47,
+            "end": 52,
+            "text": "謝りました",
+            "reading": "あやまりました",
+            "headword": "謝る",
+            "gloss": "apologised"
+          },
+          {
+            "start": 69,
+            "end": 70,
+            "text": "客",
+            "reading": "きゃく",
+            "headword": "客",
+            "gloss": "customer"
+          },
+          {
+            "start": 74,
+            "end": 76,
+            "text": "佐藤",
+            "reading": "さとう",
+            "headword": "佐藤",
+            "gloss": "Sato (family name)"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-school-rules",
+      "jlpt": 3,
+      "target": "taishite-b",
+      "relationship": "taishite",
+      "prompt": "生徒たちは学校の規則について話し合って、校長先生に自分たちの考えを伝えました。\n〔E：意見を言いました〕〔D：に対して〕〔C：は〕〔B：生徒たち〕〔A：校長先生〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one person and に対して to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The students discussed the school rules and told the principal what they thought. Completed sentence: The students gave their opinion to the principal. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate.",
+      "answer": "taishite-b",
+      "acceptedAnswers": [
+        "生徒たちは校長先生に対して意見を言いました",
+        "校長先生に対して生徒たちは意見を言いました"
+      ],
+      "options": [
+        {
+          "id": "taishite-a",
+          "label": "校長先生は生徒たちに対して意見を言いました",
+          "rationale": "This makes the person who receives the action or attitude its source, which reverses the context."
+        },
+        {
+          "id": "taishite-b",
+          "label": "生徒たちは校長先生に対して意見を言いました",
+          "rationale": "Context: The students discussed the school rules and told the principal what they thought. Completed sentence: The students gave their opinion to the principal. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "107612b7f4650c9be0dd89116cc59c936bc1016f94c95ca23e8ada521f343034",
+        "spans": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "生徒たち",
+            "reading": "せいとたち",
+            "headword": "生徒",
+            "gloss": "students"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "規則",
+            "reading": "きそく",
+            "headword": "規則",
+            "gloss": "rule"
+          },
+          {
+            "start": 14,
+            "end": 19,
+            "text": "話し合って",
+            "reading": "はなしあって",
+            "headword": "話し合う",
+            "gloss": "discuss; connecting form"
+          },
+          {
+            "start": 20,
+            "end": 24,
+            "text": "校長先生",
+            "reading": "こうちょうせんせい",
+            "headword": "校長先生",
+            "gloss": "principal"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "text": "自分たち",
+            "reading": "じぶんたち",
+            "headword": "自分たち",
+            "gloss": "themselves"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "考え",
+            "reading": "かんがえ",
+            "headword": "考え",
+            "gloss": "thought; idea"
+          },
+          {
+            "start": 33,
+            "end": 38,
+            "text": "伝えました",
+            "reading": "つたえました",
+            "headword": "伝える",
+            "gloss": "conveyed"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "text": "意見",
+            "reading": "いけん",
+            "headword": "意見",
+            "gloss": "opinion"
+          },
+          {
+            "start": 46,
+            "end": 51,
+            "text": "言いました",
+            "reading": "いいました",
+            "headword": "言う",
+            "gloss": "said"
+          },
+          {
+            "start": 68,
+            "end": 72,
+            "text": "生徒たち",
+            "reading": "せいとたち",
+            "headword": "生徒",
+            "gloss": "students"
+          },
+          {
+            "start": 76,
+            "end": 80,
+            "text": "校長先生",
+            "reading": "こうちょうせんせい",
+            "headword": "校長先生",
+            "gloss": "principal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-son-lie",
+      "jlpt": 3,
+      "target": "taishite-a",
+      "relationship": "taishite",
+      "prompt": "息子がうそをつきました。母は息子を呼んで、強い言葉でしかりました。\n〔E：きびしく注意しました〕〔D：に対して〕〔C：は〕〔B：息子〕〔A：母〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one person and に対して to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The son told a lie. His mother called him and scolded him in strong words. Completed sentence: The mother warned her son strictly. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate.",
+      "answer": "taishite-a",
+      "acceptedAnswers": [
+        "母は息子に対してきびしく注意しました",
+        "息子に対して母はきびしく注意しました"
+      ],
+      "options": [
+        {
+          "id": "taishite-a",
+          "label": "母は息子に対してきびしく注意しました",
+          "rationale": "Context: The son told a lie. His mother called him and scolded him in strong words. Completed sentence: The mother warned her son strictly. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "taishite-b",
+          "label": "息子は母に対してきびしく注意しました",
+          "rationale": "This makes the person who receives the action or attitude its source, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "22d2fdea2f09bc587e2246324b5e0553c9221649833da453842ace210956c77c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "息子",
+            "reading": "むすこ",
+            "headword": "息子",
+            "gloss": "son"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "うそ",
+            "reading": "うそ",
+            "headword": "うそ",
+            "gloss": "lie"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": "つきました",
+            "reading": "つきました",
+            "headword": "つく",
+            "gloss": "told (a lie)"
+          },
+          {
+            "start": 12,
+            "end": 13,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "息子",
+            "reading": "むすこ",
+            "headword": "息子",
+            "gloss": "son"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "呼んで",
+            "reading": "よんで",
+            "headword": "呼ぶ",
+            "gloss": "call; connecting form"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "強い",
+            "reading": "つよい",
+            "headword": "強い",
+            "gloss": "strong"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "言葉",
+            "reading": "ことば",
+            "headword": "言葉",
+            "gloss": "words"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "text": "しかりました",
+            "reading": "しかりました",
+            "headword": "しかる",
+            "gloss": "scolded"
+          },
+          {
+            "start": 37,
+            "end": 41,
+            "text": "きびしく",
+            "reading": "きびしく",
+            "headword": "きびしい",
+            "gloss": "strictly"
+          },
+          {
+            "start": 41,
+            "end": 47,
+            "text": "注意しました",
+            "reading": "ちゅういしました",
+            "headword": "注意する",
+            "gloss": "warned"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "text": "息子",
+            "reading": "むすこ",
+            "headword": "息子",
+            "gloss": "son"
+          },
+          {
+            "start": 70,
+            "end": 71,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-kind-sister",
+      "jlpt": 3,
+      "target": "taishite-b",
+      "relationship": "taishite",
+      "prompt": "妹は姉によくきついことを言いますが、姉はいつも笑って妹を手伝います。\n〔E：いつも優しいです〕〔D：に対して〕〔C：は〕〔B：姉〕〔A：妹〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach は to one person and に対して to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The younger sister often says harsh things to her older sister, but the older sister always smiles and helps her. Completed sentence: The older sister is always kind to her younger sister. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate.",
+      "answer": "taishite-b",
+      "acceptedAnswers": [
+        "姉は妹に対していつも優しいです",
+        "妹に対して姉はいつも優しいです"
+      ],
+      "options": [
+        {
+          "id": "taishite-a",
+          "label": "妹は姉に対していつも優しいです",
+          "rationale": "This makes the person who receives the action or attitude its source, which reverses the context."
+        },
+        {
+          "id": "taishite-b",
+          "label": "姉は妹に対していつも優しいです",
+          "rationale": "Context: The younger sister often says harsh things to her older sister, but the older sister always smiles and helps her. Completed sentence: The older sister is always kind to her younger sister. The は-marked person acts or holds the attitude; に対して marks the person it is directed at. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "99c3a7f43e1a2e95fb72c02af58b516ddbb7819096cad68d50061a6926de3cfb",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "よく",
+            "reading": "よく",
+            "headword": "よく",
+            "gloss": "often"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "text": "きつい",
+            "reading": "きつい",
+            "headword": "きつい",
+            "gloss": "harsh"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "こと",
+            "reading": "こと",
+            "headword": "こと",
+            "gloss": "thing (said)"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "言います",
+            "reading": "いいます",
+            "headword": "言う",
+            "gloss": "say"
+          },
+          {
+            "start": 18,
+            "end": 19,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 20,
+            "end": 23,
+            "text": "いつも",
+            "reading": "いつも",
+            "headword": "いつも",
+            "gloss": "always"
+          },
+          {
+            "start": 23,
+            "end": 26,
+            "text": "笑って",
+            "reading": "わらって",
+            "headword": "笑う",
+            "gloss": "smile; connecting form"
+          },
+          {
+            "start": 26,
+            "end": 27,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 28,
+            "end": 33,
+            "text": "手伝います",
+            "reading": "てつだいます",
+            "headword": "手伝う",
+            "gloss": "help"
+          },
+          {
+            "start": 38,
+            "end": 41,
+            "text": "いつも",
+            "reading": "いつも",
+            "headword": "いつも",
+            "gloss": "always"
+          },
+          {
+            "start": 41,
+            "end": 44,
+            "text": "優しい",
+            "reading": "やさしい",
+            "headword": "優しい",
+            "gloss": "kind"
+          },
+          {
+            "start": 63,
+            "end": 64,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-manager-greeting",
+      "jlpt": 3,
+      "target": "kawatte-a",
+      "relationship": "kawatte",
+      "prompt": "部長は出張で会議に出られませんでした。そこで課長が最初のあいさつをしました。\n〔E：あいさつをしました〕〔D：に代わって〕〔C：が〕〔B：部長〕〔A：課長〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach が to one person and に代わって to the OTHER; the report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The department head was away on a business trip and could not attend the meeting, so the section chief gave the opening greeting. Completed sentence: The section chief gave the greeting in place of the department head. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate.",
+      "answer": "kawatte-a",
+      "acceptedAnswers": [
+        "部長に代わって課長があいさつをしました",
+        "課長が部長に代わってあいさつをしました"
+      ],
+      "options": [
+        {
+          "id": "kawatte-a",
+          "label": "部長に代わって課長があいさつをしました",
+          "rationale": "Context: The department head was away on a business trip and could not attend the meeting, so the section chief gave the opening greeting. Completed sentence: The section chief gave the greeting in place of the department head. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "kawatte-b",
+          "label": "課長に代わって部長があいさつをしました",
+          "rationale": "This makes the person who was replaced the one who actually acted, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "cbe74f58f650c0e9b6c431c752aa8de9648a33f9efc44747124ec0a26d976c60",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "部長",
+            "reading": "ぶちょう",
+            "headword": "部長",
+            "gloss": "department head"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "出張",
+            "reading": "しゅっちょう",
+            "headword": "出張",
+            "gloss": "business trip"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "会議",
+            "reading": "かいぎ",
+            "headword": "会議",
+            "gloss": "meeting"
+          },
+          {
+            "start": 9,
+            "end": 18,
+            "text": "出られませんでした",
+            "reading": "でられませんでした",
+            "headword": "出る",
+            "gloss": "could not attend"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "課長",
+            "reading": "かちょう",
+            "headword": "課長",
+            "gloss": "section chief"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "最初",
+            "reading": "さいしょ",
+            "headword": "最初",
+            "gloss": "first"
+          },
+          {
+            "start": 28,
+            "end": 32,
+            "text": "あいさつ",
+            "reading": "あいさつ",
+            "headword": "あいさつ",
+            "gloss": "greeting"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "text": "しました",
+            "reading": "しました",
+            "headword": "する",
+            "gloss": "did"
+          },
+          {
+            "start": 42,
+            "end": 46,
+            "text": "あいさつ",
+            "reading": "あいさつ",
+            "headword": "あいさつ",
+            "gloss": "greeting"
+          },
+          {
+            "start": 47,
+            "end": 51,
+            "text": "しました",
+            "reading": "しました",
+            "headword": "する",
+            "gloss": "did"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "text": "部長",
+            "reading": "ぶちょう",
+            "headword": "部長",
+            "gloss": "department head"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "text": "課長",
+            "reading": "かちょう",
+            "headword": "課長",
+            "gloss": "section chief"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-dinner-turn",
+      "jlpt": 3,
+      "target": "kawatte-b",
+      "relationship": "kawatte",
+      "prompt": "うちではいつも父が夕食を作りますが、今日は父が忙しかったので、母が作りました。\n〔E：夕食を作りました〕〔D：に代わって〕〔C：が〕〔B：母〕〔A：父〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach が to one person and に代わって to the OTHER; the report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: At our home Father always makes dinner, but today he was busy, so Mother made it. Completed sentence: Mother made dinner in place of Father. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate.",
+      "answer": "kawatte-b",
+      "acceptedAnswers": [
+        "父に代わって母が夕食を作りました",
+        "母が父に代わって夕食を作りました"
+      ],
+      "options": [
+        {
+          "id": "kawatte-a",
+          "label": "母に代わって父が夕食を作りました",
+          "rationale": "This makes the person who was replaced the one who actually acted, which reverses the context."
+        },
+        {
+          "id": "kawatte-b",
+          "label": "父に代わって母が夕食を作りました",
+          "rationale": "Context: At our home Father always makes dinner, but today he was busy, so Mother made it. Completed sentence: Mother made dinner in place of Father. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "855ad49575d55e588c9bb5d74d74b83eae6225d4a294c3d3be7c59e7b9440adb",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "うち",
+            "reading": "うち",
+            "headword": "うち",
+            "gloss": "our home"
+          },
+          {
+            "start": 4,
+            "end": 7,
+            "text": "いつも",
+            "reading": "いつも",
+            "headword": "いつも",
+            "gloss": "always"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "father"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "夕食",
+            "reading": "ゆうしょく",
+            "headword": "夕食",
+            "gloss": "dinner"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "作ります",
+            "reading": "つくります",
+            "headword": "作る",
+            "gloss": "make"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 21,
+            "end": 22,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "father"
+          },
+          {
+            "start": 23,
+            "end": 28,
+            "text": "忙しかった",
+            "reading": "いそがしかった",
+            "headword": "忙しい",
+            "gloss": "was busy"
+          },
+          {
+            "start": 31,
+            "end": 32,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 33,
+            "end": 38,
+            "text": "作りました",
+            "reading": "つくりました",
+            "headword": "作る",
+            "gloss": "made"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "text": "夕食",
+            "reading": "ゆうしょく",
+            "headword": "夕食",
+            "gloss": "dinner"
+          },
+          {
+            "start": 46,
+            "end": 51,
+            "text": "作りました",
+            "reading": "つくりました",
+            "headword": "作る",
+            "gloss": "made"
+          },
+          {
+            "start": 69,
+            "end": 70,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 74,
+            "end": 75,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "father"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-teacher-cold",
+      "jlpt": 3,
+      "target": "kawatte-b",
+      "relationship": "kawatte",
+      "prompt": "山田先生がかぜで休んだので、林先生が山田先生のクラスで教えました。\n〔E：授業をしました〕〔D：に代わって〕〔C：が〕〔B：林先生〕〔A：山田先生〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach が to one person and に代わって to the OTHER; the report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: Ms Yamada was off with a cold, so Mr Hayashi taught her class. Completed sentence: Mr Hayashi taught the lesson in place of Ms Yamada. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate.",
+      "answer": "kawatte-b",
+      "acceptedAnswers": [
+        "山田先生に代わって林先生が授業をしました",
+        "林先生が山田先生に代わって授業をしました"
+      ],
+      "options": [
+        {
+          "id": "kawatte-a",
+          "label": "林先生に代わって山田先生が授業をしました",
+          "rationale": "This makes the person who was replaced the one who actually acted, which reverses the context."
+        },
+        {
+          "id": "kawatte-b",
+          "label": "山田先生に代わって林先生が授業をしました",
+          "rationale": "Context: Ms Yamada was off with a cold, so Mr Hayashi taught her class. Completed sentence: Mr Hayashi taught the lesson in place of Ms Yamada. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d13566985a3ef9388c6df95ea18ed30a51e49914d6a029da8de45cfa29dac4af",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "山田",
+            "reading": "やまだ",
+            "headword": "山田",
+            "gloss": "Yamada (family name)"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "かぜ",
+            "reading": "かぜ",
+            "headword": "かぜ",
+            "gloss": "cold (illness)"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "休んだ",
+            "reading": "やすんだ",
+            "headword": "休む",
+            "gloss": "was absent"
+          },
+          {
+            "start": 14,
+            "end": 15,
+            "text": "林",
+            "reading": "はやし",
+            "headword": "林",
+            "gloss": "Hayashi (family name)"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "山田",
+            "reading": "やまだ",
+            "headword": "山田",
+            "gloss": "Yamada (family name)"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 23,
+            "end": 26,
+            "text": "クラス",
+            "reading": "くらす",
+            "headword": "クラス",
+            "gloss": "class"
+          },
+          {
+            "start": 27,
+            "end": 32,
+            "text": "教えました",
+            "reading": "おしえました",
+            "headword": "教える",
+            "gloss": "taught"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "text": "授業",
+            "reading": "じゅぎょう",
+            "headword": "授業",
+            "gloss": "lesson"
+          },
+          {
+            "start": 40,
+            "end": 44,
+            "text": "しました",
+            "reading": "しました",
+            "headword": "する",
+            "gloss": "did"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "林",
+            "reading": "はやし",
+            "headword": "林",
+            "gloss": "Hayashi (family name)"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "text": "山田",
+            "reading": "やまだ",
+            "headword": "山田",
+            "gloss": "Yamada (family name)"
+          },
+          {
+            "start": 71,
+            "end": 73,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-injured-player",
+      "jlpt": 3,
+      "target": "kawatte-a",
+      "relationship": "kawatte",
+      "prompt": "弟が足をけがして、試合に出られなくなりました。それで兄が出ました。\n〔E：試合に出ました〕〔D：に代わって〕〔C：が〕〔B：弟〕〔A：兄〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach が to one person and に代わって to the OTHER; the report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The younger brother hurt his leg and could no longer play in the match, so his older brother played. Completed sentence: The older brother played in the match in place of the younger brother. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate.",
+      "answer": "kawatte-a",
+      "acceptedAnswers": [
+        "弟に代わって兄が試合に出ました",
+        "兄が弟に代わって試合に出ました"
+      ],
+      "options": [
+        {
+          "id": "kawatte-a",
+          "label": "弟に代わって兄が試合に出ました",
+          "rationale": "Context: The younger brother hurt his leg and could no longer play in the match, so his older brother played. Completed sentence: The older brother played in the match in place of the younger brother. に代わって marks the person who would normally act or was unable to; the が-marked person is the substitute who actually acted. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "kawatte-b",
+          "label": "兄に代わって弟が試合に出ました",
+          "rationale": "This makes the person who was replaced the one who actually acted, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d4f348c4207c10166350d683035da1a8795cf825e155aa7a561560af90d30875",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "足",
+            "reading": "あし",
+            "headword": "足",
+            "gloss": "leg; foot"
+          },
+          {
+            "start": 4,
+            "end": 8,
+            "text": "けがして",
+            "reading": "けがして",
+            "headword": "けがする",
+            "gloss": "get hurt; connecting form"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "試合",
+            "reading": "しあい",
+            "headword": "試合",
+            "gloss": "match"
+          },
+          {
+            "start": 12,
+            "end": 17,
+            "text": "出られなく",
+            "reading": "でられなく",
+            "headword": "出る",
+            "gloss": "unable to take part"
+          },
+          {
+            "start": 26,
+            "end": 27,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 28,
+            "end": 32,
+            "text": "出ました",
+            "reading": "でました",
+            "headword": "出る",
+            "gloss": "took part (in)"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "text": "試合",
+            "reading": "しあい",
+            "headword": "試合",
+            "gloss": "match"
+          },
+          {
+            "start": 40,
+            "end": 44,
+            "text": "出ました",
+            "reading": "でました",
+            "headword": "出る",
+            "gloss": "took part (in)"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 67,
+            "end": 68,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-power-cut",
+      "jlpt": 3,
+      "target": "totan-a",
+      "relationship": "totan",
+      "prompt": "夜、急に電気が消えました。すると、すぐに赤ちゃんが泣き出しました。\n〔D：んです〕〔C：とたん〕〔B：赤ちゃんが泣き出した〕〔A：電気が消えた〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put とたん directly after one complete event clause and end with the printed んです chunk after the other clause; the order of events must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: At night the lights suddenly went out. Right after that, the baby started crying. Completed sentence: The moment the lights went out, the baby started crying. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events.",
+      "answer": "totan-a",
+      "acceptedAnswers": [
+        "電気が消えたとたん赤ちゃんが泣き出したんです"
+      ],
+      "options": [
+        {
+          "id": "totan-a",
+          "label": "電気が消えたとたん赤ちゃんが泣き出したんです",
+          "rationale": "Context: At night the lights suddenly went out. Right after that, the baby started crying. Completed sentence: The moment the lights went out, the baby started crying. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events."
+        },
+        {
+          "id": "totan-b",
+          "label": "赤ちゃんが泣き出したとたん電気が消えたんです",
+          "rationale": "This puts the later event before とたん, so it reverses the order of events in the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "881f216a01b1e8db00306655c4d3622eaf7330dab41829ce3ac8da486195b291",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "夜",
+            "reading": "よる",
+            "headword": "夜",
+            "gloss": "night"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "急に",
+            "reading": "きゅうに",
+            "headword": "急に",
+            "gloss": "suddenly"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electricity"
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "text": "消えました",
+            "reading": "きえました",
+            "headword": "消える",
+            "gloss": "went out"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "すぐに",
+            "reading": "すぐに",
+            "headword": "すぐに",
+            "gloss": "at once"
+          },
+          {
+            "start": 20,
+            "end": 24,
+            "text": "赤ちゃん",
+            "reading": "あかちゃん",
+            "headword": "赤ちゃん",
+            "gloss": "baby"
+          },
+          {
+            "start": 25,
+            "end": 32,
+            "text": "泣き出しました",
+            "reading": "なきだしました",
+            "headword": "泣き出す",
+            "gloss": "started crying"
+          },
+          {
+            "start": 51,
+            "end": 55,
+            "text": "赤ちゃん",
+            "reading": "あかちゃん",
+            "headword": "赤ちゃん",
+            "gloss": "baby"
+          },
+          {
+            "start": 56,
+            "end": 61,
+            "text": "泣き出した",
+            "reading": "なきだした",
+            "headword": "泣き出す",
+            "gloss": "started crying"
+          },
+          {
+            "start": 65,
+            "end": 67,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electricity"
+          },
+          {
+            "start": 68,
+            "end": 71,
+            "text": "消えた",
+            "reading": "きえた",
+            "headword": "消える",
+            "gloss": "went out"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-barking-dog",
+      "jlpt": 3,
+      "target": "totan-b",
+      "relationship": "totan",
+      "prompt": "庭で犬が大きな声でほえました。すると、すぐに猫が逃げました。\n〔D：んです〕〔C：とたん〕〔B：犬がほえた〕〔A：猫が逃げた〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put とたん directly after one complete event clause and end with the printed んです chunk after the other clause; the order of events must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: A dog barked loudly in the garden. Right after that, the cat ran away. Completed sentence: The moment the dog barked, the cat ran away. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events.",
+      "answer": "totan-b",
+      "acceptedAnswers": [
+        "犬がほえたとたん猫が逃げたんです"
+      ],
+      "options": [
+        {
+          "id": "totan-a",
+          "label": "猫が逃げたとたん犬がほえたんです",
+          "rationale": "This puts the later event before とたん, so it reverses the order of events in the context."
+        },
+        {
+          "id": "totan-b",
+          "label": "犬がほえたとたん猫が逃げたんです",
+          "rationale": "Context: A dog barked loudly in the garden. Right after that, the cat ran away. Completed sentence: The moment the dog barked, the cat ran away. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7a80fee705c51cf5c646320d12e88fa747aa2599be72521e43689ead40aa0ad2",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "庭",
+            "reading": "にわ",
+            "headword": "庭",
+            "gloss": "garden"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "犬",
+            "reading": "いぬ",
+            "headword": "犬",
+            "gloss": "dog"
+          },
+          {
+            "start": 4,
+            "end": 7,
+            "text": "大きな",
+            "reading": "おおきな",
+            "headword": "大きな",
+            "gloss": "big; loud"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "声",
+            "reading": "こえ",
+            "headword": "声",
+            "gloss": "voice"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "text": "ほえました",
+            "reading": "ほえました",
+            "headword": "ほえる",
+            "gloss": "barked"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "text": "すぐに",
+            "reading": "すぐに",
+            "headword": "すぐに",
+            "gloss": "at once"
+          },
+          {
+            "start": 22,
+            "end": 23,
+            "text": "猫",
+            "reading": "ねこ",
+            "headword": "猫",
+            "gloss": "cat"
+          },
+          {
+            "start": 24,
+            "end": 29,
+            "text": "逃げました",
+            "reading": "にげました",
+            "headword": "逃げる",
+            "gloss": "ran away"
+          },
+          {
+            "start": 48,
+            "end": 49,
+            "text": "犬",
+            "reading": "いぬ",
+            "headword": "犬",
+            "gloss": "dog"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "text": "ほえた",
+            "reading": "ほえた",
+            "headword": "ほえる",
+            "gloss": "barked"
+          },
+          {
+            "start": 57,
+            "end": 58,
+            "text": "猫",
+            "reading": "ねこ",
+            "headword": "猫",
+            "gloss": "cat"
+          },
+          {
+            "start": 59,
+            "end": 62,
+            "text": "逃げた",
+            "reading": "にげた",
+            "headword": "逃げる",
+            "gloss": "ran away"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-rainbow",
+      "jlpt": 3,
+      "target": "totan-a",
+      "relationship": "totan",
+      "prompt": "午後、雨が止みました。そのすぐ後で、空に虹が出ました。\n〔D：んです〕〔C：とたん〕〔B：空に虹が出た〕〔A：雨が止んだ〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put とたん directly after one complete event clause and end with the printed んです chunk after the other clause; the order of events must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: In the afternoon the rain stopped. Immediately after that, a rainbow appeared in the sky. Completed sentence: The moment the rain stopped, a rainbow appeared in the sky. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events.",
+      "answer": "totan-a",
+      "acceptedAnswers": [
+        "雨が止んだとたん空に虹が出たんです"
+      ],
+      "options": [
+        {
+          "id": "totan-a",
+          "label": "雨が止んだとたん空に虹が出たんです",
+          "rationale": "Context: In the afternoon the rain stopped. Immediately after that, a rainbow appeared in the sky. Completed sentence: The moment the rain stopped, a rainbow appeared in the sky. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events."
+        },
+        {
+          "id": "totan-b",
+          "label": "空に虹が出たとたん雨が止んだんです",
+          "rationale": "This puts the later event before とたん, so it reverses the order of events in the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d966fa91baf02abb389e1791ad66a7064a1b58359df23ad05b252c761854f423",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "午後",
+            "reading": "ごご",
+            "headword": "午後",
+            "gloss": "afternoon"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "雨",
+            "reading": "あめ",
+            "headword": "雨",
+            "gloss": "rain"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "text": "止みました",
+            "reading": "やみました",
+            "headword": "止む",
+            "gloss": "stopped"
+          },
+          {
+            "start": 18,
+            "end": 19,
+            "text": "空",
+            "reading": "そら",
+            "headword": "空",
+            "gloss": "sky"
+          },
+          {
+            "start": 20,
+            "end": 21,
+            "text": "虹",
+            "reading": "にじ",
+            "headword": "虹",
+            "gloss": "rainbow"
+          },
+          {
+            "start": 22,
+            "end": 26,
+            "text": "出ました",
+            "reading": "でました",
+            "headword": "出る",
+            "gloss": "appeared"
+          },
+          {
+            "start": 45,
+            "end": 46,
+            "text": "空",
+            "reading": "そら",
+            "headword": "空",
+            "gloss": "sky"
+          },
+          {
+            "start": 47,
+            "end": 48,
+            "text": "虹",
+            "reading": "にじ",
+            "headword": "虹",
+            "gloss": "rainbow"
+          },
+          {
+            "start": 49,
+            "end": 51,
+            "text": "出た",
+            "reading": "でた",
+            "headword": "出る",
+            "gloss": "appeared"
+          },
+          {
+            "start": 55,
+            "end": 56,
+            "text": "雨",
+            "reading": "あめ",
+            "headword": "雨",
+            "gloss": "rain"
+          },
+          {
+            "start": 57,
+            "end": 60,
+            "text": "止んだ",
+            "reading": "やんだ",
+            "headword": "止む",
+            "gloss": "stopped"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-shop-opening",
+      "jlpt": 3,
+      "target": "totan-b",
+      "relationship": "totan",
+      "prompt": "朝十時に店のドアが開きました。すると、すぐに待っていた客が入ってきました。\n〔D：んです〕〔C：とたん〕〔B：店のドアが開いた〕〔A：客が入ってきた〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put とたん directly after one complete event clause and end with the printed んです chunk after the other clause; the order of events must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: At ten in the morning the shop door opened. Right after that, the waiting customers came in. Completed sentence: The moment the shop door opened, the customers came in. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events.",
+      "answer": "totan-b",
+      "acceptedAnswers": [
+        "店のドアが開いたとたん客が入ってきたんです"
+      ],
+      "options": [
+        {
+          "id": "totan-a",
+          "label": "客が入ってきたとたん店のドアが開いたんです",
+          "rationale": "This puts the later event before とたん, so it reverses the order of events in the context."
+        },
+        {
+          "id": "totan-b",
+          "label": "店のドアが開いたとたん客が入ってきたんです",
+          "rationale": "Context: At ten in the morning the shop door opened. Right after that, the waiting customers came in. Completed sentence: The moment the shop door opened, the customers came in. The clause before とたん is the event that happened first; the clause after it happened at that very moment. Because とたん and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated sequence of events."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6860fadd9e9fee7c78dddb8f58052c5d619918c6a7478f98319055699e4e0f1b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "朝",
+            "reading": "あさ",
+            "headword": "朝",
+            "gloss": "morning"
+          },
+          {
+            "start": 1,
+            "end": 3,
+            "text": "十時",
+            "reading": "じゅうじ",
+            "headword": "十時",
+            "gloss": "ten o'clock"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "ドア",
+            "reading": "どあ",
+            "headword": "ドア",
+            "gloss": "door"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "text": "開きました",
+            "reading": "あきました",
+            "headword": "開く",
+            "gloss": "opened"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "text": "すぐに",
+            "reading": "すぐに",
+            "headword": "すぐに",
+            "gloss": "at once"
+          },
+          {
+            "start": 22,
+            "end": 27,
+            "text": "待っていた",
+            "reading": "まっていた",
+            "headword": "待つ",
+            "gloss": "had been waiting"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": "客",
+            "reading": "きゃく",
+            "headword": "客",
+            "gloss": "customer"
+          },
+          {
+            "start": 29,
+            "end": 36,
+            "text": "入ってきました",
+            "reading": "はいってきました",
+            "headword": "入ってくる",
+            "gloss": "came in"
+          },
+          {
+            "start": 55,
+            "end": 56,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 57,
+            "end": 59,
+            "text": "ドア",
+            "reading": "どあ",
+            "headword": "ドア",
+            "gloss": "door"
+          },
+          {
+            "start": 60,
+            "end": 63,
+            "text": "開いた",
+            "reading": "あいた",
+            "headword": "開く",
+            "gloss": "opened"
+          },
+          {
+            "start": 67,
+            "end": 68,
+            "text": "客",
+            "reading": "きゃく",
+            "headword": "客",
+            "gloss": "customer"
+          },
+          {
+            "start": 69,
+            "end": 74,
+            "text": "入ってきた",
+            "reading": "はいってきた",
+            "headword": "入ってくる",
+            "gloss": "came in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-leaving-home",
+      "jlpt": 3,
+      "target": "yoto-a",
+      "relationship": "yoto",
+      "prompt": "兄はくつをはいて、ドアを開けるところでした。そのとき、父が帰ってきました。\n〔D：が帰ってきました〕〔C：が出かけようとしたとき〕〔B：父〕〔A：兄〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Each person chunk needs exactly one following が chunk; end with the printed polite predicate chunk. The report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: My older brother had put on his shoes and was just about to open the door. At that moment, Father came home. Completed sentence: Just as my older brother was about to go out, Father came home. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene.",
+      "answer": "yoto-a",
+      "acceptedAnswers": [
+        "兄が出かけようとしたとき父が帰ってきました"
+      ],
+      "options": [
+        {
+          "id": "yoto-a",
+          "label": "兄が出かけようとしたとき父が帰ってきました",
+          "rationale": "Context: My older brother had put on his shoes and was just about to open the door. At that moment, Father came home. Completed sentence: Just as my older brother was about to go out, Father came home. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene."
+        },
+        {
+          "id": "yoto-b",
+          "label": "父が出かけようとしたとき兄が帰ってきました",
+          "rationale": "This makes the person who interrupted the one who was about to act, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "027ea42d406a81e0108f3ef1080188dd7a8791b213939ead1842e3cef96fcb1d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "くつ",
+            "reading": "くつ",
+            "headword": "くつ",
+            "gloss": "shoes"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "はいて",
+            "reading": "はいて",
+            "headword": "はく",
+            "gloss": "put on (shoes); connecting form"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "ドア",
+            "reading": "どあ",
+            "headword": "ドア",
+            "gloss": "door"
+          },
+          {
+            "start": 12,
+            "end": 15,
+            "text": "開ける",
+            "reading": "あける",
+            "headword": "開ける",
+            "gloss": "open"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "father"
+          },
+          {
+            "start": 29,
+            "end": 36,
+            "text": "帰ってきました",
+            "reading": "かえってきました",
+            "headword": "帰ってくる",
+            "gloss": "came home"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "text": "帰ってきました",
+            "reading": "かえってきました",
+            "headword": "帰ってくる",
+            "gloss": "came home"
+          },
+          {
+            "start": 54,
+            "end": 59,
+            "text": "出かけよう",
+            "reading": "でかけよう",
+            "headword": "出かける",
+            "gloss": "go out (volitional)"
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "father"
+          },
+          {
+            "start": 73,
+            "end": 74,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-bedtime",
+      "jlpt": 3,
+      "target": "yoto-b",
+      "relationship": "yoto",
+      "prompt": "妹は電気を消して、ベッドに入るところでした。そこへ母が部屋に入ってきました。\n〔D：が部屋に入ってきました〕〔C：が寝ようとしたとき〕〔B：妹〕〔A：母〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Each person chunk needs exactly one following が chunk; end with the printed polite predicate chunk. The report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: My younger sister had turned off the light and was just about to get into bed. Then Mother came into the room. Completed sentence: Just as my younger sister was about to go to sleep, Mother came into the room. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene.",
+      "answer": "yoto-b",
+      "acceptedAnswers": [
+        "妹が寝ようとしたとき母が部屋に入ってきました"
+      ],
+      "options": [
+        {
+          "id": "yoto-a",
+          "label": "母が寝ようとしたとき妹が部屋に入ってきました",
+          "rationale": "This makes the person who interrupted the one who was about to act, which reverses the context."
+        },
+        {
+          "id": "yoto-b",
+          "label": "妹が寝ようとしたとき母が部屋に入ってきました",
+          "rationale": "Context: My younger sister had turned off the light and was just about to get into bed. Then Mother came into the room. Completed sentence: Just as my younger sister was about to go to sleep, Mother came into the room. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "14801fad95d51d2a0f1cbc441900a08894883279911ea784f4708d95e42af709",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electricity"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "消して",
+            "reading": "けして",
+            "headword": "消す",
+            "gloss": "turn off; connecting form"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "ベッド",
+            "reading": "べっど",
+            "headword": "ベッド",
+            "gloss": "bed"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "入る",
+            "reading": "はいる",
+            "headword": "入る",
+            "gloss": "get into"
+          },
+          {
+            "start": 25,
+            "end": 26,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 30,
+            "end": 37,
+            "text": "入ってきました",
+            "reading": "はいってきました",
+            "headword": "入ってくる",
+            "gloss": "came in"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 46,
+            "end": 53,
+            "text": "入ってきました",
+            "reading": "はいってきました",
+            "headword": "入ってくる",
+            "gloss": "came in"
+          },
+          {
+            "start": 58,
+            "end": 61,
+            "text": "寝よう",
+            "reading": "ねよう",
+            "headword": "寝る",
+            "gloss": "go to sleep (volitional)"
+          },
+          {
+            "start": 70,
+            "end": 71,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 75,
+            "end": 76,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-train-door",
+      "jlpt": 3,
+      "target": "yoto-b",
+      "relationship": "yoto",
+      "prompt": "田中さんが電車に乗る直前、山本さんが後ろから「田中さん！」と呼びました。\n〔D：が後ろから声をかけました〕〔C：が電車に乗ろうとしたとき〕〔B：田中さん〕〔A：山本さん〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Each person chunk needs exactly one following が chunk; end with the printed polite predicate chunk. The report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: Just before Tanaka got on the train, Yamamoto called 'Tanaka!' from behind. Completed sentence: Just as Tanaka was about to get on the train, Yamamoto called out to him from behind. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene.",
+      "answer": "yoto-b",
+      "acceptedAnswers": [
+        "田中さんが電車に乗ろうとしたとき山本さんが後ろから声をかけました"
+      ],
+      "options": [
+        {
+          "id": "yoto-a",
+          "label": "山本さんが電車に乗ろうとしたとき田中さんが後ろから声をかけました",
+          "rationale": "This makes the person who interrupted the one who was about to act, which reverses the context."
+        },
+        {
+          "id": "yoto-b",
+          "label": "田中さんが電車に乗ろうとしたとき山本さんが後ろから声をかけました",
+          "rationale": "Context: Just before Tanaka got on the train, Yamamoto called 'Tanaka!' from behind. Completed sentence: Just as Tanaka was about to get on the train, Yamamoto called out to him from behind. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "61965dd82a6385288f764333b1e869ea39954c86e7e32e372baba8025ccadb47",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "田中",
+            "reading": "たなか",
+            "headword": "田中",
+            "gloss": "Tanaka (family name)"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "乗る",
+            "reading": "のる",
+            "headword": "乗る",
+            "gloss": "get on"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "直前",
+            "reading": "ちょくぜん",
+            "headword": "直前",
+            "gloss": "just before"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "山本",
+            "reading": "やまもと",
+            "headword": "山本",
+            "gloss": "Yamamoto (family name)"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "後ろ",
+            "reading": "うしろ",
+            "headword": "後ろ",
+            "gloss": "behind"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "田中",
+            "reading": "たなか",
+            "headword": "田中",
+            "gloss": "Tanaka (family name)"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "呼びました",
+            "reading": "よびました",
+            "headword": "呼ぶ",
+            "gloss": "called"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "後ろ",
+            "reading": "うしろ",
+            "headword": "後ろ",
+            "gloss": "behind"
+          },
+          {
+            "start": 45,
+            "end": 52,
+            "text": "声をかけました",
+            "reading": "こえをかけました",
+            "headword": "声をかける",
+            "gloss": "called out to"
+          },
+          {
+            "start": 57,
+            "end": 59,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 60,
+            "end": 63,
+            "text": "乗ろう",
+            "reading": "のろう",
+            "headword": "乗る",
+            "gloss": "get on (volitional)"
+          },
+          {
+            "start": 72,
+            "end": 74,
+            "text": "田中",
+            "reading": "たなか",
+            "headword": "田中",
+            "gloss": "Tanaka (family name)"
+          },
+          {
+            "start": 74,
+            "end": 76,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 80,
+            "end": 82,
+            "text": "山本",
+            "reading": "やまもと",
+            "headword": "山本",
+            "gloss": "Yamamoto (family name)"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-cake-strawberry",
+      "jlpt": 3,
+      "target": "yoto-a",
+      "relationship": "yoto",
+      "prompt": "姉はナイフを持って、ケーキを切るところでした。そのとき、弟がいちごを一つ取って食べました。\n〔D：がいちごを一つ食べました〕〔C：がケーキを切ろうとしたとき〕〔B：弟〕〔A：姉〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a report that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Each person chunk needs exactly one following が chunk; end with the printed polite predicate chunk. The report must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: My older sister had picked up a knife and was just about to cut the cake. At that moment, my younger brother took a strawberry and ate it. Completed sentence: Just as my older sister was about to cut the cake, my younger brother ate a strawberry. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene.",
+      "answer": "yoto-a",
+      "acceptedAnswers": [
+        "姉がケーキを切ろうとしたとき弟がいちごを一つ食べました"
+      ],
+      "options": [
+        {
+          "id": "yoto-a",
+          "label": "姉がケーキを切ろうとしたとき弟がいちごを一つ食べました",
+          "rationale": "Context: My older sister had picked up a knife and was just about to cut the cake. At that moment, my younger brother took a strawberry and ate it. Completed sentence: Just as my older sister was about to cut the cake, my younger brother ate a strawberry. The person before が…ようとしたとき was just about to act; the person before the final が chunk did something at that moment. Because each person chunk must be directly followed by one が chunk, there are only two grammatical orders, and only this one matches the stated scene."
+        },
+        {
+          "id": "yoto-b",
+          "label": "弟がケーキを切ろうとしたとき姉がいちごを一つ食べました",
+          "rationale": "This makes the person who interrupted the one who was about to act, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "79636d52485934399043ee785b2a257fc6ad75c1156aebdce3cb368ea7b5ba12",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 2,
+            "end": 5,
+            "text": "ナイフ",
+            "reading": "ないふ",
+            "headword": "ナイフ",
+            "gloss": "knife"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "text": "持って",
+            "reading": "もって",
+            "headword": "持つ",
+            "gloss": "holding"
+          },
+          {
+            "start": 10,
+            "end": 13,
+            "text": "ケーキ",
+            "reading": "けーき",
+            "headword": "ケーキ",
+            "gloss": "cake"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "切る",
+            "reading": "きる",
+            "headword": "切る",
+            "gloss": "cut"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 30,
+            "end": 33,
+            "text": "いちご",
+            "reading": "いちご",
+            "headword": "いちご",
+            "gloss": "strawberry"
+          },
+          {
+            "start": 34,
+            "end": 36,
+            "text": "一つ",
+            "reading": "ひとつ",
+            "headword": "一つ",
+            "gloss": "one (item)"
+          },
+          {
+            "start": 36,
+            "end": 39,
+            "text": "取って",
+            "reading": "とって",
+            "headword": "取る",
+            "gloss": "take; connecting form"
+          },
+          {
+            "start": 39,
+            "end": 44,
+            "text": "食べました",
+            "reading": "たべました",
+            "headword": "食べる",
+            "gloss": "ate"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "text": "いちご",
+            "reading": "いちご",
+            "headword": "いちご",
+            "gloss": "strawberry"
+          },
+          {
+            "start": 54,
+            "end": 56,
+            "text": "一つ",
+            "reading": "ひとつ",
+            "headword": "一つ",
+            "gloss": "one (item)"
+          },
+          {
+            "start": 56,
+            "end": 61,
+            "text": "食べました",
+            "reading": "たべました",
+            "headword": "食べる",
+            "gloss": "ate"
+          },
+          {
+            "start": 66,
+            "end": 69,
+            "text": "ケーキ",
+            "reading": "けーき",
+            "headword": "ケーキ",
+            "gloss": "cake"
+          },
+          {
+            "start": 70,
+            "end": 73,
+            "text": "切ろう",
+            "reading": "きろう",
+            "headword": "切る",
+            "gloss": "cut (volitional)"
+          },
+          {
+            "start": 82,
+            "end": 83,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 87,
+            "end": 88,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-station-ride",
+      "jlpt": 3,
+      "target": "okage-a",
+      "relationship": "okage",
+      "prompt": "寝坊した妹を、兄が車で駅まで送りました。\n〔E：電車に間に合いました〕〔D：は〕〔C：のおかげで〕〔B：妹〕〔A：兄〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach のおかげで to one person and は to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: The younger sister overslept, and her older brother drove her to the station. Completed sentence: Thanks to her older brother, the younger sister made it in time for the train. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate.",
+      "answer": "okage-a",
+      "acceptedAnswers": [
+        "兄のおかげで妹は電車に間に合いました",
+        "妹は兄のおかげで電車に間に合いました"
+      ],
+      "options": [
+        {
+          "id": "okage-a",
+          "label": "兄のおかげで妹は電車に間に合いました",
+          "rationale": "Context: The younger sister overslept, and her older brother drove her to the station. Completed sentence: Thanks to her older brother, the younger sister made it in time for the train. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "okage-b",
+          "label": "妹のおかげで兄は電車に間に合いました",
+          "rationale": "This credits the person who received the help and gives the good result to the helper, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e32db7ba19022f6603b39b1e06ca56896f8c1d16e2414adbfaa04e5425b99e12",
+        "spans": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "寝坊した",
+            "reading": "ねぼうした",
+            "headword": "寝坊する",
+            "gloss": "overslept"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "車",
+            "reading": "くるま",
+            "headword": "車",
+            "gloss": "car"
+          },
+          {
+            "start": 11,
+            "end": 12,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 14,
+            "end": 19,
+            "text": "送りました",
+            "reading": "おくりました",
+            "headword": "送る",
+            "gloss": "took (someone somewhere)"
+          },
+          {
+            "start": 24,
+            "end": 34,
+            "text": "電車に間に合いました",
+            "reading": "でんしゃにまにあいました",
+            "headword": "間に合う",
+            "gloss": "was in time for the train"
+          },
+          {
+            "start": 52,
+            "end": 53,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 57,
+            "end": 58,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-new-colleague",
+      "jlpt": 3,
+      "target": "okage-b",
+      "relationship": "okage",
+      "prompt": "新人の山田さんに、木村さんが仕事を一つずつ丁寧に教えました。\n〔E：仕事を覚えられました〕〔D：は〕〔C：のおかげで〕〔B：木村さん〕〔A：山田さん〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach のおかげで to one person and は to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: Kimura carefully taught the newcomer Yamada the work one task at a time. Completed sentence: Thanks to Kimura, Yamada was able to learn the work. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate.",
+      "answer": "okage-b",
+      "acceptedAnswers": [
+        "木村さんのおかげで山田さんは仕事を覚えられました",
+        "山田さんは木村さんのおかげで仕事を覚えられました"
+      ],
+      "options": [
+        {
+          "id": "okage-a",
+          "label": "山田さんのおかげで木村さんは仕事を覚えられました",
+          "rationale": "This credits the person who received the help and gives the good result to the helper, which reverses the context."
+        },
+        {
+          "id": "okage-b",
+          "label": "木村さんのおかげで山田さんは仕事を覚えられました",
+          "rationale": "Context: Kimura carefully taught the newcomer Yamada the work one task at a time. Completed sentence: Thanks to Kimura, Yamada was able to learn the work. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d04e2e9ea8d9b35e4dde8585d0f3327fdfeeaa08ccb8a5dfdab007493c2c048f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "新人",
+            "reading": "しんじん",
+            "headword": "新人",
+            "gloss": "newcomer"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "山田",
+            "reading": "やまだ",
+            "headword": "山田",
+            "gloss": "Yamada (family name)"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "木村",
+            "reading": "きむら",
+            "headword": "木村",
+            "gloss": "Kimura (family name)"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "仕事",
+            "reading": "しごと",
+            "headword": "仕事",
+            "gloss": "work"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "一つ",
+            "reading": "ひとつ",
+            "headword": "一つ",
+            "gloss": "one (item)"
+          },
+          {
+            "start": 21,
+            "end": 24,
+            "text": "丁寧に",
+            "reading": "ていねいに",
+            "headword": "丁寧",
+            "gloss": "politely; carefully"
+          },
+          {
+            "start": 24,
+            "end": 29,
+            "text": "教えました",
+            "reading": "おしえました",
+            "headword": "教える",
+            "gloss": "taught"
+          },
+          {
+            "start": 34,
+            "end": 36,
+            "text": "仕事",
+            "reading": "しごと",
+            "headword": "仕事",
+            "gloss": "work"
+          },
+          {
+            "start": 37,
+            "end": 44,
+            "text": "覚えられました",
+            "reading": "おぼえられました",
+            "headword": "覚える",
+            "gloss": "was able to learn"
+          },
+          {
+            "start": 62,
+            "end": 64,
+            "text": "木村",
+            "reading": "きむら",
+            "headword": "木村",
+            "gloss": "Kimura (family name)"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          },
+          {
+            "start": 70,
+            "end": 72,
+            "text": "山田",
+            "reading": "やまだ",
+            "headword": "山田",
+            "gloss": "Yamada (family name)"
+          },
+          {
+            "start": 72,
+            "end": 74,
+            "text": "さん",
+            "reading": "さん",
+            "headword": "さん",
+            "gloss": "Mr/Ms"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-lost-wallet",
+      "jlpt": 3,
+      "target": "okage-b",
+      "relationship": "okage",
+      "prompt": "弟が財布をなくしました。友達が一緒に探して、公園で見つけてくれました。\n〔E：財布が見つかりました〕〔D：は〕〔C：のおかげで〕〔B：友達〕〔A：弟〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach のおかげで to one person and は to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: My younger brother lost his wallet. His friend searched with him and found it in the park. Completed sentence: Thanks to his friend, my younger brother got his wallet back. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate.",
+      "answer": "okage-b",
+      "acceptedAnswers": [
+        "友達のおかげで弟は財布が見つかりました",
+        "弟は友達のおかげで財布が見つかりました"
+      ],
+      "options": [
+        {
+          "id": "okage-a",
+          "label": "弟のおかげで友達は財布が見つかりました",
+          "rationale": "This credits the person who received the help and gives the good result to the helper, which reverses the context."
+        },
+        {
+          "id": "okage-b",
+          "label": "友達のおかげで弟は財布が見つかりました",
+          "rationale": "Context: My younger brother lost his wallet. His friend searched with him and found it in the park. Completed sentence: Thanks to his friend, my younger brother got his wallet back. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "232867a8f34ee7d06366da418809bbb9bfc3a2d5599e7e7334ae512e1f1c9b66",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "財布",
+            "reading": "さいふ",
+            "headword": "財布",
+            "gloss": "wallet"
+          },
+          {
+            "start": 5,
+            "end": 11,
+            "text": "なくしました",
+            "reading": "なくしました",
+            "headword": "なくす",
+            "gloss": "lost"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "text": "一緒に",
+            "reading": "いっしょに",
+            "headword": "一緒に",
+            "gloss": "together"
+          },
+          {
+            "start": 18,
+            "end": 21,
+            "text": "探して",
+            "reading": "さがして",
+            "headword": "探す",
+            "gloss": "search; connecting form"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "公園",
+            "reading": "こうえん",
+            "headword": "公園",
+            "gloss": "park"
+          },
+          {
+            "start": 25,
+            "end": 34,
+            "text": "見つけてくれました",
+            "reading": "みつけてくれました",
+            "headword": "見つけてくれる",
+            "gloss": "found (for him)"
+          },
+          {
+            "start": 39,
+            "end": 41,
+            "text": "財布",
+            "reading": "さいふ",
+            "headword": "財布",
+            "gloss": "wallet"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "text": "見つかりました",
+            "reading": "みつかりました",
+            "headword": "見つかる",
+            "gloss": "was found"
+          },
+          {
+            "start": 67,
+            "end": 69,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 73,
+            "end": 74,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-bedtime-stories",
+      "jlpt": 3,
+      "target": "okage-a",
+      "relationship": "okage",
+      "prompt": "子どものころ、祖母は毎晩私に本を読んでくれました。\n〔E：本が好きになりました〕〔D：は〕〔C：のおかげで〕〔B：私〕〔A：祖母〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. End with the printed polite predicate. Attach のおかげで to one person and は to the OTHER; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: When I was a child, my grandmother read books to me every night. Completed sentence: Thanks to my grandmother, I came to like books. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate.",
+      "answer": "okage-a",
+      "acceptedAnswers": [
+        "祖母のおかげで私は本が好きになりました",
+        "私は祖母のおかげで本が好きになりました"
+      ],
+      "options": [
+        {
+          "id": "okage-a",
+          "label": "祖母のおかげで私は本が好きになりました",
+          "rationale": "Context: When I was a child, my grandmother read books to me every night. Completed sentence: Thanks to my grandmother, I came to like books. のおかげで credits the person who helped; the は-marked person is the one who got the good result. The two noun phrases may come in either order before the predicate."
+        },
+        {
+          "id": "okage-b",
+          "label": "私のおかげで祖母は本が好きになりました",
+          "rationale": "This credits the person who received the help and gives the good result to the helper, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "45d880ab302174c862d95488fc950a5c70ba1ee44fde9d827d50ee4e1016699c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "子ども",
+            "reading": "こども",
+            "headword": "子ども",
+            "gloss": "child"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "ころ",
+            "reading": "ころ",
+            "headword": "ころ",
+            "gloss": "time; days"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "grandmother"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "毎晩",
+            "reading": "まいばん",
+            "headword": "毎晩",
+            "gloss": "every night"
+          },
+          {
+            "start": 12,
+            "end": 13,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 14,
+            "end": 15,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 16,
+            "end": 24,
+            "text": "読んでくれました",
+            "reading": "よんでくれました",
+            "headword": "読んでくれる",
+            "gloss": "read (for me)"
+          },
+          {
+            "start": 29,
+            "end": 30,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 31,
+            "end": 33,
+            "text": "好き",
+            "reading": "すき",
+            "headword": "好き",
+            "gloss": "liked"
+          },
+          {
+            "start": 57,
+            "end": 58,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 62,
+            "end": 64,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "grandmother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-study-abroad",
+      "jlpt": 3,
+      "target": "tame-a",
+      "relationship": "tame",
+      "prompt": "来年カナダに留学したいです。でもお金が足りないので、夏休みにアルバイトをします。\n〔D：つもりです〕〔C：ために〕〔B：夏休みにアルバイトをする〕〔A：カナダに留学する〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement of intention that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put ために directly after one action clause and end with the printed final chunk after the other clause; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: I want to study in Canada next year. But I do not have enough money, so I will work part-time in the summer holidays. Completed sentence: I intend to work part-time in the summer holidays in order to study in Canada. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal.",
+      "answer": "tame-a",
+      "acceptedAnswers": [
+        "カナダに留学するために夏休みにアルバイトをするつもりです"
+      ],
+      "options": [
+        {
+          "id": "tame-a",
+          "label": "カナダに留学するために夏休みにアルバイトをするつもりです",
+          "rationale": "Context: I want to study in Canada next year. But I do not have enough money, so I will work part-time in the summer holidays. Completed sentence: I intend to work part-time in the summer holidays in order to study in Canada. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal."
+        },
+        {
+          "id": "tame-b",
+          "label": "夏休みにアルバイトをするためにカナダに留学するつもりです",
+          "rationale": "This turns the step into the goal and the goal into the step, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "df997873ae1606c9a6110b5c33b87f8c1ac1548755129bd373a8a87c13dbd291",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "来年",
+            "reading": "らいねん",
+            "headword": "来年",
+            "gloss": "next year"
+          },
+          {
+            "start": 2,
+            "end": 5,
+            "text": "カナダ",
+            "reading": "かなだ",
+            "headword": "カナダ",
+            "gloss": "Canada"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": "留学したい",
+            "reading": "りゅうがくしたい",
+            "headword": "留学する",
+            "gloss": "want to study abroad"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "お金",
+            "reading": "おかね",
+            "headword": "お金",
+            "gloss": "money"
+          },
+          {
+            "start": 19,
+            "end": 23,
+            "text": "足りない",
+            "reading": "たりない",
+            "headword": "足りる",
+            "gloss": "not enough"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "text": "夏休み",
+            "reading": "なつやすみ",
+            "headword": "夏休み",
+            "gloss": "summer holidays"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "アルバイト",
+            "reading": "あるばいと",
+            "headword": "アルバイト",
+            "gloss": "part-time job"
+          },
+          {
+            "start": 36,
+            "end": 39,
+            "text": "します",
+            "reading": "します",
+            "headword": "する",
+            "gloss": "do"
+          },
+          {
+            "start": 60,
+            "end": 63,
+            "text": "夏休み",
+            "reading": "なつやすみ",
+            "headword": "夏休み",
+            "gloss": "summer holidays"
+          },
+          {
+            "start": 64,
+            "end": 69,
+            "text": "アルバイト",
+            "reading": "あるばいと",
+            "headword": "アルバイト",
+            "gloss": "part-time job"
+          },
+          {
+            "start": 70,
+            "end": 72,
+            "text": "する",
+            "reading": "する",
+            "headword": "する",
+            "gloss": "do"
+          },
+          {
+            "start": 76,
+            "end": 79,
+            "text": "カナダ",
+            "reading": "かなだ",
+            "headword": "カナダ",
+            "gloss": "Canada"
+          },
+          {
+            "start": 80,
+            "end": 84,
+            "text": "留学する",
+            "reading": "りゅうがくする",
+            "headword": "留学する",
+            "gloss": "study abroad"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-marathon",
+      "jlpt": 3,
+      "target": "tame-b",
+      "relationship": "tame",
+      "prompt": "来月のマラソン大会に出たいです。それで、毎朝走ると決めました。\n〔D：ことにしました〕〔C：ために〕〔B：マラソン大会に出る〕〔A：毎朝走る〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement of intention that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put ために directly after one action clause and end with the printed final chunk after the other clause; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: I want to take part in next month's marathon, so I have decided to run every morning. Completed sentence: I have decided to run every morning in order to take part in the marathon. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal.",
+      "answer": "tame-b",
+      "acceptedAnswers": [
+        "マラソン大会に出るために毎朝走ることにしました"
+      ],
+      "options": [
+        {
+          "id": "tame-a",
+          "label": "毎朝走るためにマラソン大会に出ることにしました",
+          "rationale": "This turns the step into the goal and the goal into the step, which reverses the context."
+        },
+        {
+          "id": "tame-b",
+          "label": "マラソン大会に出るために毎朝走ることにしました",
+          "rationale": "Context: I want to take part in next month's marathon, so I have decided to run every morning. Completed sentence: I have decided to run every morning in order to take part in the marathon. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "451d41a4e9c66744fde40d4e38dab2438fd09646e966ee01094940efdb9eee9f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "来月",
+            "reading": "らいげつ",
+            "headword": "来月",
+            "gloss": "next month"
+          },
+          {
+            "start": 3,
+            "end": 9,
+            "text": "マラソン大会",
+            "reading": "まらそんたいかい",
+            "headword": "マラソン大会",
+            "gloss": "marathon race"
+          },
+          {
+            "start": 10,
+            "end": 13,
+            "text": "出たい",
+            "reading": "でたい",
+            "headword": "出る",
+            "gloss": "want to take part"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "毎朝",
+            "reading": "まいあさ",
+            "headword": "毎朝",
+            "gloss": "every morning"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "走る",
+            "reading": "はしる",
+            "headword": "走る",
+            "gloss": "run"
+          },
+          {
+            "start": 25,
+            "end": 30,
+            "text": "決めました",
+            "reading": "きめました",
+            "headword": "決める",
+            "gloss": "decided"
+          },
+          {
+            "start": 53,
+            "end": 59,
+            "text": "マラソン大会",
+            "reading": "まらそんたいかい",
+            "headword": "マラソン大会",
+            "gloss": "marathon race"
+          },
+          {
+            "start": 60,
+            "end": 62,
+            "text": "出る",
+            "reading": "でる",
+            "headword": "出る",
+            "gloss": "take part"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "毎朝",
+            "reading": "まいあさ",
+            "headword": "毎朝",
+            "gloss": "every morning"
+          },
+          {
+            "start": 68,
+            "end": 70,
+            "text": "走る",
+            "reading": "はしる",
+            "headword": "走る",
+            "gloss": "run"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-commute",
+      "jlpt": 3,
+      "target": "tame-b",
+      "relationship": "tame",
+      "prompt": "通勤に毎日二時間かかります。この時間を短くしたいので、会社の近くに引っ越すと決めました。\n〔D：ことにしました〕〔C：ために〕〔B：通勤の時間を短くする〕〔A：会社の近くに引っ越す〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement of intention that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put ために directly after one action clause and end with the printed final chunk after the other clause; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: My commute takes two hours every day. I want to shorten it, so I have decided to move near the office. Completed sentence: I have decided to move near the office in order to shorten my commute. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal.",
+      "answer": "tame-b",
+      "acceptedAnswers": [
+        "通勤の時間を短くするために会社の近くに引っ越すことにしました"
+      ],
+      "options": [
+        {
+          "id": "tame-a",
+          "label": "会社の近くに引っ越すために通勤の時間を短くすることにしました",
+          "rationale": "This turns the step into the goal and the goal into the step, which reverses the context."
+        },
+        {
+          "id": "tame-b",
+          "label": "通勤の時間を短くするために会社の近くに引っ越すことにしました",
+          "rationale": "Context: My commute takes two hours every day. I want to shorten it, so I have decided to move near the office. Completed sentence: I have decided to move near the office in order to shorten my commute. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "2e1a0b74a822a15ada6f384f4d7b097e4e7c66d06ffb2712447214e1277b4ebf",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "通勤",
+            "reading": "つうきん",
+            "headword": "通勤",
+            "gloss": "commuting"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "毎日",
+            "reading": "まいにち",
+            "headword": "毎日",
+            "gloss": "every day"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "二時間",
+            "reading": "にじかん",
+            "headword": "二時間",
+            "gloss": "two hours"
+          },
+          {
+            "start": 8,
+            "end": 13,
+            "text": "かかります",
+            "reading": "かかります",
+            "headword": "かかる",
+            "gloss": "takes (time)"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "時間",
+            "reading": "じかん",
+            "headword": "時間",
+            "gloss": "time"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "短く",
+            "reading": "みじかく",
+            "headword": "短い",
+            "gloss": "short"
+          },
+          {
+            "start": 21,
+            "end": 24,
+            "text": "したい",
+            "reading": "したい",
+            "headword": "する",
+            "gloss": "want to make"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "会社",
+            "reading": "かいしゃ",
+            "headword": "会社",
+            "gloss": "office; company"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "近く",
+            "reading": "ちかく",
+            "headword": "近く",
+            "gloss": "nearby"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "text": "引っ越す",
+            "reading": "ひっこす",
+            "headword": "引っ越す",
+            "gloss": "move house"
+          },
+          {
+            "start": 38,
+            "end": 43,
+            "text": "決めました",
+            "reading": "きめました",
+            "headword": "決める",
+            "gloss": "decided"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "通勤",
+            "reading": "つうきん",
+            "headword": "通勤",
+            "gloss": "commuting"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "text": "時間",
+            "reading": "じかん",
+            "headword": "時間",
+            "gloss": "time"
+          },
+          {
+            "start": 72,
+            "end": 74,
+            "text": "短く",
+            "reading": "みじかく",
+            "headword": "短い",
+            "gloss": "short"
+          },
+          {
+            "start": 74,
+            "end": 76,
+            "text": "する",
+            "reading": "する",
+            "headword": "する",
+            "gloss": "do"
+          },
+          {
+            "start": 80,
+            "end": 82,
+            "text": "会社",
+            "reading": "かいしゃ",
+            "headword": "会社",
+            "gloss": "office; company"
+          },
+          {
+            "start": 83,
+            "end": 85,
+            "text": "近く",
+            "reading": "ちかく",
+            "headword": "近く",
+            "gloss": "nearby"
+          },
+          {
+            "start": 86,
+            "end": 90,
+            "text": "引っ越す",
+            "reading": "ひっこす",
+            "headword": "引っ越す",
+            "gloss": "move house"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-family-visit",
+      "jlpt": 3,
+      "target": "tame-a",
+      "relationship": "tame",
+      "prompt": "国の家族にしばらく会っていません。会いたいので、冬休みに国へ帰ります。\n〔D：つもりです〕〔C：ために〕〔B：冬休みに国へ帰る〕〔A：家族に会う〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form a statement of intention that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put ために directly after one action clause and end with the printed final chunk after the other clause; the statement must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: I have not seen my family back home for a while. I want to see them, so I will go home in the winter holidays. Completed sentence: I intend to go home in the winter holidays in order to see my family. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal.",
+      "answer": "tame-a",
+      "acceptedAnswers": [
+        "家族に会うために冬休みに国へ帰るつもりです"
+      ],
+      "options": [
+        {
+          "id": "tame-a",
+          "label": "家族に会うために冬休みに国へ帰るつもりです",
+          "rationale": "Context: I have not seen my family back home for a while. I want to see them, so I will go home in the winter holidays. Completed sentence: I intend to go home in the winter holidays in order to see my family. The clause before ために is the goal; the clause after it is the step taken to reach it. Because ために and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated goal."
+        },
+        {
+          "id": "tame-b",
+          "label": "冬休みに国へ帰るために家族に会うつもりです",
+          "rationale": "This turns the step into the goal and the goal into the step, which reverses the context."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9e67a9277710985c8c254524cbb44a842102bf6d211ed8da3f82e356f3c655fa",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "国",
+            "reading": "くに",
+            "headword": "国",
+            "gloss": "home country"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "家族",
+            "reading": "かぞく",
+            "headword": "家族",
+            "gloss": "family"
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "text": "しばらく",
+            "reading": "しばらく",
+            "headword": "しばらく",
+            "gloss": "for a while"
+          },
+          {
+            "start": 9,
+            "end": 16,
+            "text": "会っていません",
+            "reading": "あっていません",
+            "headword": "会う",
+            "gloss": "have not seen"
+          },
+          {
+            "start": 17,
+            "end": 21,
+            "text": "会いたい",
+            "reading": "あいたい",
+            "headword": "会う",
+            "gloss": "want to see"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "text": "冬休み",
+            "reading": "ふゆやすみ",
+            "headword": "冬休み",
+            "gloss": "winter holidays"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": "国",
+            "reading": "くに",
+            "headword": "国",
+            "gloss": "home country"
+          },
+          {
+            "start": 30,
+            "end": 34,
+            "text": "帰ります",
+            "reading": "かえります",
+            "headword": "帰る",
+            "gloss": "go home"
+          },
+          {
+            "start": 55,
+            "end": 58,
+            "text": "冬休み",
+            "reading": "ふゆやすみ",
+            "headword": "冬休み",
+            "gloss": "winter holidays"
+          },
+          {
+            "start": 59,
+            "end": 60,
+            "text": "国",
+            "reading": "くに",
+            "headword": "国",
+            "gloss": "home country"
+          },
+          {
+            "start": 61,
+            "end": 63,
+            "text": "帰る",
+            "reading": "かえる",
+            "headword": "帰る",
+            "gloss": "go home"
+          },
+          {
+            "start": 67,
+            "end": 69,
+            "text": "家族",
+            "reading": "かぞく",
+            "headword": "家族",
+            "gloss": "family"
+          },
+          {
+            "start": 70,
+            "end": 72,
+            "text": "会う",
+            "reading": "あう",
+            "headword": "会う",
+            "gloss": "see; meet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-grandmother-song",
+      "jlpt": 3,
+      "target": "tabi-a",
+      "relationship": "tabi",
+      "prompt": "この歌は祖母がよく歌っていた歌です。聞くと、いつも祖母を思い出します。この歌を聞かずに祖母を思い出すこともあります。\n〔D：んです〕〔C：たびに〕〔B：祖母を思い出す〕〔A：この歌を聞く〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put たびに directly after one action clause and end with the printed んです chunk after the other clause; the explanation must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: This is a song my grandmother often used to sing. Whenever I hear it, I remember her. I also sometimes remember her without hearing this song. Completed sentence: Every time I hear this song, I remember my grandmother. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit.",
+      "answer": "tabi-a",
+      "acceptedAnswers": [
+        "この歌を聞くたびに祖母を思い出すんです"
+      ],
+      "options": [
+        {
+          "id": "tabi-a",
+          "label": "この歌を聞くたびに祖母を思い出すんです",
+          "rationale": "Context: This is a song my grandmother often used to sing. Whenever I hear it, I remember her. I also sometimes remember her without hearing this song. Completed sentence: Every time I hear this song, I remember my grandmother. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit."
+        },
+        {
+          "id": "tabi-b",
+          "label": "祖母を思い出すたびにこの歌を聞くんです",
+          "rationale": "This claims that I hear this song every time I remember my grandmother, but the context says I sometimes remember her without hearing it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ad13cafdcf3bb782ebe3ba333ea579313d768b627e53faea01c45524fb6326aa",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "歌",
+            "reading": "うた",
+            "headword": "歌",
+            "gloss": "song"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "grandmother"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "よく",
+            "reading": "よく",
+            "headword": "よく",
+            "gloss": "often"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "text": "歌っていた",
+            "reading": "うたっていた",
+            "headword": "歌う",
+            "gloss": "used to sing"
+          },
+          {
+            "start": 14,
+            "end": 15,
+            "text": "歌",
+            "reading": "うた",
+            "headword": "歌",
+            "gloss": "song"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "聞く",
+            "reading": "きく",
+            "headword": "聞く",
+            "gloss": "hear; listen"
+          },
+          {
+            "start": 22,
+            "end": 25,
+            "text": "いつも",
+            "reading": "いつも",
+            "headword": "いつも",
+            "gloss": "always"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "grandmother"
+          },
+          {
+            "start": 28,
+            "end": 34,
+            "text": "思い出します",
+            "reading": "おもいだします",
+            "headword": "思い出す",
+            "gloss": "remember"
+          },
+          {
+            "start": 35,
+            "end": 37,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 37,
+            "end": 38,
+            "text": "歌",
+            "reading": "うた",
+            "headword": "歌",
+            "gloss": "song"
+          },
+          {
+            "start": 39,
+            "end": 43,
+            "text": "聞かずに",
+            "reading": "きかずに",
+            "headword": "聞く",
+            "gloss": "without hearing"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "grandmother"
+          },
+          {
+            "start": 46,
+            "end": 50,
+            "text": "思い出す",
+            "reading": "おもいだす",
+            "headword": "思い出す",
+            "gloss": "remember"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "grandmother"
+          },
+          {
+            "start": 79,
+            "end": 83,
+            "text": "思い出す",
+            "reading": "おもいだす",
+            "headword": "思い出す",
+            "gloss": "remember"
+          },
+          {
+            "start": 87,
+            "end": 89,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 89,
+            "end": 90,
+            "text": "歌",
+            "reading": "うた",
+            "headword": "歌",
+            "gloss": "song"
+          },
+          {
+            "start": 91,
+            "end": 93,
+            "text": "聞く",
+            "reading": "きく",
+            "headword": "聞く",
+            "gloss": "hear; listen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-travel-photos",
+      "jlpt": 3,
+      "target": "tabi-b",
+      "relationship": "tabi",
+      "prompt": "私は旅行が好きです。旅行では、いつも写真をたくさん撮ります。旅行以外でも写真をたくさん撮ります。\n〔D：んです〕〔C：たびに〕〔B：旅行に行く〕〔A：写真をたくさん撮る〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put たびに directly after one action clause and end with the printed んです chunk after the other clause; the explanation must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: I like travelling. When I travel, I always take a lot of photos. I take a lot of photos when I am not travelling, too. Completed sentence: Every time I go on a trip, I take a lot of photos. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit.",
+      "answer": "tabi-b",
+      "acceptedAnswers": [
+        "旅行に行くたびに写真をたくさん撮るんです"
+      ],
+      "options": [
+        {
+          "id": "tabi-a",
+          "label": "写真をたくさん撮るたびに旅行に行くんです",
+          "rationale": "This claims that I go on a trip every time I take a lot of photos, but the context says I also take a lot of photos when I am not travelling."
+        },
+        {
+          "id": "tabi-b",
+          "label": "旅行に行くたびに写真をたくさん撮るんです",
+          "rationale": "Context: I like travelling. When I travel, I always take a lot of photos. I take a lot of photos when I am not travelling, too. Completed sentence: Every time I go on a trip, I take a lot of photos. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "eefc37100a7114bc49bb80141a9a24f5d651090947736a8704dc850a4d5a1cc2",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "旅行",
+            "reading": "りょこう",
+            "headword": "旅行",
+            "gloss": "travel; trip"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "好き",
+            "reading": "すき",
+            "headword": "好き",
+            "gloss": "liked"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "旅行",
+            "reading": "りょこう",
+            "headword": "旅行",
+            "gloss": "travel; trip"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "text": "いつも",
+            "reading": "いつも",
+            "headword": "いつも",
+            "gloss": "always"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photo"
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "text": "たくさん",
+            "reading": "たくさん",
+            "headword": "たくさん",
+            "gloss": "a lot"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "text": "撮ります",
+            "reading": "とります",
+            "headword": "撮る",
+            "gloss": "take (photos)"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "旅行",
+            "reading": "りょこう",
+            "headword": "旅行",
+            "gloss": "travel; trip"
+          },
+          {
+            "start": 32,
+            "end": 34,
+            "text": "以外",
+            "reading": "いがい",
+            "headword": "以外",
+            "gloss": "other than"
+          },
+          {
+            "start": 36,
+            "end": 38,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photo"
+          },
+          {
+            "start": 39,
+            "end": 43,
+            "text": "たくさん",
+            "reading": "たくさん",
+            "headword": "たくさん",
+            "gloss": "a lot"
+          },
+          {
+            "start": 43,
+            "end": 47,
+            "text": "撮ります",
+            "reading": "とります",
+            "headword": "撮る",
+            "gloss": "take (photos)"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "旅行",
+            "reading": "りょこう",
+            "headword": "旅行",
+            "gloss": "travel; trip"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "text": "行く",
+            "reading": "いく",
+            "headword": "行く",
+            "gloss": "go"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photo"
+          },
+          {
+            "start": 78,
+            "end": 82,
+            "text": "たくさん",
+            "reading": "たくさん",
+            "headword": "たくさん",
+            "gloss": "a lot"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "text": "撮る",
+            "reading": "とる",
+            "headword": "撮る",
+            "gloss": "take (photos)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-confusing-station",
+      "jlpt": 3,
+      "target": "tabi-b",
+      "relationship": "tabi",
+      "prompt": "あの駅は出口が多いので、使うといつも道に迷います。ほかの町でもよく道に迷います。\n〔D：んです〕〔C：たびに〕〔B：あの駅を使う〕〔A：道に迷う〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put たびに directly after one action clause and end with the printed んです chunk after the other clause; the explanation must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: That station has many exits, so whenever I use it I get lost. I often get lost in other towns, too. Completed sentence: Every time I use that station, I get lost. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit.",
+      "answer": "tabi-b",
+      "acceptedAnswers": [
+        "あの駅を使うたびに道に迷うんです"
+      ],
+      "options": [
+        {
+          "id": "tabi-a",
+          "label": "道に迷うたびにあの駅を使うんです",
+          "rationale": "This claims that I use that station every time I get lost, but the context says I often get lost in other towns too."
+        },
+        {
+          "id": "tabi-b",
+          "label": "あの駅を使うたびに道に迷うんです",
+          "rationale": "Context: That station has many exits, so whenever I use it I get lost. I often get lost in other towns, too. Completed sentence: Every time I use that station, I get lost. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8eb676ebe07e2856dae40c8920d865cd8ea0ec0beeb9b7bf81d12d67dddc5667",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "あの",
+            "reading": "あの",
+            "headword": "あの",
+            "gloss": "that"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "出口",
+            "reading": "でぐち",
+            "headword": "出口",
+            "gloss": "exit"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "多い",
+            "reading": "おおい",
+            "headword": "多い",
+            "gloss": "many"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "使う",
+            "reading": "つかう",
+            "headword": "使う",
+            "gloss": "use"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "text": "いつも",
+            "reading": "いつも",
+            "headword": "いつも",
+            "gloss": "always"
+          },
+          {
+            "start": 18,
+            "end": 19,
+            "text": "道",
+            "reading": "みち",
+            "headword": "道",
+            "gloss": "way; road"
+          },
+          {
+            "start": 20,
+            "end": 24,
+            "text": "迷います",
+            "reading": "まよいます",
+            "headword": "迷う",
+            "gloss": "get lost"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "text": "ほかの",
+            "reading": "ほかの",
+            "headword": "ほか",
+            "gloss": "other"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 31,
+            "end": 33,
+            "text": "よく",
+            "reading": "よく",
+            "headword": "よく",
+            "gloss": "often"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "text": "道",
+            "reading": "みち",
+            "headword": "道",
+            "gloss": "way; road"
+          },
+          {
+            "start": 35,
+            "end": 39,
+            "text": "迷います",
+            "reading": "まよいます",
+            "headword": "迷う",
+            "gloss": "get lost"
+          },
+          {
+            "start": 58,
+            "end": 60,
+            "text": "あの",
+            "reading": "あの",
+            "headword": "あの",
+            "gloss": "that"
+          },
+          {
+            "start": 60,
+            "end": 61,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 62,
+            "end": 64,
+            "text": "使う",
+            "reading": "つかう",
+            "headword": "使う",
+            "gloss": "use"
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "text": "道",
+            "reading": "みち",
+            "headword": "道",
+            "gloss": "way; road"
+          },
+          {
+            "start": 70,
+            "end": 72,
+            "text": "迷う",
+            "reading": "まよう",
+            "headword": "迷う",
+            "gloss": "get lost"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sentence-composition-intermediate-mother-calls",
+      "jlpt": 3,
+      "target": "tabi-a",
+      "relationship": "tabi",
+      "prompt": "母に電話すると、母は毎回「野菜を食べなさい」と言います。父に同じことを言われても、母には電話しません。\n〔D：んです〕〔C：たびに〕〔B：野菜を食べるように言われる〕〔A：母に電話する〕\n____。",
+      "translation": "Use every labeled chunk exactly once to form an explanation that fits the Japanese context. Keep each chunk's spelling and internal order. Enter the WHOLE sentence without labels, spaces or punctuation; the final 。 is already outside the blank. Put たびに directly after one action clause and end with the printed んです chunk after the other clause; the explanation must agree with the context.",
+      "evidence": "Use the complete supplied context and the marked roles of the chunks, not an unstated fact.",
+      "explanation": "Context: Whenever I phone my mother, she says 'Eat your vegetables' every time. Even when my father tells me the same thing, I don't call my mother. Completed sentence: Every time I phone my mother, I am told to eat vegetables. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit.",
+      "answer": "tabi-a",
+      "acceptedAnswers": [
+        "母に電話するたびに野菜を食べるように言われるんです"
+      ],
+      "options": [
+        {
+          "id": "tabi-a",
+          "label": "母に電話するたびに野菜を食べるように言われるんです",
+          "rationale": "Context: Whenever I phone my mother, she says 'Eat your vegetables' every time. Even when my father tells me the same thing, I don't call my mother. Completed sentence: Every time I phone my mother, I am told to eat vegetables. The clause before たびに is the repeated occasion; the clause after it is what happens on each such occasion. Because たびに and the final chunk each attach to one clause, there are only two grammatical orders, and only this one matches the stated habit."
+        },
+        {
+          "id": "tabi-b",
+          "label": "野菜を食べるように言われるたびに母に電話するんです",
+          "rationale": "This claims that I phone my mother every time I am told to eat vegetables, but the context says that even when my father tells me the same thing, I don't call my mother."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3f8a31db3ef7160950abd1773e70e72955fdcb805ef5235d46edfdc43f35f926",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 2,
+            "end": 6,
+            "text": "電話する",
+            "reading": "でんわする",
+            "headword": "電話する",
+            "gloss": "phone"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "毎回",
+            "reading": "まいかい",
+            "headword": "毎回",
+            "gloss": "every time"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "食べ",
+            "reading": "たべ",
+            "headword": "食べる",
+            "gloss": "eat"
+          },
+          {
+            "start": 23,
+            "end": 27,
+            "text": "言います",
+            "reading": "いいます",
+            "headword": "言う",
+            "gloss": "say"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "father"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "同じ",
+            "reading": "おなじ",
+            "headword": "同じ",
+            "gloss": "same"
+          },
+          {
+            "start": 32,
+            "end": 34,
+            "text": "こと",
+            "reading": "こと",
+            "headword": "こと",
+            "gloss": "thing (said)"
+          },
+          {
+            "start": 35,
+            "end": 40,
+            "text": "言われても",
+            "reading": "いわれても",
+            "headword": "言う",
+            "gloss": "even when told"
+          },
+          {
+            "start": 41,
+            "end": 42,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 44,
+            "end": 50,
+            "text": "電話しません",
+            "reading": "でんわしません",
+            "headword": "電話する",
+            "gloss": "don't phone"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          },
+          {
+            "start": 72,
+            "end": 75,
+            "text": "食べる",
+            "reading": "たべる",
+            "headword": "食べる",
+            "gloss": "eat"
+          },
+          {
+            "start": 78,
+            "end": 82,
+            "text": "言われる",
+            "reading": "いわれる",
+            "headword": "言う",
+            "gloss": "be told"
+          },
+          {
+            "start": 86,
+            "end": 87,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "mother"
+          },
+          {
+            "start": 88,
+            "end": 92,
+            "text": "電話する",
+            "reading": "でんわする",
+            "headword": "電話する",
+            "gloss": "phone"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "sentence-composition-intermediate-kurabete",
+      "label": "Ordering a に比べて comparison",
+      "facets": [
+        {
+          "id": "kurabete-a",
+          "label": "Chunk A is the item described with は"
+        },
+        {
+          "id": "kurabete-b",
+          "label": "Chunk B is the item described with は"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-station-distance",
+          "facetId": "kurabete-a",
+          "exampleKey": "composition-int-station-distance"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-apple-prices",
+          "facetId": "kurabete-b",
+          "exampleKey": "composition-int-apple-prices"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-summer-heat",
+          "facetId": "kurabete-a",
+          "exampleKey": "composition-int-summer-heat"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-brothers-height",
+          "facetId": "kurabete-b",
+          "exampleKey": "composition-int-brothers-height"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-nitotte",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-nitotte",
+      "label": "Ordering an にとって viewpoint frame",
+      "facets": [
+        {
+          "id": "nitotte-a",
+          "label": "Chunk A takes にとって as the person whose standpoint counts"
+        },
+        {
+          "id": "nitotte-b",
+          "label": "Chunk B takes にとって as the person whose standpoint counts"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-daughter-letters",
+          "facetId": "nitotte-a",
+          "exampleKey": "composition-int-daughter-letters"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-senior-explanation",
+          "facetId": "nitotte-b",
+          "exampleKey": "composition-int-senior-explanation"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-grandchild-smile",
+          "facetId": "nitotte-b",
+          "exampleKey": "composition-int-grandchild-smile"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-sister-cooking",
+          "facetId": "nitotte-a",
+          "exampleKey": "composition-int-sister-cooking"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-taishite",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-taishite",
+      "label": "Ordering an に対して target phrase",
+      "facets": [
+        {
+          "id": "taishite-a",
+          "label": "Chunk A is the は-marked person who acts or holds the attitude"
+        },
+        {
+          "id": "taishite-b",
+          "label": "Chunk B is the は-marked person who acts or holds the attitude"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-angry-customer",
+          "facetId": "taishite-a",
+          "exampleKey": "composition-int-angry-customer"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-school-rules",
+          "facetId": "taishite-b",
+          "exampleKey": "composition-int-school-rules"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-son-lie",
+          "facetId": "taishite-a",
+          "exampleKey": "composition-int-son-lie"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-kind-sister",
+          "facetId": "taishite-b",
+          "exampleKey": "composition-int-kind-sister"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-kawatte",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-kawatte",
+      "label": "Ordering an に代わって substitution",
+      "facets": [
+        {
+          "id": "kawatte-a",
+          "label": "Chunk A is the が-marked substitute"
+        },
+        {
+          "id": "kawatte-b",
+          "label": "Chunk B is the が-marked substitute"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-manager-greeting",
+          "facetId": "kawatte-a",
+          "exampleKey": "composition-int-manager-greeting"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-dinner-turn",
+          "facetId": "kawatte-b",
+          "exampleKey": "composition-int-dinner-turn"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-teacher-cold",
+          "facetId": "kawatte-b",
+          "exampleKey": "composition-int-teacher-cold"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-injured-player",
+          "facetId": "kawatte-a",
+          "exampleKey": "composition-int-injured-player"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-totan",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-totan",
+      "label": "Ordering events around たとたん",
+      "facets": [
+        {
+          "id": "totan-a",
+          "label": "Chunk A is the first event, before とたん"
+        },
+        {
+          "id": "totan-b",
+          "label": "Chunk B is the first event, before とたん"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-power-cut",
+          "facetId": "totan-a",
+          "exampleKey": "composition-int-power-cut"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-barking-dog",
+          "facetId": "totan-b",
+          "exampleKey": "composition-int-barking-dog"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-rainbow",
+          "facetId": "totan-a",
+          "exampleKey": "composition-int-rainbow"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-shop-opening",
+          "facetId": "totan-b",
+          "exampleKey": "composition-int-shop-opening"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-yoto",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-yoto",
+      "label": "Ordering a ようとしたとき interruption",
+      "facets": [
+        {
+          "id": "yoto-a",
+          "label": "Chunk A is the person who was about to act"
+        },
+        {
+          "id": "yoto-b",
+          "label": "Chunk B is the person who was about to act"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-leaving-home",
+          "facetId": "yoto-a",
+          "exampleKey": "composition-int-leaving-home"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-bedtime",
+          "facetId": "yoto-b",
+          "exampleKey": "composition-int-bedtime"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-train-door",
+          "facetId": "yoto-b",
+          "exampleKey": "composition-int-train-door"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-cake-strawberry",
+          "facetId": "yoto-a",
+          "exampleKey": "composition-int-cake-strawberry"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-okage",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-okage",
+      "label": "Ordering a のおかげで credit phrase",
+      "facets": [
+        {
+          "id": "okage-a",
+          "label": "Chunk A is the person credited with のおかげで"
+        },
+        {
+          "id": "okage-b",
+          "label": "Chunk B is the person credited with のおかげで"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-station-ride",
+          "facetId": "okage-a",
+          "exampleKey": "composition-int-station-ride"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-new-colleague",
+          "facetId": "okage-b",
+          "exampleKey": "composition-int-new-colleague"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-lost-wallet",
+          "facetId": "okage-b",
+          "exampleKey": "composition-int-lost-wallet"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-bedtime-stories",
+          "facetId": "okage-a",
+          "exampleKey": "composition-int-bedtime-stories"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-tame",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-tame",
+      "label": "Ordering a purpose ために sentence",
+      "facets": [
+        {
+          "id": "tame-a",
+          "label": "Chunk A is the purpose, before ために"
+        },
+        {
+          "id": "tame-b",
+          "label": "Chunk B is the purpose, before ために"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-study-abroad",
+          "facetId": "tame-a",
+          "exampleKey": "composition-int-study-abroad"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-marathon",
+          "facetId": "tame-b",
+          "exampleKey": "composition-int-marathon"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-commute",
+          "facetId": "tame-b",
+          "exampleKey": "composition-int-commute"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-family-visit",
+          "facetId": "tame-a",
+          "exampleKey": "composition-int-family-visit"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "sentence-composition-intermediate-tabi",
+          "importance": 1,
+          "reason": "Continue ordering practice with another N3 pattern."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "sentence-composition-intermediate-tabi",
+      "label": "Ordering a たびに repeated-occasion sentence",
+      "facets": [
+        {
+          "id": "tabi-a",
+          "label": "Chunk A is the repeated occasion, before たびに"
+        },
+        {
+          "id": "tabi-b",
+          "label": "Chunk B is the repeated occasion, before たびに"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "sentence-composition-intermediate-grandmother-song",
+          "facetId": "tabi-a",
+          "exampleKey": "composition-int-grandmother-song"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-travel-photos",
+          "facetId": "tabi-b",
+          "exampleKey": "composition-int-travel-photos"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-confusing-station",
+          "facetId": "tabi-b",
+          "exampleKey": "composition-int-confusing-station"
+        },
+        {
+          "exerciseId": "sentence-composition-intermediate-mother-calls",
+          "facetId": "tabi-a",
+          "exampleKey": "composition-int-mother-calls"
+        }
+      ],
+      "next": [],
+      "requires": []
+    }
+  ]
+}

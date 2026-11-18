@@ -1,0 +1,71 @@
+{
+  "run": "N1-B119-GPT-001",
+  "candidate": "8a30e1729c270f025c186ff71d41f1153a276bfa",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-119\\initial-gpt-001.md",
+    "sha256": "3b42172760e7dea49c1d93fa2efb1b1f125c826465ddebfa5b57634eae68adcd"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-GPT-001-final.json",
+    "sha256": "989da751ca78b02012703b093e74aee8a2cf15b8cd5865b0a7207e3d6dd55c55"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-119\\review\\N1-B119-GPT-001-evidence-check.json",
+    "sha256": "bde123b916cd88b33403c7d3b2f5ad57e3df8501ec160fbc24f8a5bad1f1e989",
+    "mechanicalCitationIssues": 0,
+    "comparisonRows": 41
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "The complete pinned English record gives 妥 gentle and peace, while Daijisen explicitly defines a matter becoming settled. The actual displayed 優 gentle, 寧 peaceful, 定 settle, 済 settle and 了 settling labels overlap those independently sourced senses. All five direct pairs are absent at both endpoints. This conclusion is supported by the actual labels and target senses, not by transitivity through an existing guard.",
+      "fix": "Append 優, 寧, 定, 済 and 了 to 妥's exclusions, preserving its original nine and legitimate meanings. Keep the calm-versus-kindness qualification for 優; this is a conservative label safeguard rather than universal lexical equivalence."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted-with-bounded-semantic-qualification",
+      "basis": "Daijisen gives 循 following a fixed rule and going around. 則 displays following a model, 準 conformity, 応 compliance, and 転 turning. The full opened 応 article treats acting in line with a call or demand separately from answering, consent and suitability. 転 explicitly teaches turning as well as rolling or changes of situation. The broad follow and turn labels can therefore be defended from the supplied target senses. The Spanish target glosses are corroboration, not substituted English metadata. None of these four direct pairs exists.",
+      "fix": "Append 則, 準, 応 and 転 to 循's exclusions. Explain the particular rule/compliance and going-around overlaps without equating every response with obedience or every turn with a complete cycle. Retain the existing six guards and the separately accepted 倣 guard.",
+      "scope": "A bounded direct-pair safeguard; no reproduced arbitrary-pool collision or native runtime acceptance is claimed."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted",
+      "basis": "The rubric asks for named components even when history is unverified. The two current mnemonics identify only upper strokes and layered strokes. The supplied complete KanjiVG group derivative identifies a top variant of 爪 above 女 in 妥, and 盾 on the right of 彳 in 循. Naming these modern shapes fixes the concrete omission without treating KanjiVG phon attributes as verified historical phonetics.",
+      "fix": "Name 妥's 爪-shaped upper component and 循's 盾-shaped right component in the existing mnemonic sentences. Preserve their explicit not-etymology qualification, structure-unclassified tags, radical metadata and generated strokes. Prefer the ordinary 爪 character plus a shape-variant explanation over introducing the standalone radical code point solely for this fix; if new component code points are introduced, perform the established font-coverage check."
+    }
+  ],
+  "evidenceLimitDispositions": [
+    {
+      "id": "L1",
+      "disposition": "valid-review-packet-limitation-no-misclassification-established",
+      "basis": "The coordinator checked control/inputs/n1-kanji-source-20261102.json directly: SHA-256 889faaefbec573e806f298766d2eee1300674c7b229bd973a35169cd2652cd73, 1232 members, including 妥 and 循. The candidate's committed source-index rows are 225 and 345 respectively, both pending at freeze. The modern endpoint is a list of members, not per-character level objects. Modern membership follows that named community list and the repository policy, not historical KANJIDIC2 jlpt=1.",
+      "fix": "Supply the unchanged raw member-list bytes, their provenance and the exact two committed source-index rows in the neutral confirmation evidence. Retain the original report's UNVERIFIED verdict and label the later source inspection as reconciliation evidence; do not rewrite the initial report or alter either card's JLPT."
+    },
+    {
+      "id": "L2",
+      "disposition": "open-bounded-evidence-questions",
+      "pairs": {
+        "妥": ["凪", "治", "柔", "軟", "快", "満", "合", "整", "決"],
+        "循": ["律", "規", "法", "倣", "復", "再", "丸", "円", "通", "流", "続", "経", "巻"]
+      },
+      "fix": "Disposition each listed pair using complete applicable pinned character records, actual comparison cards and complete word families where the argument depends on a word. 決 and 倣 already have separately accepted guards; retain their evidence. Assess both prompt directions. Shared topics do not automatically warrant exclusions, and different titles or current curated choices do not alone prove harmlessness. Resolve consequential uncertainty before closure."
+    },
+    {
+      "id": "L3-L5",
+      "disposition": "preserve-limits-and-targeted-follow-up",
+      "basis": "The unread E endpoints remain a limit of this initial reviewer; preserve existing guards. The newly noticed 妥/応 suitability lead is shared with Claude F4, not unique to that formal finding label. The literary 妥/円 lead is not an established ordinary-sense collision. L4's unread screening leads are not confirmed defects and do not authorize a new corpus-wide review.",
+      "fix": "Include the relevant original comparison cards and pinned records supporting retained explanatory notes. Give 妥/円 a bounded evidence-based disposition, retaining its literary/ordinary distinction. Reconcile Claude's separate 収 and 番 questions as well. Do not manufacture new word articles or optional compounds."
+    },
+    {
+      "id": "L6-L12",
+      "disposition": "preserved-acceptance-limits",
+      "basis": "No fresh raw-SVG geometry, native client, phone, full reading-holder or exact published archive acceptance is established by the initial review. Legacy aggregate Weblio gloss discrepancies are not silently merged into pinned metadata. Archive verification belongs to the publication gate, and whole-set acceptance remains outstanding."
+    }
+  ],
+  "reviewLimits": "Accepted as bounded independent NEEDS FIX evidence only. The execution audit records GPT-family output, all 15 core plus 9 extension reads, one write/readback, no fetches, no breaches or unexpected user messages, idle completion, and context/structure PASS. CRLF-normalized report-write equality is explicitly preserved. The raw report remains unchanged.",
+  "next": "Original-author reconciliation on the frozen candidate, then serial bounded confirmations by the original reviewers. No publication before consequential findings and evidence questions are resolved.",
+  "publicationAccepted": false
+}

@@ -1,0 +1,100 @@
+--- step_b131_neutral_006.py
++++ step_b131_neutral_007.py
+@@ -3,11 +3,11 @@
+ Derived from step.py: an optional frozen prompts preflight selects a clean-path attempt, and child checkers
+ always run with UTF-8 stdout.
+ 
+-  python -B step_b131_neutral_006.py <batch> <claude|gpt> admit <get_sessions_status.json> [preflight]
+-  python -B step_b131_neutral_006.py <batch> <claude|gpt> launch <session-id> [preflight]
+-  python -B step_b131_neutral_006.py <batch> <claude|gpt> phase1 <session-id> [preflight]
+-  python -B step_b131_neutral_006.py <batch> <claude|gpt> final <session-id> [preflight]
+-  python -B step_b131_neutral_006.py <batch> <claude|gpt> accept <adjudication.json> [preflight]
++  python -B step_b131_neutral_007.py <batch> <gpt> admit <get_sessions_status.json> [preflight]
++  python -B step_b131_neutral_007.py <batch> <gpt> launch <session-id> [preflight]
++  python -B step_b131_neutral_007.py <batch> <gpt> phase1 <session-id> [preflight]
++  python -B step_b131_neutral_007.py <batch> <gpt> final <session-id> [preflight]
++  python -B step_b131_neutral_007.py <batch> <gpt> accept <adjudication.json> [preflight]
+ """
+ import datetime
+ import json
+@@ -17,7 +17,7 @@
+ import sys
+ from pathlib import Path
+ 
+-from b131_review_v3_common import (COORDINATOR, GUARD, TOOLS, WS, freeze_json, frozen, load_batch, load_module, packet_dir, require,
++from b131_review_v4_common import (COORDINATOR, GUARD, TOOLS, WS, freeze_json, frozen, load_batch, load_module, packet_dir, require,
+                     review_dir, sha, write_frozen)
+ 
+ sys.path.insert(0, str(WS / "lean"))
+@@ -35,8 +35,8 @@
+     return {"path": str(path), "sha256": sha(data)}
+ 
+ 
+-from b131_lifecycle_process_005 import python
+-from b131_review_admission_003 import observe
++from b131_lifecycle_process_006 import python
++from b131_review_admission_004 import observe
+ 
+ 
+ def audit(records, config_path, session, *extra):
+@@ -56,21 +56,23 @@
+ def main(batch, key, action, argument, preflight=None):
+     config = load_batch(batch)
+     records = review_dir(batch)
+-    preflight_path = Path(preflight) if preflight else records / "prompts" / "preflight-compact-003.json"
++    preflight_path = Path(preflight) if preflight else records / "prompts" / "preflight-compact-004.json"
+     require(preflight_path.parent == records / "prompts", "Preflight must be a frozen prompts record")
+     preflight = json.loads(frozen(preflight_path))
++    require(key == "gpt", "Fresh004 is GPT-only; accepted Claude003 is retained")
+     spec = preflight["runs"][key]
+     if action in ('admit', 'launch', 'phase1'):
+-        from b131_preflight_003 import validate_report_destination
++        from b131_preflight_004 import validate_report_destination
+         validate_report_destination(spec)
+     run = spec["run"]
+     config_path = Path(spec["auditConfig"])
+     audit_config = json.loads(frozen(config_path))
+     for item in audit_config["files"]:
+         frozen(Path(item["path"]), item["sha256"])
+-    from b131_review_v3_common import FORECAST
+-    from b131_capacity_002 import load_forecast
++    from b131_review_v4_common import FORECAST
++    from b131_capacity_003 import load_forecast, validate_capacity_config
+     load_forecast()
++    validate_capacity_config(audit_config)
+     require(audit_config['capacityForecastSha256'] == sha(frozen(FORECAST)),
+             'Forecast binding changed')
+     report = Path(spec["report"])
+@@ -79,14 +81,11 @@
+     record = {"run": run, "batch": config["batch"], "candidate": config["candidate"], "createdAt": now(),
+               "preflightSha256": sha(preflight_path.read_bytes()),
+               "preflight": str(preflight_path),
+-              "tool": {"path": str(TOOLS / "step_b131_neutral_006.py"), "sha256": sha((TOOLS / "step_b131_neutral_006.py").read_bytes())}}
++              "tool": {"path": str(TOOLS / "step_b131_neutral_007.py"), "sha256": sha((TOOLS / "step_b131_neutral_007.py").read_bytes())}}
+ 
+     if action == "admit":
+-        order = preflight["order"]
+-        for earlier in order[:order.index(key)]:
+-            prior = json.loads(frozen(records / f"{preflight['runs'][earlier]['run']}-acceptance.json"))
+-            require(prior["reviewAccepted"] is True and prior["candidate"] == config["candidate"],
+-                    f"Earlier {earlier} run not accepted")
++        from b131_preflight_004 import verify_protocol
++        verify_protocol(preflight)
+         record = observe(argument, config, spec, record)
+         out = records / f"{run}-admission.json"
+ 
+@@ -125,12 +124,12 @@
+         ready = result["status"] == "PHASE1_READY" and not result["breaches"] and ctx["status"] == "PASS"
+         out = records / f"{run}-phase1.json"
+         if ready:
+-            code, stdout, stderr = python(TOOLS / "prepare_chain_b131_003.py", config["batch"], "--run", run,
++            code, stdout, stderr = python(TOOLS / "prepare_chain_b131_004.py", config["batch"], "--run", run,
+                                           "--reply", path.parent / "phase1-list.txt", "--phase1-audit", path)
+             record["extensionPreparation"] = {"exitCode": code, "stdout": stdout[-3000:], "stderr": stderr[-3000:]}
+             ready = code == 0
+             if ready:
+-                from b131_runtime_003 import validate_prepared_extension
++                from b131_runtime_004 import validate_prepared_extension
+                 check = validate_prepared_extension(audit_config,
+                     json.loads(frozen(extension)), result['messages'][0],
+                     frozen(phase2).decode('utf-8'), path)

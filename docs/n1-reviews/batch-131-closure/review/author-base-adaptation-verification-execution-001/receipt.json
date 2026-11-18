@@ -1,0 +1,32 @@
+{
+  "started": "2026-11-16T16:27:56.966548+00:00",
+  "finished": "2026-11-16T16:27:57.488498+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json,sys\nfrom pathlib import Path,PurePosixPath\nsys.path.insert(0,r'C:\\Users\\stop-\\n1-kanji-workspace\\review-tools')\nfrom common import WS,freeze_json,frozen,require,sha,start_guard,write_frozen\nfrom verify_b130_sources import Git\nhere=WS/'scratch-131'/'review'\nrepo=WS/'b131-worktree'\nsource=repo/'docs'/'n1-sources'/'batch-131'/'base-adaptation.json'\nraw=source.read_bytes(); data=json.loads(raw)\nold='6da1184b82b60553f9b65c57f53289c779f96f7c'; new='cb0f5581bdda84f7e673225c19126c85e242e57b'\nproof=json.loads(frozen(here/'incoming-main-verification-001.json','0448941d3d420612eb6bc07a1c677a15c06ee72e0786d4d9e3eb1c5dcf578f3e'))\nrequire(data['originalSourceBase']==old and data['candidateBase']==new and data['method']=='ordinary git merge --ff-only','Adaptation identity differs')\nrequire(data['coordinatorProofSha256']=='0448941d3d420612eb6bc07a1c677a15c06ee72e0786d4d9e3eb1c5dcf578f3e' and data['coordinatorAddendumSha256']=='f88e6d83a997a7a608359f84b7e95b20521095173aa8640a1221dc21db0d53a0','Adaptation inputs differ')\nrequire(set(data['incomingPaths'])==set(proof['addedPaths']+proof['modifiedPaths']) and not set(data['incomingPaths']) & set(data['localTrackedPathsBefore']),'Incoming and author paths overlap')\nguard,_=start_guard('B131 explicit author baseline adaptation observation')\nrunner={'path':str(here/'guarded-test-v3.py'),'sha256':'da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b'}\ngit=Git(repo,runner,guard)\ntry:\n    require(git('rev-parse','HEAD').decode().strip()==new,'Author HEAD differs from adapted baseline')\n    before=git('ls-tree','-rz','--full-tree',old,'--','kanji')\n    after=git('ls-tree','-rz','--full-tree',new,'--','kanji')\n    require(before==after and len([entry for entry in before.split(b'\\0') if entry])==1254,'Complete baseline kanji tree differs')\n    prefix=repo/'docs'/'n1-sources'/'batch-131'\n    for name,digest in data['originalScans'].items():\n        path=prefix.joinpath(*PurePosixPath(name).parts).resolve()\n        require(path.is_relative_to(prefix.resolve()),'Scan escapes its prefix')\n        require(sha(path.read_bytes())==digest,'Original scan bytes changed: '+name)\n        guard.check()\n    comparison_prefix='docs/n1-sources/batch-131/comparison-cards/'\n    comparisons={path:digest for path,digest in data['localPathHashesPreserved'].items() if path.startswith(comparison_prefix)}\n    require(comparisons,'Missing exact comparison copies')\n    names=list(comparisons)\n    objects=git.objects([new+':kanji/'+PurePosixPath(path).name for path in names])\n    for path,(_,blob) in zip(names,objects):\n        local=repo.joinpath(*PurePosixPath(path).parts).resolve()\n        require(local.is_relative_to((prefix/'comparison-cards').resolve()),'Comparison escapes its prefix')\n        require(local.read_bytes()==blob and sha(blob)==comparisons[path],'Comparison binding differs: '+path)\n        guard.check()\n    require(data['baselineManifestSha256']==proof['manifestSha256'] and data['baselineContentVersion']==proof['contentVersion'],'New manifest binding differs')\n    require(source.read_bytes()==raw and git('rev-parse','HEAD').decode().strip()==new,'Observation changed during reading')\n    captured=write_frozen(here/'author-base-adaptation-observed-001.json',raw)\nfinally:\n    memory=guard.finish()\nrequire(not memory['breach'],'Adaptation observation RAM breach')\nprint(json.dumps(freeze_json(here/'author-base-adaptation-verification-001.json',{'status':'PASS_EXPLICIT_BASE_BINDING_OBSERVATION_ONLY','originalBase':old,'observedAuthorBase':new,'authorRecord':captured,'baselineKanjiEntries':1254,'baselineKanjiTreesEqual':True,'preservedOriginalScans':len(data['originalScans']),'exactComparisonCopiesAtNewBase':len(comparisons),'authorReportedLocalFilesPreserved':len(data['localPathHashesPreserved']),'incomingAndAuthorTrackedPathsDisjoint':True,'memory':memory,'limits':'Read-only observation during active authoring. No signing or clean candidate asserted. All215 pre/post local-file hashes were recorded by the author, not independently sampled at the earlier fast-forward instant. Current runtime draft content, source completeness, scans semantic coverage and final gates remain unaccepted.'})))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b131-worktree",
+  "exitCode": 0,
+  "childPid": 8980,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "cleanupScope": "Immediate child PID only; not descendant-process acceptance.",
+  "cleanupError": null,
+  "logSha256": "4ed4c07ae42a561fdd9d5196ef8f9ff3e73175ccb738c3bf6b5b2aaa84f08d6c",
+  "memory": {
+    "freeRamBeforeBytes": 4614770688,
+    "freeRamAfterBytes": 4599742464,
+    "minimumObservedFreeRamBytes": 4581949440,
+    "peakWorkingSetBytes": 23384064,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "da78564efadb90ac4c174dbf13e375327b611bc5e0fc77913c8b85c22c1aaf6b",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:47:07.859165+00:00",
+  "finished": "2026-11-16T01:47:08.035890+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import hashlib, json, stat, subprocess\nfrom pathlib import Path\nroot = Path(r'C:\\Users\\stop-\\n1-kanji-workspace')\nreview = root / 'scratch-126' / 'review'\npins = {\n 'N1-B126-CLAUDE-001-acceptance.json': 'cab7357d0bf6f26daa800304e06758e609289fc03216a70ae0214858ce524061',\n 'N1-B126-CLAUDE-001-adjudication.json': 'bcada2db6d586058506db59bd0b1d2e3bcf918ca0144e3bfb5e99be39b7a0c68',\n 'N1-B126-GPT-001-launch.json': 'c9da79d0495848240f23dcc424d46872bfffa23ce4d9128e4aa2ebc01596816f',\n 'N1-B126-GPT-001-phase2-message.txt': '6c65d9e7fbea2a299efac7f7274fffdc832e3a7dda86a3f6a85ce3c2e09d40a0',\n 'N1-B126-GPT-001-extension.json': 'd5bd7d32ee8a01d53e5fb0622865ce743bc89957a22832027a5ced705b71c883',\n}\nchecked = {}\ndef check(path, digest):\n actual = hashlib.sha256(path.read_bytes()).hexdigest()\n assert actual == digest, (str(path), actual)\n assert not path.stat().st_mode & stat.S_IWRITE, str(path)\n checked[str(path)] = actual\nfor name, digest in pins.items(): check(review / name, digest)\na = json.loads((review / 'N1-B126-CLAUDE-001-acceptance.json').read_text('utf-8'))\nassert a['reviewAccepted'] and a['verdict'] == 'CLEAN' and a['acceptedFindings'] == []\nassert a['candidate'] == '246a1319ef30414d73e4518b52ae99c1d700c57e'\nfor key in ('report', 'final', 'adjudication'):\n check(Path(a[key]['path']), a[key]['sha256'])\nf = json.loads(Path(a['final']['path']).read_text('utf-8'))\nassert f['status'] == 'MECHANICAL_PASS_REQUIRES_SUBSTANTIVE_ADJUDICATION' and not f['problems']\nfor key in ('finalAudit', 'context', 'structure', 'evidenceCheck'):\n check(Path(f[key]['path']), f[key]['sha256'])\np = json.loads((review / 'N1-B126-GPT-001-phase1.json').read_text('utf-8'))\nassert p['status'] == 'PHASE1_READY' and p['readyForPhase2'] and not p['breaches']\nassert p['session'] == '655acc5f-64c3-4842-813e-7be830558e3e'\nassert p['actualResponseModels'] == ['gpt-6.1-sol'] and p['context']['status'] == 'PASS'\nfor name, key in [('audit.json','auditSha256'),('events.jsonl','eventsSha256'),('phase1-list.txt','phase1ListSha256')]:\n check(Path(p['auditDir']) / name, p[key])\nrepo = root / 'b126-worktree'\nhead = subprocess.check_output(['git','--no-pager','-C',str(repo),'rev-parse','HEAD'], text=True, timeout=30).strip()\nassert head == a['candidate']\nassert not subprocess.check_output(['git','--no-pager','-C',str(repo),'status','--porcelain=v1'], text=True, timeout=30).strip()\nprint(json.dumps({'status':'PASS','candidate':head,'worktreeClean':True,'checked':checked,'limit':'Recovery identity validation; GPT final verdict and substantive reconciliation remain pending.'}, indent=2))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 18488,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "7f5dba6331493ad7b9b7ca09f0ab1001f102b41f87ffb4e8586d10579793c33d",
+  "memory": {
+    "freeRamBeforeBytes": 5243867136,
+    "freeRamAfterBytes": 5230665728,
+    "minimumObservedFreeRamBytes": 5230661632,
+    "peakWorkingSetBytes": 23093248,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-16T01:26:51.387989+00:00",
+  "finished": "2026-11-16T01:26:51.514516+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json\nimport stat\nimport sys\nfrom pathlib import Path\nsys.path.insert(0, r'C:\\Users\\stop-\\n1-kanji-workspace\\review-tools')\nfrom common import WS, freeze_json, frozen, require, sha, write_frozen\nhere = WS / 'scratch-126' / 'review'\nderivation = json.loads(frozen(here / 'tooling-derivation.json', '9c969bd3206ca914be43962bc2454032f7e74f64238a8b872b31cb9d3f1b1bbd'))\nfor entry in derivation['derivations']:\n    source = Path(entry['source']).read_bytes()\n    require(sha(source) == entry['sourceSha256'], 'Protocol source changed')\n    target = frozen(entry['target'], entry['targetSha256'])\n    reverse = target.decode('utf-8')\n    for replacement in reversed(entry['substitutions']):\n        require(reverse.count(replacement['after']) == replacement['count'], 'Reverse count differs')\n        reverse = reverse.replace(replacement['after'], replacement['before'])\n    require(reverse.encode('utf-8') == source, 'Protocol reverse proof failed')\nexecutions = {}\nfor folder, count, digest in (\n    ('test-protocol-002', 78, '27dccd719d3f6805972ab118c10c8f113e12024bbbeedab362bc36b9a3456327'),\n    ('test-candidate-tools-001', 11, '13e66297013cd7dbdde1d5abe8e7d45679517c37f7ab19f2d1fa7e877c71d514'),\n):\n    log = (here / folder / 'output.log').read_bytes()\n    raw = (here / folder / 'receipt.json').read_bytes()\n    result = json.loads(raw)\n    require(sha(log) == digest == result['logSha256'] and result['exitCode'] == 0\n            and result['childExitCodeAfterCleanup'] == 0 and not result['memory']['breach']\n            and f'Ran {count} tests'.encode() in log and b'\\nOK\\n' in log.replace(b'\\r\\n', b'\\n'),\n            'Test execution does not establish success')\n    executions[folder] = {'tests': count, 'logSha256': digest, 'receiptSha256': sha(raw)}\nfiles = {}\nfor name in ('verify_b126_sources.py', 'test_verify_b126_sources.py', 'prepare_b126_candidate.py', 'test_prepare_b126_candidate.py'):\n    path = WS / 'review-tools' / name\n    raw = path.read_bytes()\n    compile(raw, str(path), 'exec')\n    path.chmod(stat.S_IREAD)\n    require(frozen(path, sha(raw)) == raw, 'Frozen tool changed')\n    files[name] = {'path': str(path), 'sha256': sha(raw), 'bytes': len(raw)}\nissue_raw = Path(r'C:\\Users\\stop-\\AppData\\Local\\Temp\\1794792205332-copilot-tool-output-13980-f718c375-2bd6-4867-9bbb-1b0702d20617.txt').read_bytes()\nissue = json.loads(issue_raw)\nrequire(issue['number'] == 60 and issue['state'] == 'OPEN', 'Wrong governing issue')\nissue_capture = write_frozen(here / 'issue60-at-tool-preparation.json', issue_raw)\nprint(json.dumps(freeze_json(here / 'coordinator-tooling-readiness-001.json', {\n    'batch': 126, 'status': 'TOOLS_READY_CANDIDATE_NOT_ACCEPTED', 'base': 'ea9e1e364da4f3421a05d2a9706e5dcf44f0d797',\n    'files': files, 'protocolDerivationSha256': sha((here / 'tooling-derivation.json').read_bytes()),\n    'executions': executions, 'governingIssue': issue_capture,\n    'scope': 'Frozen tested coordinator tooling only. No signed candidate proof, review packet, reviewer admission or content acceptance produced. Re-read the author handoff before running candidate tools.',\n    'preservedFailure': {'directory': str(here / 'test-protocol-001'), 'reason': 'Unittest discovery skips hyphenated module names; explicit importlib loading recovered without changing fixtures.'},\n})))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b126-worktree",
+  "exitCode": 0,
+  "childPid": 16624,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "64d5396d3d38ccb17e04e014c3b8465011de846979e67f954f99832ceb2d841b",
+  "memory": {
+    "freeRamBeforeBytes": 5618335744,
+    "freeRamAfterBytes": 5614252032,
+    "minimumObservedFreeRamBytes": 5610033152,
+    "peakWorkingSetBytes": 22970368,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "b078c17c280978c185f53b85698d916279700bf766a08aea03473efa357689dc",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

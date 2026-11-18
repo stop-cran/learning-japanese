@@ -1,0 +1,63 @@
+{
+  "fiveMemberSupplementAttempt001": {
+    "status": "FAILED",
+    "producer": "supplement_b129_attempt001.py",
+    "reason": "Preflight found absent distractors 朱 and 江. The launcher did not stop after that inspection; extraction subsequently failed while reading the missing baseline 朱 card.",
+    "teachingChanged": false,
+    "preserved": [
+      "supplement-001.log",
+      "supplement-memory-001.json",
+      "supplement_b129_attempt001.py",
+      "scans-002",
+      "jmdict-supplemental-comparisons.xml",
+      "kanjidic2-comparison-records-002.xml"
+    ],
+    "recovery": "Replace absent speculative distractors, regenerate a separate complete comparison packet with new filenames. Do not count the failed partial extraction as complete."
+  },
+  "finalSourceAttempt001": {
+    "producer": "final_sources_b129_attempt001.py",
+    "memoryReceipt": "final-source-memory-001.json",
+    "exitCode": 1,
+    "error": "xml.etree.ElementTree.ParseError: not well-formed (invalid token): line 6, column 11",
+    "location": "final_sources_b129.py line 73, reparsing complete-record serialization",
+    "cause": "The producer emitted XML encoding declaration utf8 instead of the supported utf-8 spelling.",
+    "preservation": "Original producer and RAM receipt retained. No final XML output was written; the canonical reparse failed before write. The chained stroke-generation command did not run.",
+    "correction": "Use utf-8 for ElementTree serialization and a new memory receipt for the second attempt.",
+    "stdoutLimit": "The original traceback is in the conversation tool result; this record transcribes the error, not a raw captured stderr file."
+  },
+  "authorGates001": {
+    "status": "FAILED",
+    "gate": "lint",
+    "errors": 6,
+    "reason": "H1 hyphens and nonstandard facts lines; corrected to repository format. Original log/receipt preserved under author-evidence/author-gates-001."
+  },
+  "authorGates002": {
+    "status": "PASS",
+    "gates": 10,
+    "directory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\author-gates-002",
+    "summarySha256": "5d606a47d85b79037150f0d5fba3f3dbf6fdea479ba42baa46f23b523a874cb6"
+  },
+  "localLogBindings": {
+    "extraction-001.log": {
+      "sha256": "7df2a020fcaaa22138927d3325d27dbfbe84e16b9134545907b83808e38f6e2b",
+      "bytes": 19639
+    },
+    "extraction-002.log": {
+      "sha256": "551cdd6718ae1f9824386fa4c7b24a713c8e73922ff4d3071b9e49f6e9ee0a06",
+      "bytes": 6596
+    },
+    "supplement-001.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "supplement-002.log": {
+      "sha256": "6c21345c6b83ffc9107c058ad514b4da9feb560f8491b4816b98d222043d600d",
+      "bytes": 20694
+    },
+    "supplement-003.log": {
+      "sha256": "3136a63a7f4ecd2e95523de80e5f354d0db0c94091be560db11d91dfb2e6462e",
+      "bytes": 6913
+    }
+  },
+  "preservation": "No failed evidence directory is overwritten or relabelled; all complete external captures remain local."
+}

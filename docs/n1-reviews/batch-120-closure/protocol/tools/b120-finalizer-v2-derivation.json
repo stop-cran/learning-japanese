@@ -1,0 +1,84 @@
+{
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\finalize_b120.py",
+    "sha256": "37f83774330174b27f68a45a54cb35a73397544406cc34a0b7a2fa2cc7848d0e"
+  },
+  "runnerSource": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\run-checks-closure-001.py",
+    "sha256": "9b49b4f4cac4d98d748b94c4300d6fc75bd95dfa6021c8b72efabbc0ff593822"
+  },
+  "finalizer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\finalize_b120_v2.py",
+    "sha256": "98d24c913b33d1985480082b85cc120c286906cb737576f09abd6d1292e33a0a",
+    "bytes": 13966
+  },
+  "closureRunner": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-120\\run-checks-closure-002.py",
+    "sha256": "88ba9bcd6e3c2790af55fbebe9f68ba5e9329a1a64e59557a0ae5b5101f9dfca",
+    "bytes": 2568
+  },
+  "reverseExactNormalizedSource": true,
+  "changes": [
+    {
+      "label": "signed candidate and preserved parent",
+      "before": "CANDIDATE = \"c986ae49e844c08afc294d9381c7e486f2c9315d\"",
+      "after": "CANDIDATE = \"356375e1d340573dc76e4f61826dfb9af9640bdd\"\nRECONCILED = \"c986ae49e844c08afc294d9381c7e486f2c9315d\""
+    },
+    {
+      "label": "manifest",
+      "before": "000daca2adf350a897a99027de9fda6e310bc18fce6897b69b5e79d10e1a2f29",
+      "after": "33d2f6ca0ec078404966ec9a9780967bbe2624685b4eda1a0e26f8d91613deb8"
+    },
+    {
+      "label": "gate summary",
+      "before": "985b89011351ab99143beaa14de30c7ac8f5be6c47239b1f3a8a6de63e904810",
+      "after": "e9f7a3b2e73f241a03b98ff8e77e5985033365c492f5e40294f2f0987e9d1042"
+    },
+    {
+      "label": "committed gates",
+      "before": "GATES = WS / \"scratch-120\" / \"committed-revision-gates-001\"",
+      "after": "GATES = WS / \"scratch-120\" / \"author-gates-002\""
+    },
+    {
+      "label": "held history support",
+      "before": "from pathlib import Path",
+      "after": "from pathlib import Path\nfrom b120_held_evidence import collect as collect_held, verify_lineage"
+    },
+    {
+      "label": "two final confirmations and passing-only predecessor lineage",
+      "before": "def verify_closure(provenance):\n    require(provenance[\"reviewedSnapshot\"] == CANDIDATE\n            and provenance[\"initialSnapshot\"] == INITIAL\n            and provenance[\"publication\"] == \"PENDING\"\n            and not provenance[\"excludedInitialRuns\"]\n            and not provenance[\"intermediateRuns\"], \"Unexpected B120 closure lineage\")\n    lineage = provenance[\"reviewLineage\"]\n    finals = [row for row in lineage if row[\"finalAcceptance\"]]\n    initials = [row for row in lineage if row[\"role\"] == \"initial\"]\n    require(len(lineage) == 4 and len(finals) == len(initials) == 2\n            and {row[\"family\"] for row in finals} == {\"claude\", \"gpt\"}\n            and {row[\"family\"] for row in initials} == {\"claude\", \"gpt\"}\n            and all(row[\"rawVerdict\"] == \"UNVERIFIED\" and row[\"snapshot\"] == INITIAL for row in initials)\n            and all(row[\"rawVerdict\"] == \"CONFIRMED\" and row[\"snapshot\"] == CANDIDATE\n                    and row[\"confirmationAcceptedOnSnapshot\"] and row[\"priorRun\"] is None for row in finals),\n            \"Both original families must confirm; preserve the UNVERIFIED initials\")",
+      "after": "def verify_closure(provenance):\n    verify_lineage(provenance, CANDIDATE)"
+    },
+    {
+      "label": "preserved signed reconciliation",
+      "before": "git(config, \"show\", \"-s\", \"--format=%P\", CANDIDATE).decode().strip() == INITIAL",
+      "after": "git(config, \"show\", \"-s\", \"--format=%P\", CANDIDATE).decode().strip() == RECONCILED"
+    },
+    {
+      "label": "actual hash-pinned author runner summary schema",
+      "before": "summary[\"startingHead\"] == CANDIDATE and summary[\"base\"] == config[\"base\"]\n                and summary[\"status\"] == \"PASS\" and summary[\"cleanBeforeAndAfter\"]",
+      "after": "summary[\"candidate\"] == CANDIDATE and summary[\"startingHead\"] == RECONCILED\n                and summary[\"base\"] == config[\"base\"] and summary[\"status\"] == \"PASS\"\n                and summary[\"committedManifestSha256\"] == MANIFEST_SHA"
+    },
+    {
+      "label": "archive held report as unaccepted history and persist explicit source erratum",
+      "before": "        for name, raw in artifacts.items():\n            write_frozen(closure / name, raw)",
+      "after": "        correction_path = REVIEW / \"correction-verification-002.json\"\n        correction_raw = frozen(correction_path,\n            \"88a542059a06883178567265c6cc20c1504ce1e9edce1163395e5a29e982c87c\")\n        correction = json.loads(correction_raw)\n        require(correction[\"status\"] == \"PASS\" and correction[\"candidate\"] == CANDIDATE\n                and correction[\"prior\"] == RECONCILED and not correction[\"memory\"][\"breach\"]\n                and correction[\"summary\"][\"sha256\"] == SUMMARY_SHA, \"Correction proof changed\")\n        for path, digest in correction[\"newEvidenceSha256\"].items():\n            require(sha(blob(CANDIDATE, path)) == digest, f\"Correction source changed: {path}\")\n        artifacts[\"verification/correction-verification-002.json\"] = correction_raw\n        for path in sorted((REVIEW / \"confirm\" / \"correction-002-neutral\").iterdir()):\n            if path.is_file():\n                artifacts[f\"verification/correction-002/{path.name}\"] = frozen(path)\n        erratum = artifacts[\"verification/correction-002/source-summary-erratum.json\"]\n        erratum_data = json.loads(erratum)\n        require(erratum_data[\"candidate\"] == CANDIDATE\n                and sha(blob(CANDIDATE, erratum_data[\"path\"])) == erratum_data[\"sourceSummarySha256\"]\n                and sha(blob(CANDIDATE, erratum_data[\"completeXml\"][\"path\"]))\n                == erratum_data[\"completeXml\"][\"sha256\"], \"Source erratum binding differs\")\n        held_files, held_record = collect_held(guard)\n        require(not artifacts.keys() & held_files.keys(), \"Held artifact collision\")\n        artifacts.update(held_files)\n        for name in (\"finalize_b120_v2.py\", \"derive_b120_finalizer_v2.py\",\n                     \"b120-finalizer-v2-derivation.json\", \"b120_held_evidence.py\",\n                     \"test_b120_held_evidence.py\", \"verify_b120_correction.py\",\n                     \"verify_b120_correction_v2.py\", \"test_verify_b120_correction_v2.py\",\n                     \"b120-correction-v2-derivation.json\", \"prepare_b120_confirmations_002.py\"):\n            artifacts[f\"protocol/tools/{name}\"] = frozen(Path(__file__).with_name(name))\n        artifacts[\"protocol/run-reconciliation-002-checks.py\"] = frozen(\n            WS / \"scratch-120\" / \"run-reconciliation-002-checks.py\",\n            \"cc10b400cc2c1c2b7ca26acfa120c4d4e336c071b930cbbee9b01654e1f1f68a\")\n\n        for name, raw in artifacts.items():\n            write_frozen(closure / name, raw)\n        write_frozen(repo / \"docs\" / \"n1-sources\" / \"batch-120\" / \"reconciliation-002\"\n                     / \"source-summary-erratum.json\", erratum)"
+    },
+    {
+      "label": "disclose held report",
+      "before": "\"remainingConsequentialClaims\": [], \"historicalReportsPreserved\": True,",
+      "after": "\"remainingConsequentialClaims\": [], \"historicalReportsPreserved\": True,\n                       \"heldConfirmations\": [held_record],"
+    },
+    {
+      "label": "source correction provenance",
+      "before": "\"reconciliation\": \"batch-120/reconciliation-001/bindings.json\"}",
+      "after": "\"reconciliation\": \"batch-120/reconciliation-001/bindings.json\",\n                               \"correction\": \"batch-120/reconciliation-002/bindings.json\",\n                               \"sourceSummaryErratum\": \"batch-120/reconciliation-002/source-summary-erratum.json\",\n                               \"sourceSummaryErratumSha256\": sha(erratum)}"
+    },
+    {
+      "label": "held archive in validation provenance",
+      "before": "\"recordedFileSha256\": {name: sha(raw) for name, raw in artifacts.items()}, \"publication\": \"PENDING\"}",
+      "after": "\"recordedFileSha256\": {name: sha(raw) for name, raw in artifacts.items()},\n            \"heldConfirmations\": [held_record], \"publication\": \"PENDING\"}"
+    }
+  ],
+  "limit": "Preparation only. The tools require both accepted CONFIRM-002 reports on the corrected snapshot."
+}

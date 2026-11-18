@@ -330,6 +330,11 @@ Not every Japanese modifier needs の: この本 already means "this book"; do n
 linking two nouns. For that use and its relationship with こと, see
 [koto, wake, and Japanese noun-based grammar](koto-wake-and-formal-nouns.md).
 
+A particle phrase can also describe a noun when の follows the particle: **友だちへの手紙（ともだちへのてがみ）**,
+"a letter to a friend," and **日本での生活（にほんでのせいかつ）**, "life in Japan." These combinations
+(への, での, との, からの) are practised in
+[Comparison, role and particle relations](comparison-and-role-relations.md#7-particle--の-before-a-noun).
+
 ## から and まで: a starting point and an endpoint
 
 For a route:

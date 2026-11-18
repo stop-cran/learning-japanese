@@ -1,0 +1,59 @@
+{
+  "status": "author-gates-passed-independent-review-pending",
+  "base": "dd45f6fb7cd3ce579422e2333860aa6d245af898",
+  "gateDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\author-gates-003",
+  "gateSummarySha256": "f9a05d888a6a18fd6dd21ddc5baf65b2c9985886eab3b1f023ebef8cc7a0c716",
+  "preservationDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-127\\preservation-author-001",
+  "preservationSummarySha256": "cbff8e60c58e9e754218e9e3f7cdb5d9e994e5f1ea65cff52ada7ed31b0c34ac",
+  "tenSerialChecks": [
+    "lint",
+    "quiz-safety",
+    "linkplan",
+    "reading-exposure",
+    "validate",
+    "manifest",
+    "unittest",
+    "budget",
+    "vocabulary",
+    "manifest-rebuild"
+  ],
+  "manifestSha256": "b30d3df12ad96640348b88a02a1a12a633e1109161058a978320776f7eccb942",
+  "contentVersion": "5f47248c73f35ccd",
+  "runtimeEntries": 8716,
+  "sourcePacket": "source-receipt.json",
+  "completeRecordVerification": "complete-source-verification-002.json",
+  "warnings": {
+    "finalScopedLint": 0,
+    "finalQuizSafety": 0,
+    "validationErrors": 0,
+    "initialQuizSafety": 7,
+    "fontContrastGlyphMissing": "宀 U+5B80 absent from all three bundled subsets; no rendered fallback acceptance"
+  },
+  "preservedFailures": [
+    {
+      "producer": "generate_b127.py",
+      "result": "AssertionError at line 26 requiring all queried code points in every cmap; diagnostic established that contrast-only 宀 is missing. Original strokes were valid and verified byte-identical by attempt 002."
+    },
+    {
+      "producer": "finalize_b127_attempt001.py",
+      "result": "Default Windows cp1252 decoding failed on the UTF-8 quiz-safety log after source comparisons passed. Preserved original producer/exception/memory; retry uses explicit UTF-8 and verifies the existing identical source-comparison report without rewriting it."
+    }
+  ],
+  "readingExposure": {
+    "explicitExtras": [
+      "倉=にわか,ほろぶ,もろし,おさめる,ひとや"
+    ],
+    "productionHits": 0,
+    "starterPaddingHits": 0,
+    "latentCollisions": 0,
+    "seedsPerPool": 100
+  },
+  "resourcePolicy": {
+    "admitAboveBytes": 2147483648,
+    "abortBelowBytes": 1073741824,
+    "sampleSeconds": 0.25,
+    "maxChildWaitSeconds": 0.1,
+    "cleanupTimeoutSecondsPerStage": 10
+  },
+  "limits": "No independent review or publication. Committed checks and signature/cleanliness bind separately in the final scratch handoff, avoiding a self-referential commit hash. Vocabulary remains pilot-stage coverage, not whole-set closure."
+}

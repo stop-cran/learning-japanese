@@ -1,0 +1,74 @@
+{
+  "run": "N1-B116-GPT004-CONFIRM-001",
+  "session": "8ae1150e-ba39-44c2-ac43-79ebb9ee4d95",
+  "candidate": "be498245e74c3255fcbb9122dd56cb38e7621fe8",
+  "scope": ["憲", "監", "督"],
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": false,
+  "verdict": "NEEDS FIX",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-116\\confirm-gpt004-001.md",
+    "sha256": "19080a82fcfdd5409ff5a817db982f5055dc98b84062315827cc9db02c003546"
+  },
+  "finalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001\\audit-20261114T181122289142\\audit.json",
+    "sha256": "c5b3abe5c1283405b0483a0e3bc6c1903bc9d61befd2cddf59a74127c821243b",
+    "eventsSha256": "3caa4f38a9c9331c1649f5a05543f319283543e925b974999a3ab3f4483e17a1",
+    "sliceSha256": "50d24b7de9012e36f89d112a07f895f33ea786f9b987838c1908aa859e9c713d",
+    "chainRead": 52,
+    "chainRequired": 52,
+    "fetches": 0,
+    "writes": 1,
+    "readbacks": 1,
+    "actualResponseModels": ["gpt-6.1-sol"]
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-context.json",
+    "sha256": "b9a3685541d5b31c7c067a73b13a9f6b75c59ae86807b41356c68c2c203f1fa6"
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-structure.json",
+    "sha256": "b7d10d92190a43d973a2486f0e837fe33ffd9786c790f645b4937c4b51c5f657"
+  },
+  "originalDispositions": {
+    "F1": "RESOLVED",
+    "F2": "RESOLVED",
+    "F3": "RESOLVED",
+    "F4": "RESOLVED",
+    "F5": "RESOLVED"
+  },
+  "acceptedNewFindings": {
+    "F1": {
+      "status": "ACCEPTED_NEEDS_FIX",
+      "severity": "minor",
+      "pairs": ["督/見", "督/観", "督/察", "督/守", "督/警"],
+      "verification": "Daijisen 督:6 independently defines watching/keeping watch and regulating. Complete 見, 観, 察, 守 and 警 articles positively include watching, close observation, guarding or keeping watch against trouble. These are relevant branches, not title-only comparisons. None of the five direct pairs is declared on either endpoint; the existing 監 pairs do not transfer.",
+      "runtimeLimit": "No current curated wrong answer is demonstrated. The missing direct guards affect eligible fallback/custom meaning choices; reading metadata must remain unchanged."
+    }
+  },
+  "remainingConsequentialComparisons": [
+    "督/調",
+    "監/規",
+    "監/則",
+    "監/律",
+    "監/典",
+    "監/準",
+    "監/導",
+    "監/将",
+    "監/率",
+    "監/命",
+    "監/令"
+  ],
+  "ancillaryClaimNotAccepted": {
+    "location": "L4, assertion that the 臣 source header labels a 40-character value SHA-256",
+    "verification": "The actual source SHA-256 is da39c070ad1b3c9fc4405013c618549c36005a901f7f9600e3561e6d3d8e12eb: 64 hexadecimal characters. The bound chain source record matches the actual source bytes. The asserted 40-character defect is unsupported.",
+    "effect": "Do not adopt or propagate this ancillary provenance assertion. It is not used to support F1, the five accepting original dispositions or the positive ruler-retainer definition. The report remains raw and unchanged; accepted evidence is explicitly bounded rather than full-report endorsement."
+  },
+  "reconciliationDirection": {
+    "required": "Add the five supported direct 督 watching/guarding pairs, preserving old pairs and readings.",
+    "authorProposal": "Add conservative direct guards for the eleven remaining consequential comparisons, with qualified English-label distinctions. This operationally removes ambiguous choices without declaring all Japanese meanings synonymous or retroactively converting uncertainty into a proven defect. Original reviewers must assess the actual revision.",
+    "optional": "Since another content revision is necessary, incorporate accepted CARD09 confirmation O1 by grounding 査/調 comparisons in watching/checking without implying identical senses, and accepted CARD10 confirmation O1 by narrowing 係's assigned-role rationale to person in charge.",
+    "sequence": "The fresh blind 憲 review is now running on the still-clean be498245 snapshot. Finish that scoped review, then make one combined revision and reconfirm every changed card with the original eligible reviewers. Do not supply this record to the blind reviewer."
+  },
+  "acceptanceLimit": "Accepted actionable confirmation evidence, not a confirmed candidate or publication approval. L1-L10 remain bounded as reported except the expressly rejected ancillary hash claim. No native/device acceptance."
+}

@@ -1,0 +1,59 @@
+{
+  "batch": 123,
+  "candidate": "65f04ca52a310d517ecb05fb17434cb4f41a118d",
+  "mechanicalProofs": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\coordinator-reconciliation-verification-001.json",
+      "sha256": "7bd65759c91939c536dfb03a00ff461fcbc30a0f293b5ddb78d7fb0f404f3f20"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\coordinator-reconciliation-selection-001.json",
+      "sha256": "25de95031769bf33c53ffe8c9f3a0c9b05d2d0198c90f455797ab611c2b9f742"
+    }
+  ],
+  "status": "NEEDS_FOCUSED_AUTHOR_CORRECTION_BEFORE_CONFIRMATION",
+  "findings": [
+    {
+      "id": "C1",
+      "pair": [
+        "範",
+        "普"
+      ],
+      "confidence": "high",
+      "evidence": [
+        {
+          "path": "kanji/範.md",
+          "line": 51,
+          "sha256": "25b8f38de0bb43b465abace3afa6c47d08203a7c390687775049ef2d3c0a934d"
+        },
+        {
+          "path": "kanji/普.md",
+          "lines": [
+            3,
+            20
+          ],
+          "sha256": "6c63db35f23107e25ccd8b5bd4abc9999ff146349103cbb533ae2e4e7372f583"
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-123-3bda01ae\\evidence\\external-snapshots\\01-extract.txt",
+          "line": 21,
+          "sha256": "6fe5d10d7e101fc35d985fbe0f6c87bb86fc541910ba984f20c823b0e13651e9"
+        }
+      ],
+      "reason": "The newly foregrounded, independently attested widespread branch admits the counterpart's displayed widespread label. Neither endpoint excludes the direct pair; an exclusion with 広 is not transitive.",
+      "requiredChange": "Add a direct 普 guard and source-backed neutral pair disposition."
+    }
+  ],
+  "remainingNoNewGuardPairs": [
+    "本",
+    "像",
+    "囲",
+    "方",
+    "度",
+    "計",
+    "測",
+    "量",
+    "理"
+  ],
+  "limits": "Those nine pair decisions remain hypotheses for source-based independent confirmation, not closed harmlessness claims. No review or publication acceptance."
+}

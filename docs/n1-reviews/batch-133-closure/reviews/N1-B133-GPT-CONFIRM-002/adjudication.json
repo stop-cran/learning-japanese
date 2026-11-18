@@ -1,0 +1,53 @@
+{
+  "run": "N1-B133-GPT-CONFIRM-002",
+  "candidate": "d7d6cff92afe8220c16a5daa76f1c3f00a2bef30",
+  "finalSha256": "e9dcd8690322a532ffc114bdb6b791bac144f3dcc9a346a2cc494341bbf17eda",
+  "reportSha256": "611621bb9692594f793ce5e85c7615525145dc62fdad4b4eb3a1d93c94bf161e",
+  "claimsAdjudicated": true,
+  "acceptedFindings": [],
+  "openClaimIds": [],
+  "coordinatorClaimIds": [],
+  "dispositions": {
+    "Q1": "DECLINE ACCEPTED carried forward: CONFIRM-001 judged 鉛-似 from complete sections on 110b4ffb; verification-003 proves 鉛.md and 似.md byte-unchanged on d7d6cff9.",
+    "Q2": "RESOLVED carried forward: qualified direct 琴-具 guard at 琴.md:14 and Note 62-66 unchanged by the 滝-only delta.",
+    "Q3": "RESOLVED carried forward: 滝-速 declaration and rapid-flow Note (滝.md:61-65) unchanged; rapid-current branch present in the complete 滝 extract.",
+    "Q4": "RESOLVED carried forward: regional タキ cliff restriction and denial (滝.md:78-83) unchanged, only shifted by the inserted 液 Note.",
+    "C4": "RESOLVED carried forward: 琴 糸/緒 added, 機/線/索 retained; ことのを scope still disclosed as uncertain; 琴.md unchanged.",
+    "C5": "RESOLVED carried forward: 鉛 遅/円 added, 倣 retained, 鉛-具 cross-pair disclosed; 鉛.md unchanged.",
+    "C6": "RESOLVED: 声/激/険 precautions carried forward unchanged; the formerly held 滝-液 is now a direct qualified precaution (滝.md:14, Note 72-77, citation 101) whose wording matches the complete 滝 and 液 sections and explicitly denies general synonymy."
+  },
+  "claimChecks": [
+    {
+      "claim": "The original GPT reviewer fully performed the bounded CONFIRM-002 confirmation.",
+      "evidence": "Final e9dcd869 and audit d5842948: 10/10 ordered chain reads, one write with verified readback, zero fetches/breaches/unexpected messages, reviewer idle, single CONFIRMED message. Context 23ed45bd: gpt family, peak 508402 (forecast 592669, gate 700000), no compactions or errors. Structure 4e717d39: four CLEAN facets, Q1 DECLINE ACCEPTED, Q2-Q4/C4-C6 RESOLVED, no findings/optionals, seven limits.",
+      "disposition": "Methodologically accepted."
+    },
+    {
+      "claim": "The 滝-液 precaution is present exactly as declared and only that delta changed.",
+      "evidence": "Coordinator reread snapshot 滝.md:14 (液 appended after 険), :72-77 (six-line qualified Note) and :101 (液 Kotobank citation). Verification-003 3de9bf9e (verifier 9de023b8) independently proves d7d6cff9 is the sole signed child of 110b4ffb, 43 changed paths with runtime change only kanji/滝.md, 8744 of 8745 entries unchanged, all ten committed gates PASS.",
+      "disposition": "Verified by coordinator against the actual snapshot and mechanical proof."
+    },
+    {
+      "claim": "The Note wording is supported by the supplied complete sections.",
+      "evidence": "Coordinator reread 滝-extract.txt:33 (Nikkoku [2] 「たきすい（滝水）」の略), :70-74 (字通 訓義 3 ひたす、うるおす) and 液-extract.txt:11-12 (Daijisen えき【液】 水や油のような、形のない流動する物体). The Note states exactly these three layers and explicitly says not every liquid is a waterfall and 滝 is not taught as liquid generally.",
+      "disposition": "Accepted; qualified quiz-safety guard, not a synonymy claim, consistent with coordinator adjudication 987fb5f9."
+    },
+    {
+      "claim": "Carry-forward of Q1-Q4, C4, C5 and 声/激/険 from CONFIRM-001 is legitimate.",
+      "evidence": "Those judgments were made from complete sections on 110b4ffb in CONFIRM-001 (evidence/gpt-confirm-001-report.md, held only for C6 滝-液). The only subsequent teaching change is the 滝-液 delta (reconciliation-002.patch dda31782; revision-proof-002 1a704031), which touches none of those pairs' declarations or Notes. The reviewer reread the scoped cards and the complete 滝 extract and disclosed the carry-forward as limit L1.",
+      "disposition": "Accepted as bounded carry-forward, not a fresh exhaustive re-review."
+    },
+    {
+      "claim": "The retained distinctions and cross-pair remain correctly handled after reconciliation-002.",
+      "evidence": "Coordinator dispositions-002 5f37890f: 12 added, 6 retained (鉛-鉄, 鉛-似, 鉛-倣, 琴-機, 琴-線, 琴-索); only 滝-液 superseded. GPT is the sole confirmer for 鉛-似, 鉛-倣, 琴-機, 琴-線, 琴-索, confirmed in CONFIRM-001 and carried forward unchanged here.",
+      "disposition": "Accepted."
+    },
+    {
+      "claim": "No new defect or consequential unresolved claim remains in GPT scope.",
+      "evidence": "Report Findings None, Optional None; all seven dispositions accepting; limits L1-L7 are disclosure limits (carry-forward, extracts only, proof not re-executed, latent reading collision, runtime model identity, no publication).",
+      "disposition": "Accepted; limits retained."
+    }
+  ],
+  "citationQualification": "The report's line references were checked and are accurate for the consequential points (滝.md:14/72-77/101; 滝-extract.txt:27-34, 52-54, 70-77; 液-extract.txt:5-17). It cites 液-extract 5-17 as a range covering the つゆ entry plus the えき entries; the decisive 液 definition is at :11-12.",
+  "limitsRetained": "All L1-L7 retained: bounded carry-forward of CONFIRM-001 judgments; earlier UNVERIFIED records remain historical; extracts only, no raw captures, fresh KANJIDIC2/whole-JMdict or web; revision-proof claims not independently re-executed by the reviewer; one latent reading collision and no caller-built/multi-borrow, Kotlin/native/device or rendering acceptance; runtime-reported model identity; no publication or delivery."
+}

@@ -1,0 +1,33 @@
+{
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\adjudicate_b130_gpt003_control.py",
+    "sha256": "77c62423589d302b45f32150f4cb35696067d8125f822bc9731a8eb7549706c9"
+  },
+  "output": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\adjudicate_b130_claude004_control.py",
+    "sha256": "c148bdc52702fda8e3a52b433bba02f5e5becd72f6935f84226a86ef91ff2f33"
+  },
+  "testSource": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b130_gpt003_control.py",
+    "sha256": "191dca822656a381cba6442d71114475f6050a6108386c7e586afe0e02691cfc"
+  },
+  "testOutput": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b130_claude004_control.py",
+    "sha256": "559c0c9870a879f4c2d61580926dbe78641acdec1292e4bd43a2400d76c3e3e7",
+    "bytes": 2370
+  },
+  "rawAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\confirm\\N1-B130-CLAUDE-CONFIRM-004\\audit-20261116T135840716486\\audit.json",
+    "sha256": "273bfcc4aa5c10b57fa90dbfa2efc8be1a37530ce244ef03346952cbb53dea99"
+  },
+  "exactCompletionEventSha256": "c54d0450933280f480e743602cda313c5cf454313074ebf7f4af617e2b44dacc",
+  "scope": "Same exact-event classifier, separately bound to the inspected Claude004 tail. Its single permitted task_complete uses a longer summary consistent with the unchanged report; the entire completion event is pinned, not allowed by prefix alone. No report rewrite, new source read or second verdict send occurred. First producer stopped after classifier creation because its test insertion expected LF, not CRLF. This retry verifies that classifier byte-for-byte and normalizes only the copied tests.",
+  "earlierProducer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b130_claude004_control.py",
+    "sha256": "d2d1a2c775bba1482ae1538987b52a3836e0c957abb8372330caf0061b7a767a"
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b130_claude004_control_v2.py",
+    "sha256": "5de91b17ecd35e96c021fbe61970d4253e385c5ccd6ddbfabd0ca4b31bd43d7e"
+  }
+}

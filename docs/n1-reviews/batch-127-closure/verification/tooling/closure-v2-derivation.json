@@ -1,0 +1,23 @@
+{
+  "source": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_b127.py",
+    "sha256": "59dce57ef01327355f7261c96b29901914f1b0fdc8e2f61d0871d40293049bc9"
+  },
+  "output": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_b127_v2.py",
+    "sha256": "2300d35f6a1fecadbdb19361f3b9a02ca50fa3418483ee7d8ec25986de810f5c",
+    "bytes": 16516
+  },
+  "reverseExact": true,
+  "substitutions": [
+    {
+      "before": "\"coordinator-gate-tests.json\"",
+      "after": "\"protocol-tooling-readiness-001.json\""
+    },
+    {
+      "before": "\"close_b127.py\", \"verify_b127_archive.py\"",
+      "after": "\"close_b127.py\", \"close_b127_v2.py\", \"prepare_b127_closure_inputs.py\", \"verify_b127_archive.py\""
+    }
+  ],
+  "reason": "The old tool requests an absent legacy coordinator-gate-tests.json. Bind the existing actual 81-test readiness receipt under its real name, without manufacturing an alias or altering historical evidence."
+}

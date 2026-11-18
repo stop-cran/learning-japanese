@@ -1,0 +1,46 @@
+{
+  "status": "PREPARATION_ONLY",
+  "capture": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\author-handoff-observed-001.json",
+    "sha256": "082957e626558f66bbddb0f4d5bee1d1e8b25a91eb811414c73e817001b8db62",
+    "bytes": 13523
+  },
+  "derivation": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b131_gate_evidence.py",
+      "sha256": "327e54ef5a2af1b4c92667e08256e8d0f598f13fc5460b12ada530962f9e05eb"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b131_gate_evidence_v2.py",
+      "sha256": "d020a08e2a97b54ac54284f854d116a8751ffa314f6124788b10a673bb1b7411",
+      "bytes": 11544
+    },
+    "substitutions": [
+      {
+        "before": "HERE / \"gate-verification-001\"",
+        "after": "HERE / \"gate-verification-002\"",
+        "count": 1
+      },
+      {
+        "before": "frozen(SCRATCH / \"author-handoff-001.json\", HANDOFF_SHA)",
+        "after": "frozen(HERE / \"author-handoff-observed-001.json\", HANDOFF_SHA)",
+        "count": 1
+      }
+    ],
+    "reverseExact": true
+  },
+  "failedReceiptSha256": "313e3c2ae9d86d9070eec492d05c669f44fa0d0dfa82b0c7a310af6eb857ddc0",
+  "memory": {
+    "freeRamBeforeBytes": 5600350208,
+    "freeRamAfterBytes": 5599059968,
+    "minimumObservedFreeRamBytes": 5599059968,
+    "peakWorkingSetBytes": 24940544,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "producerSha256": "9125d88721b7a6c107261259be3f2e56a92f7378e81e5193ecc987df7ae1ee74",
+  "qualification": "The original handoff had the reported bytes but was writable on disk. Its bytes and attributes were left unchanged. This is a new exact immutable capture, not a claim that the original file was previously ReadOnly."
+}

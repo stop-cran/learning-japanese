@@ -1,0 +1,47 @@
+{
+  "run": "N1-B122-GPT-001",
+  "batch": 122,
+  "candidate": "5d32f83b702aa386812aa930d83e2c1cad0c8faf",
+  "createdAt": "2026-11-15T15:54:37.951624+00:00",
+  "preflightSha256": "5af4416c211f5bda1a843300e689827b51d802630840ac19f220e35341cba97b",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-122\\review\\prompts\\preflight.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted-as-direct-display-safeguards",
+      "pairs": [
+        [
+          "悠",
+          "常"
+        ],
+        [
+          "悠",
+          "続"
+        ]
+      ],
+      "basis": "The same-candidate titles are usual; constant and continue. Their complete cards explicitly teach continuing/always and continuing/lasting. The complete independent 悠 character record gives permanence and long time; Daijisen defines its ordinary time/space sense as continuation without end. This directly supports both displayed-label safeguards, without relying on whole-compound inference or transitive exclusions through 永, 久 or 長. Neither direct pair is declared on either endpoint. The current curated three exclude these candidates but cannot establish tag/random/custom-pool safety.",
+      "fix": "Append 常 and 続 to 悠's direct exclusions and give concise, limited explanations. Retain all existing guards, complete source metadata, practice readings and the three semantically distinct curated choices. Do not change the title or imply every sense of 常/続 is synonymous with 悠.",
+      "confidence": "Supported bounded safeguards; no claim of a reproduced current default-pool or native collision.",
+      "additionalCoordinatorEvidence": "The separately collected, complete pinned KANJIDIC2 常 record explicitly includes long-lasting; JMdict 1355940 includes constant/unchanging/eternal as prefix senses. JMdict 2860084 is separately poetical and marks 常 rarely used for とわ. These post-initial source records corroborate but were not inspected by GPT and are not retroactively attributed to its review."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-122\\initial-gpt-001.md",
+    "sha256": "19dbef6ea2d60531b768268ad927be1408d3b64159419814afb6636a3b4946c2"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-122\\review\\N1-B122-GPT-001-final.json",
+    "sha256": "1c1bf215b60f8b39f3fca787ef8acb2bfc52ec6bfcc9e33f66e8df7dc67625f6"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-122\\review\\N1-B122-GPT-001-adjudication.json",
+    "sha256": "dc1ff5e7c32ef9d4b7a12d39c7c61df510476c41982c0f4ddb06548e0be6003e"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

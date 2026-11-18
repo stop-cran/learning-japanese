@@ -1,0 +1,99 @@
+{
+  "status": "PASS_MEASURED_CAPACITY_NOT_REVIEWER_ADMISSION",
+  "batch": 134,
+  "candidate": "355cccb840d22e7313e79f234eb93d1367e00352",
+  "base": "ba80afffc20a72d31be68b355b6f90aab36a5726",
+  "publishedBaseline": "e17cb97c53ca4e3193dae5e11b52ba517fe86e76",
+  "coreManifest": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\projected-successor-011\\fresh-independent-core-001.json",
+  "coreManifestSha256": "49db3ba57325e7913a533b3b11b7ad810e6085123474327b037a6de7c7c31719",
+  "packetInventorySha256": "adeac0009e52039a57fd3121a45f0e91eb697a6f35b131db0517922f3d1b540c",
+  "losslessVerificationSha256": "7ad06c861b4af2b2f722e54e6e200531919fb6cad6f8cd81541ea2d291571577",
+  "capacityForecast": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\meter-011-capacity-001\\capacity.json",
+    "sha256": "3aec7dc4d2701303145c8bfddbb698e2c180065c2298d115ae5b23b249a020d9",
+    "chosenCaps": {
+      "D": 20,
+      "E": 10
+    },
+    "coreBound": 422752,
+    "articleForecast": 133798,
+    "optionalReserve": 20000,
+    "bootstrapAllowance": 80000,
+    "reportAllowance": 30000,
+    "startupForecast": 686550,
+    "startupGate": 700000,
+    "headroom": 13450,
+    "nextHigherTier": {
+      "caps": {
+        "D": 25,
+        "E": 10
+      },
+      "startupForecast": 708147,
+      "status": "HOLD_ESTIMATE"
+    }
+  },
+  "order": [
+    "claude",
+    "gpt"
+  ],
+  "runs": {
+    "claude": {
+      "family": "claude",
+      "run": "N1-B134-CLAUDE-FRESH-003",
+      "role": "replacement-independent",
+      "originalSession": "3847f453-7c80-4ede-88d3-6771cca5f794",
+      "originalReviewerConfirmation": false,
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\reports-012\\claude\\review.md",
+      "launch": {
+        "sessionName": "B134 CLAUDE fresh independent 003",
+        "model": "claude-opus-5.5",
+        "contextTier": "long_context",
+        "maxPromptTokens": 952000,
+        "prePhase2Gate": 740000,
+        "mode": "interactive"
+      },
+      "prompt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\prompts-012\\review-claude-fresh-003.txt",
+        "sha256": "e54b1f41804842e9d3271c31215140e7f143710e4f7f9011d6e7433bf4853c86",
+        "bytes": 36492
+      },
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\prompts-012\\kickoff-claude-fresh-003.txt",
+      "kickoffSha256": "e4767afbe3d0dbdbb67a7beac1a312692153d2dc22572f670b6f67af38bafa7a",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: fresh independent content review only. The frozen prompt defines the exact snapshot, scope, bootstrap boundary, source protocol and report contract.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\prompts-012\\review-claude-fresh-003.txt using one view call with forceReadLargeFiles: true and no view_range. This must be your first tool call. Then follow the prompt exactly; after the prompt-only bootstrap response, stop and wait for coordinator core-release authorization.",
+      "auditConfig": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\audit-configs-020\\audit-claude-fresh-003.json",
+        "sha256": "05688385b07d0b00a9a98077014a26aae23a6e06713c7ddb29e78855a3d12d22"
+      }
+    },
+    "gpt": {
+      "family": "gpt",
+      "run": "N1-B134-GPT-FRESH-003",
+      "role": "replacement-independent",
+      "originalSession": "8950c746-d7a4-42fb-8db1-3b4ef664144a",
+      "originalReviewerConfirmation": false,
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\reports-012\\gpt\\review.md",
+      "launch": {
+        "sessionName": "B134 GPT fresh independent 003",
+        "model": "gpt-6.1-sol",
+        "contextTier": "long_context",
+        "maxPromptTokens": 922000,
+        "prePhase2Gate": 710000,
+        "mode": "interactive"
+      },
+      "prompt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\prompts-012\\review-gpt-fresh-003.txt",
+        "sha256": "336624fd416ebbb55a524638c0aaed44b16d6eadbaa775012145dd2c0ff1f057",
+        "bytes": 36467
+      },
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\prompts-012\\kickoff-gpt-fresh-003.txt",
+      "kickoffSha256": "f9f6534f794382c847c04ea9ec5c7bc8349effc93bb9c4588d519bae06cdda81",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: fresh independent content review only. The frozen prompt defines the exact snapshot, scope, bootstrap boundary, source protocol and report contract.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\prompts-012\\review-gpt-fresh-003.txt using one view call with forceReadLargeFiles: true and no view_range. This must be your first tool call. Then follow the prompt exactly; after the prompt-only bootstrap response, stop and wait for coordinator core-release authorization.",
+      "auditConfig": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\fresh-independent-002\\lifecycle-011\\audit-configs-020\\audit-gpt-fresh-003.json",
+        "sha256": "387f8763fd7514704baaa1fe2c8b7a7fcbd39ac28917ba06600d79e670308571"
+      }
+    }
+  },
+  "controllerSourceBindingPolicy": "Lifecycle controller is pinned by the guarded wrapper; the auditor is hash-pinned by the controller. These two source files are excluded from config.files to avoid a hash cycle. All other runtime, checker, source-proof, packet-index and prompt inputs are explicitly hash-bound.",
+  "limits": "Forecast and exact-core meters are not reviewer admission, token guarantees, or linguistic findings. Fresh runtime model/context/usage/zero-compaction, roster, RAM, serial, complete-read and two-phase gates remain mandatory."
+}

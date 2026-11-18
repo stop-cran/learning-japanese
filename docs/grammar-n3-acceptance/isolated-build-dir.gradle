@@ -1,0 +1,14 @@
+def outputRoot = System.getenv("N3_ACCEPTANCE_BUILD_ROOT")
+if (!outputRoot) {
+    throw new GradleException("N3_ACCEPTANCE_BUILD_ROOT is required")
+}
+allprojects {
+    layout.buildDirectory.set(new File(outputRoot, name))
+    tasks.withType(Test).configureEach {
+        def workingRoot = System.getenv("N3_ACCEPTANCE_WORKING_ROOT")
+        if (!workingRoot) {
+            throw new GradleException("N3_ACCEPTANCE_WORKING_ROOT is required")
+        }
+        workingDir(new File(workingRoot, "kanji-cards-android/core"))
+    }
+}

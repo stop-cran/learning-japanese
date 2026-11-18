@@ -1,0 +1,63 @@
+# B133 confirmation — N1-B133-GPT-CONFIRM-003
+
+## Snapshot
+Commit: b1acf155fb8c7e1066a5c3baf88ae98ab92c29ac
+Model: GPT-6.1 Sol (gpt-6.1-sol), runtime-reported.
+
+## Scope
+Chain: 1-10, completely and sequentially read once; no re-views.
+Fetches: None.
+
+This is bounded confirmation of reconciliation-003 relative to d7d6cff92afe8220c16a5daa76f1c3f00a2bef30. I read the complete initial report, my complete CONFIRM-002 report and its supplied adjudication, the three current scoped cards, the complete 液/酒/水 counterpart cards, all supplied 滝/液/滝水 source sections, both patches, the complete coordinator disposition record and the revision-proof summary. Prior decisions and author explanations were checked against the new evidence rather than treated as independent linguistic proof.
+
+The new source resolves a lexical-identity error in my earlier review: Nikkoku's 滝 abbreviation points specifically to たきすい【滝水】, the named sake sold by 四方久兵衛 in Edo's Kanda Izumicho. The waterfall-water definitions belong to the separate たきみず and ろうすい entries. Evidence: evidence/external/滝-extract.txt:33-34; evidence/external/takisui-sections.txt:4-9. I withdraw my earlier identification of that abbreviated sense as water from a waterfall, including its use in the CONFIRM-002 rationale. A reference to the correct written compound was insufficient without checking its specified reading and entry.
+
+The corrected Meaning sentence at snapshot/kanji/滝.md:23-28 now accurately identifies the Edo-period sake-name abbreviation and explicitly excludes it from the ordinary teaching focus. The dated 1791 abbreviation example and the eighteenth-century sake entry support this historical framing. The separate contemporary Niigata sake entry in evidence/external/takisui-sections.txt:12-17 is not conflated with the Edo shop or treated as evidence that the abbreviation is an unrestricted modern meaning.
+
+The rewritten 液 Note at snapshot/kanji/滝.md:73-78 no longer relies on the erroneous waterfall-water abbreviation. Its grounds are now the explicitly attested descending water flow, the separately sourced soaking/moistening layer and the correctly identified historical drink sense: evidence/external/滝-extract.txt:27-34; evidence/external/滝-extract.txt:70-77; evidence/external/takisui-sections.txt:4-5. The supplied Daijisen 液 entries positively define a flowing substance such as water or oil, alongside 汁/水け and culinary senses, evidence/external/液-extract.txt:5-17. This supports retaining a conservative broad-label guard. The Note does not infer general liquid meaning merely from a wetting action, and it explicitly denies that every liquid is a waterfall or that 滝 means liquid generally.
+
+The new 滝/酒 precaution is justified directly. The actual counterpart title is alcohol; sake, and its complete article distinguishes alcoholic drinks generally from specifically Japanese sake, snapshot/kanji/酒.md:3-21; snapshot/kanji/酒.md:28-45. The independently supplied abbreviated 滝 sense is a named sake, not just something associated with drinking or a compound containing a suggestive character. Snapshot/kanji/滝.md:79-84 explains that historical basis, names the Edo/Kanda location accurately, separates たきすい from たきみず/ろうすい, and denies teaching 滝 as modern alcohol vocabulary.
+
+Both 滝/液 and 滝/酒 are explicitly declared on 滝 at snapshot/kanji/滝.md:14. The complete counterpart front matter supplies no reverse declaration; one endpoint is sufficient. The two guards are separate direct pairs, not a transitive consequence of each other or of the existing 水 guard. I read 水's full card, including the water, weekday/element and temperature distinctions, snapshot/kanji/水.md:1-43. None of those third-card meanings is used to establish either new pair.
+
+The added source citation at snapshot/kanji/滝.md:109-110 explicitly identifies Nikkoku's 滝水 entry and the reading たきすい. It matches the supplied publisher material at evidence/external/takisui-sections.txt:2-10. The new relative 酒 link identifies the complete 酒 card supplied here, and the existing 液 link and citation remain intact.
+
+Every changed teaching line in diffs/reconciliation-003.patch:1-54 was compared with the full revised 滝 card: append exactly 酒 after 液; replace the unsupported Meaning gloss; rewrite the existing six-line 液 rationale; add the qualified six-line 酒 Note; and append the two-line 滝水 citation. No other teaching change is present in that incremental patch. The cumulative diffs/fix.patch:1-173 preserves the earlier 琴/鉛 changes and other 滝 precautions; the current full 琴 and 鉛 articles match that preserved scope.
+
+Titles, full reading inventories, practice selections, curated distractors, common words, mnemonics and stroke metadata remain unchanged. The selected questions are still 琴 こと, 鉛 エン and 滝 たき, with curated option identities 古・右・川, 古・右・川 and 古・右・寺 respectively: snapshot/kanji/琴.md:9-14; snapshot/kanji/鉛.md:9-14; snapshot/kanji/滝.md:9-14. 酒 is not a curated option and does not overlap those identities. Mentioning the complete word たきすい does not add it as a reading of bare 滝. The guard affects meaning-choice eligibility, not reading questions.
+
+Evidence/revision-proof-003.json:7-35 reports b1acf155 as the signed child of d7d6cff9, one changed runtime article among 8745 entries, 8744 unchanged runtime entries, the precise before/after Meaning and Notes, and the single added 酒 ID. Its current article hash matches the supplied 滝 source identity, and its reported delta agrees with the actual patch. Its manifest hash, content version a4afe85384bc1452, committed-gate list and latent-collision count are supplied mechanical evidence, not checks rerun by this reviewer.
+
+## Dispositions
+- Q1 - DECLINE ACCEPTED - The CONFIRM-002 disposition stands unchanged on b1acf155: retain 鉛/似. The previously source-checked distinction considered resemblance, corresponding value and forging operations rather than only different labels; it did not identify 似 as a bare counterfeit-money noun. The current correction changes no 鉛 meaning, title or exclusion. Prior disposition: evidence/gpt-confirm-002-report.md:30-36. Preservation evidence: snapshot/kanji/鉛.md:1-84; diffs/reconciliation-003.patch:1-54; evidence/revision-proof-003.json:14-17. This is bounded carry-forward, not a new read of the 似 source family.
+- Q2 - RESOLVED - The CONFIRM-002 disposition stands unchanged: accept the direct 琴/具 guard and its qualified tool/instrument Note. The declaration and wording remain at snapshot/kanji/琴.md:14; snapshot/kanji/琴.md:62-66. Prior disposition: evidence/gpt-confirm-002-report.md:30-36. Only 滝 changed at runtime in the supplied revision boundary, evidence/revision-proof-003.json:14-17; no inference through 器 is substituted.
+- Q3 - RESOLVED - The CONFIRM-002 disposition stands unchanged: accept the qualified 滝/速 rapid-flow precaution. The current declaration and explanatory wording remain at snapshot/kanji/滝.md:14; snapshot/kanji/滝.md:62-66. Independent rapid-current definitions were reread at evidence/external/滝-extract.txt:5-8; evidence/external/滝-extract.txt:27-31. The corrected sake abbreviation supplies no reason to reverse that distinct flow judgment. Prior disposition: evidence/gpt-confirm-002-report.md:30-36.
+- Q4 - RESOLVED - The CONFIRM-002 disposition stands unchanged: accept 滝/岩 only as the qualified regional terrain precaution. The complete folklore section reread now retains its Chugoku-and-westward タキ cliff statement, evidence/external/滝-extract.txt:52-54. The corresponding restriction and denial of general rock/waterfall equivalence are preserved at snapshot/kanji/滝.md:85-90. This passage is shifted by the correction, not substantively changed. Prior disposition: evidence/gpt-confirm-002-report.md:30-36.
+- C4 - RESOLVED - The CONFIRM-002 dispositions stand unchanged for all five 琴 pairs: direct 糸 and 緒 precautions accepted; 機, 線 and 索 distinctions retained. The unresolved historical ことのを scope is still disclosed, rather than promoted into an unrestricted cord meaning. Evidence: snapshot/kanji/琴.md:14; snapshot/kanji/琴.md:62-73; evidence/gpt-confirm-002-report.md:30-36; evidence/revision-proof-003.json:14-17. Their underlying source families are carried forward from the earlier bounded assessment, not represented as freshly reread here.
+- C5 - RESOLVED - The CONFIRM-002 dispositions stand unchanged: direct 鉛/遅 and 鉛/円 guards accepted; 鉛/倣 distinction retained. The current money-entry restriction and conservative heavy/dull qualification are unchanged, snapshot/kanji/鉛.md:59-68. Prior disposition and related carry-forward: evidence/gpt-confirm-002-report.md:30-36. The earlier acceptance of 鉛/鉱, retained 鉛/鉄 and disclosed 鉛/具 distinction is likewise unaffected by the 滝-only runtime correction, evidence/revision-proof-003.json:14-17.
+- C6 - RESOLVED - The CONFIRM-002 accepting outcome stands, but its erroneous waterfall-water-abbreviation rationale does not. 声/激/険 declarations and qualified sound, flow and regional-terrain Notes are unchanged, snapshot/kanji/滝.md:14; snapshot/kanji/滝.md:62-71; snapshot/kanji/滝.md:85-90. The independent 滝 sound/moistening and regional source layers were reread, evidence/external/滝-extract.txt:52-54; evidence/external/滝-extract.txt:70-77. Retain the direct 液 guard on the corrected grounds stated at snapshot/kanji/滝.md:73-78: positive water-flow and moistening senses plus the historical drink sense, not a misidentified water noun. Those grounds are supported by evidence/external/滝-extract.txt:27-34; evidence/external/takisui-sections.txt:4-9; evidence/external/液-extract.txt:11-17. Accept the additional direct 酒 guard and Note at snapshot/kanji/滝.md:14; snapshot/kanji/滝.md:79-84, because the exact たきすい entry names sake and the counterpart's actual title includes sake, snapshot/kanji/酒.md:3-21. The new 滝水 citation identifies the correct reading. No general alcohol meaning or transitive 水/液/酒 exclusion is asserted. The corrected Meaning sentence and both Notes resolve the current scoped claim.
+
+## Verdicts
+Correctness: CLEAN
+Scoped coverage: CLEAN
+Consistency and quiz safety: CLEAN
+Comprehensibility: CLEAN
+
+## Confirmation
+Verdict: CONFIRMED
+Basis: The revision corrects the previously unsupported 滝水 gloss using the specified reading's complete source entry, preserves the qualified direct 液 precaution on corrected grounds, adds an independently supported historical 滝/酒 guard, and introduces no unrelated teaching change or new established defect within this bounded confirmation.
+
+## Findings
+None.
+
+## Optional
+None.
+
+## Limits
+- L1: My earlier acceptance of the abbreviated sense as waterfall water was mistaken. That source-identification claim is withdrawn, not preserved by the prior CONFIRMED verdict or the coordinator's earlier acceptance. Earlier reports remain historical records; this confirmation applies to the corrected b1acf155 teaching and rationale.
+- L2: Unchanged Q1-Q4/C4/C5 and the 声/激/険 portions of C6 carry forward their prior source-based judgments through the inspected patch and supplied preservation boundary. Their underlying complete counterpart/source families were not freshly read in this pass. The fresh semantic checks concern the supplied 滝, 滝水, 液 and 酒 material; this is not a new whole-corpus ambiguity audit.
+- L3: Source access was limited to the supplied complete named publisher sections and cards. Raw HTML, original captures, layout and glyph images were not inspected. No fresh full JMdict/KANJIDIC2, Joyo inventory or external fetch was performed, and missing historical glyphs were not reconstructed.
+- L4: The revision-proof summary reports signed bindings, all-runtime preservation and committed gates. I checked its consistency with the opened patch and source identities, but did not independently verify signatures, rerun scripts, inspect full runtime maps or read every individual gate output. Its 54 changed paths are not a claim that only one repository file changed; the one-file claim is restricted to runtime articles.
+- L5: The supplied proof retains one latent reading collision. Meaning exclusions are symmetric direct pairs, not transitive, and do not protect readings. Prior bounded host pools do not establish custom/caller-built or multiple-borrow behavior, Kotlin execution, rendering, native/emulator/physical-phone acceptance or compatibility with an older installed APK.
+- L6: Runtime-reported model identity is gpt-6.1-sol; no independent execution-selection, context-tier or current-capacity audit was performed by this reviewer.
+- L7: No implementation, publication or delivery was performed. CONFIRMED here does not establish physical-device, general-release or whole-set acceptance, or increase published N1 coverage.

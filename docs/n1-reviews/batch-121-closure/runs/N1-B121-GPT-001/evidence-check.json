@@ -1,0 +1,405 @@
+{
+  "run": "N1-B121-GPT-001",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-121\\initial-gpt-001.md",
+    "sha256": "82621db8b83df0c3c8ea9274bccff00a3c98c19114d9deb7972efa5604d55d98"
+  },
+  "verdict": "NEEDS FIX",
+  "formalCitations": [
+    {
+      "item": "F1",
+      "reportLine": 114,
+      "citation": "snapshot/kanji/徳.md:3-14",
+      "opened": true,
+      "exactSourceText": "title: virtue; benevolence\njlpt: 1\ntags: [jlpt-n1, grade-4, structure-unclassified]\nstrokes: 14\nradical: 彳\nradicalNumber: 60\nonyomi: [トク]\nkunyomi: []\nquizOnyomi: [トク]\nquizKunyomi: []\ndistractors: [休, 本, 木]\nquiz_exclusions: [義, 良, 利, 得, 功, 恩, 教, 尊, 敬, 福, 富, 享, 優, 正, 人]"
+    },
+    {
+      "item": "F1",
+      "reportLine": 114,
+      "citation": "repo/kanji/財.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 財\ntitle: wealth; property\njlpt: 3\ntags: [jlpt-n3, grade-5, structure-unclassified]\nstrokes: 10\nradical: 貝\nradicalNumber: 154\nonyomi: [ザイ, サイ, ゾク]\nkunyomi: [たから]\ndistractors: [貸, 責, 貧]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 114,
+      "citation": "repo/kanji/偉.md:1-12",
+      "opened": true,
+      "exactSourceText": "---\nkanji: 偉\ntitle: admirable; great\njlpt: 3\ntags: [jlpt-n3, grade-8, structure-unclassified]\nstrokes: 12\nradical: 人\nradicalNumber: 9\nonyomi: [イ]\nkunyomi: [えら.い]\ndistractors: [使, 借, 体]\n---"
+    },
+    {
+      "item": "F1",
+      "reportLine": 114,
+      "citation": "repo/kanji/偉.md:19-22",
+      "opened": true,
+      "exactSourceText": "\n偉 expresses greatness or something deserving admiration. [偉い](../words/偉い.md) えらい can praise\na person's conduct; it can also describe someone important or high-ranking.\n偉大 いだい gives another way to describe greatness."
+    },
+    {
+      "item": "F1",
+      "reportLine": 114,
+      "citation": "evidence/external-snapshots/01-extract.txt:15-26",
+      "opened": true,
+      "exactSourceText": "１ りっぱな行いや品性。「徳育・徳義・徳行・徳望／悪徳・威徳・学徳・公徳・高徳・人徳・仁徳・道徳・背徳・美徳・不徳」\n２ すぐれた人格者。「碩徳(せきとく)・大徳」\n３ 恩恵。「徳政／遺徳・恩徳・神徳・報徳」\n４ もうけ。「徳用／福徳」\n［名のり］あきら・あつ・あつし・あり・いさお・え・かつ・さと・ただし・とこ・とみ・なり・なる・のぼる・のり・めぐむ・やす・よし\nとく【徳】\n読み方：とく\n１ 精神の修養によってその身に得たすぐれた品性。人徳。「―が高い」「―を修める」→徳目\n２ めぐみ。恩恵。神仏などの加護。「―をさずかる」「―を施す」\n３ ⇒得(とく)1\n４ 富。財産。\n「―いかめしうなどあれば、…家の内もきらきらしく」〈源・東屋〉"
+    },
+    {
+      "item": "F1",
+      "reportLine": 114,
+      "citation": "repo/docs/content-format.md:98-120",
+      "opened": true,
+      "exactSourceText": "choices from other cards, preferring shared tags. Exact-title deduplication alone does not establish semantic uniqueness:\ndifferent English synonyms can still produce two defensible answers. Keep useful semantic comparisons in the body even when\nthey are unsuitable as wrong answers.\n\nKanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.\n\nAuthor a pair only from evidence about the actual displayed labels and ordinary meanings. The observed 剰/冗 fallback ambiguity\nmotivated this mechanism; it is not automatic synonym discovery or a guarantee for uncurated pairs. Existing older APKs do not\nenforce this field. Content depending on it requires the upgraded compatible client; bounded owner-testing acceptance does not\nprove compatibility of an older installed app or physical-phone/general-release acceptance.\n\nEditorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.\nThis behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);\nlarger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.\n\n### Curated reading questions\n\nKeep complete sourced `onyomi` / `kunyomi` metadata and its order, including rare readings. Use the optional quiz lists to select"
+    }
+  ],
+  "issues": [],
+  "comparisons": [
+    {
+      "id": "D4",
+      "card": "財",
+      "reportLine": 68,
+      "displayedTitle": "wealth; property",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The actual answer label is repo/kanji/財.md:3. Daijisen explicitly gives 徳 the noun sense 富。財産, evidence/external-snapshots/01-extract.txt:25-26; its character entry also gives profit at evidence/external-snapshots/01-extract.txt:18.",
+      "disposition": "Collision-needing-exclusion, F1. Neither endpoint declares 徳–財: snapshot/kanji/徳.md:14 and repo/kanji/財.md:1-12. Not a current curated pair. The noun's historical illustration is retained as a qualification, not claimed as modern frequency evidence."
+    },
+    {
+      "id": "D5",
+      "card": "厚",
+      "reportLine": 69,
+      "displayedTitle": "thick; cordial",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The strongest plausible overlap is not physical thickness but kindness/cordial treatment in repo/kanji/厚.md:19-20 and repo/kanji/厚.md:28-29, against independently sourced benevolence in evidence/kanjidic2-records.xml:55-60.",
+      "disposition": "UNVERIFIED semantic necessity: the opened independent evidence does not establish the applicable 厚意/厚 senses or settle cordial treatment versus benevolence. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/厚.md:1-12; not currently curated. Do not dismiss the kindness sense because thickness appears first."
+    },
+    {
+      "id": "D6",
+      "card": "礼",
+      "reportLine": 70,
+      "displayedTitle": "bow; thanks",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 礼 evidence includes gratitude, manners, bowing, reward/gift, ceremony and abbreviated key money, evidence/jmdict-families.xml:1099-1151; compare 徳's virtue and grace/profit, evidence/external-snapshots/01-extract.txt:15-25.",
+      "disposition": "UNVERIFIED semantic necessity. Bow/thanks are not the same operation as virtue or a benefit, but the reward/gift secondary senses require more than that displayed-title distinction to rule out an ambiguous benefit choice. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/礼.md:1-12. The 恩–礼 guard is not a 徳–礼 guard; not currently curated."
+    },
+    {
+      "id": "D7",
+      "card": "愛",
+      "reportLine": 71,
+      "displayedTitle": "love",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "repo/kanji/愛.md:19-22 includes affection and care beyond romance. The independently supplied 愛徳 entry is specifically Christian charity, evidence/jmdict-families.xml:3271-3285; 徳 independently includes benevolence, evidence/kanjidic2-records.xml:55-60.",
+      "disposition": "UNVERIFIED semantic necessity. Restricted whole-word 愛徳 does not independently allocate an ordinary charity/benevolence sense to 愛, and the broader care sense cannot be dismissed merely as romance. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/愛.md:1-12. 恩–愛 does not settle this pair; not currently curated."
+    },
+    {
+      "id": "D8",
+      "card": "助",
+      "reportLine": 72,
+      "displayedTitle": "help; rescue",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The comparison includes assistance, survival and relief, repo/kanji/助.md:19-22 and repo/kanji/助.md:33-37. 徳's independent grace sense includes divine protection, evidence/external-snapshots/01-extract.txt:23.",
+      "disposition": "UNVERIFIED semantic necessity: grace/protection and help/rescue could overlap, but assistance as an act is not automatically the same character meaning as its beneficial result. Independent 助 family evidence was not supplied in the opened core. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/助.md:1-12; not currently curated."
+    },
+    {
+      "id": "D9",
+      "card": "援",
+      "reportLine": 73,
+      "displayedTitle": "aid; assistance",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Read helping, rescue, reinforcement and the separate example-citation sense, repo/kanji/援.md:23-34 and repo/kanji/援.md:65-86. The plausible 徳 overlap is beneficent aid/protection, evidence/external-snapshots/01-extract.txt:17-23, not example citation.",
+      "disposition": "UNVERIFIED semantic necessity: the comparison's independent dictionary extracts were not included here, and generic aid versus grace remains unresolved. Neither endpoint declares 徳–援, snapshot/kanji/徳.md:14 and repo/kanji/援.md:14. 援–助 is not transitive to 徳; not currently curated."
+    },
+    {
+      "id": "D10",
+      "card": "幸",
+      "reportLine": 74,
+      "displayedTitle": "happiness; good fortune",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The card explicitly covers life going well rather than momentary pleasure, repo/kanji/幸.md:19-23. 徳 independently has grace/blessing, evidence/external-snapshots/01-extract.txt:23; the independent 福 entry groups blessing with good fortune/happiness, evidence/jmdict-families.xml:949-969.",
+      "disposition": "UNVERIFIED semantic necessity. The 福 evidence makes the blessing/fortune comparison plausible, but is not proof that every 幸 use or this direct pair is equivalent. No independent 幸 family was opened. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/幸.md:1-12. Neither 徳–福 nor 恩–幸 makes it handled; not currently curated."
+    },
+    {
+      "id": "D11",
+      "card": "豊",
+      "reportLine": 75,
+      "displayedTitle": "bountiful; abundant",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Richness and abundance are explicit in repo/kanji/豊.md:19-20 and repo/kanji/豊.md:30-37; the strongest comparison is 徳's wealth/property, evidence/external-snapshots/01-extract.txt:25-26, not only harvests.",
+      "disposition": "UNVERIFIED semantic necessity. Do not confine 豊 to agriculture or assume every abundance is financial wealth; the independent 豊 families needed to settle its scope were not opened. Neither endpoint declares 徳–豊, snapshot/kanji/徳.md:14 and repo/kanji/豊.md:1-12; not currently curated."
+    },
+    {
+      "id": "D12",
+      "card": "偉",
+      "reportLine": 76,
+      "displayedTitle": "admirable; great",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The actual label and conduct-praising use occur at repo/kanji/偉.md:3 and repo/kanji/偉.md:19-22. Independently, 徳 denotes excellent conduct/character and an excellent person, evidence/external-snapshots/01-extract.txt:15-16.",
+      "disposition": "Collision-needing-exclusion, F1. An admirable/great answer is defensible for that sourced 徳 character sense; the high-rank use of 偉 does not cancel its conduct-praising use. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/偉.md:1-12; not currently curated."
+    },
+    {
+      "id": "D13",
+      "card": "品",
+      "reportLine": 77,
+      "displayedTitle": "goods, refinement",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "repo/kanji/品.md:19-20 explicitly includes refinement/dignity, not just merchandise; 徳 independently includes cultivated excellent character, evidence/external-snapshots/01-extract.txt:15-22.",
+      "disposition": "UNVERIFIED semantic necessity. Moral character versus refinement/dignity needs independent 品 sense evidence; merchandise alone is not a harmlessness argument. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/品.md:1-12; not currently curated."
+    },
+    {
+      "id": "D14",
+      "card": "訓",
+      "reportLine": 78,
+      "displayedTitle": "instruction; kun reading",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Instruction/precepts are explicit in repo/kanji/訓.md:19-20, with restricted search-only verb spellings at repo/kanji/訓.md:30-34. The independent Weblio character source supplies 徳's おしえ, evidence/external-snapshots/01-extract.txt:140-150; 教え means teaching/instruction in evidence/jmdict-families.xml:275-306.",
+      "disposition": "UNVERIFIED semantic necessity. A source-specific reading plus the independent 教え word does not by itself settle whether teaching is an ordinary 徳 answer sense. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/訓.md:1-12. 徳–教 is not transitive to 訓; not currently curated."
+    },
+    {
+      "id": "D15",
+      "card": "授",
+      "reportLine": 79,
+      "displayedTitle": "grant; impart; teach",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The article includes both bestowal and teaching, repo/kanji/授.md:23-25, and the passive being-granted sense, repo/kanji/授.md:35-39. Compare independently sourced 徳 grace and source-specific おしえ, evidence/external-snapshots/01-extract.txt:23 and evidence/external-snapshots/01-extract.txt:140-150.",
+      "disposition": "UNVERIFIED semantic necessity. Do not dismiss bestowal merely as an action or promote おしえ into an independently established ordinary meaning. Neither endpoint declares 徳–授, snapshot/kanji/徳.md:14 and repo/kanji/授.md:14. 授–教/訓 and 徳–教 do not handle it; not currently curated."
+    },
+    {
+      "id": "D16",
+      "card": "者",
+      "reportLine": 80,
+      "displayedTitle": "person in a role",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": false,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The role can be an activity or characteristic, not only a profession, repo/kanji/者.md:19-22 and repo/kanji/者.md:40-44. 徳 independently denotes an excellent person, evidence/external-snapshots/01-extract.txt:16.",
+      "disposition": "UNVERIFIED semantic necessity. The overlapping person/characteristic sense is real evidence for selection, but role-qualified person versus excellent person is not settled by independent 者 evidence in this packet. Neither endpoint declares the pair, snapshot/kanji/徳.md:14 and repo/kanji/者.md:1-12. 徳–人 is not transitive; not currently curated."
+    },
+    {
+      "id": "E1",
+      "card": "義",
+      "reportLine": 81,
+      "displayedTitle": "righteousness; duty; meaning",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 義 includes morality/righteousness and Buddhist teachings as well as meaning and other senses, evidence/jmdict-families.xml:1945-1989. Compare 徳's excellent conduct and virtue, evidence/external-snapshots/01-extract.txt:15-22.",
+      "disposition": "Already handled: the moral/right-conduct overlap warrants separation. Declared on 徳 at snapshot/kanji/徳.md:14, not on 義 at repo/kanji/義.md:14. Not currently curated against 徳; other 義 senses do not negate this overlap."
+    },
+    {
+      "id": "E2",
+      "card": "良",
+      "reportLine": 82,
+      "displayedTitle": "good; favorable",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "徳 independently has goodness, evidence/kanjidic2-records.xml:55-60. The 良 label is repo/kanji/良.md:3; independent 良い includes good and beneficial/profitable senses, evidence/jmdict-families.xml:1264-1335.",
+      "disposition": "Already handled: good/goodness and beneficial secondary meanings overlap. Declared on 徳 at snapshot/kanji/徳.md:14; 良 has no exclusion declaration at repo/kanji/良.md:1-12. Not currently curated. Quality/condition is not an exclusive physical restriction."
+    },
+    {
+      "id": "E3",
+      "card": "利",
+      "reportLine": 83,
+      "displayedTitle": "benefit; advantage",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 利 supplies advantage, benefit and profit, evidence/jmdict-families.xml:1001-1022; independent 徳 supplies those same financial glosses, evidence/jmdict-families.xml:2250-2276.",
+      "disposition": "Already handled: direct financial-sense collision. Declared on 徳 at snapshot/kanji/徳.md:14; no declaration on 利 at repo/kanji/利.md:1-12. Not currently curated. The Buddhist りやく sense of 利益 is separately reading-restricted, evidence/jmdict-families.xml:1025-1069, not indiscriminately assigned to りえき."
+    },
+    {
+      "id": "E4",
+      "card": "得",
+      "reportLine": 84,
+      "displayedTitle": "gain; acquire",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 得/とく includes gain/profit and explicitly says also written 徳, evidence/jmdict-families.xml:755-785; 徳/とく cross-refers to it, evidence/jmdict-families.xml:2250-2276.",
+      "disposition": "Already handled: gain/profit ambiguity is direct, not inferred from shared 彳. Declared on 徳 at snapshot/kanji/徳.md:14; none on 得 at repo/kanji/得.md:1-13. Not currently curated. Obtaining, Buddhist senses and the archaic 得/う entry remain distinct."
+    },
+    {
+      "id": "E5",
+      "card": "恩",
+      "reportLine": 85,
+      "displayedTitle": "favor; debt of gratitude",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 恩 has kindness/benevolence as a second sense alongside favor/obligation, evidence/jmdict-families.xml:185-214. 徳 independently includes benevolence and grace, evidence/kanjidic2-records.xml:55-60 and evidence/external-snapshots/01-extract.txt:23.",
+      "disposition": "Already handled: direct benevolence/favor overlap. Declared on 徳 at snapshot/kanji/徳.md:14, not on 恩 at repo/kanji/恩.md:14. Not currently curated; gratitude/obligation is not substituted for every 徳 use."
+    },
+    {
+      "id": "E6",
+      "card": "優",
+      "reportLine": 86,
+      "displayedTitle": "gentle; superior",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "repo/kanji/優.md:19-22 and repo/kanji/優.md:31-34 include kindness and excellence, not only rank. Independently 徳 has benevolence/goodness and excellent character, evidence/kanjidic2-records.xml:55-60 and evidence/external-snapshots/01-extract.txt:15-22.",
+      "disposition": "Already handled conservatively: plausible kindness/excellence overlap is guarded on 徳 at snapshot/kanji/徳.md:14; no guard on 優 at repo/kanji/優.md:1-12. Independent 優 families were not opened, so the exact ordinary-sense necessity is UNVERIFIED, not certified solely by this article. Not currently curated."
+    },
+    {
+      "id": "E7",
+      "card": "正",
+      "reportLine": 87,
+      "displayedTitle": "correct, proper",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "The displayed proper label and conduct use are repo/kanji/正.md:3 and repo/kanji/正.md:19-20; independently 徳 denotes excellent conduct/character, evidence/external-snapshots/01-extract.txt:15-22.",
+      "disposition": "Already handled conservatively for proper conduct/virtue. Declared on 徳 at snapshot/kanji/徳.md:14; no declaration on 正 at repo/kanji/正.md:1-12. Not currently curated. Correct answers and physical straightening are additional uses, not grounds to confine 正 away from conduct."
+    },
+    {
+      "id": "E8",
+      "card": "福",
+      "reportLine": 88,
+      "displayedTitle": "good fortune",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 福 includes blessing/good fortune/happiness, evidence/jmdict-families.xml:949-969; independent 徳 includes grace and divine protection, evidence/external-snapshots/01-extract.txt:23.",
+      "disposition": "Already handled: blessing is a supported ordinary secondary overlap, not just a shared topic. Declared on 徳 at snapshot/kanji/徳.md:14; no declaration on 福 at repo/kanji/福.md:1-12. Not currently curated; this direct disposition supplies no transitive protection for 幸."
+    },
+    {
+      "id": "E9",
+      "card": "尊",
+      "reportLine": 89,
+      "displayedTitle": "revere; esteem",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Independent 尊ぶ includes esteem, respect and revere, evidence/jmdict-families.xml:1214-1263; 徳 independently has commanding respect, evidence/kanjidic2-records.xml:55-60. The comparison also includes noble/precious, repo/kanji/尊.md:19-20.",
+      "disposition": "Already handled conservatively: the respect/esteem family can confuse an English meaning choice despite the difference between commanding respect and showing it. Declared on 徳 at snapshot/kanji/徳.md:14; none on 尊 at repo/kanji/尊.md:1-12. Not currently curated; no claim that the characters are unrestricted synonyms."
+    },
+    {
+      "id": "E10",
+      "card": "敬",
+      "reportLine": 90,
+      "displayedTitle": "respect; honor",
+      "titleMatches": true,
+      "relatedNewCards": {
+        "徳": {
+          "newEndpointDeclares": true,
+          "otherEndpointDeclares": false
+        }
+      },
+      "reason": "Actual label repo/kanji/敬.md:3 and independent 敬う respect/honor/esteem, evidence/jmdict-families.xml:363-388, overlap the respect stem in independent 徳, evidence/kanjidic2-records.xml:55-60.",
+      "disposition": "Already handled conservatively: the donor/recipient distinction does not remove the English respect overlap. Declared on 徳 at snapshot/kanji/徳.md:14; none on 敬 at repo/kanji/敬.md:1-12. Not currently curated; no transitive inference through 尊 or 義."
+    }
+  ],
+  "sourceFilesRehashed": 56,
+  "newTitles": {
+    "徳": "virtue; benevolence"
+  },
+  "acceptanceLimit": "Mechanics and factual source bindings only; no linguistic verdict is inferred."
+}

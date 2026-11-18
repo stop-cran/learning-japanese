@@ -1,0 +1,113 @@
+{
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorized-gpt-final-002\\final.json",
+    "sha256": "67c8a51ebb4ac8d7c1d221b47a71b7e09a2a2c801899457d916733a1e130b7c0"
+  },
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorized-gpt-confirmation-002\\report\\review.md",
+    "sha256": "cd978c7fdca267ba768ddac59c6ada138ffb12443b8c3c02f844064559877ac2"
+  },
+  "candidate": "cc374051efa75199212a87c9abf08d7391419055",
+  "run": "N1-B134-GPT-REVISION-002",
+  "session": "53c8fc4d-7652-40d4-9482-036bf448237e",
+  "family": "gpt",
+  "scope": "Bounded revision of the earlier B134 conclusions only; original raw review verdicts and unresolved obligations are not erased.",
+  "verdict": "CONFIRMED",
+  "reportReadCompletely": true,
+  "claimChecks": [
+    {
+      "claim": "Actual authorized same-reviewer execution and report binding.",
+      "evidence": "Final authorized-gpt-final-002 binds the actual session 53c8fc4d stream (4756956 bytes, events d148cf6a…): the forwarded authorization was delivered as interactionId f3a02587-e9b5-4a54-b38a-e7ea63514f0a, and runtime-003's check that the delivered turn's own turn_start is interactive passed. 14/14 chain segments were read; one write (a single apply_patch Add File, toolCallId custom_call_ENcYb6bJcSEIfRqTfg1DLOLi) with one verified readback; the stored report cd978c7f… equals the requested LF content 796b5ee9… after LF-to-CRLF expansion only; one CONFIRMED completion; 0 fetches; 0 unexpected user messages; reviewer idle. Actual model gpt-6.1-sol, contextTier long_context, maxPromptTokens 922000, peak/last input 419340 within the 710000 pre-phase-2 gate, zero compactions.",
+      "disposition": "Accept execution coverage only. Final-001 failed closed because runtime-003/V4 accepted the CRLF normalization note only for a single native create; it is preserved with its diagnostic. Successor runtime-004 (bcaaaf90…) changes only that predicate to a single apply_patch Add File with LF-to-CRLF binding. Its 8 controls passed and it proves the derived audit is otherwise byte-identical to the runtime-002 audit."
+    },
+    {
+      "claim": "F1 RESOLVED: 濃 direct precaution and historical deep-purple note.",
+      "evidence": "Independently diffed base (355cccb8) against snapshot (cc374051) kanji/紫.md. The only teaching changes are 濃 and 食 appended after the 56 prior exclusions in unchanged order (line 14) and two Notes bullets at lines 71-74. 01-extract.txt:99-103 records 濃(こき) for 濃紫 as a historical use. The new 濃 note (lines 71-72) distinguishes ordinary concentration/darkness from that use.",
+      "disposition": "RESOLVED accepted. The report cites snapshot/kanji/紫.md:70-71, but the note is at lines 71-72: an off-by-one range with the claimed text on the adjacent line. Recorded only; no finding."
+    },
+    {
+      "claim": "F2 RESOLVED: 食 direct precaution and foodstuff/soy-sauce note.",
+      "evidence": "Complete JMdict 1311640 gives a soy-sauce sense for 紫 (xref 醤油); complete 1956480 gives food/foodstuff for 食. The new note (lines 73-74) says the broad category can overlap and denies that 食 is a specific soy-sauce word. 食 is a direct declaration at 紫, not a transitive inference.",
+      "disposition": "RESOLVED accepted. The report cites 紫.md:72-73, but the note is at lines 73-74: an off-by-one range. Recorded only; no finding."
+    },
+    {
+      "claim": "C1-C3 DISPUTE ACCEPTED (衣, 服, 花).",
+      "evidence": "01-extract.txt:32-43 (colored paper/cloth, clothing-color regulations, 検校), 72-76 (Western symbolism and Japanese clothing-color regulation), 9-14 and 54-60 (gromwell plant; 字通 beautiful/sacred use) match the report's characterization. own-prior/report.md:39, 40 and 42 are the cited original D1, D2 and D4 rows. own-prior/adjudication.json C1-C3 withdrawal reasons match.",
+      "disposition": "Accept as bounded actionability decisions that preserve the reviewer's raw historical/metonymic uncertainty; no exhaustive negative is claimed."
+    },
+    {
+      "claim": "C4 DISPUTE ACCEPTED (列) and the line153/198 correction.",
+      "evidence": "01-extract.txt:36 is the 検校 rank definition; own-prior/report.md:46 is the D8 row. In the FRESH-003 compact union (02115702…), line 153 is 殿 1442480 and line 198 is 列 1558330, which matches the adjudication's correction.",
+      "disposition": "Accepted; the original report is not rewritten."
+    },
+    {
+      "claim": "C5-C6 DISPUTE ACCEPTED (殿, 赤).",
+      "evidence": "01-extract.txt:54-58 (字通 court/immortal compound usage), 01-extract.txt:32 (intermediate red-blue hue) and 02-extract.txt:209-216 (purple/red English overlap via an anger idiom and the purple-bacteria name) match. own-prior/report.md:47 and 52 are the D9 and D15 rows.",
+      "disposition": "Accepted as bounded; not a transitive inference through 紅 and not a universal historical negative."
+    },
+    {
+      "claim": "L3: original FRESH-003 citation errors in D3, D8, D11, E6 and E9.",
+      "evidence": "Origin: the reviewer's own FRESH-003 completion message (event offset 3809234, 2026-11-17T13:28:00Z) disclosed these errors. The coordinator checked them against the FRESH-003 compact union. Each cites a neighboring record: D3 line 289 instead of the 根 record at 287; D11 line 278 instead of the 糸 record at 277; E6 line 138 instead of the 草 record at 137; E9 line 493 instead of the 紅 record at 495; D8 line 153 instead of 198. The intended records (根 perseverance; 糸 thread/one ten-thousandth; 草 grass/herb; 紅 crimson/rouge) support the original rows' descriptions.",
+      "disposition": "The limit is accurate. The original FRESH-003 adjudication recorded only the D8 correction; D3/D11/E6/E9 are now recorded here without rewriting the original report. No open claim depends on them (D3/D11 harmless; E6/E9 already directly declared)."
+    },
+    {
+      "claim": "Basis: scope and gate proofs, preservation and four-facet CLEAN with no new finding.",
+      "evidence": "proof/coordinator-scope.json: PASS, 56→58 exclusions appended in order, only Notes changed, +2 bullets, 8747 runtime entries, 濃/食 cards unchanged. proof/coordinator-gates.json: PASS for cc374051 with 10 gates per working/committed group, 51 quiz warnings and 1 latent reading pair retained. proof/preservation.json binds both proofs with semanticAcceptance false. The patch has only the two 紫.md hunks plus the manifest contentVersion and 紫 hash.",
+      "disposition": "Accept the bounded CLEAN confirmation. Unchanged primary teaching is carried forward, not freshly certified."
+    }
+  ],
+  "limitsPreserved": [
+    "Same FRESH-003 GPT reviewer's prospective bounded confirmation under the user's later authorization; the original raw NEEDS FIX on snapshot 355cccb8 and its six L3 UNVERIFIED assessments remain unchanged.",
+    "The held pre-authorization follow-up evidence and the earlier no-read refusal remain unchanged and are not retroactively authorized.",
+    "Original FRESH-003 citation errors in D3, D8, D11, E6 and E9 remain in that report; corrections exist only in the adjudication records. The F1/F2 line ranges in this report are each one line early.",
+    "D13 詩 missing card, unread exclusion-target and weaker-index articles, and unopened optional KANJIDIC2/derived-index/raw sources remain.",
+    "51 Notes/quiz warnings, 11 fallback cards, one latent reading pair, unresolved ツツム/包, the 11-versus-12 stroke-source discrepancy, the missing 茈 font glyph and the invented mnemonic remain.",
+    "Host-only checks: no native, Kotlin, device, rendered-font, custom-pool, multi-borrow, optimal-difficulty or whole-set acceptance.",
+    "Runtime-004 is a disclosed successor for the actual apply_patch Add File write shape; failed final-001 and its diagnostic remain preserved.",
+    "No closure, integration, publication or delivery credit from this acceptance alone."
+  ],
+  "acceptedNewFindings": [],
+  "openClaimIds": [],
+  "dispositions": {
+    "F1": "RESOLVED",
+    "F2": "RESOLVED",
+    "C1": "DISPUTE ACCEPTED",
+    "C2": "DISPUTE ACCEPTED",
+    "C3": "DISPUTE ACCEPTED",
+    "C4": "DISPUTE ACCEPTED",
+    "C5": "DISPUTE ACCEPTED",
+    "C6": "DISPUTE ACCEPTED"
+  },
+  "authorization": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorization-continuation-prep-001\\authorization-event.jsonl",
+    "sha256": "4d69ed0c6e0476b38bba3e22b31b959178d417d8b1ecfaa7d29221660da167cb"
+  },
+  "heldEvidenceTreatment": "retained-not-retroactively-authorized",
+  "rawAuditWasClean": true,
+  "controlAdjudicationApplied": false,
+  "priorRawVerdict": "NEEDS FIX",
+  "authorizationProspective": true,
+  "continuation": {
+    "kind": "same-gpt-full-dossier",
+    "priorPreflight": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\revision-confirmation-gpt-002\\preflight.json",
+      "sha256": "b59401edd077e186d937a57c07a0e16fcfea6fdbb4f76eabb47490ffe0ef227c"
+    },
+    "originalObligationCount": 41,
+    "authorizationIsProspective": true,
+    "oldEvidenceRemainsHeld": true,
+    "priorEvents": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\revision-confirmation-gpt-final-001\\events.jsonl",
+      "sha256": "9c9620c5df9c4aee6ab7333a137b8b5ce111028c8dfc21eb82bb91474072bff7"
+    }
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorization-runtime-004\\b134_authorized_confirmation_v3.py",
+    "sha256": "bcaaaf90cb771a3b84bf31bbbd1f173846f4fb99e114ab052afc11c279756450"
+  },
+  "substantiveDecisionInput": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-134\\review\\authorized-gpt-decision-001\\decision.json",
+    "sha256": "e881a50ae5d35f951a0f2f78d1d71f6dfbfb9cc47d9b347814c71b9b9b9a0290"
+  },
+  "publicationAccepted": false
+}

@@ -1,0 +1,29 @@
+{
+  "run": "N1-B129-CLAUDE-CONFIRM-003",
+  "session": "6b850696-09e6-4774-b35a-09d67befffe6",
+  "family": "claude",
+  "candidate": "1b27107972311bdb9f485d0dc4879670a76cdc43",
+  "status": "VOID_CONTEXT_COMPACTION",
+  "reviewEvidenceAccepted": false,
+  "confirmationAccepted": false,
+  "reportWritten": false,
+  "linguisticVerdict": null,
+  "rawCompletionMessage": [
+    "UNVERIFIED"
+  ],
+  "audit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\N1-B129-CLAUDE-CONFIRM-003\\audit-20261116T091507515746\\audit.json",
+    "sha256": "60b0fda34a081a4cfd67c17f19e861734feeba96fd52480d55bd6b06f73ab786"
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\N1-B129-CLAUDE-CONFIRM-003-context-diagnosis.json",
+    "sha256": "01db819cc6cb145c17a0c58b384c425995ff5b0fe47ecd767582ed0cd037bad8",
+    "bytes": 821
+  },
+  "chainRead": 63,
+  "chainRequired": 65,
+  "coordinatorStop": "Priority stop after observing background session.compaction_start; returned UNVERIFIED without a report. Unexpected stop turn and incomplete chain remain recorded, not waived.",
+  "rootCause": "Preflight estimated against maxPromptTokens but runtime starts background compaction near80 percent. Actual trigger764224/952000. Original context is no longer eligible; do not retry it.",
+  "futureAdmission": "Project below0.8*maxPromptTokens with margin, not below the absolute limit. Actual no-compaction audit remains mandatory.",
+  "limits": "Process failure only; no teaching judgment. Signed candidate and accepted initial review remain unchanged. No publication or delivery credit."
+}

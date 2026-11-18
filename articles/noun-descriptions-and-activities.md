@@ -7,6 +7,9 @@ needs a noun-like role. Those uses look alike, but do different jobs.
 This guide builds on [nouns and basic particles](japanese-nouns-and-basic-particles.md) and
 [adjective forms](japanese-adjective-foundations.md). The linked practice is a bounded N5 introduction,
 not a complete account of relative clauses or nominalizer choice.
+Suffixes that build nouns and describing words, such as み and さ after adjectives and 的 (which makes a
+な-adjective from a noun), are covered at N3 in
+[Tendency, state and noun-forming suffixes](tendency-and-noun-suffixes.md).
 
 ## 1. Find the noun at the end
 

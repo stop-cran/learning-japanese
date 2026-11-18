@@ -1,0 +1,263 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "908a8bde-62aa-4cf7-be19-50fb89456ebd",
+ "agent": null,
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-17T23:33:09.187Z",
+  "last": "2026-11-17T23:40:13.295Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-17T23:33:09.527Z",
+   "chars": 2406,
+   "sha256": "e4c36c150fd4198a577d84e6671bc01063b1c6fc784cef9bd899c8bb40ae37c2"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 40
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 3905454,
+  "outputTokens": 15698,
+  "cacheReadTokens": 3759954,
+  "cacheWriteTokens": 145380,
+  "reasoningTokens": 3227,
+  "costMultiplierSum": 40.0
+ },
+ "toolCalls": {
+  "total": 39,
+  "byTool": {
+   "view": 23,
+   "powershell": 8,
+   "web_fetch": 7,
+   "apply_patch": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-135-gpt"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full": 4,
+   "none": 11,
+   "notFullyRead": [
+    "snapshot/kanji/博.md",
+    "snapshot/kanji/厳.md",
+    "snapshot/kanji/及.md",
+    "snapshot/kanji/姿.md",
+    "snapshot/kanji/弾.md",
+    "snapshot/kanji/恵.md",
+    "snapshot/kanji/憶.md",
+    "snapshot/kanji/我.md",
+    "snapshot/kanji/揚.md",
+    "snapshot/kanji/暇.md",
+    "snapshot/kanji/模.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full (ranges)": 1,
+   "none": 2,
+   "notFullyRead": [
+    "diffs/changed-files.txt",
+    "diffs/changed-lines.txt"
+   ]
+  },
+  "checks": {
+   "files": 10,
+   "full": 1,
+   "full (ranges)": 3,
+   "none": 6,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 8,
+   "full": 2,
+   "full (ranges)": 1,
+   "none": 2,
+   "partial": 3,
+   "notFullyRead": [
+    "evidence/KanjiReadings.kt",
+    "evidence/Words.kt",
+    "evidence/daijisen-彫る.txt",
+    "evidence/kanjipedia-outside-readings.json",
+    "evidence/reading-exposure-2ef25d33.txt"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 3,
+   "none": 3,
+   "notFullyRead": [
+    "evidence/kanjivg/05186.svg",
+    "evidence/kanjivg/05468.svg",
+    "evidence/kanjivg/09ad8.svg"
+   ]
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full"
+ },
+ "outsidePaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets"
+ ],
+ "alsoReadAllowed": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-135-163b384e",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-135-gpt",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-135\\confirm-gpt.md",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-135\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-135-163b384e\\repo\\kanji",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-135-163b384e\\rubric\\copilot-instructions.md"
+ ],
+ "alsoReadCount": 2,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-135\\confirm2-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nfrom pathlib import Path\nbase=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-135-163b384e\\repo\\kanji')\nfor k in ['円','高','見']:\n p=base/(k+'.md')\n print('\\nFILE '+str(p))\n print(p.read_text(encoding='utf-8'))\nfor k in ['川','道','敬','球','教','求']:\n p=base/(k+'.md')\n print('\\nFRONT MATTER '+str(p))\n print('\\n'.join(p.read_text(encoding='utf-8').splitlines()[:16]))\n'@ | python -X utf...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nb=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-135-gpt')\nfor rel,lo,hi in [(r'diffs\\changed-lines.txt',1,100),(r'evidence\\daijisen-彫る.txt',1,30),(r'evidence\\joyo\\p110.txt',1,60),(r'evidence\\kanjivg\\05468.svg',35,62),(r'evidence\\kanjivg\\05186.svg',35,55),(r'evidence\\kanjivg\\09ad8.svg',35,65)]:\n p=b/rel\n print('\\nFILE '+rel)\n for i,line in enumerate(...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport urllib.request, urllib.parse, re\nfrom html.parser import HTMLParser\nclass Text(HTMLParser):\n def __init__(self): super().__init__(); self.parts=[]; self.skip=0\n def handle_starttag(self,t,a):\n  if t in ('script','style'): self.skip+=1\n def handle_endtag(self,t):\n  if t in ('script','style'): self.skip=max(0,self.skip-1)\n def handle_data(self,d):\n  if not self.skip: self.parts.append(d)\nf...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re,itertools\nroot=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets'); new=root/'confirm2-135-gpt'; prev=root/'confirm-135-gpt'; orig=root/'batch-135-163b384e'\nks=list('博厳及姿履巡弾彫恵憶我揚救暇模'); revised=set('博履巡弾恵憶揚救模')\ndef read(p): return p.read_text(encoding='utf-8-sig')\ndef meta(t):\n return dict(line.split(': ',1) for line in t.split('---',2)[1].strip().split...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re,itertools,difflib\nroot=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets'); new=root/'confirm2-135-gpt'; prev=root/'confirm-135-gpt'; orig=root/'batch-135-163b384e'\nks=list('博厳及姿履巡弾彫恵憶我揚救暇模'); revised=set('博履巡弾恵憶揚救模')\ndef read(p): return p.read_text(encoding='utf-8-sig')\ndef meta(t): return dict(line.split(': ',1) for line in t.split('---',2)[1].strip(...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re,itertools,difflib\nroot=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets'); new=root/'confirm2-135-gpt'; prev=root/'confirm-135-gpt'; orig=root/'batch-135-163b384e'\nks=list('博厳及姿履巡弾彫恵憶我揚救暇模'); revised=set('博履巡弾恵憶揚救模')\ndef read(p): return p.read_text(encoding='utf-8-sig')\ndef meta(t): return dict(line.split(': ',1) for line in t.split('---',2)[1].strip(...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport urllib.request,hashlib,io\nimport pdfplumber\nurl='https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf'\ndata=urllib.request.urlopen(url,timeout=60).read()\nh=hashlib.sha256(data).hexdigest(); print('Official PDF SHA-256:',h)\nassert h=='d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42'\nwith pdfplumber.open(io.BytesIO(data)) as p...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re\nroot=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets'); new=root/'confirm2-135-gpt'; prev=root/'confirm-135-gpt'; orig=root/'batch-135-163b384e'\ndef read(p): return p.read_text(encoding='utf-8-sig')\ndef meta(t): return dict(line.split(': ',1) for line in t.split('---',2)[1].strip().splitlines() if ': ' in line)\ndef arr(d,k): return [x.strip() for x i...",
+   "writeLike": false
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%BD%AB%E3%82%8B",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/shogakukan.jsp",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/shogakukan.jsp",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/shogakukan.jsp",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E8%A6%8B",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E8%8D%89%E5%B1%A5",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E8%8D%89",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 8691,
+  "reportFile": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-135\\confirm2-gpt.md",
+  "reportExists": true,
+  "reportChars": 8692,
+  "reportBytes": 9200,
+  "reportSha256": "f4b313656c8c795c277301063cb909d1953e9f5e21893d6ce98ff96e4d8be1e3",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "paths outside the packet and report: 1"
+ ]
+}

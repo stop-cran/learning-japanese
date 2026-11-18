@@ -214,6 +214,9 @@ In casual speech, **～てしまう → ～ちゃう** and **～でしまう →
 
 Likewise, not every ～切る compound describes completing a task: **疲れ切る（つかれきる）** means "be completely exhausted." Learn the applicable sense, not a universal instruction to attach 切る to anything.
 
+At N3, **～切る／～切れない** and **～通す（とおす）**, "keep it up to the end," are practised in
+[Compound verb endings](compound-verb-endings.md#1-doing-it-completely-切る-and-切れない).
+
 ## 4. Doing it beforehand and leaving it that way
 
 ### Preparation with ～ておく
@@ -276,6 +279,10 @@ Even one compound can have different interpretations. NINJAL contrasts two uses 
 
 Likewise, **読み込む** also means "read/load" in computing. Understanding the components helps, but the whole word and context select the sense.
 
+At N3, both senses are practised: movement into a place, against **～出す（だす）**, "out of," in
+[Into a place: 込む against 出す](compound-verb-endings.md#3-into-a-place-込む-against-出す), and the deeper sense in
+[Deeply: the second meaning of 込む](compound-verb-endings.md#4-deeply-the-second-meaning-of-込む).
+
 ### ～つく: reaching a target or an idea
 
 **追いつく** and **思いつく** are established **ます-stem + verb** compounds, not て-form auxiliaries:
@@ -323,6 +330,7 @@ These also use stem-based constructions, but deserve separate treatment rather t
 | ～戻す（もどす） | Return or recovery in selected compounds | 取り戻す - get back, recover |
 
 The upward/downward readings are **みあげる／みおろす**. These meanings belong to the illustrated compounds; they do not exhaust what 上げる, 下ろす, or 戻す can contribute elsewhere.
+The noun form **読みかけ（よみかけ）**, "partly read," is contrasted with **焼きたて（やきたて）**, "freshly baked," in the N3 article [Change, phases and trends](change-phases-and-trends.md).
 
 ## 6. Putting the pieces together
 

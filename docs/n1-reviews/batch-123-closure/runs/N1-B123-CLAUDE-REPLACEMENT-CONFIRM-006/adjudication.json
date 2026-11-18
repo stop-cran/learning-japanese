@@ -1,0 +1,93 @@
+{
+  "run": "N1-B123-CLAUDE-REPLACEMENT-CONFIRM-006",
+  "batch": 123,
+  "family": "claude",
+  "reviewerOrigin": "fresh-context replacement for unavailable original Claude context (original 44df27a1 compacted during void CONFIRM-003; CONFIRM-004 refused and never launched; replacement 005 VOID/incomplete)",
+  "candidate": "60db6255f5c74bc039884d13640966dbe74fee99",
+  "diffBase": "047970a055903c0337d73823288695938648dd1d",
+  "historicalBasis": "N1-B123-CLAUDE-CONFIRM-002 (original Claude, accepted on its earlier snapshot)",
+  "status": "ACCEPTED_BOUNDED_CONFIRMATION",
+  "verdict": "CONFIRMED",
+  "reportRead": "Complete report, including the Basis covering all six new guards and three no-new-guard pairs, and all six limitations.",
+  "execution": {
+    "actualResponseModels": [
+      "claude-sonnet-5-5"
+    ],
+    "assistantModels": [
+      "claude-sonnet-5.5"
+    ],
+    "contextTiers": [
+      "long_context"
+    ],
+    "maxPromptTokens": [
+      936000
+    ],
+    "compactions": [],
+    "chainRead": 21,
+    "chainRequired": 21,
+    "sequentialSingleCallResponses": true,
+    "writes": 1,
+    "readbacks": 1,
+    "readbackVerified": true,
+    "fetches": 0,
+    "breaches": [],
+    "unexpectedUserMessages": 0,
+    "verdictMessage": "CONFIRMED",
+    "reportBinding": "Single written report matches successful readback after CRLF normalization; no report bytes edited.",
+    "guardedFinalReceipt": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\confirm-006-final-002\\receipt.json",
+      "sha256": "d12793b3352ac8db06cd3193c97424f0cc71c6d05400c126a82aa825c58bed3a"
+    },
+    "preservedFailedFinalAttempt": "scratch-123/review/confirm-006-final-001 (coordinator relative-path error, exit 2 before any audit; no reviewer effect)"
+  },
+  "coordinatorClaimVerification": {
+    "diff": "fix.patch confirms only six exclusions (本, 度, 像, 計, 測, 量), two note bullets and six character-source links were added; distractors 車/書/達 and all 34 earlier exclusions unchanged.",
+    "jmdict": "1438050 法/則/典/範 includes model, pattern, transverse measurement, measurement across; 1252050 計 plan/meter/measuring device; 1600650 計る/測る/量る measure/infer; 1554640 量 quantity; 1516925/1516930 方; 1957060/2412900 理; 1481890 範囲 — all verified in the signed reconciliation-001 JMdict selection.",
+    "titles": "Displayed titles verified at candidate: 囲 surround; enclose / 方 direction, method / 理 reason, logic / 像 image; statue / 本 book, origin / 度 degree, number of times / 計 measure; plan / 測 measure, gauge / 量 quantity; amount.",
+    "gates": "committed-gates-001 unittest.log: Ran 431 tests, OK; HTTP 429 retry lines come from an unrelated network test, as the reviewer states."
+  },
+  "dispositions": {},
+  "acceptedNewFindings": [],
+  "optional": [],
+  "resolvedPriorClaims": {
+    "Q1": "RESOLVED: 本's independently attested model-to-follow sense supports the direct guard, not derived from 手本.",
+    "Q2": "RESOLVED: 像 is a conservative English 'model'-as-representation guard; no exemplar sense is claimed for 像 nor likeness for 範.",
+    "Q3": "RESOLVED within supplied evidence: 囲's surround/enclose and surroundings senses establish neither answer for the other; bounded, not exhaustive.",
+    "Q4": "RESOLVED within supplied evidence: 方's method/side/category/field senses give no exemplar or standard sense; 範疇 category is a whole-word sense.",
+    "Q5": "RESOLVED: 度's attested standard/exemplar branch supports the direct guard, separate from degree/occurrence.",
+    "Q6": "RESOLVED: 計 is a conservative measure/result-label guard against のり transverse measurement; 範 is not made a measuring device or every plan.",
+    "Q7": "RESOLVED: 測 measuring/inference senses justify conservative protection without a 範 measuring verb.",
+    "Q8": "RESOLVED: 量 quantity/measured amount justifies conservative protection without equating quantity to a normative standard.",
+    "Q9": "RESOLVED within supplied evidence: 理's reason/principle/logic senses, including the moral association kept in the neutral dispositions, do not make the displayed reason/logic label a second answer for 範."
+  },
+  "limitAdjudication": {
+    "L1": "Accurate: complete new Daijisen captures were deliberately not redistributed; positive claims rest on verified short phrases (followup-004-source-phrase-verification.json) and coordinator full-source adjudication.",
+    "L2": "Accurate and non-blocking: comparison cards were checked through the actual snapshot cards.",
+    "L3": "Accurate, non-blocking documentation-precision note. JMdict 1235960 is 境界, listed in the 囲 pair's independentSources beside 1481890 範囲 and 1438050 範 as context for 範's bounded-frame sense. It is not a 囲 entry, is not cited on any learner-facing card, and no pair decision depends on it. Retained as a known limitation; not a consequential unresolved claim.",
+    "L4": "Accurate: host-model gates are bounded; native/device/whole-set acceptance remains outstanding.",
+    "L5": "Accurate: stroke JSON, binaries and receipts outside the chain were not reviewed; bound by the independent revision proof.",
+    "L6": "Accurate: bounded judgements, not exhaustive; prior Claude002 and initial-report limits preserved."
+  },
+  "openClaimIds": [],
+  "priorStatePreserved": "N1-B123-CLAUDE-CONFIRM-002 remains the original reviewer's accepted earlier-snapshot confirmation. CONFIRM-003 remains VOID (execution breaches; context compacted). CONFIRM-004 remains refused/unlaunched. REPLACEMENT-CONFIRM-005 remains VOID/incomplete. None is relabelled as accepted.",
+  "limits": [
+    "Bounded textual confirmation of the six-guard delta and Q1-Q9 only; not exhaustive linguistic or whole-corpus acceptance.",
+    "Reviewer is a fresh-context replacement in the Claude family, not the original Claude session; independence from the author and GPT lineage is preserved.",
+    "Host-model outputs cover their stated pools only. Custom/multiple-borrow pools, native/Kotlin/device behavior, older installed APK compatibility and final whole-set acceptance remain outside this confirmation.",
+    "No served ZIP, publication or delivery-count increase is accepted here."
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-123\\N1-B123-CLAUDE-REPLACEMENT-CONFIRM-006.md",
+    "sha256": "e415e8ed4b22bd305ec75824fddf391f06b0a1953f0787b2852673d1f432e41a"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\confirm\\N1-B123-CLAUDE-REPLACEMENT-CONFIRM-006-final.json",
+    "sha256": "5d200b062a49d4f9aba698e37840672436b5323bec60e584add14b7317a0bb96"
+  },
+  "audit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\confirm\\N1-B123-CLAUDE-REPLACEMENT-CONFIRM-006\\audit-20261115T194439428634\\audit.json",
+    "sha256": "ef204c3bf6e35785cc8312c96ea078b8f8e4aece3892fbad72787d39304b021a"
+  },
+  "confirmationAccepted": true,
+  "publicationAccepted": false
+}

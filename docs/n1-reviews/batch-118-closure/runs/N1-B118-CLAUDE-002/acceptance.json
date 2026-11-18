@@ -1,0 +1,36 @@
+{
+  "run": "N1-B118-CLAUDE-002",
+  "batch": 118,
+  "candidate": "dc2ee12623b36eb059d147ece2f2cfa3f87dfad7",
+  "createdAt": "2026-11-15T07:47:48.416547+00:00",
+  "preflightSha256": "19704c2cbf26647ff4d2c95f475dbb060e819d9bcf608afbfeda46575bf57995",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\prompts\\preflight-claude-002.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "The frozen card teaches separating into parts (snapshot/kanji/析.md:23). This is independently supported by the character-level Daijisen definition こまかく分かつ (evidence/external-snapshots/01-extract.txt:7) and KANJIDIC2 divide (evidence/kanjidic2-records.xml:52), without treating a whole-word JMdict gloss as a general character meaning. 別 and 離 both display separate, and neither direct pair is declared on either endpoint. Existing 析/分 and 分/離 declarations do not cover 析/離. The content contract requires checking displayed labels against ordinary meanings and explicitly makes exclusions non-transitive (repo/docs/content-format.md:97-114).",
+      "fix": "Append 別 and 離 to 析's quiz_exclusions while preserving all original exclusions, and explain the direct separation overlap concisely in Notes. Do not remove the source-supported dividing sense merely to suppress the collision.",
+      "scope": "A bounded semantic safeguard. Current curated choices already fill all slots; this does not claim a demonstrated collision in the current default pool or native/arbitrary-pool acceptance."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-118\\initial-claude-002.md",
+    "sha256": "4bae516469b2d9a4bd3bfa4b952bd5c6e214ba13a72b4aec22ede19f3b0da73e"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-CLAUDE-002-final.json",
+    "sha256": "f7833b826960c089171c4592d77d3596788a75c7c4a127f68d14d76a2244f7a7"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-CLAUDE-002-adjudication.json",
+    "sha256": "54d09a3c5580158510ff4596e35e020a0c84b86a8ca485aa1ebde109d5a21ca6"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

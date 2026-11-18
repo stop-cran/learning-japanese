@@ -1,0 +1,63 @@
+{
+  "batch": 123,
+  "run": "N1-B123-GPT-CONFIRM-002",
+  "family": "gpt",
+  "session": "fbf6d07e-124a-4cf8-b339-5060f515e0b9",
+  "candidate": "047970a055903c0337d73823288695938648dd1d",
+  "verdict": "UNVERIFIED",
+  "reportSha256": "4d485ddefa4ebd29464e88e4bd715b5c1fd46f9c3ca078e1b71f75e8f7082d7a",
+  "finalSha256": "fb8083675e70b212b18290251e0ee615e7574b338650831ee722391c529fab8d",
+  "execution": "Mechanical final PASS: all 62 segments, one report write/readback, exact UNVERIFIED handoff, zero fetches, no breaches or compaction. Complete report read by coordinator.",
+  "dispositions": {
+    "F1": "RESOLVED",
+    "F2": "RESOLVED"
+  },
+  "assessment": "The raw UNVERIFIED verdict is preserved. Its original direct example and normative guards are resolved. All changed teaching and 34 declarations were checked against the actual final card. The nine no-new-guard decisions remain open for a source-based follow-up; neither the earlier Claude acceptance nor static zero-hit logs can settle them by vote.",
+  "openClaimIds": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9"],
+  "openClaims": {
+    "Q1": {"pair": ["範", "本"], "reportLimit": "L2"},
+    "Q2": {"pair": ["範", "像"], "reportLimit": "L3"},
+    "Q3": {"pair": ["範", "囲"], "reportLimit": "L4"},
+    "Q4": {"pair": ["範", "方"], "reportLimit": "L5"},
+    "Q5": {"pair": ["範", "度"], "reportLimit": "L6"},
+    "Q6": {"pair": ["範", "計"], "reportLimit": "L7"},
+    "Q7": {"pair": ["範", "測"], "reportLimit": "L7"},
+    "Q8": {"pair": ["範", "量"], "reportLimit": "L7"},
+    "Q9": {"pair": ["範", "理"], "reportLimit": "L8"}
+  },
+  "newIndependentSources": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-123\\review\\open-pair-sources-001\\provenance.json",
+    "sha256": "e0ae19c482922dab9076bb08768b6395e55fb0cef4d83773b0dce0febe612996",
+    "scope": "Nine complete marked Digital Daijisen sections acquired separately after the confirmation. All nine extracts read in full, along with all actual counterpart cards. These were not available to the prior reviewers and do not retroactively change their reports."
+  },
+  "coordinatorFindings": [
+    {
+      "id": "C2",
+      "claim": "Q1",
+      "pair": ["範", "本"],
+      "severity": "minor",
+      "confidence": "high",
+      "evidence": "本-daijisen.txt:13 gives the character's exemplar sense; line 22 independently gives the noun model-to-follow sense with uses. The actual 本 card displays book, origin and has no direct guard. 範's model label is defensible for this ordinary 本 sense; this is not an inference from 手本's whole-word gloss.",
+      "requiredChange": "Add 本 directly to 範's exclusions and explain the bounded exemplar comparison."
+    },
+    {
+      "id": "C3",
+      "claim": "Q5",
+      "pair": ["範", "度"],
+      "severity": "minor",
+      "confidence": "high",
+      "evidence": "度-daijisen.txt:26 explicitly defines the character as a standard or model; lines 25 and 28 retain ruler/scale distinctions. The actual 度 card has no direct 範 guard. 範's model; standard label therefore fits the secondary character sense without relying on the transitive 程/限 guards.",
+      "requiredChange": "Add 度 directly to 範's exclusions and explain the separate standard/model sense."
+    }
+  ],
+  "remainingPairAssessment": "The seven other pairs require individual decisions using the new complete character sections plus the existing complete JMdict/KANJIDIC2 records. Preserve actual image/representation, surrounding/enclosure, direction/method/category, measuring action/device/result, and reason/principle senses. Do not equate source inclusion with frequency, infer constituent senses from compounds, demand exhaustive harmlessness, or add a blanket guard solely to obtain agreement.",
+  "acceptedNewFindings": [],
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": false,
+  "publicationAccepted": false,
+  "limits": [
+    "All fifteen raw report limits remain preserved.",
+    "C2 and C3 are new coordinator source findings, not relabeled GPT findings.",
+    "No claim of linguistic closure, native/device acceptance, arbitrary-pool safety or B123 delivery."
+  ]
+}

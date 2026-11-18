@@ -1,0 +1,626 @@
+{
+  "run": "N1-B116-GPT004-CONFIRM-001",
+  "prompt": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-prompt.txt",
+  "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-kickoff.txt",
+  "report": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-116\\confirm-gpt004-001.md",
+  "coordinator": "2451b10d-02a9-46ab-82d5-d90993f0cb8b",
+  "expectedFamily": "gpt",
+  "chainManifest": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-chain.json",
+  "completionContract": "entire-message-enum-v1",
+  "reportStructureContract": "confirm-structure-v1",
+  "dispositionIds": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5"
+  ],
+  "maxWebFetches": 0,
+  "additionalAcceptanceChecks": "Require audit fetches == 0 and a passing full-session context/zero-compaction check. The inherited auditor alone permits up to three fetches; it does not enforce this zero cap.",
+  "files": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-spec.json",
+      "sha256": "a3e85f1e7e42cca0603de283548444e7655a23baf3a82416a3f6d38c4d8f41b1"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\N1-B116-GPT-004-acceptance.json",
+      "sha256": "4e51eaa6590c8a1a44d77e776bbba0deedd1700a9d4c0631b3a484eea7334d6f"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\packet-manifest.json",
+      "sha256": "374298a21db2a3f75eefe473200c7a25ea48c417b30f6a5e37ed85fea9add8c4"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-116\\initial-gpt-004.md",
+      "sha256": "174cfe36126c9aa1eb36c56070e1b1023183e668e2749653e34fcc634f55083d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\SHA256SUMS.json",
+      "sha256": "c9978b0965138472de5147312c313d71e428a4a6864b67807f162ba60b5fd841"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\CHANGES.md",
+      "sha256": "a42e2b322aa5700d92e8aca469db09126a7a68a07a66b4ff7b85fbc8c9e2d011"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\INSTRUCTIONS.md",
+      "sha256": "359b63882c9c1ae8eb61653df1d057f1a887ba8484c2c70327181b2320864a87"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\RESPONSE.md",
+      "sha256": "87275d13fdbf4770367bbfc5fe42b2f4b4558dbf3432d328127b9c7aedcab283"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\budget.txt",
+      "sha256": "055e4bb9beb79f0ca32f0f6fe5dd7fed333a48d7fa5d4e7bac64548d7d8d6d39"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\link-targets.tsv",
+      "sha256": "dad9d0ff90169ddc226f0824e1500570bcfa184d1b3a5bb3fd1c76a4c03d09cd"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\linkplan.txt",
+      "sha256": "a9200c99153e15372cf98f6dfa72cecda394c3b8263ae8675f1c699b9fadb306"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\lint.txt",
+      "sha256": "b79b232c23e3e28c3b8e97db1c6861708e3a5dce832f7e85153bdf2e6db44e93"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\manifest-rebuild.txt",
+      "sha256": "54479645b7a91b0f256c7c796dc50735d42cb4856ac6b0611ee48c7ad393ced3"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\manifest.txt",
+      "sha256": "54479645b7a91b0f256c7c796dc50735d42cb4856ac6b0611ee48c7ad393ced3"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\quiz-safety.txt",
+      "sha256": "71fbb4b736bfbaaa597b7765a65d82fa8f795f14e49619f408a1162968b19777"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\reading-exposure-final.txt",
+      "sha256": "0171cb0330a539d800283d540060092d7826d96892c63baa0b7cc170e74dcfa4"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\unittest.txt",
+      "sha256": "7812cfe95ff0588a9a92cd24aa18133285a130e4fc979dc5314ac66606ddd99c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\checks\\vocabulary.txt",
+      "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\diffs\\changed-files.txt",
+      "sha256": "47e2af033d48e79248a7034bd28d3a0c600bfbc31475b1e1ff11617879a5da7b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\diffs\\changed-lines.txt",
+      "sha256": "83921039cc1ab7e0b1c2346066b1a4c15d71314a28ea3a8201b28b7e0f685398"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\diffs\\fix.patch",
+      "sha256": "b2f58e67f26625b30f9cc5082c79a49118829223569af2eea7630f0378f06975"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\evidence\\QuizBuilder.kt",
+      "sha256": "c3208d21958b053becfbb90fef78877f2ad67caf87b97924ee4f633c0e4c91ee"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\evidence\\README.md",
+      "sha256": "f06c86ef0062ce82e91c1dd0568b51305f8551e1539c0d47c2424f76d14906bc"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\evidence\\daijisen-禁.txt",
+      "sha256": "2658fff3d28a17d670cebcf0b72ae1bbdb23cea1b6247c8395d9f9be3ba9c358"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\evidence\\daijisen-臣.txt",
+      "sha256": "da39c070ad1b3c9fc4405013c618549c36005a901f7f9600e3561e6d3d8e12eb"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\evidence\\jmdict-cited-entries.xml",
+      "sha256": "1b62769ae4881fa81c52528b1d9a395889be821099590d7cdbee7674ba93c1a1"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\snapshot\\kanji\\憲.md",
+      "sha256": "ed81f75ef63ed8a1136cc82905a554bacf4a40d7ee84c6377fe3a6b629a82d10"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\snapshot\\kanji\\監.md",
+      "sha256": "ff657cfc5a00535d4ba3215eb4883d4ced87385e0cf29874126502e778ca739d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-be498245-gpt004-confirm-001\\snapshot\\kanji\\督.md",
+      "sha256": "d03442c22c096cbcb316ee26842cddc86f8f62c56041ad6dbecc33d8a21d0cf4"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\REVIEW.md",
+      "sha256": "bb2eac258232a20f5db0095403bb0df11d742b93965d1d53aedf9ec7cfe8d34b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\budget.txt",
+      "sha256": "7348c5ec7bbeff83ef8beac91b318f6dbb3d73472b0a84c2cfd3ff86c6fc5717"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\linkplan.txt",
+      "sha256": "a9200c99153e15372cf98f6dfa72cecda394c3b8263ae8675f1c699b9fadb306"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\lint.txt",
+      "sha256": "b79b232c23e3e28c3b8e97db1c6861708e3a5dce832f7e85153bdf2e6db44e93"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\manifest-rebuild.txt",
+      "sha256": "bfa0b583ba33faa18c526ba9e75e05c721129103d59f46a8799a38e8a65639dc"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\manifest.txt",
+      "sha256": "bfa0b583ba33faa18c526ba9e75e05c721129103d59f46a8799a38e8a65639dc"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\quiz-safety.txt",
+      "sha256": "71fbb4b736bfbaaa597b7765a65d82fa8f795f14e49619f408a1162968b19777"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\reading-exposure-final.txt",
+      "sha256": "0171cb0330a539d800283d540060092d7826d96892c63baa0b7cc170e74dcfa4"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\unittest.txt",
+      "sha256": "aedddb43a2e263a4726616423ba4507beebc0216d77f2f4d20ce1da24c56212d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\checks\\vocabulary.txt",
+      "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\diffs\\existing.diff",
+      "sha256": "3691ce73e0dd4510b1149ae971f29e55282745fcafcc3638e76d6c8d80bd3709"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\dictionary-index.json",
+      "sha256": "eab5f7b0150795d5e41610e3580d2ba700fe0f2036038c5f492d2d2c8dde257a"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\external-snapshots\\01-extract.txt",
+      "sha256": "912cb47f3cd87d4f2a2b2fa82cd3518937f83edfa07dc1b2d9558674c59070c0"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\external-snapshots\\02-extract.txt",
+      "sha256": "c54e6432685b3b7f1c28f79fac8211cc42fdbf67067e1208e7cdd80dd9cccb90"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\external-snapshots\\03-extract.txt",
+      "sha256": "de22bf78292ffe472d0b813ec64c7b698cc6892986565bfd6af9e10540f1e437"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\external-snapshots\\manifest.json",
+      "sha256": "cc315ff03b47acf07b877b74761dee48e18608b72fea2e94963a95eba65fa918"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\jmdict-families.xml",
+      "sha256": "1b62769ae4881fa81c52528b1d9a395889be821099590d7cdbee7674ba93c1a1"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\joyo-rows.json",
+      "sha256": "49998bb61c62f745cf3bfb7de7a90fc91494c12e67b4bb97a810ffeea41dae0d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\kanjidic2-records.xml",
+      "sha256": "13f56030a6239f034f82c3af09c89669413138b1396c30905322a1034ec22ea7"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\provenance.json",
+      "sha256": "8dea832a6bb53ea8ef565b6c35d9fc4746c99752d843c1c9403027a89d4b07ae"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\shape-evidence.json",
+      "sha256": "a05b236195d3a73d6d009103f19e462baca5f9ed672b516d141c69c8257b42e4"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\source-metadata.json",
+      "sha256": "ac730b39dfcf6bbf24c28078420d1f579e4e823c9b8739186396e9c779f9aeaa"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\evidence\\title-index.txt",
+      "sha256": "ed9a4ac4163bc6117ef072dc1d1b1242df6060431a08101311aae366e82254c8"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\packet.json",
+      "sha256": "04f587a5f593d3156b0d096af3c55cbacc03780eb857be71ba6de77d2376d0b3"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\docs\\content-format.md",
+      "sha256": "7d5b1f63657a8d31ebaa92742b0f7d9c7bc8144323dddf3d20901e65c6f07c92"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\docs\\jlpt-levels.md",
+      "sha256": "8bd5ed42ec381ba940797aacb2a8d7f85d0d3798350783ba5782eb8a50232267"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\且.md",
+      "sha256": "086329a25b9f0f2b5ad1c383f2ac041afac1d3530e2822815e101efd12ecea60"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\主.md",
+      "sha256": "2e482550069b4a4c70f70f16d78eaf7cb9aea31bfc621a42a8ab7b42b321810f"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\人.md",
+      "sha256": "b4dc367685d7f68abd547f5ee9c37bd266b7e581e66464aae62d121df552d7d7"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\令.md",
+      "sha256": "26b1a6ec03327a7a662ee4c1b9516988932f49ad3bdab551d2a23406e308c377"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\任.md",
+      "sha256": "c0a007bbf71bae24d48a70f36aaf905fe438c54353a9a349e72939e969bebc9c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\係.md",
+      "sha256": "76097c847f6d88a8181606f4727851eb2b1f75a92a8e0ee401ad786d3405bd99"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\促.md",
+      "sha256": "213e3e0f007b4c3e3c7b6aad4e91a20fa5188599f6c4180ff1efcf51686f5383"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\保.md",
+      "sha256": "5354233e53549c7727b2942aa7a2b16ab32e460910f686f93d03696ca87b58b1"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\催.md",
+      "sha256": "bd6c9f6d7bc901545e61ea4fbccdf52339152bf50e0d91c4fc0bcb035c0caaf2"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\公.md",
+      "sha256": "d251e910a5ffcd25e7ff49c5157cf1827856a1705383c84a68e595139c076db7"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\典.md",
+      "sha256": "148ae81b7a03b2a9be5df30dbb95d588b0aee185057f21543ffdad777b1df929"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\制.md",
+      "sha256": "fe8162fcda9354efdb9e75f678194c8e0edebe4cafd6f037fba24845af4ca610"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\則.md",
+      "sha256": "327bde33cc483b444d83afcd3526111e79b849c37adee7982649861df0f8096d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\励.md",
+      "sha256": "4908abc74f4c87e170b21714e98e877f290c94c48d0ceccb712dddb22a966652"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\勅.md",
+      "sha256": "21a64320d382130fa138640a06f1b2abfc64b87de1abd189d8cf75f531db9cee"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\募.md",
+      "sha256": "1692a7f67084c8f35093514740b50074bd37cea05fa9c1305b302e26901ad4cd"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\勧.md",
+      "sha256": "d44572b78b276494fb10f91e5f824ca7bae363173e27d1daffea5a994851b4ae"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\区.md",
+      "sha256": "d2936e26cbb61b78222ab90f8f053cee801a18109fa5b737e87386e5426c891b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\召.md",
+      "sha256": "7b1b3a74d4782a50c8ce24e67adb8293996e4f70e1b6dbd14243b6845828d3a2"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\命.md",
+      "sha256": "33743bef348095e0427df260556dadff9e9760c40a1693a1d99b7323105b58d2"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\営.md",
+      "sha256": "2909fa07814f5da29e5e1ac05ebe8b62583d9cd8622382c6e0fb9e15e3f754de"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\圧.md",
+      "sha256": "ff58c2888b9f0f5b68505f8c3210352afb82340bc09dc6f3dcc250b6063b49b8"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\守.md",
+      "sha256": "882852c86848969d3fe96c2eb87b99be52f3ba372e9f5b7a2076eef83cd454f2"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\官.md",
+      "sha256": "759450687488cf920c9cb8441cb1360113826cf5d86a39077adf8469140d2ac1"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\害.md",
+      "sha256": "162b4348805d2d65a97c3b510ea1f2744bd355298790dbf81cb5bf18a6466109"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\寄.md",
+      "sha256": "402d7dbae8bd1633812541e52d96cf833cb84c558460bc3dd9c237b3a9a9e07a"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\寒.md",
+      "sha256": "c55b1cd9610b5bc69163f8a3bce2b137e6086239ad1e8a5f219614ec5fe5a929"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\察.md",
+      "sha256": "951fc0661775abe6463e077a527328e53f73df6451509ba62e176dedb972757c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\寮.md",
+      "sha256": "1e721f12187781f0b3fdddcf65e9f530a7b31376edad3fd26800adc1898a9b63"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\将.md",
+      "sha256": "1d02b79094f16dd0d59820d7148770e646a8a0fd2d38b5e28a91bfc088bbc0ec"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\導.md",
+      "sha256": "68f9e0a26a7f4b2bddf7e35eede634dc144efdf4fef2f9c0f1c703e83e934a4b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\小.md",
+      "sha256": "a2d3b5a66465119d4bdc5c474b5040ddb3862d2295be90f4cace97888a662993"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\局.md",
+      "sha256": "5358cdd74d1ddd3d367f048337702878069523ea1e8f3e2c32a7b9acb40eadcb"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\師.md",
+      "sha256": "1e412b17e5fc07f0ebc027c5f6903cc4df3596811649419df5a38f3a2de4ff70"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\庁.md",
+      "sha256": "27b55fb22eb31d81c826dd432b481826c029444862b541ba98c0136dfc26707e"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\府.md",
+      "sha256": "89df9f7d1538141af3f49d1accbe674cc8703bc8f81e82959721cfce48a2670b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\律.md",
+      "sha256": "fbd7881b00cd1ab3f64f4d348d4cda4fbd1788bd0a80217f28d359063a34194c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\御.md",
+      "sha256": "8f8d0fed246232c264447e174b6b0e9b4d0c4c6b0bf93939e94cd62d28a5a2e6"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\押.md",
+      "sha256": "fa80205b54b3f178289f8cc28640bf758e2fba5e4af91b865c2298f68d66096f"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\握.md",
+      "sha256": "a497ce76a2409777aaa5a88986d2af2e6f1f7570760130e4d3673f305cf6034a"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\政.md",
+      "sha256": "dcc914926461c59224ac3f60e5653a6e0f8955c23b916d601d0eb37a476fb579"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\教.md",
+      "sha256": "b4b4a014725e49f5af03669c250ec64a28ea569cf2ef159ce9961d64ce2dab34"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\査.md",
+      "sha256": "ee6b263da17658bba77cf20fddb2696b78e4ca3a37b21639b8a685a586d3fa89"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\権.md",
+      "sha256": "5b0705f8b9d3f54e2a73515f60c12fc57bdcf3c73eda6c70e271a3c382e72d1e"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\求.md",
+      "sha256": "6220c012e964d5870488a311e8f6185e250be137dcdb66011747f9c630222252"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\治.md",
+      "sha256": "cd899dfb83a6d8be66fa6ebe1a85d9c299e53d7ac4016062ebb0452898d85f61"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\法.md",
+      "sha256": "ebddfec089db038c64495f6f1b48b8410e1c12384a28aa42eb00ddd3524d315b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\準.md",
+      "sha256": "489e8a57d95ba245536448238e850437b59f47a25cce0b5f85cc926cf58ef2fe"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\率.md",
+      "sha256": "b2c9e6ee300db31937d4ee8ef7067864cb5b0960460ebdbc3f7b8b3fb8441df9"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\白.md",
+      "sha256": "1a2bbcfb3d59b1f1e005a30253bbc7cba08649e30254bd06f6c27086aadb5718"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\監.md",
+      "sha256": "34615210dd89082f9cc1fc0a731c0cbc867e5be6247b37fcf09e64e13582a672"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\目.md",
+      "sha256": "ce18680eb18579bbe584ecd87330495cc30e4d4c5b7290dbf672a6cc9e52d958"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\直.md",
+      "sha256": "e0c081839d5dfd9994242af6823e464f421eafbbc0cb8bfbf6e1f91f5b94c8ab"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\省.md",
+      "sha256": "c2d10a194ec4ee729a7300230d53dbaee991eeb72e6a02059598741db65e65fa"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\看.md",
+      "sha256": "b37091f4da80e217d11f468463e9adc8802f648da0547b3f2b7095576f943b36"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\眠.md",
+      "sha256": "937b6fa825e6f1a7daed4fe11d3259ed0d336e6875d1f21f8b3dec5639052555"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\督.md",
+      "sha256": "4ff351ce0a9552a7f38478b483adb38531027cfb0f9094a0313c3c78761cf629"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\禁.md",
+      "sha256": "bde8a7c4ff3ea69792f0e4f8d4bade7043b3aa114fe582f79749e4948bfdfc3c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\管.md",
+      "sha256": "ad6e4a7a20fcd66c6a8ebfa28cdb87767f0ce1f2891f980dfe3ae8c61b252384"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\統.md",
+      "sha256": "e3d3f8d513e63d4ace31ed6a1417bbb08d97c439942d95a7c59a60d71078c3cd"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\署.md",
+      "sha256": "04baab5c8c72760953c83c7abcd89e6d7620be44b8c90e6b56e88b9f779cfca6"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\臣.md",
+      "sha256": "29e184ed7ae2907129aae99cb72e7f3493ee59089ba1fa79f1f7c37d6ae70fe5"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\見.md",
+      "sha256": "2abd61e1d746dae2778999a3f4392af873da967d333e43c6b7b2c5bf2c80866a"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\規.md",
+      "sha256": "a3ceb890a874ce19e38e821b2558e849a036d0cc50a712404bbb67947c7345bf"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\観.md",
+      "sha256": "24027e7b7bbee4ac285844e8329c22fa487dfeb2028405913339e35a7321639f"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\訓.md",
+      "sha256": "119127a015d91134b470c02b68f255669080fb0d9a88d590e2aa8c4cd56d6a13"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\詰.md",
+      "sha256": "10c0c1b65294a50becf2e58b813dda1a4532e266f8dd14e378f6bf799523e85c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\調.md",
+      "sha256": "e7b3de09b7c536e8bde4f9807d8a8d55380027cb0a2ee1e2a418c2a12499c38d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\警.md",
+      "sha256": "bd30cd0c945878a8d7e488c1918b5cc85d3318339745263da80a880abc19ff13"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\責.md",
+      "sha256": "baa512675cb3b6c899a693c9a3c2a07f52cc0ab6825926028b5d082c180e366c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\長.md",
+      "sha256": "07258edee265290025bf26ef06fb5ba6912f3c7e065c77bf4eb90f6d155557b9"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\需.md",
+      "sha256": "efd48803846ca3bb3abaf684631ad55b5c7957454bde2d96242210a6398d7d45"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\領.md",
+      "sha256": "8fcd53baea45cd6b8ea451d6b5168ecace6ee21bdba325e8c0444e9b71ec8638"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\頼.md",
+      "sha256": "8fe16ddde03e9c6d9c404b4355e69c503726db5fcd5c5aa217e800c075607495"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\kanji\\願.md",
+      "sha256": "ce2abef2a5347b7bcbcceac4f84f0bd5c6b512b6bd702bfdcfd9871e7312a33f"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\repo\\words\\責める.md",
+      "sha256": "6f51bf85318dfc3cab5e8bab188831f6dc8a361404ab3e011cde24c96dc80116"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\rubric\\content-structure.instructions.md",
+      "sha256": "c96de5ab347bc2fa5f224697f8dafb5f801dbe08985da845cd2b626681b434ef"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\rubric\\copilot-instructions.md",
+      "sha256": "cd0f9c09d21a94fbc3731e8f4ea19b798ab627ac87cc97d44b4ac45ef067de8e"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\kanji\\憲.md",
+      "sha256": "98c4f800f2dc798100dc0fff4a27e352ec5a130ce5dd67b076f2665e4aa3767c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\kanji\\監.md",
+      "sha256": "34615210dd89082f9cc1fc0a731c0cbc867e5be6247b37fcf09e64e13582a672"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\kanji\\督.md",
+      "sha256": "4ff351ce0a9552a7f38478b483adb38531027cfb0f9094a0313c3c78761cf629"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\strokes\\憲.json",
+      "sha256": "fedace8db10d7c4b82f42a7ebde00295d41218cfd954ccc64b3165d9f54058b9"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\strokes\\監.json",
+      "sha256": "5abd3b77e923e2a2b862c398bc019caffb9136ccec6d07efa16fc2fb0e6b61d8"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\strokes\\督.json",
+      "sha256": "1bb4bc3d9d1d2115a1055785be9bafab4135a99946e0103c40fa703127ddd420"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\words\\憲法.md",
+      "sha256": "5f87da5eab30116af64104c35038735737ee2fe8e14ee91b7f99c0c7005d4267"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1\\snapshot\\words\\監督.md",
+      "sha256": "9f004a3533c49f8b09aa9ccb5da7a762b0804877a14d1bf11d896ebd0e1b813c"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-prompt.txt",
+      "sha256": "e6025947ab272ef8bbe1c253967248c5b4d1b0d250b4acb2aff70b02f6aaf5b0"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-kickoff.txt",
+      "sha256": "868cf95129a788f9cc6db8b2e7277b69fdbaefb7934ac050c3188de6bb65f872"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\N1-B116-GPT004-CONFIRM-001-chain.json",
+      "sha256": "819d8eac8e2295901bd9990e475f34024b2d364b8d60b975d53c861e0cd3a07f"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\audit-confirm.py",
+      "sha256": "c6ec99949ef19057f432c052df3293184c3866e65ba7387e148a39505a3b2c9e"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\check-confirm-structure.py",
+      "sha256": "ad3a204757e872e54b81745a028d040e4510ce551046a63ec6b70fcb0bddd31d"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\confirm\\ram-guard\\verify-zip-streaming.py",
+      "sha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\confirm\\prepare-confirmation-v3.py",
+      "sha256": "aa83f49a8d213bad4033694c0060697a48de9fb731f5935434c5830758b81918"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\review_chain.py",
+      "sha256": "2c02b506086b0698ccac49ead5ddfa87271b535f4deebbefdd9f28734bfb2109"
+    }
+  ]
+}

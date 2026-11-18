@@ -1,0 +1,120 @@
+{
+  "baseline": "6da1184b",
+  "retrieved": "2026-11-16",
+  "scope": {
+    "newKanji": [],
+    "newWords": [
+      "わざわざ"
+    ],
+    "updatedWords": [
+      "わざと"
+    ]
+  },
+  "dictionary": {
+    "entry": 1606710,
+    "url": "https://www.japandict.com/態態",
+    "reading": "わざわざ",
+    "senses": [
+      1,
+      2
+    ],
+    "observed": "Common adverb; usually kana; 態々 and 態態 marked rare kanji forms. Sense 1 covers special effort; sense 2 deliberate action."
+  },
+  "japaneseDictionary": {
+    "url": "https://kotobank.jp/word/態態-665044",
+    "entry": "精選版 日本国語大辞典: わざわざ【態態】",
+    "observed": "Sense 1 contrasts doing something solely for that purpose with doing it incidentally; sense 2 covers unnecessary deliberate action."
+  },
+  "jlpt": {
+    "level": 1,
+    "source": "https://raw.githubusercontent.com/stephenmk/yomitan-jlpt-vocab/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv",
+    "header": "jmdict_seq,kana,kanji,waller_definition",
+    "row": "1606710,わざわざ,態々,\"expressly, specially, doing something especially rather than incidentally\"",
+    "normalization": "Use the dictionary-supported usual kana spelling as the card ID; retain the source spelling in the teaching text. Community study label, not an official JLPT assignment."
+  },
+  "quiz": {
+    "exclusions": [
+      [
+        "わざわざ",
+        "わざと"
+      ],
+      [
+        "わざわざ",
+        "せっかく"
+      ]
+    ],
+    "reason": "JMdict sense 2 overlaps the existing わざと answer label deliberately; on purpose. Sense 1 overlaps せっかく's with effort label and its taught went to the trouble of making it example (JMdict 1596090). Each exclusion is symmetric in compatible clients.",
+    "confusableIndex": "No わざわざ or わざと entry in docs/confusable-words.md at the baseline."
+  },
+  "classification": "Native Japanese adverb. No onomatopoeia tag or collection membership added; the card does not claim a historical etymology.",
+  "examples": "Author-composed ordinary usage examples, not quotations from the dictionaries.",
+  "review": {
+    "initialSnapshot": {
+      "baseline": "6da1184b82b60553f9b65c57f53289c779f96f7c",
+      "wordRawSha256": "0365CE57A3A067B9F0FAA556343AFEB55093EC45AE0D480CFB86B43A9EF527D5",
+      "contentVersion": "b4bf67c6116cd178"
+    },
+    "method": "Three blind read-only reviewers from different model families, assigned separate facets on the same complete card and source access. Actual model IDs reported by each reviewer.",
+    "reports": [
+      {
+        "session": "a2efbd19-7f9c-45a6-8796-b0690f531c60",
+        "model": "claude-opus-5.5",
+        "facet": "correctness",
+        "verdict": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "findings": [],
+        "optional": [
+          "Omit historical わざわざと unless wanted.",
+          "Distinguish mimetic words from sound imitation more explicitly.",
+          "CRLF occurs in existing cards; manifest normalizes it."
+        ],
+        "limits": "JapanDict rendering rather than direct JMdictDB; no validator or app execution."
+      },
+      {
+        "session": "ec51f54d-6eae-40f4-98e1-1f380d968f8c",
+        "model": "gpt-6.1-sol",
+        "facet": "consistency and quiz safety",
+        "verdict": "NEEDS FIX",
+        "scopedCoverage": "CLEAN",
+        "findings": [
+          {
+            "severity": "moderate",
+            "finding": "Missing direct わざわざ/せっかく exclusion despite taking-the-trouble overlap.",
+            "resolution": "Added せっかく to the new card's quiz_exclusions; recorded the pair here."
+          },
+          {
+            "severity": "minor",
+            "finding": "README's current two-N1-articles count becomes stale.",
+            "resolution": "Updated to three; unrelated historical counts remain unchanged."
+          }
+        ],
+        "limits": "Bounded editorial review, not exhaustive synonym certification or live/legacy Android execution."
+      },
+      {
+        "session": "92305212-02c3-4849-bbd9-8058d212bdf0",
+        "model": "grok-4.7",
+        "facet": "comprehensibility",
+        "verdict": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "findings": [],
+        "optional": [
+          "The already hedged unwelcome interpretation could be softened.",
+          "Name Kotobank's adverb headword to distinguish its first adjective headword.",
+          "The closing special-effort-or-intention wording is flatter than the earlier contrast."
+        ],
+        "limits": "JapanDict rendering rather than password-gated direct JMdictDB; examples are author-composed; no app or validator execution."
+      }
+    ],
+    "reconciliation": "Both actionable findings accepted and fixed. Optional teaching changes deferred to keep the reviewed learner prose unchanged; no historical etymology asserted.",
+    "confirmation": {
+      "model": "gpt-6.1-sol",
+      "session": "ec51f54d-6eae-40f4-98e1-1f380d968f8c",
+      "wordRawSha256": "70C409788DA7DA28FD7946D2BA1F5A3FBE454EFC245FA30F600E87898194A133",
+      "contentVersion": "db3512fb1d86f1fd",
+      "consistencyAndQuizSafety": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "disposition": "Both findings RESOLVED; actual revised card/source record and README/manifest/link diffs inspected; teaching prose unchanged; no observed regressions or outstanding findings in scope.",
+      "limits": "No exhaustive synonym audit or live/legacy Android execution."
+    }
+  }
+}

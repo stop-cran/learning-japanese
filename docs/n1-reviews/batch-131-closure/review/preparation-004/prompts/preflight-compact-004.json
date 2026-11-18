@@ -1,0 +1,56 @@
+{
+  "batch": 131,
+  "preparationVersion": "004",
+  "order": [
+    "gpt"
+  ],
+  "runs": {
+    "gpt": {
+      "run": "N1-B131-GPT-004",
+      "prompt": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\prompts\\initial-gpt-004.txt",
+      "promptSha256": "866d0b161493d5f2b4b724014f5cc9874d1eb617bc7202f7d367b04f44ab48f0",
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\prompts\\kickoff-gpt-004.txt",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only, under the exact frozen compact-002 scope.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\prompts\\initial-gpt-004.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "auditConfig": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\prompts\\audit-config-N1-B131-GPT-004.json",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\reports\\review-gpt-004\\initial-gpt-004.md",
+      "launch": {
+        "mode": "interactive",
+        "model": "gpt-6.1-sol",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B131 GPT independent review004"
+      }
+    }
+  },
+  "sequentialPrerequisite": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-003\\N1-B131-CLAUDE-003-acceptance.json",
+    "sha256": "1ed83db9be063f5f80e5d36df3a928e7fd9a8a3353c94b59d0c7fc99adb129e8",
+    "run": "N1-B131-CLAUDE-003",
+    "candidate": "1359b467e0edee8822c665614d6ca57e42785c4d",
+    "reviewAccepted": true,
+    "scope": "Acceptance identity only; no report, adjudication or findings used."
+  },
+  "capacityPolicySha256": "4413ba9864f762efd553804e9a3746ba9aa9d671ca7ab4e25f8af052e462b200",
+  "capacityForecastSha256": "1d524f25ed065fb5a2c9f4ecfbad1e28a25b4b54d0b058c6bbcd1619283ca3bb",
+  "chosenCaps": {
+    "D": 25,
+    "E": 10
+  },
+  "projectedPeak": 698784,
+  "readBudget": {
+    "coreSegments": 66,
+    "totalCoreSegmentBytes": 874263,
+    "contextProfile": {
+      "selectedModel": "gpt-6.1-sol",
+      "maxPromptTokens": 922000,
+      "prePhase2Gate": 710000
+    },
+    "startupGate": 700000
+  },
+  "limits": "No permission to admit/launch now. GPT003 is not resumed or reclassified. Accepted Claude003 is retained as opaque sequential prerequisite.",
+  "pathReadiness": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-004\\path-readiness-004.json",
+    "sha256": "c21d6bdb315ec6122dbd1ecefcc013134f0e430053c493beb4709d59e950cb93",
+    "bytes": 2677
+  }
+}

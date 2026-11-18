@@ -1,0 +1,139 @@
+{
+  "batch": 129,
+  "status": "PASS_PREPARATION_ONLY",
+  "sourcePreflight": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\confirm\\tooling-preflight.json",
+    "sha256": "82523e34974a05eef8804faa65c8395243d4966d9656a5b5057e4805a5f14f95"
+  },
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\confirm\\audit-confirm.py",
+        "sha256": "f69a0aa485c9bd88fd787cfcd8b3693a9b3a1d8d76ce988cc3f69aa27a2a1ca8"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\audit-confirm.py",
+        "sha256": "841a2f50581b053d968bca3180dbf69634f99aed681aec275bcff2e1ec94a696",
+        "bytes": 23228
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B128",
+          "after": "B129"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\confirm\\check-confirm-structure.py",
+        "sha256": "aa46bdc41635dd3ab6540efae141838babfca26edbb0321968d1967dfe52b119"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\check-confirm-structure.py",
+        "sha256": "0f42e2814ef41559f5cf101296dac94a7637799b21ba3c3e88e4a94ba5661c42",
+        "bytes": 13732
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B128",
+          "after": "B129"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\confirm\\renderer.py",
+        "sha256": "245a475fd0b1aeee492735d3f66d4e226281338c7b8f75e09db0c532ab57f55f"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\renderer.py",
+        "sha256": "4a3a53a23df13d7f4b44ea34aa3bd0a9ccb2c4893d99d3d75f05b5604ce29626",
+        "bytes": 11868
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B128",
+          "after": "B129"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\confirm\\test-audit-confirm-isolated.py",
+        "sha256": "4df9d7bbcf6c30a638557f187b407ce8b7c0c854c461f2d76fac96f69c216aa5"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\test-audit-confirm-isolated.py",
+        "sha256": "5f539fa16af76b4aea18fca17686f0d00dde46ddc3f06749b2d588fea375688e",
+        "bytes": 14908
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B128",
+          "after": "B129"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\confirm\\test-confirm-structure.py",
+        "sha256": "930254ff45d791ecf84bdb90b07466aa77a2917f807e2ff258eef52b6b15a897"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\test-confirm-structure.py",
+        "sha256": "91901584a7cb938d5d580a8e8f14bfac89fc2eab05519296cb8b9aa706c52190",
+        "bytes": 11084
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B128",
+          "after": "B129"
+        }
+      ]
+    }
+  ],
+  "engineDerivation": {
+    "source": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_v2.py",
+      "sha256": "a7a5cbc435295a99caa6be9680b6ed2caf1090df9ced8ace17a48c0210432305"
+    },
+    "output": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_b127.py",
+      "sha256": "2ac571eb72cdd73415a829bc4930082b311215e6785e3d4066b01edf214b633a",
+      "bytes": 15180
+    },
+    "helper": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b127_lifecycle_process.py",
+      "sha256": "da62da64eb7d462dc4f4d39be812edd833157d45a1ea0e9b54f8440edde6d471"
+    },
+    "reverseExact": true,
+    "soleDelta": "Final audit capture uses the existing 0.1-second communication and bounded cleanup helper; all confirmation admission, chain and audit semantics retained.",
+    "before": "    done = subprocess.run(command, capture_output=True, text=True, encoding=\"utf-8\")",
+    "after": "    from b127_lifecycle_process import python\r\n    code, stdout, stderr = python(*command[2:])\r\n    done = subprocess.CompletedProcess(command, code, stdout, stderr)"
+  },
+  "engineReuse": "Unchanged batch-generic confirm_b127.py; use run_b127_tool.py for build/final and scoped_confirmation_admission.py for admission, never unscoped admit/derive.",
+  "exitCode": 0,
+  "tests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\confirm\\tooling-tests.txt",
+    "sha256": "a1ac46c4a6358901f34513432a230b5927fab80673790ae8cc3fac99be5bb3ef",
+    "bytes": 3372
+  },
+  "testCount": 25,
+  "protocolTestCount": 21,
+  "boundedProcessTestCount": 4,
+  "rendererChecks": 3,
+  "helperTests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b127_lifecycle_process.py",
+    "sha256": "8e17a34ed89f71595d4ce65ca9fb5e12b283d67b331560995c34f4772847457e"
+  },
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b129_postreview_tools.py",
+    "sha256": "853ce0d63fe0b020ea65dd598d457db67c218157a84b9779b1448d6a0c712867"
+  },
+  "limits": "Tool preparation only. No revision, reviewer admission or semantic acceptance. Family-isolated chains require actual review results and a verified signed snapshot."
+}

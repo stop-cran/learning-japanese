@@ -1,0 +1,67 @@
+{
+  "run": "N1-B121-CLAUDE-002",
+  "batch": 121,
+  "candidate": "b5302617bf4c7232bab5bcd1e76b8ae6b938bc3a",
+  "createdAt": "2026-11-15T12:58:30.869041+00:00",
+  "preflightSha256": "8858768959fa1a004829051dad005a2c6cf99e739c7bbb2f5a81d54e938b3cc9",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\prompts\\preflight-claude-002.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted-as-direct-display-safeguards",
+      "pairs": [
+        [
+          "徳",
+          "幸"
+        ],
+        [
+          "徳",
+          "財"
+        ]
+      ],
+      "basis": "Daijisen explicitly defines 徳 as blessing/grace/protection at evidence/external-snapshots/01-extract.txt:23 and wealth/property at :25. The complete same-snapshot 幸 card displays happiness; good fortune and teaches being fortunate. 財 displays wealth; property and explicitly teaches assets. The candidate itself teaches blessings and wealth without a historical-only qualification at snapshot/kanji/徳.md:44. These are direct label/meaning overlaps, not deductions from 恩 or from sharing a compound. Neither endpoint declares these pairs.",
+      "fix": "Append 幸 and 財 to the new card's exclusions and explain the direct, limited comparisons. Preserve existing guards. Qualify the wealth sense accurately without asserting unproved modern frequency or historical exclusivity.",
+      "confidence": "medium; bounded displayed-label safeguards, not a reproduced default-pool collision"
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted-as-direct-display-safeguard",
+      "pairs": [
+        [
+          "徳",
+          "偉"
+        ]
+      ],
+      "basis": "The complete KANJIDIC2 徳 record explicitly gives commanding respect at evidence/kanjidic2-records.xml:59. The full 偉 card displays admirable; great and explains deserving admiration, including praise of conduct at repo/kanji/偉.md:20-21. Admirable is defensible against this respect-commanding character quality without equating every Japanese compound. Neither endpoint declares the pair.",
+      "fix": "Append 偉 to the new card's exclusions and give a concise limited-comparison note.",
+      "confidence": "medium; the independent dictionary gloss and actual displayed label support a conservative direct guard"
+    },
+    {
+      "id": "O2",
+      "originalClassification": "optional; medium confidence",
+      "disposition": "requires-contract-reconciliation",
+      "basis": "The candidate chooses 休, 本 and 木 and expressly calls them loose contrasts, not the closest shapes. The repository requires existing, easily confused kanji at rubric/content-structure.instructions.md:38-41 and the issue requires three defensibly wrong curated choices. Semantic safety alone does not establish that the chosen distractors satisfy the visual-selection requirement.",
+      "fix": "Have the author select and justify three suitable shape distractors, or provide a convincing source-grounded visual rationale for any retained choice. Inspect complete replacement cards and applicable readings/meanings; regenerate the manifest and rerun the unchanged reading-exposure and quiz gates. Suggested 徹/徒 are not pre-approved selections.",
+      "confidence": "medium; an explicit contract concern, not a claim of rendered/device inspection"
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-121\\initial-claude-002.md",
+    "sha256": "7a1261cbf380fde290e1778637e347fece7feb07e830b3d0776044de7fa5024c"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-CLAUDE-002-final.json",
+    "sha256": "8017daa471bd7c19b3d2ed8ca92f00a5a5313f8c1ea6ea258cdad2e4c3ec7a25"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-CLAUDE-002-adjudication.json",
+    "sha256": "98a01b68e3433a877c91b05e9986dbb5dc80524cfaec9483a071516e70aafb3c"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

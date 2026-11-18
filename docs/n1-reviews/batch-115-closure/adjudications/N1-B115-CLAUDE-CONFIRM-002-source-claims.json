@@ -1,0 +1,117 @@
+{
+  "run": "N1-B115-CLAUDE-CONFIRM-002",
+  "label": "N1 coordinator's own claim-adjudication evidence; not corrected reviewer citations",
+  "reviewerReportUnchanged": true,
+  "reviewerReportSha256": "b2570707b8e88408dfabdddd180dec62727f37acff11f649ec04ee1a76f466b7",
+  "coordinatorNormalizedDerivativeCreated": false,
+  "decisionSourceToolCallIds": [
+    "toolu_01Nvc9zSUcGiGijsJvpstvMC",
+    "toolu_014PAJKj47jy3SAAZMnmKWYb"
+  ],
+  "wrongLocatorCount": 8,
+  "mappings": [
+    {
+      "source": "original-packet/evidence/title-index.txt",
+      "sourceSha256": "5e1df249d3913e11231f376ee7668c9ecf2151ae5bcdd729a187d4c64d6a09a2",
+      "originalLocator": "1121",
+      "correctLocator": "1077",
+      "supportingText": "軽 lightweight; slight",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/evidence/title-index.txt",
+      "sourceSha256": "5e1df249d3913e11231f376ee7668c9ecf2151ae5bcdd729a187d4c64d6a09a2",
+      "originalLocator": "419",
+      "correctLocator": "354",
+      "supportingText": "害 harm",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/evidence/title-index.txt",
+      "sourceSha256": "5e1df249d3913e11231f376ee7668c9ecf2151ae5bcdd729a187d4c64d6a09a2",
+      "originalLocator": "507",
+      "correctLocator": "525",
+      "supportingText": "損 loss; damage",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/evidence/title-index.txt",
+      "sourceSha256": "5e1df249d3913e11231f376ee7668c9ecf2151ae5bcdd729a187d4c64d6a09a2",
+      "originalLocator": "453",
+      "correctLocator": "409",
+      "supportingText": "幸 happiness; good fortune",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/evidence/title-index.txt",
+      "sourceSha256": "5e1df249d3913e11231f376ee7668c9ecf2151ae5bcdd729a187d4c64d6a09a2",
+      "originalLocator": "775",
+      "correctLocator": "837",
+      "supportingText": "福 good fortune",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/evidence/title-index.txt",
+      "sourceSha256": "5e1df249d3913e11231f376ee7668c9ecf2151ae5bcdd729a187d4c64d6a09a2",
+      "originalLocator": "617",
+      "correctLocator": "562",
+      "supportingText": "時 time, hour",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/repo/docs/content-format.md",
+      "sourceSha256": "7d5b1f63657a8d31ebaa92742b0f7d9c7bc8144323dddf3d20901e65c6f07c92",
+      "originalLocator": "89-91",
+      "correctLocator": "102-107",
+      "supportingText": "Kanji-exclusion-aware clients ([Android #132](https://github.com/stop-cran/kanji-cards-android/issues/132)) additionally honor\n`quiz_exclusions`, using exact kanji IDs, not word IDs, readings or titles. A declaration on either card excludes that direct pair\nboth against the target and among chosen distractors, for curated choices and tag/random fallbacks in All, level and custom pools.\nExclusions are symmetric but not transitive: A/B and B/C do not exclude A/C. References must resolve in the complete accepted\nsource, not the currently filtered pool. A small pool may yield fewer choices, even only the target; the app never restores an\nexcluded card to fill slots. Exclusions affect meaning choices only, not readings, drawing, membership, ordering or saved progress.",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    },
+    {
+      "source": "original-packet/evidence/kanjidic2-records.xml",
+      "sourceSha256": "eb660a856e2090754826b8022d320867bb6f5fe9bb87a4711cd1389629a32575",
+      "originalLocator": "202",
+      "correctLocator": "210",
+      "supportingText": "        <meaning>interval of time</meaning>",
+      "allCorrectedLinesSupplied": true,
+      "factSupported": true,
+      "factContradicted": false
+    }
+  ],
+  "allEightFactsSupported": true,
+  "contradictedFacts": [],
+  "unsupportedFixDependencyClaims": [],
+  "otherSourceChecks": [
+    "The character/title facts are correct at the actual supplied index locations. 粒:878 and all cited revised-card lines match.",
+    "QuizBuilder.kt:26-32 directly supports the exclusion mechanics; the additional content-format locator is wrong.",
+    "The reading-options log lists only nanori as extra readings for these eight targets; reading-exposure separately covers card-text readings, including 卓/しょく. Its bounded-pool result does not establish native or arbitrary-pool safety.",
+    "The six characters claimed absent are absent from the complete title index.",
+    "The original report explicitly discloses no fresh Daijisen verification for 寸/き or 宙 and no native/phone execution. Its CLEAN judgments are not treated as independent verification of those claims.",
+    "The four-warning lint correction is preserved. The original zero-warning log is not relied upon."
+  ],
+  "reportLimitsVerbatim": [
+    "- L1: The model identity is self-reported and unverified.",
+    "- L2: No Kotlin/JVM, emulator or phone execution took place. The installed APK 5c000bd predates quiz_exclusions, so device behavior depends on an upgraded client.",
+    "- L3: QuizBuilder.kt covers meaning choices only. The reading-quiz source was not supplied, so the O6 reasoning relies on reading-options.txt host modelling.",
+    "- L4: Custom/caller-built and multi-borrow Starter pools are not modelled beyond the packet checks.",
+    "- L5: The Daijisen/Weblio entry for the 寸 き suffix (confirm-packet/snapshot/kanji/寸.md:45-46) was not fetched or re-verified, and neither was Daijisen for 時/宙.",
+    "- L6: Initial limits L1-L7 still stand: no stroke or asset changes were reviewed, 災/禍/鬼/霊/尺/曖 cards are still absent, and the lint frozen-log discrepancy is accepted as documented (confirm-packet/evidence/lint-rerun-f36cd819.txt:1-6).",
+    "- L7: The 票/署 exclusion is weakly motivated, since 票's title has no \"sign\" (KANJIDIC2 lists \"sign\"), but it is harmless and is not raised."
+  ],
+  "newFetches": 0,
+  "newSourceInputs": 0,
+  "quarantinedMaterialUsed": false
+}

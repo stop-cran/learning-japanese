@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "retrieved": "2026-11-02",
+  "baselineCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
+  "androidBaselineCommit": "2bc0234bffcb3c4a0cbafde80367d24d2638a93a",
+  "counts": {
+    "sourceMembers": 1232,
+    "existingMembers": 4,
+    "additions": 1228,
+    "onEntries": 1598,
+    "kunEntries": 1705,
+    "grade9Additions": 247,
+    "declaredCandidatePairs": 810,
+    "distinctCandidateArticles": 757,
+    "additionsWithDeclaredCandidates": 490
+  },
+  "expectedFinal": {
+    "kanji": 2213,
+    "n1Labelled": 1233
+  },
+  "scope": "Issue 60 kanji only; support words as necessary; not an official JLPT syllabus.",
+  "inputs": {
+    "n1-kanji-source-20261102.json": {
+      "sha256": "889faaefbec573e806f298766d2eee1300674c7b229bd973a35169cd2652cd73",
+      "bytes": 7393
+    },
+    "n1-planning-kanjidic2.xml.gz": {
+      "sha256": "af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed",
+      "bytes": 1488570
+    },
+    "n1-kanjivg-tree-70a0b7ae.json": {
+      "sha256": "76822e38201de97cdd1d439882542de6f9b01997f41f1be088942ed10387f74a",
+      "bytes": 2694030
+    },
+    "n1-implementation-JMdict_e.gz": {
+      "sha256": "2dbbfe0b1214911766bbc128a0935618b925be917e7d1c50f3536a89b0e8786d",
+      "bytes": 10592515
+    },
+    "n1-UnicodeData-17.0.0.txt": {
+      "sha256": "2e1efc1dcb59c575eedf5ccae60f95229f706ee6d031835247d843c11d96470c",
+      "bytes": 2198209
+    }
+  },
+  "communitySource": "https://kanjiapi.dev/v1/kanji/jlpt-1",
+  "kanjidic2": {
+    "url": "https://www.edrdg.org/kanjidic/kanjidic2.xml.gz",
+    "xmlSha256": "9a000ef112b4bad8f1e6e3ca1f8e9f73ed84c93a5eae93dadfa1513081dc5db8",
+    "header": {
+      "file_version": "4",
+      "database_version": "2026-306",
+      "date_of_creation": "2026-11-02"
+    },
+    "transformation": "Complete parsed character records for all members plus 妖 are reserialized in n1-sources/kanjidic2-selected.xml. The source index selects ja_on/ja_kun in source order; nanori and old JLPT labels are not transported into teaching metadata. Raw records remain intact."
+  },
+  "jmdict": {
+    "url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+    "creationDate": "2026-11-02",
+    "xmlSha256": "107079c692f2e49c08d45da1da227b7e021298f247d16578b44dfaa2ec9002c4",
+    "limits": "Actual frozen dictionary bytes only; applicable complete lexical families, spelling/reading/sense restrictions and author inspection still pending."
+  },
+  "unicode": {
+    "url": "https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt",
+    "version": "17.0.0",
+    "transformation": "Classical radical n uses the compatibility decomposition at U+2F00+n-1.",
+    "license": "Unicode License V3; docs/UNICODE-LICENSE.txt"
+  },
+  "kanjivg": {
+    "revision": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "treeUrl": "https://api.github.com/repos/KanjiVG/kanjivg/git/trees/70a0b7ae0c18ceb5cb358274b029cce0234a43bc?recursive=1",
+    "converter": {
+      "gitBlob": "c4b4639aff8daf579b3e16cd9afee1602ef78f7d",
+      "sha256": "6993834d66221d23399547e5a17771d2d638dc68b2d08d47e9875ddc2c932081",
+      "bytes": 3723,
+      "normalizedSha256": "22677a42589c5a8e21c2f1cf25ada71ad4987684d8309820ea70b1354fe06625"
+    },
+    "limits": "Canonical SVG inventory and blob identities only; SVG downloads, conversion and stroke-count reconciliation still pending."
+  },
+  "baselineException": {
+    "kanji": "妖",
+    "disposition": "preserve documented Kanshudo N1 exception",
+    "policy": "docs/jlpt-levels.md#documented-exceptions"
+  },
+  "dictionaryAttribution": "Copyright James William Breen and EDRDG; CC BY-SA 4.0.",
+  "kanjivgAttribution": "Copyright Ulrich Apel and contributors; CC BY-SA 3.0.",
+  "limits": "Freeze and candidate discovery only. No draft, content review, native rendering acceptance or publication is asserted. statusAtFreeze is immutable historical state, not the current review ledger. Baseline Git hashes establish bytes, not semantic correctness. Runtime paths use exact published slash/casing."
+}

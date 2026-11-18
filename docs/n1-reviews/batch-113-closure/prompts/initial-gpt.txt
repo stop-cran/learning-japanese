@@ -1,0 +1,147 @@
+Perform ONE independent, blind, read-only first review of the B113 snapshot described below, under the shared-slot grant RU-N1-B113-REVIEW-20261113-003. Do not implement fixes and do not perform a confirmation round.
+
+You are the second, different-family reviewer. You will not see the other reviewer's report or the author's rationale. Do not look for either.
+
+Original user task, for background only: "Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it." Your delegated scope is ONLY this B113 first content review, not that whole expansion. Your earlier B112 work in this session is background only. Do not reopen any B112 file (batch-112, confirm-112, reports-112, reports-112-gpt or anything else), and base every B113 claim on files you view now.
+
+Bindings:
+- Snapshot: fdec1c02f9b02f29659b56551cd0a1fd927cced1. Base: c42d80306926e99ec6436c80c0574e3a858a4286. It is signed locally and unpublished.
+- Packet root: C:\Users\stop-\n1-kanji-workspace\review-packets\batch-113-fdec1c02. SHA256SUMS.json SHA-256: aea68d97bfc52944dc6e63fc309e47d08c328990c997cc73fb651ab6b73554d0. It was re-verified unchanged before this pass.
+- Sole report destination: C:\Users\stop-\n1-kanji-workspace\reports-113\initial-gpt.md. The file is currently absent. Other reports in that folder are forbidden.
+
+What to review: read packet REVIEW.md first and follow its rubric and source map.
+- All fifteen new kanji: 慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援, with their generated stroke references.
+- The 30 link additions across 30 existing word articles. One of them, 応援, also has a narrow non-link edit.
+- The narrow edits to two existing kanji cards, 応 and 統.
+There are no new word or article files. packet.json lists the exact files, and diffs\existing.diff holds the 32 existing-file changes. The packet supplies:
+- 91 complete JMdict families and the KANJIDIC2 records;
+- exact metadata;
+- the official Joyo PDF and rows;
+- pinned KanjiVG SVGs;
+- all same-commit kanji and word context;
+- the host check outputs.
+
+Cover correctness, scoped coverage, consistency/quiz safety and comprehensibility across this whole shared scope.
+- Follow the report contract in REVIEW.md. Number findings F1.., optional items O1.. and limits L1...
+- Verdicts must distinguish CLEAN, NEEDS FIX and UNVERIFIED.
+- Name any consequential unread or unverified scope explicitly.
+- There is no finding quota. Do not invent etymology or constituent readings, and do not treat automatic checks as linguistic proof.
+- Read truncated output through the necessary continuations before claiming a complete read.
+- Keep source and reading restrictions, and spelling and register distinctions, attached to the entry or sense they apply to.
+- Do not demand unrelated vocabulary or an exhaustive historical treatment.
+
+ACCESS RULES. These are audited. Any breach aborts this review with no retry. They override any wider wording in REVIEW.md.
+1. Read local files ONLY with the file-view tool: ONE explicitly named file per call, using its full absolute path. Use view_range for continuations. Allowed files:
+   - files inside the packet root;
+   - exactly one supplemental file outside it, the title index described below.
+   Never view a directory.
+2. Make EXACTLY ONE TOOL CALL PER RESPONSE. Never put two or more tool calls in the same response, even for independent files. Wait for each result before making the next call. One parallel batch aborts the review.
+3. FORBIDDEN: shell, PowerShell or cmd; Python or any script; grep, glob, ripgrep or any other local search; directory listing, enumeration, wildcards and recursion; corpus scans; subagents; background processes; temporary files; browser or webview; JVM, Gradle, emulator or ADB; builds; and contacting any session other than the final message to the coordinator.
+4. Public pages are optional, at most 3 web-fetch calls, each to a directly named reference URL. Immediately before EACH fetch, name the URL and reason in a PUBLIC response message. No web search and no browser. The packet's evidence is meant to be sufficient: mark a point UNVERIFIED rather than exploring broadly.
+5. The only write is your one report, at the destination above. Touch no other local path. Do not open other packets, live checkouts, scratch evidence, session histories, batch progress records, author notes or rationale, or any other report.
+6. Respect the read caps in D and E below. Do not view any repo\kanji card outside C–E.
+If you cannot proceed within these rules, stop and report the blocker. Do not work around it.
+
+The file-view tool truncates output above about 20 KB. Files marked "large" below must be read in view ranges small enough to come back complete, and together the ranges must cover every line. Paths are relative to the packet root.
+
+REQUIRED READS. Read each in full and disclose any partial read.
+
+A. The core files:
+- REVIEW.md (119 lines) and packet.json (148 lines).
+- rubric\copilot-instructions.md: large, 274 lines.
+- rubric\content-structure.instructions.md.
+- repo\docs\content-format.md lines 1–139, which hold the kanji card, quiz authoring and curated reading-question contracts. The file is large, so use ranges.
+- snapshot\kanji\<char>.md for the 15 new cards and for 応 and 統.
+- snapshot\strokes\<char>.json for the 15 new cards.
+- diffs\existing.diff: large, 420 lines.
+- The 30 changed articles in snapshot\words. Their names are in packet.json.
+- All eleven files in checks\:
+  - budget.txt
+  - linkplan-verify.txt
+  - lint.txt
+  - manifest-rebuild.txt
+  - manifest.txt
+  - quiz-safety.txt
+  - reading-exposure.txt (large, 222 lines)
+  - reading-exposure-noextra.txt (large, 210 lines)
+  - unittest.txt
+  - validate.txt
+  - vocabulary.txt
+- These evidence files:
+  - source-metadata.json
+  - kanjidic2-records.xml (large, 1,061 lines)
+  - jmdict-families.xml (large, 2,266 lines)
+  - dictionary-index.json
+  - joyo-rows.json
+  - provenance.json
+- The PDF is binary: treat it as unread unless you can verify it another way.
+- Read the evidence\kanjivg SVGs only as needed for stroke counts.
+
+B. The title index. Search and enumeration are forbidden, but REVIEW.md assumes you can inspect titles across repo\kanji, so the coordinator mechanically extracted the title: front-matter value of all 1,206 cards in the packet's repo\kanji.
+- Path: C:\Users\stop-\n1-kanji-workspace\review-supplements\b113\title-index-113.txt.
+- Format: read-only, one 'KANJI title' line per card in code-point order, UTF-8 with LF line endings, 22,291 bytes, SHA-256 db2bdb13227ca6bef0a7c0d43160ae566e1c10ff6918f9f55eb7816093d71054. Front-matter and H1 titles agree for every card.
+- It is a neutral convenience list, not author analysis, and it supplies no candidates.
+Read it in exactly two view ranges:
+- lines 1–603, ending with '栄 flourish; glory';
+- lines 604–1206, starting with '栗 chestnut' and ending with '齢 age; years lived'.
+In the report, confirm that you saw both boundary lines and the final line.
+
+C. All 45 curated distractor cards, as repo\kanji\<char>.md:
+- 慢: 慣 憎 怪
+- 縫: 縮 練 緒
+- 飢: 凡 処 館
+- 恩: 因 思 患
+- 盆: 分 盗 貧
+- 誕: 延 談 誌
+- 隊: 除 象 陽
+- 需: 震 零 雲
+- 系: 糸 約 絶
+- 徹: 微 育 御
+- 討: 計 村 寺
+- 謝: 診 訪 守
+- 握: 屋 掘 掲
+- 寧: 寝 宝 寒
+- 援: 暖 授 担
+
+CAPPED READS:
+
+D. Collision candidates: at most 40 cards in repo\kanji that are neither among the 45 distractors nor in any new card's quiz_exclusions.
+- Before your FIRST candidate read, publish the FULL numbered candidate list in one PUBLIC response message, as ordinary text before the tool call. A list in private reasoning or the final report does not satisfy this requirement. For each candidate, name the new card or cards it may collide with and the overlapping sense.
+- Select this list after inspecting the new cards, index and distractors. Do not extend it later; disclose any later-discovered unread candidates as limits. The total stays at or below 40.
+
+E. Exclusion targets: at most 10 cards that already appear in some new card's quiz_exclusions.
+- Read one only where a stated conclusion relies on that card's text.
+- Immediately before EACH exclusion-target read, name that target with its reason in a PUBLIC response message. Private reasoning and retrospective report text do not count.
+- 寝 御 診 談 貧 are both distractors and exclusion targets. They count under C, not E.
+
+For the 15 new cards and for 応 and 統, use the snapshot copies, not repo\kanji.
+
+QUIZ-SAFETY AND TITLE-OVERLAP ANALYSIS. Do your own independent analysis.
+1. For each new card, compare every displayed title sense and every ordinary secondary sense against every line of the full index. Look for shared or near-synonymous meanings and for shared English head words or stems. Identify each plausible collision that the quiz_exclusions contract in content-format.md leaves unhandled.
+2. For each distractor:
+   - Verify that the card's displayed title matches its index line. If a card and the index ever differ, the card wins and the difference is a finding.
+   - Check that the distractor is not a defensible answer to the new card's meaning prompt.
+   - Note any reading it shares with the new card that would make a reading prompt defensible.
+3. For each candidate you read, decide which applies:
+   - a collision that needs an exclusion (a finding);
+   - already handled;
+   - harmless.
+In the report:
+- Give a table of every candidate and exclusion target you read: character, displayed title, related new card, reason, disposition.
+- Give per-card results for all 15 cards.
+- In Limits, list every candidate you identified but did not read, and why.
+
+The Python reading audit has explicitly limited modeled pools. It does NOT prove any of these:
+- custom or caller-built Starter behavior, or multi-borrow Starter behavior;
+- Kotlin execution;
+- native or phone acceptance;
+- compatibility with the older installed APK (5c000bd predates kanji quiz_exclusions).
+JVM and emulator work is on hold. Keep those limits rather than turning legacy helper wording into verified claims.
+
+The configured model for this session is gpt-6.1-sol. Identify the actual model only if you can verify it; otherwise disclose that the execution-model identity is unverified.
+
+Finish:
+1. Write the report with one create call.
+2. View it once to confirm it was written completely, using forceReadLargeFiles: true if needed to avoid the 20 KB limit. You cannot hash it; the coordinator will.
+3. Send ONE short message to the coordinator with the path, the snapshot, a concise verdict and findings summary, read counts for C–E and the web-fetch count.
+Then stop. Do not begin further work or release the shared slot. The coordinator will preserve and audit this report and return the shared slot after your turn and tools have finished.

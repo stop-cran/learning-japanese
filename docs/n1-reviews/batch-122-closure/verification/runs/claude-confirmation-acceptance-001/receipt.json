@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T16:29:11.452607+00:00",
+  "finished": "2026-11-15T16:29:11.618455+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json; from common import WS,frozen,sha,require; from close_selected_v2 import require_confirmation; p=WS/\"scratch-122\"/\"review\"/\"confirm\"/\"N1-B122-CLAUDE-001-CONFIRM-001-acceptance.json\"; r=json.loads(frozen(p)); require_confirmation(r,\"4659f3a2e44ac01dc2e1a455db2fee300496b080\"); [frozen(r[k][\"path\"],r[k][\"sha256\"]) for k in (\"report\",\"final\",\"adjudication\")]; f=json.loads(frozen(r[\"final\"][\"path\"])); a=json.loads(frozen(r[\"adjudication\"][\"path\"])); require(f[\"status\"]==\"MECHANICAL_PASS_REQUIRES_SUBSTANTIVE_ADJUDICATION\" and f[\"confirmation\"]==r[\"verdict\"] and f[\"report\"]==r[\"report\"] and f[\"session\"]==r[\"session\"],\"Mechanical binding mismatch\"); require(a[\"confirmationAccepted\"] and not a[\"openClaimIds\"] and a[\"candidate\"]==r[\"candidate\"] and a[\"reportSha256\"]==r[\"report\"][\"sha256\"] and a[\"finalSha256\"]==r[\"final\"][\"sha256\"],\"Adjudication binding mismatch\"); print(json.dumps({\"status\":\"PASS\",\"acceptanceSha256\":sha(frozen(p))}))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b122-worktree",
+  "exitCode": 0,
+  "childPid": 19008,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "fd339fc4b46ded27aab59de2db993860a4800240f8ca8865601bd3f69ed39344",
+  "memory": {
+    "freeRamBeforeBytes": 6823464960,
+    "freeRamAfterBytes": 6821232640,
+    "minimumObservedFreeRamBytes": 6814736384,
+    "peakWorkingSetBytes": 23126016,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "5cf7751ef3b87ed7bbfd07b412b811fe0e31212d1f3fdb7ebbd1d3ec1b6029ab",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

@@ -1,0 +1,36 @@
+{
+  "run": "N1-B118-GPT-001",
+  "batch": 118,
+  "candidate": "dc2ee12623b36eb059d147ece2f2cfa3f87dfad7",
+  "createdAt": "2026-11-15T07:52:52.861350+00:00",
+  "preflightSha256": "19704c2cbf26647ff4d2c95f475dbb060e819d9bcf608afbfeda46575bf57995",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\prompts\\preflight-claude-002.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "Independently matches accepted Claude-002 F1. The character-level Daijisen entry defines 析 as こまかく分かつ / こみ入ったものを解きほぐす (evidence/external-snapshots/01-extract.txt:4-7) and KANJIDIC2 lists divide (evidence/kanjidic2-records.xml:52); the frozen card itself teaches separating things into parts (snapshot/kanji/析.md:23). 別 displays 'separate, another' (repo/kanji/別.md:3) and 離 displays 'separate; detach' (repo/kanji/離.md:3). 析.md:14 declares [分, 解, 割, 切, 破, 剖, 板]; 別.md has no quiz_exclusions; 離.md:14 declares [別, 分, 放, 去] but not 析. The content contract makes exclusions symmetric but non-transitive and requires checking displayed labels against ordinary meanings (repo/docs/content-format.md:100-114).",
+      "fix": "Append 別 and 離 to 析's quiz_exclusions while preserving all seven original exclusions, and explain the direct separation overlap concisely in Notes. Do not remove the source-supported dividing sense to suppress the collision or claim the characters' words are interchangeable.",
+      "scope": "A bounded semantic safeguard. Neither is among 析's current curated distractors; this does not claim a demonstrated default-pool collision or native/arbitrary-pool acceptance."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-118\\initial-gpt-001.md",
+    "sha256": "7fcd193f61bfb5f6d12c74356f0cdef27c506686aad4b4da6f46b3233374dc45"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-GPT-001-final.json",
+    "sha256": "67ab09eca4a1384c6664d17b6f5edd8147c5b79ab7aa7aaff66c574754816e7b"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-GPT-001-adjudication.json",
+    "sha256": "f72838adc264dd247bda65c4d98471856c5ed6016777be8e5618bcc6d8911547"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

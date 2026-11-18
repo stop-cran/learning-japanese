@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b131_003.py", line 257, in <module>
+    admit(Path(args[0]), Path(args[1]))
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b131_003.py", line 205, in admit
+    request = write_frozen(out / f"{record['run']}-admission-request.json", request_raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 52, in write_frozen
+    with path.open("xb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\stop-\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\confirm-003\\N1-B131-CLAUDE-CONFIRM-002-admission-request.json'

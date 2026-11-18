@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "batch": 124,
+  "reconciliation": 1,
+  "candidateParent": "c8db34902d1a478d2d1de4b761dd3cdbb4585896",
+  "target": {
+    "kanji": "裕",
+    "displayedLabel": "abundant; rich; fertile",
+    "postReconciliationGuards": [
+      "厚",
+      "富",
+      "豊",
+      "財",
+      "多",
+      "楽",
+      "広"
+    ]
+  },
+  "sourceBindings": {
+    "sourceReceipt": "source-receipt.json",
+    "sourceReceiptSha256": "71d4f9dbc4018860e7a0b9670f1d4f02674a25e09e5b05bb5b47d8dbe07806c0",
+    "kanjidic2CompressedSha256": "af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed",
+    "jmdictCompressedSha256": "2dbbfe0b1214911766bbc128a0935618b925be917e7d1c50f3536a89b0e8786d",
+    "candidateCards": "comparison-cards/*.md, copied from the exact parent commit c8db34902d1a478d2d1de4b761dd3cdbb4585896"
+  },
+  "endpointRule": "A direct guard on 裕 suppresses this pair in either prompt/answer direction; no inverse declaration or transitive guard is inferred.",
+  "dispositions": [
+    {
+      "id": "Q1",
+      "candidate": "福",
+      "candidateLabel": "good fortune",
+      "jmdictEntries": [
+        "1501020"
+      ],
+      "kanjidic2Characters": [
+        "福"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "KANJIDIC2 lists wealth for 福, but the complete JMdict 福 entry gives good fortune, happiness, blessing, and good luck; it supplies no ordinary wealth sense. The gloss flags a possible English association but does not establish 福 as a direct answer to 裕's rich label.",
+      "candidatePromptTo裕": "Good fortune/blessing is not the same as abundant, rich, or fertile. The exact Japanese word family does not support a reciprocal answer.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "福": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q2",
+      "candidate": "多",
+      "candidateLabel": "many, much",
+      "jmdictEntries": [
+        "1407460"
+      ],
+      "kanjidic2Characters": [
+        "多"
+      ],
+      "decision": "direct-guard",
+      "裕PromptToCandidate": "多い explicitly includes a large amount/quantity and much, not merely a related topic. That ordinary quantity sense is a defensible answer to the broad abundant label.",
+      "candidatePromptTo裕": "裕's abundant label can be read as a quantity answer to 多's many/much prompt. The pair is guarded symmetrically as a quiz-safety measure, not as a claim that the senses are always synonymous.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "多": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q3",
+      "candidate": "栄",
+      "candidateLabel": "flourish; glory",
+      "jmdictEntries": [
+        "1173860",
+        "1600620"
+      ],
+      "kanjidic2Characters": [
+        "栄"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "KANJIDIC2 and 栄える support prosperity/prospering and flourishing. Prosperity can be material, but the complete verb senses do not equate prospering with being rich or abundant; the alternate はえる family is shine/look attractive.",
+      "candidatePromptTo裕": "裕's abundance/richness is a state of means or plenty, not flourishing or glory. The economic association alone does not make the displayed labels interchangeable.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "栄": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q4",
+      "candidate": "資",
+      "candidateLabel": "resources; capital",
+      "jmdictEntries": [
+        "1312700",
+        "1312750",
+        "1312780"
+      ],
+      "kanjidic2Characters": [
+        "資"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "The character record gives assets, resources, capital, and funds; the selected families give funds/capital and property/fortune/assets. These are resources or holdings, not a direct sense of being rich or abundant.",
+      "candidatePromptTo裕": "Richness may involve capital or assets, but 裕 does not mean capital or resources. The relationship is consequential but not an equivalent answer-label pair.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "資": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q5",
+      "candidate": "宝",
+      "candidateLabel": "treasure; valuables",
+      "jmdictEntries": [
+        "1516160"
+      ],
+      "kanjidic2Characters": [
+        "宝"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "KANJIDIC2 includes a wealth gloss, while the complete JMdict family is treasure with 宝/財/貨 spellings. Treasure and valuables may represent wealth, but the Japanese family does not establish rich/abundant as the ordinary meaning of 宝.",
+      "candidatePromptTo裕": "Having valuables is not the same as being rich, abundant, or fertile; rich is not a synonym for treasure. Shared-topic or spelling evidence does not settle constituent senses.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "宝": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q6",
+      "candidate": "貨",
+      "candidateLabel": "goods; freight; currency",
+      "jmdictEntries": [
+        "1195890",
+        "1195930",
+        "1296780",
+        "1433050",
+        "1516160"
+      ],
+      "kanjidic2Characters": [
+        "貨"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "貨's record covers goods, freight, property, and currency. 貨物 also has a money/assets sense and 財貨 is commodity/property, but these complete compound senses do not make goods or currency equivalent to rich/abundant.",
+      "candidatePromptTo裕": "Being rich is not being freight, goods, or currency. Possessing property or money can relate to wealth without making the displayed meanings interchangeable.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "貨": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q7",
+      "candidate": "余",
+      "candidateLabel": "surplus",
+      "jmdictEntries": [
+        "1543910",
+        "1544260",
+        "1544520",
+        "1544590"
+      ],
+      "kanjidic2Characters": [
+        "余"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "余's surplus/remainder is what is left or in excess; 余裕 includes surplus and leeway as whole-word senses. Those senses do not allocate to 裕 or equate surplus with an abundant/rich state.",
+      "candidatePromptTo裕": "裕's plenty or roominess does not mean remainder or excess beyond need. The displayed labels are complementary in 余裕, not equivalent character senses.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "余": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q8",
+      "candidate": "剰",
+      "candidateLabel": "remainder; surplus amount",
+      "jmdictEntries": [
+        "1196170",
+        "1355690",
+        "1544260"
+      ],
+      "kanjidic2Characters": [
+        "剰"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "KANJIDIC2 gives surplus; 過剰 and 剰余 give excess/overabundance and remainder. The evidence describes an amount beyond need or a remainder, not any large or plentiful amount; the whole-word gloss is not transferred to 裕.",
+      "candidatePromptTo裕": "Abundant/rich does not mean superfluous, excessive, or left over. A surplus can be one outcome of having plenty, but the distinction is explicit in the candidate's displayed label and card.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "剰": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q9",
+      "candidate": "冗",
+      "candidateLabel": "superfluous; redundant",
+      "jmdictEntries": [
+        "1355580",
+        "1355590"
+      ],
+      "kanjidic2Characters": [
+        "冗"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "The character gloss is superfluous/uselessness; 冗長 and 冗長性 are verbose/lengthy or redundancy. Redundancy can be useful or unnecessary, but it does not mean abundant or rich.",
+      "candidatePromptTo裕": "Abundance or wealth is not redundancy, verbosity, or superfluity. Spare capacity is not the same as unnecessary duplication.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "冗": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q10",
+      "candidate": "満",
+      "candidateLabel": "full; satisfy",
+      "jmdictEntries": [
+        "1526670",
+        "1526860",
+        "1604540",
+        "1641520"
+      ],
+      "kanjidic2Characters": [
+        "満"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "The record and families support full/fill, enough, satisfaction, and contentment. Fullness or sufficiency is not surplus abundance, richness, or fertility.",
+      "candidatePromptTo裕": "Being abundant does not mean filled to capacity or satisfied; a full container need not be rich or plentiful in its contents.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "満": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q11",
+      "candidate": "悠",
+      "candidateLabel": "leisurely; distant",
+      "jmdictEntries": [
+        "1540690",
+        "1605700",
+        "1662390"
+      ],
+      "kanjidic2Characters": [
+        "悠"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "悠 and 悠々 cover distance, long duration, leisure, calm, and ease. These do not establish an isolated 裕 sense of distance or leisure; composure in 余裕 remains a whole-word sense.",
+      "candidatePromptTo裕": "Abundance, wealth, and roominess do not mean distant or leisurely. A relation through 余裕 or through 悠's own guards is not transitive.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "悠": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q12",
+      "candidate": "楽",
+      "candidateLabel": "music; enjoyment; ease",
+      "jmdictEntries": [
+        "1207230",
+        "1207240",
+        "1222010",
+        "2842911"
+      ],
+      "kanjidic2Characters": [
+        "楽"
+      ],
+      "decision": "direct-guard",
+      "裕PromptToCandidate": "JMdict 1207230 gives 楽 a separate ordinary sense of being economically comfortable. This is not merely an association between leeway and ease; it can compete with 裕's rich meaning.",
+      "candidatePromptTo裕": "裕's rich/abundant state can plausibly answer the financially comfortable sense of 楽. The direct pair is guarded conservatively without claiming all meanings of the characters are synonymous.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "楽": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q13",
+      "candidate": "金",
+      "candidateLabel": "gold; money",
+      "jmdictEntries": [
+        "1001820",
+        "1242590",
+        "1242600",
+        "1242970",
+        "1243020",
+        "1263550",
+        "2839304"
+      ],
+      "kanjidic2Characters": [
+        "金"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "Gold and money are forms of wealth, but money is a resource rather than the state of being rich. 金持ち means a rich person as a whole word and does not make 金 alone mean rich.",
+      "candidatePromptTo裕": "Being rich or abundant does not mean gold or money. The prompt concerns a state or quality, not a material or medium of exchange.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "金": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q14",
+      "candidate": "充",
+      "candidateLabel": "allot; fill",
+      "jmdictEntries": [
+        "1334270",
+        "1334340",
+        "1334360",
+        "1334440",
+        "1526670"
+      ],
+      "kanjidic2Characters": [
+        "充"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "The character record gives allot/fill. 充たす, 充足, 充実, and 充満 have fill, sufficiency, completeness, substantiality, or being full senses; compound meanings do not make 充 itself mean rich/abundant.",
+      "candidatePromptTo裕": "Filling, assigning, or sufficiency is not abundance, wealth, or fertility. Enough/full is distinguishable from having more than needed.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "充": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q15",
+      "candidate": "足",
+      "candidateLabel": "foot; leg",
+      "jmdictEntries": [
+        "1404740",
+        "1404750",
+        "1493700"
+      ],
+      "kanjidic2Characters": [
+        "足"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "The character also has a sufficient sense; 足る/足りる mean enough/sufficient, while 不足 is insufficiency. Sufficiency is a threshold, not surplus abundance or richness.",
+      "candidatePromptTo裕": "裕's abundant/rich label does not mean enough/sufficient, and a foot/leg sense is unrelated. The reverse answer does not follow from the broader notion of plenty.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "足": "no inverse guard"
+      }
+    },
+    {
+      "id": "Q16",
+      "candidate": "濃",
+      "candidateLabel": "concentrated; dark",
+      "jmdictEntries": [
+        "1469890",
+        "1469910"
+      ],
+      "kanjidic2Characters": [
+        "濃"
+      ],
+      "decision": "no-new-guard",
+      "裕PromptToCandidate": "濃い means dark/strong/dense; 濃厚 has rich flavor/color as a complete compound. That compound sense is not assigned to 濃 alone and is not 裕's financial or plentiful rich sense.",
+      "candidatePromptTo裕": "Abundant/rich in means is not concentrated, dark, dense, or strong in flavor. The English polysemy of rich does not by itself make the character labels equivalent.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "濃": "no inverse guard"
+      }
+    },
+    {
+      "id": "F1-広",
+      "candidate": "広",
+      "candidateLabel": "wide; spacious",
+      "jmdictEntries": [
+        "1278410"
+      ],
+      "kanjidic2Characters": [
+        "広"
+      ],
+      "decision": "direct-guard",
+      "裕PromptToCandidate": "The 裕 card teaches roominess and pictures an open space with room to spare; the separate Weblio Wiktionary section records ひろ-い for 裕. 広い is explicitly spacious/wide, so a learner can defend this spatial answer.",
+      "candidatePromptTo裕": "広's spacious sense and 裕's roominess are a direct spatial overlap. Guarding this pair does not add the Weblio reading to KANJIDIC2 or quiz metadata.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "広": "no inverse guard"
+      }
+    }
+  ],
+  "reviewerContacted": false,
+  "limits": [
+    "JMdict families are complete for the exact written-form selectors only; unmatched queries and selected families do not prove corpus-wide lexical absence.",
+    "KANJIDIC2 English glosses are character-record evidence, not by themselves frequency, ordinary-word, or synonymy proof.",
+    "Compound meanings are not automatically allocated to each constituent character.",
+    "No transitive guard, arbitrary-pool, multiple-borrow, Kotlin/native/device, or publication acceptance is claimed."
+  ],
+  "_reviewIsolation": {
+    "originalSignedPath": "docs/n1-sources/batch-124-reconciliation/dispositions.json",
+    "originalSha256": "a7e5a64372d3573f78f7acf10ea04ed34a38db1c0951e9ea78d7f4530d4624f2",
+    "removedJsonPointers": [
+      "/sourceBindings/reviewReports"
+    ],
+    "scope": "Only cross-report provenance removed; substantive statements and source selectors unchanged."
+  }
+}

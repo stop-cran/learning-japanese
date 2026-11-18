@@ -1,0 +1,105 @@
+{
+  "status": "PREPARED_REQUIRES_VALIDATION",
+  "batch": 131,
+  "preflight": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\prompts\\preflight-compact-002.json",
+    "sha256": "ffa7ebf9caa5b7eabfbadb8038162b1038547b6dbab6d9794255babfba60eed8",
+    "bytes": 9493
+  },
+  "preservedFailure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\validation-001\\result.json",
+    "sha256": "0d8745783549ea4c9b4eeffce1a87b26435f19e1fa1177b4414e4851768ee2e6"
+  },
+  "changes": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-chain.py",
+        "sha256": "77b9b79947ceebc05da1288641ef6622ffd438a14c6cf6ea4389df58add4bbc3"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-chain-controls-002.py",
+        "sha256": "dcf52d0952e150557abb34b66ef3e5eb6b26108dbba96dc8bb7e1577a100666a",
+        "bytes": 3962
+      },
+      "replacements": [
+        [
+          "        self.assertTrue(result[\"valid\"])\n        self.assertEqual([e[\"character\"] for e in result[\"entries\"]], [\"五\", \"五\", \"四\"])",
+          "        self.assertFalse(result[\"valid\"])\n        self.assertIn(\"Duplicate comparison character\", result[\"errors\"])\n        self.assertEqual([e[\"character\"] for e in result[\"entries\"]], [\"五\", \"五\", \"四\"])"
+        ]
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-audit.py",
+        "sha256": "70cd33c0507f6a8df55970f4923635a987097c85fdf01521d941918746e2ddf7"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\test-review-audit-controls-002.py",
+        "sha256": "00a48d137fb102171edc2a6514cc7be9653e996cb4fb8138da1cb0d4bbc580dc",
+        "bytes": 24873
+      },
+      "replacements": [
+        [
+          "        path.write_bytes(json.dumps(config).encode(\"utf-8\"))\n        with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):",
+          "        path.write_bytes(json.dumps(config).encode(\"utf-8\"))\n        path.chmod(stat.S_IREAD)\n        with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):"
+        ]
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_001.py",
+        "sha256": "81f84c2cf9e371b1d6c521edc9e16edd0584e32adcff55ca413c5fd9691954bc"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_002.py",
+        "sha256": "2d0a38433e6599934c3619d8aa9021345b0795eb564d915e4a74ecef3e668210",
+        "bytes": 16950
+      },
+      "replacements": [
+        [
+          "\"preflight-compact-001.json\"",
+          "\"preflight-compact-002.json\""
+        ],
+        [
+          "str(TOOLS / \"step_b131_neutral_001.py\")",
+          "str(TOOLS / \"step_b131_neutral_002.py\")"
+        ],
+        [
+          "sha((TOOLS / \"step_b131_neutral_001.py\").read_bytes())",
+          "sha((TOOLS / \"step_b131_neutral_002.py\").read_bytes())"
+        ]
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b131_neutral_preparation_001.py",
+        "sha256": "0dee204e6221013f3d45cddb48ecd266c53cb2cb5c6c7731bb80fbd067bff760"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_b131_neutral_preparation_002.py",
+        "sha256": "535152474f16e4ddaa158eec7c8da0472dce2ae9ffbddf1ff11e5b02ccc8166a",
+        "bytes": 15111
+      },
+      "replacements": [
+        [
+          "\"preflight-compact-001.json\"",
+          "\"preflight-compact-002.json\""
+        ],
+        [
+          "output = HERE / \"validation-001\"",
+          "output = HERE / \"validation-002\""
+        ],
+        [
+          "for name in (\"test-review-chain.py\", \"test-report-structure.py\", \"test-review-audit.py\"):",
+          "for name in (\"test-review-chain-controls-002.py\", \"test-report-structure.py\", \"test-review-audit-controls-002.py\"):"
+        ]
+      ]
+    }
+  ],
+  "explanation": "The original generic fixture allowed duplicate characters; B131's stronger validator rejects them. The successor prompt now makes that rejection explicit, and the fixture expects rejection. The other fixture now freezes its incomplete config so the existing missing-fetch-limit gate, not the earlier frozen-input gate, is reached. No execution, report, context or fetch gate is relaxed.",
+  "supersededForLaunch": [
+    "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-131\\review\\preparation-001\\prompts\\preflight-compact-001.json",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_b131_neutral_001.py"
+  ],
+  "limits": "No reviewer has run; prior frozen preparation and failure remain unchanged."
+}

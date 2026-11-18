@@ -1,0 +1,5 @@
+# Response to GPT confirmation 001
+
+The raw confirmation SHA-256 is `0415392277549cc1f6a0592b6f2047ae659d6bb6ea370dd78d39206efa3e856d`: F1 RESOLVED; overall consistency/quiz safety and confirmation UNVERIFIED on `dbca5192a4308dc6e8d954af37775e0fcd1986ea`, with no new established defect. L1–L3 identified an unassessed source sense and reading, not an instruction to add a historical word or reading. All original limits remain unless the bounded evidence below expressly addresses them.
+
+`disposition.md` preserves Kanji Pedia's actual 「外」 qualifier and appearance definition without inferring frequency or spelling. It binds a 1,245-card parent title/on/kun/practice inventory, the complete selected comparison sources, and the reading model explicitly supplied みにくい. Four direct guards conservatively protect broad height/size/appearance choices in both directions. The reading model finds no exact-key current-pool offer and 侵 has no kun prompt; the key is not added to the target exclusion set. Neither an arbitrary caller-built pool nor ordinary-use status is proved. Frozen metadata and practice selections remain unchanged.

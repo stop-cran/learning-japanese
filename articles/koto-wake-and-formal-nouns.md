@@ -136,10 +136,12 @@ The last わけ example concerns obligations or circumstances that make an actio
 The three negative わけ constructions are especially important to keep separate:
 
 - **わけがない** strongly rejects a possibility.
-- **わけではない** rejects a characterization or inference; with an appropriate context, it can express "not necessarily" or "not always."
+- **わけではない** rejects a characterization or inference; with an appropriate context, it can express "not necessarily" or "not always." The adverb **必ずしも（かならずしも）**, "not necessarily," often comes before it; see [Adverbs with negative endings](adverbs-with-negative-endings.md#必ずしも-not-necessarily).
 - **わけにはいかない** says that circumstances, duties, or social considerations prevent an action.
 
 Negating the embedded verb changes the last pattern: **行かないわけにはいかない** means "I cannot very well not go," or, in context, "I have to go."
+ことはない and わけがない are contrasted with **ことだ**, **べきではない** and **とは限らない** in
+[Advice, certainty and partial denial](advice-certainty-and-partial-denial.md#2-ことだ-べきではない-and-ことはない).
 
 There is overlap between larger expressions. **～ということだ** can also mean "that means ...," for example. "こと concerns content; わけ concerns explanatory reasoning" is a useful starting point, not a rule that こと can never appear in a conclusion.
 
@@ -537,6 +539,8 @@ it can also describe a resulting state. A past reference point can appear on the
 For productive beginning/continuation/redo forms, reference-time viewpoint and additional N4 recency practice, see
 [verb extensions](verb-extensions-direction-and-aspect.md#7-an-actions-stage-is-not-a-stopwatch).
 These nine stage exercises remain here; the linked practice does not create a second owner.
+At N3, **ところだった** marks a near miss (**遅れるところだった（おくれるところだった）**, "I was nearly late"),
+and **一方だ（いっぽうだ）** marks a trend that keeps going; both are practised in [Change, phases and trends](change-phases-and-trends.md).
 
 ### Time, recurrence, and occasions
 
@@ -601,6 +605,8 @@ Use **の** after an event noun, as in 会議のあいだ; a verb phrase attache
 **うちに**, **あいだに** and **ときに** can overlap. うちに often brings out the possibility that a useful state will end;
 あいだに locates something within a period. This difference in emphasis does not make them mutually exclusive answers
 in every sentence about acting while there is time.
+Items where the sentence does decide between "while a state lasts" **うちに** and interval **間に** are practised in
+[Time spans, immediacy and prerequisites](time-spans-and-immediacy.md#3-うちに-or-間に-a-window-that-closes-or-an-interval-with-edges).
 
 ### たび, おり and さい: recurrence versus an occasion
 
@@ -677,6 +683,8 @@ can all relate an action to what someone said, with context-dependent difference
 Do not make them competing answers solely because one names "conformity" more explicitly.
 The model/context exercises specify their noun list and supply the final に or で; they are controlled practice,
 not a claim that these are the only possible ways to describe following instructions or receiving guidance.
+To choose between **とおり** (matching a model), **に基づいて** ("based on" a source) and **に合わせて**
+("adjusting to fit" something), see [Basis, field and viewpoint](basis-field-and-viewpoint.md#3-basis-に基づいて-に合わせて-and-とおり).
 
 ### うえに and うえで: add a fact or establish a preliminary step
 
@@ -703,6 +711,8 @@ Use the relationship being expressed. Adding two actions does not itself specify
 Conversely, preliminary-step うえで is not the whole inventory of うえで uses; do not extend this selected pattern's
 attachment chart to every expression translated as "in doing" or "when considering."
 The quiz's particle blanks explicitly request に or で and state the intended relationship.
+**Vた＋上で**, "after doing, as a deliberate step," is contrasted with **て初めて**, "only after," in
+[Time spans, immediacy and prerequisites](time-spans-and-immediacy.md#6-て初めて-or-上で-only-after-or-after-doing-as-a-step).
 
 ### ため, おかげ and せい: a goal, a cause, or an evaluation
 
@@ -735,6 +745,8 @@ Neither word classifies the cause itself as inherently good or bad:
 make every おかげ sentence impossible. ため often reports a cause without the same explicit credit or blame.
 For attachment, compare **先生のおかげで**, **静かなおかげで**, **うるさいせいで** and **鍵を忘れたせいで**.
 Do not add の after a completed plain verb clause such as 鍵を忘れた.
+To stress a reason with **からこそ** ("precisely because") or to blame one cause with **ばかりに** ("just because"),
+see [Emphatic causes and reason connectives](emphatic-causes-and-reason-connectives.md#emphatic-causes-からこそ-and-ばかりに).
 
 ### かわり and ついで: replacement, an additional errand, or a trade-off
 
@@ -764,6 +776,8 @@ The second sentence weighs two features rather than replacing quietness or claim
 A drawback can also come first, as in **家賃が高いかわりに、会社に近い**, "The rent is high, but in return it is close to work."
 Compare **高いかわりに** with **静かなかわりに**; use な after a na-adjective.
 These are not all instances of the same "instead of" translation, and かわり is not a universal replacement for neutral "but."
+At N3, verb + 代わりに (one thing replaces another, or is given in return) is set against 一方で (two facts side by
+side, both true) in [Correction and contrast connectives](correction-and-contrast-connectives.md#3-both-sides-or-instead-一方で-and-代わりに).
 
 ### わりに and くせに: an expected standard or a reproachful contrast
 
@@ -919,6 +933,8 @@ Other **ようにする** constructions concern arranging a desired result, so t
 Likewise, **眠る前はスマートフォンを使わないようにしていますが、たまに見てしまいます。**
 "I try not to use my smartphone before sleep, but I occasionally end up looking at it."
 The effort expression does not guarantee success every time.
+Do not confuse it with **ようとしない**, "won't (make the effort to)," which describes someone else's unwillingness
+(**弟は部屋を片付けようとしない**); see [Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md).
 For an ability or habit that stops, a common basic pattern is instead **Vなくなる**:
 **自転車に乗れなくなった**, "I became unable to ride a bicycle." That loss is not the same as deliberately avoiding cycling.
 
@@ -1004,8 +1020,9 @@ The task fixes the endings in kana and permits kana or kanji for the predicate; 
 The price-rise example means "became more expensive" relative to the earlier price, not necessarily expensive by everyone's standard.
 
 Recognized alternatives **空地／明き地**, **閑か**, and **綺麗／奇麗／キレイ** are accepted for their respective predicates;
-the models retain **空き地／静か／きれい**. The dictionary also records **つべたい** for 冷たい, so its corresponding forms
-are accepted, while **つめたい** remains the model pronunciation. Recognition does not imply equal frequency or preferred style.
+the models retain **空き地／静か／きれい**. The dictionary also records the variant reading **つべたい** for 冷たい,
+but both cold-water questions accept only 冷た／つめた stems; **つめたい** is the model
+pronunciation. Recognition does not imply equal frequency or preferred style.
 Longer expressions such as **きれいなままになっている**, "remains in a clean state," can also be natural.
 The appearance of なる inside such a whole expression does not turn it into the simple **きれいになった** change pattern.
 
@@ -1255,6 +1272,8 @@ Kana and kanji spellings are accepted, including **程** and **丈**, though kan
 This is not a global rule separating the words: **読めば読むだけ** can also express correlated change,
 and shorter **読むほど** or other extent formulations can be natural in appropriate sentences.
 Likewise, **くらい／ぐらい** can overlap with clause-based degree without replacing ほど in every comparison or repeated-verb pattern.
+Two sentence-final uses, **N くらいです**, "N is about the only one," and clause + **くらいです**, "to the extent that," are practised in
+[Degree, excess and addition](degree-excess-and-addition.md#1-くらいです-about-the-only-one-or-how-far-something-goes).
 
 ### くらい: an illustrative degree or a basic minimum
 
@@ -1481,8 +1500,9 @@ This shared answer class does not make them interchangeable at every time distan
 The relevant action can finish before a larger task: hanging a coat need not complete everything involved in changing clothes.
 
 **たまま** instead reports that the resulting state continues. A window can have been opened **only a few seconds ago**
-and still be described as **開けたまま**. The two window questions deliberately use the same short elapsed time:
-one reports the recent completion, the other the continuing state. Both accounts can be true of one scene,
+and still be described as **開けたまま**, so the elapsed time alone does not decide the form. The two window questions
+differ in what is reported: one announces a window opened seconds ago as a just-finished task, the other describes a
+window opened this morning that is still not closed at noon. Both kinds of account can be true of one scene,
 but they answer different communicative needs. Do not choose by a time word alone.
 
 The selected state, not every property of the object, remains unchanged:

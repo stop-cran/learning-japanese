@@ -86,6 +86,7 @@ The air example is not a trade between two people. Likewise, exchanging yen for 
 The second is a formal expression: **書面をもって** means "by means of a written statement," and that statement serves in place of the greeting. It is not simply a request to rewrite the greeting.
 
 The kanji **[代](../kanji/代.md)** also appears in **[代わる](../words/代わる.md)（かわる）**, "take someone's place," and **代わり（かわり）**, "substitute; replacement." Compare **父に代わって（ちちにかわって）**, "on behalf of my father," with changing the father himself.
+The grammar frame **に代わって** is practised next to **として** in [Comparison, role and particle relations](comparison-and-role-relations.md#6-として-and-に代わって-as-or-in-place-of).
 
 ## These spelling preferences overlap
 

@@ -1,0 +1,88 @@
+{
+  "run": "N1-B115-GPT-001",
+  "label": "coordinator-normalized derivative of GPT-001",
+  "candidate": "f36cd819dcf6ac8b4a3ee8ee29b6e750cd6f09ab",
+  "status": "ACCEPTED_AS_INITIAL_REVIEW_EVIDENCE",
+  "reviewAccepted": true,
+  "mechanicalAccepted": true,
+  "structureAccepted": true,
+  "claimsAdjudicated": true,
+  "contentApprovedForPublication": false,
+  "verdict": "NEEDS FIX",
+  "facets": {
+    "Correctness": "UNVERIFIED",
+    "Scoped coverage": "CLEAN",
+    "Consistency/quiz safety": "NEEDS FIX",
+    "Comprehensibility": "CLEAN"
+  },
+  "originalReport": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-115\\initial-gpt.md",
+    "sha256": "34539b74c1ca2da17abe5e959f88151539a564d80a27417d7992b6bf7180d8b3",
+    "structureClassification": "FAIL",
+    "structureRecordSha256": "bb6f86e129966f1bd5541ffa5d6e9b2a8bca85f55259d1c2cdf92d3c6588b61c",
+    "unchanged": true
+  },
+  "acceptedDerivative": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-115\\initial-gpt-coordinator-normalized.md",
+    "sha256": "191cb7d68c667b27c506d15761b5b0d37387bd0ceb79900cd5e914ce02d1a934",
+    "normalizationRecordSha256": "79faed3c1bebf077e9e9c4aeef2047bc1bc24b0cc276277cf91d4508511b0e59",
+    "diffSha256": "9148af70e0620abd2f36a46c0888a37e641decc74f0f43cf0ec2571a57905038",
+    "structureRecordSha256": "ec7ce27b6950542689d1b404243ac6f5a067c362f160d3cb5ccb8ca1e337873f",
+    "structureClassification": "PASS",
+    "checkerSha256": "0b03424c7d4769c08b3d50a9b3fa6e3a716ce57474ee78afa78fe21e9a9a0c13",
+    "onlyChanges": "In the six F1-F6 '- Citations:' lines only, 17 comma-joined line lists were expanded to ';'-separated single-range citations with the same sources, numbers and order (+588 B). Exact reversal restores the original bytes.",
+    "judgmentsChanged": false,
+    "newEvidenceAdded": false,
+    "reviewerContacted": false
+  },
+  "normalizationDecisionSourceToolCallIds": [
+    "toolu_015hdCtjkdomT9ZotA3gPqHx"
+  ],
+  "mechanicalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\N1-B115-GPT-001\\audit-20261114T003516575904\\audit.json",
+    "sha256": "e4eec5e1b77054122c1193f2f4347a9c3336f1ed3791b0be63d353595a2d35b7",
+    "eventBytes": 2189936,
+    "eventCount": 521,
+    "eventSha256": "10660277372de66553ac55042a4d7333c6cdfdfc5c507f76f95caaad3f6aebd0",
+    "coreRead": 30,
+    "extensionRead": 10,
+    "writes": 1,
+    "readbacks": 1,
+    "fetches": 3,
+    "fetchUrls": [
+      "https://www.weblio.jp/content/康",
+      "https://www.weblio.jp/content/康",
+      "https://www.weblio.jp/content/宇宙"
+    ],
+    "fetchesAnnouncedBeforeCall": true,
+    "completionMessage": "NEEDS FIX",
+    "deliveryAndPrefixVerified": true,
+    "actualResponseModels": [
+      "gpt-6-astra"
+    ],
+    "breaches": [],
+    "note": "Report on disk equals its single write after CRLF normalization"
+  },
+  "sourceClaimChecks": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-115\\N1-B115-GPT-001-source-claims.json",
+    "sha256": "e307af650e52d7d80fb06b386f877096c60ca51afca4477221cb1c98b9cb1440",
+    "deTitlesMatched": 47,
+    "cOptionTitlesMatched": 24,
+    "cOptionCheckerArtifact": "The record's single cOptionMismatch {'d': 'sun (length unit)'} is a regex artifact: it captured the report's accurate partial quotation of 寸's own title, not a C option. All 24 actual C option titles match the index.",
+    "jmdictSequencesCited": 41,
+    "jmdictSequencesMissing": 0,
+    "findingFacts": "F1-F6 titles, existing exclusion lists and absence of every proposed pair in both directions are confirmed. F3 宙 'interval of time' (source-metadata.json:72), F5 票 'sign' (line 166) and F6 bare 魔 dreaded/terrible/awful/dreadful (jmdict-families.xml:886-889) are present.",
+    "citationRangeNotes": "F5's cited 159-164 and F6's cited 856-887 stop 2 lines short of the supporting glosses in the same record/sense; facts hold, no judgment changes.",
+    "limitFacts": "L2 confirmed: packet KANJIDIC2 寸 gives スン with nanori す/みき and JMdict bare 寸 gives only すん; neither establishes き, so 寸.md:45's Daijisen claim is unverified, not refuted. O1 attribution observation confirmed (JMdict fields Christianity/Buddhism; 魔.md:64-66 wording).",
+    "checksFacts": "Logs match: 431 tests OK, manifest 8c5b266340bd34bc/8680 files, budget 8702 entries/45998990 B, vocabulary 2122/2431, linkplan 8/8, 0 lint/validate errors, reading exposure 0 hits/4 latent/75 families, existing.diff 8 wrapper replacements plus 標.",
+    "reviewJudgmentBoundary": "Findings are admitted for reconciliation, not automatically implemented. Do not infer exclusions transitively. Fetched Daijisen content is reviewer-reported."
+  },
+  "preservedLimits": [
+    "CLEAN facets are bounded reviewer judgments on inspected material.",
+    "Correctness remains UNVERIFIED pending resolution of the 寸 き claim (L2).",
+    "No raw SVG/PDF-glyph, Kotlin/native, emulator or APK 5c000bd acceptance (L1, L6).",
+    "L4/L5 unread exclusion targets and candidates remain limits, not claims.",
+    "Claude-001/-002 quarantined; Claude-003 unaccepted; neither review's findings were sent to the other reviewer."
+  ],
+  "candidateChanged": false
+}

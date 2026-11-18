@@ -1,0 +1,42 @@
+{
+  "run": "N1-B125-GPT-001",
+  "session": "d0416d02-e6fe-4599-bbce-0fee4ec7e22d",
+  "candidate": "483bb066e68faf354779f7d5fc73c4594605cdd7",
+  "status": "VOID_COORDINATOR_PHASE2_DELIVERY_MISMATCH",
+  "reviewAccepted": false,
+  "publicationAccepted": false,
+  "newRetryAuthorized": false,
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-125\\initial-gpt-001.md",
+    "sha256": "2c2a9a33de2ad2f687b49919186729b23231efdc190e964dc599381563a5e49b"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-GPT-001-final.json",
+    "sha256": "c504b06d0f6772e1a3952b7d60888d784f8826db092b384df95002064dc80db7"
+  },
+  "audit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-GPT-001\\audit-20261115T231809049935\\audit.json",
+    "sha256": "e6ab4990f644fa182c61b0d3ae7cd31a5e96f41e804012256de5c40a8bc45c25",
+    "eventsSha256": "168cd549d0ecdf408c4278eec9646746b1ac5623a01e4451da76e3df508db15f"
+  },
+  "diagnosis": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-125\\review\\N1-B125-GPT-001-transition-diagnosis.json",
+    "sha256": "75b5ebb34aa30e9b7b44cc0a5f35507e691870352b2fda9090b4e38db564b941",
+    "cause": "The coordinator delivered only the first extension-segment path at event 245. The frozen required message also contained LF followed by Missing entries: none. The actual event bytes do not equal the frozen phase-2 message.",
+    "responsibility": "Coordinator delivery error; not a content verdict. The reviewer disclosed the omission, but completing the report does not cure the invalid transition."
+  },
+  "execution": {
+    "coreSegmentsRead": 20,
+    "extensionSegmentsRead": 4,
+    "reportWrites": 1,
+    "reportReadbacks": 1,
+    "webFetches": 0,
+    "coordinatorMessages": 2,
+    "contextStatus": "PASS",
+    "structureStatus": "PASS",
+    "limits": "Counts, context and structure do not override the execution VOID. No substantive acceptance was performed."
+  },
+  "preservation": "Raw report, observed verdict, phase-1 list, chains, prompts, events, failed final audit and guarded execution logs remain unchanged. The coordinator read the completed report during diagnosis, but its findings and observations must not be used as review evidence, reconciliation input or later-review hints.",
+  "boundary": "No retroactive message insertion, altered event stream, weakened auditor, relabelled structure hold, resumption or new review grant. B125 teaching remains unchanged and unpublished. The ordinary v3 clean-path builder requires a genuine mechanical structure hold; this run's structure passed.",
+  "next": "Request an explicit new grant for one fresh blind GPT review with unchanged candidate, packet, checker, auditor and resource limits, and exact complete transition delivery. Preserve this failure regardless of the decision."
+}

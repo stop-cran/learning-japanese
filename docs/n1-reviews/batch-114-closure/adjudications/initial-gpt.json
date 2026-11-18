@@ -1,0 +1,40 @@
+{
+  "run": "N1-B114-GPT-001",
+  "session": "c4b8c183-4098-4614-ad40-537b1d9dccad",
+  "rawFinalAudit": "N1-B114-GPT-001/audit-20261113T202039108279/audit.json",
+  "rawFinalAuditSha256": "38f9ebca6eb15df72574955c4f866cbd18eabf4fa06c27128c52802272288517",
+  "rawFinalAuditStatus": "HOLD",
+  "rawHoldReasons": "five runtime autopilot continuation nudges (events 478/490/502/514/526, same IDs as phase-1 adjudication) plus CRLF report-binding note",
+  "continuationFilter": "filter-continuations-v2.py",
+  "continuationFilterSha256": "6ebdc1aca0fe3fa111ad2e2784ea00e07e835802d60257c6345f9c369e08405f",
+  "continuationAdjudication": "N1-B114-GPT-001/continuations-20261113T202117300399/adjudication.json",
+  "removedEvents": [
+    478,
+    490,
+    502,
+    514,
+    526
+  ],
+  "finalAudit": "N1-B114-GPT-001/audit-20261113T202117392147/audit.json",
+  "finalAuditSha256": "b0b3eb71641ed3a053c4240e2a8f4f9131b74038131899d168ef2d4b26dda694",
+  "finalAuditStatus": "FINAL_AUDIT_NEEDS_CLAIM_CHECK",
+  "eventsSha256": "0075c46656014909fec7a23771d9adba3a9eea4ec7492a291ede68ed4bdd4531",
+  "breaches": [],
+  "fetches": 3,
+  "actualResponseModel": "gpt-6.1-sol",
+  "report": "reports-114/initial-gpt.md",
+  "reportSha256": "aa409e26a4ef70ff11d76988b5b45fec01e567aff04d65fdff5d371f13bd35be",
+  "claimCheck": {
+    "readRecord": "consistent with audit: core 40/40, extension 11/11, no re-views, single write (event 656) + verified readback, two coordinator messages (457, 677), task_complete (689) only after final message",
+    "fetches": "consistent: weblio 寮/碁/魅 announced before calls 427/437/447, all before phase-1 message; 寮 result was an oversized-output notice with 500-char preview and the temp file was not read, as the report states",
+    "phase1ListEchoed": "matches frozen phase1-list.txt; missing 銃/棋/陶 entries reported verbatim without substitutes",
+    "F1": "verified: 寮 exclusions [宿,宅,住,家,室,館,亭,官,局,署,府] lack 房/庁/部/課; 房 [室,群,部,束]; 庁/部/課 declare none; titles match report",
+    "F2": "verified: 穫 exclusions [刈,収,採,取,得,捕,果,実] lack 集/拾/績/利; those cards declare none; titles match report",
+    "F3": "verified: 魅 exclusions [妖,符] lack 怪 (suspicious; uncanny); 怪 declares none",
+    "disagreementsWithClaude": "GPT judged 穂-穀 and 盤-碁 harmless on qualified labels (Claude F1/F2 requested pairs); both agree 寮-房 needs a pair; GPT additionally requests 寮-庁/部/課, 穫-集/拾/績/利, 魅-怪; to be reconciled on evidence",
+    "otherClaims": "per-card and C-slot dispositions, L1-L6 consistent with recorded evidence; supplementary claims marked UNVERIFIED are carried as caveats"
+  },
+  "status": "ACCEPTED_AS_REVIEW_EVIDENCE",
+  "processNote": "autopilot launch caused benign continuation nudges answered with text only; future reviewers launch interactive",
+  "findingsTreatedAs": "hypotheses for reconciliation together with accepted Claude findings"
+}

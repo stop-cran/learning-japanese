@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "batch": 124,
+  "reconciliation": 2,
+  "candidateParent": "fa394d237e28df96319495a003718cc9c880a069",
+  "publishedBase": "2655539b587c1ab57e64ab74a97cddaf81bb81c6",
+  "target": {
+    "kanji": "裕",
+    "displayedLabel": "abundant; rich; fertile",
+    "sourceRow": 986,
+    "postReconciliationGuards": [
+      "厚",
+      "富",
+      "豊",
+      "財",
+      "多",
+      "楽",
+      "広",
+      "福",
+      "栄",
+      "資",
+      "宝",
+      "余",
+      "剰",
+      "満",
+      "悠",
+      "濃"
+    ]
+  },
+  "supersededPriorJudgments": {
+    "priorDispositionFile": "../batch-124-reconciliation/dispositions.json",
+    "priorDispositionSha256": "a7e5a64372d3573f78f7acf10ea04ed34a38db1c0951e9ea78d7f4530d4624f2",
+    "supersededClaims": [
+      "Q1",
+      "Q3",
+      "Q4",
+      "Q5",
+      "Q7",
+      "Q8",
+      "Q10",
+      "Q11",
+      "Q16"
+    ],
+    "reason": "The original no-new-guard judgments separated selected senses and distinguished whole-word meanings, but the coordinator chose conservative direct quiz exclusions for unresolved broad-English answer ambiguity. These are bounded quiz-safety decisions, not findings that the earlier author or either reviewer was wrong."
+  },
+  "sourceBindings": {
+    "receipt": "source-receipt.json",
+    "previousSourceReceipt": "../batch-124-reconciliation/source-receipt.json",
+    "previousSourceReceiptSha256": "71d4f9dbc4018860e7a0b9670f1d4f02674a25e09e5b05bb5b47d8dbe07806c0",
+    "recordContract": {
+      "jmdictExactWrittenFormQueries": 45,
+      "completeJmdictRecords": 48,
+      "completeKanjidic2Characters": 18,
+      "unmatchedJmdictQueries": 0,
+      "additionalQueries": 0
+    }
+  },
+  "endpointRule": "A direct guard on 裕 suppresses that pair for either prompt/answer direction. No inverse endpoint declaration, transitive guard, universal synonymy, equal frequency, or compound-to-character meaning transfer is inferred.",
+  "dispositions": [
+    {
+      "id": "Q1",
+      "candidate": "福",
+      "candidateLabel": "good fortune",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "福",
+        "jmdictEntries": [
+          "1501020"
+        ],
+        "selectors": {
+          "1501020": [
+            "福"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "KANJIDIC2 explicitly lists wealth for 福. The complete JMdict 福 family emphasizes fortune, happiness, blessing, and luck rather than an ordinary wealth word; the character gloss nevertheless leaves a broad English rich/wealth ambiguity worth excluding.",
+      "candidatePromptTo裕": "The displayed good-fortune label is not being declared synonymous with rich. The direct guard conservatively avoids a wealth gloss being treated as an interchangeable English choice.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "福": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q2",
+      "candidate": "多",
+      "candidateLabel": "many, much",
+      "previousDecision": "direct-guard",
+      "decision": "direct-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "多",
+        "jmdictEntries": [
+          "1407460"
+        ],
+        "selectors": {
+          "1407460": [
+            "多い"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "多い explicitly includes a large amount/quantity and much, not merely a related topic. That ordinary quantity sense can answer 裕's broad abundant label.",
+      "candidatePromptTo裕": "裕's abundant label can be read as a quantity answer to 多's many/much prompt. The pair is guarded as a direct quiz-safety measure, not as a claim that the senses are always synonymous.",
+      "endpointStatus": {
+        "裕": "guard retained",
+        "多": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q3",
+      "candidate": "栄",
+      "candidateLabel": "flourish; glory",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "栄",
+        "jmdictEntries": [
+          "1173860",
+          "1600620"
+        ],
+        "selectors": {
+          "1173860": [
+            "栄える"
+          ],
+          "1600620": [
+            "栄える"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "KANJIDIC2 and the complete 栄える families include prosperity/prospering alongside flourishing and a separate shine/look-attractive family. Prosperity can carry a material association, so the pair is conservatively excluded from broad English choices.",
+      "candidatePromptTo裕": "Flourishing or glory is not asserted to mean being rich. This direct guard addresses the unresolved prosperity/rich ambiguity without treating every sense of 栄 as interchangeable with 裕.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "栄": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q4",
+      "candidate": "資",
+      "candidateLabel": "resources; capital",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "資",
+        "jmdictEntries": [
+          "1312700",
+          "1312750",
+          "1312780"
+        ],
+        "selectors": {
+          "1312700": [
+            "資金"
+          ],
+          "1312750": [
+            "資産"
+          ],
+          "1312780": [
+            "資本"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The character record gives assets, resources, capital, and funds; the selected complete families include funds/capital and property/fortune/assets. Holdings are not the same as a rich state, but broad financial English choices remain ambiguous enough for a conservative guard.",
+      "candidatePromptTo裕": "Richness does not mean capital or resources. The direct exclusion avoids an assets/wealth interpretation becoming a plausible quiz answer; it does not claim that 資 and 裕 are equivalent.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "資": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q5",
+      "candidate": "宝",
+      "candidateLabel": "treasure; valuables",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "宝",
+        "jmdictEntries": [
+          "1516160"
+        ],
+        "selectors": {
+          "1516160": [
+            "宝"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "KANJIDIC2 includes wealth for 宝; the complete JMdict family is treasure/valuables, including 宝/財/貨 spellings. Treasure can represent wealth, leaving the reverse English rich choice conservatively guarded without asserting ordinary synonymy.",
+      "candidatePromptTo裕": "Treasure and valuables are not being declared synonyms for rich, and shared 財 spelling does not allocate meanings between characters. The direct guard records conservative quiz-safety treatment of the wealth gloss.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "宝": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q6",
+      "candidate": "貨",
+      "candidateLabel": "goods; freight; currency",
+      "previousDecision": "no-new-guard",
+      "decision": "no-new-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "貨",
+        "jmdictEntries": [
+          "1195890",
+          "1195930",
+          "1296780",
+          "1433050",
+          "1516160"
+        ],
+        "selectors": {
+          "1195890": [
+            "貨物"
+          ],
+          "1195930": [
+            "貨幣"
+          ],
+          "1296780": [
+            "財貨"
+          ],
+          "1433050": [
+            "通貨"
+          ],
+          "1516160": [
+            "宝"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "貨's record covers goods, freight, property, and currency. 貨物 also has a money/assets sense and 財貨 is commodity/property, but these complete compound senses do not make goods or currency equivalent to rich/abundant.",
+      "candidatePromptTo裕": "Being rich is not being freight, goods, or currency. Possessing property or money can relate to wealth without making the displayed meanings interchangeable.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "貨": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q7",
+      "candidate": "余",
+      "candidateLabel": "surplus",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "余",
+        "jmdictEntries": [
+          "1543910",
+          "1544260",
+          "1544520",
+          "1544590"
+        ],
+        "selectors": {
+          "1543910": [
+            "余る"
+          ],
+          "1544260": [
+            "余剰"
+          ],
+          "1544520": [
+            "余分"
+          ],
+          "1544590": [
+            "余裕"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "KANJIDIC2 and 余る/余分 support surplus, remainder, or excess; 余裕 has whole-word surplus/leeway senses. These do not allocate to 裕, but surplus/spare-capacity English choices are close enough for a conservative direct guard.",
+      "candidatePromptTo裕": "裕's abundant/roomy label is not declared to mean remainder or excess. The guard avoids a broad English surplus choice being treated as interchangeable, while preserving the distinction between character and compound meanings.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "余": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q8",
+      "candidate": "剰",
+      "candidateLabel": "remainder; surplus amount",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "剰",
+        "jmdictEntries": [
+          "1196170",
+          "1355690",
+          "1544260"
+        ],
+        "selectors": {
+          "1196170": [
+            "過剰"
+          ],
+          "1355690": [
+            "剰余"
+          ],
+          "1544260": [
+            "余剰"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "KANJIDIC2 independently gives surplus; the selected complete families include excess/overabundance and remainder. Excess beyond need differs from any plentiful amount, but the displayed surplus-amount label creates a conservative English-choice risk.",
+      "candidatePromptTo裕": "Abundant/rich does not mean superfluous or left over. The direct guard is a quiz-safety decision for the broad surplus label, not transfer of compound meanings to either character.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "剰": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q9",
+      "candidate": "冗",
+      "candidateLabel": "superfluous; redundant",
+      "previousDecision": "no-new-guard",
+      "decision": "no-new-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "冗",
+        "jmdictEntries": [
+          "1355580",
+          "1355590"
+        ],
+        "selectors": {
+          "1355580": [
+            "冗長"
+          ],
+          "1355590": [
+            "冗長性"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The character gloss is superfluous/uselessness; 冗長 and 冗長性 are verbose/lengthy or redundancy. Redundancy can be useful or unnecessary, but it does not mean abundant or rich.",
+      "candidatePromptTo裕": "Abundance or wealth is not redundancy, verbosity, or superfluity. Spare capacity is not the same as unnecessary duplication.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "冗": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q10",
+      "candidate": "満",
+      "candidateLabel": "full; satisfy",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "満",
+        "jmdictEntries": [
+          "1526670",
+          "1526860",
+          "1604540",
+          "1641520"
+        ],
+        "selectors": {
+          "1526670": [
+            "満たす",
+            "充たす"
+          ],
+          "1526860": [
+            "満足"
+          ],
+          "1604540": [
+            "満ちる"
+          ],
+          "1641520": [
+            "満ち足りる"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The selected families cover filling/fullness, enough, satisfaction, and contentment. Fullness or sufficiency is not surplus abundance, but the broad English full/plentiful choice is conservatively excluded.",
+      "candidatePromptTo裕": "Being abundant does not always mean filled to capacity or satisfied; a full container need not be rich or plentiful in its contents. The pair is guarded to avoid a defensible broad-English reading, not to assert equivalence.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "満": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q11",
+      "candidate": "悠",
+      "candidateLabel": "leisurely; distant",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "悠",
+        "jmdictEntries": [
+          "1540690",
+          "1605700",
+          "1662390"
+        ],
+        "selectors": {
+          "1540690": [
+            "悠久"
+          ],
+          "1605700": [
+            "悠々"
+          ],
+          "1662390": [
+            "悠遠"
+          ]
+        },
+        "targetSource": "Weblio Digital Daijisen capture for 裕: 豊かでゆとりがある"
+      },
+      "裕PromptToCandidate": "悠々 includes calm/leisurely and comfortable/easy senses; the separately captured Digital Daijisen description of 裕 includes ゆとり. This supports a bounded ease/leisure English-choice ambiguity, not an isolated KANJIDIC2 sense for 裕.",
+      "candidatePromptTo裕": "The displayed leisurely/distant label is not asserted synonymous with abundant/rich. The direct guard avoids the documented ease/leeway overlap in broad choices and does not infer a transitive relation from another card's exclusions.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "悠": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q12",
+      "candidate": "楽",
+      "candidateLabel": "music, enjoyment, ease",
+      "previousDecision": "direct-guard",
+      "decision": "direct-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "楽",
+        "jmdictEntries": [
+          "1207230",
+          "1207240",
+          "1222010",
+          "2842911"
+        ],
+        "selectors": {
+          "1207230": [
+            "楽"
+          ],
+          "1207240": [
+            "楽しい"
+          ],
+          "1222010": [
+            "気楽"
+          ],
+          "2842911": [
+            "楽"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "JMdict 1207230 gives 楽 a separate ordinary sense of being economically comfortable. This is not merely an association between leeway and ease; it can compete with 裕's rich meaning.",
+      "candidatePromptTo裕": "裕's rich/abundant state can plausibly answer the financially comfortable sense of 楽. The direct pair is guarded conservatively without claiming all meanings of the characters are synonymous.",
+      "endpointStatus": {
+        "裕": "guard retained",
+        "楽": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q13",
+      "candidate": "金",
+      "candidateLabel": "gold, money",
+      "previousDecision": "no-new-guard",
+      "decision": "no-new-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "金",
+        "jmdictEntries": [
+          "1001820",
+          "1242590",
+          "1242600",
+          "1242970",
+          "1243020",
+          "1263550",
+          "2839304"
+        ],
+        "selectors": {
+          "1001820": [
+            "お金"
+          ],
+          "1242590": [
+            "金"
+          ],
+          "1242600": [
+            "金"
+          ],
+          "1242970": [
+            "金持ち"
+          ],
+          "1243020": [
+            "金銭"
+          ],
+          "1263550": [
+            "現金"
+          ],
+          "2839304": [
+            "金"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The opened families cover gold, money, metal, cash, currency, value, and specialized senses. 金持ち means a rich person as a whole word; those records do not make 金 alone mean rich.",
+      "candidatePromptTo裕": "Being rich or abundant does not mean gold or money. The attested material/medium senses differ from the state or quality in 裕's label.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "金": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q14",
+      "candidate": "充",
+      "candidateLabel": "allot; fill",
+      "previousDecision": "no-new-guard",
+      "decision": "no-new-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "充",
+        "jmdictEntries": [
+          "1334270",
+          "1334340",
+          "1334360",
+          "1334440",
+          "1526670"
+        ],
+        "selectors": {
+          "1334270": [
+            "充てる"
+          ],
+          "1334340": [
+            "充実"
+          ],
+          "1334360": [
+            "充足"
+          ],
+          "1334440": [
+            "充満"
+          ],
+          "1526670": [
+            "充たす",
+            "満たす"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The character record gives allot/fill. The selected families cover assigning, filling, sufficiency, completeness, substantiality, and fullness; compound senses do not make 充 itself mean rich or abundant.",
+      "candidatePromptTo裕": "Filling, assigning, or sufficiency is not abundance, wealth, or fertility. Enough/full remains distinguishable from more than needed.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "充": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q15",
+      "candidate": "足",
+      "candidateLabel": "foot, leg",
+      "previousDecision": "no-new-guard",
+      "decision": "no-new-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "足",
+        "jmdictEntries": [
+          "1404740",
+          "1404750",
+          "1493700"
+        ],
+        "selectors": {
+          "1404740": [
+            "足りる"
+          ],
+          "1404750": [
+            "足る"
+          ],
+          "1493700": [
+            "不足"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The character and selected words also support sufficient/enough, while 不足 is insufficiency. Sufficiency is a threshold, not surplus abundance or richness.",
+      "candidatePromptTo裕": "裕's abundant/rich label does not mean enough/sufficient, and the foot/leg sense is unrelated. The reverse answer does not follow from the broader notion of plenty.",
+      "endpointStatus": {
+        "裕": "no guard",
+        "足": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "Q16",
+      "candidate": "濃",
+      "candidateLabel": "concentrated; dark",
+      "previousDecision": "no-new-guard",
+      "decision": "conservative-direct-guard",
+      "evidence": {
+        "kanjidic2Character": "濃",
+        "jmdictEntries": [
+          "1469890",
+          "1469910"
+        ],
+        "selectors": {
+          "1469890": [
+            "濃い"
+          ],
+          "1469910": [
+            "濃厚"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "濃い covers dark/strong/dense and 濃厚 has rich flavor/color as a complete compound. The English word rich is polysemous, so the broad choice is conservatively excluded; the compound sense is not assigned to 濃 alone.",
+      "candidatePromptTo裕": "This guard protects only the English flavor/intensity ambiguity. It does not teach 裕 as meaning strong flavor, concentrated, dark, or rich-flavored.",
+      "endpointStatus": {
+        "裕": "guard added",
+        "濃": "no inverse guard"
+      },
+      "reviewFinding": false
+    },
+    {
+      "id": "F1-広",
+      "candidate": "広",
+      "candidateLabel": "wide, spacious",
+      "previousDecision": "direct-guard",
+      "decision": "direct-guard-retained",
+      "evidence": {
+        "kanjidic2Character": "広",
+        "jmdictEntries": [
+          "1278410"
+        ],
+        "selectors": {
+          "1278410": [
+            "広い"
+          ]
+        }
+      },
+      "裕PromptToCandidate": "The 裕 card teaches roominess and the source description includes ゆとり; 広い is explicitly spacious/wide. This direct spatial overlap makes the pair a plausible answer in either direction.",
+      "candidatePromptTo裕": "広's spacious sense and 裕's roominess are a direct overlap. The guard does not add Weblio's source-specific reading to KANJIDIC2 or quiz metadata.",
+      "endpointStatus": {
+        "裕": "guard retained",
+        "広": "no inverse guard"
+      },
+      "reviewFinding": false
+    }
+  ],
+  "remainingNoNewGuardClaims": [
+    "Q6 貨",
+    "Q9 冗",
+    "Q13 金",
+    "Q14 充",
+    "Q15 足"
+  ],
+  "limits": [
+    "The nine new direct guards are conservative quiz-safety decisions for broad-English ambiguity, not reviewer findings or claims of universal synonymy.",
+    "KANJIDIC2 glosses and complete selected JMdict families are finite evidence, not corpus-frequency or exhaustive lexicon studies.",
+    "Compound meanings are not automatically allocated to constituent characters; the 濃 guard addresses English rich polysemy only.",
+    "No transitive guard, arbitrary-pool, multiple-borrow, Kotlin/native/device, whole-set, or publication acceptance is claimed."
+  ],
+  "_reviewIsolation": {
+    "originalSignedPath": "docs/n1-sources/batch-124-reconciliation-002/dispositions.json",
+    "originalSha256": "8d4a449e4b8ae97885854878e382ba51292e1da55e1395e48ae0f21e6c23a8ce",
+    "removedJsonPointers": [
+      "/confirmationStatus"
+    ],
+    "scope": "Only cross-report provenance removed; all substantive pair claims and selectors preserved."
+  }
+}

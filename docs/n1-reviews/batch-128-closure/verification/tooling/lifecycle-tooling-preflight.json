@@ -1,0 +1,391 @@
+{
+  "batch": 128,
+  "status": "PASS_PREPARATION_ONLY",
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_b127_v2.py",
+        "sha256": "2300d35f6a1fecadbdb19361f3b9a02ca50fa3418483ee7d8ec25986de810f5c"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_b128.py",
+        "sha256": "2aa6bc352e2c9acc95de67ce780ba0a9ef0ce65ef87552a5217278730ffa0910",
+        "bytes": 16764
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B127",
+          "after": "B128"
+        },
+        {
+          "before": "batch == 127",
+          "after": "batch == 128"
+        },
+        {
+          "before": "\"verify_b127_sources.py\"):",
+          "after": "\"verify_b127_sources.py\", \"close_b128.py\", \"verify_b128_archive.py\", \"test_close_b128.py\", \"test_verify_b128_archive.py\", \"record_b128_confirmation_decision.py\", \"prepare_b128_lifecycle_tools.py\", \"b128_external_sources.py\", \"test_b128_external_sources.py\", \"step_b127.py\"):"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b127_archive.py",
+        "sha256": "c2e71819cd6c54b32be0dc4b3792d0336ef88661b57e71230eaa01a9e0495ea5"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b128_archive.py",
+        "sha256": "1134c8c644884af507ee3efa43e8cb0853283144b30baab7b917d7fe051c2ab6",
+        "bytes": 4799
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B127",
+          "after": "B128"
+        },
+        {
+          "before": "load_batch(127)",
+          "after": "load_batch(128)"
+        },
+        {
+          "before": "batch-127-closure",
+          "after": "batch-128-closure"
+        },
+        {
+          "before": "provenance[\"batch\"] == 127",
+          "after": "provenance[\"batch\"] == 128"
+        },
+        {
+          "before": "\"batch\": 127",
+          "after": "\"batch\": 128"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_close_b127.py",
+        "sha256": "2a0a3a9ff240c878a0195f33a8ca534df67e355c61e255a0b3c581b95e03b523"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_close_b128.py",
+        "sha256": "be08f3f62c962acb13c3bdb6b5cf574e8b341742f77a482c7b59b392119776c2",
+        "bytes": 1818
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "close_b127",
+          "after": "close_b128"
+        },
+        {
+          "before": "B127",
+          "after": "B128"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b127_archive.py",
+        "sha256": "78bf4620623b4a7c497b90203062360cd6222472f921811f7969d0e70c670f4c"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_verify_b128_archive.py",
+        "sha256": "1602f7c5bfa0dd3be70d713000c1dc534969c4bb8c23402ea8d1e0d119081054",
+        "bytes": 3405
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "verify_b127_archive",
+          "after": "verify_b128_archive"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\record_b127_confirmation_decision.py",
+        "sha256": "8c0094a300d8a5935a0751ed22f8ec4dfc117028f6e70cff53007fc058508980"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\record_b128_confirmation_decision.py",
+        "sha256": "ab30d6d72b50af9dc989a485022cce79250035c4811dd902163a492c081f2f57",
+        "bytes": 2772
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B127",
+          "after": "B128"
+        },
+        {
+          "before": "scratch-127",
+          "after": "scratch-128"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\finalize_b127.py",
+        "sha256": "b42be194de0d4fe54e6eec6be244136cfb496adb4d80f263974341e2ca07fec8"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\finalize_b128.py",
+        "sha256": "aba7682c1f83e4a4a497e285c4a43c914ce0cf09a63d1415eaa2c085d88bfde5",
+        "bytes": 11912
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B127",
+          "after": "B128"
+        },
+        {
+          "before": "b127",
+          "after": "b128"
+        },
+        {
+          "before": "batch-127",
+          "after": "batch-128"
+        },
+        {
+          "before": "provenance[\"batch\"] == 127",
+          "after": "provenance[\"batch\"] == 128"
+        },
+        {
+          "before": "proof[\"batch\"] == 127",
+          "after": "proof[\"batch\"] == 128"
+        },
+        {
+          "before": "load_batch(127)",
+          "after": "load_batch(128)"
+        },
+        {
+          "before": "\"batch\": 127",
+          "after": "\"batch\": 128"
+        },
+        {
+          "before": "b1e90345-f8f3-4c8d-b776-09eb8d299ba9",
+          "after": "1f199715-ebef-41e0-9e84-fda61248555f"
+        },
+        {
+          "before": "3d1c4b40-90b0-466d-a565-32a96db5281c",
+          "after": "40f6292a-b52f-4d9a-ac86-25bbc5cad512"
+        },
+        {
+          "before": "(\"CLEAN\" if family == \"claude\" else \"NEEDS FIX\")",
+          "after": "(\"NEEDS FIX\" if family == \"claude\" else \"UNVERIFIED\")"
+        },
+        {
+          "before": "\\u5009",
+          "after": "\\u5507"
+        },
+        {
+          "before": "old[\"sourceRows\"] == [57]",
+          "after": "old[\"sourceRows\"] == [159]"
+        },
+        {
+          "before": "proof[\"runtimeEntries\"] == 8716",
+          "after": "proof[\"runtimeEntries\"] == 8718"
+        },
+        {
+          "before": "[\"publishedPendingRecordsWithCards\"] == 256",
+          "after": "[\"publishedPendingRecordsWithCards\"] == 257"
+        },
+        {
+          "before": "[\"publishedN1Additions\"] == 250",
+          "after": "[\"publishedN1Additions\"] == 251"
+        },
+        {
+          "before": "[\"undelivered\"] == 972",
+          "after": "[\"undelivered\"] == 971"
+        },
+        {
+          "before": "reviewClosedPendingRecordsWithCards=257",
+          "after": "reviewClosedPendingRecordsWithCards=258"
+        },
+        {
+          "before": "notStarted=971",
+          "after": "notStarted=970"
+        },
+        {
+          "before": "Independent Claude CLEAN and GPT NEEDS FIX initials",
+          "after": "Independent Claude NEEDS FIX and GPT UNVERIFIED initials"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_finalize_b127.py",
+        "sha256": "223b4c73fe3c7a43ecce9df4d999bc0cd949047c1043185b1e917b66818db57f"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\test_finalize_b128.py",
+        "sha256": "24285be0ddd14c1f8c6c7300050737b3b303e2545493cd5d7c4610fa04fb189e",
+        "bytes": 3709
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "finalize_b127",
+          "after": "finalize_b128"
+        },
+        {
+          "before": "B127FinalizerTests",
+          "after": "B128FinalizerTests"
+        },
+        {
+          "before": "\\u5009",
+          "after": "\\u5507"
+        },
+        {
+          "before": "\"rawVerdict\": \"CLEAN\" if family == \"claude\" else \"NEEDS FIX\"",
+          "after": "\"rawVerdict\": \"NEEDS FIX\" if family == \"claude\" else \"UNVERIFIED\""
+        },
+        {
+          "before": "\"batch\": 127",
+          "after": "\"batch\": 128"
+        },
+        {
+          "before": "\"sourceRows\": [57]",
+          "after": "\"sourceRows\": [159]"
+        },
+        {
+          "before": "\"publishedPendingRecordsWithCards\": 256",
+          "after": "\"publishedPendingRecordsWithCards\": 257"
+        },
+        {
+          "before": "\"publishedN1Additions\": 250",
+          "after": "\"publishedN1Additions\": 251"
+        },
+        {
+          "before": "\"undelivered\": 972",
+          "after": "\"undelivered\": 971"
+        },
+        {
+          "before": "\"runtimeEntries\": 8716",
+          "after": "\"runtimeEntries\": 8718"
+        },
+        {
+          "before": "[\"publishedPendingRecordsWithCards\"], 256)",
+          "after": "[\"publishedPendingRecordsWithCards\"], 257)"
+        },
+        {
+          "before": "[\"undelivered\"], 972)",
+          "after": "[\"undelivered\"], 971)"
+        },
+        {
+          "before": "\"delivered\": 257, \"n1Additions\": 251, \"n2Placements\": 6, \"remaining\": 971",
+          "after": "\"delivered\": 258, \"n1Additions\": 252, \"n2Placements\": 6, \"remaining\": 970"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\run_b127_closure_checks.py",
+        "sha256": "f2a368c98da4ade8a3b68c57a41f15c585dc1873f94281965122e8a3319c7ee7"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\run_b128_closure_checks.py",
+        "sha256": "e156fa548df8807eb7dfd0fd5f17f8f7ad0133b010c75f3ad79d2590e250f5fa",
+        "bytes": 5360
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B127",
+          "after": "B128"
+        },
+        {
+          "before": "b127",
+          "after": "b128"
+        },
+        {
+          "before": "scratch-127",
+          "after": "scratch-128"
+        },
+        {
+          "before": "load_batch(127)",
+          "after": "load_batch(128)"
+        },
+        {
+          "before": "batch-127",
+          "after": "batch-128"
+        },
+        {
+          "before": "\"batch\": 127",
+          "after": "\"batch\": 128"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b127_publication_tools.py",
+        "sha256": "4d53eb441d1bf26e100fa4981682a6622391e3de64e5c4bbedca34758f4c818e"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b128_publication_tools.py",
+        "sha256": "feab0e7acdb6207ba5721417ed843e07ce74b35bca1bb793afaaee66a3ca0347",
+        "bytes": 4081
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "B127",
+          "after": "B128"
+        },
+        {
+          "before": "load_batch(127)",
+          "after": "load_batch(128)"
+        },
+        {
+          "before": "batch-127",
+          "after": "batch-128"
+        },
+        {
+          "before": "finalize_b127",
+          "after": "finalize_b128"
+        },
+        {
+          "before": "scratch-127",
+          "after": "scratch-128"
+        },
+        {
+          "before": "\"batch\": 127",
+          "after": "\"batch\": 128"
+        },
+        {
+          "before": "\"8706\": \"8716\"",
+          "after": "\"8706\": \"8718\""
+        },
+        {
+          "before": "\"252\": \"257\"",
+          "after": "\"252\": \"258\""
+        },
+        {
+          "before": "\"246\": \"251\"",
+          "after": "\"246\": \"252\""
+        },
+        {
+          "before": "\"976\": \"971\"",
+          "after": "\"976\": \"970\""
+        },
+        {
+          "before": "r\"\\u60a0\": r\"\\u5009\"",
+          "after": "r\"\\u60a0\": r\"\\u5507\""
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\lifecycle-tooling-tests.txt",
+    "sha256": "90da9d5a1f0bca20644731734475169550486f8839eae6ab34bf0c2186992ff7",
+    "bytes": 1818
+  },
+  "testCount": 11,
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\prepare_b128_lifecycle_tools.py",
+    "sha256": "50dfa6ba294bc1770b5687e09134942e074adeecdfab36f72f24b5ae1e338a14"
+  },
+  "limits": "Tool derivation and fixtures only. No reconciliation verification, confirmation, closure, ledger change or publication. Reconciliation verifier and confirmation preparer require the actual signed handoff and are derived separately."
+}

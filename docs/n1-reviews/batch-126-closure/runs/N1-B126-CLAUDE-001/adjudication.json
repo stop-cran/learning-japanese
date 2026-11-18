@@ -1,0 +1,30 @@
+{
+  "run": "N1-B126-CLAUDE-001",
+  "candidate": "246a1319ef30414d73e4518b52ae99c1d700c57e",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-126\\initial-claude-001.md",
+    "sha256": "7c7508989ac3f1160768d720330299543c8f4fb20e8ddbcf8088a0f97c688344"
+  },
+  "finalAudit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-126\\review\\N1-B126-CLAUDE-001-final.json",
+    "sha256": "272feecfcdcc533359c7aae33341ba8c9f671b600befe9c6de6c15ba6d127379"
+  },
+  "verdict": "CLEAN",
+  "acceptedFindings": [],
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "decision": "Accepted as a bounded optional coverage observation; not a required fix.",
+      "basis": "The supplied Daijisen extract supports the 傘寿 / 80-year sense, and the complete JMdict family also contains 傘寿 (さんじゅ, 80th birthday). The card's common-word list does not include that term. Nothing in the scoped card requirements makes it mandatory, so this does not change any CLEAN facet or require editing the candidate.",
+      "citationCorrection": "The report's JMdict citation evidence/jmdict-families.xml:107-117 points to entry 1302000 傘持, not entry 1302010 傘寿. The latter is at lines 119-130; lines 119-128 contain the spelling, reading and 80th-birthday gloss. The separate Daijisen citation evidence/external-snapshots/01-extract.txt:15 directly supports the reported optional sense.",
+      "reportPreservation": "The raw report and frozen candidate remain unchanged; this citation qualification is recorded only in this adjudication."
+    }
+  ],
+  "otherDispositions": {
+    "mechanicalAndContext": "Final audit, long-context integrity, report structure and citation-range checks passed. The report was written once, read back once, contains 23/23 core and 5/5 extension reads, has no execution breaches, no fetches, and the actual response model is claude-opus-5-5.",
+    "substantive": "No required content defect is established in the four facets. The single declared direct exclusion 傘–被 is explicitly present on 傘 and the report correctly treats it as symmetric for review purposes, not transitive. All 18 selected D cards and E1 被 are accounted for. The candidate's own explanation distinguishes a physical lampshade from darkness (暗) and a mushroom cap from ordinary headgear (帽); the dispositions do not infer synonymy from shared context alone.",
+    "scope": "This admits bounded independent review evidence for the frozen candidate only; it is not publication approval, whole-set acceptance, or native/device acceptance."
+  },
+  "openClaimIds": [],
+  "publicationAccepted": false
+}

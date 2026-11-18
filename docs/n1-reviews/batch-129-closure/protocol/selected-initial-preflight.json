@@ -1,0 +1,188 @@
+{
+  "batch": 129,
+  "createdAt": "2026-11-16T07:52:53.179595+00:00",
+  "packetManifestSha256": "eda4de748864a2adfa4f40a6a1cbb9bcd7398477c039d9428d3f2cf0c580bcde",
+  "coreChainSha256": "39b6ef656368f91c8fac530c41cedf4645f34036c9f679b352498b418e6328f8",
+  "template": {
+    "source": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\prompts-116\\initial-gpt-116-004.txt",
+    "sourceSha256": "0504bacc8d11cea917d7504d8631774f90913cbd569fe5f561562f70a665caaf",
+    "templateSha256": "38c2c85fdd2b16f17c8d2590a10b5a54230232490b969eef15af20b3642a4f6b",
+    "replacements": [
+      {
+        "literal": "| 憲 | <憲-correctness-verdict> | <憲-coverage-verdict> | <憲-consistency-verdict> | <憲-comprehensibility-verdict> | <憲-evidence> |\n| 監 | <監-correctness-verdict> | <監-coverage-verdict> | <監-consistency-verdict> | <監-comprehensibility-verdict> | <監-evidence> |\n| 督 | <督-correctness-verdict> | <督-coverage-verdict> | <督-consistency-verdict> | <督-comprehensibility-verdict> | <督-evidence> |\n",
+        "placeholder": "{{CARD_ROWS}}",
+        "count": 1
+      },
+      {
+        "literal": "All 9 curated distractor slots (9 distinct repo\\kanji copies): 憲: 寄 害 寒 / 監: 白 人 小 / 督: 目 眠 且.\n",
+        "placeholder": "{{C_LINE}}{{EXTRA_READS}}\n",
+        "count": 1
+      },
+      {
+        "literal": "Check the three link wrappers across two word-article changes in diffs\\existing.diff against the complete changed articles, for correct targets and no other change. Both 監 and 督 links are added to the same 監督 article. Use unchanged 責める as supporting evidence, not a new or modified article.",
+        "placeholder": "{{WRAPPER_CHECK}}",
+        "count": 1
+      },
+      {
+        "literal": "the two changed snapshot\\words articles (three wrappers in total); the complete unchanged repo\\words\\責める.md as supporting evidence; ",
+        "placeholder": "{{WORDS_READS}}",
+        "count": 1
+      },
+      {
+        "literal": "the three new kanji (憲 監 督)",
+        "placeholder": "{{NEW_KANJI_PHRASE}}",
+        "count": 1
+      },
+      {
+        "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\review-packets\\batch-116-9e18d940-s1",
+        "placeholder": "{{PACKET}}",
+        "count": 1
+      },
+      {
+        "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-116\\prompts-116\\initial-gpt-116-004.txt",
+        "placeholder": "{{PROMPT_PATH}}",
+        "count": 1
+      },
+      {
+        "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-116\\initial-gpt-004.md",
+        "placeholder": "{{REPORT}}",
+        "count": 1
+      },
+      {
+        "literal": "C:\\Users\\stop-\\n1-kanji-workspace\\review-chains\\b116-initial-s1\\01-8fe76e37617848098ebefda668a9464c.txt",
+        "placeholder": "{{FIRST_SEGMENT}}",
+        "count": 1
+      },
+      {
+        "literal": "9e18d940427d71ef1512a71e808bc40499c1914f",
+        "placeholder": "{{SNAPSHOT}}",
+        "count": 1
+      },
+      {
+        "literal": "8f35f34ccb10f166fbf6700c6c95d67f953026e3",
+        "placeholder": "{{BASE}}",
+        "count": 1
+      },
+      {
+        "literal": "c9978b0965138472de5147312c313d71e428a4a6864b67807f162ba60b5fd841",
+        "placeholder": "{{SUMS}}",
+        "count": 1
+      },
+      {
+        "literal": "ed9a4ac4163bc6117ef072dc1d1b1242df6060431a08101311aae366e82254c8",
+        "placeholder": "{{TITLE_SHA}}",
+        "count": 1
+      },
+      {
+        "literal": "lint, quiz-safety, linkplan, reading-exposure-final, unittest, validate, manifest, manifest-rebuild, budget, vocabulary",
+        "placeholder": "{{CHECKS}}",
+        "count": 1
+      },
+      {
+        "literal": "N1-B116-GPT-004",
+        "placeholder": "{{RUN}}",
+        "count": 3
+      },
+      {
+        "literal": "all 18 segments",
+        "placeholder": "all {{SEGMENTS}} segments",
+        "count": 1
+      },
+      {
+        "literal": "segment 18 ends",
+        "placeholder": "segment {{SEGMENTS}} ends",
+        "count": 1
+      },
+      {
+        "literal": "all 18 core segments",
+        "placeholder": "all {{SEGMENTS}} core segments",
+        "count": 2
+      },
+      {
+        "literal": "their three snapshot\\strokes",
+        "placeholder": "their {{N_WORD}} snapshot\\strokes",
+        "count": 1
+      },
+      {
+        "literal": "three new cards",
+        "placeholder": "{{N_WORD}} new cards",
+        "count": 5
+      },
+      {
+        "literal": "the 1232 same-commit",
+        "placeholder": "the {{TITLE_COUNT}} same-commit",
+        "count": 1
+      },
+      {
+        "literal": "lines 1-1232",
+        "placeholder": "lines 1-{{TITLE_COUNT}}",
+        "count": 1
+      },
+      {
+        "literal": "line 1232 is",
+        "placeholder": "line {{TITLE_COUNT}} is",
+        "count": 1
+      },
+      {
+        "literal": "\"一 one\"",
+        "placeholder": "\"{{TITLE_FIRST}}\"",
+        "count": 1
+      },
+      {
+        "literal": "\"齢 age; years lived\"",
+        "placeholder": "\"{{TITLE_LAST}}\"",
+        "count": 1
+      },
+      {
+        "literal": "B116",
+        "placeholder": "{{BATCH}}",
+        "count": 5
+      }
+    ],
+    "b116RenderEqualsSource": true
+  },
+  "blindness": "Same accepted GPT-004 prompt form; only batch identity, counts, paths, the eligibility reference, the curated-slot list and a neutral external-snapshot read line differ. No verdict, finding, comparison, source answer or earlier observation is supplied.",
+  "runs": {
+    "claude": {
+      "run": "N1-B129-CLAUDE-001",
+      "prompt": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\initial-claude-001.txt",
+      "promptSha256": "f62453fae06851abbe2f24cb5b75d69ae6e4e109908c32e17d97e37255e82acd",
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\kickoff-claude-001.txt",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only. The frozen prompt supplies the exact snapshot, scope and access rules.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\initial-claude-001.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "auditConfig": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\audit-config-N1-B129-CLAUDE-001.json",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-129\\initial-claude-001.md",
+      "launch": {
+        "mode": "interactive",
+        "model": "claude-opus-5.5",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B129 Claude review 001"
+      }
+    },
+    "gpt": {
+      "run": "N1-B129-GPT-001",
+      "prompt": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\initial-gpt-001.txt",
+      "promptSha256": "90275efde1e13d8da74a2e3461412716a47e960e7a1bea3a3707539259c16b5f",
+      "kickoff": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\kickoff-gpt-001.txt",
+      "kickoffText": "Original user request: \"Please find and inspect work items at stop-cran/learning-japanese related to creating N1 kanji cards. The work is ~30% complete. Fetch latest changes, find and read related repo work items, gather the context, plan the outstanding work and do it.\"\n\nAssigned slice: independent content review only. The frozen prompt supplies the exact snapshot, scope and access rules.\n\nRead C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\initial-gpt-001.txt using one view call with forceReadLargeFiles: true and no view_range, then follow its instructions. No other tool call may precede that read.",
+      "auditConfig": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-129\\review\\prompts\\audit-config-N1-B129-GPT-001.json",
+      "report": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-129\\initial-gpt-001.md",
+      "launch": {
+        "mode": "interactive",
+        "model": "gpt-6.1-sol",
+        "contextTier": "long_context",
+        "freshSession": true,
+        "sessionName": "B129 GPT review 001"
+      }
+    }
+  },
+  "reportDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-129",
+  "order": [
+    "claude",
+    "gpt"
+  ],
+  "builder": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\build-prompts-b128-v2.py",
+    "sha256": "f3a576118362c09db675bb32db992079b1c553b7c5e308ce485addc67c2ac8ac"
+  }
+}

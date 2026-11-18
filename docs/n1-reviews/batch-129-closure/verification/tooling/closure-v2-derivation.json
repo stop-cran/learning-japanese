@@ -1,0 +1,103 @@
+{
+  "derivations": [
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_b129.py",
+        "sha256": "a3f8e53f30f29c3e80c2f846e869a70f363641d4554771d7157ba8d02d004f51"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\close_b129_v2.py",
+        "sha256": "c4f00edfc278dd404493e455759a4a2c79f855ed2cf1630e16bb0f8da19009b7",
+        "bytes": 19456
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "from archive_b124_chains_v2 import prepare as prepare_public_chain",
+          "after": "from archive_b129_chains import prepare as prepare_public_chain\r\nfrom b129_closure_revision import ORIGINAL, bounded_void, confirmation_origin"
+        },
+        {
+          "before": "    contents, lineage = {}, []",
+          "after": "    contents, lineage, excluded_confirmations = {}, [], []"
+        },
+        {
+          "before": "        prefix = f\"runs/{run}\"",
+          "after": "        prefix = f\"runs/{run}\"\r\n        origin = dict(ORIGINAL)"
+        },
+        {
+          "before": "            require(spec[\"session\"] == mechanics[\"session\"] == launch[\"session\"],\r\n                    \"Confirmation changed reviewer\")",
+          "after": "            origin = confirmation_origin(\r\n                spec, mechanics, launch, accepted, original, config, records, kind, previous)\r\n            if origin[\"reviewerOrigin\"] == \"fresh-context-replacement\":\r\n                failure = read(Path(spec[\"unavailable\"][\"path\"]), spec[\"unavailable\"][\"sha256\"])\r\n                held_prefix = f\"held-runs/{failure['run']}\"\r\n                binding(spec[\"unavailable\"], f\"{held_prefix}/failure.json\")\r\n                binding(spec[\"replayedFrom\"], f\"{held_prefix}/spec.json\")\r\n                binding(failure[\"context\"], f\"{held_prefix}/context.json\")\r\n                held_audit = read(Path(failure[\"audit\"][\"path\"]), failure[\"audit\"][\"sha256\"])\r\n                dump(f\"{held_prefix}/audit-summary.json\",\r\n                     bounded_void(held_audit, failure[\"audit\"][\"sha256\"]))\r\n                for suffix in (\"preflight\", \"admission\", \"config\"):\r\n                    copy(records / \"confirm\" / f\"{failure['run']}-{suffix}.json\",\r\n                         f\"{held_prefix}/{suffix}.json\")\r\n                held_config = read(records / \"confirm\" / f\"{failure['run']}-config.json\")\r\n                for field in (\"prompt\", \"kickoff\"):\r\n                    copy(Path(held_config[field]), f\"{held_prefix}/{field}.txt\")\r\n                held_chains = [chain(Path(held_config[\"chainManifest\"]), f\"{held_prefix}/chain\")]\r\n                excluded_confirmations.append({\r\n                    \"run\": failure[\"run\"], \"session\": failure[\"session\"],\r\n                    \"candidate\": failure[\"candidate\"], \"status\": failure[\"status\"],\r\n                    \"reviewEvidenceAccepted\": False, \"confirmationAccepted\": False,\r\n                    \"reportWritten\": False, \"linguisticVerdict\": None, \"chains\": held_chains,\r\n                    \"auditSha256\": failure[\"audit\"][\"sha256\"],\r\n                })"
+        },
+        {
+          "before": "                        \"role\": kind, \"priorRun\": previous if confirmation else None,",
+          "after": "                        \"role\": kind, **origin, \"priorRun\": previous if confirmation else None,"
+        },
+        {
+          "before": "\"test_b129_external_sources.py\"):",
+          "after": "\"test_b129_external_sources.py\", \"b129_closure_revision.py\", \"test_b129_closure_revision.py\", \"close_b129_v2.py\", \"archive_b129_chains.py\", \"verify_b129_archive_v2.py\", \"prepare_b129_initial_replacement.py\", \"prepare_b129_initial_replacement_v2.py\", \"confirm_b129_context_replacement.py\"):"
+        },
+        {
+          "before": "\"reviewLineage\": lineage, \"excludedInitialRuns\": excluded,",
+          "after": "\"reviewLineage\": lineage, \"excludedInitialRuns\": excluded,\r\n            \"excludedConfirmationRuns\": excluded_confirmations,"
+        },
+        {
+          "before": "\"the original reviewer, its own report, the actual runtime delta and \"",
+          "after": "\"the original reviewer where available; the explicitly attributed Claude replacement \"\r\n                            \"uses the unchanged original report, actual runtime delta and \""
+        },
+        {
+          "before": "\"neither accepted nor unaccepted earlier snapshots are final acceptance of this revision.\",",
+          "after": "\"neither accepted nor unaccepted earlier snapshots are final acceptance of this revision. \"\r\n                            \"The executed compacted first confirmation remains VOID, reportless \"\r\n                            \"and excluded from teaching evidence and acceptance.\","
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\archive_b124_chains_v2.py",
+        "sha256": "ab34fc350a5062af5c3ee3b6e6041d28da13819a9ab67d908f4137f3df0558d6"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\archive_b129_chains.py",
+        "sha256": "d97d5dcff345b972594894f6021d762d1fb46e968e2d1dd37850df9382b9e269",
+        "bytes": 2577
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "    return (source.startswith(\"evidence/external-snapshots/\")\r\n            and source != \"evidence/external-snapshots/manifest.json\")",
+          "after": "    return ((source.startswith(\"evidence/external-snapshots/\")\r\n             and source != \"evidence/external-snapshots/manifest.json\")\r\n            or source.startswith((\"external-reconciliation/\", \"original-source-sections/\")))"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b129_archive.py",
+        "sha256": "aa1fd4f264db2e162dd7090bbba13473e9c97a3a0938e8fbbd7046f475f8990d"
+      },
+      "output": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\verify_b129_archive_v2.py",
+        "sha256": "aa66fc96f4eaf7e693df91abc4004f0e4e4959f65a33c3faeedc87b86fae958b",
+        "bytes": 4882
+      },
+      "reverseExact": true,
+      "substitutions": [
+        {
+          "before": "from archive_b124_chains_v2 import is_local_only_source",
+          "after": "from archive_b129_chains import is_local_only_source"
+        },
+        {
+          "before": "        for review in provenance[\"reviewLineage\"]:",
+          "after": "        for review in (provenance[\"reviewLineage\"]\r\n                       + provenance[\"excludedConfirmationRuns\"]):"
+        },
+        {
+          "before": "\"Verifies the actual closure files and known external-snapshot labels. \"",
+          "after": "\"Verifies actual accepted and held closure chains, including B129 complete-source labels. \""
+        }
+      ]
+    }
+  ],
+  "producer": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\b129_closure_revision.py",
+    "sha256": "06d4f3daf30f7a4143a05c68b7185196bf276702e1c250323c14c87666dc266d"
+  },
+  "limits": "Tool preparation only; final acceptance is still required. Original tools, executed VOID context, reports and sources are not rewritten. Complete external articles remain local, including all co-located material."
+}

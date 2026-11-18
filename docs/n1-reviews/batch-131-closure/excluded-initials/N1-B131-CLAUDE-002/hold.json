@@ -1,0 +1,45 @@
+{
+  "batch": 131,
+  "run": "N1-B131-CLAUDE-002",
+  "family": "claude",
+  "session": "91c7afbb-aae4-4d63-9af7-e71e48b68b83",
+  "candidate": "1359b467e0edee8822c665614d6ca57e42785c4d",
+  "status": "HOLD_REPORT_PARENT_MISSING-void-not-accepted",
+  "reviewAccepted": false,
+  "finalAcceptance": false,
+  "audits": [
+    {
+      "summary": "review/preparation-002/N1-B131-CLAUDE-002/audit-20261116T182729696636/audit-summary.json",
+      "status": "PHASE1_READY",
+      "originalAuditSha256": "1c0cf80e17235fde744701679aa8d384f5f3f5e9dca5e35a1f1d234a020d50cc"
+    },
+    {
+      "summary": "review/preparation-002/N1-B131-CLAUDE-002/audit-20261116T183154081610/audit-summary.json",
+      "status": "VOID",
+      "originalAuditSha256": "9b323a658117efbb02865e2c7625c1e1489e773e62a6dd52b31c2165af0c9fc6"
+    }
+  ],
+  "quarantinedPhase1Lists": [
+    "review/preparation-002/N1-B131-CLAUDE-002/audit-20261116T182729696636/phase1-list.txt"
+  ],
+  "runFiles": [
+    "review/preparation-002/N1-B131-CLAUDE-002-admission-request.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-admission.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-context.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-extension-preflight.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-extension.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-final.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-launch.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-phase1.json",
+    "review/preparation-002/N1-B131-CLAUDE-002-phase2-message.txt",
+    "review/preparation-002/N1-B131-CLAUDE-002-pre-phase2-capacity.json"
+  ],
+  "rootCause": "Preparer defect: preparation-002\\reports (parent of both initial-claude-002.md and initial-gpt-002.md) was never created. The reviewer's single permitted create failed with 'Parent directory does not exist'; under its rules it could not mkdir or retry, so it stopped without a report or completion message. Reviewer behaviour was compliant; the run is void through harness fault.",
+  "quarantine": "Claude002's phase1 list, final message and any verdict/findings are coordinator-observed but NOT accepted evidence. Never share them with the author, preparer, GPT or any later reviewer. If no accepted review covers a quiz-safety issue the coordinator has seen in void runs, the coordinator must independently adjudicate it from source evidence before publication (recorded as coordinator-owned, not reviewer-accepted).",
+  "next": "Void. Do not message this session again. Fresh paired runs must be derived by the preparer with existing report parents and a preflight check.",
+  "ledger": {
+    "key": "reviewClaude002",
+    "sha256": "72cfa850cd8a7ed660d7ac36f57f7dbaf2f4d0901c4bda4179d139ed4db66261"
+  },
+  "evidenceStatus": "Preserved for audit only. Quarantined lists, messages and observations are not review evidence and were not shared with the author, preparer or later reviewers."
+}

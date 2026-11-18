@@ -1,0 +1,52 @@
+{
+  "run": "N1-B117-CLAUDE-001",
+  "batch": 117,
+  "candidate": "93c6e09770a5272529ce2b324873768c36a94f71",
+  "createdAt": "2026-11-14T23:22:31.503879+00:00",
+  "preflightSha256": "82c75d56f845ea10d9e04c31325a8182da8222fdd0f3742a9ce16c8fff6600d9",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step.py",
+    "sha256": "a5a2a9c45bb0de68cf3baa8056267ddd3649375e8b06bd0ad520beb31b672544"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted",
+      "basis": "KANJIDIC2 gives 維 rope (source-metadata.json:69-71); 索 title is rope; 緒 title is cord; 維 quiz_exclusions is []; exclusions are not transitive. Overlaps coordinator observation C3.",
+      "fix": "Declare 索 and 緒 on 維 with a concise Notes distinction."
+    },
+    {
+      "id": "F2",
+      "disposition": "accepted",
+      "basis": "KANJIDIC2 gives 紀 history and annals; 紀 already excludes 史 for the same label; 歴 title 'history; passage of time' is undeclared.",
+      "fix": "Declare 歴 on 紀 and extend the exclusion note."
+    },
+    {
+      "id": "F3",
+      "disposition": "accepted",
+      "basis": "KANJIDIC2 searching/inquiring; Daijisen sense 2 searching; the 索 card and the newly linked 索引 article both teach the searching sense; 捜 and 探 titles display it directly.",
+      "fix": "Declare 捜 and 探 on 索 and extend the exclusion note."
+    },
+    {
+      "id": "F4",
+      "disposition": "accepted",
+      "basis": "JMdict/KANJIDIC2 fee, charge, wages; the 代 card teaches charge or fee; 俸 salary and 給 pay display the wages sense.",
+      "fix": "Declare 代, 俸 and 給 on 賃 and extend the exclusion note."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-117\\initial-claude-001.md",
+    "sha256": "ed135a7f3da9ae83f4c523da0da499b92f1a15f12277187ca05e118db61365df"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-CLAUDE-001-final.json",
+    "sha256": "ae84459e90661819fe6795418b479b52f13240b7deb5a8fedc8564d83b32b9ef"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-117\\review\\N1-B117-CLAUDE-001-adjudication.json",
+    "sha256": "41d417b9339e5ee81a257d058ad655a9d092704385cb98af8e5ac3df384ef6d5"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

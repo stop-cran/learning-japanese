@@ -59,6 +59,1091 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Continuation after the 2026-11-17 PC move
+
+B134 紫 was merged with main and published at `2cdae679`; delivery was
+**272/1,228** at the move, with **956 remaining**. Later batch sections give
+the current figure. Work continues on another PC with the following
+disclosed choices:
+
+- The frozen implementation JMdict bytes are not available there. Batches
+  from B135 cite the explicit [continuation pin](n1-sources/continuation-inputs.json)
+  (JMdict created 2026-11-17). `tools/extract_n1_jmdict.py --pin continuation`
+  checks it. The frozen snapshot record is unchanged. KANJIDIC2 card metadata
+  and the KanjiVG revision stay frozen.
+- Batches follow the lean B111 shape: up to 15 absent frozen members whose
+  readings are already used by existing word articles. Those articles gain
+  links to the new cards; no new word articles are added.
+- Each frozen candidate gets an independent Claude review, then an
+  independent GPT review, run one after the other. Fixes are confirmed by the
+  same reviewers where possible; otherwise a fresh replacement confirms, and
+  that is disclosed.
+- The B134-era session-binding, admission and token-forecast records are not
+  continued. Each batch keeps one progress file in `n1-sources/` and one
+  review record in `n1-reviews/`; `tools/n1_record_publication.py` writes
+  the publication receipt.
+- Android JVM tests stay **not run** until a JDK is available. No native,
+  device or phone acceptance is claimed.
+- `bf9aa740`, `2cdae679` and `c5cdc604`, and batch 136's closure
+  `1e91700e` and receipt `c79aa930`, are signed with key
+  `AD3E63ADB89CAE86`, which GitHub does not associate with the account, so
+  they show as Unverified there. The other commits from `afed6694` on use
+  the registered key `9D94B9D311BD26A7`. History is not rewritten.
+
+From B136, these are standing steps before a batch is frozen, adopted from
+the B135 review:
+
+- Collect every reading attested for each new kanji beyond its KANJIDIC2
+  metadata: the readings Kanjipedia marks as outside the official table (外),
+  Daijisen headwords marked ▽ for the kanji, and single-kanji JMdict entries,
+  including okurigana variants. Pass them to the reading-exposure audit with
+  `--extra`, and read its one-holder summary line as well as the hit counts.
+- Where an attested reading could be drawn as a wrong answer, choose three
+  curated distractors that fill every slot of the question: each of them
+  offers only readings that are not the card's own, and their readings differ,
+  so the random fallback never runs. Prefer providers whose readings have the
+  prompt's shape (verb-like kun readings for a verb). Shape look-alikes that
+  are unsafe as providers stay in Notes.
+- Card text states facts about the chosen cards and sources, never what the
+  quiz will or will not offer, since that depends on other content.
+- Long sense lists use the B135 弾 layout: a one-line introduction, one bullet
+  per dictionary sense with one example and its kana, and the remaining
+  examples in a final Notes bullet. A word is glossed where it first appears.
+- Packet check logs carry no reviewer attributions, so a blind reviewer
+  cannot tell who asked for a check.
+- From B138, adopted from the B137 review: a card's Metadata line lists the
+  JMdict entry of every word the card names, and the author's `meta_scan.py`
+  (kept in the [B137 confirmation packet](n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/meta_scan.py))
+  checks this before freeze. It checks whole runs of Japanese script that
+  contain a kanji; kana-only and single-kanji words are not checked. The 19
+  gaps it finds in the 31 published cards of batches 134–136 are
+  [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
+  for a later sweep.
+
+## Batch 140: published
+
+Review-closed and published at `fe70abbf`. The
+[Validate content run 44382086589](https://github.com/stop-cran/learning-japanese/actions/runs/44382086589)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,966 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-140-publication/provenance.json). Delivery is now
+**362/1,228**, with **866 remaining**.
+
+Fifteen absent frozen members: 嵐 巣 帳 幕 幣 序 弁 往 径 徐 従 徴 志 怠 恨
+(rows 291–360), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. 従,
+deferred in batch 111 because no existing article used its reading ジュウ,
+passes under this rule because 従う and 従って use したが.う. No word article
+is added: twenty-three existing articles each gain one link to a new card.
+半径 and 往復 also lose a sentence that said 径 or 往 had no card, and the
+Notes bullet of the existing 慢 card that said 怠 and 緩 had no cards now
+names only 緩. `n1_linkplan.py verify` checks the two article edits as
+declared remark edits, and the author's `kanji_remarks.py` checks that no
+other existing card changes and that 慢 changes only by its declared edit.
+The [progress file](n1-sources/batch-140-progress.json) records the gates and
+disclosed limits.
+
+Ten cards quiz on readings only and five quiz kun readings only, because the
+other readings have no declaring word article yet; common ones such as 巣
+ソウ, 幕 バク, 従 ジュウ and したが.える, 志 こころざし, 怠 タイ and 恨
+うら.めしい are listed and illustrated, not quizzed. JMdict marks the いとこ of
+従兄弟 and 従姉妹 as gikun, so it is not quizzed either.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 帳つけ, 幕にする, 弁じる, 徐に, 従たる,
+徴する and 怠い. With tag-similar distractors, the audit found that Starter
+sessions could offer まい, a reading of 毎, 米, 枚, 妹 and 埋, on 幣's ヘイ
+prompt; JMdict (2789910) and Daijisen both give まい for 幣. 幣 now takes
+three Starter-card distractors whose readings are not its own (中 南 雨 since
+the review fix), so curated options fill every slot; the shape look-alikes
+常, 帯 and 希 stay in its Notes.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `28831314` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX for minor points only. Claude found
+three quiz-option points: 幣's distractors 中 and 内 have overlapping titles,
+"middle, inside" and "within, inner"; the titles of 徴 and 署 both begin with
+"sign"; and 帳 and 幕 share a curtain sense but did not exclude each other.
+GPT found that 幕 and 徐 quoted two explanatory paraphrases, "covering cloth"
+and "slow, unhurried", as if they were source glosses, and that 弁 and 従 put
+long lists of dictionary senses before their reading tables. Fix `1b24a5f9`
+changed eight cards. 幣 replaces 内 with 雨; Claude's suggested 常, 帯 and 希
+are not Starter cards, and the audit of a local version that used them found
+that a Starter session could then offer まい. 徴 excludes 署 and 帳 excludes 幕.
+The two paraphrases are no longer quoted. 弁 and 従 each sum up their senses
+in one paragraph and keep the full list in a reference bullet at the end of
+the Notes. The fix also applied five optional points: 径's example 小径, 幣's
+rare readings ぜに and にきて, the bento sense in 弁's title, the word 弁護士
+and the link between 徐ろに and KANJIDIC2's おもむ.ろに. Both reviewers
+confirmed the fix; neither left a finding. The
+[closure record](n1-reviews/batch-140-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `1b24a5f9` pass: 436 host tests, validation, lint (0 errors; 4
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The reading-exposure audit reports
+no production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records four latent collisions, readings that other
+cards offer but no audited pool can draw: 幣 まい, 弁 とく, 従 ひろい and the
+KANJIDIC2 name reading 志 じん. The older reading-options check still lists
+まい for 幣, because it ignores slots that curated distractors fill; its
+simulation drew only curated readings. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed.
+
+## Batch 139: published
+
+Review-closed and published at `e62eee92`. The
+[Validate content run 44347453271](https://github.com/stop-cran/learning-japanese/actions/runs/44347453271)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,936 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-139-publication/provenance.json). Delivery is now
+**347/1,228**, with **881 remaining**.
+
+Fifteen absent frozen members: 嫁 嬢 宗 宜 宣 宴 寂 密 審 尋 屈 属 岬 峠 崩
+(rows 237–290), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty existing articles each gain one link to a new
+card. Four of them also lose a sentence that said a kanji had no card: 宴会,
+崩す and 崩れる drop it, and 附属 now says only that 附 has no card yet.
+`n1_linkplan.py verify` checks these as declared remark edits, and the
+author's `kanji_remarks.py` checks that no existing card changes. The
+[progress file](n1-sources/batch-139-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz on readings only and seven quiz kun readings only, because
+the other readings have no declaring word article yet; common ones such as
+嫁 とつ.ぐ, 宗 むね, 寂 ジャク and セキ, 尋 ジン and 崩 ホウ are listed and
+illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 嫁す, 嬢さん, 宜う, 宣する, 屈する,
+属する and 崩ずる. With tag-similar distractors, the audit found that Starter
+sessions could offer 先's さき on 岬's みさき prompt; Daijisen and JMdict both
+give さき for 岬. 岬 now takes three Starter-card distractors whose readings
+are not its own (山 田 中), so curated options fill every slot. Quiz
+exclusions could not fix this, because they apply to meaning quizzes only.
+The draft audits left out two Daijisen character-entry kun readings, 宗
+たっと.ぶ and 宣 の.る; the corrected audits add them and change no hit or
+collision count.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `a47efe9a` one after the other, each without seeing
+the other's work. GPT returned NEEDS FIX for one minor defect: 峠 excluded 通
+and 経, which share only the English word "pass" with it. Claude passed the
+batch with two minor source points: 宣 did not give JMdict's note that
+のたまう was originally respectful and is now often used sarcastically, and
+嫁 did not say that JMdict marks its sense "wife" as Kansai dialect. Fix
+`3b6f9727` changed four cards and one word article: it removed both 峠
+exclusions and added a bullet separating a mountain pass from the verbs 通る
+and 経る, added the two notes, and applied three of Claude's optional points:
+嬢's related forms お嬢様, 嬢ちゃん and 嬢さん, 宣's Daijisen kun readings
+with 宣べ伝える, and a full stop in 宴会's reading line. GPT then found that
+the new 嬢 bullet shortened JMdict's gloss of 嬢さん, which Claude had also
+noted as optional. Fix `f1b2bdb8` quotes the gloss in full, and both
+reviewers confirmed it; neither left a finding. The
+[closure record](n1-reviews/batch-139-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `f1b2bdb8` pass: 436 host tests, validation, lint (0 errors; 2
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The corrected reading-exposure audit
+reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 宗 し on the シュウ prompt in the N1
+and All stacks, through the curated distractor 示. It records eleven latent
+collisions, readings that other cards offer but no audited pool can draw.
+The older reading-options check still lists さき for 岬, because it ignores
+slots that curated distractors fill; its simulation drew only curated
+readings. Android JVM tests were not run (no JDK), and no native or phone
+acceptance is claimed.
+
+## Batch 138: published
+
+Review-closed and published at `a2a0f3df`. The
+[Validate content run 44309389145](https://github.com/stop-cran/learning-japanese/actions/runs/44309389145)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,906 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-138-publication/provenance.json). Delivery is now
+**332/1,228**, with **896 remaining**.
+
+Fifteen absent frozen members: 噴 垂 垣 執 堅 塊 墨 壁 壊 奏 契 奨 奪 妨 威
+(rows 174–230), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: seventeen existing articles each gain one link to a
+new card. The 張 card's sentence that said 威 had no card now links 威 with
+its title. `n1_linkplan.py verify` checks word articles only, so the
+author's `kanji_remarks.py` checks that this is the only edit to an existing
+card. The [progress file](n1-sources/batch-138-progress.json) records the
+gates and disclosed limits.
+
+Seven cards quiz on readings only and eight quiz kun readings only, because
+the other readings have no declaring word article yet; common ones such as
+堅 ケン, 壁 ヘキ, 奪 ダツ and 奏 かな.でる are listed and illustrated, not
+quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the JMdict kanji-plus-okurigana headwords 垂げ さげ, 垂れ
+しだれ and だれ, 垂れる しだれる, 垂んとす, 執よう, 壊つ, 奏す, 奏する and
+奪る. With tag-similar distractors, the audit found that Starter sessions
+could offer Kanjipedia's 外 readings ホン for 噴 and ケツ for 契. Both cards
+now take three Starter-card distractors whose readings are not their own
+(口 古 買 and 大 天 分), so curated options fill every slot. A second
+`--extra` for the same kanji first replaced the earlier one in the author's
+audit tools instead of adding to it, so the draft audits never checked eight
+extra readings of 垂, 執, 壊 and 奏. The tools now add, the gate runner passes
+one merged `--extra` per kanji, and the corrected audits change no card.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `b6020f9e` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. GPT found
+two missing direct exclusions, 垣–壁 and 奪–魅. Claude found four wording
+points: 堅 did not say JMdict's かたい entry also lists 緊い, 契 did not name
+Kanjipedia's outside readings キツ and ケツ, 妨 gave only one of Daijisen's
+two examples, and 壊's mnemonic misdescribed the lower right. Fix `acf7297e`
+changed ten cards: it added both exclusions and 塊–組, which the author
+found, rewrote the four points (契 names キツ and ケツ but not Claude's セツ,
+which is the reading of a Daijisen proper-name headword), and applied four of
+Claude's optional points: 威's frame strokes, 威張る's on reading い,
+執り行う and 功を奏する. Both reviewers confirmed it, and fix `3158b2b9`
+wrote 契闊's reading in hiragana, Claude's only optional point. Because the
+corrected audits replaced those in the earlier packets, both reviewers also
+confirmed fix 2 with them; neither left a finding. The
+[closure record](n1-reviews/batch-138-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `3158b2b9` pass: 436 host tests, validation, lint (0 errors; 3
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The corrected reading-exposure audit
+reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 執 し on the シツ prompt in a Starter
+session. It records nine latent collisions, readings that other cards offer
+but no audited pool can draw; the ninth, 壊 やぶれる, was hidden by the
+`--extra` defect. The older reading-options check still lists ほん for 噴 and
+けつ for 契, because it ignores slots that curated distractors fill; its
+simulation drew only curated readings. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed.
+
+## Batch 137: published
+
+Review-closed and published at `c1d2e3a7`. The
+[Validate content run 44279660858](https://github.com/stop-cran/learning-japanese/actions/runs/44279660858)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,876 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-137-publication/provenance.json). Delivery is now
+**317/1,228**, with **911 remaining**.
+
+Fifteen absent frozen members: 丁 井 仰 但 傑 傷 僕 卸 司 吐 呂 哀 哲 唯 善
+(rows 1–164). From this batch on, as announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084),
+a batch takes the next fifteen, in source-row order, of the 271 absent rows
+at least one of whose KANJIDIC2 readings is used by an existing word article
+that declares the kanji. A card quizzes each reading that a declaring word
+article uses, unless the pinned JMdict marks the spelling as ateji or the
+reading as gikun; name-only readings are never quizzed, and a reading type
+with no such reading gets an empty quizzed list. All fifteen pass, so none
+is set aside. No word article is added: twenty-one existing articles each
+gain one link to a new card. Three sentences that said there was no 丁, 傷
+or 呂 card are updated: 寧 and 敷 now link the new cards, and 火傷 drops the
+sentence. The [progress file](n1-sources/batch-137-progress.json) records
+the gates and disclosed limits.
+
+Nine cards quiz on readings only and six quiz kun readings only, because the
+other readings have no declaring word article yet; common ones such as 傷
+ショウ, 哀 アイ and 善 よ.い are listed and illustrated, not quizzed. 火傷
+やけど is gikun in the pinned JMdict, so it does not support a 傷 reading.
+Daijisen labels the ロ of 語呂 and 風呂 as 当て字, but the pinned JMdict does
+not mark those spellings ateji and the Joyo table lists 風呂 under ロ, so 呂
+quizzes ロ.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the JMdict kanji-plus-okurigana headwords 仰く, 仰ける, 吐かす,
+哀れ あはれ, 善い えい and 善し えし. No distractor change was needed.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `d3c7394d` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. Both found
+16 quoted card titles in ten cards that had lost the space after a comma. GPT
+also found that 仰's example 仰山 lacked JMdict's Kansai-dialect label on its
+"a lot" sense. Claude also raised optional source points. Fix `2bc8e9b1`
+copied each quoted title from its linked card and added the Kansai label;
+from the optional points, 丁 now says よほろ appears in JMdict only as
+つかえのよほろ, an archaic reading of 仕丁, 傑作's second sense is labelled
+jocular and dated, 卸下 is labelled a military term, and 卸 words Daijisen's
+おろし definition more closely. Claude confirmed it with one optional point:
+丁's Metadata line lacked 仕丁 (2829360). Fix `48332d32` added it and the
+missing ids of 当て字 on 呂 and 唯々 and 諾々 on 唯. Claude confirmed fix 2,
+and GPT confirmed both fixes; neither left a finding. The
+[closure record](n1-reviews/batch-137-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `48332d32` pass: 436 host tests, validation, lint (0 errors; 4
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+reading options, link plan, manifest rebuild and budget. The reading-exposure
+audit reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 唯 ゆ on the ユイ prompt in a Starter
+session that also borrows 油 or 輸. Android JVM tests were not run (no JDK),
+and no native or phone acceptance is claimed.
+
+## Batch 136: published
+
+Review-closed and published at `1e91700e`. The
+[Validate content run 44251166449](https://github.com/stop-cran/learning-japanese/actions/runs/44251166449)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,846 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-136-publication/provenance.json). Delivery is now
+**302/1,228**, with **926 remaining**.
+
+Fifteen absent frozen members: 炊 焦 異 端 筋 粗 納 脱 膨 致 請 透 鉢 隔 駄
+(rows 666–1198). They are the remaining fifteen of the thirty absent rows
+whose existing declaring word articles already cover an on-reading and,
+where one exists, a kun-reading; batch 135 took the first fifteen, so this
+selection is exhausted after this batch. Thirty-four existing word articles
+each gain one link to a new card, and no word article is added. The only
+other article text change is the removal, after review, of a stale sentence
+in 透明 that said there was no 透 card. The [progress file](n1-sources/batch-136-progress.json)
+records the gates and disclosed limits. 納's only quizzed on reading is ナッ,
+from 納得, because no word article uses ノウ yet; 駄 quizzes only タ, from
+下駄, because its only ダ word, 無駄, is an ateji spelling. Both cards say so.
+
+This is the first batch drafted under the standing steps above. The readings
+passed to the exposure audit with `--extra` are the Kanjipedia 外 readings,
+the kun readings of the Digital Daijisen character entries, the Daijisen
+headwords marked ▽ for these kanji, and JMdict 2863007 脱る とる; a scan of
+JMdict kanji-plus-okurigana headwords found no further reading stem. In the
+first draft, a Starter session that also borrows one holder card could offer
+とる on 脱 (from 取, 捕, 採 or 撮) and おこす on 致 (from 起). 脱 now has
+the curated distractors 飲 読 聞 and 致 has 話 買 学; each set fills all three
+slots, and both cards name the readings and the chosen cards. The older
+reading-options check still labels 端 はじめ and 致 おこす because it ignores
+filled slots; both prompts are filled by curated distractors.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `420a6669` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. Both found
+that 炊 presented the "boil" sense of 炊く as general Japanese, although
+JMdict marks it as Kansai dialect. GPT also found that 請 placed the 青 of
+静 on the right, where 静 has it on the left, and that 透明 still said there
+was no 透 card. Claude also raised optional source and wording points. Fix
+`7a525b06` changed 炊 (which now names standard 煮る), 請, 透明, and, from
+Claude's points, added the Daijisen kun readings 端 はした and 駄 においうま,
+a kana-spelling note on 粗 and the full 雑炊 gloss. Both reviewers then
+returned CONFIRMED with no findings. The
+[closure record](n1-reviews/batch-136-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including a unit-test excerpt in
+the confirmation packets that lost its final OK line.
+
+Gates at `7a525b06` pass: 436 host tests, validation, lint (0 errors; 8
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit apart from two disclosed
+KANJIDIC2 name-only readings: 炊 い on the スイ prompt in the N1 and All
+stacks, and 納 ろ in a Starter session that also borrows 路. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
+
+## Batch 135: published
+
+Review-closed and published at `7630757f`. The
+[Validate content run 44203191487](https://github.com/stop-cran/learning-japanese/actions/runs/44203191487)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,816 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-135-publication/provenance.json). Delivery is now
+**287/1,228**, with **941 remaining**.
+
+Fifteen absent frozen members: 博 厳 及 姿 履 巡 弾 彫 恵 憶 我 揚 救 暇 模
+(rows 129–577). They are the first fifteen, in source-row order, of the
+thirty absent rows whose existing declaring word articles already cover an
+on-reading and, where one exists, a kun-reading. Thirty-two existing word
+articles each gain one link to a new card; no other article text changes and
+no word article is added. The [progress file](n1-sources/batch-135-progress.json)
+records the gates and disclosed limits. The quizzed 履 reading リ rests on
+草履, which the Joyo table lists in its appendix of words hard to show
+character by character; the card says so.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `163b384e` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX. Both found that the 博
+mnemonic added a dot that 甫 already has. Claude also found that 憶
+misdescribed 臆測 against the Joyo table. GPT also found a dense sense
+paragraph on 弾 and two major quiz defects: 救 could offer グ as a wrong
+answer to キュウ, and 巡's fallback could offer まわる to めぐる. Kanjipedia
+lists both readings outside the official table. Fix `2ef25d33` changed nine
+cards. Claude confirmed it. GPT found one more major defect: a padded Starter
+session could offer える, which Daijisen gives for 彫る, as a wrong answer on
+彫. Fix `fb236071` gave 彫 three curated distractors (円 高 見) that fill
+every slot, and applied Claude's three optional wording points, one of which
+replaced a 巡 distractor. Both reviewers then returned CONFIRMED with no
+findings. The [closure record](n1-reviews/batch-135-closure/README.md) keeps
+the reports, prompts, packets, dispositions and limits, including one pair
+of parallel tool calls in Claude's first confirmation.
+
+Gates at `fb236071` pass: 436 host tests, validation, lint (0 errors; 7
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit apart from three disclosed
+KANJIDIC2 name-only readings. Android JVM tests were not run (no JDK), and no
+native or phone acceptance is claimed.
+
+## Batch 134: published
+
+Review-closed and published at `2cdae679`; see the
+[closure](n1-reviews/batch-134-closure/resolution.json) and the
+[receipt](n1-reviews/batch-134-publication/provenance.json). The rest of this
+section is the pre-review draft record.
+
+紫 is a missing frozen member (row 831). Existing N2 紫 supports the
+むらさき practice reading and gains one reciprocal introductory wrapper;
+no prose exception is needed. Complete KANJIDIC2 readings remain distinct
+from supported practice. The [source packet](n1-sources/batch-134/selection.json)
+retains full applicable families, supplemental character records, complete
+baseline scan rows and finite two-direction comparison dispositions.
+Direct precautions protect broad labels, not universal synonyms or
+transitive groups.
+
+Published delivery remains **271/1,228**, with **957 remaining**. This
+single local draft is not delivery or independent review. It was split for
+reviewability of the native secondary senses, historical reading and
+conflicting source stroke counts, not because of a fixed batch quota.
+Full external captures remain local and are bound by hashes; excerpts are
+bounded and attributed. Source-only/name/historical reading keys were
+included in a bounded host check, not promoted to ordinary practice readings.
+The host check, font cmaps and stroke metadata are not native/device,
+visual fallback, whole-set or publication acceptance.
+
+## Batch 133: local unreviewed authoring candidate
+
+琴・鉛・滝 are missing frozen members (rows 707, 1120 and 643).
+Existing N2 琴・滝 and N5 鉛筆 support こと・たき and エン practice;
+each gains exactly one reciprocal wrapper, without a prose exception.
+Complete ordered KANJIDIC2 inventories remain separate from practice.
+The [source packet](n1-sources/batch-133/selection.json) preserves full
+applicable families, supplemental character/native senses, actual baseline
+scan rows and finite two-direction pair dispositions. Direct precautions
+protect unresolved broad labels, not universal synonymy or transitive groups.
+
+Published delivery remains **268/1,228**, with **960 remaining**.
+These three local drafts are not delivery. A five-member source packet was
+split before authoring because its 1,097 families and 146 comparison cards
+exceeded a practical single review context. All original packets remain local.
+The bounded host checks, exact source bindings and font cmaps do not establish
+independent linguistic review, arbitrary/custom or multiple-borrow pools,
+Kotlin/native/device, rendered fallback, whole-set or publication acceptance.
+
+## Batch 132: local unreviewed authoring candidate
+
+墓 is a missing frozen member (row 197). The existing N3 article 墓
+supports はか practice and gains one reciprocal wrapper; no prose exception
+is needed. The complete ordered source readings remain separate from practice.
+The [source packet](n1-sources/batch-132/selection.json) retains complete
+applicable dictionary records, the baseline scan and six bidirectional
+pair dispositions. The direct 埋 and 石 precautions are conservative
+broad-label protections, not claims that every burial or stone is a grave.
+
+Published delivery remains **267/1,228**, with **961 remaining**; this
+local draft is not delivery. The bounded host reading model found no
+N1/All or Starter-plus-target hits but found three latent smaller-pool
+collisions, including a drawable つか when Starter also borrows 束.
+That and the recorded source and font limitations are not independent
+review, arbitrary-pool, native/device, visual or publication acceptance.
+
+## Batch 131 reconciliation 001: bounded direct precautions
+
+The local revision of candidate 1359b467 appends nine direct precautions on
+霜 and seven on 衛, with qualified additive Notes. 羊, all ordered reading
+metadata and practice choices, four support wrappers and stroke data stay
+unchanged. The [neutral addendum](n1-sources/batch-131-reconciliation/pair-dispositions-001.json)
+retains all 13 comparison questions and both displayed-answer directions:
+twelve receive qualified precautions; 霜/冴 retains a bounded non-collision
+without denying 冴's older cold/freezing senses.
+
+The packet adds 78 complete narrowly queried JMdict families, 19 complete
+character records and 17 actual comparison copies. Complete external source
+captures remain local with exact bindings; historical jargon, image gaps,
+compound-allocation uncertainty and non-transitive guard limits remain
+explicit. Original evidence and progress are historical, not overwritten.
+Separate family-isolated author responses await independent confirmations.
+The [revision ledger](n1-sources/batch-131-progress-reconciliation-001.json)
+does not increment published delivery: **264/1,228**, **964 remaining**.
+Local host checks are not native/device, whole-set or publication acceptance.
+
+## Batch 131: local unreviewed authoring candidate
+
+衛・羊・霜 are three missing frozen members (rows 977, 870 and 1174).
+Existing 自衛・衛星, 羊毛 and 霜 support selected エイ・ヨウ・しも
+practice. Exactly four reciprocal wrappers are added, with no prose
+exception; complete ordered source readings remain separate from practice.
+
+The [source packet](n1-sources/batch-131/selection.json) preserves the
+original 6da1184b survey and scans. A [separate adaptation binding](n1-sources/batch-131/base-adaptation.json)
+verifies their unchanged baseline cards at cb0f5581, including preservation
+of the intervening word-only work. The final union contains 874 complete
+JMdict families, 182 complete character records, 179 comparison copies,
+all 1,254 baseline rows per member and 195 finite bidirectional pair rows.
+Historical/native/name evidence, secondary senses and source discrepancies
+remain qualified, not discarded or made universally interchangeable.
+
+Actual Starter reading collisions in the earlier author attempt prompted
+independently checked 古・右・川 choices; the failed evidence remains.
+All three bundled cmaps lack 亍 U+4E8D, 凜 U+51DC, 彳 U+5F73,
+衞 U+885E and 韋 U+97CB in the bounded glyph scope. Host checks are
+not rendered-fallback, native/device, independent review or publication
+acceptance. See the [progress ledger](n1-sources/batch-131-progress.json).
+Published delivery remains **264/1,228**, with **964 remaining**;
+three local drafts do not advance it. 皇・桜 and 伯・憶・撲 remain deferred.
+
+## Batch 130 reconciliation 002: protected effect allocation
+
+This unpublished author proposal adds only a direct 拍/響 precaution and
+qualified Notes; ordinary clapping is not resonance, and allocation of
+the complete 打つ/rare 拍つ family's effect/impression senses to bare 拍
+remains unresolved. The [new pair table](n1-sources/batch-130-reconciliation/pair-dispositions-002.json)
+retains all 28 pairs: eight guards, 17 precautions and three bounded
+noncollisions. All earlier evidence and dispositions remain historical.
+The [new progress record](n1-sources/batch-130-progress-reconciliation-003.json)
+is awaiting two independent confirmations; earlier acceptance applies only
+to its earlier snapshot. Published delivery stays **261/1,228**, with
+**967 undelivered**. No publication or next batch is implied.
+
+## Batch 130 reconciliation 001: local author successor
+
+The three-card successor preserves the signed initial candidate and its
+entire evidence packet. A separate [reconciliation packet](n1-sources/batch-130-reconciliation/pair-dispositions-001.json)
+retains 99 complete JMdict families, 31 complete character records and
+28 complete comparison cards. Narrow new external captures independently
+establish news/tidings for 信 and 音, and retain 城's historical カキ
+lookup without making every castle a fence.
+
+The finite table distinguishes 24 direct guards from four bounded
+noncollision dispositions (耗/文, 耗/研, 拍/響 and 耗/書). Precautions
+for unresolved historical or rare-spelling allocations are not claims of
+ordinary synonymy or a resolution of those allocations. Source-positive
+wear, reduction, encouragement and rhythm senses remain visible.
+All earlier guards stay in order; metadata, practice, curated choices,
+stroke geometry and the three easier-level support articles are unchanged.
+Family-isolated author responses are separate from the neutral evidence.
+
+The [new progress record](n1-sources/batch-130-progress-reconciliation-002.json)
+binds author gates and limitations. Initial review evidence stays historical;
+author reconciliation is not independent confirmation, publication or
+whole-N1 completion. Published delivery remains **261/1,228**, with
+**967 undelivered**. No next batch is started.
+
+## Batch 130: local unreviewed authoring candidate
+
+塀・拍・耗 are three genuinely missing frozen members (rows 191, 419 and
+879). Their existing supports remain 塀 (N3), 拍手 (N3) and 消耗 (N2);
+each receives exactly one reciprocal wrapper, with no prose exception.
+Full ordered character readings stay separate from selected ヘイ・ハク・モウ
+practice. The five-member survey was split before teaching; 皇 and 桜,
+and the previously deferred 伯・憶・撲, are not resolved by this batch.
+
+The [source packet](n1-sources/batch-130/selection.json) retains 519 complete
+JMdict families, 192 complete character records, 189 actual comparison
+copies, full baseline scans and a finite bidirectional pair table.
+Supplemental news/information for 耗, historical/native forms, spelling
+restrictions, source disagreements and unresolved image glyphs remain
+visible. Conservative direct guards are not universal synonymy; shared
+topics, materials and English homographs alone do not compel guards.
+
+Strokes use the pinned converter and KanjiVG revision. All three bundled
+font cmaps lack 尸 U+5C38, 并 U+5E76, 扌 U+624C and 耒 U+8012:
+this is not rendered-fallback or native/device acceptance. The ten serial
+host gates and preservation receipts are author evidence only, not
+independent review or publication. See the [progress ledger](n1-sources/batch-130-progress.json).
+Published delivery remains **261/1,228**, with **967 undelivered**; these
+three local drafts do not increment delivery.
+
+## Batch 129: local authoring candidate
+
+The bounded candidate is **茉・絹・虹**, frozen rows 931, 841 and 967.
+Each has a generated pinned-KanjiVG stroke file and one reciprocal wrapper
+in an existing supporting word: 茉莉花, 絹 and 虹. No word article or
+non-link word prose is added or removed; 絹 remains N4 and 虹 remains N2.
+The [source packet](n1-sources/batch-129/) retains complete applicable
+dictionary records, selection predicates, ordered metadata, actual
+1,248-card baseline meaning/title scans and finite two-direction pair decisions.
+
+Practice selects マツ, きぬ and にじ respectively, independently of the
+preserved complete character reading lists. Name-use み, special whole-word
+readings, qualified historical snare/bridge/dish/dispute uses and source
+discrepancies remain distinct. Conservative direct guards protect unresolved
+broad choices; they do not establish universal synonymy or transitive guards.
+
+A five-card source survey was split before teaching authoring: 羊 and 霜
+remain unimplemented because their positive secondary senses enlarged the
+review packet. The original survey and failed first supplemental extraction
+remain local and historical. No source claim is discarded merely for lacking
+priority or standard-list status.
+
+This is an unreviewed local candidate, not native/device or publication
+acceptance. The [B129 ledger](n1-sources/batch-129-progress.json) keeps
+**258 delivered / 970 undelivered**; these three local drafts are not delivered.
+All predecessor source, review and publication evidence is unchanged.
+
+## Batch 128: local authoring candidate
+
+The bounded candidate is **唇**, frozen source row 159, with a generated
+KanjiVG stroke file and one reciprocal wrapper in the existing N2 唇
+word article. Its now-false no-card sentence is removed; all other word
+prose, metadata and its easier level remain unchanged. No word article
+is added. The [source packet](n1-sources/batch-128/) retains complete
+dictionary families, the complete character record, actual 1,247-card
+baseline gloss scans and finite bidirectional comparison dispositions.
+
+The full シン/くちびる metadata is preserved. Practice selects くちびる;
+シン is illustrated with 口唇 without creating a new word article.
+Source-positive literary petals, Jitsu's surprise sense and its historical
+variant ホトリ gloss, and the separate noun しん are distinguished rather
+than erased. Conservative direct guards prevent unresolved broad-choice
+ambiguities; they do not assert universal synonymy or propagate old guards.
+
+This is an unreviewed local candidate, not publication or native/device
+acceptance. The [B128 ledger](n1-sources/batch-128-progress.json) retains
+**257 delivered / 971 undelivered**, with one local draft not counted as
+delivered. Prior evidence, receipts and published ledgers are unchanged.
+
+### Batch 128: bounded reconciliation
+
+The [reconciliation packet](n1-sources/batch-128-reconciliation/) adds direct
+咲, 刃 and 郊 guards on 唇, preserving the fourteen earlier declarations.
+The noun-like English choice "blossom; bloom" motivates 咲, while the
+context-poor historical ホトリ quotation leaves qualified edge/outer-area
+choices conservatively guarded, without asserting lexical identity.
+The packet retains complete narrow comparison families, Q1-Q15
+two-direction dispositions and the superseded source/evidence history.
+Words, readings, curated choices, geometry and published counts are unchanged.
+The [progress revision](n1-sources/batch-128-progress-reconciliation-001.json)
+still records a local candidate, not publication or native/device acceptance.
+
+## Batch 127: local authoring candidate
+
+The bounded candidate is **倉**, frozen source row 57, with its generated
+KanjiVG stroke file and one link-only wrapper in the existing N2 倉庫 article.
+No word article is added. The [source packet](n1-sources/batch-127/) retains
+78 complete JMdict families, the complete character record, actual 1,246-card
+baseline gloss scans, comparison cards and finite direct pair dispositions.
+The full ソウ/くら metadata is unchanged; practice selects ソウ via 倉庫.
+Positive supplemental にわか and historical lookup readings remain separately
+qualified and explicitly included in the bounded host reading check.
+Conservative broad-label guards do not assert universal synonymy.
+
+This is an unreviewed local candidate, not publication or native/device
+acceptance. The [B127 ledger](n1-sources/batch-127-progress.json) retains
+**256 delivered / 972 undelivered**, with one local draft not counted as
+delivered. Prior source packets, publication receipts and ledgers are unchanged.
+
+The [B127 reconciliation packet](n1-sources/batch-127-reconciliation/) adds
+complete finite comparison families, Q1-Q13 dispositions and qualified
+cancellation guards. Its [new ledger revision](n1-sources/batch-127-progress-002.json)
+keeps the original ledger historical and the revised candidate unconfirmed
+and unpublished; delivered accounting remains unchanged.
+
+## Batch 126: local authoring candidate
+
+The bounded candidate is **傘**, frozen source row 70, with its generated
+KanjiVG stroke file and one link-only wrapper in the existing N5 傘 article.
+No word article is added. The [source packet](n1-sources/batch-126/) retains
+56 complete JMdict families, the complete character record, actual 1,245-card
+baseline gloss scans, all comparison cards and direct pair dispositions.
+The full サン/かさ metadata is preserved; practice selects かさ, and the
+separate JMdict spelling 傘/からかさ is explicitly acknowledged and checked
+in the bounded host reading model. The direct 被 exclusion conservatively
+guards a broad English cover/shelter label, not universal synonymy.
+
+This is an unreviewed local draft, not publication or native/device acceptance.
+The [B126 ledger](n1-sources/batch-126-progress.json) keeps published accounting
+unchanged at **255 delivered / 973 undelivered**. B125's publication ledger,
+receipt, sources and historical authoring reports remain unchanged.
+
+## Batch 124: local authoring candidate
+
+The one-card local candidate is **裕**, frozen source row 986, with a generated KanjiVG stroke file and one link-only wrapper in the existing N3 余裕 article. No word article is added. The [source packet](n1-sources/batch-124/) records the complete dictionary records, the 1,243-card baseline gloss scan, the 厚 and 財 overlap dispositions, and the reading and quiz-safety rationale. The latest author audit is `author-audit-002.json`; earlier decisions remain preserved. This is an authoring candidate only; independent review and acceptance/publication remain pending. Published accounting is unchanged at 253 delivered and 975 undelivered.
+
+## Batch 123: local authoring candidate
+
+The bounded candidate is **範**, frozen source row 810, with a generated KanjiVG stroke file and a link-only wrapper in the existing N3 範囲 article. No word article is added. The [source packet](n1-sources/batch-123/) records complete selected dictionary families, baseline comparison cards, the dictionary-only のり reading and bounded font/reading limitations. This candidate is not review-closed or published; published accounting remains 252 delivered and 976 undelivered.
+
+## Batch 122: local authoring candidate
+
+The bounded candidate is **悠**, frozen source row 367, with a generated KanjiVG stroke file and a link-only wrapper in the existing N2 悠々 article. No word article is added. The [source packet](n1-sources/batch-122/) retains complete selected dictionary records, actual baseline comparison cards, source-only reading distinctions and the author audit. Starter-compatible reading distractors trade close visual similarity for bounded reading-pool safety. This local draft is not review-closed or published; published accounting remains 251 delivered and 977 undelivered.
+
+## Batch 121: local authoring candidate
+
+The bounded candidate is **徳**, frozen source row 347, with a generated KanjiVG stroke file and a link-only wrapper in the existing 道徳 article. No word article is added. The [source packet](n1-sources/batch-121/) retains complete selected dictionary records, actual baseline comparison cards, source-specific reading distinctions and the author audit. Its supplemental おしえ reading and the whole-word 徳利 reading do not replace pinned metadata. The host reading model is bounded and does not establish native, device, arbitrary-pool or multi-borrow acceptance.
+
+This draft remains unreviewed and unpublished. Published accounting at the base is 250 delivered and 978 undelivered; the local card is not included in that count.
+
+## Batch 119: local authoring candidate
+
+The bounded candidate is **妥・循**, frozen source rows 225 and 345, with generated KanjiVG stroke files and link-only wrappers in the existing 妥当 and 循環 articles. No word articles are added. The [source packet](n1-sources/batch-119/) records the selected dictionary records, source-specific reading classifications, direct meaning comparisons, and authoring gates. Starter-compatible reading distractors are a deliberate trade-off against closer visual choices. This is a local candidate only; independent review and publication remain pending. The published baseline is 247 delivered and 981 undelivered frozen pending records.
+
+## Batch 118: local authoring candidate
+
+The bounded candidate is **析**, frozen source row 528, with its generated
+KanjiVG stroke file and one link-only wrapper in the existing 分析 article.
+No word article is added. Source records, direct meaning comparisons, and
+reading-classification evidence are in [batch-118](n1-sources/batch-118/).
+The three starter-compatible reading distractors are a deliberate trade-off
+against closer visual choices: source-only alternatives can otherwise reach
+fallback options in smaller pools. The bounded host model does not establish
+native, device, arbitrary-pool, or multi-borrow acceptance.
+
+This is a local candidate only: independent review and publication remain
+pending. The published baseline remains 246 delivered and 982 undelivered
+frozen pending records, including six earlier N2 placements.
+
+## Batch 117: reconciled local candidate; initial review complete
+
+The four cards are **紀・索・維・賃**, from source rows 821, 830, 844 and 1045. Each has one generated KanjiVG stroke file and one required reciprocal link wrapper in its existing support word: 世紀, 索引, 維持 and 家賃. No word articles were added; the four existing articles retain their metadata and non-link prose. The source and authoring receipts and exact changed-file inventory are in [batch-117](n1-sources/batch-117/).
+
+The source rows retain all KANJIDIC2 on/kun metadata; each has one on reading and no kun reading. Practice selects キ・サク・イ・チン. The cards qualify KANJIDIC2 nanori and JMdict-only special readings rather than promoting them to practice. Modern-shape mnemonics are explicitly not etymologies. The source inspections keep 世紀's century meaning on the compound, 索隠 and mahjong readings restricted, 維持's maintenance sense at the word level, and the distinctions among 賃金・賃貸・賃借.
+
+The B117 source/article baseline is the clean, refreshed `179103ea53d027cca6e6fd0aea4ad741a44d5b76`, which records B116's publication at `c9d87f9d7d3b9e00f7f5f8c2d27453815b84dd80`. At that baseline, 242 source members are delivered (236 N1 additions and six earlier N2 placements), with 986 remaining. After authoring, `origin/main` advanced to `589f782aca02815f129f327e95131892b0a171f4` with three B116 publication-receipt evidence files; the candidate worktree was fast-forwarded to that parent without editing those files. This four-card local candidate is not included in delivered totals. The historical Batch 116 subsection below is its authoring-time checkpoint; the later publication receipt is not edited here.
+
+Initial independent reviews are complete; the reconciled candidate is not yet confirmed. Owner confirmation, native acceptance, CI/integration and publication remain pending; this local record does not claim them.
+
+## Batch 116: drafted, independent review pending
+
+The three draft cards are **憲 監 督**, with canonical stroke files and exactly
+three link wrappers in two existing word articles: 憲法 and 監督. The latter
+receives both kanji links; all other word text and metadata remain unchanged.
+No word article or unrelated existing-kanji edit is added. **紀 索 維 賃**
+remain queued from the earlier survey.
+
+The [source/progress ledger](n1-sources/batch-116-progress.json) binds twelve
+complete base JMdict families, three separate supplemental families, complete
+character records, cached Joyo rows and canonical KanjiVG shapes. Author
+comparison inspection covered 71 complete baseline cards. Supplemental
+character readings are distinguished from the unchanged KANJIDIC2 metadata;
+the complete-word reading of 基督 is not split into a new reading of 督.
+
+The initial reading model exposed valid 監 ケン as a wrong answer in a
+Starter-padding session. Starter-compatible curated choices remove that
+collision without changing the full reading list. The final bounded model
+has zero N1/All or restricted Starter hits and two latent collisions in
+hypothetical pools lacking the curated cards. Native/custom-pool limits remain.
+
+Scoped lint, quiz/link checks, content validation, 431 host tests, manifest
+reproduction and local archive budgets passed. B116's scoped zero-warning
+result does not supersede B115's four unchanged warnings or its historical
+unreproducible zero-warning log. Independent reviews, reconciliation,
+confirmation and publication remain pending.
+
+Published totals remain **239 delivered** (233 N1 additions plus six earlier
+N2 placements) and **989 undelivered**. The three local drafts are not counted
+as delivered; they leave 986 other undelivered members.
+
+## Batch 115: published (textual review closed with limits)
+
+The eight cards are **卓 厄 宙 寸 康 漠 票 魔**, with canonical stroke files,
+eight link-only edits in eight existing word articles, and the narrow removal
+of 標's now-false statement that 票 has no card. No word article is added.
+The original fifteen-member selection was split by comparison complexity;
+**憲 監 督 紀 索 維 賃** remain queued with their gathered evidence preserved.
+The unchanged source extraction contains 75 complete JMdict families; author
+comparison inspection covered 91 complete baseline kanji cards.
+
+Independent Claude/GPT initial reviews covered freeze `f36cd819`.
+Reconciliation `206f9893` adds eleven direct meaning-exclusion pairs across six
+cards and clarifies the ancient 寸 suffix and JMdict's religious labels for 悪魔.
+Final confirmations are both **CONFIRMED**, with their original limits retained.
+The [closure](n1-reviews/batch-115-closure/README.md) preserves both initial raw
+structure failures and their authorized format-only derivatives. Claude
+CONFIRM-002 remains unchanged with eight separately adjudicated locator errors;
+GPT stayed blind to that report and mapping. All voids remain quarantined.
+
+Claude's Daijisen 寸/宙 limit remains unverified by that confirmation; GPT's
+separate fresh fetches support those claims without rewriting Claude's record.
+Host/static gates passed with **zero lint errors and four unchanged warnings**;
+the original zero-warning log cannot be reproduced and is not relied upon.
+The bounded reading model has zero N1/All/restricted Starter hits and four latent
+collisions, not native, arbitrary/custom-pool or multi-borrow acceptance.
+
+Source accounting is **239 done / 0 in progress / 989 not started**.
+Published delivery is **233 N1 additions plus six N2 placements**;
+**989 members remain undelivered**.
+The working tree contains 1,229 kanji and 5,083 words, with published runtime
+`8a1b246322fb62d9` and 8,680 entries. The [B115 ledger](n1-sources/batch-115-progress.json)
+records the source bindings, precise baseline delta and check receipts.
+Signed publication `3529ff14`, CI and all 8,680 hashes in its exact served ZIP
+are verified in the [publication receipt](n1-reviews/batch-115-publication/provenance.json).
+No later B113/B114 fix, emulator, native or phone acceptance is included.
+
+## Batch 114: published (textual review closed with limits)
+
+The fifteen cards are **娯 寮 廊 栓 汽 症 砲 碁 磁 穀 穫 糖 紺 雰 魅**, with stroke files and
+fifteen links in fifteen existing word articles; no word article is added.
+Two serial independent initial reviews covered freeze `8c2bdc27`.
+Reconciliation `ac38b8e4` added eleven pairs and narrowed the 重症 gloss.
+After a valid GPT confirmation finding, `1c2b2c6a` removed two unsupported
+part/equipment guards (穀-穂, 碁-盤) while retaining the useful comparisons.
+Nine net new direct pairs remain. Claude explicitly accepted the full-label
+adjudication in the bounded delta; final delta verdicts are Claude
+**CONFIRMED**, GPT **CONFIRMED**.
+
+The [closure record](n1-reviews/batch-114-closure/README.md) preserves all six reports,
+including the earlier conflicting confirmation judgments and their supersession,
+complete bounded-read provenance, dispositions and evidence limits. No B113 void
+material or later B113 fix is included. Native/phone, old-APK, broader reading-pool,
+supplemental-source and visual-asset limits remain explicit.
+
+Source accounting is **231 done / 0 in progress / 997 not started**:
+**225 N1 additions plus six N2 placements delivered**. These are textual/source
+counts, not device acceptance. The published runtime is `1531e050487c8a64`,
+8,664 entries. See the [B114 ledger](n1-sources/batch-114-progress.json).
+
+Published by signed, non-force fast-forward at `1a69edc3`, with prior main
+`0485c873` already an ancestor. [CI passed](https://github.com/stop-cran/learning-japanese/actions/runs/43509531759),
+and the exact served ZIP passed all 8,664 runtime hashes, exported-path equality
+and packaging limits. The [publication record](n1-reviews/batch-114-publication/provenance.json)
+binds that commit and download. Its later contributor-only receipt/ledger commit
+must retain identical exports; it is not a second ZIP download or new linguistic,
+native, emulator or phone acceptance. The immutable closure's publication-pending
+wording records its earlier state.
+
+## Batch 113: published (textual review closed with limits)
+
+The fifteen new kanji are **慢 縫 飢 恩 盆 誕 隊 需 系 徹 討 謝 握 寧 援**,
+with stroke files, thirty links across thirty reused word articles, and
+narrow stale-absence corrections in 応, 統 and 応援. No word article is
+added. The freeze is `fdec1c02`; the signed reconciliation is `b750f350`.
+Thirteen cards gain 36 direct meaning exclusions and supporting notes, and
+飢's hunger range and ichidan-stem wording are corrected. 隊 and 需 are
+unchanged; no title, reading selection or distractor changes.
+
+The [closure record](n1-reviews/batch-113-closure/README.md) preserves the
+accepted GPT initial review, GPT confirmation 005 and independent Claude
+initial 009, with execution-model identities, byte provenance and read
+inventories. GPT confirmed its three teaching fixes and independently
+checked both 討/話 and 討/争, the only defect later raised by Claude 009.
+Its actual confirmation verdict remains **UNVERIFIED**: L1 is partially
+resolved and L2-L4 remain. This is not a joint CONFIRMED result.
+
+**No compliant Claude confirmation exists.** Attempts 010 and 011 are VOID
+for missing public announcements of original-packet views (010 also had
+an unannounced fetch). Their outputs remain quarantined and are not used.
+The project coordinator selected local closure under the policy of reusing
+original reviewers "where possible"; the exact coordinator-origin decisions
+are recorded, not represented as direct-human instructions. Claude's optional
+dispositions and declines remain author decisions, not Claude-confirmed.
+
+The author retained the existing conservative shared-English-word and
+dated-sense exclusions discussed in Claude O2. They are direct pairs, not
+transitive cliques or exhaustive synonym discovery. Uneven coverage and the
+declined optional pairs remain disclosed, not declared safe. Full default
+meaning triples are unchanged. Static `QuizBuilder.kt` filtering does not
+establish parser propagation, caller-built or reading-pool behavior, executed
+Kotlin, native/phone acceptance or protection by installed APK `5c000bd`,
+which predates kanji `quiz_exclusions`. Supplemental source claims, broader
+candidate coverage, geometry/PDF checks and derived-manifest review limits
+also remain explicit in the closure.
+
+All fifteen actual GPT full-card returns byte-equal the frozen/current CRLF
+files; CRLF-to-LF conversion alone reproduces their `b750f350` Git blobs.
+The complete teaching patch matches Git byte-for-byte, with the derived
+manifest intentionally excluded. Hash agreement is not a linguistic verdict.
+
+The supplied fix gates pass: 431 host tests, zero validation/lint/quiz-safety
+errors, ten pre-existing word lint warnings, 8,638 budgeted files and 8,631
+runtime manifest entries, version `8fe45e2ba015abcc`. No JVM, emulator,
+native, rendered or phone acceptance is claimed.
+
+Local source accounting is **216 done / 0 in progress / 1,012 not started**
+out of the 1,228 frozen pending members: 210 locally review-closed N1
+additions plus the six N2 placements. "Done" here is textual/source
+accounting, not device acceptance. Published source accounting is now
+**216 present / 1,012 not delivered**. See the
+[B113 ledger](n1-sources/batch-113-progress.json).
+
+Published by a signed, non-force fast-forward at `9cb463cd`, integrating
+current main `13eee25c` without changing the B113 teaching bytes. CI passed,
+and the exact GitHub ZIP passed all 8,634 runtime hash checks, safe-path and
+packaging limits using a separately identified bounded-memory verifier.
+The [publication record](n1-reviews/batch-113-publication/provenance.json)
+preserves the approval, CI, ZIP and memory receipts. No second archive run
+or new linguistic review is implied by the contributor-only receipt update.
+
+A newly verified direct-human instruction approved publication after the
+necessary review and required later fixes to remain separate. This supersedes
+the historical local-closure hold, not the review caveats. The investigation
+still did not verify the earlier issue-60 authorization attribution or the
+B108-B112 push provenance; current approval is not retroactive permission
+evidence. No further B113 Claude attempt is planned.
+
+## Batch 112: published (textual review closed)
+
+The batch adds fifteen kanji, **健 妙 射 就 展 微 態 盤 看 至 診 酸 障 離 響**
+(source rows 64, 224, 264, 269, 276, 346, 381, 739, 743, 909, 1004, 1113, 1160,
+1169 and 1181), with their stroke files and no new word article. Each was
+declared by exactly three existing word articles, so 44 articles gain 45 links
+(微妙 serves both 妙 and 微). Three cards, 基, 素 and 鏡, drop stale remarks
+now that the linked cards exist. Earlier deferred rows, including 従, remain
+pending.
+
+Two model families reviewed the frozen draft `d6ad96eb`, Claude
+(claude-opus-5.5) and GPT (gpt-6.1-sol), one at a time and blind to each other.
+Both returned NEEDS FIX for missing meaning-quiz exclusions; neither found a
+failure of the default questions, which already use three curated distractors.
+Claude reported 微 versus 分 (English "minute"), 就 versus 企 and 承
+("undertake"), and a polish point on 態's alternative dictionary spellings.
+GPT reported six moderate findings covering eleven direct pairs on 妙, 就, 展,
+微, 診 and 障. Six pairs were shared across the reports. The author added
+sixteen direct exclusions with explanatory notes on eight cards
+(妙 就 展 微 態 盤 診 障) and corrected the 態 wording in `737cb020`, adding 盤
+versus 乗 (English "board") on its own initiative and declining an optional
+grammatical-voice expansion for 態. No title, reading or distractor changed.
+
+Both confirmations found every finding resolved and no new defect, and both
+returned **UNVERIFIED** solely because limit L1 stayed partially resolved: the
+supplied `QuizBuilder.kt` shows by static reading that each pair is filtered in
+both directions for any caller-supplied pool, but importer propagation, pool
+construction, executed Kotlin draws, custom or multi-borrow reading pools and
+installed-build behaviour were not executed. The author accepts L1 as a
+disclosed, non-blocking evidence limit and ran no further round; there is no
+joint CONFIRMED. The first Claude confirmation was **rejected** because it
+scanned all original kanji, which was out of scope, and returned only the
+Notes of the revised cards. A separately reserved corrective pass read all
+eight revised cards in full and changed nothing. Both runs and a manual audit
+of the breach are preserved.
+
+The [closure record](n1-reviews/batch-112-closure/README.md) keeps the verbatim
+reports, received prompts, read-scope audits, packets and reconciliation. The
+initial Claude run once had two tool calls in flight; every other run was
+strictly serial. The last phone APK delivered to the owner (app commit
+`5c000bd`) predates kanji `quiz_exclusions`, so it does not enforce these
+exclusions. `737cb020` descends from main `0320ba4a` through the freeze, so
+no integration merge was needed; the closure commit changes only `docs/`.
+
+The reading-exposure audit (a Python port, not Android execution) finds no
+modeled full-pool or single-borrow Starter hit and eleven latent entries: eight
+nanori-only readings and 微 み, 態 てい and 酸 す. The zero hits are conditional
+on its pool assumptions.
+
+Host content gates pass on `737cb020`: lint (0 errors, 8 warnings on reused
+word articles), 431 unit tests, validation, meaning-quiz audit, budget,
+vocabulary (2122/2431) and manifest rebuild (no diff, content version
+`b81044aafa8b5a07`). Tests, validation, budget, vocabulary and manifest
+rebuild were re-run with the closure files in place, with identical results.
+**The Android JVM tests
+were not run for this batch** (separate JVM/emulator hold), and **no native,
+rendered or phone credit is claimed.** The budget stands at 8,623 of 18,000
+entries, 43.3 of 56 MiB retained and 29.3 of 42 MiB for the local ZIP.
+
+Of the 1,228 pending additions, the tree now has **201 with cards** (195 N1
+deliveries including this batch, plus six N2 placements) and **1,027 absent**.
+The ledger is [batch-112-progress.json](n1-sources/batch-112-progress.json).
+**Published** as `daa540d4` (after freeze `d6ad96eb` and reconciliation
+`737cb020`) by a normal signed fast-forward push onto main `0320ba4a`;
+GitHub shows all three commits verified as `stop-cran`. The
+[`Validate content` run 43381232043](https://github.com/stop-cran/learning-japanese/actions/runs/43381232043)
+passed (12/12 steps). The exact GitHub ZIP for `daa540d4` was downloaded and
+verified: 8,623 entries, all 8,601 runtime hashes equal to `manifest.json`
+(content version `b81044aafa8b5a07`), safe paths, per-file limits and publishing
+budgets passed, contributor evidence excluded. Its retained/inflated bytes are
+44,974,888 / 45,243,226 and compressed bytes 31,195,681 (42.9 / 43.1 / 29.8
+MiB); the LF archive differs from the CRLF working-tree figures above.
+See [batch-112-publication.json](n1-sources/batch-112-publication.json) and
+[its evidence](n1-reviews/batch-112-publication/). Published coverage is now
+**195 N1 deliveries**, or 201 of 1,228 with the N2 placements, with **1,027
+remaining**. This changes neither the L1 disposition nor the unrun
+JVM/native/rendered/phone acceptance.
+
+## Batch 111: published (textual review closed)
+
+The batch adds fifteen kanji, **修 句 房 授 敷 旬 標 独 率 節 義 製 評 養 鏡**
+(source rows 53, 142, 404, 437, 474, 489, 576, 687, 699, 809, 871, 989, 1008,
+1195 and 1137), with their stroke files and no new word article. Sixty existing
+word articles each gain one link to a new card (four for every kanji), so each
+card activates kanji-word pairs that articles had already declared. The fifteen
+are fifteen of the sixteen absent rows that exactly four existing word articles
+declare; 従 is deferred because no existing article uses its reading ジュウ, and
+no other absent row is declared by more than three. Three files drop a stale
+"has no card" remark: the cards 価 (for 評) and 暖 (for 房) and the article
+句読点 (for 句). Earlier deferred rows remain pending.
+
+Two model families reviewed the frozen draft `3b30803e`, Claude
+(claude-opus-5.5) and GPT (gpt-6.1-sol), one at a time and each on all four
+facets without seeing the other's work; both received the same packet and the
+same supplement. Claude reported two low findings and four optional notes: 敷
+filed 敷地 under the suffix reading -しき while defining the leading dash as a
+"bound form", and the 鏡 title "mirror; lens" has no KANJIDIC2 sense for "lens".
+GPT reported two minor findings and two optional points: 節 lacked exclusions
+with 句 and 旬, and 義 excluded 税 ("tax; fiscal duty") as if it overlapped 役
+and 務. The two reports share no finding. The author changed six cards
+(房 敷 節 義 評 鏡) in `bf9ee962`, kept the 鏡 title for a documented reason
+(Kanjipedia's second sense is 「めがね。レンズ。」, and Claude's alternative
+"instrument" would collide with 器) and answered the other optional points with
+reasons. Claude then returned CONFIRMED for that commit with no findings. The
+GPT confirmation resolved both findings and its optional point on 評判,
+accepted the author's answer to the other and found no new defect, but it
+returned **UNVERIFIED** with findings none, because its limit L1 stayed
+partially resolved: the quiz audits are supplied Python ports, not an executed
+Android client, and the supplied builders do not show how a caller builds
+custom or Starter-session pools or how an installed build behaves. The author
+accepts L1 as a disclosed, non-blocking, bounded evidence limit, as batch 110
+accepted its L3, and ran no further round. There is therefore no joint
+CONFIRMED.
+
+The [closure record](n1-reviews/batch-111-closure/README.md) keeps the verbatim
+reports, prompts, read-scope audits, packets and the reviewers' own limits. It
+also discloses that each Claude run once had two tool calls in flight (both GPT
+runs were strictly serial), that no reviewer rendered the official Joyo table
+(only text extracts of its pages), and that the audits behind the quiz claims
+are the author's Python ports. The last phone APK delivered to the owner (app
+commit `5c000bd`; installation not verified) predates the app's support for
+kanji `quiz_exclusions`, so it does not enforce this batch's pair exclusions,
+including the new ones on 節. `bf9ee962` descends from main `f40a1391` through
+the freeze, so no integration merge was needed; the commit that records this
+closure changes only `docs/`, so the teaching content, `manifest.json` and the
+budgets are those that were reviewed, confirmed and gated.
+
+The author's reading-exposure audit checks the readings that KANJIDIC2,
+JMdict's single-kanji entries and the card texts attest for each kanji against
+the N1, All and Starter pools the app builds, including the cards borrowed to
+pad a short Starter session. For the fifteen cards it finds no production or
+padded-session hit, and six latent collisions (attested readings that another
+card offers but no pool the app builds can draw): 房 お and わ, 節 よ under two
+prompts, 養 や and 鏡 あき. Neither reviewer raised them as a finding, and the
+zero hits are conditional on the pool assumptions of the audit.
+
+Host content gates pass on the reviewed tree `bf9ee962`: lint (0 errors, 13
+warnings, none on a new card), 431 unit tests, validation, budget, vocabulary
+(2122/2431) and manifest rebuild (no diff). **The Android JVM tests
+`RealContentTest`, `RareHanTest` and `KanjiReadingsTest` were not run for this
+batch**, because no JVM slot was available to this workstream, so no JVM result
+is claimed; they should run on the then-current tree at the next JVM window.
+**No native, rendered or phone credit is claimed.** The issue-60 batch cycle
+does not require a native run per batch, so one native smoke is planned for a
+milestone or the final acceptance. The budget stands at 8,593 of 18,000 entries,
+43.2 of 56 MiB retained and 29.2 of 42 MiB for the local ZIP.
+
+Recounting the [source index](n1-sources/source-index.json) against the tree
+gives, of the 1,228 pending additions, **186 with cards** (180 N1 deliveries
+including this batch, plus the six earlier N2 placements) and **1,042 absent**.
+The ledger is [batch-111-progress.json](n1-sources/batch-111-progress.json).
+**Published** as `c244ad6b` (after freeze `3b30803e` and reconciliation
+`bf9ee962`) by a normal signed fast-forward push onto main `f40a1391`;
+GitHub shows all three commits verified as `stop-cran`. The
+[`Validate content` run 43275800822](https://github.com/stop-cran/learning-japanese/actions/runs/43275800822)
+passed (12/12 steps). The exact GitHub ZIP for `c244ad6b` was downloaded and
+verified: 8,593 entries, all 8,571 runtime hashes equal to `manifest.json`
+(content version `0c3d8f4a2c6bcb19`), safe paths, per-file limits and publishing
+budgets passed, contributor evidence excluded. Its retained/inflated bytes are
+44,874,140 / 45,142,478 and compressed bytes 31,143,951 (42.8 / 43.1 / 29.7
+MiB); the LF archive differs from the CRLF working-tree figures above.
+See [batch-111-publication.json](n1-sources/batch-111-publication.json) and
+[its evidence](n1-reviews/batch-111-publication/). Published coverage is now
+**180 N1 deliveries**, or 186 of 1,228 with the N2 placements, with **1,042
+remaining**. This changes neither the GPT L1 disposition nor the unrun
+JVM/native/rendered/phone acceptance.
+
 ## Batch 110: published (textual review closed)
 
 The batch adds fifteen kanji, **張 器 素 応 仮 基 価 激 嫌 縮 騒 統 級 整 暖**

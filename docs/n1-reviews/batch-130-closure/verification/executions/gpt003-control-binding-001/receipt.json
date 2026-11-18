@@ -1,0 +1,32 @@
+{
+  "started": "2026-11-16T13:57:16.228243+00:00",
+  "finished": "2026-11-16T13:57:16.317259+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import json; from pathlib import Path; from common import frozen,sha; p=Path(r'C:\\Users\\stop-\\n1-kanji-workspace\\scratch-130\\review\\confirm\\N1-B130-GPT-CONFIRM-003\\audit-20261116T135432101545'); a=frozen(p/'audit.json'); audit=json.loads(a); e=[json.loads(line) for line in frozen(p/'events.jsonl',audit['eventsSha256'])[audit['offset']:].splitlines()]; print(json.dumps({'rawAuditSha256':sha(a),'controlEventSha256':sha(json.dumps(e[403],sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()),'controlIndex':403,'afterControlCalls':[(i,v['data']['toolName']) for i,v in enumerate(e) if i>403 and v['type']=='tool.execution_start']},ensure_ascii=False))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b130-worktree",
+  "exitCode": 0,
+  "childPid": 21172,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "cleanupTimeoutSecondsPerStage": 10,
+  "cleanupScope": "Immediate child PID only; not descendant-process acceptance.",
+  "cleanupError": null,
+  "logSha256": "2e309aac5228adcd3645516f24f532cbced9e3a5e6a09c13b1352361d00c7950",
+  "memory": {
+    "freeRamBeforeBytes": 4280717312,
+    "freeRamAfterBytes": 4273344512,
+    "minimumObservedFreeRamBytes": 4273340416,
+    "peakWorkingSetBytes": 23113728,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f95c7bc6867cf08977e2ada07630564441790ad31a50141126fec8de3a7d8b84",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

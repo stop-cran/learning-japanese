@@ -1,0 +1,9 @@
+# B123 reconciliation 003
+
+This revision reassesses nine direct comparisons on top of `047970a055903c0337d73823288695938648dd1d`; the earlier decisions are superseded only for this snapshot, not rewritten. Row 810 範 and its 範囲 support pair remain unchanged. The new declarations on 範 are 本, 度, 像, 計, 測 and 量. The remaining three decisions are bounded no-established-collision judgments, not proofs that no other senses exist.
+
+`source-manifest.json` binds nine independent Digital Daijisen / Shogakukan captures via Weblio to their local raw and deterministic extract SHA-256s. The complete captures remain local and are not redistributed. The descriptions are original summaries, not dictionary text. Line references in `pair-dispositions.json` refer to those complete local extracts. The capture provenance SHA-256 is `e0ae19c482922dab9076bb08768b6395e55fb0cef4d83773b0dce0febe612996`; its acquisition timestamps, URLs and deterministic extraction method are retained locally under `scratch-123/review/open-pair-sources-001`.
+
+The original 範/のり Daijisen capture remains in `review-packets/batch-123-3bda01ae/evidence/external-snapshots/01-extract.txt`. Full selected JMdict and KANJIDIC2 records, their source hashes, exact query memberships, restrictions, and actual comparison-card blobs are referenced from `../reconciliation-001`; these records are EDRDG resources under CC BY-SA 4.0. No new XML selection is necessary.
+
+The dictionary のり entry lists 範 alongside other spellings and retains model, rule, transverse measurement and engineering-slope senses. It does not establish that each spelling is equally natural for every sense. Measurement actions, instruments, outcomes and standard lengths must not be conflated. The model-to-follow sense differs from representational models, though the English label can be ambiguous. No new readings, universal spelling equivalences, frequency, whole-set safety, device or publication acceptance are claimed.

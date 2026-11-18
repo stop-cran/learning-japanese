@@ -1,0 +1,47 @@
+{
+  "run": "N1-B128-CLAUDE-001",
+  "candidate": "fb3c98d86881bbc6a4b61f94bce44d0947a0c808",
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-128\\initial-claude-001.md",
+    "sha256": "a5cfe6db7186cd3b614ef953269d69acd47a7a825db41d0aa2846098d3d50226"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\N1-B128-CLAUDE-001-final.json",
+    "sha256": "9296d84b05fa6288bc0ebd5e84e74c148a95b74b98eac931e379ffb87d252ab4"
+  },
+  "evidenceCheck": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-128\\review\\N1-B128-CLAUDE-001-evidence-check.json",
+    "sha256": "74d9623142501c6520b949893a79f165606ef4047bedd8e9a431c094473602c7",
+    "bytes": 15406
+  },
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    "F1"
+  ],
+  "findingAdjudication": {
+    "F1": {
+      "decision": "accepted as a conservative displayed-English-label ambiguity, not lexical identity",
+      "basis": "The complete Daijisen and Nikkoku extracts explicitly give the native noun's petal sense (02-extract.txt:16-17,27). JMdict 1194500 places flower/blossom/bloom/petal in the same noun sense (jmdict-families.xml:140-146). The actual 咲 card displays blossom; bloom without an infinitive or part-of-speech qualifier, while its body and complete JMdict 1297210 correctly teach an intransitive verb (repo/kanji/咲.md:3,20,39; jmdict-families.xml:633-655). That verb evidence must be preserved: 咲 is not thereby established to mean a petal. It nevertheless leaves a noun/verb ambiguity in the actual offered English label, warranting the small direct guard. Neither endpoint declares it. The existing 花 guard is corroborating context, not a transitive rule or a basis to exclude all flower-related cards.",
+      "required": "Add the direct 唇/咲 guard on 唇, retaining the current 14 guards, metadata, selected readings, curated choices and geometry. Briefly distinguish the ambiguous English blossom/bloom choice from 咲く's intransitive blooming action in the petal note. Do not rewrite the earlier 咲 card or claim universal synonymy.",
+      "exposureQualification": "The report's present curated-pool observation does not establish arbitrary/custom-pool execution. The contract requires direct symmetric meaning exclusions; current four-choice occupancy does not remove the displayed-label issue in other supported pools."
+    }
+  },
+  "optionalPoints": [
+    {
+      "id": "O1",
+      "decision": "source-supported optional enrichment; defer",
+      "basis": "Kanjipedia explicitly identifies 口 plus phonetic 辰 (01-extract.txt:28), and Jitsu also classifies 形声 with 辰 as sound element (02-extract.txt:58-59). Their detailed historical accounts are not identical and image-only forms remain unread. The candidate explicitly labels its shape mnemonic as invented and does not deny a phonetic analysis. Leaving structure-unclassified is not a demonstrated correctness defect; no optional expansion is required for this repair."
+    }
+  ],
+  "otherDispositions": {
+    "execution": "31/31 core and 4/4 extension segments, one report write and verified readback, zero fetches, exactly the two permitted coordinator messages. Final audit, context and structure passed with no breaches. Preserve the original report unchanged.",
+    "sourcesAndRuntime": "The signed candidate and complete source proof independently bind the ordered シン/くちびる metadata, selected くちびる support, 103 complete JMdict families, 46 complete KANJIDIC2 records, actual full-baseline scans, generated geometry, font evidence and exact existing-word exception. These mechanical checks supplement, not replace, linguistic review.",
+    "curatedChoices": "Read the complete actual 古, 右 and 石 cards. Their displayed old/right/stone labels do not denote lips, petals, surprise or labial sounds. Generic side does not identify the right-hand direction; no supplied source does so for 唇. Their source readings do not overlap the selected くちびる.",
+    "comparisons": "Read all 17 requested cards in the four frozen extension segments. Retain the six already-declared E guards. D3 cutting edge, D4 horizontal, D5 one-sided/sheet and D6 suburbs do not become lip/petal labels merely through a generic edge or compound relation. D7 danger identifies a hazard rather than surprise. D8 talk, D9 language, D10 tooth and D11 resound/echo name distinct actions, systems or body parts; the supplied lip/labial sense alone does not establish those labels.",
+    "voiceQualification": "D2 is bounded, not a denial that the categories intersect: JMdict 1380440 also has general sound and voiced-sound senses (765-816), and 1359950 defines a labial consonant (700-713). Articulation and voicing are different properties, not necessarily disjoint sounds. Neither fact establishes the offered label voice as the gloss of a lip or labial consonant. No additional missing pair is established by this pass.",
+    "registerQualification": "The petal extracts supply classical poetic examples rather than an explicit register flag. Keep that evidential limit; do not generalize it into an unsupported claim that the sense is invalid or rare.",
+    "limits": "Unread candidates remain disclosed limits, not automatic new required guards. No visual, arbitrary/custom or multi-borrow, Kotlin/native/device, whole-set, publication or delivery acceptance. Await the independent GPT pass on the unchanged snapshot before assigning reconciliation."
+  },
+  "openClaimIds": [],
+  "publicationAccepted": false
+}

@@ -1,0 +1,18 @@
+Batch 112 CONFIRMATION round for you, the reviewer of the original snapshot. Please confirm the author's revision independently.
+
+Revised snapshot: commit 737cb0201bb3ca76b327504d95b17e64f1a79869, a child of the snapshot you reviewed (d6ad96ebf7d0352d54184ed44a382f70e4497f7b). Eight cards changed (妙 就 展 微 態 盤 診 障); the other seven cards (健 射 看 至 酸 離 響) and every word article are unchanged.
+
+Start here: C:\Users\stop-\n1-kanji-workspace\review-packets\confirm-112-737cb020-gpt\INSTRUCTIONS.md (then CHANGES.md and RESPONSE.md in the same folder).
+Write your report to exactly ONE path: C:\Users\stop-\n1-kanji-workspace\reports-112-gpt\confirm-gpt.md, in the report shape given in INSTRUCTIONS.md.
+
+Rules, unchanged from your first round:
+- Read-only. The only write is that one report file.
+- Resource reservation: this is one confirmation prompt and one report, with no retry or extra round authorized. No temporary files, JVM, Gradle, emulator, ADB, builds, corpus scans, browser/webview or other memory-heavy local work. Public sources may be fetched without a browser. If the task cannot proceed within these limits, stop and report the blocker.
+- For local reads use the file-view tool only, one named file per call. No shell, Python, rg/glob, directory enumeration, wildcard search, subagent or background process. Read each of the eight revised cards IN FULL, not just Notes, extracted metadata or diff hunks; explicitly recover any truncated range. Any original-packet comparison-card reads are limited to these sixteen repo\kanji\ files: 技.md, 腕.md, 企.md, 承.md, 担.md, 職.md, 位.md, 了.md, 完.md, 済.md, 敷.md, 分.md, 軽.md, 乗.md, 査.md and 関.md. Supplied corpus-wide check outputs are host evidence, not a request to repeat a scan.
+- Make exactly ONE tool call per response and wait for its result before the next call. No parallel or batched calls. No recursive directory listings and no corpus scans; open named files only (the original packet holds about 6,400 context files).
+- Allowed local reads: (1) the confirmation packet above; (2) the original packet C:\Users\stop-\n1-kanji-workspace\review-packets\batch-112-d6ad96eb (read-only; it holds the OLD text of the changed cards); (3) your own initial report C:\Users\stop-\n1-kanji-workspace\reports-112-gpt\initial-gpt.md. Open no other local path, no repository checkout and no other report. Public web sources are allowed. The confirmation packet carries the complete JMdict entries cited by the new text, the Joyo page extracts of the eight changed cards and the app's QuizBuilder.kt.
+- RESPONSE.md is the author's claims about your earlier points, not evidence. Verify each claim yourself against the revised cards, diffs\fix.patch and independent sources.
+
+Task: (1) give a disposition for every ID in RESPONSE.md (F1, F2, F3, F4, F5, F6, L1; L2 needs none); (2) read the eight changed cards in full, and check every changed hunk on all four facets, including contradictions with untouched text; (3) check the post-fix quiz options in checks\quiz-safety.txt and evidence\QuizBuilder.kt for all 15 cards, in both directions (each new exclusion also applies when the counterpart card is the target); no reading input changed, so checks\reading-exposure.txt is the same as in the original packet, and the app's reading-quiz sources are not supplied; (4) report only new, established findings.
+
+When the report is written, reply with one short line only.

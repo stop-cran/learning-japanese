@@ -1,0 +1,32 @@
+{"tool": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\confirm_b131_001.py", "sha256": "2186860ba7b0b289f93a1c3324501f2e1a193b9b4db33f3339e624ffae7785f4", "adapterSha256": "466019c1097b55c89faf911a6fa4a36dd3f79da24be3b876f1b3407991f14348", "gitHelperSha256": "f0ada1b7ab6f2182a98562157e4284514b4feb53aa9e5fc46569ab93cc4e2c1b"}
+B131 lifecycle receipt: C:\Users\stop-\n1-kanji-workspace\scratch-131\review\preparation-v4-lifecycle-1e266a2c5a3f4f3b840ab5294dc08dfd\captured\child-receipt.json
+3 confirmation skeleton checks passed
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+NO TESTS RAN
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 121, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 117, in main
+    run_command(sys.argv[2:], output, REPO, env, module.RamGuard())
+  File "C:\Users\stop-\n1-kanji-workspace\scratch-131\review\guarded-test-v3.py", line 96, in run_command
+    raise RuntimeError("Command failed or breached its RAM guard; receipt preserved.")
+RuntimeError: Command failed or breached its RAM guard; receipt preserved.
+
+Traceback (most recent call last):
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 39, in <module>
+    main()
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\run_b127_tool.py", line 33, in main
+    runpy.run_path(str(path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b131_001.py", line 238, in <module>
+    derive(int(args[0]))
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\confirm_b131_001.py", line 64, in derive
+    require(run.returncode == 0, "Confirmation gate regressions failed")
+  File "C:\Users\stop-\n1-kanji-workspace\review-tools\common.py", line 34, in require
+    raise ValueError(message)
+ValueError: Confirmation gate regressions failed

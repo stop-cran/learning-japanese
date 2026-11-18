@@ -292,6 +292,9 @@ Optional **ことにする／ことになる**, purpose **ために**, and occas
 remain N3 follow-ups in the [formal-noun article](koto-wake-and-formal-nouns.md).
 Past-experience ことがある is a different N5 use. The harder past/completion-belief つもり
 tasks retain their existing N2 classification; no extra construction is an N4 prerequisite here.
+At N3, volitional + **とする** describes an attempt or something about to happen
+(**出かけようとしたとき**, "just as I was about to go out"); see
+[Attempts, compulsion and pretence](attempts-compulsion-and-pretence.md).
 
 Sources include the actual [Bunpro volitional](https://bunpro.jp/grammar_points/よう-おう),
 [volitional-thought](https://bunpro.jp/grammar_points/ようと思う-おうと思う),

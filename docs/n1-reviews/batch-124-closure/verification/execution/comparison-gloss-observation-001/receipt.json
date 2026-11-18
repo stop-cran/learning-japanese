@@ -1,0 +1,29 @@
+{
+  "started": "2026-11-15T20:55:06.150456+00:00",
+  "finished": "2026-11-15T20:55:06.691337+00:00",
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import gzip, hashlib, json\nimport xml.etree.ElementTree as ET\nfrom common import WS, require, start_guard\nsource = WS / 'control' / 'inputs' / 'n1-planning-kanjidic2.xml.gz'\nwanted = set('裕広福多栄資宝貨')\nresults = {}\nguard, _ = start_guard('B124 additional comparison-gloss observation')\nclass Reader:\n    def __init__(self, stream):\n        self.stream, self.digest = stream, hashlib.sha256()\n    def read(self, size=-1):\n        guard.check()\n        data = self.stream.read(size)\n        self.digest.update(data)\n        return data\ntry:\n    digest = hashlib.sha256()\n    with source.open('rb') as stream:\n        while chunk := stream.read(1024 * 1024):\n            guard.check()\n            digest.update(chunk)\n    require(digest.hexdigest() == 'af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed', 'Compressed source changed')\n    with gzip.open(source, 'rb') as stream:\n        reader = Reader(stream)\n        parser = ET.iterparse(reader, events=('start', 'end'))\n        _, root = next(parser)\n        for event, node in parser:\n            if event != 'end' or node.tag != 'character':\n                continue\n            literal = node.findtext('literal')\n            if literal in wanted:\n                require(literal not in results, 'Duplicate character')\n                group = node.find('reading_meaning/rmgroup')\n                results[literal] = {'meanings': [n.text for n in group.findall('meaning') if n.get('m_lang') in (None, 'en')], 'kun': [n.text for n in group.findall(\"reading[@r_type='ja_kun']\")], 'completeRecordSha256': hashlib.sha256(ET.tostring(node, encoding='utf-8')).hexdigest()}\n            node.clear()\n            root.clear()\n            guard.check()\n        require(reader.digest.hexdigest() == '9a000ef112b4bad8f1e6e3ca1f8e9f73ed84c93a5eae93dadfa1513081dc5db8', 'Decompressed source changed')\n    require(set(results) == wanted, 'Missing comparison character')\nfinally:\n    memory = guard.finish()\nrequire(not memory['breach'], 'RAM breach')\nprint(json.dumps({'status': 'PINNED_CHARACTER_GLOSSES_VERIFIED', 'records': results, 'compressedSha256': digest.hexdigest(), 'decompressedSha256': reader.digest.hexdigest(), 'memory': memory, 'limits': 'Coordinator observation only; no source packet, author revision or initial-review input changed. KANJIDIC2 glosses alone do not establish ordinary word usage or resolve all pair decisions.'}, ensure_ascii=False, indent=2))"
+  ],
+  "cwd": "C:\\Users\\stop-\\n1-kanji-workspace\\b124-worktree",
+  "exitCode": 0,
+  "childPid": 15196,
+  "childExitCodeAfterCleanup": 0,
+  "waitTimeoutSeconds": 0.1,
+  "logSha256": "9ab12b9a1f288d99c742f3613a7775e00f710fc13f1a024f6b1d84e8e0f51635",
+  "memory": {
+    "freeRamBeforeBytes": 6601637888,
+    "freeRamAfterBytes": 6594330624,
+    "minimumObservedFreeRamBytes": 6580523008,
+    "peakWorkingSetBytes": 23158784,
+    "peakScope": "Verifier Python process, including its monitor thread; not subprocess peaks.",
+    "abortThresholdBytes": 1073741824,
+    "samplingIntervalSeconds": 0.25,
+    "additionalChecks": "Before each file and each streamed chunk; signal interruption on a sampled breach.",
+    "breach": null
+  },
+  "runnerSha256": "f6f23876c5e957c842a677b876ce787af9958a809a5ecfd7cab86619e729a09a",
+  "guardSha256": "46c721d63970e352a2c5c9d21c5d67b216e88a160b0966e65e2e407c0cb41c84"
+}

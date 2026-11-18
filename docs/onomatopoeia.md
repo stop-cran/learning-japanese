@@ -7,14 +7,14 @@ The second content batch expands the collection to **200 tagged cards** and seve
 The subsequent ぶかぶか addition brought the collection to **201 tagged cards**.
 Later N2 additions どっと and ぶつぶつ brought the collection to **203 tagged cards**;
 the expansion inventory at `af451575` reconciles both without changing their identities or levels.
-The subsequent みっちり card brings the collection to **204 tagged cards**, without adding Grammar exercises.
+The subsequent みっちり and のびのび cards bring the collection to **205 tagged cards**, without adding Grammar exercises.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
 reuses the twelve-word pilot. Its [historical ledger](grammar-onomatopoeia-sources.json) retains
 the original bounded acceptance. Owner-authorized [collection expansion #59](grammar-onomatopoeia-expansion-sources.json)
 adds selected sentence operations for the remaining 191 cards through nine focused sets and guides.
-That Grammar practice set remains 203 words; the later みっちり card is outside its coverage.
+That Grammar practice set remains 203 words; the later みっちり and のびのび cards are outside its coverage.
 No word identities or schedules change. The [owner-trial protocol](grammar-onomatopoeia-trial.md)
 still requires actual feedback: expansion authorization is not evidence of learning effectiveness.
 
@@ -74,6 +74,28 @@ Both are article-only: the visible activities do not establish exhaustive covera
 みっちり from other effort descriptions. Prompts, output hashes and author visual observations are in the
 [named-scene record](onomatopoeia-scene-images.json); owner visual acceptance and phone testing remain unrecorded.
 
+For のびのび, [Digital Daijisen via Weblio](https://www.weblio.jp/content/のびのび) and
+[Nihongo Master](https://www.nihongomaster.com/japanese/dictionary/word/34359/nobinobi-%E4%BC%B8%E3%81%B3%E4%BC%B8%E3%81%B3-%E3%81%AE%E3%81%B3%E3%81%AE%E3%81%B3)
+were inspected on 2026-11-13. The card focuses on acting or feeling free and at ease, with a
+separate note on repeated postponement. Its original illustration is article-only because a
+still scene cannot uniquely demonstrate freedom from constraint. The prompt, reference and output
+hashes, and author observations are in the named-scene record; owner visual acceptance and phone
+testing remain unrecorded.
+
+Before publication, three blind reviewers received the complete card and staged tree
+`d81699e3983820f469db80de82b5fcefcda7a8e9`. The correctness review (gpt-6.1-sol) found no
+actionable issue; the consistency and quiz-safety review (claude-sonnet-5.5) found no blocking
+issue and checked the confusable-word inventory. The comprehensibility review (grok-4.7) found
+two minor issues: the growth side use was blended into the lead, and a hedge could imply that
+slowness or a day off was a meaning. Both were resolved in the revised card and confirmed by
+the original reviewer against staged tree `4a1c72250b52ce337f63fa52dbed31f29c0b77da`; the
+correctness reviewer also rechecked the revision without finding a regression. Each review
+separately assessed its scoped coverage. The model identities were verified against local
+session usage records for `ba893eb7-b340-4f3d-b702-46f43a99b18d`,
+`dbaa48dc-75d6-41e9-ab5e-8b26eed61619`, and `c2d77916-1809-4fdc-a2d3-e2ffadc875c3`.
+The correctness reviewer inspected the image; the comprehensibility reviewer could not view
+its pixels. These reviews do not establish native-speaker certification or device behavior.
+
 Examples are original teaching sentences selected for ordinary usage, with English translations
 and kana support. They are not quotations or claims of attestation in a particular manga,
 news report, recipe, or corpus. Dictionary recognition is not proof of relative frequency.
@@ -93,7 +115,7 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 204 tagged cards, retaining the two historical 100-word groups
+The overview links to all 205 tagged cards, retaining the two historical 100-word groups
 and listing later additions separately. The focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.

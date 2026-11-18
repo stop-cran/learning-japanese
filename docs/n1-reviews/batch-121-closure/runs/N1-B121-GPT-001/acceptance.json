@@ -1,0 +1,47 @@
+{
+  "run": "N1-B121-GPT-001",
+  "batch": 121,
+  "candidate": "b5302617bf4c7232bab5bcd1e76b8ae6b938bc3a",
+  "createdAt": "2026-11-15T13:06:20.326806+00:00",
+  "preflightSha256": "8858768959fa1a004829051dad005a2c6cf99e739c7bbb2f5a81d54e938b3cc9",
+  "preflight": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\prompts\\preflight-claude-002.json",
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\review-tools\\step_v2.py",
+    "sha256": "bcb51581e1ef18428ad618a65c728337e23351b801cf2b3192e3089edbcdcdd6"
+  },
+  "reviewAccepted": true,
+  "verdict": "NEEDS FIX",
+  "acceptedFindings": [
+    {
+      "id": "F1",
+      "disposition": "accepted-as-direct-display-safeguards",
+      "pairs": [
+        [
+          "徳",
+          "財"
+        ],
+        [
+          "徳",
+          "偉"
+        ]
+      ],
+      "basis": "The complete same-snapshot 財 card displays wealth; property and explicitly teaches assets. Daijisen lists wealth/property as a 徳 noun sense at evidence/external-snapshots/01-extract.txt:25-26. The complete 偉 card displays admirable; great and explains deserving admiration and praise of conduct at repo/kanji/偉.md:20-22. Daijisen gives excellent conduct/character and an excellent person at extract:15-16, and the complete KANJIDIC2 徳 record independently gives commanding respect at evidence/kanjidic2-records.xml:59. Neither pair is declared on either endpoint. These are direct source/label comparisons, not transitive deductions from 富, 優 or 人.",
+      "fix": "Append 財 and 偉 to the new card's direct exclusions, retaining existing guards and concise limited-comparison explanations. Preserve distinctions between moral virtue, admiration/rank and financial wealth. Qualify the wealth evidence without claiming modern frequency or exclusively historical status from a historical example alone.",
+      "confidence": "Supported bounded safeguards. No actual current default-pool or native collision was reproduced.",
+      "crossReview": "The independently obtained Claude002 F1/F2 support the same two pairs; this agreement is corroboration, not the basis of acceptance."
+    }
+  ],
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-121\\initial-gpt-001.md",
+    "sha256": "82621db8b83df0c3c8ea9274bccff00a3c98c19114d9deb7972efa5604d55d98"
+  },
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-GPT-001-final.json",
+    "sha256": "6a5f3042dc90b9bc07075bb0c3d87d8f7a70fd1d757af3a5752b7ecc7131e367"
+  },
+  "adjudication": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-121\\review\\N1-B121-GPT-001-adjudication.json",
+    "sha256": "5d71a8a5d5f97ad2ba5b834085f6c0611cdb67572e0314ee7fe7ce07350e7fdc"
+  },
+  "acceptanceLimit": "Bounded independent evidence, not publication approval. Accepted findings require signed fixes and confirmation; the raw report is unchanged."
+}

@@ -1,0 +1,104 @@
+{
+  "run": "N1-B118-GPT-001-CONFIRM-002",
+  "family": "gpt",
+  "session": "25ca142b-ae23-4c30-a774-70432ab9acb9",
+  "candidate": "fa2f64f2472cf9ef10b8ac5f48db14dcaa248cd2",
+  "status": "ACCEPTED_BOUNDED_NEEDS_FIX_EVIDENCE",
+  "verdict": "NEEDS FIX",
+  "reviewEvidenceAccepted": true,
+  "confirmationAccepted": false,
+  "publicationAccepted": false,
+  "final": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\confirm\\N1-B118-GPT-001-CONFIRM-002-final.json",
+    "sha256": "c5b787c4d8dc07fca02bbab91534cdf268d1401f635289dd1d225192e6cd10b6"
+  },
+  "report": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-118\\N1-B118-GPT-001-CONFIRM-002.md",
+    "sha256": "9538bcdcb29b76285d55a82959b32984ed2bb26c92304aa85f7ab8356b22b0c7"
+  },
+  "audit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\confirm\\N1-B118-GPT-001-CONFIRM-002\\audit-20261115T081313058290\\audit.json",
+    "sha256": "4558cb5a06ae43619d733f566fba5e9bb97a5d1384c1e4a2187cb8dd122ce9c5"
+  },
+  "context": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\confirm\\N1-B118-GPT-001-CONFIRM-002-context.json",
+    "sha256": "0a6725b36ab2b5519d9d8d6955280243e719d07a0e0b7e433467835212366d31",
+    "bytes": 383
+  },
+  "structure": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\confirm\\N1-B118-GPT-001-CONFIRM-002-structure.json",
+    "sha256": "3fdd2bcb297ab2ed0b8718910e00201bdf79c362c1b7c0bd3b057fea8b3d939d",
+    "bytes": 458
+  },
+  "actualResponseModels": [
+    "gpt-6.1-sol"
+  ],
+  "eventsSha256": "11123464958820f8304d43f78238d6dd54b0c3bb8a6f0181bdc9bb8ab534c0c0",
+  "acceptedDispositions": {
+    "F1": "RESOLVED"
+  },
+  "acceptedNewFindings": [
+    "F1"
+  ],
+  "openClaimIds": [
+    "F1",
+    "L2"
+  ],
+  "prior": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\N1-B118-GPT-001-acceptance.json",
+    "sha256": "43f461c4dd36d90e2869e0e086bd773e8906802180fc5035d0a661d23b6b561e"
+  },
+  "substantiveBasis": [
+    "The initial GPT F1 (missing direct 別/離 guards) is resolved. Confirmation-local F1 is a distinct claim and must not be confused with the initial F1.",
+    "Accept confirmation F1: the actual 研 title is polish; study closely. Its independent KANJIDIC2 record positively lists study of, while the independent 析 record lists analyze. Close study is a defensible broad description of analysis. This is a displayed-answer ambiguity, not a claim that the Japanese characters or compounds are interchangeable.",
+    "Coordinator directly read the 研 comparison card, complete 研 and 析 records, target Daijisen section and revised 析 card. The direct 析/研 exclusion is absent at both endpoints. Preserve all existing guards and add this direct pair, preferably on the new 析 card to avoid changing baseline teaching.",
+    "The remaining L2 boundaries are unresolved claims, not proven additional missing-pair findings. Complete metadata records and absence of identical English gloss strings do not alone prove harmlessness. Obtain positive source-backed sense discrimination, or add an independently justified direct guard, for each identified consequential pair."
+  ],
+  "remainingComparisonScope": [
+    "断",
+    "絶",
+    "折",
+    "究",
+    "査",
+    "調",
+    "察",
+    "考",
+    "討",
+    "論",
+    "批"
+  ],
+  "sourceBindings": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\reconciliation-001\\comparison-cards\\研.md",
+      "sha256": "50e018c369a7d02c29c4a38028c621e3516c01529f38ba714038e3e7bdf25d42"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\reconciliation-001\\kanjidic2-records.xml",
+      "sha256": "1b5b55db050d4e82a59fc0916ca30749a7ab3eba70312374847a9d069335f5a8"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\neutral-source-sections-001\\daijisen.html",
+      "sha256": "7c15aa80b984e64c38646d9ffc831da1aa61661bd018f3b034109a14b1a37e5c"
+    }
+  ],
+  "limitDispositions": {
+    "L1": "Bounded same-reviewer confirmation; original index not freshly read. Preserve the original limitation.",
+    "L2": "Open. Author must individually revisit the named consequential semantic boundaries; this is not a mandate to exclude every related operation.",
+    "L3": "Comparison cards were read; separately cited character entries were not all supplied. Preserve that limit and supply relevant complete source sections for claims used in the next disposition.",
+    "L4": "Unchanged source-only readings and geometry limitations; no native or stroke-rendering acceptance.",
+    "L5": "Bounded host models only; no arbitrary-pool, Kotlin, native/device or installed-APK acceptance.",
+    "L6": "Unchanged supporting-word and source-specific reading evidence remains bounded; no new defect identified.",
+    "L7": "Verified gate receipts support the unchanged candidate but are not linguistic proof or publication acceptance.",
+    "L8": "Coordinator previously resolved worktree/blob hash difference through CRLF normalization; original inventory/report remain unchanged. Reserialized XML and terminal-LF source-display derivatives remain explicitly disclosed.",
+    "L9": "Publication is pending; delivered accounting remains 246/1228."
+  },
+  "acceptanceLimit": "Accepted NEEDS FIX evidence only. Reconcile F1 and consequential L2 claims, obtain a new owner-signed candidate, then confirm the delta serially with both original families. The earlier Claude acceptance remains valid only for fa2f64f2.",
+  "spec": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\confirm\\N1-B118-GPT-001-CONFIRM-002-spec.json",
+    "sha256": "514fbe4b92c6842c29cf1cb82e15db343f2efba4fa659a9fd4dc65064c5b9be3"
+  },
+  "tool": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\scratch-118\\review\\confirm\\record-gpt-001-confirm-002-adjudication.py",
+    "sha256": "39f17c2e012ae7eeea73d3d526069d71e81f639f30a88dcf08ef630d2c98eec7"
+  }
+}

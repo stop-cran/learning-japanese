@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "batch": 124,
+  "revision": 3,
+  "candidateParent": "c8db34902d1a478d2d1de4b761dd3cdbb4585896",
+  "baseCommit": "2655539b587c1ab57e64ab74a97cddaf81bb81c6",
+  "supersedes": "author-audit-002.json only for the finite reconciliation of the two immutable initial reviews",
+  "preservation": {
+    "earlierAuditsAndSelections": "author-audit.json, author-audit-002.json, selection.json, selection-002.json, and selection-003.json remain unchanged.",
+    "reviewReports": {
+      "claude": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-124\\initial-claude-001.md",
+        "sha256": "590a7937d34399c9d06e4b5f7ae1acd0c8761508c08f5f6cb05fdf66052d1253"
+      },
+      "gpt": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\reports-124\\initial-gpt-001.md",
+        "sha256": "672918832b6863f4ef9841de54951312ff95cf2263fa17b4cb5fc5f6d5651fd3"
+      }
+    },
+    "reviewerContacted": false,
+    "priorCandidateModified": false,
+    "otherLegacyCardsChanged": false,
+    "supportArticleChanged": false
+  },
+  "directMeaningGuards": {
+    "retained": [
+      "厚",
+      "富",
+      "豊",
+      "財"
+    ],
+    "added": [
+      {
+        "kanji": "多",
+        "reason": "JMdict 1407460 explicitly covers both many/numerous and large amount/quantity/much, making 多 a defensible answer to 裕's broad abundant/quantity label."
+      },
+      {
+        "kanji": "広",
+        "reason": "The 裕 card teaches roominess and an open-space image; 広 is wide/spacious, and the separately attributed Weblio Wiktionary section records out-of-table ひろ-い for 裕. The direct pair is suppressed without adding a quiz reading."
+      },
+      {
+        "kanji": "楽",
+        "reason": "JMdict 1207230 includes an ordinary economically comfortable sense for 楽; that is a plausible competing meaning for 裕's rich label."
+      }
+    ],
+    "postReconciliation": [
+      "厚",
+      "富",
+      "豊",
+      "財",
+      "多",
+      "楽",
+      "広"
+    ],
+    "reciprocalEndpointScan": "No comparison card declares 裕 in quiz_exclusions; the direct guard is declared on 裕."
+  },
+  "finiteDispositions": {
+    "path": "../batch-124-reconciliation/dispositions.json",
+    "allRequestedClaimsResolved": true,
+    "ids": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5",
+      "Q6",
+      "Q7",
+      "Q8",
+      "Q9",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16",
+      "F1-広"
+    ],
+    "noGuardDoesNotMean": [
+      "no semantic association",
+      "corpus-wide absence",
+      "all possible sense combinations have been exhausted"
+    ]
+  },
+  "sourceNoteCorrection": {
+    "finding": "Claude F2",
+    "corrected": "Digital Daijisen omits both のり and ゆ from the pinned KANJIDIC2 nanori list, and adds まさ and みち.",
+    "separateAttribution": "Weblio's Wiktionary section lists ユ (呉音・漢音), ユウ (慣用音), and out-of-table ゆた-か/ひろ-い; its separate 漢字辞典 section lists ユウ/ユ/ゆたか while crediting KANJIDIC2.",
+    "quizMetadataChanged": false
+  },
+  "reviewResponses": {
+    "claude": "../batch-124-reconciliation/claude-response.md",
+    "gpt": "../batch-124-reconciliation/gpt-response.md"
+  },
+  "evidenceBindings": {
+    "selectionSha256": "1bcc7a532dc602df503ab91a40a3330d5115711a64289d55a7401a8b97818c2e",
+    "dispositionsSha256": "a7e5a64372d3573f78f7acf10ea04ed34a38db1c0951e9ea78d7f4530d4624f2",
+    "dispositionsMarkdownSha256": "17a7bc2af9899b51474e85531daaaf5af7909ffaada74b845d30fbb296eba52a",
+    "sourceReceiptSha256": "71d4f9dbc4018860e7a0b9670f1d4f02674a25e09e5b05bb5b47d8dbe07806c0",
+    "claudeResponseSha256": "b0d360477429fe6d2f3d009a881832cfa1d66bda5e1d034c026672ddb1e79576",
+    "gptResponseSha256": "b8916c6e7706b877f7c240838dc1e03d701cac72373c1ddabf6b72efbb7eaa92"
+  },
+  "limitations": [
+    "Dictionary evidence is finite: complete exact-selector JMdict families and complete KANJIDIC2 records do not constitute an exhaustive lexicon or corpus-frequency study.",
+    "Whole-word meanings do not automatically allocate to each constituent character.",
+    "The reconciliation does not establish arbitrary-pool, multiple-borrow, Kotlin/native/device, or publication acceptance."
+  ]
+}
