@@ -112,6 +112,45 @@ the B135 review:
 - Packet check logs carry no reviewer attributions, so a blind reviewer
   cannot tell who asked for a check.
 
+## Batch 137: drafted, independent review pending
+
+Fifteen absent frozen members: 丁 井 仰 但 傑 傷 僕 卸 司 吐 呂 哀 哲 唯 善
+(rows 1–164). From this batch on, as announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084),
+a batch takes the next fifteen, in source-row order, of the 271 absent rows
+at least one of whose KANJIDIC2 readings is used by an existing word article
+that declares the kanji. A card quizzes each reading that a declaring word
+article uses, unless the pinned JMdict marks the spelling as ateji or the
+reading as gikun; name-only readings are never quizzed, and a reading type
+with no such reading gets an empty quizzed list. All fifteen pass, so none
+is set aside. No word article is added: twenty-one existing articles each
+gain one link to a new card. Three sentences that said there was no 丁, 傷
+or 呂 card are updated: 寧 and 敷 now link the new cards, and 火傷 drops the
+sentence. The [progress file](n1-sources/batch-137-progress.json) records
+the gates and disclosed limits.
+
+Nine cards quiz on readings only and six quiz kun readings only, because the
+other readings have no declaring word article yet; common ones such as 傷
+ショウ, 哀 アイ and 善 よ.い are listed and illustrated, not quizzed. 火傷
+やけど is gikun in the pinned JMdict, so it does not support a 傷 reading.
+Daijisen labels the ロ of 語呂 and 風呂 as 当て字, but the pinned JMdict does
+not mark those spellings ateji and the Joyo table lists 風呂 under ロ, so 呂
+quizzes ロ.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the JMdict kanji-plus-okurigana headwords 仰く, 仰ける, 吐かす,
+哀れ あはれ, 善い えい and 善し えし. No distractor change was needed.
+
+Gates on the draft pass: 436 host tests, validation, lint (0 errors; 4
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+reading options, link plan, manifest rebuild and budget. The reading-exposure
+audit reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 唯 ゆ on the ユイ prompt in a Starter
+session that also borrows 油 or 輸. Android JVM tests were not run (no JDK),
+and no native or phone acceptance is claimed. Published delivery stays
+**302/1,228** until review closure, CI and ZIP verification.
+
 ## Batch 136: published
 
 Review-closed and published at `1e91700e`. The
