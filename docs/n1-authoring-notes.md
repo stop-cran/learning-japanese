@@ -120,7 +120,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 140: drafted, independent review pending
+## Batch 140: review closed, publication pending
 
 Fifteen absent frozen members: 嵐 巣 帳 幕 幣 序 弁 往 径 徐 従 徴 志 怠 恨
 (rows 291–360), the next fifteen under the selection rule announced on
@@ -150,11 +150,32 @@ stem is not a card kun stem, such as 帳つけ, 幕にする, 弁じる, 徐に,
 徴する and 怠い. With tag-similar distractors, the audit found that Starter
 sessions could offer まい, a reading of 毎, 米, 枚, 妹 and 埋, on 幣's ヘイ
 prompt; JMdict (2789910) and Daijisen both give まい for 幣. 幣 now takes
-three Starter-card distractors whose readings are not its own (中 内 南), so
-curated options fill every slot; the shape look-alikes 常, 帯 and 希 stay in
-its Notes.
+three Starter-card distractors whose readings are not its own (中 南 雨 since
+the review fix), so curated options fill every slot; the shape look-alikes
+常, 帯 and 希 stay in its Notes.
 
-Gates on the draft pass: 436 host tests, validation, lint (0 errors; 4
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `28831314` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX for minor points only. Claude found
+three quiz-option points: 幣's distractors 中 and 内 have overlapping titles,
+"middle, inside" and "within, inner"; the titles of 徴 and 署 both begin with
+"sign"; and 帳 and 幕 share a curtain sense but did not exclude each other.
+GPT found that 幕 and 徐 quoted two explanatory paraphrases, "covering cloth"
+and "slow, unhurried", as if they were source glosses, and that 弁 and 従 put
+long lists of dictionary senses before their reading tables. Fix `1b24a5f9`
+changed eight cards. 幣 replaces 内 with 雨; Claude's suggested 常, 帯 and 希
+are not Starter cards, and the audit of a local version that used them found
+that a Starter session could then offer まい. 徴 excludes 署 and 帳 excludes 幕.
+The two paraphrases are no longer quoted. 弁 and 従 each sum up their senses
+in one paragraph and keep the full list in a reference bullet at the end of
+the Notes. The fix also applied five optional points: 径's example 小径, 幣's
+rare readings ぜに and にきて, the bento sense in 弁's title, the word 弁護士
+and the link between 徐ろに and KANJIDIC2's おもむ.ろに. Both reviewers
+confirmed the fix; neither left a finding. The
+[closure record](n1-reviews/batch-140-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `1b24a5f9` pass: 436 host tests, validation, lint (0 errors; 4
 warnings on untouched Dictionary lines of existing articles), quiz safety,
 link plan, manifest rebuild and budget. The reading-exposure audit reports
 no production, padded-session or one-holder hit and no drawable KANJIDIC2
@@ -164,7 +185,9 @@ KANJIDIC2 name reading 志 じん. The older reading-options check still lists
 まい for 幣, because it ignores slots that curated distractors fill; its
 simulation drew only curated readings. Android JVM tests were not run (no
 JDK), and no native or phone acceptance is claimed. Published delivery stays
-**347/1,228** until review closure, CI and ZIP verification.
+**347/1,228** until CI and ZIP verification; publication would make it
+**362/1,228**, with **866 remaining**.
+
 ## Batch 139: published
 
 Review-closed and published at `e62eee92`. The

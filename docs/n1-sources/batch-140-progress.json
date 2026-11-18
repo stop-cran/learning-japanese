@@ -2,7 +2,7 @@
   "batch": 140,
   "base": "f37cd97f43e8e2b2792cbe3d89e728c76e453646",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "嵐",
     "巣",
@@ -132,9 +132,25 @@
       "恨む"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "28831314c9b8203cf7dd66c4eec16f23ef0fef22",
+  "reviewedSnapshot": "1b24a5f97a396d7121689f3928c7aa500e0054ef",
+  "reviewClosed": [
+    "嵐",
+    "巣",
+    "帳",
+    "幕",
+    "幣",
+    "序",
+    "弁",
+    "往",
+    "径",
+    "徐",
+    "従",
+    "徴",
+    "志",
+    "怠",
+    "恨"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -143,8 +159,8 @@
     "publishedN1Additions": 341,
     "n2Placements": 6,
     "undelivered": 881,
-    "reviewClosedPendingRecordsWithCards": 347,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 362,
+    "localUnreviewedDrafts": 0,
     "notStarted": 866,
     "overallN1TaskComplete": false
   },
@@ -156,12 +172,45 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "1b24a5f97a396d7121689f3928c7aa500e0054ef"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "28831314c9b8203cf7dd66c4eec16f23ef0fef22",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "28831314c9b8203cf7dd66c4eec16f23ef0fef22",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "1b24a5f97a396d7121689f3928c7aa500e0054ef",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "1b24a5f97a396d7121689f3928c7aa500e0054ef",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude confirmation O-A: 弁's sense paragraph says Daijisen's eleven senses fall 'in a few main groups', but the groups it names cover senses 1-8; senses 9-11 are only in the reference bullet at the end of the Notes, to which the paragraph points",
+      "GPT confirmation optional: split the remaining long sense-summary paragraphs of 弁 and 従 into shorter visual units; presentation polish, left to a later format pass"
+    ],
+    "closure": "../n1-reviews/batch-140-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-140-closure/provenance.json",
+    "closureProvenanceSha256": "0078938c9a19768dcca7f970ddb3d31c54aedaa9aa0d82fb29e68df5f71e2af5"
   },
   "gates": {
     "lint": {
@@ -173,9 +222,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 8988,
-      "retainedBytes": 51127854,
-      "inflatedBytes": 51399432,
-      "localZipBytes": 32082422
+      "retainedBytes": 51129062,
+      "inflatedBytes": 51400640,
+      "localZipBytes": 32082770
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -201,7 +250,7 @@
         "幣 まい (埋 妹 枚 毎 米)"
       ],
       "drawable": false,
-      "note": "the older check ignores filled slots; the ヘイ prompt is filled by three curated Starter-card distractors (中 内 南) in every checked pool"
+      "note": "the older check ignores filled slots; the ヘイ prompt is filled by three curated Starter-card distractors (中 南 雨 at the fix snapshot; 中 内 南 at the freeze) in every checked pool"
     },
     "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the 15 kanji: every reading whose stem is not a card kun stem is among the extras",
     "linkPlan": {
@@ -218,16 +267,24 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "1b24a5f97a396d7121689f3928c7aa500e0054ef",
+    "metadataScan": "meta_scan.py at the fix snapshot: 0 whole-run Metadata gaps in the 15 cards (whole runs of Japanese script with a kanji that equal a JMdict spelling; kana-only and single-kanji words not checked); 24 words found only inside a longer word are listed, the same 24 as at the freeze at shifted line numbers"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
     "4 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 幣 まい, 弁 とく, 従 ひろい, and the KANJIDIC2 name reading 志 じん.",
     "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools.",
-    "幣 uses Starter-card distractors (中 内 南) so that all three wrong options are curated in every pool; with tag-similar distractors, まい, a reading JMdict (2789910) and Daijisen give for 幣, could be offered in Starter sessions by 毎, 米, 枚, 妹 or 埋. The shape look-alikes 常, 帯 and 希 stay in the card's Notes.",
+    "幣 uses Starter-card distractors (中 南 雨) so that all three wrong options are curated in every pool; with tag-similar distractors, まい, a reading JMdict (2789910) and Daijisen give for 幣, could be offered in Starter sessions by 毎, 米, 枚, 妹 or 埋. The frozen draft used 中 内 南; the fix replaced 内, whose title \"within, inner\" overlaps 中's \"middle, inside\", with 雨. The shape look-alikes 常, 帯 and 希 stay in the card's Notes.",
     "4 lint warnings on existing word articles' Dictionary lines (往復, 従姉妹, 直径, 通帳) are pre-existing and out of scope.",
     "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 巣 ソウ, 幕 バク, 従 ジュウ, ショウ and したが.える, 志 こころざ.す and こころざし, 怠 タイ, and 恨 コン and うら.めしい; ten cards quiz only their on reading and five only their kun readings. The いとこ of 従兄弟 and 従姉妹 is gikun and is not quizzed.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards, word articles and stroke files as unread that the reports say were read; the author checked those claims against the session events.",
+    "Claude's initial and confirmation reports each say every response made one tool call, but the session events show one response in each run with two parallel view calls on adjacent ranges of one packet file; both were read-only.",
+    "initial-gpt's scope audit flags a recursive scan, but the matched ** was Python exponentiation in a stroke-geometry calculation; confirm-gpt's audit flags the review-packets folder because a Python script used it as a base path to reach its own packets. Both flags are false positives.",
+    "The fix had two earlier local versions (775debde, 88ab6f48), both differing only in 幣; the first used the distractors 常 帯 希, whose audit showed a Starter padded-session hit on まい, and the second lacked the ぜに and にきて sentence. Neither was reviewed or published; the confirmation packets keep the first version's audit lines as evidence.",
+    "The GPT confirmation did not search the whole corpus for the old 弁 title; the author's git grep for it over kanji/, words/ and docs/ at the fix snapshot finds no quotation outside the batch.",
+    "Claude's confirmation did not reopen QuizBuilder.kt and checked 幣's Notes, 徴 line 56 and 従's front matter through the fix patch and link-target table rather than full rereads.",
+    "The GPT reviewers also read Weblio, Kanjipedia, jisho.org, kanjiapi.dev (HTTP 403) and the pinned KanjiVG revision, partly through Python; the scope audits list only web_fetch calls, and the reports describe these reads."
   ]
 }

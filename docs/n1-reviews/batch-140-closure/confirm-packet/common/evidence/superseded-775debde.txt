@@ -1,0 +1,25 @@
+Superseded fix version 775debdef97ed277076eb3388ad655460ca54369 (parent 28831314, never reviewed or published).
+It differed from the fix under review, 1b24a5f9, only in kanji/幣.md lines 13, 31, 53 and 57 and in manifest.json. Its distractors for 幣 were [常, 帯, 希], and it did not yet have the readings ぜに and にきて on line 31 or JMdict entry 2175880 on line 57.
+Below are, unchanged, the 幣 block and the two summary lines of the author's reading-exposure audit run on that version
+(the run is labelled "fix-draft 28831314" because it ran on the uncommitted working tree before the commit; the tree's manifest.json sha256,
+59B4C575727C7010B853A63A9E86E4330C944D4CA0056E966BF02CCDB4916C08, equals that of manifest.json at 775debde).
+Each line is prefixed with its line number in that output. Compare checks\reading-exposure.txt in this packet.
+
+68: == 幣 (currency; Shinto offering)   curated option cards: 常 帯 希   tags: jlpt-n1 grade-8 structure-unclassified
+69:    curated 常: tags jlpt-n3 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ジョウ | kun つね とこ-
+70:    curated 帯: tags jlpt-n2 grade-4 structure-unclassified; in pools: N1 stack, All stack; on タイ | kun お.びる おび
+71:    curated 希: tags jlpt-n2 grade-4 structure-unclassified; in pools: N1 stack, All stack; on キ ケ | kun まれ こいねが.う
+72:    JMdict single-kanji entries: 2231620: staff with plaited paper streamers -> へい・ぬさ; 2789910: [archaic] reward, present, gift -> まい
+73:    unlisted readings attested for 幣: しで (KANJIDIC2 name reading)  ぜに (card text)  みてぐら (card text)  まい (card text, JMdict 2789910)  にきて (card text)
+74:    on prompt ヘイ (key へい)
+75:        N1 stack: curated 常 帯 希 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+76:        All stack: curated 常 帯 希 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+77:        Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 12 drawable wrong options (0 curated, 12 fallback)
+78:        PAD-HIT: attested reading まい (card text, JMdict 2789910) can be drawn as a wrong option only in a Starter practice session (the target borrowed to pad a short Starter "Practice more" session); offered by 埋 妹 枚 毎 米
+79:        sampling N1 stack: 200 seeds, 4 of 4 drawable wrong options seen
+80:        sampling All stack: 200 seeds, 4 of 4 drawable wrong options seen
+81:        sampling Starter practice session: 200 seeds, 12 of 12 drawable wrong options seen
+82:    kun: no reading prompts
+
+250: 0 production hit(s) (N1 / All stack pools); 1 padded-session hit(s) (Starter practice session only); 3 latent collision(s) (attested reading offered by another card, not drawable in any of these pools)
+251: 0 one-holder padded hit(s) (a Starter practice session that also borrows one holder card can offer an attested reading that is not a KANJIDIC2 name-only reading); 0 more for KANJIDIC2 name-only readings
