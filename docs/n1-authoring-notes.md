@@ -120,6 +120,48 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 141: drafted, independent review pending
+
+Fifteen absent frozen members: 悔 悟 惑 惜 愉 慎 慮 慰 憧 憩 懐 懸 扇 抽 拡
+(rows 365–426), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty-one existing articles each gain one link to a
+new card. The Notes remark of the existing 張 card that said 緊 and 拡 had no
+cards now names only 緊. `n1_linkplan.py verify` checks the article links,
+and the author's `kanji_remarks.py` checks that no other existing card
+changes and that 張 changes only by its declared edit. Seven pairs of new
+cards whose senses overlap, 悔 and 惜, 惜 and 懐, 愉 and 慰, 慎 and 慮, 慮 and
+懸, 慰 and 憩, and 憧 and 懐, keep each other out of their meaning-quiz
+options. The [progress file](n1-sources/batch-141-progress.json) records the
+gates and disclosed limits.
+
+Ten cards quiz only their on reading and five only their kun readings,
+because the other readings have no declaring word article yet; common ones
+such as 悔 カイ, 惜 セキ and お.しむ, 慎 つつし.む, 慰 イ, 憩 いこ.い, 懐 カイ
+and ふところ, 懸 か.ける, 扇 おうぎ and 拡 ひろ.げる are listed and
+illustrated, not quizzed. The declaring article 扇ぐ reads 扇 as あお, which is
+not a KANJIDIC2 reading, so it is not quizzed either.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 慮る おもんばかる, 懐しい ゆかしい, 懸る,
+扇ぐ and 抽んでる. No attested reading can be drawn as a wrong option, so no
+card needs distractors chosen to fill every slot. On four prompts, 慮 リョ,
+慰 なぐさ.める, 憧 あこが.れる and 懐 なつ.かしい, one curated card has no reading
+of the prompt's type, so the random fallback fills one slot.
+
+Gates on the draft pass: 436 host tests, validation, lint (0 errors; 2
+warnings on untouched, wrapped Dictionary lines of the existing articles
+扇風機 and 威張る), quiz safety, link plan, manifest rebuild and budget. The
+reading-exposure audit reports no production, padded-session or one-holder
+hit and no drawable KANJIDIC2 name-only reading. It records five latent
+collisions, readings that other cards offer but no audited pool can draw: 悔
+け on both kun prompts (the ケ of 懺悔, from Kanjipedia and Daijisen) and the
+KANJIDIC2 name readings 慎 みつ, 懐 かね and 扇 おう. Android JVM tests were not
+run (no JDK), and no native or phone acceptance is claimed. Published
+delivery stays **362/1,228** until review closure, CI and ZIP verification.
 ## Batch 140: published
 
 Review-closed and published at `fe70abbf`. The
