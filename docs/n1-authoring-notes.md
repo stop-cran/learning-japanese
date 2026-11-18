@@ -111,6 +111,40 @@ the B135 review:
 - Packet check logs carry no reviewer attributions, so a blind reviewer
   cannot tell who asked for a check.
 
+## Batch 136: drafted, independent review pending
+
+Fifteen absent frozen members: 炊 焦 異 端 筋 粗 納 脱 膨 致 請 透 鉢 隔 駄
+(rows 666–1198). They are the remaining fifteen of the thirty absent rows
+whose existing declaring word articles already cover an on-reading and,
+where one exists, a kun-reading; batch 135 took the first fifteen, so this
+selection is exhausted after this batch. Thirty-four existing word articles
+each gain one link to a new card; no other article text changes and no word
+article is added. The [progress file](n1-sources/batch-136-progress.json)
+records the gates and disclosed limits. 納's only quizzed on reading is ナッ,
+from 納得, because no word article uses ノウ yet; 駄 quizzes only タ, from
+下駄, because its only ダ word, 無駄, is an ateji spelling. Both cards say so.
+
+This is the first batch drafted under the standing steps above. The readings
+passed to the exposure audit with `--extra` are the Kanjipedia 外 readings,
+the kun readings of the Digital Daijisen character entries, the Daijisen
+headwords marked ▽ for these kanji, and JMdict 2863007 脱る とる; a scan of
+JMdict kanji-plus-okurigana headwords found no further reading stem. In the
+first draft, a Starter session that also borrows one holder card could offer
+とる on 脱 (from 取, 捕, 採 or 撮) and おこす on 致 (from 起). 脱 now has
+the curated distractors 飲 読 聞 and 致 has 話 買 学; each set fills all three
+slots, and both cards name the readings and the chosen cards. The older
+reading-options check still labels 端 はじめ and 致 おこす because it ignores
+filled slots; both prompts are filled by curated distractors.
+
+Gates on the draft pass: 436 host tests, validation, lint (0 errors; 8
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit apart from two disclosed
+KANJIDIC2 name-only readings: 炊 い on the スイ prompt in the N1 and All
+stacks, and 納 ろ in a Starter session that also borrows 路. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
+Published delivery stays **287/1,228** until review closure, CI and ZIP
+verification.
 ## Batch 135: published
 
 Review-closed and published at `7630757f`. The
