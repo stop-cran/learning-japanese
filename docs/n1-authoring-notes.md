@@ -111,8 +111,16 @@ the B135 review:
   examples in a final Notes bullet. A word is glossed where it first appears.
 - Packet check logs carry no reviewer attributions, so a blind reviewer
   cannot tell who asked for a check.
+- From B138, adopted from the B137 review: a card's Metadata line lists the
+  JMdict entry of every word the card names, and the author's `meta_scan.py`
+  (kept in the [B137 confirmation packet](n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/meta_scan.py))
+  checks this before freeze. It checks whole runs of Japanese script that
+  contain a kanji; kana-only and single-kanji words are not checked. The 19
+  gaps it finds in the 31 published cards of batches 134–136 are
+  [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
+  for a later sweep.
 
-## Batch 137: drafted, independent review pending
+## Batch 137: review closed, publication pending
 
 Fifteen absent frozen members: 丁 井 仰 但 傑 傷 僕 卸 司 吐 呂 哀 哲 唯 善
 (rows 1–164). From this batch on, as announced on
@@ -142,14 +150,32 @@ steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
 headwords, and the JMdict kanji-plus-okurigana headwords 仰く, 仰ける, 吐かす,
 哀れ あはれ, 善い えい and 善し えし. No distractor change was needed.
 
-Gates on the draft pass: 436 host tests, validation, lint (0 errors; 4
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `d3c7394d` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. Both found
+16 quoted card titles in ten cards that had lost the space after a comma. GPT
+also found that 仰's example 仰山 lacked JMdict's Kansai-dialect label on its
+"a lot" sense. Claude also raised optional source points. Fix `2bc8e9b1`
+copied each quoted title from its linked card and added the Kansai label;
+from the optional points, 丁 now says よほろ appears in JMdict only as
+つかえのよほろ, an archaic reading of 仕丁, 傑作's second sense is labelled
+jocular and dated, 卸下 is labelled a military term, and 卸 words Daijisen's
+おろし definition more closely. Claude confirmed it with one optional point:
+丁's Metadata line lacked 仕丁 (2829360). Fix `48332d32` added it and the
+missing ids of 当て字 on 呂 and 唯々 and 諾々 on 唯. Claude confirmed fix 2,
+and GPT confirmed both fixes; neither left a finding. The
+[closure record](n1-reviews/batch-137-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `48332d32` pass: 436 host tests, validation, lint (0 errors; 4
 warnings on untouched Dictionary lines of existing articles), quiz safety,
 reading options, link plan, manifest rebuild and budget. The reading-exposure
 audit reports no production, padded-session or one-holder hit apart from one
 disclosed KANJIDIC2 name-only reading: 唯 ゆ on the ユイ prompt in a Starter
 session that also borrows 油 or 輸. Android JVM tests were not run (no JDK),
 and no native or phone acceptance is claimed. Published delivery stays
-**302/1,228** until review closure, CI and ZIP verification.
+**302/1,228** until CI and ZIP verification; publication would make it
+**317/1,228**, with **911 remaining**.
 
 ## Batch 136: published
 

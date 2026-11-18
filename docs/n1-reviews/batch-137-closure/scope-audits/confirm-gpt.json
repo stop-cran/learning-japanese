@@ -1,0 +1,239 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "0ef4de11-b707-49bb-ab8e-69a06b77487d",
+ "agent": null,
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-18T09:27:09.126Z",
+  "last": "2026-11-18T09:38:04.225Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-18T09:27:09.590Z",
+   "chars": 2238,
+   "sha256": "91d0cc940a199a678a13e5dc7d9d6d07b695730ba35f06a7c3b046e0c4620548"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 32
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 4666027,
+  "outputTokens": 22667,
+  "cacheReadTokens": 4476787,
+  "cacheWriteTokens": 189144,
+  "reasoningTokens": 12415,
+  "costMultiplierSum": 32.0
+ },
+ "toolCalls": {
+  "total": 31,
+  "byTool": {
+   "view": 17,
+   "powershell": 13,
+   "apply_patch": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "none": 15,
+   "notFullyRead": [
+    "snapshot/kanji/丁.md",
+    "snapshot/kanji/井.md",
+    "snapshot/kanji/仰.md",
+    "snapshot/kanji/但.md",
+    "snapshot/kanji/傑.md",
+    "snapshot/kanji/傷.md",
+    "snapshot/kanji/僕.md",
+    "snapshot/kanji/卸.md",
+    "snapshot/kanji/司.md",
+    "snapshot/kanji/吐.md",
+    "snapshot/kanji/呂.md",
+    "snapshot/kanji/哀.md",
+    "snapshot/kanji/哲.md",
+    "snapshot/kanji/唯.md",
+    "snapshot/kanji/善.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full (ranges)": 1,
+   "none": 2,
+   "notFullyRead": [
+    "diffs/changed-files.txt",
+    "diffs/changed-lines.txt"
+   ]
+  },
+  "checks": {
+   "files": 10,
+   "full (ranges)": 3,
+   "none": 7,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/link-targets.tsv",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 8,
+   "full": 1,
+   "full (ranges)": 2,
+   "none": 5,
+   "notFullyRead": [
+    "evidence/KanjiReadings.kt",
+    "evidence/QuizBuilder.kt",
+    "evidence/Words.kt",
+    "evidence/meta-scan.txt",
+    "evidence/meta_scan.py"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full"
+ },
+ "outsidePaths": [],
+ "alsoReadAllowed": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-137-d3c7394d",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-137\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-137-d3c7394d",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-137\\initial-gpt.md"
+ ],
+ "alsoReadCount": 2,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "..\\..\\..\\n1-kanji-workspace\\review-packets\\reports-137\\confirm-gpt.md",
+   "ok": true,
+   "allowed": false
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor k in ['丁','仰']:\n print('\\n=== snapshot\\\\kanji\\\\'+k+'.md (FULL) ===')\n for n,l in enumerate((p/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor k in ['但','傑']:\n print('\\n=== snapshot\\\\kanji\\\\'+k+'.md (FULL) ===')\n for n,l in enumerate((p/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor k in ['僕','卸']:\n print('\\n=== snapshot\\\\kanji\\\\'+k+'.md (FULL) ===')\n for n,l in enumerate((p/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor k in ['司','吐']:\n print('\\n=== snapshot\\\\kanji\\\\'+k+'.md (FULL) ===')\n for n,l in enumerate((p/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor k in ['呂','哲']:\n print('\\n=== snapshot\\\\kanji\\\\'+k+'.md (FULL) ===')\n for n,l in enumerate((p/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor k in ['唯','善']:\n print('\\n=== snapshot\\\\kanji\\\\'+k+'.md (FULL) ===')\n for n,l in enumerate((p/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor f in ['diffs\\\\changed-lines.txt','checks\\\\link-targets.tsv']:\n print('\\n=== '+f+' (FULL) ===');print((p/f).read_text(encoding='utf-8'))\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor f,a,b in [('evidence\\\\QuizBuilder.kt',1,100),('evidence\\\\KanjiReadings.kt',1,130),('evidence\\\\Words.kt',211,253)]:\n print('\\n=== '+f+' lines '+str(a)+'-'+str(b)+' ===');ls=(p/f).read_text(encoding='utf-8').splitlines()\n for n in range(a,min(b,len(ls))+1):print(str(n)+': '+ls[n-1])\n'@ | pyt...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path,PurePosixPath\nimport csv,re,difflib\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt');o=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-137-d3c7394d');ks='丁井仰但傑傷僕卸司吐呂哀哲唯善';changed='丁仰但傑僕卸司吐呂哲唯善'\nkt={r['kanji']:r['title'] for r in csv.DictReader((o/'titles'/'kanji-titles.tsv').open(encoding='utf-8'),delimiter='\\t')};wt={r['word...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport urllib.request,urllib.parse,json\nfor word in ['仰山','仕丁','よほろ','卸下','傑作','当て字','唯々','諾々']:\n u='https://jisho.org/api/v1/search/words?keyword='+urllib.parse.quote(word);print('\\n=== LIVE '+u+' ===')\n try:\n  d=json.load(urllib.request.urlopen(u,timeout=35))\n  for x in d.get('data',[])[:2]:print(json.dumps({'forms':x.get('japanese'),'senses':[{'gloss':s['english_definitions'],'pos':s['parts_...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport urllib.request,urllib.parse,json\nfrom html.parser import HTMLParser\nclass P(HTMLParser):\n def __init__(self):super().__init__();self.d=0;self.t=[];self.blocks=[]\n def handle_starttag(self,t,a):\n  if t=='div':\n   if self.d:self.d+=1\n   elif 'Sgkdj' in dict(a).get('class','').split():self.d=1;self.t=[]\n def handle_endtag(self,t):\n  if t=='div' and self.d:\n   self.d-=1\n   if self.d==0:self....",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt')\nfor f in ['evidence\\\\meta_scan.py','evidence\\\\meta-scan.txt']:\n print('\\n=== '+f+' (FULL) ===')\n for n,l in enumerate((p/f).read_text(encoding='utf-8').splitlines(),1):print(str(n)+': '+l)\n'@ | python -X utf8 -",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re,csv,xml.etree.ElementTree as E\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-137-gpt');o=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-137-d3c7394d');ks='丁井仰但傑傷僕卸司吐呂哀哲唯善';changed='丁仰但傑僕卸司吐呂哲唯善';texts={k:((p if k in changed else o)/'snapshot'/'kanji'/(k+'.md')).read_text(encoding='utf-8') for k in ks};es={e.findtext('ent_...",
+   "writeLike": false
+  }
+ ],
+ "web": [],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 10230,
+  "reportFile": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-137\\confirm-gpt.md",
+  "reportExists": true,
+  "reportChars": 10231,
+  "reportBytes": 10869,
+  "reportSha256": "d42477b80170d6af337f1180cd13f8783e1ba05c652d07d48108fe57038d1ef9",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "create/edit outside the report path: 1"
+ ]
+}

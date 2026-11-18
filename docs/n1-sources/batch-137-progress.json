@@ -2,7 +2,7 @@
   "batch": 137,
   "base": "2532beecec978156528e83252bf05eb0bc0f8e21",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "丁",
     "井",
@@ -124,9 +124,25 @@
       "改善"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "d3c7394d38992b24d3689bc984fdb4a6cf60bc54",
+  "reviewedSnapshot": "48332d3258953779dda24c0df6fb1c649e6defbb",
+  "reviewClosed": [
+    "丁",
+    "井",
+    "仰",
+    "但",
+    "傑",
+    "傷",
+    "僕",
+    "卸",
+    "司",
+    "吐",
+    "呂",
+    "哀",
+    "哲",
+    "唯",
+    "善"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -135,8 +151,8 @@
     "publishedN1Additions": 296,
     "n2Placements": 6,
     "undelivered": 926,
-    "reviewClosedPendingRecordsWithCards": 302,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 317,
+    "localUnreviewedDrafts": 0,
     "notStarted": 911,
     "overallN1TaskComplete": false
   },
@@ -148,12 +164,50 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "2bc8e9b13ea85b39c533735f63643af44d1ce690",
+      "48332d3258953779dda24c0df6fb1c649e6defbb"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "d3c7394d38992b24d3689bc984fdb4a6cf60bc54",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "d3c7394d38992b24d3689bc984fdb4a6cf60bc54",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "2bc8e9b13ea85b39c533735f63643af44d1ce690",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm2-claude",
+        "snapshot": "48332d3258953779dda24c0df6fb1c649e6defbb",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "48332d3258953779dda24c0df6fb1c649e6defbb",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude initial LE: tools/reading_exposure.py labels every --extra reading '(card text)'; line 2 of its output states the real provenance"
+    ],
+    "closure": "../n1-reviews/batch-137-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-137-closure/provenance.json",
+    "closureProvenanceSha256": "57ba45e9111e8e4a3fcc4f676bc359bc4fd5ff7d77d0ba061c9ca95e10b41bdb"
   },
   "gates": {
     "lint": {
@@ -165,9 +219,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 8898,
-      "retainedBytes": 50753535,
-      "inflatedBytes": 51025113,
-      "localZipBytes": 31898413
+      "retainedBytes": 50747628,
+      "inflatedBytes": 51019206,
+      "localZipBytes": 31898933
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -209,7 +263,8 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "48332d3258953779dda24c0df6fb1c649e6defbb",
+    "metadataScan": "meta_scan.py at the fix-2 snapshot: 0 whole-run Metadata gaps in the 15 cards (whole runs of Japanese script with a kanji that equal a JMdict spelling; kana-only and single-kanji words not checked)"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -220,6 +275,12 @@
     "火傷 やけど is a gikun reading in the pinned JMdict (1577310), so it does not support a 傷 reading.",
     "Daijisen labels the ロ of 語呂 and 風呂 as 当て字; the pinned JMdict does not mark those spellings ateji and the Joyo table lists 風呂 under ロ, so ロ is quizzed under the rule.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "Claude's initial review once had two view calls in flight and was summarized after a context compaction for 丁 to 卸; its final message prefixes the report with a summary that says 12 cards where the report says ten.",
+    "The scope audits do not attribute reads made through shell loops or Python, so all three confirmations show cards as unread that their reports say were read; the author checked those claims against the session events. The GPT audits' flags are false positives (a Python ** operator and, in both GPT runs, a relative path to the run's own report).",
+    "GPT's reports cannot name the exact model (the runtime records gpt-6.1-sol); its confirmation did not verify the 42 and 10 published-card counts behind the OP decline, read meta_scan.py without running it and checked the four added Metadata ids directly.",
+    "'Only in つかえのよほろ' (丁) rests on the author's search of the pinned JMdict; Claude found no よほろ headword in WWWJDIC.",
+    "The Metadata-line rule (every word named on a card has its JMdict id listed) is the author's writing rule, not checked by lint; meta_scan.py found 19 such gaps in the 31 published cards of batches 134-136 (docs/n1-reviews/batch-137-closure/meta-scan-b134-b136.txt), left for a later sweep.",
+    "Fix 2 had two earlier local versions (0c7f25fe, fa9be05c) and a GPT confirmation packet was built for fix 1 and replaced before sending; none was reviewed or published."
   ]
 }
