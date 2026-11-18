@@ -2,7 +2,7 @@
   "batch": 136,
   "base": "8563b6fd34be43dcebb1b398e0ca576d3673f41d",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "炊",
     "焦",
@@ -37,7 +37,7 @@
     1159,
     1198
   ],
-  "selectionReason": "The remaining fifteen, in source-row order, of the thirty absent frozen rows whose declaring existing word articles already cover at least one on-reading and, where the kanji has a kun-reading, a kun-reading (the batch 135 coverage survey); batch 135 took the first fifteen. Every card therefore activates declared kanji-word pairs and no new word article is needed: 34 existing articles each gain one link to a new card and no other article text changes. About 644 absent rows with no declaring article remain for later batches.",
+  "selectionReason": "The remaining fifteen, in source-row order, of the thirty absent frozen rows whose declaring existing word articles already cover at least one on-reading and, where the kanji has a kun-reading, a kun-reading (the batch 135 coverage survey); batch 135 took the first fifteen. Every card therefore activates declared kanji-word pairs and no new word article is needed: 34 existing articles each gain one link to a new card. The only other article text change is the removal, after review, of one stale sentence in 透明 that said there was no 透 card. About 644 absent rows with no declaring article remain for later batches.",
   "supports": [
     [
       "炊",
@@ -176,9 +176,25 @@
       "無駄"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "420a6669a2f1dafcc3a237e8b8604ff8cbc4201e",
+  "reviewedSnapshot": "7a525b065ee613535c71d559bfc4ce0aea00beb1",
+  "reviewClosed": [
+    "炊",
+    "焦",
+    "異",
+    "端",
+    "筋",
+    "粗",
+    "納",
+    "脱",
+    "膨",
+    "致",
+    "請",
+    "透",
+    "鉢",
+    "隔",
+    "駄"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -187,8 +203,8 @@
     "publishedN1Additions": 281,
     "n2Placements": 6,
     "undelivered": 941,
-    "reviewClosedPendingRecordsWithCards": 287,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 302,
+    "localUnreviewedDrafts": 0,
     "notStarted": 926,
     "overallN1TaskComplete": false
   },
@@ -200,12 +216,44 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "7a525b065ee613535c71d559bfc4ce0aea00beb1"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "420a6669a2f1dafcc3a237e8b8604ff8cbc4201e",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "420a6669a2f1dafcc3a237e8b8604ff8cbc4201e",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "7a525b065ee613535c71d559bfc4ce0aea00beb1",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "7a525b065ee613535c71d559bfc4ce0aea00beb1",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude confirm Optional 1: the 炊 title 'cook rice; boil' could reflect the Kansai restriction of the boil sense"
+    ],
+    "closure": "../n1-reviews/batch-136-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-136-closure/provenance.json",
+    "closureProvenanceSha256": "5cf046afb4ccd7443a4c76ffcce85ef198aec047e87736633c00553da075f753"
   },
   "gates": {
     "lint": {
@@ -217,9 +265,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 8868,
-      "retainedBytes": 50635475,
-      "inflatedBytes": 50907053,
-      "localZipBytes": 31843256
+      "retainedBytes": 50636032,
+      "inflatedBytes": 50907610,
+      "localZipBytes": 31843464
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -255,11 +303,15 @@
     "linkPlan": {
       "changedWordFiles": 34,
       "addedLinks": 34,
-      "problems": 0
+      "problems": 0,
+      "otherArticleEdits": [
+        "透明: removed the stale sentence 'There is no separate 透 card in this collection.' (finding G2)"
+      ]
     },
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
-    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch"
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": "7a525b065ee613535c71d559bfc4ce0aea00beb1"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -270,6 +322,10 @@
     "納's only quizzed on reading is ナッ (納得), beside the kun reading おさ.める: the common on reading ノウ has no word article yet; ナッ is a separate reading in the Joyo table.",
     "駄 quizzes only タ (下駄), a KANJIDIC2 and Daijisen reading that the Joyo table omits; ダ rests only on 無駄, an ateji spelling, and is not quizzed.",
     "Source-only readings (異 け; 透 とう.る, とう.す) are listed but have no ordinary example and are not quizzed.",
-    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology."
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "Claude's initial review once had two view calls in flight; GPT's shell and Python reads are not counted in its audit's packet coverage, its live web fetches were made through Python urllib, and three confirmation reads used the parent review-packets folder as a base path for the two allowed packets. GPT's confirmation report names its model only as GPT (OpenAI); the model name comes from the runtime records. Claude's confirmation report places a live 致す re-read in that round; the session events show it in Claude's initial run.",
+    "Both confirmations checked においうま in JMdict only through the packet's 駄 family extracts and live jisho.org queries; the author's search of the full pinned JMdict found no entry with that reading.",
+    "The confirmation packets' unittest excerpt lost its final OK line to a PowerShell stderr wrapper (flagged by GPT); the full gate log and a clean rerun at the fix commit both show 436 tests OK."
   ]
 }

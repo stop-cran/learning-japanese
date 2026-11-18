@@ -111,15 +111,16 @@ the B135 review:
 - Packet check logs carry no reviewer attributions, so a blind reviewer
   cannot tell who asked for a check.
 
-## Batch 136: drafted, independent review pending
+## Batch 136: review closed, publication pending
 
 Fifteen absent frozen members: 炊 焦 異 端 筋 粗 納 脱 膨 致 請 透 鉢 隔 駄
 (rows 666–1198). They are the remaining fifteen of the thirty absent rows
 whose existing declaring word articles already cover an on-reading and,
 where one exists, a kun-reading; batch 135 took the first fifteen, so this
 selection is exhausted after this batch. Thirty-four existing word articles
-each gain one link to a new card; no other article text changes and no word
-article is added. The [progress file](n1-sources/batch-136-progress.json)
+each gain one link to a new card, and no word article is added. The only
+other article text change is the removal, after review, of a stale sentence
+in 透明 that said there was no 透 card. The [progress file](n1-sources/batch-136-progress.json)
 records the gates and disclosed limits. 納's only quizzed on reading is ナッ,
 from 納得, because no word article uses ノウ yet; 駄 quizzes only タ, from
 下駄, because its only ダ word, 無駄, is an ateji spelling. Both cards say so.
@@ -136,15 +137,31 @@ slots, and both cards name the readings and the chosen cards. The older
 reading-options check still labels 端 はじめ and 致 おこす because it ignores
 filled slots; both prompts are filled by curated distractors.
 
-Gates on the draft pass: 436 host tests, validation, lint (0 errors; 8
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `420a6669` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. Both found
+that 炊 presented the "boil" sense of 炊く as general Japanese, although
+JMdict marks it as Kansai dialect. GPT also found that 請 placed the 青 of
+静 on the right, where 静 has it on the left, and that 透明 still said there
+was no 透 card. Claude also raised optional source and wording points. Fix
+`7a525b06` changed 炊 (which now names standard 煮る), 請, 透明, and, from
+Claude's points, added the Daijisen kun readings 端 はした and 駄 においうま,
+a kana-spelling note on 粗 and the full 雑炊 gloss. Both reviewers then
+returned CONFIRMED with no findings. The
+[closure record](n1-reviews/batch-136-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including a unit-test excerpt in
+the confirmation packets that lost its final OK line.
+
+Gates at `7a525b06` pass: 436 host tests, validation, lint (0 errors; 8
 warnings on untouched Dictionary lines of existing articles), quiz safety,
 manifest rebuild and budget. The reading-exposure audit reports no
 production, padded-session or one-holder hit apart from two disclosed
 KANJIDIC2 name-only readings: 炊 い on the スイ prompt in the N1 and All
 stacks, and 納 ろ in a Starter session that also borrows 路. Android JVM
 tests were not run (no JDK), and no native or phone acceptance is claimed.
-Published delivery stays **287/1,228** until review closure, CI and ZIP
-verification.
+Published delivery stays **287/1,228** until CI and ZIP verification;
+publication would make it **302/1,228**, with **926 remaining**.
+
 ## Batch 135: published
 
 Review-closed and published at `7630757f`. The
