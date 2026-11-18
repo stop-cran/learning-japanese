@@ -15,7 +15,7 @@ scenes/<word>.json     optional named scene catalog (separate manifest scenes ma
 images/<name>.webp     scene assets (separate raw-byte-hashed manifest images map)
 listening/<id>.json    N5 listening packages (separate manifest listening map)
 audio/<id>.ogg         approved mono Opus recordings (separate raw-byte-hashed audio map)
-reading/<id>.json      reading packages; validated, but omitted from the default manifest
+reading/<id>.json      reading packages (separate manifest reading map)
 reading-images/<name>.webp  optional question images; raw-hashed only when reading is published
 ```
 
@@ -65,9 +65,9 @@ or enable an unfinished diagnostic profile; exact package/media approval and pub
 ## Reading
 
 Reading packages use schema 1 and the [N5 pilot record](reading-n5.md). They are separate from
-`manifest.files`: `build_manifest.py` omits the `reading` and `readingImages` maps unless
-`publish_reading=True`. Do not enable that flag until the app renderer accepts the package.
-An empty `distribution.reviewed` list means no jurisdiction has been reviewed, not clearance.
+`manifest.files`. The catalog CLI passes `publish_reading=True`; the function default remains false.
+An empty `distribution.reviewed` list is not a reviewed jurisdiction. The published note says no
+jurisdiction-specific legal review has been performed.
 Offsets are half-open Unicode code points into plain section text. A missing `word` still carries
 its gloss; a present `word` must be an existing card id. Questions must stay fair if the passage
 is hidden, because each quiz can be open-book or closed-book.

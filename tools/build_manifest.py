@@ -70,8 +70,8 @@ def build_manifest(root: Path, *, publish_reading: bool = False) -> dict:
         }
         if entries:
             payloads[key] = entries
-    # Reading stays out of the default manifest until a renderer accepts the package.
-    # Current clients skip an unlisted reading/ directory; emitting the map would publish it.
+    # The catalog CLI opts in. The function default stays false so other callers must choose it.
+    # Pre-reading clients ignore an unknown reading map and skip an unlisted reading/ folder.
     if publish_reading:
         reading = {
             path.relative_to(root).as_posix(): sha256(path)
@@ -93,13 +93,14 @@ def build_manifest(root: Path, *, publish_reading: bool = False) -> dict:
 
 
 def main() -> None:
-    manifest = build_manifest(ROOT)
+    manifest = build_manifest(ROOT, publish_reading=True)
     (ROOT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
     count = sum(len(manifest.get(key, {})) for key in (
         "files", "images", "scenes", "listening", "audio", "curriculum",
         "listeningTasks", "listeningTaskAudio", "listeningTaskImages",
+        "reading", "readingImages",
     ))
     print(f"manifest.json: {count} files incl. {len(manifest.get('images', {}))} images, "
           f"{len(manifest.get('scenes', {}))} scene catalogs, {len(manifest.get('listening', {}))} listening passages, "

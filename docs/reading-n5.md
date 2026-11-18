@@ -5,13 +5,10 @@ an official JLPT certification, or a claim that every traditional version uses t
 
 ## Publication
 
-`tools/build_manifest.py` omits `reading` and `readingImages` unless `publish_reading=True`.
-Do not enable that flag until the Android renderer accepts the package. The current app at
-`10d98d0` does not list `reading/` in `SafeZip.allowedFolders`, so a source ZIP that contains
-the file does not import it. Validation still checks the file and rejects CR. `.gitattributes` keeps `reading/*.json` as LF
-because Windows `autocrlf` would otherwise break that check. Do not put it in `manifest.files`.
+The catalog CLI, `python tools/build_manifest.py`, passes `publish_reading=True` and writes the separate `reading` map. The library default stays false. Do not put reading files in `manifest.files`. Validation still checks the file and rejects CR. `.gitattributes` keeps `reading/*.json` as LF
+because Windows `autocrlf` would otherwise break that check.
 
-Empty `distribution.reviewed` means no jurisdiction has been reviewed. It is not worldwide permission, including Japan. `fa5884e9` and its acceptance archive stay frozen. This successor only replaces the rights note's last sentence: distribution is not cleared in any jurisdiction, including Japan. The 1950-11-26 death date remains a copyright-term fact, not clearance.
+`distribution.reviewed` stays empty. An empty list is not a reviewed jurisdiction. The published notes say the app's author published this as an original adaptation and that no jurisdiction-specific legal review has been performed. The 1950-11-26 death date remains a copyright-term fact, not legal review. `fa5884e9` and its acceptance archive stay frozen.
 
 ## Package
 
