@@ -2,7 +2,7 @@
   "batch": 141,
   "base": "466b7b283661febf8f93fa2d9675ea0a14767cde",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "悔",
     "悟",
@@ -124,9 +124,25 @@
       "拡張"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "a92d134afd93566ba705b586daf8d7969c683a5f",
+  "reviewedSnapshot": "094a1649552f7773f0a636a104cc797a765bec6e",
+  "reviewClosed": [
+    "悔",
+    "悟",
+    "惑",
+    "惜",
+    "愉",
+    "慎",
+    "慮",
+    "慰",
+    "憧",
+    "憩",
+    "懐",
+    "懸",
+    "扇",
+    "抽",
+    "拡"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -135,8 +151,8 @@
     "publishedN1Additions": 356,
     "n2Placements": 6,
     "undelivered": 866,
-    "reviewClosedPendingRecordsWithCards": 362,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 377,
+    "localUnreviewedDrafts": 0,
     "notStarted": 851,
     "overallN1TaskComplete": false
   },
@@ -148,12 +164,57 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "65b47299831240115de12f5c9c5f0f6ed0e2065d",
+      "094a1649552f7773f0a636a104cc797a765bec6e"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "a92d134afd93566ba705b586daf8d7969c683a5f",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "a92d134afd93566ba705b586daf8d7969c683a5f",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "65b47299831240115de12f5c9c5f0f6ed0e2065d",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "65b47299831240115de12f5c9c5f0f6ed0e2065d",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm2-claude",
+        "snapshot": "094a1649552f7773f0a636a104cc797a765bec6e",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm2-gpt",
+        "snapshot": "094a1649552f7773f0a636a104cc797a765bec6e",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude second confirmation, optional: 抽:34 calls 抽出し 'this index form', new jargon right after 'search-only kanji form'; repeating 'this search-only form' would be plainer",
+      "Claude second confirmation, optional: 抽:36 'Daijisen lists the rarely used spelling 抽斗' can read as if Daijisen said 'rarely used'; that label is JMdict's (stated at 抽:34), and Daijisen lists 抽斗 as hard to read (難読)"
+    ],
+    "closure": "../n1-reviews/batch-141-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-141-closure/provenance.json",
+    "closureProvenanceSha256": "b4b6b3d5af7e4073e664d2cafc63e99bf712ecdb8aa4dcc0fda285c327dd8341",
+    "execution": "Initial runs one after the other; in each confirmation round both agents ran at the same time (a departure from the contract's one-active-reviewer rule, disclosed in the limits). Every run had at most one tool call in flight."
   },
   "gates": {
     "lint": {
@@ -165,9 +226,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 9018,
-      "retainedBytes": 51265076,
-      "inflatedBytes": 51536654,
-      "localZipBytes": 32146266
+      "retainedBytes": 51265730,
+      "inflatedBytes": 51537308,
+      "localZipBytes": 32146429
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -198,15 +259,20 @@
       "changedWordFiles": 21,
       "addedLinks": 21,
       "problems": 0,
-      "otherArticleEdits": [],
+      "otherArticleEdits": [
+        "悔しい: the sentence 'There is no 悔 card in the current collection.' is removed (declared remark edit, fix 1)",
+        "悔やむ: the sentence 'No 悔 kanji card is currently available.' is removed (declared remark edit, fix 1)"
+      ],
       "kanjiCardEdits": [
-        "張: the Notes remark saying 緊 and 拡 had no kanji cards now names only 緊 (declared remark edit, checked by kanji-remarks.txt)"
-      ]
+        "張: the Notes remark saying 緊 and 拡 had no kanji cards now names only 緊, and since fix 1 the same bullet links 拡 as the other kanji in 拡張 (declared remark edit, checked by kanji-remarks.txt)"
+      ],
+      "declaredRemarkEdits": 2
     },
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "094a1649552f7773f0a636a104cc797a765bec6e",
+    "metadataScan": "meta_scan.py at the fix snapshot: 0 whole-run Metadata gaps in the 15 cards (whole runs of Japanese script with a kanji that equal a JMdict spelling; kana-only and single-kanji words not checked); 30 words found only inside a longer word are listed, the same 30 as at the freeze; one moved line (抽's 出し in 抽出し, line 36 at the freeze, line 34 at the fix)"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -216,6 +282,43 @@
     "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 悔 カイ and く.いる, 悟 さと.る, 惑 まど.う, 惜 セキ and お.しむ, 愉 たの.しい, 慎 つつし.む, 慰 イ, 憧 ショウ, 憩 いこ.い and いこ.う, 懐 カイ and ふところ, 懸 か.ける, 扇 おうぎ, and 拡 ひろ.がる and ひろ.げる; ten cards quiz only their on reading and five only their kun readings. 扇ぐ, a declaring article, reads 扇 as あお, which is not a KANJIDIC2 reading, so it is not quizzed.",
     "Some titles share an English word with existing titles in a different sense (憧 \"long for\" and the \"long\" of 久 and 長; 憩 \"take a break\" and the \"take\" of 取 and others or the \"break\" of 壊 and 破; 懐 \"become attached\" and the \"become\" of 凝 and 成); these are not excluded from each other's quiz options.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
-  ]
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards, word articles and stroke files as unread that the reports say were read; the author checked those claims against the session events.",
+    "The issue #60 contract asks for serial reviewers with at most one active at any instant, but in both confirmation rounds the Claude and GPT confirmations overlapped in time (21:10:32-21:14:21 and 21:31:40-21:33:27 UTC), as in B137-B140; each worked only from its own packet without the other's reports. From B142 on, confirmations run one after the other.",
+    "confirm-claude made one recursive listing (Get-ChildItem -Recurse -Name) over the snapshot folder of its own packet, which its scope audit flags; it stayed within its allowed packet, and the round-2 prompts forbade recursive listings even inside a packet.",
+    "initial-claude read 張 only through its diff (lines 56-62), read only the changed line of nine word articles (休憩, 愉快, 慎重, 惜しい, 一生懸命, 覚悟, 遠慮, 拡充, 拡張), and parsed the stroke files for keys and stroke counts without visual inspection.",
+    "confirm-gpt checked the front matter of the eleven cards unchanged by fix 1 but did not re-read their bodies; confirm2-claude did not re-read the thirteen cards unchanged by fix 2.",
+    "confirm2-claude's comparison of the check outputs stopped at validate.txt; it did not check the vocabulary, manifest and budget outputs or the QuizBuilder.kt hash, and did not verify the 191-byte and 77-byte budget deltas (the author's checks at 65b47299 and 094a1649 confirm them), the moved Metadata-scan line or the claim that the wording follows 双, 圧 and 訓.",
+    "The freeze replaced an earlier local commit, 99087e7a, before any packet was built, and was amended once only to carry the freeze budget; neither the earlier commit nor the pre-commit check run on the uncommitted fix-1 tree was reviewed or published.",
+    "The reviewers also read Weblio, Kanjipedia (one direct request returned HTTP 500 before the entry was fetched), jisho.org, Wiktionary, two news pages found by a search for 抽斗, the pinned KanjiVG revision and kanjiapi.dev (failed), partly through Python; the scope audits list only web_fetch and web_search calls, and the reports describe these reads.",
+    "The integration merge a366ac8a with main ddc7da27 (the N5 Momotaro reading pilot) had no integration review: no batch file, link target or mention overlaps main's changes and the only conflict was the derived manifest (merge-proof.json). Its gates rerun on the merged tree; the Android JVM tests were not run there either."
+  ],
+  "integration": {
+    "merge": "a366ac8aaf85462c41d7ac39cbea7db4da8584c1",
+    "originMain": "ddc7da27cb316bf341edf79913979976fb2d7a4a",
+    "mergedFrom": "094a1649552f7773f0a636a104cc797a765bec6e",
+    "record": "../n1-reviews/batch-141-closure/README.md",
+    "mergeProof": "../n1-reviews/batch-141-closure/integration/merge-proof.json",
+    "mode": "mechanical-no-overlap",
+    "integrationReview": "not required: every non-derived path equals one parent, the 52 batch runtime files equal the reviewed snapshot, main changed none of the 218 link targets and no main-changed file mentions a batch kanji or changed word; manifest.json, the only conflict, was regenerated",
+    "manifestSha256": "c330aecdfdc23bb769c118e860d79e77e3550e24ac0ab0bd8580236e2420f193",
+    "contentVersion": "e746f081400dd921",
+    "gates": {
+      "unitTests": 439,
+      "validateErrors": 0,
+      "lint": {
+        "errors": 0,
+        "warnings": 2
+      },
+      "manifestRebuildDiff": false,
+      "budget": {
+        "entries": 9020,
+        "retainedBytes": 51265845,
+        "inflatedBytes": 51624936,
+        "localZipBytes": 32157201
+      },
+      "batchAuditsIdenticalToReviewedSnapshot": true
+    },
+    "androidJvmTests": "NOT RUN (no JDK on the continuation machine)"
+  }
 }

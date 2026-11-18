@@ -77,7 +77,10 @@ disclosed choices:
 - Each frozen candidate gets an independent Claude review, then an
   independent GPT review, run one after the other. Fixes are confirmed by the
   same reviewers where possible; otherwise a fresh replacement confirms, and
-  that is disclosed.
+  that is disclosed. Confirmations also run one after the other: in B137 to
+  B141 the two confirmations of a round ran at the same time, which departs
+  from the contract's one-active-reviewer rule; B141's closure record
+  discloses it, and from B142 on they are serial.
 - The B134-era session-binding, admission and token-forecast records are not
   continued. Each batch keeps one progress file in `n1-sources/` and one
   review record in `n1-reviews/`; `tools/n1_record_publication.py` writes
@@ -120,7 +123,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 141: drafted, independent review pending
+## Batch 141: review closed, publication pending
 
 Fifteen absent frozen members: 悔 悟 惑 惜 愉 慎 慮 慰 憧 憩 懐 懸 扇 抽 拡
 (rows 365–426), the next fifteen under the selection rule announced on
@@ -152,7 +155,27 @@ card needs distractors chosen to fill every slot. On four prompts, 慮 リョ,
 慰 なぐさ.める, 憧 あこが.れる and 懐 なつ.かしい, one curated card has no reading
 of the prompt's type, so the random fallback fills one slot.
 
-Gates on the draft pass: 436 host tests, validation, lint (0 errors; 2
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `a92d134a` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX. Both found that 悔しい and 悔やむ
+still said there was no 悔 card, beside the new link to it (Claude: moderate;
+GPT: minor). Claude also found that 抽's ひき- row was illustrated with
+抽き出し, where 抽 writes only ひ. Fix `65b47299` deleted the two sentences,
+declared as remark edits, and used 抽斗 for the ひき- row, split as 抽 ひき
+and 斗 だし; it also applied optional points: 張's Notes name 拡 as the other
+kanji in 拡張, 懸 mentions the reading けんねん of 懸念, and the long reference
+bullets of 懐 and 扇 are split. In the first confirmation round both
+reviewers independently found that the split gives 斗 a reading だし it does
+not have, and both pointed out that JMdict marks けんねん as irregular kana.
+Fix `094a1649` uses the search-only spelling 抽出し for the ひき- row, calls
+抽斗 a reading of the whole word (KANJIDIC2 gives 斗 no だし), and labels
+けんねん as irregular. Both reviewers confirmed it with no finding; Claude's
+two wording nits on 抽 are deferred. The
+[closure record](n1-reviews/batch-141-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the two
+confirmations of each round ran at the same time.
+
+Gates at `094a1649` pass: 436 host tests, validation, lint (0 errors; 2
 warnings on untouched, wrapped Dictionary lines of the existing articles
 扇風機 and 威張る), quiz safety, link plan, manifest rebuild and budget. The
 reading-exposure audit reports no production, padded-session or one-holder
@@ -160,8 +183,18 @@ hit and no drawable KANJIDIC2 name-only reading. It records five latent
 collisions, readings that other cards offer but no audited pool can draw: 悔
 け on both kun prompts (the ケ of 懺悔, from Kanjipedia and Daijisen) and the
 KANJIDIC2 name readings 慎 みつ, 懐 かね and 扇 おう. Android JVM tests were not
-run (no JDK), and no native or phone acceptance is claimed. Published
-delivery stays **362/1,228** until review closure, CI and ZIP verification.
+run (no JDK), and no native or phone acceptance is claimed.
+
+Main had meanwhile gained the N5 Momotaro reading pilot (`ddc7da27`). The
+non-rewriting merge `a366ac8a` regenerates `manifest.json`, the only
+conflict; its [merge proof](n1-reviews/batch-141-closure/integration/merge-proof.json)
+shows that every other path equals one parent and that main touches no batch
+file, link target or mention, so no integration review was needed. On the
+merged tree, 439 host tests, validation, lint, the manifest rebuild, the
+budget and every batch audit pass, the audits unchanged from `094a1649`.
+Published delivery stays **362/1,228** until CI and ZIP verification;
+publication would make it **377/1,228**, with **851 remaining**.
+
 ## Batch 140: published
 
 Review-closed and published at `fe70abbf`. The
