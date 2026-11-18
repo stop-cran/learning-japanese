@@ -120,7 +120,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 139: drafted, independent review pending
+## Batch 139: review closed, publication pending
 
 Fifteen absent frozen members: 嫁 嬢 宗 宜 宣 宴 寂 密 審 尋 屈 属 岬 峠 崩
 (rows 237–290), the next fifteen under the selection rule announced on
@@ -148,17 +148,41 @@ sessions could offer 先's さき on 岬's みさき prompt; Daijisen and JMdict
 give さき for 岬. 岬 now takes three Starter-card distractors whose readings
 are not its own (山 田 中), so curated options fill every slot. Quiz
 exclusions could not fix this, because they apply to meaning quizzes only.
+The draft audits left out two Daijisen character-entry kun readings, 宗
+たっと.ぶ and 宣 の.る; the corrected audits add them and change no hit or
+collision count.
 
-Gates on the draft pass: 436 host tests, validation, lint (0 errors; 2
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `a47efe9a` one after the other, each without seeing
+the other's work. GPT returned NEEDS FIX for one minor defect: 峠 excluded 通
+and 経, which share only the English word "pass" with it. Claude passed the
+batch with two minor source points: 宣 did not give JMdict's note that
+のたまう was originally respectful and is now often used sarcastically, and
+嫁 did not say that JMdict marks its sense "wife" as Kansai dialect. Fix
+`3b6f9727` changed four cards and one word article: it removed both 峠
+exclusions and added a bullet separating a mountain pass from the verbs 通る
+and 経る, added the two notes, and applied three of Claude's optional points:
+嬢's related forms お嬢様, 嬢ちゃん and 嬢さん, 宣's Daijisen kun readings
+with 宣べ伝える, and a full stop in 宴会's reading line. GPT then found that
+the new 嬢 bullet shortened JMdict's gloss of 嬢さん, which Claude had also
+noted as optional. Fix `f1b2bdb8` quotes the gloss in full, and both
+reviewers confirmed it; neither left a finding. The
+[closure record](n1-reviews/batch-139-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `f1b2bdb8` pass: 436 host tests, validation, lint (0 errors; 2
 warnings on untouched Dictionary lines of existing articles), quiz safety,
-link plan, manifest rebuild and budget. The reading-exposure audit reports
-no production, padded-session or one-holder hit apart from one disclosed
-KANJIDIC2 name-only reading: 宗 し on the シュウ prompt in the N1 and All
-stacks, through the curated distractor 示. The older reading-options check
-still lists さき for 岬, because it ignores slots that curated distractors
-fill; its simulation drew only curated readings. Android JVM tests were not
-run (no JDK), and no native or phone acceptance is claimed. Published
-delivery stays **332/1,228** until review closure, CI and ZIP verification.
+link plan, manifest rebuild and budget. The corrected reading-exposure audit
+reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 宗 し on the シュウ prompt in the N1
+and All stacks, through the curated distractor 示. It records eleven latent
+collisions, readings that other cards offer but no audited pool can draw.
+The older reading-options check still lists さき for 岬, because it ignores
+slots that curated distractors fill; its simulation drew only curated
+readings. Android JVM tests were not run (no JDK), and no native or phone
+acceptance is claimed. Published delivery stays **332/1,228** until CI and
+ZIP verification; publication would make it **347/1,228**, with **881
+remaining**.
 
 ## Batch 138: published
 
