@@ -15,6 +15,8 @@ scenes/<word>.json     optional named scene catalog (separate manifest scenes ma
 images/<name>.webp     scene assets (separate raw-byte-hashed manifest images map)
 listening/<id>.json    N5 listening packages (separate manifest listening map)
 audio/<id>.ogg         approved mono Opus recordings (separate raw-byte-hashed audio map)
+reading/<id>.json      reading packages (separate manifest reading map)
+reading-images/<name>.webp  optional question images; raw-hashed only when reading is published
 ```
 
 ## Repository teaching language
@@ -59,6 +61,19 @@ and `listeningTaskImages` maps. Schema 1/policy 1 requires integer JLPT 5; the [
 requires schema 2/policy 1/integer JLPT 4 without changing the four stage/choice shapes.
 Legacy English-question packages remain N5-only. Versioned support does not approve a recording
 or enable an unfinished diagnostic profile; exact package/media approval and publication gates remain mandatory.
+
+## Reading
+
+Reading packages use schema 1 and the [N5 pilot record](reading-n5.md). They are separate from
+`manifest.files`. The catalog CLI passes `publish_reading=True`; the function default remains false.
+An empty `distribution.reviewed` list is not a reviewed jurisdiction. The published note says no
+jurisdiction-specific legal review has been performed.
+Offsets are half-open Unicode code points into plain section text. A missing `word` still carries
+its gloss; a present `word` must be an existing card id. Questions must stay fair if the passage
+is hidden, because each quiz can be open-book or closed-book.
+The agreed N5 pilot target is 1,000–1,500 Japanese characters, eight sections, and at least
+four questions in each tier. Transport validation allows up to 100 sections and 128 questions;
+those caps are not a reason to add weak items.
 
 ## Numbers & counters
 
