@@ -120,7 +120,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 138: drafted, independent review pending
+## Batch 138: review closed, publication pending
 
 Fifteen absent frozen members: 噴 垂 垣 執 堅 塊 墨 壁 壊 奏 契 奨 奪 妨 威
 (rows 174–230), the next fifteen under the selection rule announced on
@@ -145,18 +145,43 @@ headwords, and the JMdict kanji-plus-okurigana headwords 垂げ さげ, 垂れ
 奪る. With tag-similar distractors, the audit found that Starter sessions
 could offer Kanjipedia's 外 readings ホン for 噴 and ケツ for 契. Both cards
 now take three Starter-card distractors whose readings are not their own
-(口 古 買 and 大 天 分), so curated options fill every slot.
+(口 古 買 and 大 天 分), so curated options fill every slot. A second
+`--extra` for the same kanji first replaced the earlier one in the author's
+audit tools instead of adding to it, so the draft audits never checked eight
+extra readings of 垂, 執, 壊 and 奏. The tools now add, the gate runner passes
+one merged `--extra` per kanji, and the corrected audits change no card.
 
-Gates on the draft pass: 436 host tests, validation, lint (0 errors; 3
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `b6020f9e` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. GPT found
+two missing direct exclusions, 垣–壁 and 奪–魅. Claude found four wording
+points: 堅 did not say JMdict's かたい entry also lists 緊い, 契 did not name
+Kanjipedia's outside readings キツ and ケツ, 妨 gave only one of Daijisen's
+two examples, and 壊's mnemonic misdescribed the lower right. Fix `acf7297e`
+changed ten cards: it added both exclusions and 塊–組, which the author
+found, rewrote the four points (契 names キツ and ケツ but not Claude's セツ,
+which is the reading of a Daijisen proper-name headword), and applied four of
+Claude's optional points: 威's frame strokes, 威張る's on reading い,
+執り行う and 功を奏する. Both reviewers confirmed it, and fix `3158b2b9`
+wrote 契闊's reading in hiragana, Claude's only optional point. Because the
+corrected audits replaced those in the earlier packets, both reviewers also
+confirmed fix 2 with them; neither left a finding. The
+[closure record](n1-reviews/batch-138-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `3158b2b9` pass: 436 host tests, validation, lint (0 errors; 3
 warnings on untouched Dictionary lines of existing articles), quiz safety,
-link plan, manifest rebuild and budget. The reading-exposure audit reports
-no production, padded-session or one-holder hit apart from one disclosed
-KANJIDIC2 name-only reading: 執 し on the シツ prompt in a Starter session.
-The older reading-options check still lists ほん for 噴 and けつ for 契,
-because it ignores slots that curated distractors fill; its simulation drew
-only curated readings. Android JVM tests were not run (no JDK), and no native
-or phone acceptance is claimed. Published delivery stays **317/1,228** until
-review closure, CI and ZIP verification.
+link plan, manifest rebuild and budget. The corrected reading-exposure audit
+reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 執 し on the シツ prompt in a Starter
+session. It records nine latent collisions, readings that other cards offer
+but no audited pool can draw; the ninth, 壊 やぶれる, was hidden by the
+`--extra` defect. The older reading-options check still lists ほん for 噴 and
+けつ for 契, because it ignores slots that curated distractors fill; its
+simulation drew only curated readings. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed. Published delivery stays
+**317/1,228** until CI and ZIP verification; publication would make it
+**332/1,228**, with **896 remaining**.
 
 ## Batch 137: published
 

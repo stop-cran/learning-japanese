@@ -1,0 +1,69 @@
+Batch 138: why the earlier reading audits left out some --extra readings, and what the corrected audits show
+=============================================================================================================
+
+Written by the author on 2026-11-18. The two audit tools (reading_exposure.py and reading_options.py) and the
+author's gate runner are not in any packet; this file states what changed in them and why.
+
+1. The defect
+-------------
+- Both tools take any number of `--extra KANJI=reading,reading,...` arguments. Each tool parsed them with
+      extra[k] = [x for x in v.split(",") if x]
+  (reading_exposure.py line 179, reading_options.py line 188), so a second --extra for the same kanji REPLACED the
+  first one instead of adding to it.
+- For batch 138 the author's gate runner passed two --extra arguments for five kanji (垂, 執, 壊, 奏, 奪): first the
+  readings Kanjipedia marks as outside the official table and the readings from the Digital Daijisen character entries
+  and headwords, then, after all other --extra arguments, the JMdict kanji-plus-okurigana readings listed in
+  okurigana-scan.txt. Line 1 of every earlier reading-exposure.txt and reading-options.txt shows both arguments, but
+  only the second took effect.
+- Both tools label every --extra reading "(card text)", whatever its source; the label does not mean the card names
+  the reading. Line 2 of each output states the sources.
+- This affects the original packet (batch-138-b6020f9e, evidence\audits\reading-exposure.txt and
+  reading-options.txt) and both first-round confirmation packets (confirm-138-claude and confirm-138-gpt,
+  checks\reading-exposure.txt and checks\reading-options.txt).
+- The published audits of batches 135 to 137 pass one --extra per kanji (checked by counting the --extra keys on
+  line 1 of every reading-exposure.txt and reading-options.txt in their closure folders), so they are not affected.
+
+2. The fix
+----------
+- Both tools now add to the list instead of replacing it, skipping duplicates:
+      extra.setdefault(k, []).extend(x for x in v.split(",") if x and x not in extra.get(k, []))
+- The gate runner now merges the two lists per kanji and passes one --extra per kanji, keeping the order. Line 1 of
+  the corrected outputs shows the merged arguments, for example
+      --extra 壊=エ,やぶ.る,やぶ.れる,こわ.る,こほ.つ,こぼ.つ
+
+3. Readings the earlier audits did not apply (the first argument, minus readings also in the second)
+-------------------------------------------------------------------------------------------------------
+  垂  しで, なんなん.とする, しず.る, しずれ
+  執  とら.える
+  壊  エ, やぶ.る, やぶ.れる, こわ.る
+  奏  すす.める, もう.す
+  奪  タツ
+
+  - Three of these 12 cannot matter. The tools ignore every reading in the card's own front matter and every
+    sound-change variant of one (`excluded_keys`, which applies the same variants as ReadingOptions.mutations in
+    evidence\Words.kt). エ and やぶる (壊) are in 壊's front matter, and たつ (奪) is a voicing variant of 奪's だつ.
+  - しで (垂) was still checked, because JMdict entry 1767000 also gives it; the corrected outputs list it as
+    "(card text, JMdict 1767000)".
+  - The other eight were not checked at all: なんなんとする, しずる, しずれ (垂); とらえる (執); やぶれる, こわる (壊);
+    すすめる, もうす (奏).
+
+4. What the corrected audits show
+---------------------------------
+Corrected outputs at 3158b2b9: checks\reading-exposure.txt and checks\reading-options.txt in this packet. The same
+command at the reviewed snapshot b6020f9e gives the same output apart from line 1:
+evidence\reading-exposure-b6020f9e.txt and evidence\reading-options-b6020f9e.txt. No revision changed a reading or
+a `distractors` list, and the two tools do not read `quiz_exclusions` (the only front matter the first revision
+changed), so the outputs are the same at all three snapshots.
+
+- One more latent collision: 壊 やぶれる is offered by 敗 and 破 (reading-exposure.txt lines 152-154). It cannot be
+  drawn in the N1 stack, All stack or Starter practice session pool, and not with any single borrowed holder. The
+  summary on line 261 now reads 0 production hits, 0 padded-session hits, 9 latent collisions (was 8); line 262 still
+  reads 0 one-holder padded hits.
+- reading-options.txt: still 2 problems, the same two HIT labels (噴 ほん at line 17, 契 けつ at line 160). 壊 gains
+  a note at line 132: やぶれる is offered only by 敗 and 破, and cannot be drawn from the full pool (lower closeness
+  tier).
+- The other newly checked readings (垂 なんなんとする, しずる, しずれ; 執 とらえる; 壊 こわる; 奏 すすめる, もうす) are
+  offered by no other card.
+- In a pool without 壊's curated distractor cards (a hypothetical or custom pool; the risk class at line 153),
+  やぶれる could be shown as a wrong option for 壊 こわす. This is the same kind of latent risk as the other eight,
+  and the first-round point on such pools (O9) already covers it.

@@ -2,7 +2,7 @@
   "batch": 138,
   "base": "e7eb6886e0b05cb84d9b60d268513b316ad71a82",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "噴",
     "垂",
@@ -108,9 +108,25 @@
       "威張る"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "b6020f9e490298de1756e33c51bf9ce314132f4e",
+  "reviewedSnapshot": "3158b2b97cc9ba61368b722d0c45c37536a909c5",
+  "reviewClosed": [
+    "噴",
+    "垂",
+    "垣",
+    "執",
+    "堅",
+    "塊",
+    "墨",
+    "壁",
+    "壊",
+    "奏",
+    "契",
+    "奨",
+    "奪",
+    "妨",
+    "威"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -119,8 +135,8 @@
     "publishedN1Additions": 311,
     "n2Placements": 6,
     "undelivered": 911,
-    "reviewClosedPendingRecordsWithCards": 317,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 332,
+    "localUnreviewedDrafts": 0,
     "notStarted": 896,
     "overallN1TaskComplete": false
   },
@@ -132,12 +148,56 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "acf7297ef66a82f620a6c5551d95a2e3fa356bc7",
+      "3158b2b97cc9ba61368b722d0c45c37536a909c5"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "b6020f9e490298de1756e33c51bf9ce314132f4e",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "b6020f9e490298de1756e33c51bf9ce314132f4e",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "acf7297ef66a82f620a6c5551d95a2e3fa356bc7",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "acf7297ef66a82f620a6c5551d95a2e3fa356bc7",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm2-claude",
+        "snapshot": "3158b2b97cc9ba61368b722d0c45c37536a909c5",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm2-gpt",
+        "snapshot": "3158b2b97cc9ba61368b722d0c45c37536a909c5",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude initial O9: the author's reading_options.py (outside the repository) labels 噴 ほん and 契 けつ HIT although curated distractors fill every slot; reading_exposure.py shows them undrawable",
+      "GPT initial OP: shorten or move long sense inventories for phone reading; a collection-wide layout change"
+    ],
+    "closure": "../n1-reviews/batch-138-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-138-closure/provenance.json",
+    "closureProvenanceSha256": "52bf110854f6d1e95a4757811b97155a16b37b2857833c81e3bd434d2d5b88ef"
   },
   "gates": {
     "lint": {
@@ -149,9 +209,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 8928,
-      "retainedBytes": 50871639,
-      "inflatedBytes": 51143217,
-      "localZipBytes": 31959139
+      "retainedBytes": 50872616,
+      "inflatedBytes": 51144194,
+      "localZipBytes": 31959557
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -171,8 +231,8 @@
         "執 し"
       ],
       "oneHolderNameOnly": [],
-      "latentCollisions": 8,
-      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ that is not a KANJIDIC2 reading, plus the JMdict kanji+okurigana headword readings 垂げ さげ, 垂れ しだれ and だれ, 垂れる しだれる, 垂んとす なりなんとす and なんなんとす, 執よう しつよう, 壊つ こほつ and こぼつ, 奏す そうす, 奏する そうする and 奪る とる"
+      "latentCollisions": 9,
+      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ that is not a KANJIDIC2 reading, plus the JMdict kanji+okurigana headword readings 垂げ さげ, 垂れ しだれ and だれ, 垂れる しだれる, 垂んとす なりなんとす and なんなんとす, 執よう しつよう, 壊つ こほつ and こぼつ, 奏す そうす, 奏する そうする and 奪る とる; the corrected audits at the fix-2 snapshot pass them as one merged --extra per kanji (the earlier audits applied only the last --extra for 垂, 執, 壊, 奏 and 奪; see limits)"
     },
     "readingOptions": {
       "labelledHits": [
@@ -195,16 +255,25 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "3158b2b97cc9ba61368b722d0c45c37536a909c5",
+    "metadataScan": "meta_scan.py at the fix-2 snapshot: 0 whole-run Metadata gaps in the 15 cards (whole runs of Japanese script with a kanji that equal a JMdict spelling; kana-only and single-kanji words not checked)"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
-    "8 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 噴 ほん and はく, 塊 ほど, 壁 がけ, 契 きつ, けつ and せつ, and 奪 とる.",
+    "9 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 噴 ほん and はく, 塊 ほど, 壁 がけ, 壊 やぶれる, 契 きつ, けつ and せつ, and 奪 とる.",
     "One KANJIDIC2 name-only reading can be drawn as a wrong option and is disclosed, not fixed: 執 し on the シツ prompt in a Starter practice session.",
     "噴 and 契 use Starter-card distractors (口 古 買; 大 天 分) so that all three wrong options are curated in every pool; with tag-similar distractors, Kanjipedia's 外 readings ホン of 噴 and ケツ of 契 could be offered in Starter sessions.",
     "3 lint warnings on existing word articles' Dictionary lines (噴火, 墨, 威張る) are pre-existing and out of scope.",
     "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 噴 ふ.く, 垂 た.れる and た.らす, 堅 ケン, 塊 カイ, 墨 ボク, 壁 ヘキ, 壊 カイ, 奏 かな.でる, 奪 ダツ and 妨 ボウ; seven cards quiz only their on reading and eight only their kun readings.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "Claude's initial review had two tool calls in flight twice; its report discloses one of the two.",
+    "The scope audits do not attribute reads made through shell loops or Python, so audits list cards as unread that the reports say were read; the author checked those claims against the session events.",
+    "Claude's C2 suggestion named セツ as a Kanjipedia reading of 契; Kanjipedia lists キツ and ケツ only, and セツ is the reading of Daijisen's proper-name headword せつ【契】, so the card names キツ and ケツ.",
+    "The 押妨 gloss on 妨 rests on its Weblio page (Digital Daijisen and a dictionary of historical terms); 押妨 has no JMdict entry.",
+    "Fix 1 had an earlier local version (f8f488d1) with a different 押妨 gloss, and fix 2 one (a93ce9c0) with a different commit message; neither was reviewed or published.",
+    "The reading audits in the original packet and the first confirmation packets left out some --extra readings of 垂, 執, 壊, 奏 and 奪: a second --extra for a kanji replaced the first in the author's audit tools. The tools and gate runner were fixed outside the repository; the corrected audits in the second confirmation packets supersede them and add one latent collision, 壊 やぶれる (9 in all).",
+    "The packet builder dropped every blank line from the check outputs it summarized, so the first confirmation packets' quiz-safety.txt had one blank line fewer than the original packet's copy; the second packets copy it byte for byte.",
+    "Neither audit tool models a custom pool without a target's curated distractor cards, where the nine latent readings could be offered as wrong options."
   ]
 }
