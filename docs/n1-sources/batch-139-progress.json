@@ -2,7 +2,7 @@
   "batch": 139,
   "base": "d65a9931d4231bf56f76c2c2a975b8bdd75eb3cd",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "嫁",
     "嬢",
@@ -139,14 +139,30 @@
     "峠",
     "崩"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "嫁",
+    "嬢",
+    "宗",
+    "宜",
+    "宣",
+    "宴",
+    "寂",
+    "密",
+    "審",
+    "尋",
+    "屈",
+    "属",
+    "岬",
+    "峠",
+    "崩"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 332,
-    "publishedN1Additions": 326,
+    "publishedPendingRecordsWithCards": 347,
+    "publishedN1Additions": 341,
     "n2Placements": 6,
-    "undelivered": 896,
+    "undelivered": 881,
     "reviewClosedPendingRecordsWithCards": 347,
     "localUnreviewedDrafts": 0,
     "notStarted": 881,
@@ -285,6 +301,13 @@
     "The first CHANGES.md said two existing Metadata ids moved before the new ones, and that 宴会 changed only a colon; neither was true. The fix-2 CHANGES.md corrects both, and Claude marked them resolved.",
     "Fix 1 had three earlier local versions (c2b9973b, 8530c8bb, 2dacd6e5), amended before any confirmation packet was built; none was reviewed or published.",
     "Neither audit tool models a custom pool without a target's curated distractor cards, where the eleven latent readings could be offered as wrong options.",
-    "The GPT reviewers also read Weblio, jisho.org, kanjiapi.dev (HTTP 403) and the pinned KanjiVG revision, mostly through Python; the scope audits list only web_fetch calls, and the reports describe these reads."
-  ]
+    "The GPT reviewers also read Weblio, jisho.org, kanjiapi.dev (HTTP 403) and the pinned KanjiVG revision, mostly through Python; the scope audits list only web_fetch calls, and the reports describe these reads.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "e62eee92ca9b396c761540e265c9ba48c8f8c4b6",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/e62eee92ca9b396c761540e265c9ba48c8f8c4b6",
+    "receipt": "../n1-reviews/batch-139-publication/provenance.json"
+  }
 }
