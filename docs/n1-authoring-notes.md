@@ -120,6 +120,51 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 140: drafted, independent review pending
+
+Fifteen absent frozen members: 嵐 巣 帳 幕 幣 序 弁 往 径 徐 従 徴 志 怠 恨
+(rows 291–360), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. 従,
+deferred in batch 111 because no existing article used its reading ジュウ,
+passes under this rule because 従う and 従って use したが.う. No word article
+is added: twenty-three existing articles each gain one link to a new card.
+半径 and 往復 also lose a sentence that said 径 or 往 had no card, and the
+Notes bullet of the existing 慢 card that said 怠 and 緩 had no cards now
+names only 緩. `n1_linkplan.py verify` checks the two article edits as
+declared remark edits, and the author's `kanji_remarks.py` checks that no
+other existing card changes and that 慢 changes only by its declared edit.
+The [progress file](n1-sources/batch-140-progress.json) records the gates and
+disclosed limits.
+
+Ten cards quiz on readings only and five quiz kun readings only, because the
+other readings have no declaring word article yet; common ones such as 巣
+ソウ, 幕 バク, 従 ジュウ and したが.える, 志 こころざし, 怠 タイ and 恨
+うら.めしい are listed and illustrated, not quizzed. JMdict marks the いとこ of
+従兄弟 and 従姉妹 as gikun, so it is not quizzed either.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 帳つけ, 幕にする, 弁じる, 徐に, 従たる,
+徴する and 怠い. With tag-similar distractors, the audit found that Starter
+sessions could offer まい, a reading of 毎, 米, 枚, 妹 and 埋, on 幣's ヘイ
+prompt; JMdict (2789910) and Daijisen both give まい for 幣. 幣 now takes
+three Starter-card distractors whose readings are not its own (中 内 南), so
+curated options fill every slot; the shape look-alikes 常, 帯 and 希 stay in
+its Notes.
+
+Gates on the draft pass: 436 host tests, validation, lint (0 errors; 4
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The reading-exposure audit reports
+no production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records four latent collisions, readings that other
+cards offer but no audited pool can draw: 幣 まい, 弁 とく, 従 ひろい and the
+KANJIDIC2 name reading 志 じん. The older reading-options check still lists
+まい for 幣, because it ignores slots that curated distractors fill; its
+simulation drew only curated readings. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed. Published delivery stays
+**347/1,228** until review closure, CI and ZIP verification.
 ## Batch 139: published
 
 Review-closed and published at `e62eee92`. The

@@ -1,0 +1,233 @@
+{
+  "batch": 140,
+  "base": "f37cd97f43e8e2b2792cbe3d89e728c76e453646",
+  "governingIssue": 60,
+  "status": "drafted-review-pending",
+  "members": [
+    "嵐",
+    "巣",
+    "帳",
+    "幕",
+    "幣",
+    "序",
+    "弁",
+    "往",
+    "径",
+    "徐",
+    "従",
+    "徴",
+    "志",
+    "怠",
+    "恨"
+  ],
+  "sourceRows": [
+    291,
+    297,
+    306,
+    307,
+    308,
+    313,
+    321,
+    340,
+    342,
+    343,
+    344,
+    348,
+    352,
+    356,
+    360
+  ],
+  "selectionReason": "The next fifteen, in source-row order, of the 271 absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 23 existing articles each gain one link to a new card. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. The only other article text changes remove the sentences in 半径 and 往復 that said 径 or 往 had no kanji card, and narrow the 慢 card's Notes bullet that said 怠 and 緩 had no kanji cards so that it names only 緩. 211 rows of the 271 group, 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
+  "supports": [
+    [
+      "嵐",
+      "嵐"
+    ],
+    [
+      "巣",
+      "巣"
+    ],
+    [
+      "帳",
+      "手帳"
+    ],
+    [
+      "帳",
+      "通帳"
+    ],
+    [
+      "幕",
+      "幕"
+    ],
+    [
+      "幣",
+      "紙幣"
+    ],
+    [
+      "序",
+      "順序"
+    ],
+    [
+      "弁",
+      "お弁当"
+    ],
+    [
+      "弁",
+      "弁当"
+    ],
+    [
+      "往",
+      "往復"
+    ],
+    [
+      "径",
+      "半径"
+    ],
+    [
+      "径",
+      "直径"
+    ],
+    [
+      "徐",
+      "徐々に"
+    ],
+    [
+      "従",
+      "従う"
+    ],
+    [
+      "従",
+      "従って"
+    ],
+    [
+      "従",
+      "従兄弟"
+    ],
+    [
+      "従",
+      "従姉妹"
+    ],
+    [
+      "徴",
+      "特徴"
+    ],
+    [
+      "志",
+      "意志"
+    ],
+    [
+      "怠",
+      "怠ける"
+    ],
+    [
+      "怠",
+      "怠る"
+    ],
+    [
+      "恨",
+      "恨み"
+    ],
+    [
+      "恨",
+      "恨む"
+    ]
+  ],
+  "initialSnapshot": null,
+  "reviewedSnapshot": null,
+  "reviewClosed": [],
+  "published": [],
+  "runtimePublished": false,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 347,
+    "publishedN1Additions": 341,
+    "n2Placements": 6,
+    "undelivered": 881,
+    "reviewClosedPendingRecordsWithCards": 347,
+    "localUnreviewedDrafts": 15,
+    "notStarted": 866,
+    "overallN1TaskComplete": false
+  },
+  "sources": {
+    "kanjidic2": "docs/n1-sources/kanjidic2-selected.xml (KANJIDIC2 2026-11-02 records, frozen)",
+    "jmdict": "docs/n1-sources/continuation-inputs.json (JMdict_e continuation snapshot created 2026-11-17)",
+    "kanjivg": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "joyo": "Bunka-cho joyokanjihyo_20101130.pdf (sha256 d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42)",
+    "dictionary": "Digital Daijisen via weblio"
+  },
+  "review": {
+    "status": "pending",
+    "mode": "blind-independent-two-family-textual-review",
+    "families": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ]
+  },
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 4,
+      "note": "all four warnings are Dictionary-line warnings on existing word articles (往復, 従姉妹, 直径, 通帳) whose Dictionary lines this batch does not touch; 0 warnings with --no-jmdict"
+    },
+    "unitTests": 436,
+    "validateErrors": 0,
+    "budget": {
+      "entries": 8988,
+      "retainedBytes": 51127854,
+      "inflatedBytes": 51399432,
+      "localZipBytes": 32082422
+    },
+    "vocabularyCheck": "3201/3336",
+    "manifestRebuildDiff": false,
+    "titlesUnique": true,
+    "quizSafety": {
+      "cards": 15,
+      "errors": 0,
+      "warnings": 0
+    },
+    "readingExposure": {
+      "cards": 15,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "productionNameOnly": [],
+      "paddedNameOnly": [],
+      "oneHolderNameOnly": [],
+      "latentCollisions": 4,
+      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ that is not a KANJIDIC2 reading, plus the 15 JMdict kanji+okurigana headword readings whose stem is not a card kun stem, from 帳つけ, 幕にする, 幕になる, 弁じる, 弁ずる, 徐に, 従たる, 徴す, 徴する, 志っぽく and 怠い"
+    },
+    "readingOptions": {
+      "labelledHits": [
+        "幣 まい (埋 妹 枚 毎 米)"
+      ],
+      "drawable": false,
+      "note": "the older check ignores filled slots; the ヘイ prompt is filled by three curated Starter-card distractors (中 内 南) in every checked pool"
+    },
+    "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the 15 kanji: every reading whose stem is not a card kun stem is among the extras",
+    "linkPlan": {
+      "changedWordFiles": 23,
+      "addedLinks": 23,
+      "problems": 0,
+      "otherArticleEdits": [
+        "半径 and 往復: the sentences saying 径 or 往 had no kanji card are removed (declared remark edits, checked by linkplan.txt)"
+      ],
+      "kanjiCardEdits": [
+        "慢: the Notes bullet saying 怠 and 緩 had no kanji cards now names only 緩 (declared remark edit, checked by kanji-remarks.txt)"
+      ]
+    },
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": null
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "4 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 幣 まい, 弁 とく, 従 ひろい, and the KANJIDIC2 name reading 志 じん.",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools.",
+    "幣 uses Starter-card distractors (中 内 南) so that all three wrong options are curated in every pool; with tag-similar distractors, まい, a reading JMdict (2789910) and Daijisen give for 幣, could be offered in Starter sessions by 毎, 米, 枚, 妹 or 埋. The shape look-alikes 常, 帯 and 希 stay in the card's Notes.",
+    "4 lint warnings on existing word articles' Dictionary lines (往復, 従姉妹, 直径, 通帳) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 巣 ソウ, 幕 バク, 従 ジュウ, ショウ and したが.える, 志 こころざ.す and こころざし, 怠 タイ, and 恨 コン and うら.めしい; ten cards quiz only their on reading and five only their kun readings. The いとこ of 従兄弟 and 従姉妹 is gikun and is not quizzed.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+  ]
+}
