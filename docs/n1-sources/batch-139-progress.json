@@ -1,0 +1,221 @@
+{
+  "batch": 139,
+  "base": "d65a9931d4231bf56f76c2c2a975b8bdd75eb3cd",
+  "governingIssue": 60,
+  "status": "drafted-review-pending",
+  "members": [
+    "嫁",
+    "嬢",
+    "宗",
+    "宜",
+    "宣",
+    "宴",
+    "寂",
+    "密",
+    "審",
+    "尋",
+    "屈",
+    "属",
+    "岬",
+    "峠",
+    "崩"
+  ],
+  "sourceRows": [
+    237,
+    241,
+    246,
+    248,
+    249,
+    253,
+    255,
+    257,
+    261,
+    266,
+    275,
+    277,
+    281,
+    283,
+    290
+  ],
+  "selectionReason": "The next fifteen, in source-row order, of the 271 absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 20 existing articles each gain one link to a new card. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. The only other article text changes remove or narrow the sentences in 宴会, 崩す, 崩れる and 附属 that said 宴, 崩 or 属 had no kanji card. 226 rows of the 271 group, 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
+  "supports": [
+    [
+      "嫁",
+      "嫁"
+    ],
+    [
+      "嫁",
+      "花嫁"
+    ],
+    [
+      "嬢",
+      "お嬢さん"
+    ],
+    [
+      "宗",
+      "宗教"
+    ],
+    [
+      "宜",
+      "宜しく"
+    ],
+    [
+      "宣",
+      "宣伝"
+    ],
+    [
+      "宴",
+      "宴会"
+    ],
+    [
+      "寂",
+      "寂しい"
+    ],
+    [
+      "密",
+      "密"
+    ],
+    [
+      "密",
+      "秘密"
+    ],
+    [
+      "審",
+      "審判"
+    ],
+    [
+      "尋",
+      "尋ねる"
+    ],
+    [
+      "屈",
+      "退屈"
+    ],
+    [
+      "属",
+      "属する"
+    ],
+    [
+      "属",
+      "金属"
+    ],
+    [
+      "属",
+      "附属"
+    ],
+    [
+      "岬",
+      "岬"
+    ],
+    [
+      "峠",
+      "峠"
+    ],
+    [
+      "崩",
+      "崩す"
+    ],
+    [
+      "崩",
+      "崩れる"
+    ]
+  ],
+  "initialSnapshot": null,
+  "reviewedSnapshot": null,
+  "reviewClosed": [],
+  "published": [],
+  "runtimePublished": false,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 332,
+    "publishedN1Additions": 326,
+    "n2Placements": 6,
+    "undelivered": 896,
+    "reviewClosedPendingRecordsWithCards": 332,
+    "localUnreviewedDrafts": 15,
+    "notStarted": 881,
+    "overallN1TaskComplete": false
+  },
+  "sources": {
+    "kanjidic2": "docs/n1-sources/kanjidic2-selected.xml (KANJIDIC2 2026-11-02 records, frozen)",
+    "jmdict": "docs/n1-sources/continuation-inputs.json (JMdict_e continuation snapshot created 2026-11-17)",
+    "kanjivg": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "joyo": "Bunka-cho joyokanjihyo_20101130.pdf (sha256 d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42)",
+    "dictionary": "Digital Daijisen via weblio"
+  },
+  "review": {
+    "status": "pending",
+    "mode": "blind-independent-two-family-textual-review",
+    "families": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ]
+  },
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 2,
+      "note": "both warnings are Dictionary-line warnings on existing word articles (宣伝, 宴会) whose Dictionary lines this batch does not touch; 0 warnings with --no-jmdict"
+    },
+    "unitTests": 436,
+    "validateErrors": 0,
+    "budget": {
+      "entries": 8958,
+      "retainedBytes": 50998003,
+      "inflatedBytes": 51269581,
+      "localZipBytes": 32020128
+    },
+    "vocabularyCheck": "3201/3336",
+    "manifestRebuildDiff": false,
+    "titlesUnique": true,
+    "quizSafety": {
+      "cards": 15,
+      "errors": 0,
+      "warnings": 0
+    },
+    "readingExposure": {
+      "cards": 15,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "productionNameOnly": [
+        "宗 し"
+      ],
+      "paddedNameOnly": [],
+      "oneHolderNameOnly": [],
+      "latentCollisions": 11,
+      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ that is not a KANJIDIC2 reading, plus the 34 JMdict kanji+okurigana headword readings whose stem is not a card kun stem, from 嫁す, 嫁する, 嬢さん, 嬢ちゃん, 宜なるかな, 宜う, 宜い, 宣す, 宣する, 宣べる, 宣う, 宴もたけなわ, 寂とした, 寂として, 審らか, 尋ぬ, 屈す, 屈まる, 屈む, 屈する, 屈める, 属す, 属する, 崩じる and 崩ずる"
+    },
+    "readingOptions": {
+      "labelledHits": [
+        "岬 さき (先)"
+      ],
+      "drawable": false,
+      "note": "the older check ignores filled slots; the みさき prompt is filled by three curated Starter-card distractors (山 田 中) in every checked pool, and its 100-seed simulation drew only curated readings"
+    },
+    "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the 15 kanji: every reading whose stem is not a card kun stem is among the extras",
+    "linkPlan": {
+      "changedWordFiles": 20,
+      "addedLinks": 20,
+      "problems": 0,
+      "otherArticleEdits": [
+        "宴会, 崩す, 崩れる and 附属: the sentences saying 宴, 崩 or 属 had no kanji card are removed or narrowed (declared remark edits, checked by linkplan.txt)"
+      ],
+      "kanjiCardEdits": []
+    },
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": null
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "11 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 嫁 かす, 宗 そ, 宜 き, たか, のり, よし and よい, 寂 しずか, 尋 つぐ and つね, and 岬 さき.",
+    "One KANJIDIC2 name-only reading can be drawn as a wrong option and is disclosed, not fixed: 宗 し on the シュウ prompt in the N1 and All stacks, offered by the curated distractor 示.",
+    "岬 uses Starter-card distractors (山 田 中) so that all three wrong options are curated in every pool; with tag-similar distractors, 先's さき, a reading Daijisen and JMdict give for 岬, could be offered in Starter sessions.",
+    "2 lint warnings on existing word articles' Dictionary lines (宣伝, 宴会) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 嫁 カ and とつ.ぐ, 宗 ソウ and むね, 宜 ギ, 寂 ジャク, セキ and さび.れる, 密 ひそ.か, 尋 ジン, 属 ショク and 崩 ホウ; eight cards quiz only their on reading and seven only their kun readings.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+  ]
+}

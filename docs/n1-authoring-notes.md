@@ -120,6 +120,46 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 139: drafted, independent review pending
+
+Fifteen absent frozen members: 嫁 嬢 宗 宜 宣 宴 寂 密 審 尋 屈 属 岬 峠 崩
+(rows 237–290), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty existing articles each gain one link to a new
+card. Four of them also lose a sentence that said a kanji had no card: 宴会,
+崩す and 崩れる drop it, and 附属 now says only that 附 has no card yet.
+`n1_linkplan.py verify` checks these as declared remark edits, and the
+author's `kanji_remarks.py` checks that no existing card changes. The
+[progress file](n1-sources/batch-139-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz on readings only and seven quiz kun readings only, because
+the other readings have no declaring word article yet; common ones such as
+嫁 とつ.ぐ, 宗 むね, 寂 ジャク and セキ, 尋 ジン and 崩 ホウ are listed and
+illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 嫁す, 嬢さん, 宜う, 宣する, 屈する,
+属する and 崩ずる. With tag-similar distractors, the audit found that Starter
+sessions could offer 先's さき on 岬's みさき prompt; Daijisen and JMdict both
+give さき for 岬. 岬 now takes three Starter-card distractors whose readings
+are not its own (山 田 中), so curated options fill every slot. Quiz
+exclusions could not fix this, because they apply to meaning quizzes only.
+
+Gates on the draft pass: 436 host tests, validation, lint (0 errors; 2
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The reading-exposure audit reports
+no production, padded-session or one-holder hit apart from one disclosed
+KANJIDIC2 name-only reading: 宗 し on the シュウ prompt in the N1 and All
+stacks, through the curated distractor 示. The older reading-options check
+still lists さき for 岬, because it ignores slots that curated distractors
+fill; its simulation drew only curated readings. Android JVM tests were not
+run (no JDK), and no native or phone acceptance is claimed. Published
+delivery stays **332/1,228** until review closure, CI and ZIP verification.
+
 ## Batch 138: published
 
 Review-closed and published at `a2a0f3df`. The
