@@ -120,7 +120,14 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 137: review closed, publication pending
+## Batch 137: published
+
+Review-closed and published at `c1d2e3a7`. The
+[Validate content run 44279660858](https://github.com/stop-cran/learning-japanese/actions/runs/44279660858)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,876 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-137-publication/provenance.json). Delivery is now
+**317/1,228**, with **911 remaining**.
 
 Fifteen absent frozen members: 丁 井 仰 但 傑 傷 僕 卸 司 吐 呂 哀 哲 唯 善
 (rows 1–164). From this batch on, as announced on
@@ -173,9 +180,7 @@ reading options, link plan, manifest rebuild and budget. The reading-exposure
 audit reports no production, padded-session or one-holder hit apart from one
 disclosed KANJIDIC2 name-only reading: 唯 ゆ on the ユイ prompt in a Starter
 session that also borrows 油 or 輸. Android JVM tests were not run (no JDK),
-and no native or phone acceptance is claimed. Published delivery stays
-**302/1,228** until CI and ZIP verification; publication would make it
-**317/1,228**, with **911 remaining**.
+and no native or phone acceptance is claimed.
 
 ## Batch 136: published
 

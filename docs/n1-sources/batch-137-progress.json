@@ -2,7 +2,7 @@
   "batch": 137,
   "base": "2532beecec978156528e83252bf05eb0bc0f8e21",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "丁",
     "井",
@@ -143,14 +143,30 @@
     "唯",
     "善"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "丁",
+    "井",
+    "仰",
+    "但",
+    "傑",
+    "傷",
+    "僕",
+    "卸",
+    "司",
+    "吐",
+    "呂",
+    "哀",
+    "哲",
+    "唯",
+    "善"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 302,
-    "publishedN1Additions": 296,
+    "publishedPendingRecordsWithCards": 317,
+    "publishedN1Additions": 311,
     "n2Placements": 6,
-    "undelivered": 926,
+    "undelivered": 911,
     "reviewClosedPendingRecordsWithCards": 317,
     "localUnreviewedDrafts": 0,
     "notStarted": 911,
@@ -281,6 +297,13 @@
     "GPT's reports cannot name the exact model (the runtime records gpt-6.1-sol); its confirmation did not verify the 42 and 10 published-card counts behind the OP decline, read meta_scan.py without running it and checked the four added Metadata ids directly.",
     "'Only in つかえのよほろ' (丁) rests on the author's search of the pinned JMdict; Claude found no よほろ headword in WWWJDIC.",
     "The Metadata-line rule (every word named on a card has its JMdict id listed) is the author's writing rule, not checked by lint; meta_scan.py found 19 such gaps in the 31 published cards of batches 134-136 (docs/n1-reviews/batch-137-closure/meta-scan-b134-b136.txt), left for a later sweep.",
-    "Fix 2 had two earlier local versions (0c7f25fe, fa9be05c) and a GPT confirmation packet was built for fix 1 and replaced before sending; none was reviewed or published."
-  ]
+    "Fix 2 had two earlier local versions (0c7f25fe, fa9be05c) and a GPT confirmation packet was built for fix 1 and replaced before sending; none was reviewed or published.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "c1d2e3a746ab8c5b832a532a8ba81522420e2a58",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/c1d2e3a746ab8c5b832a532a8ba81522420e2a58",
+    "receipt": "../n1-reviews/batch-137-publication/provenance.json"
+  }
 }
