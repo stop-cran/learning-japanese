@@ -1,0 +1,207 @@
+{
+  "batch": 143,
+  "base": "ef2b1b9fc9c5d40def44c4c9734f62004958a4a2",
+  "governingIssue": 60,
+  "status": "drafted-review-pending",
+  "members": [
+    "施",
+    "旋",
+    "旗",
+    "既",
+    "旦",
+    "旨",
+    "暑",
+    "暦",
+    "朗",
+    "条",
+    "架",
+    "柄",
+    "染",
+    "株",
+    "桜"
+  ],
+  "sourceRows": [
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    508,
+    511,
+    518,
+    526,
+    531,
+    532,
+    535,
+    542,
+    550
+  ],
+  "selectionReason": "The next fifteen, in source-row order, of the 271 absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 17 existing articles each gain one link to a new card. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. The only other text change updates the 西暦 article's remark that said 暦 had no card here so that it links 暦. 166 rows of the 271 group, 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
+  "supports": [
+    [
+      "施",
+      "実施"
+    ],
+    [
+      "旋",
+      "凱旋"
+    ],
+    [
+      "旗",
+      "旗"
+    ],
+    [
+      "既",
+      "既に"
+    ],
+    [
+      "旦",
+      "一旦"
+    ],
+    [
+      "旨",
+      "要旨"
+    ],
+    [
+      "暑",
+      "暑い"
+    ],
+    [
+      "暑",
+      "蒸し暑い"
+    ],
+    [
+      "暦",
+      "西暦"
+    ],
+    [
+      "朗",
+      "朗らか"
+    ],
+    [
+      "条",
+      "条件"
+    ],
+    [
+      "架",
+      "架空"
+    ],
+    [
+      "柄",
+      "柄"
+    ],
+    [
+      "染",
+      "伝染"
+    ],
+    [
+      "染",
+      "汚染"
+    ],
+    [
+      "株",
+      "株"
+    ],
+    [
+      "桜",
+      "桜"
+    ]
+  ],
+  "initialSnapshot": null,
+  "reviewedSnapshot": null,
+  "reviewClosed": [],
+  "published": [],
+  "runtimePublished": false,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 392,
+    "publishedN1Additions": 386,
+    "n2Placements": 6,
+    "undelivered": 836,
+    "reviewClosedPendingRecordsWithCards": 392,
+    "localUnreviewedDrafts": 15,
+    "notStarted": 821,
+    "overallN1TaskComplete": false
+  },
+  "sources": {
+    "kanjidic2": "docs/n1-sources/kanjidic2-selected.xml (KANJIDIC2 2026-11-02 records, frozen)",
+    "jmdict": "docs/n1-sources/continuation-inputs.json (JMdict_e continuation snapshot created 2026-11-17)",
+    "kanjivg": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "joyo": "Bunka-cho joyokanjihyo_20101130.pdf (sha256 d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42)",
+    "dictionary": "Digital Daijisen via weblio"
+  },
+  "review": {
+    "status": "pending",
+    "mode": "blind-independent-two-family-textual-review",
+    "families": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ]
+  },
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 4,
+      "note": "all four warnings are Dictionary-line warnings on existing word articles (一旦, 凱旋, 蒸し暑い, 西暦): each line wraps, so its JMdict entry id is on the next line. The first three change only by their new link to a batch card; 西暦 also has its declared remark edit. 0 warnings with --no-jmdict"
+    },
+    "unitTests": 439,
+    "validateErrors": 0,
+    "budget": {
+      "entries": 9080,
+      "retainedBytes": 51521371,
+      "inflatedBytes": 51880462,
+      "localZipBytes": 32279118
+    },
+    "vocabularyCheck": "3201/3336",
+    "manifestRebuildDiff": false,
+    "titlesUnique": true,
+    "quizSafety": {
+      "cards": 15,
+      "errors": 0,
+      "warnings": 0
+    },
+    "readingExposure": {
+      "cards": 15,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "productionNameOnly": [],
+      "paddedNameOnly": [],
+      "oneHolderNameOnly": [],
+      "latentCollisions": 10,
+      "latentCollisionsNote": "counted per quiz prompt: seven distinct card-and-reading pairs, because the 柄 ら, いきおい and つく collisions each appear on both the がら and え prompts",
+      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ or headed by the kanji that is not a KANJIDIC2 reading, plus the JMdict kanji+okurigana headword readings whose stem is not a card kun stem: 既に すんでに, 旦つく だんつく and 染みる じみる"
+    },
+    "readingOptions": {
+      "labelledHits": [],
+      "drawable": false,
+      "note": "the older reading-options check reports 0 problems and no HIT; its 100-seed simulation drew only curated or fallback readings of other cards"
+    },
+    "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the 15 kanji: every reading whose stem is not a card kun stem is among the extras",
+    "linkPlan": {
+      "changedWordFiles": 17,
+      "addedLinks": 17,
+      "problems": 0,
+      "otherArticleEdits": [
+        "西暦: the sentence saying 暦 had no card here now links 暦 and drops that clause (declared remark edit, checked by linkplan.txt)"
+      ],
+      "kanjiCardEdits": []
+    },
+    "metaScan": "every word named on the 15 cards has its JMdict entry id on the card's Metadata line (whole runs: none missing); 7 matches are part of a longer run that is not listed (掛け, 懸け and 賭け in 架; 染め twice and 抜き in 染; 雌雄 in 株)",
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": null
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "10 latent reading collisions (attested readings offered by other cards, counted per quiz prompt) are not drawable in the checked N1, All and Starter pools. They are seven distinct card-and-reading pairs, because the 柄 ら, いきおい and つく collisions each appear on both the がら and え prompts: the KANJIDIC2 name readings 旋 せ (offered by 世), 朗 あき (秋 空) and お (小 御 男 緒), 柄 ら (等) and 桜 さ (小 早 然), and the card-text readings 柄 いきおい (勢) and つく (付 就 点 着 突).",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools, and no one-holder Starter case exists. The first gate run showed 柄 ら drawable on the がら prompt of a Starter practice session that borrows 等, because the third curated distractor 札 is not a Starter card and left a slot to the random fallback; 札 was replaced by the Starter card 休, so the three curated distractors 木 本 休 fill every slot.",
+    "4 lint warnings on existing word articles' Dictionary lines (一旦, 凱旋, 蒸し暑い, 西暦) are pre-existing and out of scope: each line wraps, so the entry id is on the next line.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 旗 キ, 既 キ, 旨 うま.い and むね, 暑 ショ, 暦 こよみ, 朗 ロウ, 条 すじ, 架 か.ける, 柄 つか, 染 そ.める and し.みる, 株 シュ and 桜 オウ; eight cards quiz only their on reading (施 シ, 旋 セン, 旦 タン, 旨 シ, 暦 レキ, 条 ジョウ, 架 カ, 染 セン) and seven only their kun readings (旗 はた, 既 すで.に, 暑 あつ.い, 朗 ほが.らか, 柄 がら and え, 株 かぶ, 桜 さくら).",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options: 施 \"carry\" (提, 運) and \"give\" (産, 返), 旗 \"standard\" (準, 範, 規), 暑 \"weather\" (候, 寒, 曇) and \"season\" (旬, 春, 節), 条 \"line\" (弧), 株 \"plant\" (挿, 植, 稲, 苗) and 桜 \"tree\" (幹, 松, 桂, 梓, 梨, 椋, 楠). No Notes bullet on these cards separates those senses. Cards with a defensible overlap are excluded symmetrically (for example 施 with 与, 贈, 給; 暑 with 夏, 熱; 旋 with 回, 転; 染 with 色), and the only exclusion pair among the new cards is 株 and 桜.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+  ]
+}

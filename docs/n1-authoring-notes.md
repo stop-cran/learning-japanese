@@ -123,7 +123,61 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 142: review closed, publication pending
+## Batch 143: drafted, independent review pending
+
+Fifteen absent frozen members: 施 旋 旗 既 旦 旨 暑 暦 朗 条 架 柄 染 株 桜
+(rows 483–550), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: seventeen existing articles each gain one link to a
+new card. The existing article 西暦 also has one sentence that said 暦 had no
+card here; it now links 暦 and drops that clause. `n1_linkplan.py verify`
+checks the article links and that edit, and the author's `kanji_remarks.py`
+checks that no existing card changes. Cards whose senses overlap those of
+existing cards keep each other out of their meaning-quiz options (for example
+施 with 与, 贈 and 給; 暑 with 夏 and 熱; 旋 with 回 and 転; 染 with 色); the
+only pair among the new cards is 株 and 桜, listed on 株 only. Several
+titles share an English word with an existing title in another sense, such as
+施 "give" and 産, 暑 "season" and 春, 株 "plant" and 植, 桜 "tree" and 松, and
+those cards stay ordinary wrong options for each other. The
+[progress file](n1-sources/batch-143-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz only their on reading and seven only their kun readings,
+because the other readings have no declaring word article yet; common ones
+such as 旗 キ, 旨 うま.い, 暑 ショ, 暦 こよみ, 条 すじ, 架 か.ける, 柄 つか and
+染 そ.める are listed and illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem: 既に すんでに, 旦つく だんつく and 染みる じみる.
+On the first gate run, the KANJIDIC2 name reading ら of 柄 could be drawn on the
+がら prompt of a Starter practice session that borrows 等, because the third
+curated distractor 札 is not a Starter card. 柄 now uses the Starter card 休
+instead (木 本 休), so the curated distractors fill every slot and the random
+fallback never runs.
+
+Gates on the draft pass: 439 host tests, validation, lint (0 errors; 4
+warnings on untouched, wrapped Dictionary lines of the existing articles 一旦,
+凱旋, 蒸し暑い and 西暦), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records ten latent collisions (counted per quiz prompt,
+seven distinct pairs), readings that other cards offer but no audited pool can
+draw: the KANJIDIC2 name readings 旋 せ, 朗 あき and お, 柄 ら and 桜 さ, and the
+card-text readings 柄 いきおい and つく. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed. Published delivery stays
+**392/1,228** until review closure, CI and ZIP verification.
+
+## Batch 142: published
+
+Review-closed and published at `4044f5d8`. The
+[Validate content run 44475993403](https://github.com/stop-cran/learning-japanese/actions/runs/44475993403)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,027 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-142-publication/provenance.json). Delivery is now
+**392/1,228**, with **836 remaining**.
 
 Fifteen absent frozen members: 挙 振 挿 掌 推 描 提 揮 揺 操 故 敵 斉 斎 斜
 (rows 431–479), the next fifteen under the selection rule announced on
@@ -195,8 +249,6 @@ KANJIDIC2 name readings 挙 たか, 振 ふり and 斎 いつ. The older reading
 check still lists the 斎 い HIT, because it ignores slots that curated
 distractors fill; its simulation drew only curated readings. Android JVM
 tests were not run (no JDK), and no native or phone acceptance is claimed.
-Published delivery stays **377/1,228** until CI and ZIP verification;
-publication would make it **392/1,228**, with **836 remaining**.
 
 ## Batch 141: published
 
