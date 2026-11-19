@@ -123,6 +123,61 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 142: drafted, independent review pending
+
+Fifteen absent frozen members: 挙 振 挿 掌 推 描 提 揮 揺 操 故 敵 斉 斎 斜
+(rows 431–479), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty-four existing articles each gain one link to a
+new card. The Notes remark of the existing 仮 card that said 振 and 遣 had no
+cards now links 振 and names only 遣. `n1_linkplan.py verify` checks the
+article links, and the author's `kanji_remarks.py` checks that no other
+existing card changes and that 仮 changes only by its declared edit. Eight
+pairs of new cards whose senses overlap, 挙 and 推, 挙 and 提, 推 and 提, 振
+and 揺, 振 and 揮, 掌 and 揮, 掌 and 操, and 揮 and 操, keep each other out of
+their meaning-quiz options; each pair is listed on one card only. Six cards
+whose titles share an English word with an existing title in another sense,
+such as 振 "wave" and 波 "wave; billow," keep that card as an ordinary wrong
+option and separate the two senses in a Notes bullet. The
+[progress file](n1-sources/batch-142-progress.json) records the gates and
+disclosed limits.
+
+Nine cards quiz only their on reading and six only their kun readings,
+because the other readings have no declaring word article yet; common ones
+such as 挙 キョ, 振 シン, 推 お.す, 描 ビョウ, 提 さ.げる, 揺 ヨウ, 操 あやつ.る,
+故 ゆえ, 敵 かたき and 斜 シャ are listed and illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 振とう しんとう, 挿げる すげる, 掌る
+つかさどる, 提げる ひっさげる and 斜め なのめ. On the first gate run, two
+attested readings could be drawn in a Starter practice session that borrows
+one holder card: よる, the old verb ▽揺る, on the 揺 ゆ.れる prompt, and い, the
+▽斎 prefix, on the 斎 サイ prompt. Under the batch 136 rule, each of the two
+cards now has three curated Starter-card distractors whose readings are not
+the card's own and are distinct, 入 見 休 for 揺 and 海 毎 買 for 斎, so they
+fill every slot and the random fallback never runs. They are not look-alikes;
+the look-alikes stay in Notes, which name the three cards and what links them
+to the card. On 故 コ the curated card 攻 offers only こう, which the quiz
+skips as a long-vowel variant of the answer, so the random fallback fills one
+slot.
+
+Gates on the draft pass: 439 host tests, validation, lint (0 errors; 6
+warnings on untouched, wrapped Dictionary lines of the existing articles 一斉,
+体操, 振り仮名, 振舞う, 斜 and 平仮名), quiz safety, link plan, card Metadata
+entry ids, manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records twelve latent collisions, readings that other
+cards offer but no audited pool can draw, such as 揺 よる, 斎 い and the
+KANJIDIC2 name readings 挙 たか, 振 ふり and 斎 いつ. The older reading-options
+check still lists the 斎 い HIT, because it ignores slots that curated
+distractors fill; its simulation drew only curated readings. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
+Published delivery stays **377/1,228** until review closure, CI and ZIP
+verification.
+
 ## Batch 141: published
 
 Review-closed and published at `1889f1d5`. The
