@@ -2,7 +2,7 @@
   "batch": 146,
   "base": "ffbf576ee0531e56f8f36e0a7287b53f443b0d29",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "煮",
     "熟",
@@ -132,9 +132,25 @@
       "睡眠"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "38833c7f58bdd2406dbb808c6b2a74257ef29f12",
+  "reviewedSnapshot": "1c941a7a15e9eb53179d4fe37b596dc97c14b1f6",
+  "reviewClosed": [
+    "煮",
+    "熟",
+    "牧",
+    "狂",
+    "狭",
+    "献",
+    "玄",
+    "環",
+    "甚",
+    "癖",
+    "益",
+    "盛",
+    "盾",
+    "眺",
+    "睡"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -143,8 +159,8 @@
     "publishedN1Additions": 431,
     "n2Placements": 6,
     "undelivered": 791,
-    "reviewClosedPendingRecordsWithCards": 437,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 452,
+    "localUnreviewedDrafts": 0,
     "notStarted": 776,
     "overallN1TaskComplete": false
   },
@@ -156,12 +172,90 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "5e61ef07",
+      "872d6502",
+      "09e376bd",
+      "8d16c582",
+      "d276f63b",
+      "1c941a7a15e9eb53179d4fe37b596dc97c14b1f6"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "38833c7f58bdd2406dbb808c6b2a74257ef29f12",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "38833c7f58bdd2406dbb808c6b2a74257ef29f12",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude-1",
+        "snapshot": "5e61ef07",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm2-claude",
+        "snapshot": "872d6502",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "872d6502",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm3-gpt",
+        "snapshot": "09e376bd",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm4-claude",
+        "snapshot": "8d16c582",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm5-claude",
+        "snapshot": "d276f63b",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm5-gpt",
+        "snapshot": "d276f63b",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm6-claude",
+        "snapshot": "1c941a7a",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm6-gpt",
+        "snapshot": "1c941a7a",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude initial, optional: O2 to O9 (kana in the Notes of 狭 狂 癖, 玄孫 やしゃご, 狭霧 wording, the reading-exposure label, 環 and 鳴, 眺 and 相, 癖 exclusions, the 眺める link) (declined)",
+      "GPT initial, optional: O-A, the exclusion inventories stay in the Notes (declined)",
+      "Claude fourth confirmation, optional: 掌 府 公 as further overlaps with 牧 (no change)",
+      "Claude fifth confirmation, optional: a clause on why 師 overlaps 牧 (declined)",
+      "Claude sixth confirmation, optional: the wording \"only a Buddhist priest or a boy\" for 坊 at 牧.md:54, and a link to the Daijisen 僧 entry in 牧's Metadata (declined)"
+    ],
+    "closure": "../n1-reviews/batch-146-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-146-closure/provenance.json",
+    "closureProvenanceSha256": "fe7dfe42ca6202edad78ffdc4617c908e80f76801399a89d7e03e3cf6be7d470",
+    "integration": "origin/main did not move during the batch (ffbf576e, the B145 receipt, at closure), so no merge or integration proof was needed.",
+    "execution": "All eleven runs started after the previous one ended; each confirmation was a fresh agent of the same model family, given the author's statement on its family's latest report and the original packet. The 牧 quiz_exclusions list changed in six states (17 at the freeze, 12 at the end) while the two families disagreed on 僧 and 坊; both families confirmed the final commit 1c941a7a. The prompts of confirm3-gpt and confirm4-claude were recovered from the runtime session record. initial-claude created and deleted a temporary script inside the reports folder; confirm5-gpt wrote its report through a relative apply_patch path; four GPT audits report one path outside the packet and report, a false positive from the review-packets base path."
   },
   "gates": {
     "lint": {
@@ -173,9 +267,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 9170,
-      "retainedBytes": 51900630,
-      "inflatedBytes": 52259721,
-      "localZipBytes": 32461936
+      "retainedBytes": 51901020,
+      "inflatedBytes": 52260111,
+      "localZipBytes": 32462067
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -216,7 +310,7 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "1c941a7a15e9eb53179d4fe37b596dc97c14b1f6"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -227,6 +321,9 @@
     "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
     "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the later confirmations covered only the changed lines and the cumulative change.",
+    "The 牧 exclusion judgments of the last rounds rest partly on Digital Daijisen text read live on Weblio, not on a pinned copy in the packet.",
+    "The prompts of confirm3-gpt and confirm4-claude were given inline and recovered from the runtime session record, not from saved files."
   ]
 }

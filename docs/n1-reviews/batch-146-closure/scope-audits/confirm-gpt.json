@@ -1,0 +1,246 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "c048fd4c-30fa-4710-8d51-d7ac676cc1fa",
+ "agent": {
+  "agentDisplayName": "b146-confirm-gpt",
+  "agentType": "general-purpose",
+  "executionMode": "background",
+  "modelSelectionSource": "explicit_override"
+ },
+ "selectedModel": "gpt-6.1-sol",
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-19T16:15:50.459Z",
+  "last": "2026-11-19T16:23:02.963Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-19T16:15:53.049Z",
+   "chars": 2853,
+   "sha256": "63dc289ddd22f426e38571c58a185e3f7c5d6c27bb7cef920c284c3017ed1655"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 45
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 3864558,
+  "outputTokens": 12735,
+  "cacheReadTokens": 3758826,
+  "cacheWriteTokens": 105597,
+  "reasoningTokens": 3661,
+  "costMultiplierSum": 45.0
+ },
+ "toolCalls": {
+  "total": 44,
+  "byTool": {
+   "view": 29,
+   "powershell": 8,
+   "web_fetch": 4,
+   "rg": 2,
+   "apply_patch": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-146-gpt-final"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full (ranges)": 9,
+   "none": 6,
+   "notFullyRead": [
+    "snapshot/kanji/狂.md",
+    "snapshot/kanji/狭.md",
+    "snapshot/kanji/献.md",
+    "snapshot/kanji/環.md",
+    "snapshot/kanji/盾.md",
+    "snapshot/kanji/眺.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full (ranges)": 1,
+   "none": 2,
+   "notFullyRead": [
+    "diffs/changed-files.txt",
+    "diffs/changed-lines.txt"
+   ]
+  },
+  "checks": {
+   "files": 12,
+   "full (ranges)": 4,
+   "none": 8,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/kanji-remarks.txt",
+    "checks/linkplan.txt",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 6,
+   "full (ranges)": 2,
+   "grep/glob only": 1,
+   "none": 2,
+   "partial": 1,
+   "notFullyRead": [
+    "evidence/KanjiReadings.kt",
+    "evidence/Words.kt",
+    "evidence/kanji-remarks.json",
+    "evidence/meta-scan.txt"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full"
+ },
+ "outsidePaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets"
+ ],
+ "alsoReadAllowed": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-146\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f\\evidence\\joyo-pages.md",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f\\repo\\docs\\content-format.md",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f\\rubric\\copilot-instructions.md",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f\\snapshot\\strokes\\玄.json",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-146\\initial-gpt.md"
+ ],
+ "alsoReadCount": 6,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-146\\confirm-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "$p='C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-146-gpt-final'; Get-ChildItem -LiteralPath \"$p\\evidence\" -File | Select-Object Name,Length; Get-ChildItem -LiteralPath \"$p\\checks\" -File | Select-Object Name,Length; Get-Content -LiteralPath \"$p\\diffs\\changed-lines.txt\"",
+   "writeLike": false
+  },
+  {
+   "command": "$p='C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f'; Get-Content -LiteralPath \"$p\\titles\\kanji-titles.tsv\" -TotalCount 3; Get-Content -LiteralPath \"$p\\titles\\word-titles.tsv\" -TotalCount 3; foreach($k in @('狂','狭','献','環','盾','眺')) { \"=== $k metadata ===\"; Get-Content -LiteralPath \"$p\\snapshot\\kanji\\$k.md\" -TotalCount 15 }; Get-Item -LiteralPath \"$p\\evidence\\jmdict-families....",
+   "writeLike": false
+  },
+  {
+   "command": "$p='C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f'; [xml]$x=Get-Content -LiteralPath \"$p\\evidence\\jmdict-families.xml\" -Raw -Encoding utf8; foreach($id in @('1276890','1663290','1699540','1461100','1254470','1370010','1379740','1828910','1878090')) { $n=$x.SelectSingleNode(\"//entry[ent_seq='$id']\"); \"=== JMdict $id ===\"; if($n){$n.OuterXml}else{'not present'} }; $wanted=@('...",
+   "writeLike": false
+  },
+  {
+   "command": "$p='C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f'; foreach($k in @('治','御','官','司','導')) { \"=== $k ===\"; Get-Content -LiteralPath \"$p\\repo\\kanji\\$k.md\" -TotalCount 20 }; Get-Content -LiteralPath \"$p\\snapshot\\kanji\\潔.md\" | Select-Object -Skip 25 -First 23; foreach($w in @('甚だしい','盛り','盛ん')) { \"=== word $w ===\"; Get-Content -LiteralPath \"$p\\snapshot\\words\\$w.md\" -TotalCount ...",
+   "writeLike": false
+  },
+  {
+   "command": "$p='C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-146-38833c7f'; [xml]$x=Get-Content -LiteralPath \"$p\\evidence\\jmdict-families.xml\" -Raw -Encoding utf8; foreach($word in @('盛ん','益体','益荒男','煮麺','牧童','牧羊','煮える')) { \"=== $word ===\"; $x.SelectNodes(\"//entry[k_ele/keb='$word']\") | ForEach-Object {$_.OuterXml} }; [xml]$k=Get-Content -LiteralPath \"$p\\evidence\\kanjidic2-records.xml\" -Raw -Encod...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re\nbase=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets')\nnew=base/'confirm-146-gpt-final'\nold=base/'batch-146-38833c7f'\ndef card(k):\n    p=new/'snapshot'/'kanji'/(k+'.md')\n    if not p.exists(): p=old/'repo'/'kanji'/(k+'.md')\n    text=p.read_text(encoding='utf-8-sig')\n    head=text.split('---',2)[1]\n    title=re.search(r'^title: (.*)$',head,re.M).group...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re\nbase=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets'); new=base/'confirm-146-gpt-final'; old=base/'batch-146-38833c7f'\ndef card(k):\n    p=new/'snapshot'/'kanji'/(k+'.md')\n    if not p.exists(): p=old/'repo'/'kanji'/(k+'.md')\n    head=p.read_text(encoding='utf-8-sig').split('---',2)[1]\n    title=re.search(r'^title: (.*)$',head,re.M).group(1)\n    def ...",
+   "writeLike": false
+  },
+  {
+   "command": "$p='C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-146-gpt-final'; foreach($name in @('snapshot\\kanji\\牧.md','evidence\\QuizBuilder.kt')) { \"=== $name ===\"; $lines=Get-Content -LiteralPath \"$p\\$name\" -Encoding utf8; if($name -like '*.kt') {$start=20; $end=39} else {$start=21;$end=28}; for($n=$start;$n -le [Math]::Min($end,$lines.Count);$n++){ '{0}: {1}' -f $n,$lines[$n-1] } }; Get-Conten...",
+   "writeLike": false
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://www.kanjipedia.jp/kanji/0003700700",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/牧",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/煮凝り",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/益体",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 9089,
+  "reportFile": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-146\\confirm-gpt.md",
+  "reportExists": true,
+  "reportChars": 9090,
+  "reportBytes": 9706,
+  "reportSha256": "76019a9be542bf06382d725431f0c43f11517c799983c556809c7dcfb6f0689c",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "paths outside the packet and report: 1"
+ ]
+}

@@ -123,7 +123,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 146: drafted, independent review pending
+## Batch 146: review closed, publication pending
 
 Fifteen absent frozen members: 煮 熟 牧 狂 狭 献 玄 環 甚 癖 益 盛 盾 眺 睡
 (rows 672–747), the next fifteen under the selection rule announced on
@@ -164,7 +164,28 @@ card; 盛 now uses the Starter cards 山 海 店, so the curated distractors fil
 every slot and the random fallback never runs. 煮 and 熟 first excluded each
 other; the exclusion now sits on 煮 only, the repository convention.
 
-Gates on the draft pass: 439 host tests, validation, lint (0 errors; 3
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `38833c7f` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings. Claude found the
+wrong okurigana boundary of 甚だしい in 甚 (major), "source-only" wrongly
+attached to the official readings ジン and ヘキ, 益体 and 煮凝り presented as
+whole-word readings, loose 熟 and 玄 wording, imprecise sound-change statements
+for 癖, 盛ん filed under さか.る, implementation jargon in four cards, and five
+governance exclusions on 牧 that no displayed label supported; GPT found the
+甚 and 癖 points and objected to the exclusions of 牛 馬 羊 on 牧. The first fix
+(`5e61ef07`) changed nine cards. Later rounds, each checked by a fresh agent,
+found one new inconsistency in 甚 (fixed in `872d6502`) and then moved the 牧
+exclusion list through six states while the two families disagreed on 僧 and
+坊: the five governance exclusions were restored (治 御 官 司 導), 牛 馬 羊 草
+and 坊 were removed, 僧 was removed and then restored because Daijisen gives it
+the general sense "clergy". The final list is 畜 養 育 農 野 僧 治 御 官 司 導 師;
+exclusions are direct, symmetric and not transitive, and only remove options.
+Both families confirmed the final commit `1c941a7a`, and `origin/main` did not
+move, so there was nothing to merge. The
+[closure record](n1-reviews/batch-146-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the full exclusion history and the limits.
+
+Gates at the reviewed snapshot `1c941a7a` pass: 439 host tests, validation, lint (0 errors; 3
 warnings on untouched, wrapped Dictionary lines of the existing articles 煮る,
 矛盾 and 不潔), quiz safety, link plan, card Metadata entry ids, manifest
 rebuild and budget. The reading-exposure audit reports no production,
@@ -173,7 +194,8 @@ quiz prompt (nine distinct card-and-reading pairs), readings that other cards
 offer but no audited pool can draw: 牧 ま, まい and もく; 狂 ふれる; 狭 せ; 甚
 じ and いたい; 益 よう; 盛 もり (for both prompts). Android JVM tests were not
 run (no JDK), and no native or phone acceptance is claimed. Published delivery
-stays **437/1,228** until review closure, CI and ZIP verification.
+stays **437/1,228** until CI and ZIP verification; publication would make it
+**452/1,228**, with **776 remaining**.
 
 ## Batch 145: published
 
