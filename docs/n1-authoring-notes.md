@@ -130,10 +130,12 @@ Fifteen absent frozen members: 湧 源 滅 滑 滞 漫 漬 潔 潜 澄 濁 瀬 �
 [issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
 and first applied in batch 137. All fifteen pass, so none is set aside. No
 word article is added: twenty existing articles each gain one link to a new
+card, and the 湧く article also drops its remark that neither 湧 nor 涌 has a
 card. Two existing cards also change in one remark each: the 渋 card said 滞
 had no card here and now links 滞, and the 暑 card said there was no card for 炎
-to exclude and now links 炎, noting that it names fire rather than weather
-heat. `n1_linkplan.py verify` checks the article links, and the author's `kanji_remarks.py` checks
+to exclude and now links 炎, noting that it mainly names fire but also means
+blazing heat in 炎天 and 炎暑. `n1_linkplan.py verify` checks the article links and
+the declared 湧く remark, and the author's `kanji_remarks.py` checks
 that 渋 and 暑 are the only existing cards that change and that each changes
 only in that remark. Cards whose senses overlap those of other new cards keep
 each other out of their meaning-quiz options (湧 with 源, 滑 with 滞, 漫 with
