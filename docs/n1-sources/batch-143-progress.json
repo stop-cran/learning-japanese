@@ -2,7 +2,7 @@
   "batch": 143,
   "base": "ef2b1b9fc9c5d40def44c4c9734f62004958a4a2",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "施",
     "旋",
@@ -108,9 +108,25 @@
       "桜"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "6b5934e71945ed215cf57a8291117762e67b1d9e",
+  "reviewedSnapshot": "9b8f50a8b9ddb2123137573ccb26761e05954491",
+  "reviewClosed": [
+    "施",
+    "旋",
+    "旗",
+    "既",
+    "旦",
+    "旨",
+    "暑",
+    "暦",
+    "朗",
+    "条",
+    "架",
+    "柄",
+    "染",
+    "株",
+    "桜"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -119,8 +135,8 @@
     "publishedN1Additions": 386,
     "n2Placements": 6,
     "undelivered": 836,
-    "reviewClosedPendingRecordsWithCards": 392,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 407,
+    "localUnreviewedDrafts": 0,
     "notStarted": 821,
     "overallN1TaskComplete": false
   },
@@ -132,12 +148,53 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "9b8f50a8b9ddb2123137573ccb26761e05954491"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "6b5934e71945ed215cf57a8291117762e67b1d9e",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "6b5934e71945ed215cf57a8291117762e67b1d9e",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude-1",
+        "snapshot": "5bede460… (amended before any push; not in history)",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "9b8f50a8b9ddb2123137573ccb26761e05954491",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "9b8f50a8b9ddb2123137573ccb26761e05954491",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude second confirmation, optional: 条.md:61 could say \"Readings table\" instead of \"the table above\"",
+      "Claude second confirmation, optional: the 株.md:36 守株 echo could be dropped",
+      "Claude second confirmation, optional: 旨.md:37 could quote JMdict's ateji tag wording",
+      "Claude first confirmation, optional: trim 株.md:36; mention さくらんぼう on 桜"
+    ],
+    "closure": "../n1-reviews/batch-143-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-143-closure/provenance.json",
+    "closureProvenanceSha256": "9329b1b951167c09fc40ab7f9da0a2536721e683ef4c0d5f7b6e2d28a65640dc",
+    "execution": "All five runs ran one after the other; each confirmation was a fresh agent of the same model family, given the author's statement on its family's report and the original packet. confirm-claude-1 found one new minor defect in unchanged text (条.md:61), fixed by amending the unpushed fix commit into 9b8f50a8; confirm-claude (a fresh agent) and confirm-gpt then confirmed 9b8f50a8. confirm-claude's audit flags two overlapping view calls (max in flight 2, one overlapping start) although its report says it made none; confirm-claude-1's \"outside the report path\" flag is its report renamed afterwards; confirm-gpt's outside-path flag is a false positive; every other run had one tool call in flight."
   },
   "gates": {
     "lint": {
@@ -149,9 +206,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 9080,
-      "retainedBytes": 51521371,
-      "inflatedBytes": 51880462,
-      "localZipBytes": 32279118
+      "retainedBytes": 51521586,
+      "inflatedBytes": 51880677,
+      "localZipBytes": 32279176
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -192,7 +249,7 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "9b8f50a8b9ddb2123137573ccb26761e05954491"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -202,6 +259,11 @@
     "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 旗 キ, 既 キ, 旨 うま.い and むね, 暑 ショ, 暦 こよみ, 朗 ロウ, 条 すじ, 架 か.ける, 柄 つか, 染 そ.める and し.みる, 株 シュ and 桜 オウ; eight cards quiz only their on reading (施 シ, 旋 セン, 旦 タン, 旨 シ, 暦 レキ, 条 ジョウ, 架 カ, 染 セン) and seven only their kun readings (旗 はた, 既 すで.に, 暑 あつ.い, 朗 ほが.らか, 柄 がら and え, 株 かぶ, 桜 さくら).",
     "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options: 施 \"carry\" (提, 運) and \"give\" (産, 返), 旗 \"standard\" (準, 範, 規), 暑 \"weather\" (候, 寒, 曇) and \"season\" (旬, 春, 節), 条 \"line\" (弧), 株 \"plant\" (挿, 植, 稲, 苗) and 桜 \"tree\" (幹, 松, 桂, 梓, 梨, 椋, 楠). No Notes bullet on these cards separates those senses. Cards with a defensible overlap are excluded symmetrically (for example 施 with 与, 贈, 給; 暑 with 夏, 熱; 旋 with 回, 転; 染 with 色), and the only exclusion pair among the new cards is 株 and 桜.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the confirmation mandate covered the changed cards, so the prose of 施, 旗 and 暦 and every word article were not re-read by the confirmers.",
+    "initial-claude made one recursive PowerShell listing of its own packet directory (6,592 files, including the repo context corpus) and one write-like shell command that wrote its own report file; the other four runs have no such flag apart from the benign path flags recorded under review.execution.",
+    "Each confirmation ran as a fresh agent of the same model family; the round-1 Claude confirmation packet bytes are not retained because the packets were rebuilt at the same paths for 9b8f50a8, and prompts/confirm-claude-1.txt is reconstructed from the final prompt.",
+    "The 旦 claim that no ordinary JMdict word uses あした rests on an initial-round scan of the pinned JMdict; 染 ゼン was accepted from the packet's Kanjipedia extract.",
+    "origin/main had not moved since the base ef2b1b9f at closure, so no merge and no integration review were needed."
   ]
 }

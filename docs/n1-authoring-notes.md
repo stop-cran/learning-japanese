@@ -123,7 +123,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 143: drafted, independent review pending
+## Batch 143: review closed, publication pending
 
 Fifteen absent frozen members: 施 旋 旗 既 旦 旨 暑 暦 朗 条 架 柄 染 株 桜
 (rows 483–550), the next fifteen under the selection rule announced on
@@ -158,7 +158,32 @@ curated distractor 札 is not a Starter card. 柄 now uses the Starter card 休
 instead (木 本 休), so the curated distractors fill every slot and the random
 fallback never runs.
 
-Gates on the draft pass: 439 host tests, validation, lint (0 errors; 4
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `6b5934e7` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+that 既 and 朗 call the Joyo parenthesised form a compatibility ideograph when
+it is the traditional (Kangxi dictionary) form, that 桜's whole-word caveat
+covered 桜ん坊 and its ミザクラ was called a "mizaru cherry", that 染's 愛染
+reads ゼン (an on reading outside the Joyo table) and not a whole-word reading,
+that 旨味 is a separate JMdict entry, that 株's 守株 is 守 シュ + 株 シュ, that
+旦's sentences were garbled, and that 柄 え and "pattern" were paired. It also
+questioned 旗's title word "standard"; that point was declined, because the
+curated distractors fill every slot and a title change reaches every linking
+card. GPT found the 柄 pairing, the 旦つく label, the 蒸し暑い reading and the
+exclusions 既 with 在, 存 and 有 and 旋 with 凱. The fix removed those four
+exclusions and Notes sentences and made the wording changes, and a fresh
+Claude agent checked it and found one more defect in unchanged text: 条彫り and
+条播き read 条 as すじ, so the whole-word caveat belongs to 発条 ばね only.
+That went into a second fix commit that replaced the first before any push,
+and fresh agents of both families confirmed the final fix `9b8f50a8` with no
+finding, one after the other. The
+[closure record](n1-reviews/batch-143-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the confirmers were
+fresh agents, the amended unpushed fix commit, a Claude audit flag for two
+overlapping tool calls, and an author-written report path that does not match
+one audit's allowed path.
+
+Gates at `9b8f50a8` pass: 439 host tests, validation, lint (0 errors; 4
 warnings on untouched, wrapped Dictionary lines of the existing articles 一旦,
 凱旋, 蒸し暑い and 西暦), quiz safety, link plan, card Metadata entry ids,
 manifest rebuild and budget. The reading-exposure audit reports no
@@ -168,7 +193,8 @@ seven distinct pairs), readings that other cards offer but no audited pool can
 draw: the KANJIDIC2 name readings 旋 せ, 朗 あき and お, 柄 ら and 桜 さ, and the
 card-text readings 柄 いきおい and つく. Android JVM tests were not run (no
 JDK), and no native or phone acceptance is claimed. Published delivery stays
-**392/1,228** until review closure, CI and ZIP verification.
+**392/1,228** until CI and ZIP verification; publication would make it
+**407/1,228**, with **821 remaining**.
 
 ## Batch 142: published
 
