@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "batch": 143,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "87742e2f77cae9dc927d2e6f833c0de7487cc4a0",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/87742e2f77cae9dc927d2e6f833c0de7487cc4a0",
+  "base": "ef2b1b9fc9c5d40def44c4c9734f62004958a4a2",
+  "initialSnapshot": "6b5934e71945ed215cf57a8291117762e67b1d9e",
+  "reviewedSnapshot": "9b8f50a8b9ddb2123137573ccb26761e05954491",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44490827250",
+    "runId": 44490827250,
+    "receiptSha256": "969dfdd0c7f3dd9275a7f2fe6e4c41c1085312049139d015296567dab3c1b8c3"
+  },
+  "archive": {
+    "zipSha256": "8960ad11703c599995316a194423e0221959269118514c5b311010b380e18c86",
+    "receiptSha256": "803a81f5e724006c3179e0211345ca8d1a21cea2bd70f7644f5b53de7afced43",
+    "verifiedRuntimeHashes": 9057,
+    "contentVersion": "bc3d69f584d0420e",
+    "manifestSha256": "03d6c4c71caf52901a52f9658946df11adfc08944ceab70c8de8a90e9acdc065"
+  },
+  "reviewIdentity": "B143 textual review closed on 9b8f50a8 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of 6b5934e7; a first Claude confirmation of the amended-away fix 5bede460 found one more minor defect, and the final confirmations of 9b8f50a8 (both reviewers) were run by fresh agents of the same two model families, one after the other, each given its family's earlier report and the original packet (see batch-143-closure). Published at 87742e2f as a fast-forward of main with no merge. Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 407,
+    "n1Additions": 401,
+    "n2Placements": 6,
+    "remaining": 821,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "10 latent reading collisions (attested readings offered by other cards, counted per quiz prompt) are not drawable in the checked N1, All and Starter pools. They are seven distinct card-and-reading pairs, because the 柄 ら, いきおい and つく collisions each appear on both the がら and え prompts: the KANJIDIC2 name readings 旋 せ (offered by 世), 朗 あき (秋 空) and お (小 御 男 緒), 柄 ら (等) and 桜 さ (小 早 然), and the card-text readings 柄 いきおい (勢) and つく (付 就 点 着 突).",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools, and no one-holder Starter case exists. The first gate run showed 柄 ら drawable on the がら prompt of a Starter practice session that borrows 等, because the third curated distractor 札 is not a Starter card and left a slot to the random fallback; 札 was replaced by the Starter card 休, so the three curated distractors 木 本 休 fill every slot.",
+    "4 lint warnings on existing word articles' Dictionary lines (一旦, 凱旋, 蒸し暑い, 西暦) are pre-existing and out of scope: each line wraps, so the entry id is on the next line.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 旗 キ, 既 キ, 旨 うま.い and むね, 暑 ショ, 暦 こよみ, 朗 ロウ, 条 すじ, 架 か.ける, 柄 つか, 染 そ.める and し.みる, 株 シュ and 桜 オウ; eight cards quiz only their on reading (施 シ, 旋 セン, 旦 タン, 旨 シ, 暦 レキ, 条 ジョウ, 架 カ, 染 セン) and seven only their kun readings (旗 はた, 既 すで.に, 暑 あつ.い, 朗 ほが.らか, 柄 がら and え, 株 かぶ, 桜 さくら).",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options: 施 \"carry\" (提, 運) and \"give\" (産, 返), 旗 \"standard\" (準, 範, 規), 暑 \"weather\" (候, 寒, 曇) and \"season\" (旬, 春, 節), 条 \"line\" (弧), 株 \"plant\" (挿, 植, 稲, 苗) and 桜 \"tree\" (幹, 松, 桂, 梓, 梨, 椋, 楠). No Notes bullet on these cards separates those senses. Cards with a defensible overlap are excluded symmetrically (for example 施 with 与, 贈, 給; 暑 with 夏, 熱; 旋 with 回, 転; 染 with 色), and the only exclusion pair among the new cards is 株 and 桜.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the confirmation mandate covered the changed cards, so the prose of 施, 旗 and 暦 and every word article were not re-read by the confirmers.",
+    "initial-claude made one recursive PowerShell listing of its own packet directory (6,592 files, including the repo context corpus) and one write-like shell command that wrote its own report file; the other four runs have no such flag apart from the benign path flags recorded under review.execution.",
+    "Each confirmation ran as a fresh agent of the same model family; the round-1 Claude confirmation packet bytes are not retained because the packets were rebuilt at the same paths for 9b8f50a8, and prompts/confirm-claude-1.txt is reconstructed from the final prompt.",
+    "The 旦 claim that no ordinary JMdict word uses あした rests on an initial-round scan of the pinned JMdict; 染 ゼン was accepted from the packet's Kanjipedia extract.",
+    "origin/main had not moved since the base ef2b1b9f at closure, so no merge and no integration review were needed.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}
