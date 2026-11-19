@@ -123,6 +123,59 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 144: drafted, independent review pending
+
+Fifteen absent frozen members: 棋 棚 検 概 欄 歓 殊 殻 汁 沖 泡 泣 淡 渇 渋
+(rows 558–631), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: eighteen existing articles each gain one link to a
+new card. Two existing texts also change in one remark each: the 特殊 article
+said 殊 had no card here and now links 殊, and the 討 card said 検 had no card
+here and now links 検. `n1_linkplan.py verify` checks the article links and
+the 特殊 edit, and the author's `kanji_remarks.py` checks that 討 is the only
+existing card that changes and that it changes only in that remark. Cards
+whose senses overlap those of existing cards keep each other out of their
+meaning-quiz options (for example 検 with 査, 験, 診 and 調; 歓 with 喜, 愉 and
+迎; 殊 with 特 and 珍; 汁 with 液 and 湯; 淡 with 薄 and 微; 渇 with 乾 and 干;
+渋 with 苦 and 酸); no pair among the new cards is excluded. A few titles
+share an English word with an existing title in another sense, such as 欄
+"form field" and 体, 形 and 状 "form", 沖 "open sea" and 野 "open field", or 淡
+"plain" and 原 "plain", and those cards stay ordinary wrong options for each
+other. The [progress file](n1-sources/batch-144-progress.json) records the
+gates and disclosed limits.
+
+Eight cards quiz only their on reading (棋 キ, 検 ケン, 概 ガイ, 欄 ラン,
+歓 カン, 殊 シュ, 淡 タン, 渋 ジュウ) and seven only their kun readings
+(棚 たな, 殻 から, 汁 しる, 沖 おき, 泡 あわ, 泣 な.く, 渇 かわ.く), because the
+other readings have no declaring word article yet; they are listed and
+illustrated, not quizzed. A few readings rest on a single entry or an
+alignment and say so on the card: 欄 てすり, 殻 コク and バイ, 沖 わく, 渋
+シュウ and 泡 発泡 ぽう.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem: 検する けんする, 概して がいして, 殊な けな,
+渇す かっす and 渇する かっする. On the first gate runs, the Daijisen-head
+reading かい of 殻 was offered by 貝, and a Starter practice session could
+borrow one holder card because the original distractors 段, 投 and 役 are not
+Starter cards. 殻 now uses the Starter cards 休, 本 and 木, so the curated
+distractors fill every slot and the random fallback never runs; the older
+reading-options check still labels かい a HIT because it ignores filled
+slots, as in earlier batches, and the exposure audit is authoritative.
+
+Gates on the draft pass: 439 host tests, validation, lint (0 errors; 3
+warnings on untouched, wrapped Dictionary lines of the existing articles 戸棚,
+淡水 and 特殊), quiz safety, link plan, card Metadata entry ids, manifest
+rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit and no drawable KANJIDIC2 name-only reading.
+It records six latent collisions, readings that other cards offer but no
+audited pool can draw: 欄 わく, 歓 ぶ (a KANJIDIC2 name reading), 殊 け, 殻
+かい, 沖 とぶ and 沖 むなしい. Android JVM tests were not run (no JDK), and no
+native or phone acceptance is claimed. Published delivery stays
+**407/1,228** until review closure, CI and ZIP verification.
+
 ## Batch 143: published
 
 Review-closed and published at `87742e2f`. The
