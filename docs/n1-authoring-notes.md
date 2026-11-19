@@ -123,6 +123,53 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 145: drafted, independent review pending
+
+Fifteen absent frozen members: 湧 源 滅 滑 滞 漫 漬 潔 潜 澄 濁 瀬 災 炎 為
+(rows 636–668), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty existing articles each gain one link to a new
+card. Two existing cards also change in one remark each: the 渋 card said 滞
+had no card here and now links 滞, and the 暑 card said there was no card for 炎
+to exclude and now links 炎, noting that it names fire rather than weather
+heat. `n1_linkplan.py verify` checks the article links, and the author's `kanji_remarks.py` checks
+that 渋 and 暑 are the only existing cards that change and that each changes
+only in that remark. Cards whose senses overlap those of other new cards keep
+each other out of their meaning-quiz options (湧 with 源, 滑 with 滞, 漫 with
+滑, 漬 with 潜 and 潔 with 澄); the same is done against existing cards where
+the Notes say so. The [progress file](n1-sources/batch-145-progress.json)
+records the gates and disclosed limits.
+
+Six cards quiz only their on reading (源 ゲン, 滅 メツ, 滞 タイ, 漫 マン, 潔 ケツ,
+災 サイ) and nine only their kun reading (湧 わ.く, 滑 すべ.る, 漬 つ.ける, 潜
+もぐ.る, 澄 す.む, 濁 にご.る, 瀬 せ, 炎 ほのお, 為 な.す), because the other
+readings have no declaring word article yet; they are listed and illustrated,
+not quizzed. 滅 also records the Kanjipedia-only reading ベツ, which 別 shares.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem (滅 めっす and めっする; 滑 ぬめり and ぬらつく; 滞
+なずむ; 漫 みだり; 漬 ひたす and ひたる; 潜 かずく and かづく; 為 されつつある and される).
+On the first gate runs, 別 offered the card-text reading べつ for the 滅 prompt,
+and a Starter practice session could borrow one holder card for 滅, 漫 and 為
+because the original distractors were not Starter cards. 滅, 漫, 澄 and 為 now
+use the Starter cards 海 水 火, 海 水 日, 海 水 川 and 黒 魚 火, so the curated
+distractors fill every slot and the random fallback never runs; the older
+reading-options check still labels べつ and ばん HITs because it ignores filled
+slots, as in earlier batches, and the exposure audit is authoritative.
+
+Gates on the draft pass: 439 host tests, validation, lint (0 errors; 5
+warnings on untouched, wrapped Dictionary lines of the existing articles 不潔,
+湧く, 潜る, 澄む and 蒸し暑い; the last is not modified and is linted only because the modified 暑 card declares it), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records ten latent collisions, readings
+that other cards offer but no audited pool can draw: 滅 べつ, 滑 かり, 漫 ばん,
+澄 すみ and み, 瀬 せい, 炎 ぬく and もえる, 為 す and た. Android JVM tests were
+not run (no JDK), and no native or phone acceptance is claimed. Published
+delivery stays **422/1,228** until review closure, CI and ZIP verification.
+
 ## Batch 144: published
 
 Review-closed and published at `21f31dbe`. The
