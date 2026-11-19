@@ -1,0 +1,213 @@
+diff --git a/docs/n1-authoring-notes.md b/docs/n1-authoring-notes.md
+index 019a7174..371401ab 100644
+--- a/docs/n1-authoring-notes.md
++++ b/docs/n1-authoring-notes.md
+@@ -130,10 +130,12 @@ Fifteen absent frozen members: 湧 源 滅 滑 滞 漫 漬 潔 潜 澄 濁 瀬 
+ [issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+ and first applied in batch 137. All fifteen pass, so none is set aside. No
+ word article is added: twenty existing articles each gain one link to a new
++card, and the 湧く article also drops its remark that neither 湧 nor 涌 has a
+ card. Two existing cards also change in one remark each: the 渋 card said 滞
+ had no card here and now links 滞, and the 暑 card said there was no card for 炎
+-to exclude and now links 炎, noting that it names fire rather than weather
+-heat. `n1_linkplan.py verify` checks the article links, and the author's `kanji_remarks.py` checks
++to exclude and now links 炎, noting that it mainly names fire but also means
++blazing heat in 炎天 and 炎暑. `n1_linkplan.py verify` checks the article links and
++the declared 湧く remark, and the author's `kanji_remarks.py` checks
+ that 渋 and 暑 are the only existing cards that change and that each changes
+ only in that remark. Cards whose senses overlap those of other new cards keep
+ each other out of their meaning-quiz options (湧 with 源, 滑 with 滞, 漫 with
+diff --git a/docs/n1-sources/batch-145-progress.json b/docs/n1-sources/batch-145-progress.json
+index 9c05e956..ff4b3146 100644
+--- a/docs/n1-sources/batch-145-progress.json
++++ b/docs/n1-sources/batch-145-progress.json
+@@ -37,7 +37,7 @@
+     667,
+     668
+   ],
+-  "selectionReason": "The next fifteen, in source-row order, of the 271 absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 20 existing articles each gain one link to a new card. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. Two cards also change in one remark: the 渋 card's remark that said 滞 had no card here now links 滞, and the 暑 card's remark that said there was no card for 炎 to exclude now links 炎. 136 rows of the 271 group, 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
++  "selectionReason": "The next fifteen, in source-row order, of the 271 absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 20 existing articles each gain one link to a new card. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. The 湧く article also drops its remark that neither 湧 nor 涌 has a card. Two cards also change in one remark: the 渋 card's remark that said 滞 had no card here now links 滞, and the 暑 card's remark that said there was no card for 炎 to exclude now links 炎 and says it mainly names fire. 136 rows of the 271 group, 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
+   "supports": [
+     [
+       "湧",
+@@ -200,7 +200,8 @@
+       "otherArticleEdits": [],
+       "kanjiCardEdits": [
+         "渋: the remark that said 滞 had no card yet now links 滞 (declared remark-only edit, checked by kanji_remarks.py)",
+-        "暑: the remark that said there was no card for 炎 to exclude now links 炎 (declared remark-only edit, checked by kanji_remarks.py)"
++        "暑: the remark that said there was no card for 炎 to exclude now links 炎 and says it mainly names fire (declared remark-only edit, checked by kanji_remarks.py)",
++        "湧く (word article): the remark that neither 湧 nor 涌 has a card now says 湧 has one (declared remark edit, checked by n1_linkplan.py verify)"
+       ]
+     },
+     "metaScan": "every word named on the 15 cards has its JMdict entry id on the card's Metadata line (whole runs: none missing); 29 matches are part of a longer run that is not listed",
+diff --git a/kanji/暑.md b/kanji/暑.md
+index 14bbfa37..bfd2cf32 100644
+--- a/kanji/暑.md
++++ b/kanji/暑.md
+@@ -46,7 +46,7 @@ The official Joyo table, the list of standard-use readings, shows ショ with 
+ 
+ - The other kanji in the linked word 蒸し暑い is [蒸](蒸.md), “steam; sultry heat.”
+ - [日](日.md), “sun, day,” is at the top of 暑; [者](者.md), “person in a role,” is its lower shape, and [早](早.md), “early,” also contains 日. These make the distractors visually plausible, but their titles are not weather heat and their readings do not match 暑.
+-- [熱](熱.md), “heat; fever,” can be confused with hot weather but is the spelling used for hot things or liquids; [夏](夏.md), “summer,” overlaps the season; [蒸](蒸.md), “steam; sultry heat,” overlaps 蒸し暑い; [暖](暖.md), “warm; warm up,” [温](温.md), “warm, mild,” and [湯](湯.md), “hot water,” overlap heat or warmth. These cards are excluded as meaning choices; 暑い and 熱い are not interchangeable. [炎](炎.md), “flame,” was checked; it names fire rather than weather heat.
++- [熱](熱.md), “heat; fever,” can be confused with hot weather but is the spelling used for hot things or liquids; [夏](夏.md), “summer,” overlaps the season; [蒸](蒸.md), “steam; sultry heat,” overlaps 蒸し暑い; [暖](暖.md), “warm; warm up,” [温](温.md), “warm, mild,” and [湯](湯.md), “hot water,” overlap heat or warmth. These cards are excluded as meaning choices; 暑い and 熱い are not interchangeable. [炎](炎.md), “flame,” mainly names fire, but in 炎天 and 炎暑 it also means blazing heat, so the 炎 card keeps 暑 out of its meaning choices.
+ 
+ Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot. Word identities and spelling restrictions: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) (continuation snapshot created 2026-11-17), entries 1304620, 1343460, 1343480, 1343490, 1356870, 1414070, 1467720, 1484640, 1911300 and 2179380. Character reading and compounds: [Digital Daijisen, 暑](https://www.weblio.jp/content/暑).
+ 
+diff --git a/kanji/漫.md b/kanji/漫.md
+index e15aecbd..fb92a253 100644
+--- a/kanji/漫.md
++++ b/kanji/漫.md
+@@ -27,7 +27,7 @@ The Daijisen character entry gives four senses for マン. One example of each:
+ - covering everything: 爛漫 らんまん, "in full bloom; in full glory; glorious; luxuriant; splendid";
+ - loose and without a grip: 散漫 さんまん, "vague; desultory; distracted; loose; half-hearted; diffuse; scattered";
+ - casual, as the mind goes: 漫画 まんが, "cartoon; comic; comic strip; manga";
+-- a character used to write a foreign word by sound: 浪漫 ろうまん, JMdict ateji (phonetic) reading, first sense "romance (e.g. Arthurian romances); heroic tale," a word JMdict marks "word usually written using kana alone."
++- a character used to write a foreign word by sound: 浪漫 ロマン, a JMdict ateji (phonetic) spelling whose reading ろうまん is only a rarely used kana form, first sense "romance (e.g. Arthurian romances); heroic tale," a word JMdict marks "word usually written using kana alone."
+ 
+ More examples are in the Notes.
+ 
+@@ -41,9 +41,9 @@ More examples are in the Notes.
+ | みだり.に | kun | 漫りに みだりに — "without authority"; no word article yet, not selected for questions here |
+ | そぞ.ろ | kun | 漫ろに そぞろに — "in spite of oneself; somehow; without knowing why; vaguely"; no word article yet, not selected for questions here |
+ 
+-In 漫画, 漫 supplies マン and 画 supplies ガ: まん + が. JMdict lists the spellings 漫画 and kana まんが, and also マンガ, tagged spec1. In 漫歩 まんぽ, "rambling; sauntering; strolling," 漫談 まんだん, "chat; desultory conversation," and 漫遊 まんゆう, "pleasure trip; tour," 漫 also supplies マン; the small ん in まんぽ and まんだん is part of the same reading.
++In 漫画, 漫 supplies マン and 画 supplies ガ: まん + が. JMdict lists the spellings 漫画 and kana まんが, and also マンガ in katakana. In 漫歩 まんぽ, "rambling; sauntering; strolling," 漫談 まんだん, "chat; desultory conversation," and 漫遊 まんゆう, "pleasure trip; tour," 漫 also supplies マン.
+ 
+-Both kun readings are in JMdict as adverbs that are "word usually written using kana alone." 漫りに みだりに is written with 漫 only as "rarely used kanji form," among the spellings 妄りに, 濫りに, 猥りに and 乱りに, and its senses include "without reason; unnecessarily" and "recklessly; indiscriminately; arbitrarily." 漫ろに そぞろに writes 漫 as そぞ with ろに as okurigana, the kana ending that follows the kanji. The related 漫ろ そぞろ is "restless; on edge (and unable to concentrate); distracted," with すずろ and すぞろ recorded as "out-dated or obsolete kana usage." Daijisen's entry also lists すず and そぞろ as kun readings.
++Both kun readings are in JMdict as adverbs that are "word usually written using kana alone." 漫りに みだりに is written with 漫 only as "rarely used kanji form," among the spellings 妄りに, 濫りに, 猥りに and 乱りに, and its senses include "without reason; unnecessarily" and "recklessly; indiscriminately; arbitrarily." 漫ろに そぞろに writes 漫 as そぞ with ろに as okurigana, the kana ending that follows the kanji. The related 漫ろ そぞろ is "restless; on edge (and unable to concentrate); distracted," with すずろ and すぞろ recorded as "out-dated or obsolete kana usage." Daijisen's entry also lists すずろ and そぞろ as kun readings.
+ 
+ The official Joyo table, the list of standard-use readings, shows マン with 漫画, 漫歩 and 散漫. It lists no kun reading for 漫. Practice selects マン, the reading of the linked word article. みだり.に and そぞ.ろ are shown with dictionary examples and are not asked here; being outside the practice set does not make a reading invalid. Kanjipedia also lists バン, but KANJIDIC2 does not, and no ordinary word is verified for it here, so it is not in this card's metadata.
+ 
+diff --git a/kanji/漬.md b/kanji/漬.md
+index 9f726b8a..9ca24d61 100644
+--- a/kanji/漬.md
++++ b/kanji/漬.md
+@@ -20,7 +20,7 @@ quiz_exclusions: [付, 染, 湿, 沈, 浴, 溶, 潜]
+ 
+ ## Meaning and origin
+ 
+-漬 is putting something into a liquid and leaving it there, and, in food, pickling. The linked [漬ける](../words/漬ける.md) つける has two JMdict senses: "to soak (in); to steep; to dip; to dunk," and "to pickle; to preserve (in salt, vinegar, etc.)." JMdict marks the second sense stagk=漬ける, a restriction to that spelling: 浸ける, the other spelling, covers the soaking sense only. The word article keeps it apart from 付ける つける, "attach."
++漬 is putting something into a liquid and leaving it there, and, in food, pickling. The linked [漬ける](../words/漬ける.md) つける has two JMdict senses: "to soak (in); to steep; to dip; to dunk," and "to pickle; to preserve (in salt, vinegar, etc.)." JMdict limits the pickling sense to the spelling 漬ける; the other spelling, 浸ける, covers the soaking sense only. The word article keeps it apart from 付ける つける, "attach."
+ 
+ The Daijisen character entry gives one sense for シ: dipping in a liquid, as in 浸漬 しんし, JMdict "dipping; soaking; immersing." For the kun side it lists つける, つかる and ひたす, and the compounding form つけ (づけ) in 漬物 and 粕漬 かすづけ, "fish or vegetables pickled in sake lees."
+ 
+@@ -36,9 +36,9 @@ The Daijisen character entry gives one sense for シ: dipping in a liquid, as in
+ | -づ.け | kun | 塩漬け しおづけ — pickling in salt; no word article yet, not selected for questions here |
+ | -づけ | kun | 粕漬 かすづけ — fish or vegetables pickled in sake lees; no word article yet, not selected for questions here |
+ 
+-In 漬ける, 漬 writes つ and ける is okurigana, the kana ending that follows the kanji; the verb is ichidan, so 漬けます, 漬けて. In 漬かる, JMdict lists 浸かる (tagged spec1) and 漬かる; its senses are "to be submerged; to be soaked," "to be pickled; to be well seasoned," with the note "esp. 漬かる," and "to be totally immersed (in a condition, e.g. laziness)." In the compounding form, 漬 changes to づ: in 塩漬け, 漬 writes づ and け is okurigana, and 茶漬け ちゃづけ, "chazuke; cooked rice with green tea poured on it," works the same way. In 粕漬 JMdict gives the spellings 粕漬け and 粕漬, plus 糟漬け and 糟漬 as "rarely used kanji form" and かす漬け and かす漬 as "search-only kanji form"; 漬 there writes づけ, with the け inside the kanji reading. In 浸漬, 漬 supplies シ.
++In 漬ける, 漬 writes つ and ける is okurigana, the kana ending that follows the kanji; the verb is ichidan, so 漬けます, 漬けて. In 漬かる, JMdict lists 浸かる and 漬かる; its senses are "to be submerged; to be soaked," "to be pickled; to be well seasoned," with the note "esp. 漬かる," and "to be totally immersed (in a condition, e.g. laziness)." In the compounding form, 漬 changes to づ: in 塩漬け, 漬 writes づ and け is okurigana, and 茶漬け ちゃづけ, "chazuke; cooked rice with green tea poured on it," works the same way. In 粕漬 JMdict gives the spellings 粕漬け and 粕漬, plus 糟漬け and 糟漬 as "rarely used kanji form" and かす漬け and かす漬 as "search-only kanji form"; 漬 there writes づけ, with the け inside the kanji reading. In 浸漬, 漬 supplies シ.
+ 
+-漬物 つけもの, "tsukemono (pickled vegetables)," is JMdict entry 漬け物, with 漬物 and 漬け物 as spellings and 漬けもの as "search-only kanji form"; it has no word article yet. The related 漬す ひたす, "to soak; to dip; to steep; to immerse," is listed in JMdict as 漬す "rarely used kanji form" under the usual spelling 浸す.
++漬物 つけもの, "tsukemono (pickled vegetables)," is JMdict entry 漬物, with 漬け物 as another spelling and 漬けもの as "search-only kanji form"; it has no word article yet. The related 漬す ひたす, "to soak; to dip; to steep; to immerse," is listed in JMdict as 漬す "rarely used kanji form" under the usual spelling 浸す.
+ 
+ The official Joyo table, the list of standard-use readings, shows つける with 漬ける and 漬物, and つかる with 漬かる. It lists no on reading for 漬. Practice selects つ.ける, the reading of the linked word article. The other readings are shown with dictionary examples and are not asked here; being outside the practice set does not make a reading invalid. Kanjipedia also lists シ, which KANJIDIC2 has too.
+ 
+diff --git a/kanji/潜.md b/kanji/潜.md
+index 1627ab0f..23f7c125 100644
+--- a/kanji/潜.md
++++ b/kanji/潜.md
+@@ -27,7 +27,7 @@ The Daijisen character entry gives four senses for セン. One example of each:
+ - diving: 潜水 せんすい, "diving; submerging; going underwater";
+ - lying hidden, not showing: 潜在 せんざい, "potentiality; dormancy; latency";
+ - sinking one's mind into something: 沈潜 ちんせん, "sinking into deep thought; sinking to the depths; contemplation";
+-- short for 潜水艦 せんすいかん, "submarine," as in 原潜 げんせん, JMdict "abbreviation nuclear submarine."
++- short for 潜水艦 せんすいかん, "submarine," as in 原潜 げんせん, JMdict "nuclear submarine," tagged "abbreviation."
+ 
+ More examples are in the Notes.
+ 
+diff --git a/kanji/濁.md b/kanji/濁.md
+index f1b5d4c1..ff06d03b 100644
+--- a/kanji/濁.md
++++ b/kanji/濁.md
+@@ -43,7 +43,7 @@ More examples are in the Notes. For ジョク, Daijisen gives the same defiled s
+ 
+ In 濁る, 濁 writes にご and る is okurigana, the kana ending that follows the kanji. 濁り にごり is "muddiness; murkiness; cloudiness," and 濁す にごす is "to make muddy (of a liquid); to make cloudy; to make turbid; to roil," with a second sense, "to make ambiguous; to evade (e.g. the point); to be noncommittal about." In 濁流, 濁音 and 濁点 だくてん, "dakuten; diacritic used with kana that turns an unvoiced consonant into a voiced consonant," 濁 supplies ダク. In 濁世 and 五濁 it supplies ジョク; JMdict lists 濁世 with the readings だくせ, だくせい and じょくせ, and 五濁 only as ごじょく. In 清濁 せいだく, "good and evil; purity and impurity," with a second sense "voiced and unvoiced consonants," 濁 supplies ダク.
+ 
+-The official Joyo table, the list of standard-use readings, shows ダク with 濁流, 濁音 and 清濁, にごる with 濁る and 濁り, and にごす with 濁す. Practice selects にご.る, the reading of the linked word article. ダク, ジョク and にご.す are shown with dictionary examples and are not asked here; being outside the practice set does not make a reading invalid. The table gives no ジョク example, though KANJIDIC2 and Kanjipedia list it.
++The official Joyo table, the list of standard-use readings, shows ダク with 濁流, 濁音 and 清濁, にごる with 濁る and 濁り, and にごす with 濁す. Practice selects にご.る, the reading of the linked word article. ダク, ジョク and にご.す are shown with dictionary examples and are not asked here; being outside the practice set does not make a reading invalid. The table does not list ジョク; KANJIDIC2 lists it, and Kanjipedia marks it as outside the table.
+ 
+ ## Common words
+ 
+diff --git a/kanji/瀬.md b/kanji/瀬.md
+index 73f21dee..3b63a06c 100644
+--- a/kanji/瀬.md
++++ b/kanji/瀬.md
+@@ -24,7 +24,7 @@ quiz_exclusions: [浅, 滝, 流, 川, 河, 位]
+ 
+ JMdict gives 瀬 alone four senses: "shallows; shoal"; "rapids; current; torrent"; "position; place"; and "chance; opportunity." Daijisen's character entry gives, for ライ, a shallow place in the water or a fast-flowing place, with the example 急瀬 きゅうらい. For せ, Daijisen lists 瀬戸, 浅瀬 and 川瀬 かわせ and 早瀬 はやせ.
+ 
+-**Modern-shape mnemonic, not etymology:** find [水](水.md), written 氵, at the left. The right-hand part is a busy shape that also stands at the right of [頼](頼.md), "request; rely." Imagine a stretch of river running shallow and fast beside a clump of stones. This is a memory aid only: it makes no claim that 氵 or the right-hand part contributes meaning or sound. Historical formation is not established here.
++**Modern-shape mnemonic, not etymology:** find [水](水.md), written 氵, at the left. The whole right-hand part is the kanji [頼](頼.md), "request; rely." Imagine a stretch of river running shallow and fast beside a clump of stones. This is a memory aid only: it makes no claim that 氵 or the right-hand part contributes meaning or sound. Historical formation is not established here.
+ 
+ ## Readings
+ 
+diff --git a/kanji/災.md b/kanji/災.md
+index 2c911ab0..c352aec9 100644
+--- a/kanji/災.md
++++ b/kanji/災.md
+@@ -22,7 +22,7 @@ quiz_exclusions: [厄, 凶, 害, 難, 損]
+ 
+ 災 is a calamity: something bad that strikes a person or a place, from a fire to a natural disaster to a run of bad luck. The linked [火災](../words/火災.md) かさい is a fire as a damaging event, and JMdict glosses it "conflagration; fire." The linked [災難](../words/災難.md) さいなん is "calamity; misfortune; disaster," a misfortune that befalls someone.
+ 
+-Daijisen gives サイ the sense of a bad event that happens naturally or harms daily life, with 災害 さいがい, "calamity; disaster; misfortune," 災難, 災厄 さいやく, "calamity; disaster; accident," 火災, 震災 しんさい, "earthquake disaster," 天災 てんさい, "natural disaster; natural calamity; act of God," 人災 じんさい, "man-made calamity," and 防災 ぼうさい, "disaster preparedness; prevention of damage resulting from a natural disaster; protection against disasters." Daijisen's わざわい entry gives "unhappiness brought on a person" and "something unpleasant," the latter used mostly in exclamations.
++Daijisen gives サイ the sense of a bad event that happens naturally or harms daily life, with 災害 さいがい, "calamity; disaster; misfortune," 災難, 災厄 さいやく, "calamity; disaster; accident," 火災, 震災 しんさい, "earthquake disaster," 天災 てんさい, "natural disaster; natural calamity; act of God," 人災 じんさい, "man-made calamity," and 防災 ぼうさい, "disaster preparedness; prevention of damage resulting from a natural disaster; protection against disaster." Daijisen's わざわい entry describes unhappiness brought on a person and, separately, something unpleasant, the latter used mostly in exclamations.
+ 
+ **Modern-shape mnemonic, not etymology:** find [火](火.md), "fire," at the bottom, with a three-stroke 巛 shape above it. Imagine floodwater pouring down over a fire: two kinds of calamity at once. This is a memory aid only: it makes no claim that 火 or 巛 contributes meaning or sound. Historical formation is not established here.
+ 
+diff --git a/kanji/炎.md b/kanji/炎.md
+index 509aed67..ddb8c2d3 100644
+--- a/kanji/炎.md
++++ b/kanji/炎.md
+@@ -54,7 +54,7 @@ The official Joyo table, the list of standard-use readings, shows エン with 
+ - 炎 as a word has no other kanji. In the examples above, [火](火.md), "fire," supplies カ in 火炎, [上](上.md), "up, above," supplies ジョウ in 炎上, [気](気.md), "spirit, air," supplies キ in 気炎, [天](天.md), "heaven, sky," supplies テン in 炎天 and [胃](胃.md), "stomach," supplies イ in 胃炎.
+ - 陽炎 かげろう, "heat shimmer; heat haze; shimmering of hot air," is a Daijisen hard-to-read word whose かげろう is a whole-word reading, tagged "gikun (meaning as reading) or jukujikun (special kanji reading)" in JMdict, and is never split between 陽 and 炎. JMdict also lists 炎暑 えんしょ, "heat wave; intense heat."
+ - [淡](淡.md), "pale; faint; plain; unsalted," and [談](談.md), "converse; consult," both contain 炎 as a visible part, and [炊](炊.md), "cook rice; boil," has 火 at the left. They look alike at a glance but are different kanji with different readings and meanings; they supply this card's wrong answers.
+-- [火](火.md), "fire," [焼](焼.md), "bake; burn," [燃](燃.md), "burn; blaze," which also reads も.える, [焦](焦.md), "scorch; char; impatient," and [爆](爆.md), "burst open; explode," overlap flame and burning. [熱](熱.md), "heat; fever," [暑](暑.md), "hot weather; summer heat; hot season," overlap heat, which is the sense of 炎暑 and 炎天; the [暑](暑.md) card notes that 炎 names fire rather than weather heat. [症](症.md), "symptoms; illness," [病](病.md), "illness," and [痛](痛.md), "pain; hurt," overlap inflammation. They are kept out of this card's quiz options. Do not treat "flame," "blaze" or "inflammation" as exclusive to any one character.
++- [火](火.md), "fire," [焼](焼.md), "bake; burn," [燃](燃.md), "burn; blaze," which also reads も.える, [焦](焦.md), "scorch; char; impatient," and [爆](爆.md), "burst open; explode," overlap flame and burning. [熱](熱.md), "heat; fever," and [暑](暑.md), "hot weather; summer heat; hot season," overlap heat, which is the sense of 炎暑 and 炎天; the [暑](暑.md) card notes that 炎 mainly names fire. [症](症.md), "symptoms; illness," [病](病.md), "illness," and [痛](痛.md), "pain; hurt," overlap inflammation. They are kept out of this card's quiz options. Do not treat "flame," "blaze" or "inflammation" as exclusive to any one character.
+ 
+ Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot. Word identities and spelling restrictions: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) (continuation snapshot created 2026-11-17), entries 1177070, 2258340, 1158520, 1472880, 1177100, 1589790, 1177120, 1790990, 1177140, 1177090 and 1546970. Character reading and compounds: [Digital Daijisen, 炎](https://www.weblio.jp/content/炎).
+ 
+diff --git a/kanji/為.md b/kanji/為.md
+index 2384f6c3..3987f9a4 100644
+--- a/kanji/為.md
++++ b/kanji/為.md
+@@ -20,9 +20,9 @@ quiz_exclusions: [成, 作, 造, 行, 致, 施, 執, 履, 犯, 営, 業, 働, 
+ 
+ ## Meaning and origin
+ 
+-為 is doing: carrying out an action or deed, and also the "for the sake of" that follows from it. The linked [為す](../words/為す.md) なす is a verb, and JMdict glosses its first sense "to do; to commit; to carry out; to bring about," marked "word usually written using kana alone," with 爲す as a "search-only kanji form." The linked [為替](../words/為替.md) かわせ is a different case: JMdict glosses it "money order; draft" and "exchange (e.g. foreign)," and tags its reading "gikun (meaning as reading) or jukujikun (special kanji reading)." Its reading is a whole-word reading, so it says nothing about what 為 reads alone.
++為 is doing: carrying out an action or deed, and also the "for the sake of" that follows from it. The linked [為す](../words/為す.md) なす is a verb, and JMdict glosses it "to do; to commit; to carry out; to bring about," marked "word usually written using kana alone," with 爲す as a "search-only kanji form." The linked [為替](../words/為替.md) かわせ is a different case: JMdict glosses it "money order; draft" and "exchange (e.g. foreign)," and tags its reading "gikun (meaning as reading) or jukujikun (special kanji reading)." Its reading is a whole-word reading, so it says nothing about what 為 reads alone.
+ 
+-The Daijisen character entry gives one sense for イ: doing or acting. Examples: 行為 こうい, "act; deed; conduct"; 作為 さくい, "artificiality; pretence; contrived act," with a second sense, "commission (of a crime); feasance," in law; 人為 じんい, "human work; human agency; art; artificiality"; 為政者 いせいしゃ, "statesman; administrator; politician; policymaker"; and 無為 むい, "idleness; inactivity." Daijisen also gives the kun readings なす, する, なる and ため for the same doing; its entry for ため gives "something that benefits," "cause; reason," "an aim," and "for someone."
++The Daijisen character entry gives one sense for イ: doing or acting. Examples: 行為 こうい, "act; deed; conduct"; 作為 さくい, "artificiality; pretence; contrived act," with a second sense, "commission (of a crime); feasance," in law; 人為 じんい, "human work; human agency; art; artificiality"; 為政者 いせいしゃ, "statesman; administrator; politician; policymaker"; and 無為 むい, "idleness; inactivity." Daijisen also gives the kun readings なす, する, なる and ため; its entry for ため describes something that benefits, a cause or reason, an aim, and acting for someone.
+ 
+ **Modern-shape mnemonic, not etymology:** look at the bottom of 為: four dots, written 灬, the form that [火](火.md), "fire," often takes at the bottom of a kanji. [黒](黒.md), "black," and [魚](魚.md), "fish," end in the same four dots. Imagine four small embers glowing under the work being done. This is a memory aid only: it makes no claim that the dots contribute meaning or sound. Historical formation is not established here.
+ 
+@@ -39,9 +39,9 @@ The Daijisen character entry gives one sense for イ: doing or acting. Examples:
+ | つく.る | kun, source-only here | KANJIDIC2 and Kanjipedia list it, but no ordinary JMdict word example with 為 was found |
+ | なり | kun | 為り なり — promoted (of a piece) in shogi; JMdict lists 成り first and 為り second, with no spelling tag; no word article yet, not selected for questions here |
+ 
+-In 為す, 為 writes な and す is okurigana, the kana ending that follows the kanji. The repo's reading checker labels the な of 為す as な.る, a stem shared by な.る and な.す, so this card claims only what the linked word supports: 為す なす, JMdict 2861111, "word usually written using kana alone," and KANJIDIC2 lists な.す as a reading. 成す なす, "to form; to make; to constitute," is a separate JMdict entry whose fifth sense, "to do; to commit; to carry out; to bring about," is marked "word usually written using kana alone" with the note "also written as 為す." In 行為, [行](行.md), "go," supplies コウ and 為 supplies イ; in 作為, [作](作.md), "make, produce," supplies サク; in 人為, [人](人.md), "person," supplies ジン; in 為政者, [政](政.md), "politics," supplies セイ and [者](者.md), "person in a role," supplies シャ. 為 ため is also listed with the spellings 爲, marked "word containing out-dated kanji or kanji usage," and 為め, marked "irregular okurigana usage"; 為に ために is "for; for the sake of; to one's advantage; in favor of; in favour of; on behalf of." In 為替, the readings か, わ and せ do not belong to 為 or [替](替.md), "replace; substitute"; the whole word is read かわせ.
++In 為す, 為 writes な and す is okurigana, the kana ending that follows the kanji. な.る and な.す share the stem な, so this card claims only what the linked word supports: 為す なす, JMdict 2861111, "word usually written using kana alone," and KANJIDIC2 lists な.す as a reading. 成す なす, "to form; to make; to constitute," is a separate JMdict entry whose fifth sense, "to do; to commit; to carry out; to bring about," is marked "word usually written using kana alone" with the note "also written as 為す." In 行為, [行](行.md), "go," supplies コウ and 為 supplies イ; in 作為, [作](作.md), "make, produce," supplies サク; in 人為, [人](人.md), "person," supplies ジン; in 為政者, [政](政.md), "politics," supplies セイ and [者](者.md), "person in a role," supplies シャ. 為 ため is also listed with the spellings 爲, marked "word containing out-dated kanji or kanji usage," and 為め, marked "irregular okurigana usage"; 為に ために is "for; for the sake of; to one's advantage; in favor of; in favour of; on behalf of." In 為替, the readings か, わ and せ do not belong to 為 or [替](替.md), "replace; substitute"; the whole word is read かわせ.
+ 
+-The official Joyo table, the list of standard-use readings, shows イ with 為政者, 行為 and 作為, followed by 為替（かわせ）, a special reading listed for the whole word. Practice selects な.す, the reading of the linked word article 為す. イ and the other readings are shown with dictionary examples or marked source-only and are not asked here; being outside the practice set does not make a reading invalid. The table shows the older form 爲 in round brackets, which this card does not teach.
++The official Joyo table, the list of standard-use readings, shows イ with 為政者, 行為 and 作為, followed by 為替（かわせ）, a special reading listed for the whole word. The table lists no kun reading for 為; な.す and the other kun readings are outside the table. Practice selects な.す, the reading of the linked word article 為す. イ and the other readings are shown with dictionary examples or marked source-only and are not asked here; being outside the practice set does not make a reading invalid. The table shows the older form 爲 in round brackets, which this card does not teach.
+ 
+ ## Common words
+ 
+diff --git a/words/湧く.md b/words/湧く.md
+index f8a80b78..ea40b506 100644
+--- a/words/湧く.md
++++ b/words/湧く.md
+@@ -28,8 +28,8 @@ These are not instructions to translate every appearance with this verb.
+ 
+ [湧](../kanji/湧.md) supplies the native verb わく; く is its written ending.
+ 涌く is a rare alternate spelling of the same word.
+-Neither character currently has a kanji card, but 湧 still belongs in this
+-word's written-kanji metadata.
++湧 has a kanji card; the rare alternate 涌 does not, and this
++word's written-kanji metadata lists only 湧.
+ 
+ ## Synonyms and antonyms
+ 

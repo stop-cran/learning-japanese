@@ -2,7 +2,7 @@
   "batch": 145,
   "base": "305763eab81430f26c51446ed0532cc03910ffbb",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "湧",
     "源",
@@ -120,9 +120,25 @@
       "為替"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "845aefbb37e40aeb737f32de8066959968cc2cf6",
+  "reviewedSnapshot": "97168e795cfc47698d2445ec1886be503494b415",
+  "reviewClosed": [
+    "湧",
+    "源",
+    "滅",
+    "滑",
+    "滞",
+    "漫",
+    "漬",
+    "潔",
+    "潜",
+    "澄",
+    "濁",
+    "瀬",
+    "災",
+    "炎",
+    "為"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -131,8 +147,8 @@
     "publishedN1Additions": 416,
     "n2Placements": 6,
     "undelivered": 806,
-    "reviewClosedPendingRecordsWithCards": 422,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 437,
+    "localUnreviewedDrafts": 0,
     "notStarted": 791,
     "overallN1TaskComplete": false
   },
@@ -144,12 +160,55 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "e07ab312",
+      "97168e795cfc47698d2445ec1886be503494b415"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "845aefbb37e40aeb737f32de8066959968cc2cf6",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "845aefbb37e40aeb737f32de8066959968cc2cf6",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude-1",
+        "snapshot": "e07ab312",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "97168e795cfc47698d2445ec1886be503494b415",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "97168e795cfc47698d2445ec1886be503494b415",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude second confirmation, optional: the 叔父 example in 為.md:25 has no readings (declined)",
+      "GPT final confirmation, optional: shorter paragraphs in 漬 and 為 (not a finding)",
+      "Claude and GPT initial, optional: O4 to O9, O-A and O-B (declined)",
+      "Claude first confirmation, optional: 暑 Metadata lacks 1177140 and 1177090 (declined; the 暑 change is a declared remark-only edit)"
+    ],
+    "closure": "../n1-reviews/batch-145-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-145-closure/provenance.json",
+    "closureProvenanceSha256": "de0e762f24df31782096abbcaf84d0a1f83007bde4739eea8c30245f5e70703e",
+    "integration": "origin/main did not move during the batch (305763ea, the B144 receipt, at closure), so no merge or integration proof was needed.",
+    "execution": "All five runs started after the previous one ended; each confirmation was a fresh agent of the same model family, given the author's statement on its family's latest report and the original packet. confirm-claude-1 found the 為 ため sense 4 paraphrase (\"acting for someone\"), fixed in the second fix commit 97168e79; confirm-claude (a fresh agent) and confirm-gpt then confirmed 97168e79. The audit of confirm-claude-1 shows one moment with two read-only view calls in flight; four audits flag one recursive shell command inside the run's own packet; confirm-gpt's outside-path flag is a false positive."
   },
   "gates": {
     "lint": {
@@ -161,9 +220,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 9140,
-      "retainedBytes": 51778664,
-      "inflatedBytes": 52137755,
-      "localZipBytes": 32403163
+      "retainedBytes": 51778814,
+      "inflatedBytes": 52137905,
+      "localZipBytes": 32403210
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -205,11 +264,11 @@
         "暑: the remark that said there was no card for 炎 to exclude now links 炎 and says it mainly names fire (declared remark-only edit, checked by kanji_remarks.py)"
       ]
     },
-    "metaScan": "every word named on the 15 cards has its JMdict entry id on the card's Metadata line (whole runs: none missing); 29 matches are part of a longer run that is not listed",
+    "metaScan": "every word named on the 15 cards has its JMdict entry id on the card's Metadata line (whole runs: none missing); 30 matches are part of a longer run that is not listed",
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "97168e795cfc47698d2445ec1886be503494b415"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -220,6 +279,9 @@
     "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
     "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the second Claude confirmation covered only the two changed lines and the GPT confirmation the cumulative change, so neither re-read the unchanged cards or any word article beyond 湧く.",
+    "The first Claude confirmation took the 瀬 component from its own knowledge and the Joyo claims from the packet extract; the GPT confirmation checked them against the pinned KanjiVG decomposition and the official Joyo PDF pages.",
+    "The audit of confirm-claude-1 shows one moment with two read-only view calls in flight, although its report says one call per response."
   ]
 }

@@ -123,7 +123,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 145: drafted, independent review pending
+## Batch 145: review closed, publication pending
 
 Fifteen absent frozen members: 湧 源 滅 滑 滞 漫 漬 潔 潜 澄 濁 瀬 災 炎 為
 (rows 636–668), the next fifteen under the selection rule announced on
@@ -162,7 +162,26 @@ distractors fill every slot and the random fallback never runs; the older
 reading-options check still labels べつ and ばん HITs because it ignores filled
 slots, as in earlier batches, and the exposure audit is authoritative.
 
-Gates on the draft pass: 439 host tests, validation, lint (0 errors; 5
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `845aefbb` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+a wrong Daijisen reading for 漫 (すずろ, not すず), an inaccurate 暑 remark about
+炎, the 浪漫 spelling, the 濁 ジョク wording, loose 為 wording and a missing
+statement that the table gives 為 no kun reading, and wrong glosses or
+headwords for 防災, 漬物 and 原潜, and Daijisen paraphrases in double quotes
+(災, 為). GPT found the same 漫 and 暑 points, the stale remark in the 湧く
+article, a false "small ん" in 漫, a wrong description of the 瀬 component and
+raw dictionary codes in learner text. The first fix made those changes. A fresh
+Claude agent checked it and found one new point: the paraphrase of Daijisen's
+fourth ため sense in 為 ("acting for someone") should be a relation to someone,
+as in 私のためには叔父にあたる. A second fix commit changed that line and one
+connective in 為; a fresh Claude agent and a GPT agent then confirmed it with no
+finding, one after the other. `origin/main` did not move, so there was nothing
+to merge. The [closure record](n1-reviews/batch-145-closure/README.md) keeps the
+reports, prompts, packets, dispositions and limits, including that the
+confirmers were fresh agents and the two Claude confirmation rounds.
+
+Gates at the reviewed snapshot `97168e79` pass: 439 host tests, validation, lint (0 errors; 5
 warnings on untouched, wrapped Dictionary lines of the existing articles 不潔,
 湧く, 潜る, 澄む and 蒸し暑い; the last is not modified and is linted only because the modified 暑 card declares it), quiz safety, link plan, card Metadata entry ids,
 manifest rebuild and budget. The reading-exposure audit reports no production,
@@ -170,7 +189,8 @@ padded-session or one-holder hit. It records ten latent collisions, readings
 that other cards offer but no audited pool can draw: 滅 べつ, 滑 かり, 漫 ばん,
 澄 すみ and み, 瀬 せい, 炎 ぬく and もえる, 為 す and た. Android JVM tests were
 not run (no JDK), and no native or phone acceptance is claimed. Published
-delivery stays **422/1,228** until review closure, CI and ZIP verification.
+delivery stays **422/1,228** until CI and ZIP verification; publication would
+make it **437/1,228**, with **791 remaining**.
 
 ## Batch 144: published
 
