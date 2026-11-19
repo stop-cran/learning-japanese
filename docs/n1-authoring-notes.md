@@ -123,7 +123,14 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 146: review closed, publication pending
+## Batch 146: published
+
+Review-closed at `1c941a7a` and published at `e0fba3a1`. The
+[Validate content run 44575726840](https://github.com/stop-cran/learning-japanese/actions/runs/44575726840)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,147 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-146-publication/provenance.json). Delivery is now
+**452/1,228**, with **776 remaining**.
 
 Fifteen absent frozen members: 煮 熟 牧 狂 狭 献 玄 環 甚 癖 益 盛 盾 眺 睡
 (rows 672–747), the next fifteen under the selection rule announced on
@@ -193,9 +200,7 @@ padded-session or one-holder hit. It records ten latent collisions, counted per
 quiz prompt (nine distinct card-and-reading pairs), readings that other cards
 offer but no audited pool can draw: 牧 ま, まい and もく; 狂 ふれる; 狭 せ; 甚
 じ and いたい; 益 よう; 盛 もり (for both prompts). Android JVM tests were not
-run (no JDK), and no native or phone acceptance is claimed. Published delivery
-stays **437/1,228** until CI and ZIP verification; publication would make it
-**452/1,228**, with **776 remaining**.
+run (no JDK), and no native or phone acceptance is claimed.
 
 ## Batch 145: published
 
