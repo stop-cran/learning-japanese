@@ -123,7 +123,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 142: drafted, independent review pending
+## Batch 142: review closed, publication pending
 
 Fifteen absent frozen members: 挙 振 挿 掌 推 描 提 揮 揺 操 故 敵 斉 斎 斜
 (rows 431–479), the next fifteen under the selection rule announced on
@@ -164,7 +164,27 @@ to the card. On 故 コ the curated card 攻 offers only こう, which the quiz
 skips as a long-vowel variant of the answer, so the random fallback fills one
 slot.
 
-Gates on the draft pass: 439 host tests, validation, lint (0 errors; 6
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `9d393a8f` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+that the meaning-quiz distractors of 揺 and 斎 are unrelated Starter kanji,
+which the collection convention allows and the cards' Notes disclose, so that
+point was declined, and that 斎's summary of Daijisen さい omitted the pen
+names. GPT found that 提's チョウ row claimed no source assigns the reading to
+提 alone, that 斎.md said 斎宮 is not split between the kanji, that 揺's 缶-like
+part has five strokes where 缶 has six, and that three cards had long
+single-paragraph passages. Fix `3a0399bd` rewrote the 提 row on Daijisen's
+▽提▽灯 and its 唐音 label, gave 斎宮 the reading いつき の みや, said that 揺's
+shape has one stroke fewer than 缶, split the paragraphs of 斎, 斉 and 揺,
+added the pen-name use of 斎 and cited JMdict 2751570 on 描. A fresh agent of
+each family confirmed it with no finding, one after the other (Claude's two
+optional notes are deferred or are checker-output quirks). The
+[closure record](n1-reviews/batch-142-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the confirmers were
+fresh agents, a Claude audit flag for two overlapping tool calls and, for both
+initial runs, a recursive listing of the packet and a read of the prompt file.
+
+Gates at `3a0399bd` pass: 439 host tests, validation, lint (0 errors; 6
 warnings on untouched, wrapped Dictionary lines of the existing articles 一斉,
 体操, 振り仮名, 振舞う, 斜 and 平仮名), quiz safety, link plan, card Metadata
 entry ids, manifest rebuild and budget. The reading-exposure audit reports no
@@ -175,8 +195,8 @@ KANJIDIC2 name readings 挙 たか, 振 ふり and 斎 いつ. The older reading
 check still lists the 斎 い HIT, because it ignores slots that curated
 distractors fill; its simulation drew only curated readings. Android JVM
 tests were not run (no JDK), and no native or phone acceptance is claimed.
-Published delivery stays **377/1,228** until review closure, CI and ZIP
-verification.
+Published delivery stays **377/1,228** until CI and ZIP verification;
+publication would make it **392/1,228**, with **836 remaining**.
 
 ## Batch 141: published
 

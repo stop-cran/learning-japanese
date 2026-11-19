@@ -2,7 +2,7 @@
   "batch": 142,
   "base": "ed966c3e4ad280a7463da6e6861e73077c413b0e",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "挙",
     "振",
@@ -136,9 +136,25 @@
       "斜め"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "9d393a8f7bbf04114668b40f84b67a9a4b2ef7e3",
+  "reviewedSnapshot": "3a0399bd8fcdc7258e2eed41236ccc1c0f0369f0",
+  "reviewClosed": [
+    "挙",
+    "振",
+    "挿",
+    "掌",
+    "推",
+    "描",
+    "提",
+    "揮",
+    "揺",
+    "操",
+    "故",
+    "敵",
+    "斉",
+    "斎",
+    "斜"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -147,8 +163,8 @@
     "publishedN1Additions": 371,
     "n2Placements": 6,
     "undelivered": 851,
-    "reviewClosedPendingRecordsWithCards": 377,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 392,
+    "localUnreviewedDrafts": 0,
     "notStarted": 836,
     "overallN1TaskComplete": false
   },
@@ -160,12 +176,46 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "3a0399bd8fcdc7258e2eed41236ccc1c0f0369f0"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "9d393a8f7bbf04114668b40f84b67a9a4b2ef7e3",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "9d393a8f7bbf04114668b40f84b67a9a4b2ef7e3",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "3a0399bd8fcdc7258e2eed41236ccc1c0f0369f0",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "3a0399bd8fcdc7258e2eed41236ccc1c0f0369f0",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude confirmation, optional: the 提 チョウ cell quotes the dense JMdict 唐音 gloss; wording polish for a later pass",
+      "Claude confirmation, optional: quiz-safety.txt says 故 コ has 3/3 curated cards although 攻 offers only こう, which the quiz skips; a checker-output quirk, the random fallback fills one slot (stated in the ledger)"
+    ],
+    "closure": "../n1-reviews/batch-142-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-142-closure/provenance.json",
+    "closureProvenanceSha256": "0513d14acabba542a216a66f310404a0f47ad0bbe9ce3f576147cbf1b673abed",
+    "execution": "All four runs ran one after the other; each confirmation was a fresh agent of the same model family, given the author's statement on its family's initial report and the original packet. confirm-claude's audit flags two overlapping tool calls (max in flight 2, one overlapping start), which its report discloses; every other run had one tool call in flight."
   },
   "gates": {
     "lint": {
@@ -177,9 +227,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 9050,
-      "retainedBytes": 51415067,
-      "inflatedBytes": 51774158,
-      "localZipBytes": 32226698
+      "retainedBytes": 51415449,
+      "inflatedBytes": 51774540,
+      "localZipBytes": 32226868
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -221,7 +271,8 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "3a0399bd8fcdc7258e2eed41236ccc1c0f0369f0",
+    "metadataScan": "meta_scan.py at the fix snapshot: no word named on the 15 cards lacks its JMdict entry id on the card's Metadata line (whole runs of Japanese script with a kanji that equal a JMdict spelling; kana-only and single-kanji words not checked)"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -232,6 +283,12 @@
     "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 挙 キョ, 振 シン, 挿 ソウ, 掌 てのひら, 推 お.す, 描 ビョウ, 提 さ.げる, 揮 ふる.う, 揺 ヨウ, 操 あやつ.る and みさお, 故 ゆえ, 敵 かたき, 斉 そろ.う and 斜 シャ; nine cards quiz only their on reading and six only their kun readings.",
     "Some titles share an English word with existing titles in a different sense (挙 \"raise\" and 育, 養; 振 \"wave\" and 波; 提 \"submit\" and 屈; 故 \"the late\" and 遅, 更; 斉 \"together\" and 双; 斎 \"study\" and 学, 研); these are not excluded from each other's quiz options, and each card has a Notes bullet separating the senses.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the author checked those claims against the session events.",
+    "Both initial runs made one recursive PowerShell listing of their own packet directory (6,593 files, including the repo context corpus) and read their assignment prompt file, which the audits flag as a path outside the packet; confirm-claude's audit flags two overlapping tool calls (max in flight 2), which its report discloses. confirm-gpt's audit has no flag.",
+    "Each confirmation ran as a fresh agent of the same model family, not a later turn of the initial agent; it was handed its family's initial report and the original packet, so it had no memory of its earlier reading. The author declined Claude's C1 (the curated Starter distractors of 揺 and 斎, per the published 脱 and 致 convention) and Claude accepted the decline; GPT's G4 was done only as paragraph splits and GPT accepted that.",
+    "The confirmation mandate covered the changed cards (描 提 揺 斉 斎): the prose of the ten unchanged cards and every word article were not re-read in the confirmation round.",
+    "The two Weblio extracts (提灯 and 斎宮) and the KanjiVG stroke-type list for 缶 and 揺 were produced by the author after the first review and are part of the confirmation packets; GPT also fetched Kanjipedia, Daijisen and the pinned KanjiVG SVG itself.",
+    "origin/main had not moved since the base ed966c3e at closure, so no merge and no integration review were needed."
   ]
 }
