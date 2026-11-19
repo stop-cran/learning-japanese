@@ -123,6 +123,52 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 148: review closed, publication pending
+
+Fifteen absent frozen members: 絞 継 綱 緊 締 緩 緯 縁 縄 縛 縦 織 繕 繰 罰
+(rows 838–867), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: seventeen existing articles each gain one link to a new card.
+Three existing cards (張 慢 修) also change in one remark each: a sentence that
+said the kanji (緊, 緩, 繕) had no card here now links it. `n1_linkplan.py verify`
+checks the article links, and the author's `kanji_remarks.py` checks that these
+are the only existing texts that change and that they change only in those
+remarks. Cards whose senses overlap those of other cards keep each other out of
+their meaning-quiz options where the Notes say so.
+
+Six cards quiz only their on reading (継 ケイ, 緊 キン, 緯 イ, 織 シキ, 繕 ゼン,
+罰 バツ) and nine only their kun reading (絞 しぼ.る, 綱 つな, 締 し.める, 緩
+ゆる.い, 縁 ふち, 縄 なわ, 縛 しば.る, 縦 たて, 繰 く.る), because the other
+readings have no declaring word article yet; they are listed and illustrated,
+not quizzed.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `8408b3a5` one after the other, each without seeing the
+other's work. Claude found minor defects (the 締 okurigana attribution, a
+"quiz tool" sentence and two quoted paraphrases on 締, the 縄 variant form, an
+inexact quoted 織豊時代 gloss, a dangling 罰 cross-reference); GPT returned
+NEEDS FIX for the same 締 attribution, the 縁取る okurigana split, the wording of
+継 sense 1, five exclusions that rest on association only (緊 筋, 罰 犯, 緯 経
+and 織, 綱 科) and a missing 縦 against 経 exclusion. The fixes (`cc286cc3`,
+`4162ea2c`, `04900b9c`) were confirmed by fresh agents: Claude's first
+confirmation found one quoted "bind" left on 締, GPT's first confirmation found
+that 縛 was excluded from 緊 by association only. Both families confirmed the
+final commit, and `origin/main` did not move, so there was nothing to merge.
+The [closure record](n1-reviews/batch-148-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `04900b9c` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings on untouched Dictionary lines of the existing
+articles 綱, 緯度 and 威張る), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records nine latent collisions, readings
+that other cards offer but no audited pool can draw: 締 むすぶ, 縁 よる, 縁 え,
+縁 よし, 縛 いましめる, 縦 はなつ, 縦 ゆるす, 縦 よし and 繰 くり. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
+Published delivery stays **467/1,228** until CI and ZIP verification;
+publication would make it **482/1,228**, with **746 remaining**.
+
 ## Batch 147: published
 
 Review-closed at `886671da` and published at `d93ff39a`. The
