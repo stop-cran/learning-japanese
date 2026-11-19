@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "batch": 145,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "fc9715d41c6780ec70d80c03f02ebecda7528872",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/fc9715d41c6780ec70d80c03f02ebecda7528872",
+  "base": "305763eab81430f26c51446ed0532cc03910ffbb",
+  "initialSnapshot": "845aefbb37e40aeb737f32de8066959968cc2cf6",
+  "reviewedSnapshot": "97168e795cfc47698d2445ec1886be503494b415",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44542347408",
+    "runId": 44542347408,
+    "receiptSha256": "893464778c406196620d77e5f6cbc7ff0a03dbba9c4acbd7e7dff2473bc46abf"
+  },
+  "archive": {
+    "zipSha256": "fe5921479ba9ab63abde7171d8b4637fd97d3c5e8beb2865467e2f5326d793c7",
+    "receiptSha256": "19411f9b4a7ae4e3a7f0bbd4c48e511b21b57f483402b5e37cdb622f6da56133",
+    "verifiedRuntimeHashes": 9117,
+    "contentVersion": "de1d575cfb20ec49",
+    "manifestSha256": "2cf3cfb22f12991cd92413053490aa1b7683804e2c67e09f89262bd8e53a49f7"
+  },
+  "reviewIdentity": "B145 textual review closed on 97168e79 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of 845aefbb; the first Claude confirmation of the first fix e07ab312 found one more minor point (fixed in 97168e79), and the final confirmations of 97168e79 (both reviewers) were run by fresh agents of the same two model families, one after the other, each given its family's earlier report and the original packet (see batch-145-closure). origin/main did not move, so no merge was needed. Published at fc9715d4 as a fast-forward of main. Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 437,
+    "n1Additions": 431,
+    "n2Placements": 6,
+    "remaining": 791,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "10 latent reading collisions (attested readings offered by other cards, counted per quiz prompt; ten distinct card-and-reading pairs) are not drawable in the checked N1, All and Starter pools: 滅 べつ (別), 滑 かり (権, a KANJIDIC2 name reading), 漫 ばん (万 判 晩 板 満 番 盤), 澄 すみ (墨 炭 隅) and み (三 実 巳 御 深 身), 瀬 せい (背), 炎 ぬく (抜 温) and もえる (燃), 為 す (州 巣) and た (手 田).",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools, and no one-holder Starter case exists. The first gate runs showed べつ of 滅 offered by 別 for the メツ prompt, and one-holder padded hits for 滅 (べつ), 漫 (ばん), 為 (す) and a name-only hit for 澄 (すみ), because the original distractors were not Starter cards and left slots to the random fallback; they were replaced by the Starter cards 海 水 火 (滅), 海 水 日 (漫), 海 水 川 (澄) and 黒 魚 火 (為), which fill every slot. The older reading-options check still labels べつ and ばん as HITs because it ignores filled slots; the reading-exposure audit is authoritative (the same labelled-hit precedent as batches 135, 138 and 139 to 144).",
+    "5 lint warnings on existing word articles' Dictionary lines (不潔, 湧く, 潜る, 澄む, 蒸し暑い) are pre-existing and out of scope: each line wraps, so the entry id is on the next line. 蒸し暑い is not modified by this batch; the lint checks it because the modified 暑 card declares it.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. Six cards quiz only their on reading (源 ゲン, 滅 メツ, 滞 タイ, 漫 マン, 潔 ケツ, 災 サイ) and nine only their kun reading (湧 わ.く, 滑 すべ.る, 漬 つ.ける, 潜 もぐ.る, 澄 す.む, 濁 にご.る, 瀬 せ, 炎 ほのお, 為 な.す).",
+    "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the second Claude confirmation covered only the two changed lines and the GPT confirmation the cumulative change, so neither re-read the unchanged cards or any word article beyond 湧く.",
+    "The first Claude confirmation took the 瀬 component from its own knowledge and the Joyo claims from the packet extract; the GPT confirmation checked them against the pinned KanjiVG decomposition and the official Joyo PDF pages.",
+    "The audit of confirm-claude-1 shows one moment with two read-only view calls in flight, although its report says one call per response.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

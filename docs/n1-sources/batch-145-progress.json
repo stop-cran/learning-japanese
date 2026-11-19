@@ -2,7 +2,7 @@
   "batch": 145,
   "base": "305763eab81430f26c51446ed0532cc03910ffbb",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "湧",
     "源",
@@ -139,14 +139,30 @@
     "炎",
     "為"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "湧",
+    "源",
+    "滅",
+    "滑",
+    "滞",
+    "漫",
+    "漬",
+    "潔",
+    "潜",
+    "澄",
+    "濁",
+    "瀬",
+    "災",
+    "炎",
+    "為"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 422,
-    "publishedN1Additions": 416,
+    "publishedPendingRecordsWithCards": 437,
+    "publishedN1Additions": 431,
     "n2Placements": 6,
-    "undelivered": 806,
+    "undelivered": 791,
     "reviewClosedPendingRecordsWithCards": 437,
     "localUnreviewedDrafts": 0,
     "notStarted": 791,
@@ -282,6 +298,13 @@
     "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
     "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the second Claude confirmation covered only the two changed lines and the GPT confirmation the cumulative change, so neither re-read the unchanged cards or any word article beyond 湧く.",
     "The first Claude confirmation took the 瀬 component from its own knowledge and the Joyo claims from the packet extract; the GPT confirmation checked them against the pinned KanjiVG decomposition and the official Joyo PDF pages.",
-    "The audit of confirm-claude-1 shows one moment with two read-only view calls in flight, although its report says one call per response."
-  ]
+    "The audit of confirm-claude-1 shows one moment with two read-only view calls in flight, although its report says one call per response.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "fc9715d41c6780ec70d80c03f02ebecda7528872",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/fc9715d41c6780ec70d80c03f02ebecda7528872",
+    "receipt": "../n1-reviews/batch-145-publication/provenance.json"
+  }
 }
