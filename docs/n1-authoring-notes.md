@@ -123,7 +123,17 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 141: review closed, publication pending
+## Batch 141: published
+
+Review-closed and published at `1889f1d5`. The
+[Validate content run 44407220540](https://github.com/stop-cran/learning-japanese/actions/runs/44407220540)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,997 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-141-publication/provenance.json). The shared ZIP
+verifier first rejected the manifest, because since the Momotaro pilot
+`tools/build_manifest.py` publishes a reading map that the verifier did not
+build; it now builds the manifest the same way. Delivery is now
+**377/1,228**, with **851 remaining**.
 
 Fifteen absent frozen members: 悔 悟 惑 惜 愉 慎 慮 慰 憧 憩 懐 懸 扇 抽 拡
 (rows 365–426), the next fifteen under the selection rule announced on
@@ -192,8 +202,6 @@ shows that every other path equals one parent and that main touches no batch
 file, link target or mention, so no integration review was needed. On the
 merged tree, 439 host tests, validation, lint, the manifest rebuild, the
 budget and every batch audit pass, the audits unchanged from `094a1649`.
-Published delivery stays **362/1,228** until CI and ZIP verification;
-publication would make it **377/1,228**, with **851 remaining**.
 
 ## Batch 140: published
 

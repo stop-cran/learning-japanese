@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "batch": 141,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "1889f1d5eb52071c92c6a83c078f8c800697e390",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/1889f1d5eb52071c92c6a83c078f8c800697e390",
+  "base": "466b7b283661febf8f93fa2d9675ea0a14767cde",
+  "initialSnapshot": "a92d134afd93566ba705b586daf8d7969c683a5f",
+  "reviewedSnapshot": "094a1649552f7773f0a636a104cc797a765bec6e",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44407220540",
+    "runId": 44407220540,
+    "receiptSha256": "6b5d5b8c1e5d38922adbac6479bfa710df239b348f3dcd441887a39bd0f25f34"
+  },
+  "archive": {
+    "zipSha256": "e85d15e11844fb941d2fdeec722ebe31bf5ce26c47ef7f8ac63bd49a6db43951",
+    "receiptSha256": "921cdf999d11d816b1f9e0f14049378addc1928f561b7231272a0001158119a9",
+    "verifiedRuntimeHashes": 8997,
+    "contentVersion": "e746f081400dd921",
+    "manifestSha256": "c330aecdfdc23bb769c118e860d79e77e3550e24ac0ab0bd8580236e2420f193"
+  },
+  "reviewIdentity": "B141 textual review closed on 094a1649 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of a92d134a; the confirmations of 65b47299 and 094a1649 (both reviewers) were later turns of the same two reviewer agents, not fresh agents, and the two confirmations of each round ran at the same time, against the one-active-reviewer rule (see batch-141-closure). Published at 1889f1d5 after the non-rewriting merge a366ac8a with main. Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 377,
+    "n1Additions": 371,
+    "n2Placements": 6,
+    "remaining": 851,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "5 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 悔 け on both kun prompts (offered by 毛; け is the ケ of 懺悔, which Kanjipedia and Daijisen give and KANJIDIC2 does not), and the KANJIDIC2 name readings 慎 みつ, 懐 かね and 扇 おう.",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools.",
+    "2 lint warnings on existing word articles' Dictionary lines (扇風機, 威張る) are pre-existing and out of scope: each line wraps, so the entry id is on the next line.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 悔 カイ and く.いる, 悟 さと.る, 惑 まど.う, 惜 セキ and お.しむ, 愉 たの.しい, 慎 つつし.む, 慰 イ, 憧 ショウ, 憩 いこ.い and いこ.う, 懐 カイ and ふところ, 懸 か.ける, 扇 おうぎ, and 拡 ひろ.がる and ひろ.げる; ten cards quiz only their on reading and five only their kun readings. 扇ぐ, a declaring article, reads 扇 as あお, which is not a KANJIDIC2 reading, so it is not quizzed.",
+    "Some titles share an English word with existing titles in a different sense (憧 \"long for\" and the \"long\" of 久 and 長; 憩 \"take a break\" and the \"take\" of 取 and others or the \"break\" of 壊 and 破; 懐 \"become attached\" and the \"become\" of 凝 and 成); these are not excluded from each other's quiz options.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards, word articles and stroke files as unread that the reports say were read; the author checked those claims against the session events.",
+    "The issue #60 contract asks for serial reviewers with at most one active at any instant, but in both confirmation rounds the Claude and GPT confirmations overlapped in time (21:10:32-21:14:21 and 21:31:40-21:33:27 UTC), as in B137-B140; each worked only from its own packet without the other's reports. From B142 on, confirmations run one after the other.",
+    "confirm-claude made one recursive listing (Get-ChildItem -Recurse -Name) over the snapshot folder of its own packet, which its scope audit flags; it stayed within its allowed packet, and the round-2 prompts forbade recursive listings even inside a packet.",
+    "initial-claude read 張 only through its diff (lines 56-62), read only the changed line of nine word articles (休憩, 愉快, 慎重, 惜しい, 一生懸命, 覚悟, 遠慮, 拡充, 拡張), and parsed the stroke files for keys and stroke counts without visual inspection.",
+    "confirm-gpt checked the front matter of the eleven cards unchanged by fix 1 but did not re-read their bodies; confirm2-claude did not re-read the thirteen cards unchanged by fix 2.",
+    "confirm2-claude's comparison of the check outputs stopped at validate.txt; it did not check the vocabulary, manifest and budget outputs or the QuizBuilder.kt hash, and did not verify the 191-byte and 77-byte budget deltas (the author's checks at 65b47299 and 094a1649 confirm them), the moved Metadata-scan line or the claim that the wording follows 双, 圧 and 訓.",
+    "The freeze replaced an earlier local commit, 99087e7a, before any packet was built, and was amended once only to carry the freeze budget; neither the earlier commit nor the pre-commit check run on the uncommitted fix-1 tree was reviewed or published.",
+    "The reviewers also read Weblio, Kanjipedia (one direct request returned HTTP 500 before the entry was fetched), jisho.org, Wiktionary, two news pages found by a search for 抽斗, the pinned KanjiVG revision and kanjiapi.dev (failed), partly through Python; the scope audits list only web_fetch and web_search calls, and the reports describe these reads.",
+    "The integration merge a366ac8a with main ddc7da27 (the N5 Momotaro reading pilot) had no integration review: no batch file, link target or mention overlaps main's changes and the only conflict was the derived manifest (merge-proof.json). Its gates rerun on the merged tree; the Android JVM tests were not run there either.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

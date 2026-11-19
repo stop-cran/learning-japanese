@@ -2,7 +2,7 @@
   "batch": 141,
   "base": "466b7b283661febf8f93fa2d9675ea0a14767cde",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "悔",
     "悟",
@@ -143,14 +143,30 @@
     "抽",
     "拡"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "悔",
+    "悟",
+    "惑",
+    "惜",
+    "愉",
+    "慎",
+    "慮",
+    "慰",
+    "憧",
+    "憩",
+    "懐",
+    "懸",
+    "扇",
+    "抽",
+    "拡"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 362,
-    "publishedN1Additions": 356,
+    "publishedPendingRecordsWithCards": 377,
+    "publishedN1Additions": 371,
     "n2Placements": 6,
-    "undelivered": 866,
+    "undelivered": 851,
     "reviewClosedPendingRecordsWithCards": 377,
     "localUnreviewedDrafts": 0,
     "notStarted": 851,
@@ -291,7 +307,9 @@
     "confirm2-claude's comparison of the check outputs stopped at validate.txt; it did not check the vocabulary, manifest and budget outputs or the QuizBuilder.kt hash, and did not verify the 191-byte and 77-byte budget deltas (the author's checks at 65b47299 and 094a1649 confirm them), the moved Metadata-scan line or the claim that the wording follows 双, 圧 and 訓.",
     "The freeze replaced an earlier local commit, 99087e7a, before any packet was built, and was amended once only to carry the freeze budget; neither the earlier commit nor the pre-commit check run on the uncommitted fix-1 tree was reviewed or published.",
     "The reviewers also read Weblio, Kanjipedia (one direct request returned HTTP 500 before the entry was fetched), jisho.org, Wiktionary, two news pages found by a search for 抽斗, the pinned KanjiVG revision and kanjiapi.dev (failed), partly through Python; the scope audits list only web_fetch and web_search calls, and the reports describe these reads.",
-    "The integration merge a366ac8a with main ddc7da27 (the N5 Momotaro reading pilot) had no integration review: no batch file, link target or mention overlaps main's changes and the only conflict was the derived manifest (merge-proof.json). Its gates rerun on the merged tree; the Android JVM tests were not run there either."
+    "The integration merge a366ac8a with main ddc7da27 (the N5 Momotaro reading pilot) had no integration review: no batch file, link target or mention overlaps main's changes and the only conflict was the derived manifest (merge-proof.json). Its gates rerun on the merged tree; the Android JVM tests were not run there either.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
   ],
   "integration": {
     "merge": "a366ac8aaf85462c41d7ac39cbea7db4da8584c1",
@@ -320,5 +338,10 @@
       "batchAuditsIdenticalToReviewedSnapshot": true
     },
     "androidJvmTests": "NOT RUN (no JDK on the continuation machine)"
+  },
+  "publication": {
+    "commit": "1889f1d5eb52071c92c6a83c078f8c800697e390",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/1889f1d5eb52071c92c6a83c078f8c800697e390",
+    "receipt": "../n1-reviews/batch-141-publication/provenance.json"
   }
 }

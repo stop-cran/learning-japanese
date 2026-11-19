@@ -48,7 +48,8 @@ def verify(root: Path, commit: str, out_dir: Path) -> dict:
 
     head = git(root, "rev-parse", "HEAD").decode().strip()
     assert head == commit, ("working tree is not at the commit", head, commit)
-    expected = build_manifest(root)
+    # Same call as tools/build_manifest.py main(), which writes the published manifest.
+    expected = build_manifest(root, publish_reading=True)
     assert expected == json.loads((root / "manifest.json").read_text(encoding="utf-8"))
 
     out_dir.mkdir(parents=True, exist_ok=False)
@@ -102,7 +103,7 @@ def verify(root: Path, commit: str, out_dir: Path) -> dict:
         manifest_bytes = payload["manifest.json"]
         assert json.loads(manifest_bytes) == expected
         verified = 0
-        binary = {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}
+        binary = {"images", "audio", "listeningTaskAudio", "listeningTaskImages", "readingImages"}
         for section, entries in expected.items():
             if not isinstance(entries, dict):
                 continue
