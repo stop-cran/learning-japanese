@@ -2,7 +2,7 @@
   "batch": 144,
   "base": "1d262eb60ff8bae674781ce2e7635e002542c36e",
   "governingIssue": 60,
-  "status": "drafted-review-pending",
+  "status": "review-closed-publication-pending",
   "members": [
     "棋",
     "棚",
@@ -112,9 +112,25 @@
       "渋滞"
     ]
   ],
-  "initialSnapshot": null,
-  "reviewedSnapshot": null,
-  "reviewClosed": [],
+  "initialSnapshot": "b073abd8f2ab578f29cf2b5e25f36e02fc1aab58",
+  "reviewedSnapshot": "8db07f740a2071609b29539cc1a29e4420bc43e5",
+  "reviewClosed": [
+    "棋",
+    "棚",
+    "検",
+    "概",
+    "欄",
+    "歓",
+    "殊",
+    "殻",
+    "汁",
+    "沖",
+    "泡",
+    "泣",
+    "淡",
+    "渇",
+    "渋"
+  ],
   "published": [],
   "runtimePublished": false,
   "accounting": {
@@ -123,8 +139,8 @@
     "publishedN1Additions": 401,
     "n2Placements": 6,
     "undelivered": 821,
-    "reviewClosedPendingRecordsWithCards": 407,
-    "localUnreviewedDrafts": 15,
+    "reviewClosedPendingRecordsWithCards": 422,
+    "localUnreviewedDrafts": 0,
     "notStarted": 806,
     "overallN1TaskComplete": false
   },
@@ -136,12 +152,56 @@
     "dictionary": "Digital Daijisen via weblio"
   },
   "review": {
-    "status": "pending",
+    "status": "closed-with-disclosed-limits",
     "mode": "blind-independent-two-family-textual-review",
     "families": [
       "claude-opus-5.5",
       "gpt-6.1-sol"
-    ]
+    ],
+    "fixCommits": [
+      "2be716f0",
+      "8db07f740a2071609b29539cc1a29e4420bc43e5"
+    ],
+    "mergeCommit": "7059712f6fa68717c090c0f091cf6628085d03b5",
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "b073abd8f2ab578f29cf2b5e25f36e02fc1aab58",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "b073abd8f2ab578f29cf2b5e25f36e02fc1aab58",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude-1",
+        "snapshot": "2be716f0",
+        "verdict": "NEEDS FIX"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "8db07f740a2071609b29539cc1a29e4420bc43e5",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "8db07f740a2071609b29539cc1a29e4420bc43e5",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude second confirmation, optional: 欄.md:44 says \"in parentheses\" while 検, 概, 渋 and 渇 say \"in round brackets\"",
+      "Claude first confirmation, optional: \"One example of each:\" in 淡 and 渋 (declined)",
+      "Claude first confirmation, optional: name where the older form of 欄 differs (declined)",
+      "Claude and GPT initial, optional: the 殻 distractors 休 本 木 are easy wrong answers (declined; they keep 貝 かい undrawable)"
+    ],
+    "closure": "../n1-reviews/batch-144-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-144-closure/provenance.json",
+    "closureProvenanceSha256": "5f3ad2ad1737be8eca1bcd958e700b4f00df02dfacd03b47d5d4e7ca9aca1f0a",
+    "integration": "origin/main moved to owner commit 7b48e5da (kanji/手.md and manifest.json only) after review. Signed merge 7059712f; the only conflict was the derived manifest, regenerated. integration/merge-proof.json passes (no overlap with batch files, link targets or batch words), so no integration review was needed.",
+    "execution": "All five runs ran one after the other with one tool call in flight; each confirmation was a fresh agent of the same model family, given the author's statement on its family's latest report and the original packet. confirm-claude-1 found C7 point 3 (欄 \"compatibility form\") and F1 (棚 Metadata lacks 1551120), fixed in the second fix commit 8db07f74; confirm-claude (a fresh agent) and confirm-gpt then confirmed 8db07f74. initial-gpt's audit flags one recursive shell command over packet directories; confirm-gpt's outside-path flag is a false positive; the other runs have no flag."
   },
   "gates": {
     "lint": {
@@ -153,9 +213,9 @@
     "validateErrors": 0,
     "budget": {
       "entries": 9110,
-      "retainedBytes": 51640102,
-      "inflatedBytes": 51999193,
-      "localZipBytes": 32337756
+      "retainedBytes": 51640720,
+      "inflatedBytes": 51999811,
+      "localZipBytes": 32337989
     },
     "vocabularyCheck": "3201/3336",
     "manifestRebuildDiff": false,
@@ -200,7 +260,7 @@
     "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
     "androidJvm": "NOT RUN (no JDK on the continuation machine)",
     "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
-    "snapshot": null
+    "snapshot": "7059712f6fa68717c090c0f091cf6628085d03b5"
   },
   "limits": [
     "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
@@ -211,6 +271,10 @@
     "Some readings on the cards rest on a single dictionary entry or a lean alignment and are labelled source-only or alignment where they appear: 欄 てすり (the おばしま entry 2844081 is mentioned but not added), 殻 コク (船殻 2831954) and バイ, 沖 わく, 渋 シュウ (渋さ has no JMdict entry) and 泡 発泡 ぽう. 滞 has no card, so 渋 names it as plain text.",
     "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options: 概 \"bearing\" (穂), 欄 \"form field\" (体, 形, 状), 沖 \"open sea\" (剖, 爆, 野, 開) and \"rise high\" (高), 淡 \"plain\" (原). No Notes bullet on these cards separates those senses. 泡 and 淡 share the word 淡雪/泡雪 あわゆき (1418470), and 汁 and 渋 may share a kakishibu overlap; neither pair is excluded.",
     "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
-    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run."
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the second Claude confirmation covered only the two changed lines and the GPT confirmation the cumulative change, so neither re-read the unchanged cards or any word article.",
+    "The meaning of the round-bracketed forms in the Joyo table (so-called Kangxi dictionary forms) rests on a secondary source quoting note 6 of the table; the official PDF fetch timed out for the reviewer.",
+    "origin/main moved after review (owner commit 7b48e5da, kanji/手.md and manifest.json only); it was merged without an integration review because the mechanical merge proof shows no overlap with the batch.",
+    "Cosmetic, not applied: 欄.md:44 says \"in parentheses\" while sibling cards say \"in round brackets\"."
   ]
 }

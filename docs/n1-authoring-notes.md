@@ -123,7 +123,7 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 144: drafted, independent review pending
+## Batch 144: review closed, publication pending
 
 Fifteen absent frozen members: 棋 棚 検 概 欄 歓 殊 殻 汁 沖 泡 泣 淡 渇 渋
 (rows 558–631), the next fifteen under the selection rule announced on
@@ -165,7 +165,31 @@ distractors fill every slot and the random fallback never runs; the older
 reading-options check still labels かい a HIT because it ignores filled
 slots, as in earlier batches, and the exposure audit is authoritative.
 
-Gates on the draft pass: 439 host tests, validation, lint (0 errors; 3
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `b073abd8` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+that 棚 said 氷棚 was the only JMdict ほう word (陸棚 りくほう exists) and
+misread the Daijisen ▽ mark (it marks 店, not 棚), that 歓 put the look-alike
+part of 権 on the wrong side, that 淡 called あわ a name-only reading, that the
+rewritten 討 bullet kept a sentence without a referent, that 欄 misquoted the
+おばしま gloss, and that 棋 ご and 沖 ちゅう.する were typed kun without saying
+the other source files them under on. GPT found the 歓 and 棚 points too and
+asked for the dense 殻, 汁 and 渋 reference paragraphs to be split. The first
+fix made those changes; the 殻 distractors 休 本 木 stayed, because they are
+Starter cards that fill every slot and keep 貝 かい undrawable. A fresh Claude
+agent checked it and found two small points: 欄 called the table's bracketed
+form a "compatibility form" where the other cards say "older form", and the
+棚 JMdict entry 1551120 was missing from its Metadata line. A second fix
+commit made both changes, and fresh agents of both families confirmed it with
+no finding, one after the other. After review the owner's commit `7b48e5da`
+(a wording change to the 手 card) reached `main`; it was merged without
+touching any batch file, and a mechanical proof shows no overlap, so no
+integration review was needed. The
+[closure record](n1-reviews/batch-144-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the confirmers were
+fresh agents and the two Claude confirmation rounds.
+
+Gates at the merge `7059712f` pass: 439 host tests, validation, lint (0 errors; 3
 warnings on untouched, wrapped Dictionary lines of the existing articles 戸棚,
 淡水 and 特殊), quiz safety, link plan, card Metadata entry ids, manifest
 rebuild and budget. The reading-exposure audit reports no production,
@@ -174,7 +198,8 @@ It records six latent collisions, readings that other cards offer but no
 audited pool can draw: 欄 わく, 歓 ぶ (a KANJIDIC2 name reading), 殊 け, 殻
 かい, 沖 とぶ and 沖 むなしい. Android JVM tests were not run (no JDK), and no
 native or phone acceptance is claimed. Published delivery stays
-**407/1,228** until review closure, CI and ZIP verification.
+**407/1,228** until CI and ZIP verification; publication would make it
+**422/1,228**, with **806 remaining**.
 
 ## Batch 143: published
 
