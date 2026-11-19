@@ -123,6 +123,58 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 147: review closed, publication pending
+
+Fifteen absent frozen members: 瞬 瞳 矢 砕 礎 秀 秘 稚 稼 稿 穏 穴 笛 粋 糧
+(rows 750–818), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: eighteen existing articles each gain one link to a new card.
+Three existing cards (基 密 透) and three existing word articles (矢印 砕く
+砕ける) also change in one remark each: a sentence that said the kanji had no
+card here now links it or says it has one. `n1_linkplan.py verify` checks the
+article links, and the author's `kanji_remarks.py` checks that these are the
+only existing texts that change and that they change only in those remarks.
+Cards whose senses overlap those of other cards keep each other out of their
+meaning-quiz options where the Notes say so (瞬 against 瞳, 粋 against 秀, 穴
+against 秘 among the new cards).
+
+Eight cards quiz only their on reading (瞬 シュン, 礎 ソ, 秀 シュウ, 秘 ヒ,
+稚 チ, 稿 コウ, 粋 スイ, 糧 リョウ) and seven only their kun reading (瞳 ひとみ,
+矢 や, 砕 くだ.く, 稼 かせ.ぐ, 穏 おだ.やか, 穴 あな, 笛 ふえ), because the
+other readings have no declaring word article yet; they are listed and
+illustrated, not quizzed.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `6a2323e7` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings. They independently
+found three defects: the 秀 mnemonic put 禾 and 乃 side by side, the 粋 mnemonic
+named a full 卒, and the 稚 okurigana split was wrong. Claude also found a
+mnemonic that claimed a vertical stroke in 矢, two inexact quoted titles, and
+over-broad exclusions on 矢 and 砕; GPT found that 穏和 was given the climate
+sense that JMdict restricts to 温和, three exclusions that rest on opposition
+or association (稚 熟, 糧 貯 and 備), and a missing 穴 against 秘 exclusion. The
+fixes (`0df56686`, `99487bb5`) were confirmed by fresh agents; Claude's first
+confirmation found one more omission (静穏 in the Daijisen examples of 穏),
+fixed in `886671da`. Both families confirmed that final commit, and
+`origin/main` did not move, so there was nothing to merge. The
+[closure record](n1-reviews/batch-147-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `886671da` pass: 439 host tests, validation,
+lint (0 errors; 2 warnings on untouched Dictionary lines of the existing
+articles 瞳 and 透明), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records seven latent collisions, readings
+that other cards offer but no audited pool can draw: 矢 さ, 秀 ほ, 稚 わく,
+稼 うえる, 穏 やすらか, 穴 しし and 笛 う. The older reading-options check
+reports one problem, the 穏 prompt おだ.やか with やす.らか (held by 安) as a
+fallback candidate; the three Starter distractors 木 田 花 fill every wrong
+slot, so it cannot be drawn. Android JVM tests were not run (no JDK), and no
+native or phone acceptance is claimed. Published delivery stays
+**452/1,228** until CI and ZIP verification; publication would make it
+**467/1,228**, with **761 remaining**.
+
 ## Batch 146: published
 
 Review-closed at `1c941a7a` and published at `e0fba3a1`. The
