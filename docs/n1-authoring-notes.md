@@ -123,6 +123,58 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 146: drafted, independent review pending
+
+Fifteen absent frozen members: 煮 熟 牧 狂 狭 献 玄 環 甚 癖 益 盛 盾 眺 睡
+(rows 672–747), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. 皇 (row 731) and 眼 (row 746) are skipped:
+their only declaring articles, 天皇 and 眼鏡, align none of their KANJIDIC2
+readings, so no reading could be quizzed. All fifteen pass, so none is set
+aside. No word article is
+added: twenty-three existing articles each gain one link to a new card. One
+existing card also changes in one remark: the 潔 card said 癖 in 潔癖 had no card
+here and now links 癖. `n1_linkplan.py verify` checks the article links, and
+the author's `kanji_remarks.py` checks that 潔 is the only existing card that
+changes and that it changes only in that remark. Cards whose senses overlap
+those of other new cards keep each other out of their meaning-quiz options
+(煮 with 熟); the same is done against existing cards where the Notes say so.
+The [progress file](n1-sources/batch-146-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz only their on reading (熟 ジュク, 牧 ボク, 献 ケン and コン,
+玄 ゲン, 環 カン, 益 エキ, 盾 ジュン, 睡 スイ) and seven only their kun reading
+(煮 に.る, 狂 くる.う, 狭 せま.い, 甚 はなは.だ, 癖 くせ, 盛 も.る and さか.る,
+眺 なが.める), because the other readings have no declaring word article yet;
+they are listed and illustrated, not quizzed. 献 and 玄 record the kun readings
+たてまつ.る and くろ.い as source-only, and 狭 records the on reading コウ as
+Kanjipedia-only. 睡る is, in JMdict, a written form of 眠る ねむる (with ねぶる an
+obsolete kana usage), so 睡 has no word article of its own for its kun readings.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem (熟 こなし, こなす, こなれ, こなれる, じゅくす,
+じゅくする and なれる; 牧 ぼくする; 狂 きょうする and ふれる; 狭 きょうさく,
+せし and せに; 献 けんじる, けんずる, ささげる and まつる; 玄 げんそば; 甚 いたい
+and いたく; 益 えきする; 睡 ねぶたい, ねぶり and ねぶる). On the first gate run,
+a Starter practice session that also borrows one holder card could offer もり
+for 盛 (from 森) because the original distractors 戦 式 店 held only one Starter
+card; 盛 now uses the Starter cards 山 海 店, so the curated distractors fill
+every slot and the random fallback never runs. 煮 and 熟 first excluded each
+other; the exclusion now sits on 煮 only, the repository convention.
+
+Gates on the draft pass: 439 host tests, validation, lint (0 errors; 3
+warnings on untouched, wrapped Dictionary lines of the existing articles 煮る,
+矛盾 and 不潔), quiz safety, link plan, card Metadata entry ids, manifest
+rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records ten latent collisions, counted per
+quiz prompt (nine distinct card-and-reading pairs), readings that other cards
+offer but no audited pool can draw: 牧 ま, まい and もく; 狂 ふれる; 狭 せ; 甚
+じ and いたい; 益 よう; 盛 もり (for both prompts). Android JVM tests were not
+run (no JDK), and no native or phone acceptance is claimed. Published delivery
+stays **437/1,228** until review closure, CI and ZIP verification.
+
 ## Batch 145: published
 
 Review-closed and published at `fc9715d4`. The
