@@ -123,6 +123,92 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 152: review closed, publication pending
+
+Fifteen absent frozen members: 趣 跳 踏 躍 較 載 輝 輩 迫 逸 遂 遣 避 郡 郷
+(rows 1056–1104), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: twenty existing articles each gain one link to a new card,
+and no other line of them changes. Three existing kanji cards change in their
+remarks, four edits in all: 仮's remark now links 遣 in 仮名遣い, 故's links 郷
+in 故郷, and 響 links 郷 in its mnemonic and drops the sentence saying that 郷
+had no card here. No other line of an existing card changes.
+`n1_linkplan.py verify --remarks` checks the article links, and the author's
+`kanji_remarks.py` checks that each existing card changes only by its declared
+remarks. Cards whose senses overlap those of other cards keep each other out of
+their meaning-quiz options where the Notes say so; four pairs of new cards
+declare this on one card only (躍 lists 跳, 郷 lists 郡, 逸 lists 避 and 踏
+lists 遂), and the app applies an exclusion in both directions.
+
+Six cards quiz only their on reading (趣 シュ, 躍 ヤク, 較 カク, 輩 ハイ, 郡
+グン, 郷 キョウ) and nine only their kun reading (跳 は.ねる, 踏 ふ.む, 載 の.る,
+輝 かがや.く, 迫 せま.る, 逸 そ.れる, 遂 つい.に, 遣 -づか.い, 避 さ.ける),
+because the other readings have no declaring word article yet; they are listed,
+not quizzed. 逸 そ.れる and 遂 つい.に are outside the official Joyo table, as
+Kanjipedia marks and both cards say; they are quizzed because the declaring
+articles 逸れる and 遂に use them. 遣's three articles (仮名遣い, 小遣い,
+言葉遣い) all read づかい, the KANJIDIC2 reading -づか.い.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. The first check run found three attested readings that a Starter
+practice session borrowing one holder card could offer as wrong reading
+options: 迫 せる (by 競), 逸 はしる (by 走) and 逸 すぐれる (by 優). 迫's
+distractors 譲 戻 離 therefore became the Starter cards 出 入 休, and 逸's 戻 従
+求 became 会 供 道, so that their curated options fill every wrong reading slot
+in the N1, All and Starter pools. 載 also excludes the Starter card 書
+(“write”), since Kanjipedia's first sense of 載 includes 書きしるす, and 輩
+excludes 人 (“person”), since KANJIDIC2 lists “people” for 輩. A scan of all
+105 pairs of new cards, comparing KANJIDIC2 meanings with titles, added 避 to
+逸's exclusions (KANJIDIC2 lists “evade” for both); it came after a first freeze
+commit, which was amended to `cdd8fd01` before any review. The scan left 踏/逸
+and 踏/避, which meet only in 踏's “evade payment”, and 載/郷, which meet only in
+“place”, unexcluded as different senses. Six JMdict entry ids were added to
+Metadata lines (考え on 趣, 踏破 and 高踏的 on 踏, 躍り上がる and 踊る on 躍, 場所
+on 郷), and 迫 gained the JMdict gloss of 追い詰める.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `cdd8fd01` one after the other, each without seeing
+the other's work. Claude found no defect and made seven optional suggestions.
+GPT returned NEEDS FIX for missing meaning-quiz exclusions: 踏 (“tread;
+trample”) and 遂 (“accomplish; at last”) share “carry out” with 執 (“take hold;
+carry out; cling”) and 施 (“carry out; give; alms”), 遂 also with 履
+(“footwear; put on shoes; carry out”), and 踏 with 遂 through KANJIDIC2's “carry
+through” for 踏; and 載 (“load; publish”) shares carrying with 運 (“carry;
+luck”). The fix `b81299f3` adds these exclusions on the new cards. It also
+applies three of Claude's suggestions: it excludes 押 on 迫 (JMdict's 押す
+sense 5 includes “to press”); it excludes 脱 on 避, 艶 on 輝 and 弾 on 跳; and it
+gives 蛇遣い へびつかい instead of 人形遣い as 遣's -つか.い example, because
+JMdict's priority-tagged reading of 人形遣い is voiced. 華 joins 艶 on 輝, since
+KANJIDIC2 lists “shine” and “luster” for 華. 映 is not excluded on 輝: its
+title “reflect, project” names no sense of 輝, and the existing shine cards 光
+照 華 艶 do not exclude it either. A further exposure run with the Digital
+Daijisen name readings that Claude listed found no new hit. Fresh agents of
+both families confirmed the fix, with no remaining finding. The reviewed
+snapshot was then merged with `origin/main` `e9ca5450`, which adds two N5
+reading texts (`197e91d8`); the merge changes no batch file, and the only
+conflict, `manifest.json`, was regenerated. The
+[closure record](n1-reviews/batch-152-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the merge proof and the limits.
+
+Gates at the reviewed snapshot `b81299f3` pass: 439 host tests, validation,
+lint (0 errors; 7 warnings, none on the new cards, all on existing word
+articles whose Dictionary line cites no JMdict entry id: 比較的, 踏切 and 逸れる,
+which gain a link here, and 平仮名, 振り仮名, 響き and 響く, which declare 仮 or
+響), quiz safety, link plan, kanji remarks, card Metadata entry ids, manifest
+rebuild and budget; they pass again at the merge. The reading-exposure audit
+reports no production, padded-session or one-holder hit for an ordinary
+reading. Two KANJIDIC2
+name-only readings can be offered only in a Starter practice session that also
+borrows a card holding them: 載 のり (by 則, 法 or 準) and 輝 ひかる (by 光). It
+records twenty latent collisions, attested readings that other cards offer but
+no audited pool can draw; one of them, 迫 せる (by 競), is still reported by
+`reading_options.py`, which does not model curated options. Android JVM tests
+were not run (no JDK), and no native or phone acceptance is claimed. Published
+delivery stays **527/1,228** until CI and ZIP verification; publication would
+make it **542/1,228**, with **686 remaining**.
+
 ## Batch 151: published
 
 Review-closed at `15441514` and published at `8235d9b2`. The
