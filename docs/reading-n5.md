@@ -56,3 +56,18 @@ Linked cards at N5 are not listed. These are the exceptions:
 ## Quiz scope
 
 Tier 1 asks where the peach was seen, what came out of it, what was made in the morning, where the pheasant came from, and what the village people say the oni takes. Tier 2 asks event order, what 「これを持ってください」 and 「これは何ですか」 refer to, which animal came first, and what Momotaro did before the dog came. Tier 3 asks the five stated から causes. Tier 4 asks which summary matches the journey, who does not travel, what happens to the dumplings, where the treasure ends up, and how Momotaro changes before he leaves. Distractors are not supported by the passage. They do not depend on outside plot knowledge. The option that the old man ordered the animals to go is unstated rather than directly contradicted. It appears in why-go and why-together.
+
+## N5 follow-up drafts
+
+These are two original, contemporary texts, not adaptations of literary works. They add an everyday personal narrative and a practical community report, rather than a second folktale. Both are worktree additions; they are not yet a release or a claim that the open app acceptance work is complete. `distribution.reviewed` is empty for both, and no jurisdiction-specific rights review has been performed.
+
+| Package | Reading load | Questions | Vocabulary support |
+| --- | --- | --- | --- |
+| `reading/letter-for-grandmother-n5.json` | 1,056 code points, 8 sections, 96 distinct kanji | 20; 5 per tier | 56 annotated occurrences |
+| `reading/community-garden-n5.json` | 1,091 code points, 8 sections, 98 distinct kanji | 20; 5 per tier | 79 annotated occurrences |
+
+The letter follows an ordinary sequence: planning and writing, mailing, a phone call, a visit, and a plan to write again. The garden report covers planting, shared care, harvest, distribution, and the next season. Both use short polite-form prose and everyday actions; questions progress from local recall through reference/order and stated causes to whole-text understanding. The character counts use Python Unicode code points and exclude metadata and English prompts.
+
+Level is a learning target, not official JLPT classification. Some annotated linked terms carry higher levels in existing word-card metadata—for example 窓口 (N2), 住所／祖母／心配 (N4), and 畑／種／芽 (N3). These terms remain in the text with occurrence-specific glosses; card links are provided only where the matching card exists. Unlinked occurrences keep local readings and glosses. The kanji counts are a visible orthography/load measure, not a claim that every character is N5. A few constructions may exceed the simplest N5 material, including 〜ことにする, 〜てくれる, 〜なくてもいい, and 〜ながら; this is a study target, not an official syllabus claim.
+
+Initial blind review of an earlier draft found timeline, feedback-role, gardening wording, vocabulary-support, and question-tier issues; revisions were applied, but the corrected snapshot has not received a further independent review. The acceptance follow-up remains coordinated with [content work item #65](https://github.com/stop-cran/learning-japanese/issues/65) and Android [#139](https://github.com/stop-cran/kanji-cards-android/issues/139) / [#140](https://github.com/stop-cran/kanji-cards-android/issues/140); those app issues are still open.

@@ -64,7 +64,7 @@ or enable an unfinished diagnostic profile; exact package/media approval and pub
 
 ## Reading
 
-Reading packages use schema 1 and the [N5 pilot record](reading-n5.md). They are separate from
+Reading packages use schema 1 and the [N5 authoring record](reading-n5.md), which covers the pilot and follow-up drafts. They are separate from
 `manifest.files`. The catalog CLI passes `publish_reading=True`; the function default remains false.
 An empty `distribution.reviewed` list is not a reviewed jurisdiction. The published note says no
 jurisdiction-specific legal review has been performed.
