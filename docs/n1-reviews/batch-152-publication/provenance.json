@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "batch": 152,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "8d0ba4b8514b9f5680e5c1c8e36db44a2787a21d",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/8d0ba4b8514b9f5680e5c1c8e36db44a2787a21d",
+  "base": "d59c45576d5438036e317dfbbc3c353ea4fc74a6",
+  "initialSnapshot": "cdd8fd016161d54a3d21cbf46450a6219f5bbedb",
+  "reviewedSnapshot": "b81299f38d9d5184b94f7c05e6355ca7de085466",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44824195905",
+    "runId": 44824195905,
+    "receiptSha256": "8b6864f781bb4e82cd7fcdcc0e06ff8d7899aa94a66de4d6dbf0ce0b9b222aaf"
+  },
+  "archive": {
+    "zipSha256": "464f530f78658454d7bf5760ffb1ad6b91b2dd1c55cc8b8878323700d2b1ffd3",
+    "receiptSha256": "8d6b7760d32a6a08cf307c2d9a5d2ae13620fb3274d878782ccdc3f0495cf6c5",
+    "verifiedRuntimeHashes": 9641,
+    "contentVersion": "9326f58c43f62815",
+    "manifestSha256": "4e07fc668dffbc45d94fa45ebf583580950dbbff5856682afee161d32e64d1c6"
+  },
+  "reviewIdentity": "Claude claude-opus-5.5 and GPT gpt-6.1-sol; both CONFIRMED reviewed snapshot b81299f3; four serial runs, one fix commit; merged with origin/main e9ca5450 in 197e91d8 without changing any batch file",
+  "sourceAccounting": {
+    "delivered": 542,
+    "n1Additions": 536,
+    "n2Placements": 6,
+    "remaining": 686,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "20 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 趣 そく (促 側 則 息 数 束 測 職 and two more), 跳 おどる (踊), 躍 てき (敵 滴 的 適), 載 とし (年 歳 齢; KANJIDIC2 name reading), 載 のり (乗 則 法 準 経 芸; KANJIDIC2 name reading), 載 しるす (印 記 識 録), 輝 あき (秋 空), 輝 さき (先), 輝 てる (両 照), 輝 ひ (日 氷 火 灯 陽), 輝 ひかる (光), 迫 せ (瀬 背), 迫 せる (競), 逸 はや (早 速), 逸 いち (市), 逸 はしる (走), 逸 うしなう (失), 逸 すぐれる (優 勝), 遂 つい (終) and 避 かわす (交); 輝 あき, さき, ひ and ひかる, 迫 せ and 逸 はや are KANJIDIC2 name readings, and the others come from the --extra list.",
+    "Two KANJIDIC2 name-only readings can be drawn as wrong reading options only in a Starter practice session that also borrows a specific holder card: 載 のり (KANJIDIC2 name reading): a Starter practice session that also borrows 則, 法 or 準; 輝 ひかる (KANJIDIC2 name reading): a Starter practice session that also borrows 光. Name-only readings are never quizzed.",
+    "reading_options.py reports one problem, 迫 せる (--extra list) offered by 競; it does not model curated slots, and reading_exposure.py shows the reading cannot be drawn in any checked pool, because 迫's curated Starter options 出 入 休 fill every wrong slot.",
+    "7 lint warnings on existing word articles' Dictionary lines (no JMdict entry id) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. Six cards quiz only their on reading (趣 シュ, 躍 ヤク, 較 カク, 輩 ハイ, 郡 グン, 郷 キョウ) and nine only their kun reading (跳 は.ねる, 踏 ふ.む, 載 の.る, 輝 かがや.く, 迫 せま.る, 逸 そ.れる, 遂 つい.に, 遣 -づか.い, 避 さ.ける).",
+    "Two quizzed readings are outside the official Joyo table, selected because the declaring word article uses them: 逸 そ.れる (逸れる) and 遂 つい.に (遂に); Kanjipedia marks both as outside the table, and both cards say so.",
+    "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise. The four pairs of new cards that exclude each other declare it on one card only (躍 lists 跳, 郷 lists 郡, 逸 lists 避, and 踏 lists 遂, added in review), and every exclusion between a new and an existing card is declared on the new card; the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read.",
+    "Several judgments rest partly on live reads of Digital Daijisen and Kanjipedia pages, not on pinned copies in the packet.",
+    "The confirmation reviewers did not re-run the audits; they judged the check outputs that the author ran on the revised snapshot and included in their packets.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}
