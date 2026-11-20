@@ -123,7 +123,18 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
-## Batch 149: review closed, publication pending
+## Batch 149: published
+
+Review-closed at `06b2db87` and published at `5bcf5b30`. The
+[Validate content run 44729410684](https://github.com/stop-cran/learning-japanese/actions/runs/44729410684)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,549 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-149-publication/provenance.json). Delivery is now
+**497/1,228**, with **731 remaining**. The batch commits from `53664748` to
+`5bcf5b30` are signed with a second key of the owner, `AD3E63ADB89CAE86`, which
+is not registered on GitHub, so GitHub shows them as Unverified. Each signature
+is valid locally. History is not rewritten; the receipt commit uses the
+registered key `9D94B9D311BD26A7`.
 
 Fifteen absent frozen members: 翻 翼 脈 腐 臨 臭 興 舌 舎 艶 芝 芽 茂 荘 華
 (rows 875–941), the next fifteen under the selection rule announced on
@@ -181,8 +192,7 @@ can draw: 翼 たすける, 脈 ばく, 臨 み, 舌 ことば, 舎 さ, 舎 お
 芽 じ, 芽 めぐむ, 茂 き, 茂 む, 茂 すぐれる, 荘 そ, 華 わ and 華 げ. 脈 ばく and
 荘 そ stay safe only while their curated Starter options fill every wrong slot.
 Android JVM tests were not run (no JDK), and no native or phone acceptance is
-claimed. Published delivery stays **482/1,228** until CI and ZIP verification;
-publication would make it **497/1,228**, with **731 remaining**.
+claimed.
 
 ## Batch 148: published
 

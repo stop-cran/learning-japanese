@@ -2,7 +2,7 @@
   "batch": 149,
   "base": "090faab2ce29168e9d9bbcee0021e5ecf1d7b798",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "翻",
     "翼",
@@ -127,14 +127,30 @@
     "荘",
     "華"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "翻",
+    "翼",
+    "脈",
+    "腐",
+    "臨",
+    "臭",
+    "興",
+    "舌",
+    "舎",
+    "艶",
+    "芝",
+    "芽",
+    "茂",
+    "荘",
+    "華"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 482,
-    "publishedN1Additions": 476,
+    "publishedPendingRecordsWithCards": 497,
+    "publishedN1Additions": 491,
     "n2Placements": 6,
-    "undelivered": 746,
+    "undelivered": 731,
     "reviewClosedPendingRecordsWithCards": 497,
     "localUnreviewedDrafts": 0,
     "notStarted": 731,
@@ -297,7 +313,10 @@
     "The scope audits do not attribute reads made through shell commands or Python, so they list cards as unread that the reports say were read (all fifteen in both confirmation audits; nine of fifteen in the initial-gpt audit).",
     "Several judgments rest partly on live reads of Digital Daijisen, Kanjipedia and Jisho pages, not on pinned copies in the packet.",
     "Both confirmation packets' CHANGES.md describe all three lint warnings as Dictionary lines without a JMdict entry id; for 翻訳 the warning is that the article has no Dictionary: line.",
-    "Main's articles/compound-sound-changes.md (65b144b3) describes small っ and rendaku as correspondences; the confirmed lines 荘 23 (\"becomes a small っ\") and 舌 43 (\"a context-specific voiced form\") keep the older wording and do not link the article."
+    "Main's articles/compound-sound-changes.md (65b144b3) describes small っ and rendaku as correspondences; the confirmed lines 荘 23 (\"becomes a small っ\") and 舌 43 (\"a context-specific voiced form\") keep the older wording and do not link the article.",
+    "Signatures: the batch commits from 53664748 to the closure commit 5bcf5b30, including the merge 7f3c0922, are signed with another GPG key of the same owner (AD3E63ADB89CAE86) that is not registered with the GitHub account, so GitHub shows them as Unverified (unknown_key); each signature is valid locally. The first candidate 0a2d710c and the receipt commit are signed with the registered key 9D94B9D311BD26A7. No published commit is rewritten.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
   ],
   "integration": {
     "merge": "7f3c0922c7899a4897e975c45ede6414dd727390",
@@ -327,5 +346,10 @@
     },
     "androidJvmTests": "NOT RUN (no JDK on the continuation machine)",
     "supersededLocalMerge": "6f98ae3a (a merge with 47ca9f1c only, discarded when main moved again; never pushed)"
+  },
+  "publication": {
+    "commit": "5bcf5b3037fabf457f42ddf0beb72ef518595029",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/5bcf5b3037fabf457f42ddf0beb72ef518595029",
+    "receipt": "../n1-reviews/batch-149-publication/provenance.json"
   }
 }
