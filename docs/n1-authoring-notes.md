@@ -123,6 +123,67 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 149: review closed, publication pending
+
+Fifteen absent frozen members: 翻 翼 脈 腐 臨 臭 興 舌 舎 艶 芝 芽 茂 荘 華
+(rows 875–941), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: seventeen existing articles each gain one link to a new card.
+Two of them also change in one remark each: the 艶 article loses its sentence
+saying there is no 艶 card, and 芝居 quotes 芝 by the new card's title, "turf;
+lawn". No existing kanji card changes. `n1_linkplan.py verify --remarks` checks
+the article links and remarks, and the author's `kanji_remarks.py` checks that
+no existing card changes. Cards whose senses overlap those of other cards keep
+each other out of their meaning-quiz options where the Notes say so.
+
+Seven cards quiz only their on reading (翻 ホン, 脈 ミャク, 臨 リン, 興 キョウ, 舎
+シャ, 荘 ソウ, 華 カ) and eight only their kun reading (翼 つばさ, 腐 くさ.る, 臭
+くさ.い, 舌 した, 艶 つや, 芝 しば, 芽 め, 茂 しげ.る), because the other
+readings have no declaring word article yet; they are listed and illustrated,
+not quizzed.
+
+A preliminary round of four gpt-6-luna agents reviewed the first candidate
+`0a2d710c`; it used one model family and its confirmations overlapped, so it
+does not count as the contract's review, and its reports are kept as evidence
+only. The author then checked every card claim against the pinned sources,
+dropped or rewrote the claims that could not be verified, narrowed the titles
+of 翼 and 舌, gave 脈 and 荘 Starter distractors and added modern-shape
+mnemonics. Two reviewer agents, Claude (claude-opus-5.5) and GPT
+(gpt-6.1-sol), then reviewed the frozen draft `070b6f69` one after the other,
+each without seeing the other's work. Claude found minor defects (the small っ
+of 別荘 described as coming after ベツ, inconsistent "source-only" labels, 豆腐
+missing from 腐, 艶やか shown only as あでやか, implausible Starter distractors
+on six cards, a quoted English "help" on 翼); GPT returned NEEDS FIX for a
+stale sentence in the 艶 word article, the same 別荘 wording, missing
+exclusions (興 復, 茂 密 and 盛) and two long Notes paragraphs. The fixes
+(`b007a0a6`, and `06b2db87`, which replaced 荘's distractor 京 because it shared
+キョウ with 校) were confirmed by fresh agents of both families, with no
+remaining finding. The reviewed snapshot was then merged with `origin/main`
+`65b144b3` (`7f3c0922`); the merge changes no batch file, and the only
+conflict, `manifest.json`, was regenerated. The
+[closure record](n1-reviews/batch-149-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the merge proof and the limits.
+
+Main's new article on sound changes in compounds describes small っ and
+rendaku as correspondences between readings. Later batches use the
+"corresponds to" wording and link
+[the article](../articles/compound-sound-changes.md); the confirmed 荘 and 舌
+lines keep their older wording.
+
+Gates at the reviewed snapshot `06b2db87` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings on untouched Dictionary lines of the existing
+articles 校舎, 艶 and 翻訳), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget; they pass again at the merge. The reading-exposure
+audit reports no production, padded-session or one-holder hit. It records
+sixteen latent collisions, readings that other cards offer but no audited pool
+can draw: 翼 たすける, 脈 ばく, 臨 み, 舌 ことば, 舎 さ, 舎 おく, 艶 もろ, 艶 よし,
+芽 じ, 芽 めぐむ, 茂 き, 茂 む, 茂 すぐれる, 荘 そ, 華 わ and 華 げ. 脈 ばく and
+荘 そ stay safe only while their curated Starter options fill every wrong slot.
+Android JVM tests were not run (no JDK), and no native or phone acceptance is
+claimed. Published delivery stays **482/1,228** until CI and ZIP verification;
+publication would make it **497/1,228**, with **731 remaining**.
+
 ## Batch 148: published
 
 Review-closed at `04900b9c` and published at `192b40e2`. The
