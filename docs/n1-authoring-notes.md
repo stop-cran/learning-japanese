@@ -123,6 +123,84 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 151: review closed, publication pending
+
+Fifteen absent frozen members: 訴 証 詩 詳 誇 誓 誘 謙 謡 譲 護 豆 豪 貢 貴
+(rows 1003–1043), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: nineteen existing articles each gain one link to a new card,
+and no other line of them changes. Ten existing kanji cards (献 仮 推 縫 憩 熟 級
+長 義 養) each change in one remark: a sentence saying that a kanji had no card
+here now links that kanji's card. Only 献's remark concerns this batch (貢); the
+other nine had gone stale when earlier work added 虚, 薦 and 裁 (batch 150), 舌
+(batch 149), 慮 (batch 141), 及 and 我 (batch 135), 羊 (commit `1359b467`) and
+短 (before the N1 work). 縫's remark shrinks from two lines to one, because its
+second clause only qualified the old statement. No other line of an existing
+card changes. `n1_linkplan.py verify --remarks` checks the article links, and
+the author's `kanji_remarks.py` checks that each existing card changes only by
+its declared remark. Cards whose senses overlap those of other
+cards keep each other out of their meaning-quiz options where the Notes say so;
+two pairs of new cards declare this on one card only (謡 lists 詩, 譲 lists 謙),
+and the app applies an exclusion in both directions.
+
+Eight cards quiz only their on reading (証 ショウ, 詩 シ, 謙 ケン, 謡 ヨウ, 護
+ゴ, 豪 ゴウ, 貢 コウ, 貴 キ) and seven only their kun reading (訴 うった.える, 詳
+くわ.しい, 誇 ほこ.る, 誓 ちか.う, 誘 さそ.う, 譲 ゆず.る, 豆 まめ), because the
+other readings have no declaring word article yet; they are listed, not quizzed.
+The only word article for 護 is 看護婦, which JMdict marks as obsolete; the 護
+card says so, names 看護師 as the current word and gives 保護 as a Joyo example.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and three
+claim auditors re-read the cards against the sources. 証 lost the planned
+exclusions 確 認 券, which had no verifiable overlap, and its distractors became
+罪 刑 損, because the quiz-safety check found 罪 and 罰 excluded from each other.
+譲's first distractors 奪 拾 握 let a Starter practice session that also borrows
+攻 or 責 offer せめる, an attested reading of 譲, so they became 食 行 来. The
+譲 mnemonic now follows KanjiVG's split of 三; the reasons for five exclusions
+(申 on 訴, 徴 on 証, 慢 on 誇, 返 on 譲, and 価 and 値 on 貴) were narrowed to
+what the cited glosses and titles say; smaller fixes aligned quotations on 訴 詩
+誘 豆 and the 誇 mnemonic with their sources; and four JMdict entry ids were
+added to Metadata lines (梵語 on 護, 大いに on 豪, 献じる on 貢, 大切にする on 貴).
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `b624890f` one after the other, each without seeing
+the other's work. Claude found one minor defect: 貴's mnemonic left out
+KanjiVG stroke 5, the horizontal stroke between 中 and 貝. GPT returned NEEDS
+FIX for two quiz options: 誘 excluded 訪 only through the English word "call"
+(JMdict 誘う "to call (for)", 訪 "visit; call on"), though inviting someone is
+not visiting them; and 譲's distractors
+食 行 来 were remote basic actions that gave no credible contrast. The fix
+`15441514` puts 中 on that horizontal stroke, removes 訪 from 誘's exclusions
+and justifies the 呼 exclusion on its own (JMdict 呼ぶ sense 3 "to invite"), and
+replaces 譲's distractors with 買 話 読: buying is the other side of selling,
+and 話 and 読 share the radical 言, but none means handing over. Eleven trial
+sets chose them; every set with a transfer verb that is not a Starter card (奪
+受 借 拾 握) let 攻 or 責 offer せめる again. The fix also applies three optional
+suggestions: 謙's mnemonic accounts for every stroke of 兼, 誓 lists ゼイ
+directly after セイ, and "declaring word" becomes "example word" on five cards.
+Fresh agents of both families confirmed it, with no remaining finding.
+`origin/main` has not moved from the base `b9f0e340`, so no integration merge is
+needed. The [closure record](n1-reviews/batch-151-closure/README.md) keeps the
+reports, prompts, packets, dispositions and limits.
+
+Gates at the reviewed snapshot `15441514` pass: 439 host tests, validation,
+lint (0 errors; 19 warnings, none on the new cards: 4 on the existing card 長,
+13 on existing word articles whose Dictionary line cites no JMdict entry id and
+2 on 看護婦 and 校長, which have no Dictionary line), quiz safety, link plan,
+kanji remarks, card Metadata entry ids, manifest rebuild and budget. The
+reading-exposure audit reports no production, padded-session or one-holder hit
+for an ordinary reading. Two KANJIDIC2 name-only readings can be offered only in
+a Starter practice session, which has no curated options: 豆 ま (by 目 真 間 馬)
+and 豪 ご (by 互 五 午 娯 後 御 悟 期 碁 語 誤 護 降); in the N1 and All pools
+the curated options fill every wrong slot. It records three latent collisions,
+attested readings that other cards offer but no audited pool can draw: 詳 よし,
+譲 せめる and 貴 ぎ. Android JVM tests were not run (no JDK), and no native or
+phone acceptance is claimed. Published delivery stays **512/1,228** until CI
+and ZIP verification; publication would make it **527/1,228**, with **701
+remaining**.
+
 ## Batch 150: published
 
 Review-closed at `7e3c101b` and published at `46d38e1f`. The
