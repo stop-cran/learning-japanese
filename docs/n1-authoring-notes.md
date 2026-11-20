@@ -123,6 +123,65 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 150: review closed, publication pending
+
+Fifteen absent frozen members: 葬 蒔 蓄 薦 虚 融 衆 街 衝 裁 裂 裸 覆 視 覧
+(rows 944–997), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: eighteen existing articles each gain one link to a new card,
+and no other line of them changes. No existing kanji card changes.
+`n1_linkplan.py verify --remarks` checks the article links, and the author's
+`kanji_remarks.py` checks that no existing card changes. Cards whose senses
+overlap those of other cards keep each other out of their meaning-quiz options
+where the Notes say so.
+
+Nine cards quiz only their on reading (葬 ソウ, 薦 セン, 虚 キョ, 融 ユウ, 衆
+シュウ, 衝 ショウ, 裁 サイ, 視 シ, 覧 ラン) and six only their kun reading (蒔
+ま.く, 蓄 たくわ.える, 街 まち, 裂 さ.く, 裸 はだか, 覆 おお.う), because the other
+readings have no declaring word article yet; they are listed, not quizzed.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree. The
+reason for excluding 仰 from 覧 lost an unverifiable "revere" and now rests on
+the overlap of "look up" and "look over"; the 裁 mnemonic was reworded to
+follow KanjiVG; 薦's こも row takes the existing label "kun, outside the
+official table"; and 裂's distractors became 縫 編 畳, because the quiz-safety
+check found its earlier choice 縫 excluded from both 結 and 織. Exclusions
+were added on ten cards (街 区 丁, 衆 団 組 公,
+裁 定 絶 布, 衝 争 戦, 虚 穴, 蒔 苗, 覆 殻, 視 and 覧 捜, 裂 断 絶).
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `2dd9d46b` one after the other, each without seeing
+the other's work. Claude found the cards clean on all four facets and one
+minor defect in the audit evidence: the reading audits labelled readings
+passed with `--extra` as "card text" (they now say "--extra list"). GPT
+returned NEEDS FIX for four exclusions whose stated overlaps do not hold: a
+seedling is not a seed (蒔 苗), cloth is not cutting cloth (裁 布), and looking
+for is not looking at or over (捜 on 視 and 覧). The fix `7e3c101b` removes
+them, restates the 仰 reasons on 視 and 覧, and applies six of Claude's
+optional suggestions: the exclusions 街 径 and 衝 攻, source-exact quotations
+on 虚 and 薦, plain shape descriptions of 鬲 and 𠂉 in the 融 and 覧 mnemonics
+and a simpler 裸 image. Fresh agents of both families confirmed it, with no
+remaining finding. `origin/main` has not moved from the base `c6dbb52e`, so no
+integration merge is needed. The
+[closure record](n1-reviews/batch-150-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at the reviewed snapshot `7e3c101b` pass: 439 host tests, validation,
+lint (0 errors; 4 warnings on untouched Dictionary lines of the existing
+articles 公衆, 葬式, 蓄える and 街角), quiz safety, link plan, card Metadata
+entry ids, manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit for an ordinary reading. 街's
+name-only reading また could be offered by 復 only in a Starter practice
+session that borrows 復; in the N1 and All pools 街's curated options 橋 庭 池
+fill every wrong slot. It records four latent collisions, all name-only
+readings that other cards offer but no audited pool can draw: 蒔 まい, 蒔 まき,
+街 また and 視 み. Android JVM tests were not run (no JDK), and no native or
+phone acceptance is claimed. Published delivery stays **497/1,228** until CI
+and ZIP verification; publication would make it **512/1,228**, with **716
+remaining**.
+
 ## Batch 149: published
 
 Review-closed at `06b2db87` and published at `5bcf5b30`. The
