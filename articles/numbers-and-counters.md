@@ -36,6 +36,9 @@ Learn sound changes with the whole number: 八本 can be はっぽん or はち�
 such as 三十歳. The answer screen lists the spellings and readings accepted for
 that exact expression.
 
+For a comparison with sound changes in ordinary words, see
+[sound changes in compounds](compound-sound-changes.md); counter readings must still be learned by expression.
+
 **歳 / 才** counts age. 歳 is the usual full spelling and 才 a common simpler one.
 It is valid for young children too: 一歳（いっさい）, 四歳（よんさい）,
 八歳（はっさい）and 十歳（じゅっさい／じっさい）are all correct.

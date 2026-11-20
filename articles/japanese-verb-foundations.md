@@ -92,6 +92,9 @@ For the basic plain past, the following て／で endings correspond to た／�
 **行く（いく）, go, is the important exception here: 行って／行った.**
 Do not turn it into 行いて／行いた. The table's godan-る rule does not apply to ichidan 食べる.
 
+The small っ in 待って is a verb-form pattern, distinct from the compound readings
+discussed in [sound changes in compounds](compound-sound-changes.md).
+
 > 駅まで歩いて、電車に乗りました。  
 > えきまであるいて、でんしゃにのりました。  
 > I walked to the station and took the train.
