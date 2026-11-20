@@ -7,7 +7,8 @@ The second content batch expands the collection to **200 tagged cards** and seve
 The subsequent ぶかぶか addition brought the collection to **201 tagged cards**.
 Later N2 additions どっと and ぶつぶつ brought the collection to **203 tagged cards**;
 the expansion inventory at `af451575` reconciles both without changing their identities or levels.
-The subsequent みっちり and のびのび cards bring the collection to **205 tagged cards**, without adding Grammar exercises.
+The subsequent みっちり and のびのび cards brought the collection to **205 tagged cards**, without adding Grammar exercises.
+The first ten new cards bring the working tree to **215 tagged cards**. Their draft practice has 22 exercises across とろとろ and nine of the new cards; the other 90 candidates are not yet integrated.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
@@ -115,7 +116,7 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 205 tagged cards, retaining the two historical 100-word groups
+The overview links to all 215 current tagged cards, retaining the two historical 100-word groups
 and listing later additions separately. The focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.

@@ -54,6 +54,9 @@ Handakuten marks /p/ in ぱ, ぴ, ぷ, ぺ, ぽ. Despite its traditional name �
 /p/ is **not a "half-voiced" consonant**. Nor does it mean a sensation must be halfway
 between the corresponding h- and b-words.
 
+For voicing and /p/ in a different setting, see
+[sound changes in compounds](compound-sound-changes.md).
+
 Vowels, long sounds, and consonants can contribute to an impression, but avoid rules such as
 "い always means small" or "voiced always means loud." The lexical meaning and actual sentence
 remain the evidence.
