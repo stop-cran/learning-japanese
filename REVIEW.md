@@ -82,6 +82,13 @@ answer. The original next-100 cards, illustrations and vocabulary annotations re
 separately recorded pending review and owner-acceptance status; the guide review does not
 clear those gates or establish native-speaker certification or learning effectiveness.
 
+In a subsequent scoped vocabulary review of the 100 cards and 203 exercises at
+`9766dbd5c97b75747fa980b692b609f9edeb596b`, a reviewer found that the ねちねち
+card's English supplied an unspecified person. The card and matching exercise wording now
+avoid naming a target. Reviewer model families were unavailable, and the 203 exercise
+vocabulary annotations remain absent and pending; this fix does not clear the batch's
+separate review or illustration-acceptance gates.
+
 ## Conversation endings and discourse links: independent review and refinement (2026-10-23 UTC)
 
 **Snapshot and scope:** `4c06f9941108bc22900bb0d91f0149ec97a8903d` plus
