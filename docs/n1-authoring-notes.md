@@ -202,8 +202,9 @@ could give Kanjipedia's 卑見. That confirmation once had two read-only calls
 in flight, and its report's statement that every response made one call is
 inaccurate on that point; the closure discloses this.
 
-After review, the owner's commit `2cb17a36` (N5 reading support:
-`docs/reading-n5.md`, two reading files and the manifest) reached `main`. The
+After the batch's base `6cbc14fe` and before the freeze, the owner's commit
+`2cb17a36` (N5 reading support: `docs/reading-n5.md`, two reading files and
+the manifest) reached `main`; the batch was merged with it after review. The
 signed merge `37c71f81` regenerated the derived manifest, its only conflict,
 and a mechanical proof shows that main changed no batch file or link target
 and that none of the non-derived files it changed mentions a batch kanji or
