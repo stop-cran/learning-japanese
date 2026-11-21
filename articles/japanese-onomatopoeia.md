@@ -139,6 +139,13 @@ The collection now contains **305 tagged word cards**. The ぶかぶか addition
 later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり, のびのび and the one hundred new cards below. They are listed here without
 changing the original two 100-word groups or their existing card identities.
 
+The latest selection has five thematic companions: [fit and disorder](onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](onomatopoeia-behaviour-and-reactions.md),
+[light movement and progress](onomatopoeia-light-movement-and-progress.md),
+[body and texture](onomatopoeia-body-and-texture.md), and
+[food and water](onomatopoeia-food-and-water.md). Its Grammar cohorts mix themes; each
+links to a best-fit starting guide and the guides link to one another.
+
 | Scene | Card |
 | --- | --- |
 | Clothes and shoes that are too large | [ぶかぶか / ブカブカ](../words/ぶかぶか.md) — too big and loose to fit; not the same as soft, cushiony ふかふか |

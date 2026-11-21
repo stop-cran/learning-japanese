@@ -102,6 +102,63 @@ See [motion, voices and sounds](../articles/onomatopoeia-motion-and-sound.md) fo
 These additions do not resolve every historical whole-corpus quiz ambiguity or imply free substitution
 between every construction using the paired words.
 
+### Next 100: selected comparison pairs
+
+These pairs are starting points for the cited guides, not automatic quiz-exclusion cliques.
+Shared forms and overlapping senses do not imply unrestricted substitution.
+The guide review added direct exclusions where the displayed English titles overlap; they
+protect individual pairs in both quiz directions, not every combination in a family.
+
+| Candidates | Guide |
+| --- | --- |
+| [ふわり](../words/ふわり.md), [ふわっと](../words/ふわっと.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ふわり](../words/ふわり.md), [ふわふわ](../words/ふわふわ.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ふわっと](../words/ふわっと.md), [ふわふわ](../words/ふわふわ.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ころり](../words/ころり.md), [ころころ](../words/ころころ.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ちらっと](../words/ちらっと.md), [ちらちら](../words/ちらちら.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ふらっと](../words/ふらっと.md), [ふらふら](../words/ふらふら.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ひょっこり](../words/ひょっこり.md), [ひょこひょこ](../words/ひょこひょこ.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ひょっこり](../words/ひょっこり.md), [ひょいと](../words/ひょいと.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [うねうね](../words/うねうね.md), [くねくね](../words/くねくね.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ちょろちょろ](../words/ちょろちょろ.md), [たらたら](../words/たらたら.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [ぞろぞろ](../words/ぞろぞろ.md), [うじゃうじゃ](../words/うじゃうじゃ.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [こつこつ](../words/こつこつ.md), [みっちり](../words/みっちり.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [すらすら](../words/すらすら.md), [すいすい](../words/すいすい.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [じんわり](../words/じんわり.md), [ほんのり](../words/ほんのり.md) | [light movement and progress](../articles/onomatopoeia-light-movement-and-progress.md) |
+| [きっかり](../words/きっかり.md), [きっちり](../words/きっちり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [かっちり](../words/かっちり.md), [がっちり](../words/がっちり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [がっしり](../words/がっしり.md), [しっかり](../words/しっかり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [しっくり](../words/しっくり.md), [すんなり](../words/すんなり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [ぴたっと](../words/ぴたっと.md), [ぴったり](../words/ぴったり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [ぎゅっと](../words/ぎゅっと.md), [ぎゅうぎゅう](../words/ぎゅうぎゅう.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [びっしり](../words/びっしり.md), [ぎっしり](../words/ぎっしり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [きちきち](../words/きちきち.md), [ぎっしり](../words/ぎっしり.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [くしゃくしゃ](../words/くしゃくしゃ.md), [ぐしゃぐしゃ](../words/ぐしゃぐしゃ.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [ぐちゃぐちゃ](../words/ぐちゃぐちゃ.md), [ごちゃごちゃ](../words/ごちゃごちゃ.md) | [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md) |
+| [もじもじ](../words/もじもじ.md), [うじうじ](../words/うじうじ.md) | [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md) |
+| [うじうじ](../words/うじうじ.md), [くよくよ](../words/くよくよ.md) | [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md) |
+| [もたもた](../words/もたもた.md), [ぐずぐず](../words/ぐずぐず.md) | [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md) |
+| [せかせか](../words/せかせか.md), [あたふた](../words/あたふた.md) | [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md) |
+| [へらへら](../words/へらへら.md), [にやにや](../words/にやにや.md) | [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md) |
+| [ぎくしゃく](../words/ぎくしゃく.md), [ぎすぎす](../words/ぎすぎす.md) | [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md) |
+| [よろよろ](../words/よろよろ.md), [ふらふら](../words/ふらふら.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [へなへな](../words/へなへな.md), [ぐったり](../words/ぐったり.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [ぱちくり](../words/ぱちくり.md), [ぱっちり](../words/ぱっちり.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [すらり](../words/すらり.md), [すらすら](../words/すらすら.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [ぶよぶよ](../words/ぶよぶよ.md), [ぷにぷに](../words/ぷにぷに.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [ぼさぼさ](../words/ぼさぼさ.md), [もじゃもじゃ](../words/もじゃもじゃ.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [もじゃもじゃ](../words/もじゃもじゃ.md), [ふさふさ](../words/ふさふさ.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [ごわごわ](../words/ごわごわ.md), [がさがさ](../words/がさがさ.md) | [body and texture](../articles/onomatopoeia-body-and-texture.md) |
+| [ほろほろ](../words/ほろほろ.md), [ぽろぽろ](../words/ぽろぽろ.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [ほろほろ](../words/ほろほろ.md), [ぼろぼろ](../words/ぼろぼろ.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [ぽろぽろ](../words/ぽろぽろ.md), [ぼろぼろ](../words/ぼろぼろ.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [べとべと](../words/べとべと.md), [べたべた](../words/べたべた.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [べったり](../words/べったり.md), [べたべた](../words/べたべた.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [びちゃびちゃ](../words/びちゃびちゃ.md), [ぽちゃぽちゃ](../words/ぽちゃぽちゃ.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [びちゃびちゃ](../words/びちゃびちゃ.md), [びしょびしょ](../words/びしょびしょ.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [だぶだぶ](../words/だぶだぶ.md), [ぶかぶか](../words/ぶかぶか.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+| [ゆるゆる](../words/ゆるゆる.md), [ぶかぶか](../words/ぶかぶか.md) | [food and water](../articles/onomatopoeia-food-and-water.md) |
+
 ### Knowing, learning, perception, and communication
 
 | ID | Candidates | Tags | Question to refine |

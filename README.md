@@ -496,10 +496,15 @@ record the expansion's exact outputs, owner approval and remaining device-integr
 
 ## Onomatopoeia collection
 
-The [201-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
+The [305-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
 [second 100](articles/japanese-onomatopoeia.md#second-100-word-cards), grouped by everyday situation.
 The second batch adds 97 cards and enriches three existing ones, plus three comparison guides.
 Later additions are listed separately, beginning with [ぶかぶか / ブカブカ](words/ぶかぶか.md), for oversized clothing or shoes.
+The latest 100 have guides to [fit and disorder](articles/onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](articles/onomatopoeia-behaviour-and-reactions.md),
+[movement and progress](articles/onomatopoeia-light-movement-and-progress.md),
+[body and texture](articles/onomatopoeia-body-and-texture.md), and
+[food and water](articles/onomatopoeia-food-and-water.md).
 Cards carry the `onomatopoeia` tag, a broad category such as
 `giongo`, `giseigo`, or `gitaigo`, and a form tag where applicable. Categories can overlap by sense;
 these tags are not new word types or JLPT levels. Existing word IDs and sourced level labels are retained.
@@ -508,7 +513,7 @@ The app has an Onomatopoeia stack with the normal word quizzes. Eligible named s
 support both picture-to-word and word-to-picture quizzes; article-only scenes remain visible in the article.
 The Onomatopoeia stack includes
 tagged words independently of JLPT level; unlevelled words also remain in All rather than a numbered JLPT stack.
-All 201 tagged words have scene catalogs, with 397 illustrations in total. The ぷにぷに scenes pair
+The earlier 201-word collection had scene catalogs with 397 illustrations. The ぷにぷに scenes pair
 a duck-shaped squishy toy with a cat's soft paw pad, showing the texture in inanimate material and living tissue.
 See the [collection and source notes](docs/onomatopoeia.md).
 

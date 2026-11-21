@@ -8,7 +8,11 @@ The subsequent ぶかぶか addition brought the collection to **201 tagged card
 Later N2 additions どっと and ぶつぶつ brought the collection to **203 tagged cards**;
 the expansion inventory at `af451575` reconciles both without changing their identities or levels.
 The subsequent みっちり and のびのび cards brought the collection to **205 tagged cards**, without adding Grammar exercises.
-The first ten new cards bring the working tree to **215 tagged cards**. Their draft practice has 22 exercises across とろとろ and nine of the new cards; the other 90 candidates are not yet integrated.
+The next 100 cards bring the collection to **305 tagged cards**. Their draft practice comprises
+203 exercises in 11 sets. The [source ledger](onomatopoeia-next-100-sources.json) and
+[JMdict capture](onomatopoeia-next-100-jmdict.json) record the selected senses and exercises;
+independent linguistic, editorial and exercise vocabulary reviews remain pending. The new
+illustrations are article-only pending owner acceptance.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
@@ -116,8 +120,15 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 215 current tagged cards, retaining the two historical 100-word groups
-and listing later additions separately. The focused
+The overview links to all 305 current tagged cards, retaining the two historical 100-word groups
+and listing later additions separately. Five new guides cover
+[fit and disorder](../articles/onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md),
+[movement and progress](../articles/onomatopoeia-light-movement-and-progress.md),
+[body and texture](../articles/onomatopoeia-body-and-texture.md), and
+[food and water](../articles/onomatopoeia-food-and-water.md). Each mixed Grammar cohort
+points to a best-fit guide, with links to the others; exercise identities are unchanged.
+The earlier focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.
 Confusable pairs are recorded in [the inventory](confusable-words.md).

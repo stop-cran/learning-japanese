@@ -35,6 +35,33 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Next-100 onomatopoeia guides: bounded review (2026-11-21)
+
+The shared initial staged tree was `4889fda7d106564c07d0463adb322da3f4a8164d`, based
+on `0638544ce1967ccec58ca7f9208c51ce8eaf4f8d`. Three independently prompted, facet-split
+reviewers read all five new guides. The accuracy reviewer also checked the sound-pattern
+delta and selected senses against the batch's JMdict capture and dictionary entries;
+the consistency reviewer checked the 100-card coverage, 11 Grammar links, source
+navigation, manifest and quiz labels; the comprehension reviewer checked the five guides
+and mixed-cohort navigation. All three reported scoped coverage CLEAN.
+
+The accuracy and comprehension reviewers independently identified an awkward translation
+of the ほろほろ food example. The comprehension reviewer also identified awkward English
+in the もじもじ example. Both were revised and both reviewers confirmed their applicable
+fixes on staged tree `27c694074e52bf438352875ae910122288e0da65`. The consistency reviewer
+identified overlapping quiz labels without protections; 25 direct exclusion references were
+added across 24 cards, and the original reviewer checked their targets, pairwise support,
+and absence of distractor conflicts on that revised tree. These findings are resolved in
+their assigned scopes. The updated cards also add reciprocal links for the comparison pairs;
+their lexical definitions were not rewritten.
+
+The runtime did not expose the reviewers' actual model identities or families, so the
+required three-family independence is **unverified**, not a passed publication gate.
+The reviewers did not test the Android quiz builder or independently review every exercise
+answer, and the original next-100 cards, illustrations and vocabulary annotations retain
+their separately recorded pending review and owner-acceptance status. These checks do not
+establish native-speaker certification or learning effectiveness.
+
 ## Conversation endings and discourse links: independent review and refinement (2026-10-23 UTC)
 
 **Snapshot and scope:** `4c06f9941108bc22900bb0d91f0149ec97a8903d` plus
