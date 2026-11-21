@@ -52,6 +52,9 @@ also records their dictionary identities, snapshot hashes, inspection dates and 
 The later どっと and ぶつぶつ cards use entries 1009210 and 1011200 respectively. Their complete
 families and selected Grammar uses are preserved in the expansion ledger; the unrelated
 loanword ドット is not substituted for the sudden-burst identity.
+Their later pictures show a crowd rushing in, muttering, and small skin bumps. These three
+scenes are article-only pending owner visual review; prompts and observations are in the
+named-scene record. A still cannot uniquely establish the sudden rush or the sound of muttering.
 
 The original batch records identify the inspected local JMdict snapshot by file hashes. Its upstream release date
 has not been established; it is not asserted to be the same snapshot as the earlier
