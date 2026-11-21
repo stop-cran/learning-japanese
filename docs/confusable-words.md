@@ -108,6 +108,10 @@ These pairs are starting points for the cited guides, not automatic quiz-exclusi
 Shared forms and overlapping senses do not imply unrestricted substitution.
 The guide review added direct exclusions where the displayed English titles overlap; they
 protect individual pairs in both quiz directions, not every combination in a family.
+Additional pairwise title protections: きちきち/びっしり, だぶだぶ/ゆるゆる,
+かっちり/きっちり, がっちり/しっかり, しっくり/ぴったり,
+すんなり/すらすら, すんなり/すいすい, ひょろひょろ/よろよろ and
+ひょろひょろ/ふらふら.
 
 | Candidates | Guide |
 | --- | --- |

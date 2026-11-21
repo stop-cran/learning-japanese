@@ -5,10 +5,16 @@ matter: do not treat a brief English label as an objective personality diagnosis
 [body and texture](onomatopoeia-body-and-texture.md) and
 [movement and progress](onomatopoeia-light-movement-and-progress.md).
 
+The practice cohorts mix themes. Find [precise fit, density and disorder](onomatopoeia-fit-and-disorder.md),
+[movement, progress and swarms](onomatopoeia-light-movement-and-progress.md),
+[bodies and surfaces](onomatopoeia-body-and-texture.md), or
+[food, wetness and loose fit](onomatopoeia-food-and-water.md) in the other guides.
+This page covers behaviour and reactions.
+
 ## Hesitation, haste and pressure
 
-質問したいのに、彼はもじもじしていた。  
-*He wanted to ask a question, but kept shifting nervously.*
+子（こ）どもは恥（は）ずかしがってもじもじしていた。  
+*The child fidgeted shyly.*
 
 [もじもじ](../words/もじもじ.md) describes bashful or hesitant fidgeting.
 [うじうじ](../words/うじうじ.md) can describe indecisive worrying;
@@ -27,8 +33,8 @@ The drills use もじもじする, じたばたする and たじたじする, bu
 
 ## What the observer conveys
 
-彼はちゃっかり窓際の席を取った。  
-*He shrewdly secured a window seat.*
+弟（おとうと）はちゃっかり最後（さいご）のケーキを取（と）った。  
+*My younger brother shrewdly took the last piece of cake.*
 
 [ちゃっかり](../words/ちゃっかり.md) can imply shrewdly securing an advantage; the
 speaker's attitude depends on context. [のこのこ](../words/のこのこ.md) can portray
@@ -43,8 +49,8 @@ break or refusal, rather than a person's entire character.
 
 ## Relations and reactions
 
-誤解のあと、二人の関係がぎくしゃくした。  
-*After the misunderstanding, their relationship became strained.*
+二人（ふたり）はけんかの後（あと）、ぎくしゃくしている。  
+*After their argument, the two are awkward with each other.*
 
 [ぎくしゃく](../words/ぎくしゃく.md) can describe awkward movement or strained
 relations. [ぎすぎす](../words/ぎすぎす.md) can describe a tense, unfriendly atmosphere.

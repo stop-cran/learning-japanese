@@ -4,10 +4,16 @@ These descriptions select a sensation or appearance; they are not medical diagno
 objective judgments about a person's body. For food and liquid textures, see
 [food, water and texture](onomatopoeia-food-and-water.md).
 
+The practice cohorts mix themes. Find [precise fit, density and disorder](onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](onomatopoeia-behaviour-and-reactions.md),
+[movement, progress and swarms](onomatopoeia-light-movement-and-progress.md), or
+[food, wetness and loose fit](onomatopoeia-food-and-water.md) in the other guides.
+This page covers bodies and surfaces.
+
 ## Unsteadiness and physical reactions
 
-回転遊具から降りると、頭がくらくらした。  
-*After getting off the spinning ride, I felt dizzy.*
+熱（ねつ）で頭（あたま）がくらくらする。  
+*My head feels dizzy from the fever.*
 
 [くらくら](../words/くらくら.md) can describe dizziness.
 [がくがく](../words/がくがく.md) can describe shaking knees or chattering teeth.
@@ -25,8 +31,8 @@ The sentence does not establish a medical cause.
 
 ## Eyes and bodies
 
-知らせを聞いて、彼は目をぱちくりさせた。  
-*On hearing the news, he blinked in surprise.*
+大（おお）きな犬（いぬ）を見（み）て、妹（いもうと）は目（め）をぱちくりした。  
+*My younger sister blinked in surprise at the large dog.*
 
 [ぱちくり](../words/ぱちくり.md) can describe blinking in surprise;
 [ぱっちり](../words/ぱっちり.md) can describe wide-open, bright eyes. The
@@ -45,8 +51,8 @@ descriptions can overlap, and tone depends on what is being described.
 
 ## Hair, edges and textures
 
-風で髪がぼさぼさになった。  
-*The wind made my hair messy.*
+髪（かみ）をとかさず、ぼさぼさのまま学校（がっこう）に行（い）った。  
+*I went to school without combing my messy hair.*
 
 [ぼさぼさ](../words/ぼさぼさ.md) can describe untidy hair.
 [もじゃもじゃ](../words/もじゃもじゃ.md) can describe shaggy hair or a beard;
@@ -58,6 +64,8 @@ paper; compare [ぐしゃぐしゃ](../words/ぐしゃぐしゃ.md) in
 
 [ごわごわ](../words/ごわごわ.md) describes a stiff, coarse texture;
 [がさがさ](../words/がさがさ.md) can describe rough, dry skin or a rustling sound.
+[ぷりぷり](../words/ぷりぷり.md) has both a springy food texture and an angry-manner
+use; see [food and water](onomatopoeia-food-and-water.md#soft-food-crisp-food-and-bubbles).
 [ぎざぎざ](../words/ぎざぎざ.md) describes a jagged or serrated edge, rather than
 the surface feel of cloth. [くっきり](../words/くっきり.md) can describe an outline
 standing out clearly; clarity of outline does not require a jagged edge.

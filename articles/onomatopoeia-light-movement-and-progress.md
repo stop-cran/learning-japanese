@@ -4,10 +4,16 @@ The same action can be described from different angles: how it moves, how it beg
 much effort it took. These examples are not a promise that every similar-looking word can
 replace another. For visible form families, see [sound patterns](onomatopoeia-sound-patterns.md).
 
+The practice cohorts mix themes. Find [precise fit, density and disorder](onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](onomatopoeia-behaviour-and-reactions.md),
+[bodies and surfaces](onomatopoeia-body-and-texture.md), or
+[food, wetness and loose fit](onomatopoeia-food-and-water.md) in the other guides.
+This page covers movement, progress and swarms.
+
 ## A brief movement or a repeated one
 
-花びらが一枚、ふわりと落ちた。  
-*A single petal fell gently.*
+猫（ねこ）がふわりと飛（と）び降（お）りた。  
+*The cat jumped down lightly.*
 
 [ふわり](../words/ふわり.md) and [ふわっと](../words/ふわっと.md) both have light,
 soft movement uses; [ふわふわ](../words/ふわふわ.md) can describe floating or a fluffy
@@ -20,8 +26,8 @@ The final と of ふわっと is part of the word; ふわりと uses a separate 
 [ちらちら](../words/ちらちら.md) has intermittent or flickering uses. Compare the
 actual scenes rather than assuming that repetition always counts separate actions.
 
-散歩の途中で、ふらっと店に入った。  
-*While out walking, I casually dropped into a shop.*
+週末（しゅうまつ）にふらっと旅（たび）に出（で）た。  
+*I went on an unplanned trip over the weekend.*
 
 [ふらっと](../words/ふらっと.md) can depict an unplanned or casual action.
 [ふらふら](../words/ふらふら.md) can describe unsteady movement, among other uses;
@@ -52,8 +58,8 @@ it does not require the absolute absence of sound.
 
 ## Working steadily or moving ahead
 
-毎朝こつこつ単語を復習する。  
-*I steadily review vocabulary every morning.*
+彼（かれ）はこつこつ模型（もけい）を作（つく）った。  
+*He patiently built a model.*
 
 [こつこつ](../words/こつこつ.md) foregrounds steady effort;
 [じっくり](../words/じっくり.md) can describe taking time to consider something
@@ -65,6 +71,8 @@ or encourage people to act without hesitation.
 [ぐんぐん](../words/ぐんぐん.md) can describe vigorous or rapid progress;
 [すらすら](../words/すらすら.md) can describe answering or reading smoothly.
 Compare [すいすい](../words/すいすい.md), which also has smooth-progress uses.
+Similar-looking [すらり](../words/すらり.md) can instead describe a slender figure;
+see [body and texture](onomatopoeia-body-and-texture.md).
 [じんわり](../words/じんわり.md) can describe warmth gradually spreading, and
 [ほんのり](../words/ほんのり.md) a faint scent or color: gradual development and
 slight degree are distinct questions.

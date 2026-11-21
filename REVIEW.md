@@ -55,12 +55,32 @@ and absence of distractor conflicts on that revised tree. These findings are res
 their assigned scopes. The updated cards also add reciprocal links for the comparison pairs;
 their lexical definitions were not rewritten.
 
-The runtime did not expose the reviewers' actual model identities or families, so the
-required three-family independence is **unverified**, not a passed publication gate.
+The first reviewers' model identities and families were unavailable, so that review alone
+did not establish the three-family gate. At the owner's request, three fresh independent,
+blind facet reviewers then read the same five complete guides at commit
+`a6a40ef7a6e02e07f0eed54b5066d4f65e0d6fca`, without reading the earlier reports:
+correctness and scoped coverage used **claude-opus-5.5** (Anthropic), consistency and quiz
+safety used **gpt-6.1-sol** (OpenAI), and comprehensibility used **grok-4.7** (xAI).
+The runtime's subagent start records and returned agent metadata identify the actual model
+for each reviewer. All three reviews completed, so the **three-family guide review gate
+passed**, subject to the limits below.
+
+The correctness reviewer found no lexical errors but identified guide examples that copied
+or closely resembled draft exercises. The examples were varied and the reviewer confirmed
+the final corrections on staged tree `e27658b309ac68fe15c63e91ec79afa5dedd500e`. The
+consistency reviewer identified nine additional overlapping quiz-label pairs and two
+incorrect `reduplication` tags. Nine pairwise exclusions were added, the tags removed, and
+the reviewer confirmed the fixes and reference integrity on staged tree
+`94999e79631da167ec0c9aba5a1a325449a70b4c`. The comprehension reviewer identified
+unclear wetness and crumbling contrasts, a missing ぷりぷり context, cross-guide routing,
+missing readings, and two confusing wordings. The revised passages and examples were
+confirmed by that reviewer, including the final delta at `e27658b309ac68fe15c63e91ec79afa5dedd500e`.
+No actionable findings remain within those assigned scopes.
+
 The reviewers did not test the Android quiz builder or independently review every exercise
-answer, and the original next-100 cards, illustrations and vocabulary annotations retain
-their separately recorded pending review and owner-acceptance status. These checks do not
-establish native-speaker certification or learning effectiveness.
+answer. The original next-100 cards, illustrations and vocabulary annotations retain their
+separately recorded pending review and owner-acceptance status; the guide review does not
+clear those gates or establish native-speaker certification or learning effectiveness.
 
 ## Conversation endings and discourse links: independent review and refinement (2026-10-23 UTC)
 

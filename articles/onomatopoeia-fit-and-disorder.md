@@ -2,13 +2,18 @@
 
 These words describe different aspects of a scene, not a single scale from tidy to messy. The
 [overview](japanese-onomatopoeia.md) and [sound-pattern guide](onomatopoeia-sound-patterns.md)
-introduce the wider collection. For a body, a surface or a crowded scene, also see
-[body and texture](onomatopoeia-body-and-texture.md).
+introduce the wider collection.
+
+The practice cohorts mix themes. Find [behaviour and reactions](onomatopoeia-behaviour-and-reactions.md),
+[movement, progress and swarms](onomatopoeia-light-movement-and-progress.md),
+[bodies and surfaces](onomatopoeia-body-and-texture.md), or
+[food, wetness and loose fit](onomatopoeia-food-and-water.md) in the other guides.
+This page covers precise fit, density and disorder.
 
 ## Exact, secure, or simply right?
 
-会議は九時きっかりに始まった。  
-*The meeting started at exactly nine.*
+重（おも）さは二キロきっかりだった。  
+*The weight was exactly two kilograms.*
 
 [きっかり](../words/きっかり.md) singles out an exact amount or time.
 [きっちり](../words/きっちり.md) can also describe exactness, but has uses involving doing
@@ -22,29 +27,31 @@ preparations or understanding are complete or just right. These uses overlap; an
 Compare existing [しっかり](../words/しっかり.md), which has a broad range including
 holding firmly and doing something properly.
 
-この靴は足にしっくりくる。  
-*These shoes feel right on my feet.*
+この名前（なまえ）がしっくりくる。  
+*This name feels right.*
 
-The practised frame is [しっくり](../words/しっくり.md)くる, including for an
+The exercises use [しっくり](../words/しっくり.md)くる, including for an
 explanation that feels convincing. [すんなり](../words/すんなり.md) can describe an
 application going through without trouble: a smooth process is not the same question as
-whether shoes feel right. [ぴたっと](../words/ぴたっと.md) describes close fit but also
+whether a name feels right. [ぴたっと](../words/ぴたっと.md) describes close fit but also
 an abrupt stop. Compare [ぴったり](../words/ぴったり.md), which has overlapping fit uses.
 The final と is already part of ぴたっと; do not add another to that form.
 
 ## Pressure and quantity
 
-彼女は子どもの手をぎゅっと握った。  
-*She held the child's hand tightly.*
+母（はは）は子（こ）をぎゅっと抱（だ）きしめた。  
+*The mother hugged her child tightly.*
 
-[ぎゅっと](../words/ぎゅっと.md) can describe a firm squeeze; repeated crowding is one
-use of [ぎゅうぎゅう](../words/ぎゅうぎゅう.md). [ぐっと](../words/ぐっと.md)
+[ぎゅっと](../words/ぎゅっと.md) can describe a firm squeeze;
+[ぎゅうぎゅう](../words/ぎゅうぎゅう.md) can describe being crammed tight or
+squeezing hard. Its repeated form does not mean the crowding happens repeatedly.
+[ぐっと](../words/ぐっと.md)
 can describe effort in pulling or a considerable change, depending on the predicate.
 [ずっしり](../words/ずっしり.md) highlights a substantial feeling of weight, not
 necessarily the amount of pressure applied by a hand.
 
-本棚に本がびっしり並んでいる。  
-*Books are arranged densely on the bookshelf.*
+壁（かべ）にポスターがびっしり貼（は）ってある。  
+*The wall is covered with closely spaced posters.*
 
 [びっしり](../words/びっしり.md) describes dense coverage or arrangement.
 [きちきち](../words/きちきち.md) can describe a tightly filled space. Compare
@@ -54,8 +61,8 @@ exclusive labels for different numbers of items. The exercises use きちきち�
 
 ## Several kinds of disorder
 
-地図がかばんの中でくしゃくしゃになった。  
-*The map became crumpled in the bag.*
+彼（かれ）は紙（かみ）をくしゃくしゃに丸（まる）めた。  
+*He crumpled the paper into a ball.*
 
 [くしゃくしゃ](../words/くしゃくしゃ.md) and
 [ぐしゃぐしゃ](../words/ぐしゃぐしゃ.md) overlap in crumpled paper or dishevelled hair;
