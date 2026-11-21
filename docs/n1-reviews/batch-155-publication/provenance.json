@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "batch": 155,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "6e9f6e976e5d11e0c1befbc9f05f314894fec002",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/6e9f6e976e5d11e0c1befbc9f05f314894fec002",
+  "base": "6cbc14fe25c05447674a90c6c3173060d5b4c621",
+  "initialSnapshot": "97c49eb27abbd2961ed93de7c67ece0fa53b5c8a",
+  "reviewedSnapshot": "25609582e7d44eed71b10b3fe8ab7e9a5a3931e9",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44892024434",
+    "runId": 44892024434,
+    "receiptSha256": "ba847e8dcff7288bec30612e1bd95bf66152315c0527faf533e5ae5792f46193"
+  },
+  "archive": {
+    "zipSha256": "bb80ff16aecce0fe117cafaaa67f219be5133d671ed43a5f92e0e833e4c22315",
+    "receiptSha256": "f1a781a96771c85aa8cd1f2b97f633ea1bec606511c02ada0a2555edca7d10a2",
+    "verifiedRuntimeHashes": 9713,
+    "contentVersion": "8260f7beacd371e3",
+    "manifestSha256": "a577582292890d1ff629b72429b4b0d463e6f2f58cb461100d87b7288f0131cd"
+  },
+  "reviewIdentity": "Claude claude-opus-5.5 and GPT gpt-6.1-sol; both CONFIRMED reviewed snapshot 25609582; four serial runs, one fix commit; signed merge 37c71f81 integrates owner commit 2cb17a36, proven by integration/merge-proof.json; the closure 6e9f6e97 fast-forwards origin/main 2cb17a36",
+  "sourceAccounting": {
+    "delivered": 578,
+    "n1Additions": 572,
+    "n2Placements": 6,
+    "remaining": 650,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "1 latent reading collision is not drawable in the checked N1, All and Starter pools: 沢 さ, a KANJIDIC2 name reading that 作, 再, 左, 差, 査, 沙, 砂 and 茶 offer.",
+    "2 lint warnings (the wrapped Dictionary lines of the word articles 卑怯 and 太鼓 cite no JMdict entry id on their first line) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. All six cards quiz only their on reading (卑 ヒ, 汰 タ, 沙 サ, 沢 タク, 胡 コ, 鼓 コ). 胡 is not a Joyo kanji (KANJIDIC2 grade 9; Digital Daijisen labels it ［人名用漢字］); the other five quizzed readings are in the official Joyo table.",
+    "汰 タイ, おご.る, にご.る and よな.げる, 沙 よなげる, 沢 うるお.い, うるお.す and つや, and 胡 なんぞ have no checked JMdict example and are labelled source-only on the cards; Kanjipedia's 卑 ひくい and 沙 みぎわ, which are not KANJIDIC2 readings, are explained in Notes with no table row.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise; the design check's ten accepted warnings are all 汰's \"out\" against 出, 吐, 呼, 執, 履, 敷, 施, 滅, 眺 and 裁. The only pair of new cards excluding each other is 汰/沙, declared on 沙; the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read.",
+    "Several judgments rest partly on live reads of Kanjipedia, Digital Daijisen (Weblio) and Jisho pages, not on pinned copies in the packet; both confirmations checked the Joyo table only in the packet's extract.",
+    "The confirmation reviewers did not re-run the audits; they judged the check outputs that the author ran on the revised snapshot and included in their packets. confirm-claude took the lint, test, validation, manifest, budget, vocabulary, link-plan and kanji-remarks results from CHANGES.md without opening those outputs.",
+    "The fix removed sixteen JMdict ids from the Metadata lines whose words the revised cards no longer name (卑 1434180, 2080200, 1178940, 1151260 and 1242130; 汰 1415960; 沢 1390020, 2843433 and 1224010; 胡 1203620, 2740960, 1267590 and 1610940; 鼓 1253760, 1609000 and 1390750).",
+    "This ledger corrects the batch 149 selection reason, which says that 胡椒 uses none of 胡's KANJIDIC2 readings; こしょう uses コ. The batch 149 ledger is not rewritten.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

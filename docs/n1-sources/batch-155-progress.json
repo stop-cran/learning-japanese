@@ -2,7 +2,7 @@
   "batch": 155,
   "base": "6cbc14fe25c05447674a90c6c3173060d5b4c621",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "members": [
     "卑",
     "汰",
@@ -64,14 +64,21 @@
     "胡",
     "鼓"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": [
+    "卑",
+    "汰",
+    "沙",
+    "沢",
+    "胡",
+    "鼓"
+  ],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 572,
-    "publishedN1Additions": 566,
+    "publishedPendingRecordsWithCards": 578,
+    "publishedN1Additions": 572,
     "n2Placements": 6,
-    "undelivered": 656,
+    "undelivered": 650,
     "reviewClosedPendingRecordsWithCards": 578,
     "localUnreviewedDrafts": 0,
     "notStarted": 650,
@@ -203,6 +210,13 @@
     "Several judgments rest partly on live reads of Kanjipedia, Digital Daijisen (Weblio) and Jisho pages, not on pinned copies in the packet; both confirmations checked the Joyo table only in the packet's extract.",
     "The confirmation reviewers did not re-run the audits; they judged the check outputs that the author ran on the revised snapshot and included in their packets. confirm-claude took the lint, test, validation, manifest, budget, vocabulary, link-plan and kanji-remarks results from CHANGES.md without opening those outputs.",
     "The fix removed sixteen JMdict ids from the Metadata lines whose words the revised cards no longer name (卑 1434180, 2080200, 1178940, 1151260 and 1242130; 汰 1415960; 沢 1390020, 2843433 and 1224010; 胡 1203620, 2740960, 1267590 and 1610940; 鼓 1253760, 1609000 and 1390750).",
-    "This ledger corrects the batch 149 selection reason, which says that 胡椒 uses none of 胡's KANJIDIC2 readings; こしょう uses コ. The batch 149 ledger is not rewritten."
-  ]
+    "This ledger corrects the batch 149 selection reason, which says that 胡椒 uses none of 胡's KANJIDIC2 readings; こしょう uses コ. The batch 149 ledger is not rewritten.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "6e9f6e976e5d11e0c1befbc9f05f314894fec002",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/6e9f6e976e5d11e0c1befbc9f05f314894fec002",
+    "receipt": "../n1-reviews/batch-155-publication/provenance.json"
+  }
 }
