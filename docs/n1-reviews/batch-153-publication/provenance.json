@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "batch": 153,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "1ec9d9e7762a1fcf9b2938de944c9b52a0b7962e",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/1ec9d9e7762a1fcf9b2938de944c9b52a0b7962e",
+  "base": "67b9567098ae1a2fe357f53fac530188788ba1ba",
+  "initialSnapshot": "cdab83b375e68d14d6d58a4866959611e949c41a",
+  "reviewedSnapshot": "3f8b951d38944704afbc74ed8e874e464b579956",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44853520237",
+    "runId": 44853520237,
+    "receiptSha256": "904401f947f720f2b3ad79b97db693e3ba9ba820383038815995ba4ebc779e24"
+  },
+  "archive": {
+    "zipSha256": "91b86ad25314171a1690362f5be572e160090a21488afaaa19647eafab90726a",
+    "receiptSha256": "bc471fceb6eb3a5b2f5f99f808b1ef6ac39ae347dcdb0f47cb08fb2e54780a74",
+    "verifiedRuntimeHashes": 9671,
+    "contentVersion": "d7282da57f5203a3",
+    "manifestSha256": "457adc9901c3c94bab7f11153f8639d08e8d12fe5e5b7d5b7b9f6d4f54e442e5"
+  },
+  "reviewIdentity": "Claude claude-opus-5.5 and GPT gpt-6.1-sol; both CONFIRMED reviewed snapshot 3f8b951d; four serial runs, one fix commit; the closure 1ec9d9e7 fast-forwards origin/main 67b95670 without a merge",
+  "sourceAccounting": {
+    "delivered": 557,
+    "n1Additions": 551,
+    "n2Placements": 6,
+    "remaining": 671,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "8 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 醜 にくむ (悪 憎), 醜 たぐい (双 類), 釈 しゃ (予 写 射 左 捨 砂 社 者 and three more; KANJIDIC2 name reading), 釈 おく (億 屋 憶), 鎖 さす (刺 射 差 指 挿 止 注 点), 附 ぶ (不 分 夫 武 歩 舞 豊 部), 陰 おん (御) and 陰 くらい (位 夢 暗); 釈 しゃ is a KANJIDIC2 name reading, and the others come from the --extra list.",
+    "reading_options.py reports two problems, 醜 たぐい (by 双 or 類) and 釈 おく (by 億, 屋 or 憶), both from the --extra list; it does not model curated slots, and reading_exposure.py shows neither reading can be drawn in any checked pool, because the curated Starter options of 醜 (短 赤 新) and 釈 (書 聞 学) fill every wrong slot.",
+    "3 lint warnings on existing word articles' Dictionary lines (no JMdict entry id: 日陰, 醜い, 鑑賞) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. Six cards quiz only their on reading (釈 シャク, 銃 ジュウ, 銭 セン, 鑑 カン, 附 フ, 陥 カン) and nine only their kun reading (酌 く.む, 酔 よ.う, 酢 す, 醜 みにく.い, 釣 つ.る, 鈴 すず, 鎖 くさり, 鐘 かね, 陰 かげ).",
+    "酔っ払い, 釣り and 釣り合う use the readings 酔 よ and 釣 つ.り and つ.り-, which share a stem with the quizzed よ.う and つ.る; the app asks one question per stem, so these articles are linked on their own rows, which are not quizzed.",
+    "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise. The two pairs of new cards that exclude each other declare it on one card only (鈴 lists 鐘, and 陥 lists 釣, added in review), and every exclusion between a new and an existing card is declared on the new card; the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read.",
+    "Several judgments rest partly on live reads of Kanjipedia, Digital Daijisen, Jisho and kanjiapi.dev pages, not on pinned copies in the packet.",
+    "The confirmation reviewers did not re-run the audits; they judged the check outputs that the author ran on the revised snapshot and included in their packets. Neither reopened the eleven unchanged cards in full.",
+    "The fix was first committed as 4accddbf and amended to 3f8b951d before either confirmation, adding the spelling ×鏁 to the headword quoted on 鎖 line 43; 4accddbf was never pushed or reviewed.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}
