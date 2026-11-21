@@ -1,0 +1,285 @@
+{
+  "batch": 154,
+  "base": "45de81cd99a8dc310f10eeafffa7f7495a3f6fe0",
+  "governingIssue": 60,
+  "status": "review-closed-publication-pending",
+  "members": [
+    "随",
+    "隠",
+    "隣",
+    "雄",
+    "雷",
+    "霧",
+    "項",
+    "顕",
+    "飼",
+    "飽",
+    "飾",
+    "驚",
+    "鬼",
+    "鮮",
+    "黙"
+  ],
+  "sourceRows": [
+    1158,
+    1161,
+    1162,
+    1165,
+    1171,
+    1176,
+    1182,
+    1188,
+    1192,
+    1193,
+    1194,
+    1205,
+    1207,
+    1213,
+    1230
+  ],
+  "selectionReason": "The next fifteen, in source-row order, of the absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 19 existing articles each gain one link to a new card, and no other line of them changes. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. All fifteen quizzed readings are in the official Joyo table. 隠れる, 飽くまで, 飾り and 驚かす use the readings かく.れる, あ.く, かざ.り and おどろ.かす, which share a stem with the quizzed かく.す, あ.きる, かざ.る and おどろ.く; the app asks one question per stem, so these articles are linked on their own rows, which are not quizzed. Three existing cards also change in their remarks: 塊's mnemonic now links 鬼, 微's note on 顕微鏡 now says that 顕 supplies けん, and 鏡's note on the other kanji in its common words now links 顕; each replaces a sentence that said the new card did not exist yet. No other line of a word article or an existing card changes. 1 row of the 106-row group (鼓), 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
+  "supports": [
+    [
+      "随",
+      "随筆"
+    ],
+    [
+      "隠",
+      "隠す"
+    ],
+    [
+      "隠",
+      "隠れる"
+    ],
+    [
+      "隣",
+      "隣"
+    ],
+    [
+      "雄",
+      "雄勁"
+    ],
+    [
+      "雷",
+      "雷"
+    ],
+    [
+      "霧",
+      "霧"
+    ],
+    [
+      "項",
+      "項目"
+    ],
+    [
+      "顕",
+      "顕微鏡"
+    ],
+    [
+      "飼",
+      "飼う"
+    ],
+    [
+      "飽",
+      "飽きる"
+    ],
+    [
+      "飽",
+      "飽くまで"
+    ],
+    [
+      "飾",
+      "飾り"
+    ],
+    [
+      "飾",
+      "飾る"
+    ],
+    [
+      "驚",
+      "驚かす"
+    ],
+    [
+      "驚",
+      "驚く"
+    ],
+    [
+      "鬼",
+      "鬼"
+    ],
+    [
+      "鮮",
+      "新鮮"
+    ],
+    [
+      "黙",
+      "黙る"
+    ]
+  ],
+  "initialSnapshot": "f8f3db8c9ae7d88d72cdc3d8eaae84c8f736ca5f",
+  "reviewedSnapshot": "e5c945d6d3f83b97145100528e448747424fded5",
+  "reviewClosed": [
+    "随",
+    "隠",
+    "隣",
+    "雄",
+    "雷",
+    "霧",
+    "項",
+    "顕",
+    "飼",
+    "飽",
+    "飾",
+    "驚",
+    "鬼",
+    "鮮",
+    "黙"
+  ],
+  "published": [],
+  "runtimePublished": false,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 557,
+    "publishedN1Additions": 551,
+    "n2Placements": 6,
+    "undelivered": 671,
+    "reviewClosedPendingRecordsWithCards": 572,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 656,
+    "overallN1TaskComplete": false
+  },
+  "sources": {
+    "kanjidic2": "docs/n1-sources/kanjidic2-selected.xml (KANJIDIC2 2026-11-02 records, frozen)",
+    "jmdict": "docs/n1-sources/continuation-inputs.json (JMdict_e continuation snapshot created 2026-11-17)",
+    "kanjivg": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "joyo": "Bunka-cho joyokanjihyo_20101130.pdf (sha256 d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42)",
+    "dictionary": "Digital Daijisen via weblio",
+    "kanjipedia": "Kanjipedia (kanjipedia.jp) character pages, for readings marked outside the official table"
+  },
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "mode": "blind-independent-two-family-textual-review",
+    "families": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ],
+    "fixCommits": [
+      "e5c945d6d3f83b97145100528e448747424fded5"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "f8f3db8c9ae7d88d72cdc3d8eaae84c8f736ca5f",
+        "verdict": "NEEDS FIX: two minor coverage findings, 英雄 and 雄大 missing from 雄 (C1) and 随分 missing from 随 (C2); six optional suggestions (O1-O6)"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "f8f3db8c9ae7d88d72cdc3d8eaae84c8f736ca5f",
+        "verdict": "NEEDS FIX: two minor quiz-safety findings, the missing 追 exclusion on 随 (G1) and the missing 側 exclusion on 隣 (G2); three optional suggestions (GO1-GO3)"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "e5c945d6",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "e5c945d6",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude initial, optional: O1 (隣 とな.る row leads with 隣り合う), O2 (number the senses of 飾る) and O5 (項 stroke wording) applied; O3 applied in part (もだす marked 外, 沈黙 and 暗黙 added; 黙祷 declined); O4 (the 黙 distractor 走 is weak) and O6 (card density) declined; the C1 remedy of naming 英雄 in the 英 exclusion note and the C2 secondary 随時 and 随所 declined",
+      "GPT initial, optional: GO1 (gloss …に飽かして on 飽かす and mark independent 飽く as written-style) and GO2 (英雄 on 雄, also Claude's C1) applied; GO3 (shorten the exclusion explanations) declined",
+      "Claude confirmation, optional: none",
+      "GPT confirmation, optional: none"
+    ],
+    "closure": "../n1-reviews/batch-154-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-154-closure/provenance.json",
+    "closureProvenanceSha256": "2570c3474e0595612f25e2cce258f6022f72a096f248a1977cdb224bafb22eb4",
+    "execution": "All four runs started after the previous one ended. The two initial runs and confirm-gpt had at most one tool call in flight. confirm-claude once issued two read-only calls at once, at 05:20:26 UTC: two grep searches of the original packet's titles/kanji-titles.tsv for the rows of 追, 辺, 側, 英 and 逮; its report discloses this. The final messages of initial-claude and confirm-claude are not identical to their saved reports but contain them (similarity 0.99 and 0.98); the closure keeps the saved reports. The confirm-gpt audit flags one path outside the allowed folders, the parent review-packets folder that its shell commands used as a base path; this is a false positive: every path built on it lies in the confirmation packet, the original packet or its family's initial report. The audits find no corpus scan. Each confirmation was a fresh agent of the same model family, given the author's statement on its family's initial report and allowed to read the original packet and that report. Both families confirmed the same final commit e5c945d6, which was written (04:59:40 UTC) before either confirmation started.",
+    "integration": "none: origin/main equalled the base 45de81cd at closure, so publication is a fast-forward"
+  },
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 3,
+      "note": "none on the 15 new cards or on the existing cards with remark edits. All three say \"no Dictionary: line\": the word article 隣, which declares a card of this batch and gains one link, and the articles 眼鏡 and 鏡, which declare the edited 鏡 card and are checked with it. 3 warnings with --no-jmdict as well"
+    },
+    "unitTests": 439,
+    "validateErrors": 0,
+    "budget": {
+      "files": 9708,
+      "entries": 9724,
+      "retainedBytes": 56447121,
+      "inflatedBytes": 56876685,
+      "localZipBytes": 36272051,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "vocabularyCheck": "3201/3539",
+    "manifestRebuildDiff": false,
+    "titlesUnique": true,
+    "quizSafety": {
+      "cards": 15,
+      "errors": 0,
+      "warnings": 0,
+      "note": "鮮's セン quiz takes one wrong option from its curated cards (淡 タン), because 腐 and 濁 quiz no reading; quiz safety fills the other two from other cards"
+    },
+    "readingExposure": {
+      "cards": 15,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "productionNameOnly": [],
+      "paddedNameOnly": [],
+      "oneHolderNameOnly": [
+        "雄 ゆ (by 愉 or 輸)",
+        "雄 よう (by any of its eighteen holders, such as 容 or 様)",
+        "飼 かい (by 貝)"
+      ],
+      "oneHolderNameOnlyNote": "KANJIDIC2 name-only readings that only a Starter practice session also borrowing one holder card can offer; in the N1 and All pools the curated options of 雄 and 飼 fill every wrong slot",
+      "latentCollisions": 8,
+      "latentCollisionsNote": "eight attested readings offered by other cards and not drawable in the checked N1, All and Starter pools: 隠 お (小 御 男 緒; KANJIDIC2 name reading), 隠 なまる (鈍), 雄 かつ (割 括 活), 雄 ゆ (愉 油 由 輸 遊), 雄 よう (eighteen holders, such as 容 and 様), 飼 かい (貝), 飽 あき (秋 空) and 飾 しか (然 鹿); all but 隠 なまる, which comes from the --extra list, are KANJIDIC2 name readings",
+      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ or headed by the kanji that is not a KANJIDIC2 reading, plus the JMdict kanji+okurigana headword readings whose stem is not a card kun stem; the audit labels them \"--extra list\" and its second line states their sources"
+    },
+    "readingOptions": {
+      "labelledHits": [],
+      "drawable": false,
+      "problems": 0
+    },
+    "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the 15 kanji: every reading whose stem is not a card kun stem is among the extras",
+    "linkPlan": {
+      "changedWordFiles": 19,
+      "addedLinks": 19,
+      "problems": 0,
+      "otherArticleEdits": [],
+      "kanjiCardEdits": [
+        "塊: the mnemonic now links 鬼 (a card of this batch) with its title, \"demon; ogre\", instead of saying that 鬼 has no card yet",
+        "微: the note on 顕微鏡 now says that 顕 (a card of this batch) supplies けん, instead of saying that 顕 has no card here yet",
+        "鏡: the note on the other kanji in its common words now links 顕 (a card of this batch) with its title, \"evident; reveal\", and says only that 眼 has no card here yet"
+      ]
+    },
+    "kanjiRemarks": "kanji_remarks.py: 15 new cards, 3 existing cards (塊, 微, 鏡) changed only by their 3 declared remark replacements, 0 problems",
+    "metaScan": "every word named on the 15 cards outside quoted Kanjipedia and Digital Daijisen definitions has its JMdict entry id on the card's Metadata line; 10 whole-run matches, all inside such quoted definitions (for example 悪神 in Kanjipedia's entry for 鬼, 首筋 in Digital Daijisen's for 項, and 学習漢字 in Digital Daijisen's ［学習漢字］ label on 飼), and 82 part-of-run matches (shorter words found only inside longer quoted phrases and headwords) are not listed",
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": "e5c945d6d3f83b97145100528e448747424fded5"
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "8 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 隠 お (小 御 男 緒; KANJIDIC2 name reading), 隠 なまる (鈍), 雄 かつ (割 括 活), 雄 ゆ (愉 油 由 輸 遊), 雄 よう (eighteen holders, such as 容 and 様), 飼 かい (貝), 飽 あき (秋 空) and 飾 しか (然 鹿); all but 隠 なまる, which comes from the --extra list, are KANJIDIC2 name readings.",
+    "Three KANJIDIC2 name-only readings can be offered as wrong reading options only in a Starter practice session that also borrows a card holding them: 雄 ゆ (by 愉 or 輸), 雄 よう (by any of its eighteen holders, such as 容 or 様) and 飼 かい (by 貝); in the N1 and All pools the curated options of 雄 and 飼 fill every wrong slot.",
+    "3 lint warnings (no Dictionary: line on the word articles 隣, 眼鏡 and 鏡) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. Five cards quiz only their on reading (随 ズイ, 雄 ユウ, 項 コウ, 顕 ケン, 鮮 セン) and ten only their kun reading (隠 かく.す, 隣 となり, 雷 かみなり, 霧 きり, 飼 か.う, 飽 あ.きる, 飾 かざ.る, 驚 おどろ.く, 鬼 おに, 黙 だま.る).",
+    "隠れる, 飽くまで, 飾り and 驚かす use the readings かく.れる, あ.く, かざ.り and おどろ.かす, which share a stem with the quizzed かく.す, あ.きる, かざ.る and おどろ.く; the app asks one question per stem, so these articles are linked on their own rows, which are not quizzed.",
+    "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise. No two new cards exclude each other, and every exclusion between a new and an existing card is declared on the new card; the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read.",
+    "Several judgments rest partly on live reads of Kanjipedia, Digital Daijisen, Jisho and kanjiapi.dev pages, not on pinned copies in the packet.",
+    "The confirmation reviewers did not re-run the audits; they judged the check outputs that the author ran on the revised snapshot and included in their packets. confirm-gpt read the eight unchanged cards in full from the original packet; confirm-claude did not reopen them beyond their quiz options."
+  ]
+}

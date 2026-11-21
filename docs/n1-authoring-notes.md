@@ -123,6 +123,100 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 154: review closed, publication pending
+
+Fifteen absent frozen members: 随 隠 隣 雄 雷 霧 項 顕 飼 飽 飾 驚 鬼 鮮 黙
+(rows 1158–1230), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: nineteen existing articles each gain one link to a new card,
+and no other line of them changes. Three existing kanji cards change in their
+remarks: 塊's mnemonic now links 鬼, with its title, instead of saying that 鬼
+has no card yet; 微's note on 顕微鏡 now says that 顕 supplies けん instead of
+saying that 顕 has no card here yet; and 鏡's note on the other kanji in its
+common words now links 顕, with its title, and says only that 眼 has no card
+here yet. No other line of an existing card changes. `n1_linkplan.py verify
+--remarks` checks the article links, and the author's `kanji_remarks.py`
+checks that 塊, 微 and 鏡 change only by their declared remarks. Cards whose
+senses overlap those of other cards keep each other out of their meaning-quiz
+options where the Notes say so; no two of the new cards exclude each
+other.
+
+Five cards quiz only their on reading (随 ズイ, 雄 ユウ, 項 コウ, 顕 ケン, 鮮
+セン) and ten only their kun reading (隠 かく.す, 隣 となり, 雷 かみなり, 霧
+きり, 飼 か.う, 飽 あ.きる, 飾 かざ.る, 驚 おどろ.く, 鬼 おに, 黙 だま.る),
+because the other readings have no declaring word article yet; they are
+listed, not quizzed. All fifteen quizzed readings are in the official Joyo
+table. 隠れる, 飽くまで, 飾り and 驚かす use the readings かく.れる, あ.く,
+かざ.り and おどろ.かす, which share a stem with the quizzed かく.す, あ.きる,
+かざ.る and おどろ.く; the app asks one question per stem, so these articles
+are linked on their own rows, which are not quizzed.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. Design changes before drafting replaced four distractor
+candidates: 雄 takes 柔, 飽 takes 祝 and 黙 takes 踊 instead of candidates that
+overlapped an exclusion or a title, and 項 takes 預 instead of 領, whose kun
+reading えり (JMdict files it under 襟, “collar”) also means “nape of the
+neck”, like 項's うなじ. The titles avoid “neighbor” for 隣 (町 is excluded as
+“town, neighborhood”), “raise” for 飼 (挙 is “raise; cite; hold (an event)”)
+and “fall silent” for 黙 (落 is “fall down” and 陥 “fall into; cave in”).
+Kanjipedia's antonyms (雌 for 雄; 微, 隠 and 密 for 顕) are neither excluded nor
+used as distractors. The author's read of the drafts corrected two mnemonics
+against KanjiVG (in 随, ⻌ runs under 有 only; in 雄, 厷 is described only as a
+shape that ends in 厶) and replaced two exclusion reasons with sourced ones:
+隣/近 now rests on 近隣 and 比隣, which Kanjipedia lists among 隣's compounds,
+and 項/個 on Digital Daijisen's second sense of 項, 小分けした一つ一つ. The
+reading audits also take, from an okurigana scan of Digital Daijisen
+headwords, the readings 随 まま.に, 隠 いん.ぺい, こも.る and なま.る, 雷 らい.こう,
+顕 あら.わ and 黙 だんま.り, もく.する and もく.とう; of these only 隠 なまる (by
+鈍) collides with a reading another card offers, and no audited pool can draw
+it. The freeze commit is `f8f3db8c`.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `f8f3db8c` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX for two minor points. Claude found
+two gaps in the common words: 雄 lacked 英雄 and 雄大, which the Joyo table
+prints as examples of ユウ, and 随 lacked 随分 ずいぶん, “very; considerably”.
+GPT found two missing meaning-quiz exclusions: JMdict glosses 追う with “to
+follow after”, so 随 (“follow; at will”) overlaps 追 (“chase; pursue”), and
+glosses 側 そば with “(place) right next to”, so 隣 (“next door; adjoining”)
+overlaps 側 (“side”). The fix `e5c945d6` adds these words and exclusions.
+While checking 側, the author also excluded 辺 (“vicinity; edge”) from 隣:
+JMdict glosses 辺り with “(in the) neighbourhood”, the basis on which 隣
+already excludes 町. 逮 (“arrest; chase”) was checked against 随 and not
+added, because KANJIDIC2 gives it no sense of following. The fix also applies
+optional suggestions: 隣's とな.る row now leads with 隣り合う, the Joyo
+example; 飾 numbers the senses of 飾る that it quotes; 黙 adds 沈黙 and 暗黙
+and notes that Kanjipedia lists もだす outside the table; 項's mnemonic names
+the strokes of 頁 as KanjiVG draws them; and 飽's あ.かす row adds the form
+…に飽かして, while its あ.く row notes that Digital Daijisen calls 飽く
+written style. The author declined to name 英雄 in 雄's note on 英, to add
+随時, 随所 or 黙祷, to replace 黙's distractor 走, which Claude said does
+little work, and to shorten the notes. Fresh agents of both families confirmed
+the fix, with no remaining finding. The
+[closure record](n1-reviews/batch-154-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `e5c945d6` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings, none on the new cards: the word article 隣, which
+gains a link here, and 眼鏡 and 鏡, which declare the edited 鏡 card and are
+checked with it, have no Dictionary line), quiz safety, link plan, kanji
+remarks, manifest rebuild and budget. 鮮's セン quiz takes one of its three
+wrong options from its curated cards (淡 タン), because 腐 and 濁 quiz no
+reading; quiz safety fills the other two from other cards and reports no
+error or warning. The reading-exposure audit reports no production,
+padded-session or one-holder hit for an ordinary reading. Three KANJIDIC2
+name-only readings can be offered only in a Starter practice session that also
+borrows a card holding them: 雄 ゆ (by 愉 or 輸), 雄 よう (by any of its
+eighteen holders, such as 容 or 様) and 飼 かい (by 貝); in the N1 and All pools
+the curated options of 雄 and 飼 fill every wrong slot. It records eight latent
+collisions, attested readings that other cards offer but no audited pool can
+draw: 隠 お and なまる, 雄 かつ, ゆ and よう, 飼 かい, 飽 あき and 飾 しか.
+`reading_options.py` reports no hit. Android JVM tests were not run (no JDK),
+and no native or phone acceptance is claimed. Published delivery stays **557/1,228** until CI and ZIP verification; publication would
+make it **572/1,228**, with **656 remaining**.
+
 ## Batch 153: published
 
 Review-closed at `3f8b951d` and published at `1ec9d9e7`. The
