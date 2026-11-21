@@ -1,0 +1,320 @@
+{
+  "batch": 156,
+  "base": "0638544ce1967ccec58ca7f9208c51ce8eaf4f8d",
+  "governingIssue": 60,
+  "status": "review-closed-publication-pending",
+  "members": [
+    "丹",
+    "乙",
+    "亜",
+    "仁",
+    "仙",
+    "伎",
+    "伏",
+    "伐",
+    "伯",
+    "伴"
+  ],
+  "sourceRows": [
+    7,
+    11,
+    16,
+    23,
+    24,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "selectionReason": "From this batch on, the proposal on issue 60 (comment 7058679348) governs the remaining rows: one supporting word article per kanji, Joyo rows first in source-row order, up to ten kanji per batch. The ten members are the first ten remaining Joyo rows. The article's word should carry one of JMdict's common-word tags news1, ichi1, spec1 or gai1; an untagged word needs a justification reviewed for its row, and the word's other kanji must already have cards or join the batch. At the freeze the author also counted news2 and spec2 as qualifying, so no row was flagged; 仙人 and 伯仲 carry only those two tags. The fix 7eaf5c24 then chose 甲乙 as the 乙 word, which also carries only news2 and spec2, without checking its other kanji 甲, which has no card and is not in the batch. Rechecked against the list, seven words carry a listed tag (丹念, 亜熱帯, 仁, 歌舞伎, 降伏, 伐採, 同伴). No reviewer had raised either error; the author disclosed both in the last confirmation round (confirm4-claude, confirm3-gpt and confirm2-grok), in statements that date both to the freeze, although 甲乙 entered in 7eaf5c24. ba44b280 replaced 甲乙 with 乙種 (JMdict 1862630, untagged), because 乙 alone (JMdict 1182940) can also be read おと (entry 2837087), 早乙女 and 乙女 are whole-word readings in the Joyo appendix that do not use オツ, and 乙種 is the first Joyo example for 乙, given by Digital Daijisen and Kanjipedia for the sense \"second rank\", with 種 already a card; 仙人 is kept because its only candidate with a listed tag is the city name 仙台 (spec1); 伯仲 is kept because 伯父 and 伯母 are tagged only for their whole-word readings おじ and おば, 伯爵 needs 爵, which has no card, and 画伯 is the alternative. All three review families accepted these row decisions. 伯 already had the declaring article 伯母さん, a whole-word reading that supports no 伯 reading. Each card quizzes exactly one on reading, the one its new article uses; every quizzed kun list is empty.",
+  "supports": [
+    [
+      "丹",
+      "丹念"
+    ],
+    [
+      "乙",
+      "乙種"
+    ],
+    [
+      "亜",
+      "亜熱帯"
+    ],
+    [
+      "仁",
+      "仁"
+    ],
+    [
+      "仙",
+      "仙人"
+    ],
+    [
+      "伎",
+      "歌舞伎"
+    ],
+    [
+      "伏",
+      "降伏"
+    ],
+    [
+      "伐",
+      "伐採"
+    ],
+    [
+      "伯",
+      "伯仲"
+    ],
+    [
+      "伴",
+      "同伴"
+    ]
+  ],
+  "initialSnapshot": "c6afa16315d5a88b5045eeb85d429b8f7fd90b1f",
+  "reviewedSnapshot": "ba44b2809e6f46a6532ad58a016cb9d639ad2afc",
+  "reviewClosed": [
+    "丹",
+    "乙",
+    "亜",
+    "仁",
+    "仙",
+    "伎",
+    "伏",
+    "伐",
+    "伯",
+    "伴"
+  ],
+  "published": [],
+  "runtimePublished": false,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 578,
+    "publishedN1Additions": 572,
+    "n2Placements": 6,
+    "undelivered": 650,
+    "reviewClosedPendingRecordsWithCards": 588,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 640,
+    "overallN1TaskComplete": false
+  },
+  "sources": {
+    "kanjidic2": "docs/n1-sources/kanjidic2-selected.xml (KANJIDIC2 2026-11-02 records, frozen)",
+    "jmdict": "docs/n1-sources/continuation-inputs.json (JMdict_e continuation snapshot created 2026-11-17)",
+    "kanjivg": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "joyo": "Bunka-cho joyokanjihyo_20101130.pdf (sha256 d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42)",
+    "dictionary": "Digital Daijisen via weblio",
+    "kanjipedia": "Kanjipedia (kanjipedia.jp) character pages, for readings marked outside the official table"
+  },
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "mode": "blind-independent-three-family-textual-review",
+    "families": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol",
+      "grok-4.7"
+    ],
+    "fixCommits": [
+      "7eaf5c24612c3581e723d992453753ef49de932d",
+      "2c206d8f033110605971d4a5f2165aa20985868d",
+      "395f53643988ba24f444a376187c803aa6794654",
+      "3c5ef8450e38051682dab2bea5fce320b992e5ea",
+      "a7cc61e27261c62e84c3bd1f28e8a9254d9dcb04",
+      "ba44b2809e6f46a6532ad58a016cb9d639ad2afc"
+    ],
+    "mergeCommits": [
+      "e37ad00b796ed16dc752f5e60f0fd119f14dfa5e",
+      "eafee44b5129b283cd0e62d07303fd49d842204a"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "c6afa16315d5a88b5045eeb85d429b8f7fd90b1f",
+        "verdict": "NEEDS FIX (consistency and quiz safety): one minor finding, the reading quiz of the frozen word article 乙 おつ could offer おと, which JMdict also gives for the spelling 乙 (C1); three optional suggestions (O1-O3)"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "c6afa16315d5a88b5045eeb85d429b8f7fd90b1f",
+        "verdict": "NEEDS FIX (consistency and quiz safety): two major findings, the 乙 おと reading (G1) and the meaning quiz of the word 仁 offering 人物 although JMdict gives 仁 the sense \"human\" (G2), and one minor, implausible distractors on 仙 and 伎 (G3); three optional suggestions (O1-O3)"
+      },
+      {
+        "id": "initial-grok",
+        "snapshot": "c6afa16315d5a88b5045eeb85d429b8f7fd90b1f",
+        "verdict": "NEEDS FIX (consistency and quiz safety): one minor finding, the 乙 おと reading (X1); three optional suggestions (O1-O3)"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "395f53643988ba24f444a376187c803aa6794654",
+        "verdict": "CONFIRMED initial-claude's items; three optional points"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "3c5ef8450e38051682dab2bea5fce320b992e5ea",
+        "verdict": "CONFIRMED initial-gpt's items; one optional point"
+      },
+      {
+        "id": "confirm-grok",
+        "snapshot": "3c5ef8450e38051682dab2bea5fce320b992e5ea",
+        "verdict": "CONFIRMED initial-grok's items; two optional points (P1, P2)"
+      },
+      {
+        "id": "confirm2-claude",
+        "snapshot": "3c5ef8450e38051682dab2bea5fce320b992e5ea",
+        "verdict": "CONFIRMED confirm-claude's items; one optional point"
+      },
+      {
+        "id": "confirm3-claude",
+        "snapshot": "a7cc61e27261c62e84c3bd1f28e8a9254d9dcb04",
+        "verdict": "CONFIRMED confirm2-claude's point and the Metadata ids; one optional point"
+      },
+      {
+        "id": "confirm2-gpt",
+        "snapshot": "a7cc61e27261c62e84c3bd1f28e8a9254d9dcb04",
+        "verdict": "CONFIRMED confirm-gpt's point and the Metadata ids; no optional point"
+      },
+      {
+        "id": "confirm4-claude",
+        "snapshot": "ba44b2809e6f46a6532ad58a016cb9d639ad2afc",
+        "verdict": "CONFIRMED confirm3-claude's point and A1-A3; one optional point"
+      },
+      {
+        "id": "confirm3-gpt",
+        "snapshot": "ba44b2809e6f46a6532ad58a016cb9d639ad2afc",
+        "verdict": "CONFIRMED A1-A3; one optional point"
+      },
+      {
+        "id": "confirm2-grok",
+        "snapshot": "ba44b2809e6f46a6532ad58a016cb9d639ad2afc",
+        "verdict": "CONFIRMED P1, P2 and A0-A3; one optional point"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude initial: O1 (words/仁.md \"writes about\") and O2 (the sense \"nucleolus\") changed in 7eaf5c24; O3 (reading_options.py over-reports 伯 は) not changed, a tooling follow-up",
+      "GPT initial: O2 (explain \"epigone\" and \"ateji\") and O3 (\"writes about\") changed in 7eaf5c24; O1 (shorten the audit-style card text) not changed, because the cards follow the layout adopted for batch 149",
+      "Grok initial: O1-O3 changed in 7eaf5c24",
+      "Points the initial reports could not verify (Claude: that JMdict has no entry read わざおぎ, and eight glosses outside the packet's families file; GPT and Grok: the compound-sound-changes article and JMdict 1002570, which Grok checked only through jpdb): evidence supplied in the confirmation packets; accepted in the confirmations",
+      "confirm-claude 1, confirm-gpt's point and confirm-grok P1: add an example of /p/ after ん, such as 先輩 せんぱい, to the compound-sound-changes article, which is outside the batch; DECLINE ACCEPTED by confirm2-claude, confirm2-gpt and confirm2-grok; follow-up",
+      "confirm-claude 2: 中心 is the weakest of the four new 仁 exclusions; DECLINE ACCEPTED by confirm2-claude; follow-up",
+      "confirm-claude 3 (甲乙's exclusions 対照 and 差) and confirm-grok P2 (the gloss of a 甲乙 example): moot, the 甲乙 article was deleted in ba44b280",
+      "confirm-claude Limits: other readings of 甲乙 and the source of its contract-parties sense; a reading scan was supplied and the unsourced sense removed in 3c5ef845; RESOLVED by confirm2-claude",
+      "confirm2-claude: 甲乙 also has the music-term reading かんおつ; DECLINE ACCEPTED by confirm3-claude; recorded for any later 甲乙 article",
+      "confirm3-claude: the CHANGES.md given to confirm3-claude said quiz-safety.txt differs \"apart from line 1\", but the file is byte-identical and has no command line; corrected in the last round's CHANGES.md and RESOLVED by confirm4-claude",
+      "confirm4-claude and confirm3-gpt: prefer 画伯 to 伯仲 if the 伯 row is revisited (Claude: JMdict ranks 画伯 nf26 and 伯仲 nf31; GPT: 画伯's current meaning shows 伯 directly); follow-up",
+      "confirm2-grok: 乙種's exclusions 位, 級, 段 and 次ぐ are topic neighbours rather than strict synonyms; no change requested",
+      "confirm2-gpt: none"
+    ],
+    "followUps": [
+      "whether news2 and spec2 should count as qualifying tags (owner decision)",
+      "a 甲 card",
+      "the 伯 は over-report in reading_options.py",
+      "word-reading quiz exclusions that do not cover attested alternative readings (112 existing words)",
+      "an example of /p/ after ん in the compound-sound-changes article",
+      "かんおつ for any later 甲乙 article",
+      "画伯 instead of 伯仲 if the 伯 row is revisited",
+      "the 中心 exclusion on 仁"
+    ],
+    "closure": "../n1-reviews/batch-156-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-156-closure/provenance.json",
+    "closureProvenanceSha256": "a20fc04d6335a32771e90f3d5c18c495f6444de56946d9e33aa7ef1e7f8bfac8",
+    "integration": "origin/main moved twice after the base. a6a40ef7 and 9766dbd5 (next-100 onomatopoeia companion guides and their review fixes) changed 102 paths; signed merge e37ad00b has 3c5ef845 as first parent and 9766dbd5 as second. 32f8b991 and 0697b768 (ねちねち example wording; どっと and ぶつぶつ scene images) changed 11 paths; signed merge eafee44b has a7cc61e2 as first parent and 0697b768 as second. In both the only conflict was the derived manifest, regenerated with tools/build_manifest.py. integration/merge-proof.json and merge2-proof.json pass: every non-derived path equals one parent byte for byte (49,043 and 49,048 paths, none unmatched), none of the 32 batch runtime paths or 171 link targets was changed by main, no main-changed line mentions a batch kanji or word (the second merge's three images are binary and were not scanned), and the manifest lists every batch file; so, as for batches 144 and 155, no integration review was needed. ba44b280 is one commit on top of eafee44b, and the gates were rerun on it. Main's CI is red on 32f8b991 and 0697b768 (runs 44933285897 and 44933684389) because the vocabulary review of onoma-c7-nechinechi-criticism is stale; no batch file is involved, and the publication receipt needs a green run on the exact published commit.",
+    "execution": "All twelve runs ran one after the other. Four Claude runs each once issued two read-only view calls at the same time: initial-claude at 13:17:46 UTC, confirm-claude at 16:28:09, confirm3-claude at 17:51:51 and confirm4-claude at 20:56:05 (times from the local session logs); their reports wrongly say that each response made one tool call. The other runs had at most one tool call in flight. From the confirm2 prompts on, the prompts also forbade combining several commands in one call; confirm3-claude disclosed three single PowerShell commands over several files, and confirm4-claude two single pipelines (a Compare-Object of two reads and a Get-FileHash over six paths). confirm-claude reports \"51 reverse targets\" for a cited range of 50 lines. initial-grok disclosed one recursive listing, but its scope audit shows eleven recursive commands over the packet or the repository snapshot and a recursive grep of the packet. The runtime compacted the context once in initial-claude, initial-gpt, confirm-claude, confirm-grok and confirm2-grok, and twice in initial-grok; the other six runs were not compacted (from the local session logs; provenance.json does not record compaction). Each confirmation was a fresh agent of the same model family, given the author's statement on its family's last report and allowed to read the original packet and its family's earlier reports; issue 60 asks for the original reviewers where possible. All three families' last confirmations are of ba44b280, which was committed (19:54:11 UTC) before any of them started; every run's actual model equals the requested one."
+  },
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 1,
+      "note": "none on the ten new cards or the ten new articles. The one warning, \"Dictionary: line cites no JMdict entry id\" on words/潜る.md, is older than the batch, which does not change that file"
+    },
+    "unitTests": 439,
+    "validateErrors": 0,
+    "budget": {
+      "files": 9760,
+      "entries": 9776,
+      "retainedBytes": 56679021,
+      "inflatedBytes": 57114625,
+      "localZipBytes": 36425719,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "vocabularyCheck": "3201/3539; reports the stale review of onoma-c7-nechinechi-criticism from main, the same failure as main's CI",
+    "manifestRebuildDiff": false,
+    "titlesUnique": true,
+    "quizSafety": {
+      "cards": 10,
+      "errors": 0,
+      "warnings": 0,
+      "note": "in the N1 and All stacks all ten reading questions take three of three wrong options from their curated distractors; in a Starter practice session 乙, 伏, 伐 and 伴, whose curated cards are not Starter cards, take all three from the fallback, as at the freeze; eleven existing cards (人 休 何 入 出 口 女 日 月 男 買) still fill one slot each from the fallback, as before"
+    },
+    "readingExposure": {
+      "cards": 10,
+      "seeds": 200,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "productionNameOnly": [],
+      "paddedNameOnly": [],
+      "oneHolderNameOnly": [],
+      "latentCollisions": 10,
+      "latentCollisionsNote": "ten attested readings that other cards offer and that no checked N1, All or Starter pool can draw, all KANJIDIC2 name readings: 丹 た; 亜 や; 仁 く, じ and と; 伯 いき, えき, か, き and は (は is also on the --extra list)",
+      "extras": "丹 に, あか, まごころ, たん, あかい; 乙 イツ, きのと, おと, おつ, めり; 亜 つ.ぐ, あ; 仁 ニン, じん, ニ; 仙 せん; 伎 ギ, わざ, たくみ, き; 伏 ブク, かく.れる, したが.う, ふく, ふせる, ふす; 伐 ハツ, き.る, う.つ, ほこ.る, ばつ; 伯 ハ, はたがしら, かしら, おさ, はく, かみ; 伴 とも, はん, ばん, ともなう. Sources: the readings Kanjipedia marks as outside the official table (外), the Digital Daijisen character entries and headwords, and the JMdict okurigana scan; the audit labels them \"--extra list\""
+    },
+    "readingOptions": {
+      "labelledHits": [
+        "伯 は"
+      ],
+      "drawable": false,
+      "problems": 1,
+      "seeds": 100,
+      "note": "the known over-report (Claude O3): 波, 派 and 破 offer は, but 伯's curated cards fill all three slots"
+    },
+    "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the ten kanji: every reading whose stem is not a card kun stem (乙 おつ.なもの, 伏 ふく.する, 伴 とも.なう) is among the extras",
+    "linkPlan": {
+      "newArticles": 10,
+      "changedWordFiles": 11,
+      "expectedPairs": 1,
+      "addedLinks": 1,
+      "problems": 0,
+      "otherArticleEdits": [
+        "伯母さん: line 24 links the 伯 card"
+      ],
+      "kanjiCardEdits": [
+        "潜: line 57 links 伏 in 潜伏 せんぷく, with a pointer to the compound-sound-changes article for ぷく"
+      ]
+    },
+    "kanjiRemarks": "kanji_remarks.py: 10 of 10 new cards present, one existing card (潜) changed in a remark only, 0 problems",
+    "metaScan": "every word named on the ten cards as a whole run outside a quotation has its JMdict entry id on the card's Metadata line (0 whole-run gaps after a7cc61e2, which added six ids); 4 part-of-run matches are not listed: 熱帯 in 亜熱帯 (亜), 歌舞 in 歌舞伎 (伎), 伏せ in 伏せる (伏) and 母さん in 伯母さん (伯)",
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "NOT RUN; phone acceptance is outstanding for issue 60 (recorded as performed or explicitly outstanding, never inferred)",
+    "manifest": {
+      "version": "3cff2a550b6cbc3d",
+      "files": 9753,
+      "sha256": "dc8128855b7b41ccab6e74cab14937fddc733cf6526a9310b553666d38081bd5"
+    },
+    "snapshot": "ba44b2809e6f46a6532ad58a016cb9d639ad2afc"
+  },
+  "limits": [
+    "No Kotlin cross-check or Android JVM tests (no JDK on the continuation machine); no native, rendered-font, device or phone check. Phone acceptance is outstanding.",
+    "Selection error: at the freeze the author counted news2 and spec2 as qualifying tags, so 仙人 and 伯仲 were not flagged; the fix 7eaf5c24 then chose 甲乙 as the 乙 word, which also carries only news2 and spec2, without checking its other kanji 甲, which has no card. No reviewer had raised either error; the author disclosed both in the last confirmation round, in statements that date both to the freeze. 乙種 is untagged, and 仙人 and 伯仲 carry only news2 and spec2; all three rows rest on per-row justifications that the three families accepted. 甲 still has no card. Whether news2 and spec2 should count is recorded as a follow-up for the owner.",
+    "10 latent reading collisions are not drawable in the checked N1, All and Starter pools; all are KANJIDIC2 name readings (丹 た; 亜 や; 仁 く, じ and と; 伯 いき, えき, か, き and は). reading_options.py reports one problem, its known over-report of 伯 は. Sampled seeds are not exhaustive.",
+    "The reading audits are the author's Python ports of the Kotlin builder, kept outside the repository; no Kotlin cross-check was run.",
+    "The author reported 112 existing words whose reading quiz can offer a reading that JMdict attests for the same spelling, because word-reading exclusions do not cover alternative readings; this predates the batch and is recorded as an app follow-up.",
+    "1 lint warning (words/潜る.md: the Dictionary line cites no JMdict entry id) is pre-existing and out of scope.",
+    "Under the batch rule each card quizzes the one on reading its new article uses (丹 タン, 乙 オツ, 亜 ア, 仁 ジン, 仙 セン, 伎 キ, 伏 フク, 伐 バツ, 伯 ハク, 伴 ハン); the other readings are listed, not quizzed. 伎 わざおぎ and 伐 ハツ, カ, ボチ and そむ.く have no checked JMdict example and are labelled source-only on the cards.",
+    "The ten cards declare 86 exclusions. The only exclusion between two new cards is 亜/乙, declared on 亜; the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read; some of their out-of-scope flags are false positives (base paths, the reports folder, strings parsed out of JSON).",
+    "Several judgments rest partly on live reads of Kanjipedia, Digital Daijisen (Weblio), Kotobank, Jisho, Takoboto and jpdb pages, not on pinned copies in the packets; EDRDG's JMdictDB pages ask for a password, so the reviewers checked JMdict ids against the packets' extracts and third-party mirrors.",
+    "The confirmation reviewers did not rerun the gates; they judged the check outputs that the author ran on each revised snapshot and included in their packets.",
+    "Each confirmation ran as a new agent of the same model family, with no memory of its own earlier reading; Grok was not asked to confirm a7cc61e2 on its own, and confirm2-grok reviewed its Metadata ids at ba44b280. Issue 60 asks for corrections to be confirmed with the original reviewers where possible; as in batches 150-155, each confirmation ran as a new agent instead.",
+    "Facet assignment: the repository's review rule for new word articles asks for three reviewers of different families, one each for correctness, consistency and quiz safety, and comprehensibility; here each reviewer covered all four facets with an assigned emphasis (Claude: correctness and scoped coverage; GPT: consistency, quiz safety and comprehensibility; Grok: comprehensibility). The issue 60 proposal named a two-family review; the author added Grok under the repository rule; no reply to the proposal has been posted on issue 60 yet.",
+    "Execution: four Claude runs each once had two read-only view calls in flight, and their reports wrongly say that each response made one tool call; confirm3-claude and confirm4-claude disclosed single commands over several files, which may count as the combined commands their prompts forbade; confirm-claude reports \"51 reverse targets\" for a cited range of 50 lines.",
+    "initial-grok disclosed one recursive listing, but its scope audit shows eleven recursive commands and a recursive grep of the packet; one grep with no path ran in its working folder outside the packet and found nothing; it used read_powershell and stop_powershell on one shell and wrote its report through a PowerShell here-string.",
+    "confirm3-gpt left one oversized comparison output, which the tool runtime saved to a temporary file, unopened, as its report says. Three of confirm2-grok's GitHub contents-API requests (kanji/甲.md, kanji/爵.md and kanji/種.md at the unpublished ba44b280) failed, and its report takes the absence of the 甲 and 爵 cards from the author; its report names only its family, and the session records show grok-4.7.",
+    "Context compaction (once in initial-claude, initial-gpt, confirm-claude, confirm-grok and confirm2-grok; twice in initial-grok), the overlap times and the delivered prompt text come from the local session logs; provenance.json does not record compaction. Against the delivered text, confirm2-claude.txt ends with CRLF where the delivered text ends with LF, and seven other confirmation prompts end with one more line feed.",
+    "Before the last confirmation round the packet builder's list of batch paths was changed to come from the batch's own first-parent commits, with merges of main excluded; one wording fix was also made in the text it generates.",
+    "The stored initial packet keeps 48 files; the packet's copies of repository files, its rubric and its title lists are reproduced by the recorded commits, and 32 stored files have LF line ends where the reviewers' copies had CRLF. provenance.json records both the canonical hash of the reviewed manifest and the hashes of the stored files.",
+    "Retained bytes at ba44b280 are 56,679,021, under the 56 MiB guard; no choice between raising the guard and a reduced set for the remaining rows has been posted on issue 60 yet.",
+    "Main's CI is red for a stale vocabulary review outside the batch; the publication receipt waits for a green run on the exact published commit.",
+    "No published commit is rewritten. 2c206d8f was amended three times (2e64b649, fe6cfb06, e62f1f13) after the initial packet was built from the freeze and before any confirmation packet was built. The deleted word articles 乙 and 甲乙 remain in the history, and their reviewed text is in the confirmation packets."
+  ]
+}

@@ -123,6 +123,129 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+From B156 the remaining rows follow the
+[proposal on issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-7058679348),
+which replaces the lean B111 shape above: one supporting word article per kanji
+(an existing one where it fits, otherwise a new one), Joyo rows first in
+source-row order, up to ten kanji per batch. The proposal keeps the blind
+review by Claude and then GPT, one after the other. When a batch adds new word
+articles, the author also adds a Grok reviewer, because the repository's review
+rule for new word cards and learner articles asks for three reviewers of
+different model families; no reply to the proposal has been posted on issue 60
+yet.
+
+## Batch 156: review closed, publication pending
+
+Review-closed at `ba44b280`, one commit on top of the second of two signed
+merges with `origin/main` (`e37ad00b` and `eafee44b`). Publication is pending:
+main's own CI fails on a stale vocabulary review outside the batch, and the
+receipt needs a green run on the exact published commit. After the receipt,
+delivery becomes **588/1,228**, with **640 remaining**; until then it stays
+578/1,228.
+
+Ten absent frozen members: 丹 乙 亜 仁 仙 伎 伏 伐 伯 伴 (rows 7–34), the first
+ten remaining Joyo rows, in the first batch under the issue 60 proposal. The
+article's word should carry one of JMdict's common-word tags news1, ichi1,
+spec1 or gai1; an untagged word needs a justification reviewed for its row, and
+the word's other kanji must already have cards or join the batch. The batch
+adds ten word articles, one per kanji: 丹念, 乙種, 亜熱帯, 仁, 仙人, 歌舞伎,
+降伏, 伐採, 伯仲 and 同伴. Two existing files change in one line each:
+`words/伯母さん.md` links the 伯 card, and the 潜 card links 伏 in 潜伏
+せんぷく. 伯母さん is a whole-word reading, so 伯 selects ハク through 伯仲.
+Each card quizzes the one on reading its new article uses (丹 タン, 乙 オツ, 亜
+ア, 仁 ジン, 仙 セン, 伎 キ, 伏 フク, 伐 バツ, 伯 ハク, 伴 ハン); every quizzed
+kun list is empty. 伎 わざおぎ and 伐 ハツ, カ, ボチ and そむ.く have no
+checked JMdict example and are labelled source-only. The only exclusion between
+two new cards is 亜/乙, declared on 亜, the later source row.
+
+At the freeze the author also counted news2 and spec2 as qualifying tags, so no
+row was flagged; 仙人 and 伯仲 carry only those two tags. The fix `7eaf5c24`
+then chose 甲乙 as the 乙 word, which also carries only news2 and spec2,
+without checking its other kanji 甲, which has no card. Rechecked against the
+list, seven words carry a listed tag (丹念, 亜熱帯, 仁, 歌舞伎, 降伏, 伐採,
+同伴). No reviewer had raised either error; the author disclosed both in the
+last confirmation round, in statements that dated both errors to the freeze,
+although 甲乙 entered in `7eaf5c24`. `ba44b280` replaced 甲乙 with 乙種 (JMdict
+1862630, untagged): 乙 alone can also be read おと, 早乙女 and 乙女 are
+whole-word readings that do not use オツ, and 乙種 is the first Joyo example
+for 乙, with 種 already a card. 仙人 is kept, because its only candidate with a
+listed tag is the city name 仙台; 伯仲 is kept, because 伯父 and 伯母 are
+tagged only for their whole-word readings おじ and おば, 伯爵 needs 爵, which
+has no card, and 画伯 is the alternative. All three families accepted these row
+decisions. Whether news2 and spec2 should count is a follow-up for the owner.
+
+The issue 60 proposal named the two-family review of earlier batches; because
+the batch adds word articles, a Grok reviewer was added. Claude
+(claude-opus-5.5), GPT (gpt-6.1-sol) and Grok (grok-4.7) reviewed the frozen
+draft `c6afa163` one after the other, each without seeing the others' work and
+each covering all four facets with an assigned emphasis rather than one facet
+each as the repository rule assigns. All three returned NEEDS FIX. The reading
+quiz of the frozen word article 乙 おつ could offer おと, which JMdict also
+gives for the spelling 乙 (C1, G1, X1); the meaning quiz of the word 仁 could
+offer 人物, although JMdict gives 仁 the sense “human” (G2); and the
+distractors of 仙 and 伎 were concrete objects that a learner could rule out
+without knowing the card (G3). The fix `7eaf5c24` replaced the 乙 article with
+甲乙, kept 人物, 個人, 芯 and 中心 out of 仁's meaning options, gave 仙 and 伎
+Starter cards as distractors and applied the optional wording points the author
+accepted. `2c206d8f` gave 乙, 伏, 伐 and 伴 distractors from the domain of the
+card's meaning and replaced 仙's 父 and 伎's 行 and 達 (JMdict gives 父 the
+sense “God; Father”, and the 達 card teaches “attain skill”, both near the
+cards' own meanings); `395f5364` and `3c5ef845` cited KANJIDIC2's 甲 record in
+the 甲乙 article and dropped a contract-parties sense that no source gives. The
+author's `meta_scan.py` then found six words named on the cards without JMdict
+ids on their Metadata lines, which no reviewer had raised; `a7cc61e2` added
+them.
+
+Fresh agents of the same family confirmed the fixes in further rounds, nine
+confirmations in all, although issue 60 asks for the original reviewers where
+possible; the last round confirmed `ba44b280` in all three families with no
+actionable finding, each raising one optional point. Declined points, accepted
+by the confirmations and recorded as follow-ups: an example of /p/ after ん in
+the compound-sound-changes article, which is outside the batch; the weak 中心
+exclusion on 仁; the music-term reading かんおつ for any later 甲乙 article;
+and the over-report of 伯 は in `reading_options.py`. GPT's request to shorten
+the audit-style card text was declined, because the cards follow the batch 149
+layout. Two confirmations would prefer 画伯 to 伯仲 if the row is revisited.
+Four Claude runs once had two read-only calls in flight, contrary to their
+reports; two Claude confirmations disclosed single commands over several files,
+which may count as the combined commands their prompts forbade; `initial-grok`
+disclosed one recursive listing, but its scope audit shows eleven recursive
+commands; and six runs continued after context compaction. The closure
+discloses all of these.
+
+`origin/main` moved twice during the review: the owner's onomatopoeia companion
+guides and their review fixes (`a6a40ef7`, `9766dbd5`), then the ねちねち
+example wording and the どっと and ぶつぶつ scene images (`32f8b991`,
+`0697b768`). The signed merges `e37ad00b` and `eafee44b` regenerated the
+derived manifest, their only conflict, and mechanical proofs show that main
+changed no batch file or link target and that no text line it changed mentions
+a batch kanji or word, so no integration review was needed. Main's CI fails on
+`32f8b991` and `0697b768` because the vocabulary review of
+`onoma-c7-nechinechi-criticism` is stale; the batch's vocabulary check reports
+the same line. The [closure record](n1-reviews/batch-156-closure/README.md)
+keeps the reports, prompts, packets, dispositions, merge proofs and limits, and
+the [progress file](n1-sources/batch-156-progress.json) records the gates.
+
+Gates at `ba44b280` pass except the vocabulary check, which reports main's
+stale line: 439 host tests, validation, lint (0 errors; 1 older warning on
+`words/潜る.md`), quiz safety, link plan, kanji remarks, card Metadata entry
+ids, manifest rebuild and budget. In the N1 and All stacks all ten reading
+questions take three of three wrong options from their curated distractors; in
+a Starter practice session 乙, 伏, 伐 and 伴 take all three from the fallback,
+as at the freeze. The reading-exposure audit reports no production,
+padded-session or one-holder hit and records ten latent collisions, all
+KANJIDIC2 name readings that no audited pool can draw (丹 た; 亜 や; 仁 く, じ
+and と; 伯 いき, えき, か, き and は). `reading_options.py` reports one
+problem, its known over-report of 伯 は. Retained bytes are 56,679,021, under
+the 56 MiB guard; no choice between raising the guard and a reduced set for the
+remaining rows has been posted on issue 60 yet. Android JVM tests and the
+Kotlin reading cross-check were not run (no JDK); the reading audits are the
+author's Python ports of the Kotlin builder, kept outside the repository; no
+native, device or phone check was done, and phone acceptance is outstanding.
+Follow-ups include a 甲 card and quiz exclusions for the 112 existing words
+whose reading quiz can offer a reading that JMdict attests for the same
+spelling.
+
 ## Batch 155: published
 
 Review-closed at `25609582`, merged with `origin/main` in `37c71f81`, and
