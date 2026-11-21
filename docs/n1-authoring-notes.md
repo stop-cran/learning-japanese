@@ -123,6 +123,92 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 153: review closed, publication pending
+
+Fifteen absent frozen members: 酌 酔 酢 醜 釈 釣 鈴 銃 銭 鎖 鐘 鑑 附 陥 陰
+(rows 1106–1152), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: twenty existing articles each gain one link to a new card.
+Two of them also lose a sentence that said the new card did not exist yet: 附属
+drops “附 has no card yet.” and 酌む drops “There is no 酌 kanji card in the
+current collection.” One existing kanji card changes in its remarks: 属 now
+links 附, with its title, in 附属 instead of saying that 附 has no card yet. No
+other line of an existing card or article changes. `n1_linkplan.py verify
+--remarks` checks the article links and the two article remarks, and the
+author's `kanji_remarks.py` checks that 属 changes only by its declared remark.
+Cards whose senses overlap those of other cards keep each other out of their
+meaning-quiz options where the Notes say so; two pairs of new cards declare
+this on one card only (鈴 lists 鐘, and 陥 lists 釣, added in review), and the
+app applies an exclusion in both directions.
+
+Six cards quiz only their on reading (釈 シャク, 銃 ジュウ, 銭 セン, 鑑 カン, 附
+フ, 陥 カン) and nine only their kun reading (酌 く.む, 酔 よ.う, 酢 す, 醜
+みにく.い, 釣 つ.る, 鈴 すず, 鎖 くさり, 鐘 かね, 陰 かげ), because the other
+readings have no declaring word article yet; they are listed, not quizzed. All
+fifteen quizzed readings are in the official Joyo table. 酔っ払い, 釣り and
+釣り合う use the readings 酔 よ and 釣 つ.り and つ.り-, which share a stem with
+the quizzed よ.う and つ.る; the app asks one question per stem, so these articles are
+linked on their own rows, which are not quizzed. 附属 is the article that
+declares 附 フ; JMdict files it under 付属, with 附属 as a variant spelling.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. Three design changes came before drafting: 酢 also excludes 償
+and 附 also excludes 仕, from their Kanjipedia senses, and 陥 excludes 滑; a
+group of 陰 exclusions resting only on the compound おかげ was dropped. The
+first check run found three attested readings that a Starter practice session
+borrowing one holder card could offer as wrong reading options: 醜 たぐい (by
+双 or 類), 釈 おく (by 億, 屋 or 憶) and 附 ぶ (by 武, 舞 or 部). 醜's distractors
+賢 鋭 美 therefore became the Starter cards 短 赤 新, 釈's 誇 測 祝 became 書 聞
+学, and 附's 削 離 除 became 外 出 間, so that their curated options fill every
+wrong reading slot in the N1, All and Starter pools. 酢's distractor 粉 became
+麦, because KANJIDIC2 lists デシメートル among 粉's kun readings, which would
+mark it as a wrong option in 酢's kun quiz. A scan comparing the KANJIDIC2
+meanings of every card with the new titles added 踏 to 鑑's exclusions
+(KANJIDIC2 lists “appraise” for 踏) and 覆 to 陰's (KANJIDIC2 lists “shade” for
+both) before the freeze commit `cdab83b3`.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `cdab83b3` one after the other, each without seeing
+the other's work. Claude found no defect and made six optional suggestions.
+GPT returned NEEDS FIX for one missing meaning-quiz exclusion: JMdict glosses
+陥れる with “to lure (into a trap)” and “to capture (a castle, fortress,
+etc.)”, so 陥 (“fall into; cave in”) overlaps 捕 (“capture”) and 釣
+(“angling; lure”). The fix `3f8b951d` adds both to 陥's exclusions. It also
+applies three of Claude's suggestions: 醜's Joyo note adds 醜さ, which the
+Joyo table prints beside 醜い; 釈 lists 釈放 and 会釈 among its common words;
+and 鎖 notes the Digital Daijisen headword じょう【錠／▽鎖／×鏁】, a lock,
+which JMdict files under 錠 with 鎖 as a rarely used form. Claude also noted
+that the audit's extra Digital Daijisen readings lacked 鎖 じょう: the author's
+headword parser cut off headwords whose historical spelling holds katakana or
+｜. With the parser fixed, the extras gain 鎖 じょう and nothing else changes;
+the frozen audit already counted じょう as attested through JMdict and found
+no collision, since no card offers じょう as a kun reading and 鎖 quizzes only
+くさり. Rerun on the headwords of batches 144–152, the fixed parser adds one
+reading not already on a card, 益 よう, which batch 146's audits already listed
+from JMdict; a new exposure run for it finds no hit. Claude's other
+suggestions were declined: 鐘's non-KANJIDIC2 シュ row stays after the
+KANJIDIC2 rows, as on other cards, and the exclusions it called weak but
+defensible (酢/賞, 醜's 同 似 等 匹, 陥/滑 and 鑑's book sense) stay, each
+citing a source sense. Fresh agents of both families confirmed the fix, with no remaining finding. The
+[closure record](n1-reviews/batch-153-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `3f8b951d` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings, none on the new cards, all on existing word
+articles that gain a link here and whose Dictionary line cites no JMdict entry
+id: 日陰, 醜い and 鑑賞), quiz safety, link plan, kanji remarks, manifest
+rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit, for ordinary or KANJIDIC2
+name-only readings. It records eight latent collisions, attested readings that
+other cards offer but no audited pool can draw; two of them, 醜 たぐい (by 双
+or 類) and 釈 おく (by 億, 屋 or 憶), are still reported by
+`reading_options.py`, which does not model curated options. Android JVM tests
+were not run (no JDK), and no native or phone acceptance is claimed. Published
+delivery stays **542/1,228** until CI and ZIP verification; publication would
+make it **557/1,228**, with **671 remaining**.
+
 ## Batch 152: published
 
 Review-closed at `b81299f3`, merged with `origin/main` in `197e91d8`, and
