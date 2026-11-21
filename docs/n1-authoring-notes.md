@@ -123,6 +123,100 @@ the B135 review:
   [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
   for a later sweep.
 
+## Batch 155: review closed, publication pending
+
+Six absent frozen members: 卑 汰 沙 沢 胡 鼓 (rows 127–1232), the remaining
+rows whose existing declaring word articles use one of the kanji's KANJIDIC2
+readings, under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. At the base, `coverage.py` aligned only 鼓
+(太鼓). Five more rows were misclassified, because the lean alignment had no
+readings for 怯, 贅, 椒 and 無, which have no cards. With KANJIDIC2's 怯
+キョウ, 贅 ゼイ, 椒 ショウ and 無 ム/ブ, the articles 卑怯, 贅沢, 胡椒, 無沙汰
+and 御無沙汰 use 卑 ヒ, 沢 タク, 胡 コ, 沙 サ and 汰 タ, and the pinned JMdict
+marks none of these spellings as ateji and none of the readings as gikun. This
+corrects batch 149, which set 胡 aside because 胡椒 seemed to use none of its
+readings; こしょう uses コ. The batch 149 ledger is not rewritten. The other
+six rows marked as not aligned (伯 戯 撲 皇 眼 邪) are not part of this batch.
+
+No word article is added: six existing articles each change in one line, which
+gains eight links in all, and the same line of 無沙汰 now says “無 does not
+have a card yet” instead of “None of these written characters has a card yet”.
+No existing kanji card changes. `n1_linkplan.py verify --remarks` checks the
+links and that remark, and the author's `kanji_remarks.py` checks that no
+existing card changes. Cards whose senses overlap those of other cards keep
+each other out of their meaning-quiz options where the Notes say so; the only
+pair of new cards that exclude each other is 汰 and 沙, declared on 沙, the
+later source row.
+
+All six cards quiz only their on reading (卑 ヒ, 汰 タ, 沙 サ, 沢 タク, 胡 コ,
+鼓 コ), because the other readings have no declaring word article yet; they
+are listed, not quizzed. Five of the six are in the official Joyo table; 胡 is
+not a Joyo kanji (KANJIDIC2 grade 9, and Digital Daijisen labels it
+［人名用漢字］). 汰 タイ, おご.る, にご.る and よな.げる, 沙 よなげる, 沢
+うるお.い, うるお.す and つや, and 胡 なんぞ have no checked JMdict example
+and are labelled source-only on the cards.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. Design changes before drafting: 汰 does not exclude 沙, because
+the sibling pair is declared on 沙; a sweep of title keywords added 近 and 軽
+to 卑's exclusions and 激 and 扇 to 鼓's; and 虚 was dropped from 胡's,
+because no verbatim source ties 胡's sense でたらめ to 虚. The reading audits
+also take, from an okurigana scan of JMdict headwords, the readings 卑
+ひ.わい, 汰 ゆ.る and 鼓 こ.す and こ.する; none of them collides with a
+reading another card offers. The freeze commit is `97c49eb2`.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `97c49eb2` one after the other, each without seeing
+the other's work. Claude returned CLEAN with four optional suggestions; GPT
+returned NEEDS FIX for three minor points. 卑 (“lowly; despicable”) excluded
+底 (“bottom; base”) only because both English glosses contain “base”, although
+卑 is low in a moral sense and 底 is a physical bottom (G1). 沙 excluded 漠 by
+carrying the meaning of the whole word 沙漠, “desert”, over to 沙 (G2). And
+every card carried an editorial proof dossier, a dictionary-comparison
+paragraph at line 23 and Notes that proved each exclusion with source names,
+entry ids and Japanese definition fragments, too dense for the N5–N4 reader on
+a phone (G3). The fix `25609582` removes both exclusions, keeps 沙漠 on 沙 as
+a rarely used spelling of 砂漠 with a link to 漠, and rewrites line 23 and the
+Notes of all six cards in plain English, with one short reason per excluded
+group, the layout adopted for batch 149. The replaced text is kept verbatim in
+the closure's `exclusion-proofs.md`, and sixteen Metadata ids whose words the
+cards no longer name were removed. Claude's optional suggestions to give 胡
+nearer distractors and to update the 御無沙汰 remark that some of its
+characters lack cards are deferred to a later pass; of its other two, one was
+covered by G1 and the other, on 醜 as a neighbour of 卑, asked for no change.
+Fresh agents of both families confirmed the fix with no finding. The Claude
+confirmation added four optional points, also deferred: 沙 does not give the
+modern meaning of 沙汰, 汰 does not name JMdict for its gloss of 沙汰, 鼓 does
+not make the link from 鼓動 to “pulse” explicit for its 脈 exclusion, and 卑
+could give Kanjipedia's 卑見. That confirmation once had two read-only calls
+in flight, and its report's statement that every response made one call is
+inaccurate on that point; the closure discloses this.
+
+After review, the owner's commit `2cb17a36` (N5 reading support:
+`docs/reading-n5.md`, two reading files and the manifest) reached `main`. The
+signed merge `37c71f81` regenerated the derived manifest, its only conflict,
+and a mechanical proof shows that main changed no batch file or link target
+and that none of the non-derived files it changed mentions a batch kanji or
+word, so no integration review was needed. The
+[closure record](n1-reviews/batch-155-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the merge proof and the limits, and the
+[progress file](n1-sources/batch-155-progress.json) records the gates.
+
+Gates at the merge `37c71f81` pass: 439 host tests, validation, lint (0
+errors; 2 warnings on the older, wrapped Dictionary lines of 卑怯 and 太鼓,
+which gain links here), quiz safety, link plan, kanji remarks, card Metadata
+entry ids, manifest rebuild and budget. 沢's タク question takes two of its
+three wrong options from its curated cards and 鼓's コ question one, because
+霜, 笛 and 琴 have no on reading; quiz safety fills the other slots from other
+cards and reports no error or warning. The reading-exposure audit reports no
+production, padded-session or one-holder hit and records one latent collision:
+沢 さ, a KANJIDIC2 name reading that other cards offer but no audited pool can
+draw. `reading_options.py` reports no problem. Android JVM tests were not run
+(no JDK), and no native or phone acceptance is claimed. Published delivery
+stays **572/1,228** until CI and ZIP verification; publication would make it
+**578/1,228**, with **650 remaining**.
 ## Batch 154: published
 
 Review-closed at `e5c945d6` and published at `c1137b93`. The
