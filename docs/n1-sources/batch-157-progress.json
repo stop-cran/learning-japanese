@@ -47,7 +47,7 @@
     "directExclusions": [
       {"word": "補佐", "exclude": ["援助", "助手", "手伝い", "世話", "手伝う", "助ける", "支える", "応援"]},
       {"word": "佳作", "exclude": ["傑作", "名作", "作品"]},
-      {"word": "併用", "exclude": ["使用", "利用", "使う", "用いる", "用"]},
+      {"word": "併用", "exclude": ["使用", "利用", "使う", "用いる", "用", "用途"]},
       {"word": "侍", "exclude": ["武士"]},
       {"word": "侮る", "exclude": ["見下ろす"]},
       {"word": "俵", "exclude": ["袋", "バッグ", "鞄"]},
@@ -58,16 +58,16 @@
   },
   "kanjiQuizAudit": {
     "directExclusions": [
-      {"kanji": "佐", "exclude": ["丞", "助", "援", "支"]},
-      {"kanji": "佳", "exclude": ["美", "良", "善", "宜", "優", "俊", "傑", "秀", "英", "卓", "豪"]},
-      {"kanji": "併", "exclude": ["合", "兼", "結", "並", "共", "協", "接", "括", "統"]},
-      {"kanji": "侍", "exclude": ["士", "武", "臣", "仕", "僕"]},
+      {"kanji": "佐", "exclude": ["丞", "助", "援", "支", "副"]},
+      {"kanji": "佳", "exclude": ["美", "良", "善", "宜", "優", "俊", "傑", "秀", "英", "卓", "豪", "偉", "華"]},
+      {"kanji": "併", "exclude": ["合", "兼", "結", "並", "共", "協", "接", "括", "統", "斉"]},
+      {"kanji": "侍", "exclude": ["士", "武", "臣", "仕", "僕", "兵"]},
       {"kanji": "侮", "exclude": ["卑"]},
       {"kanji": "侯", "exclude": ["殿"]},
-      {"kanji": "俊", "exclude": ["秀", "英", "傑", "才", "優", "卓", "豪", "賢"]},
+      {"kanji": "俊", "exclude": ["秀", "英", "傑", "才", "優", "卓", "豪", "賢", "偉", "哲"]},
       {"kanji": "俗", "exclude": ["凡", "卑"]},
       {"kanji": "俵", "exclude": ["袋"]},
-      {"kanji": "倫", "exclude": ["伴", "輩", "徳", "義"]}
+      {"kanji": "倫", "exclude": ["伴", "輩", "徳", "義", "善"]}
     ]
   },
   "dictionaryPackets": [
@@ -123,15 +123,15 @@
     "kanjivg": "Pinned revision 70a0b7ae0c18ceb5cb358274b029cce0234a43bc."
   },
   "mechanicalChecks": {
-    "contentValidation": "Passed after the first-round review fixes, the removal of unverifiable wording and the distractor redesign: tools/validate.py reported 0 errors.",
-    "batchAudit": "Passed after the first-round review fixes, the removal of unverifiable wording and the distractor redesign: 10 kanji, 10 new words, 8 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest e242430f8335ff1e.",
-    "unitTests": "Passed after the first-round review fixes, the removal of unverifiable wording and the distractor redesign: test_audit_n1_batch.py (22 tests), test_validate.py (87 tests) and the whole tools suite (439 tests).",
-    "n1Lint": "Rerun after the first-round review fixes, the removal of unverifiable wording and the distractor redesign against base e2c25363: the only error is the unrelated, pre-existing phonetic front-matter key in kanji/語.md, outside this batch. The earlier missing ことわり Readings row in kanji/理.md is fixed.",
-    "whitespace": "Passed after the first-round review fixes, the removal of unverifiable wording and the distractor redesign: git -c core.whitespace=cr-at-eol diff --check reported no issues.",
+    "contentValidation": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: tools/validate.py reported 0 errors.",
+    "batchAudit": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: 10 kanji, 10 new words, 8 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest ce464da10570fecc.",
+    "unitTests": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: test_audit_n1_batch.py (22 tests), test_validate.py (87 tests) and the whole tools suite (439 tests).",
+    "n1Lint": "Rerun after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions against base e2c25363: the only error is the unrelated, pre-existing phonetic front-matter key in kanji/語.md, outside this batch. The earlier missing ことわり Readings row in kanji/理.md is fixed.",
+    "whitespace": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: git -c core.whitespace=cr-at-eol diff --check reported no issues.",
     "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning and reading questions in the N1 and All stacks and in Starter practice sessions. The frozen draft's same-sound distractors failed this check with 29 errors and 1 warning: nine cards' Notes did not name their distractors, the excluded pairs 春/旬 (俊) and 属/族 (俗) sat inside option sets, and 俊's option titles shared the word \"season\". Just before the redesign (e2b433da), the first-round fixes had added 4 more warnings: 佐/助 and 佳/俊 were declared on both cards, and 俵's Notes did not name its new exclusion 袋. No reviewer raised these; the check found them before the confirmation round. The mirrored declarations on the reused cards 助 (佐) and 速い (俊足) were removed because a declaration on either card excludes the pair both ways (docs/content-format.md).",
     "readingExposure": "lean reading_exposure.py --seeds 200 with the --extra list below: 0 production hits, 0 padded-session hits and 0 one-holder padded hits; 4 latent collisions that no N1, All or Starter pool can draw (佳 けい and えい, 侍 かみ, 俗 しょく). In the frozen draft, 続 (ショク) was a curated 俗 distractor, so the しょく reading of 俗 in JMdict 1405100 was a production hit.",
     "readingExtras": "佐 すけ, たす.ける, さ; 佳 よ.い, え.い, よ.き, か; 併 なら.ぶ, なら.べる, しか.し, しか.しながら, しっか.し, へい.どん, へい; 侍 シ, はべ.る, さぶら.う, さむら.う, じ.する, はんべ.り, じ; 侮 あなど.る, ぶ; 侯 まと, きみ, こう; 俊 すぐ.れる, しゅん; 俗 なら.わし, いや.しい, ぞく.っぽい, ぞく.なる, ぞく.に, ぞく; 俵 ひょう, びょう, ぴょう; 倫 みち, たぐい, つい.で, りん. Sources: the readings Kanjipedia marks as outside the official table (外), the Digital Daijisen character entries and headwords, and the JMdict okurigana scan.",
     "readingOptions": "lean reading_options.py with the same --extra list: 0 problems."
   },
-  "status": "Remaining first-round review findings are source-checked and addressed; unverifiable frequency and usage wording found during the pre-confirmation pass is removed or source-tied; the distractors are redesigned to pass quiz-safety and reading-exposure checks; validation and audit pass. Three-family confirmation pending. Not published."
+  "status": "Remaining first-round review findings are source-checked and addressed; unverifiable frequency and usage wording found during the pre-confirmation pass is removed or source-tied; the distractors are redesigned to pass quiz-safety and reading-exposure checks; eight more source-backed kanji exclusions (佐/副, 佳/偉, 佳/華, 併/斉, 侍/兵, 俊/偉, 俊/哲, 倫/善) and the word exclusion 併用/用途 are added; validation and audit pass. Three-family confirmation pending. Not published."
 }
