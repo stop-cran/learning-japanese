@@ -465,7 +465,8 @@ The following records the historical contract-1 adjustment. [N4 B](listening-n4.
 supersedes its capacities: app download/retained caps 48/64 MiB; publishing compressed/retained/
 combined-task-media guards 42/56/20 MiB. Inflation and per-file limits are unchanged.
 The later [archive packaging and N1 capacity adjustment](../README.md#app-archive-packaging) excludes
-contributor-only folders and sets entry limits to 18,000 publishing / 20,000 app. Byte guards are unchanged.
+contributor-only folders and sets entry limits to 18,000 publishing / 20,000 app. The retained
+publishing guard is now 62 MiB, below the app's 64 MiB cap; the other byte guards are unchanged.
 An older 8,000-entry or 30-MiB app cannot fetch an oversized new archive and keeps its last accepted offline
 content; deliver the upgraded APK before that publication. Capacity does not authorize spending.
 

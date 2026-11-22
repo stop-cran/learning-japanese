@@ -190,7 +190,9 @@ Use a clone rather than a source ZIP when contributing or inspecting the complet
 runtime additions and any non-runtime files that still ship, and rejects exclusions of the manifest
 or any manifested runtime file. The publishing entry guard is **18,000**, below the updated
 Android **20,000-entry** hard limit. Both count directories and skipped files, not just cards.
-The compressed, inflated, retained and per-file byte guards are unchanged.
+The retained-content publishing guard is **62 MiB**, leaving 2 MiB below the
+[Android importer's 64 MiB limit](https://github.com/stop-cran/kanji-cards-android/blob/91e1d4b578859f7bfb582f7b9c6acf48c6ca6a75/core/src/main/kotlin/io/github/stopcran/kanji/core/content/SafeZip.kt).
+Raising the publishing guard above that limit requires an updated importer to reach users first.
 
 The N2 baseline (`7535831`) has 7,964 public ZIP entries. The current
 [N1 kanji-only expansion](docs/n1-authoring-notes.md) uses
@@ -214,8 +216,8 @@ that integration from the original pilot/native measurement basis above.
 The earlier **13,847-entry / approximately 52.4-MiB** projection combined kanji with
 [3,427 N1 vocabulary rows](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv).
 That vocabulary project and other N1 sections remain deferred. Check actual combined output
-incrementally against the unchanged 18,000-entry / 42-MiB compressed / 80-MiB inflated /
-56-MiB retained publishing guards.
+incrementally against the 18,000-entry / 42-MiB compressed / 80-MiB inflated /
+62-MiB retained publishing guards.
 
 Deliver an upgraded Android APK before publishing an archive above older clients' **8,000-entry**
 limit. Source publication alone does not upgrade installed apps; failed sync keeps their last accepted

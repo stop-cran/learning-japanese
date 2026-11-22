@@ -178,8 +178,9 @@ publication readiness. Normal runtime/app checks remain exact-approval gated.
 
 ## Media budgets and publication gates
 
-B implements finite app limits of **48 MiB downloaded ZIP / 64 MiB retained** and content
-publishing guards of **42 MiB compressed / 56 MiB retained / 20 MiB combined task media**.
+B set app limits of **48 MiB downloaded ZIP / 64 MiB retained** and publishing guards
+of **42 MiB compressed / 56 MiB retained / 20 MiB combined task media**.
+The current retained publishing guard is **62 MiB**; the app cap and other byte guards are unchanged.
 Inflation stays at 80 MiB publishing / 100 MiB app. The
 [archive packaging and N1 capacity adjustment](../README.md#app-archive-packaging) excludes contributor-only
 folders and sets entry limits to 18,000 publishing / 20,000 app, including directories and skipped files.
