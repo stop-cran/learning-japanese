@@ -84,7 +84,9 @@ disclosed choices:
 - The B134-era session-binding, admission and token-forecast records are not
   continued. Each batch keeps one progress file in `n1-sources/` and one
   review record in `n1-reviews/`; `tools/n1_record_publication.py` writes
-  the publication receipt.
+  the publication receipt. Screenshots, raw session transcripts and
+  archives are not committed; the [retention note](n1-reviews/README.md)
+  describes those removed from batches 17–110.
 - Android JVM tests stay **not run** until a JDK is available. No native,
   device or phone acceptance is claimed.
 - `bf9aa740`, `2cdae679` and `c5cdc604`, and batch 136's closure
