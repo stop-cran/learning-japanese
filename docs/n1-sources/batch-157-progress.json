@@ -135,7 +135,7 @@
   },
   "statusBeforeConfirmation": "Remaining first-round review findings are source-checked and addressed; unverifiable frequency and usage wording found during the pre-confirmation pass is removed or source-tied; the distractors are redesigned to pass quiz-safety and reading-exposure checks; eight more source-backed kanji exclusions (佐/副, 佳/偉, 佳/華, 併/斉, 侍/兵, 俊/偉, 俊/哲, 倫/善) and the word exclusions 併用/用途 and 佳作/制作 are added; validation and audit pass. Three-family confirmation pending. Not published.",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "base": "e2c25363285fd8fa100d1c4178e7289592562a31",
   "members": [
     "佐",
@@ -217,14 +217,14 @@
     "俵",
     "倫"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": ["佐", "佳", "併", "侍", "侮", "侯", "俊", "俗", "俵", "倫"],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 588,
-    "publishedN1Additions": 582,
+    "publishedPendingRecordsWithCards": 598,
+    "publishedN1Additions": 592,
     "n2Placements": 6,
-    "undelivered": 640,
+    "undelivered": 630,
     "reviewClosedPendingRecordsWithCards": 598,
     "localUnreviewedDrafts": 0,
     "notStarted": 630,
@@ -529,6 +529,13 @@
     "The gate results come from the author's runs included in the packets, not from reviewer reruns.",
     "The runtime compacted the context once in r1-grok, c1-claude, c1-gpt and c1-grok; the other 17 runs were not compacted (local session log; provenance.json does not record compaction).",
     "No published commit is rewritten; the five pre-merge fix commits were re-signed before the merge, and every run's final report is kept.",
-    "Every stored prompt equals, byte for byte, the first message recorded in its reviewer session (the c2 Claude follow-up equals that session's second message)."
-  ]
+    "Every stored prompt equals, byte for byte, the first message recorded in its reviewer session (the c2 Claude follow-up equals that session's second message).",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "5aa7f5938b5efd7c4469bf6d9d43bd478da3ce67",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/5aa7f5938b5efd7c4469bf6d9d43bd478da3ce67",
+    "receipt": "../n1-reviews/batch-157-publication/provenance.json"
+  }
 }

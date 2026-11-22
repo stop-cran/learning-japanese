@@ -136,7 +136,7 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
-## Batch 157: review closed, publication pending
+## Batch 157: published
 
 Batch 157 adds the cards 佐 佳 併 侍 侮 侯 俊 俗 俵 倫 (source rows 38, 40, 41, 43, 46,
 47, 50, 51, 55 and 60, the first ten remaining Joyo rows after B156) and one
@@ -200,8 +200,15 @@ or phone check was run.
 
 At `24201899`, validation, the 439 host tests, the manifest rebuild, the
 budget, the batch audit, quiz safety and reading options all pass. Lint reports
-only the pre-existing `phonetic` key on 語 and warnings on reused files. After
-publication, delivery becomes 598/1,228, with 630 remaining.
+only the pre-existing `phonetic` key on 語 and warnings on reused files. The
+closure commit `5aa7f593` adds only documents to `24201899`; the same checks
+give the same results there. It fast-forwards main and is the published
+commit: the [CI run](https://github.com/stop-cran/learning-japanese/actions/runs/45063731982)
+passed and the [publication receipt](n1-reviews/batch-157-publication/provenance.json)
+records 9,783 verified runtime hashes in the served ZIP. Delivery is now
+**598/1,228**, with **630 remaining**. The served ZIP retains 56,143,719 bytes,
+59,742 more than at the B156 receipt, under the 62 MiB guard, leaving 8,867,993
+bytes. Phone acceptance is still outstanding.
 
 The full record, including the run table, every disposition and the limits, is
 in
