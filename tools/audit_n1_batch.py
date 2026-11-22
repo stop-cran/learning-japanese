@@ -625,6 +625,11 @@ def audit(root, batch):
         required_fields(ledger, {"requiredReciprocalPairs", "changedReusedPassages", "wordQuizAudit",
                                  "dictionaryPackets", "readingDispositions", "curatedProjection", "quizAudit"},
                         "Legacy batch ledger")
+        if "kanjiQuizAudit" in ledger:
+            required_fields(ledger["kanjiQuizAudit"], {"directExclusions"}, "Kanji quiz audit")
+            kanji_exclusions = ledger["kanjiQuizAudit"]["directExclusions"]
+        else:
+            kanji_exclusions = []
     else:
         required_fields(ledger, {"sourceCompletionPlan", "sourceCompletionAudit", "draftAudit"},
                         "Unsupported or incomplete batch ledger")
@@ -673,8 +678,13 @@ def audit(root, batch):
     runtime_delta(before, current, additions, changes)
     for name in changes:
         rows = [r for r in ledger["changedReusedPassages"] if r["article"] == name]
-        exclusion_rows = [r for r in ledger["wordQuizAudit"]["directExclusions"]
-                          if f"words/{r['word']}.md" == name]
+        exclusion_rows = [
+            r for r in ledger["wordQuizAudit"]["directExclusions"]
+            if f"words/{r['word']}.md" == name
+        ] + [
+            r for r in kanji_exclusions
+            if f"kanji/{r['kanji']}.md" == name
+        ]
         require(len(exclusion_rows) <= 1, "Duplicate reused exclusion decision")
         reused_changes(base_file(root, commit, name),
                        (root / name).read_text(encoding="utf-8"), rows,
@@ -755,6 +765,9 @@ def audit(root, batch):
     for row in ledger["wordQuizAudit"]["directExclusions"]:
         require(metadata(root, f"words/{row['word']}.md")["quiz_exclusions"] == row["exclude"],
                 "Word exclusion ledger mismatch")
+    for row in kanji_exclusions:
+        require(metadata(root, f"kanji/{row['kanji']}.md")["quiz_exclusions"] == row["exclude"],
+                "Kanji exclusion ledger mismatch")
     return {"batch": batch, "baseCommit": commit, "draftKanji": len(members),
             "newWords": len(new_words), "changedReusedArticles": len(changes),
             "requiredReciprocalPairs": len(pairs), "activatedBaselinePairs": len(activated),

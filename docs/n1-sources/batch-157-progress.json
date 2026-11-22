@@ -36,7 +36,9 @@
     {"article": "kanji/諸.md", "before": "- 諸君 しょくん - you people; everyone (in an address)\n", "after": "- 諸君 しょくん - you people; everyone (in an address)\n- [諸侯](../words/諸侯.md) しょこう — feudal lords\n"},
     {"article": "kanji/足.md", "before": "- 足りる たりる — to be enough\n", "after": "- 足りる たりる — to be enough\n- [俊足](../words/俊足.md) しゅんそく — fast runner; swift on foot\n"},
     {"article": "kanji/語.md", "before": "- 物語 ものがたり — story, tale\n", "after": "- 物語 ものがたり — story, tale\n- [俗語](../words/俗語.md) ぞくご — colloquial language; slang\n"},
-    {"article": "kanji/理.md", "before": "- 理解 りかい — understanding\n", "after": "- 理解 りかい — understanding\n- [倫理](../words/倫理.md) りんり — ethics; morals\n"}
+    {"article": "kanji/理.md", "before": "- 理解 りかい — understanding\n", "after": "- 理解 りかい — understanding\n- [倫理](../words/倫理.md) りんり — ethics; morals\n"},
+    {"article": "kanji/助.md", "before": "distractors: [加, 男, 動]\n", "after": "distractors: [加, 男, 動]\nquiz_exclusions: [佐]\n"},
+    {"article": "kanji/助.md", "before": "助けて！ (たすけて！) means \"Help!\" The て-form here requests assistance.\n", "after": "助けて！ (たすけて！) means \"Help!\" The て-form here requests assistance.\n佐 and 助 overlap in assistance-related glosses: 佐 usually points to an aide or assistant, especially in compounds such as 補佐; 助 is the broader everyday character for helping or rescuing.\n"}
   ],
   "wordQuizAudit": {
     "directExclusions": [
@@ -46,6 +48,11 @@
       {"word": "侮る", "exclude": ["見下ろす"]},
       {"word": "俵", "exclude": ["袋"]},
       {"word": "倫理", "exclude": ["道徳"]}
+    ]
+  },
+  "kanjiQuizAudit": {
+    "directExclusions": [
+      {"kanji": "助", "exclude": ["佐"]}
     ]
   },
   "dictionaryPackets": [
@@ -102,10 +109,10 @@
   },
   "mechanicalChecks": {
     "contentValidation": "Passed on the revised snapshot: tools/validate.py reported 0 errors.",
-    "batchAudit": "Passed on the revised snapshot: 10 kanji, 10 new words, 7 changed existing articles, 17 reading dispositions, and 27 complete JMdict families; manifest 52fc7a5211009b57.",
+    "batchAudit": "Passed on the revised snapshot: 10 kanji, 10 new words, 8 changed existing articles, 17 reading dispositions, and 27 complete JMdict families; manifest 5c6d0ee3088e9a9a.",
     "unitTests": "Passed on the revised snapshot: test_audit_n1_batch.py (22 tests) and test_validate.py (87 tests).",
     "n1Lint": "The previous targeted lean lint reported two pre-existing errors in kanji/理.md (metadata reading ことわり lacks a Readings row) and kanji/語.md (unsupported phonetic front-matter key), plus 41 warnings. Both errors are present at base commit e2c25363285fd8fa100d1c4178e7289592562a31; the lint was not rerun after these editorial revisions.",
-    "whitespace": "Passed on the revised snapshot: git diff --check reported no issues."
+    "whitespace": "Passed on the revised snapshot: git -c core.whitespace=cr-at-eol diff --check reported no issues."
   },
-  "status": "Revised candidate after initial independent review; validation passed and repeat review pending. Not published."
+  "status": "Revised candidate after repeat-review findings; validation passed and a fresh independent review is pending. Not published."
 }
