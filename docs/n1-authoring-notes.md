@@ -134,14 +134,14 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
-## Batch 156: review closed, publication pending
+## Batch 156: published
 
 Review-closed at `ba44b280`, one commit on top of the second of two signed
-merges with `origin/main` (`e37ad00b` and `eafee44b`). Publication is pending:
-main's own CI fails on a stale vocabulary review outside the batch, and the
-receipt needs a green run on the exact published commit. After the receipt,
-delivery becomes **588/1,228**, with **640 remaining**; until then it stays
-578/1,228.
+merges with `origin/main` (`e37ad00b` and `eafee44b`). Published at `f072122b`:
+the [CI run](https://github.com/stop-cran/learning-japanese/actions/runs/44979632081)
+passed and the [publication receipt](n1-reviews/batch-156-publication/provenance.json)
+records 9,753 verified runtime hashes in the served ZIP. Delivery is now
+**588/1,228**, with **640 remaining**. Phone acceptance is still outstanding.
 
 Ten absent frozen members: 丹 乙 亜 仁 仙 伎 伏 伐 伯 伴 (rows 7–34), the first
 ten remaining Joyo rows, in the first batch under the issue 60 proposal. The
@@ -159,8 +159,11 @@ checked JMdict example and are labelled source-only. The only exclusion between
 two new cards is 亜/乙, declared on 亜, the later source row.
 
 At the freeze the author also counted news2 and spec2 as qualifying tags, so no
-row was flagged; 仙人 and 伯仲 carry only those two tags. The fix `7eaf5c24`
-then chose 甲乙 as the 乙 word, which also carries only news2 and spec2,
+row was flagged. 仙人 and 伯仲 both carry news2 and spec2, but neither
+has a tag from the proposal's list. 亜熱帯 has news2 **and** the listed spec1.
+These are JMdict priority markers on the word form and reading, not kanji
+or JLPT tags. The fix `7eaf5c24`
+then chose 甲乙 as the 乙 word, which also has news2 and spec2 but no listed tag,
 without checking its other kanji 甲, which has no card. Rechecked against the
 list, seven words carry a listed tag (丹念, 亜熱帯, 仁, 歌舞伎, 降伏, 伐採,
 同伴). No reviewer had raised either error; the author disclosed both in the
@@ -219,10 +222,12 @@ example wording and the どっと and ぶつぶつ scene images (`32f8b991`,
 `0697b768`). The signed merges `e37ad00b` and `eafee44b` regenerated the
 derived manifest, their only conflict, and mechanical proofs show that main
 changed no batch file or link target and that no text line it changed mentions
-a batch kanji or word, so no integration review was needed. Main's CI fails on
+a batch kanji or word, so no integration review was needed. Main's CI failed on
 `32f8b991` and `0697b768` because the vocabulary review of
 `onoma-c7-nechinechi-criticism` is stale; the batch's vocabulary check reports
-the same line. The [closure record](n1-reviews/batch-156-closure/README.md)
+the same line at closure. `32f8b991` changed only that exercise's English
+instruction. `f072122b` refreshed its context fingerprint without marking
+the pending exercise reviewed. The [closure record](n1-reviews/batch-156-closure/README.md)
 keeps the reports, prompts, packets, dispositions, merge proofs and limits, and
 the [progress file](n1-sources/batch-156-progress.json) records the gates.
 
@@ -236,9 +241,10 @@ as at the freeze. The reading-exposure audit reports no production,
 padded-session or one-holder hit and records ten latent collisions, all
 KANJIDIC2 name readings that no audited pool can draw (丹 た; 亜 や; 仁 く, じ
 and と; 伯 いき, えき, か, き and は). `reading_options.py` reports one
-problem, its known over-report of 伯 は. Retained bytes are 56,679,021, under
-the 56 MiB guard; no choice between raising the guard and a reduced set for the
-remaining rows has been posted on issue 60 yet. Android JVM tests and the
+problem, its known over-report of 伯 は. The local closure measurement was
+56,679,021 retained bytes under the then-current 56 MiB guard. At publication
+the served ZIP retained 56,083,977 bytes under the new 62 MiB guard, leaving
+8,927,735 bytes. The Android import cap remains 64 MiB. Android JVM tests and the
 Kotlin reading cross-check were not run (no JDK); the reading audits are the
 author's Python ports of the Kotlin builder, kept outside the repository; no
 native, device or phone check was done, and phone acceptance is outstanding.

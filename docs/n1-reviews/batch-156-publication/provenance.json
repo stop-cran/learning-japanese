@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "batch": 156,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "f072122b41dc03839f538f2bfab4e575beef48b1",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/f072122b41dc03839f538f2bfab4e575beef48b1",
+  "base": "0638544ce1967ccec58ca7f9208c51ce8eaf4f8d",
+  "initialSnapshot": "c6afa16315d5a88b5045eeb85d429b8f7fd90b1f",
+  "reviewedSnapshot": "ba44b2809e6f46a6532ad58a016cb9d639ad2afc",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44979632081",
+    "runId": 44979632081,
+    "receiptSha256": "9d5301fba58f60c340ad4d1a79ffbc6a15a55c33c9bcf287415bc81998b31070"
+  },
+  "archive": {
+    "zipSha256": "db0817402bb84463002ebb80e22060173ca038bfeef5429a33223d31ba9b109d",
+    "receiptSha256": "144d5af5d7f8514449c7c3e392f01170854d090dfcc8a53d14224cdcb49c004a",
+    "verifiedRuntimeHashes": 9753,
+    "contentVersion": "3cff2a550b6cbc3d",
+    "manifestSha256": "dc8128855b7b41ccab6e74cab14937fddc733cf6526a9310b553666d38081bd5"
+  },
+  "reviewIdentity": "Claude, GPT and Grok each confirmed ba44b280. Signed closure 025bea83, then CI/budget repair f072122b; no intervening runtime content changes.",
+  "sourceAccounting": {
+    "delivered": 588,
+    "n1Additions": 582,
+    "n2Placements": 6,
+    "remaining": 640,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "No Kotlin cross-check or Android JVM tests (no JDK on the continuation machine); no native, rendered-font, device or phone check. Phone acceptance is outstanding.",
+    "Selection error: at the freeze the author counted news2 and spec2 as qualifying tags, so 仙人 and 伯仲 were not flagged; the fix 7eaf5c24 then chose 甲乙 as the 乙 word, which also carries only news2 and spec2, without checking its other kanji 甲, which has no card. No reviewer had raised either error; the author disclosed both in the last confirmation round, in statements that date both to the freeze. 乙種 is untagged, and 仙人 and 伯仲 carry only news2 and spec2; all three rows rest on per-row justifications that the three families accepted. 甲 still has no card. Whether news2 and spec2 should count is recorded as a follow-up for the owner.",
+    "10 latent reading collisions are not drawable in the checked N1, All and Starter pools; all are KANJIDIC2 name readings (丹 た; 亜 や; 仁 く, じ and と; 伯 いき, えき, か, き and は). reading_options.py reports one problem, its known over-report of 伯 は. Sampled seeds are not exhaustive.",
+    "The reading audits are the author's Python ports of the Kotlin builder, kept outside the repository; no Kotlin cross-check was run.",
+    "The author reported 112 existing words whose reading quiz can offer a reading that JMdict attests for the same spelling, because word-reading exclusions do not cover alternative readings; this predates the batch and is recorded as an app follow-up.",
+    "1 lint warning (words/潜る.md: the Dictionary line cites no JMdict entry id) is pre-existing and out of scope.",
+    "Under the batch rule each card quizzes the one on reading its new article uses (丹 タン, 乙 オツ, 亜 ア, 仁 ジン, 仙 セン, 伎 キ, 伏 フク, 伐 バツ, 伯 ハク, 伴 ハン); the other readings are listed, not quizzed. 伎 わざおぎ and 伐 ハツ, カ, ボチ and そむ.く have no checked JMdict example and are labelled source-only on the cards.",
+    "The ten cards declare 86 exclusions. The only exclusion between two new cards is 亜/乙, declared on 亜; the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read; some of their out-of-scope flags are false positives (base paths, the reports folder, strings parsed out of JSON).",
+    "Several judgments rest partly on live reads of Kanjipedia, Digital Daijisen (Weblio), Kotobank, Jisho, Takoboto and jpdb pages, not on pinned copies in the packets; EDRDG's JMdictDB pages ask for a password, so the reviewers checked JMdict ids against the packets' extracts and third-party mirrors.",
+    "The confirmation reviewers did not rerun the gates; they judged the check outputs that the author ran on each revised snapshot and included in their packets.",
+    "Each confirmation ran as a new agent of the same model family, with no memory of its own earlier reading; Grok was not asked to confirm a7cc61e2 on its own, and confirm2-grok reviewed its Metadata ids at ba44b280. Issue 60 asks for corrections to be confirmed with the original reviewers where possible; as in batches 150-155, each confirmation ran as a new agent instead.",
+    "Facet assignment: the repository's review rule for new word articles asks for three reviewers of different families, one each for correctness, consistency and quiz safety, and comprehensibility; here each reviewer covered all four facets with an assigned emphasis (Claude: correctness and scoped coverage; GPT: consistency, quiz safety and comprehensibility; Grok: comprehensibility). The issue 60 proposal named a two-family review; the author added Grok under the repository rule; no reply to the proposal has been posted on issue 60 yet.",
+    "Execution: four Claude runs each once had two read-only view calls in flight, and their reports wrongly say that each response made one tool call; confirm3-claude and confirm4-claude disclosed single commands over several files, which may count as the combined commands their prompts forbade; confirm-claude reports \"51 reverse targets\" for a cited range of 50 lines.",
+    "initial-grok disclosed one recursive listing, but its scope audit shows eleven recursive commands and a recursive grep of the packet; one grep with no path ran in its working folder outside the packet and found nothing; it used read_powershell and stop_powershell on one shell and wrote its report through a PowerShell here-string.",
+    "confirm3-gpt left one oversized comparison output, which the tool runtime saved to a temporary file, unopened, as its report says. Three of confirm2-grok's GitHub contents-API requests (kanji/甲.md, kanji/爵.md and kanji/種.md at the unpublished ba44b280) failed, and its report takes the absence of the 甲 and 爵 cards from the author; its report names only its family, and the session records show grok-4.7.",
+    "Context compaction (once in initial-claude, initial-gpt, confirm-claude, confirm-grok and confirm2-grok; twice in initial-grok), the overlap times and the delivered prompt text come from the local session logs; provenance.json does not record compaction. Against the delivered text, confirm2-claude.txt ends with CRLF where the delivered text ends with LF, and seven other confirmation prompts end with one more line feed.",
+    "Before the last confirmation round the packet builder's list of batch paths was changed to come from the batch's own first-parent commits, with merges of main excluded; one wording fix was also made in the text it generates.",
+    "The stored initial packet keeps 48 files; the packet's copies of repository files, its rubric and its title lists are reproduced by the recorded commits, and 32 stored files have LF line ends where the reviewers' copies had CRLF. provenance.json records both the canonical hash of the reviewed manifest and the hashes of the stored files.",
+    "Retained bytes at ba44b280 are 56,679,021, under the 56 MiB guard; no choice between raising the guard and a reduced set for the remaining rows has been posted on issue 60 yet.",
+    "Main's CI is red for a stale vocabulary review outside the batch; the publication receipt waits for a green run on the exact published commit.",
+    "No published commit is rewritten. 2c206d8f was amended three times (2e64b649, fe6cfb06, e62f1f13) after the initial packet was built from the freeze and before any confirmation packet was built. The deleted word articles 乙 and 甲乙 remain in the history, and their reviewed text is in the confirmation packets.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}
