@@ -40,7 +40,7 @@
     {"article": "kanji/助.md", "before": "distractors: [加, 男, 動]\n", "after": "distractors: [加, 男, 動]\nquiz_exclusions: [佐]\n"},
     {"article": "kanji/理.md", "before": "This table focuses on リ; the metadata also preserves the source kun reading ことわり.\n", "after": "This table includes ことわり as a source-only kun reading alongside the common on reading リ.\n"},
     {"article": "kanji/理.md", "before": "| リ | on | 理由 りゆう — reason; [料理](../words/料理.md) りょうり — cooking |\n", "after": "| リ | on | 理由 りゆう — reason; [料理](../words/料理.md) りょうり — cooking |\n| ことわり | kun (source-only) | 理 (ことわり) — principle; reason (source-listed reading; not used in a common-word example here) |\n"},
-    {"article": "kanji/理.md", "before": "Learn the complete word: the broad idea of \"reason\" does not predict every compound's meaning.\n", "after": "Learn the complete word: the broad idea of \"reason\" does not predict every compound's meaning.\n\nMetadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/Kanjidic_Project), 2026-11-02 snapshot.\n"},
+    {"article": "kanji/理.md", "before": "Learn the complete word: the broad idea of \"reason\" does not predict every compound's meaning.\n", "after": "Learn the complete word: the broad idea of \"reason\" does not predict every compound's meaning.\n\nMetadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot.\n"},
     {"article": "kanji/助.md", "before": "助けて！ (たすけて！) means \"Help!\" The て-form here requests assistance.\n", "after": "助けて！ (たすけて！) means \"Help!\" The て-form here requests assistance.\n佐 and 助 overlap in assistance-related glosses: 佐 usually points to an aide or assistant, especially in compounds such as 補佐; 助 is the broader everyday character for helping or rescuing.\n"},
     {"article": "kanji/助.md", "before": "| ジョ | on | 助手 じょしゅ — assistant |\n", "after": "| ジョ | on | 助手 じょしゅ — assistant |\n| す.ける | kun (source-only) | KANJIDIC2 lists this form; the common reading たす.ける is shown above. |\n| すけ | kun (source-only) | KANJIDIC2 lists this form; no matching common-word example is cited here. |\n"},
     {"article": "kanji/助.md", "before": "The table selects readings; the metadata retains the additional source forms.\n", "after": "The table marks source-only readings explicitly.\n"},
@@ -48,18 +48,30 @@
   ],
   "wordQuizAudit": {
     "directExclusions": [
-      {"word": "補佐", "exclude": ["援助", "助手", "手伝い", "世話"]},
-      {"word": "佳作", "exclude": ["傑作", "名作"]},
+      {"word": "補佐", "exclude": ["援助", "助手", "手伝い", "世話", "手伝う", "助ける", "支える", "応援"]},
+      {"word": "佳作", "exclude": ["傑作", "名作", "作品"]},
+      {"word": "併用", "exclude": ["使用", "利用", "使う", "用いる", "用"]},
       {"word": "侍", "exclude": ["武士"]},
       {"word": "侮る", "exclude": ["見下ろす"]},
-      {"word": "俵", "exclude": ["袋"]},
-      {"word": "倫理", "exclude": ["道徳"]},
+      {"word": "俵", "exclude": ["袋", "バッグ", "鞄"]},
+      {"word": "俗語", "exclude": ["言葉", "単語", "語"]},
+      {"word": "倫理", "exclude": ["道徳", "善"]},
       {"word": "俊足", "exclude": ["速い"]},
       {"word": "速い", "exclude": ["俊足"]}
     ]
   },
   "kanjiQuizAudit": {
     "directExclusions": [
+      {"kanji": "佐", "exclude": ["丞", "助", "援", "支"]},
+      {"kanji": "佳", "exclude": ["美", "良", "善", "宜", "優", "俊", "傑", "秀", "英", "卓", "豪"]},
+      {"kanji": "併", "exclude": ["合", "兼", "結", "並", "共", "協", "接", "括", "統"]},
+      {"kanji": "侍", "exclude": ["士", "武", "臣", "仕", "僕"]},
+      {"kanji": "侮", "exclude": ["卑"]},
+      {"kanji": "侯", "exclude": ["殿"]},
+      {"kanji": "俊", "exclude": ["秀", "英", "佳", "傑", "才", "優", "卓", "豪", "賢"]},
+      {"kanji": "俗", "exclude": ["凡", "卑"]},
+      {"kanji": "俵", "exclude": ["袋"]},
+      {"kanji": "倫", "exclude": ["伴", "輩", "徳", "義"]},
       {"kanji": "助", "exclude": ["佐"]}
     ]
   },
@@ -116,11 +128,11 @@
     "kanjivg": "Pinned revision 70a0b7ae0c18ceb5cb358274b029cce0234a43bc."
   },
   "mechanicalChecks": {
-    "contentValidation": "Passed after final review fixes: tools/validate.py reported 0 errors.",
-    "batchAudit": "Passed after final review fixes: 10 kanji, 10 new words, 9 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest efea352752f81e63.",
-    "unitTests": "Passed after final review fixes: test_audit_n1_batch.py (22 tests) and test_validate.py (87 tests).",
-    "n1Lint": "Not rerun after final edits. The earlier baseline lint reported a missing ことわり Readings row in kanji/理.md and an unsupported phonetic front-matter key in kanji/語.md; the ことわり row is now present, while the unrelated kanji/語.md issue remains outside this batch.",
-    "whitespace": "Passed after final review fixes: git -c core.whitespace=cr-at-eol diff --check reported no issues."
+    "contentValidation": "Passed after the remaining first-round review fixes: tools/validate.py reported 0 errors.",
+    "batchAudit": "Passed after the remaining first-round review fixes: 10 kanji, 10 new words, 9 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest f2e50e9017ad21b5.",
+    "unitTests": "Passed after the remaining first-round review fixes: test_audit_n1_batch.py (22 tests) and test_validate.py (87 tests).",
+    "n1Lint": "Rerun after the remaining first-round review fixes against base e2c25363: the only error is the unrelated, pre-existing phonetic front-matter key in kanji/語.md, outside this batch. The earlier missing ことわり Readings row in kanji/理.md is fixed.",
+    "whitespace": "Passed after the remaining first-round review fixes: git -c core.whitespace=cr-at-eol diff --check reported no issues."
   },
-  "status": "Final review findings are source-checked and addressed; validation and audit pass. Not published."
+  "status": "Remaining first-round review findings are source-checked and addressed; validation and audit pass. Three-family confirmation pending. Not published."
 }
