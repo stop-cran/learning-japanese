@@ -144,7 +144,7 @@ new support article for each: 補佐, 佳作, 併用, 侍, 侮る, 諸侯, 俊�
 the only support word without a qualifying priority tag; no usable word using 侯
 carries news1, ichi1, spec1 or gai1 (侯補 is only a search-only form of 候補), and
 the ledger records why 諸侯 was chosen over 侯爵 and 王侯. The existing cards 作, 助,
-理, 用, 補, 語, 諸 and 足 and the article 速い gain links or reading rows. The progress
+理, 用, 補, 語, 諸 and 足 gain links or reading rows. The progress
 file is
 [`n1-sources/batch-157-progress.json`](n1-sources/batch-157-progress.json).
 

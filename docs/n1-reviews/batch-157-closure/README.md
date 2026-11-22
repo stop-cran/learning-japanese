@@ -27,9 +27,12 @@ commit, a green CI run on it and the served ZIP. No Android JVM test, Kotlin cro
 - Quizzed readings: 佐 サ, 佳 カ, 併 ヘイ, 侍 さむらい, 侮 あなど.る, 侯 コウ,
   俊 シュン, 俗 ゾク, 俵 たわら, 倫 リン (ledger `curatedProjection`).
 - Existing files changed: the kanji cards 作, 助, 理, 用, 補, 語, 諸 and 足,
-  the word article 速い, and `tools/audit_n1_batch.py`. With the ten cards,
-  ten stroke files and ten articles, the batch touches 40 runtime paths
-  (`integration/merge-proof.json`, `b157RuntimeFiles`).
+  and `tools/audit_n1_batch.py`. With the ten cards, ten stroke files and ten
+  articles, the batch touches 38 runtime paths. The merge proof's 40
+  `b157RuntimeFiles` (`integration/merge-proof.json`) also count the tool and
+  the word article 速い, which gained a 俊足 quiz exclusion in `f1a69909`
+  before the merge; the redesign `689f0d4d` removed it again, because the
+  exclusion declared on 俊足 covers the pair both ways.
 - Published base: `e2c25363285fd8fa100d1c4178e7289592562a31`, the B156
   receipt.
 - Blind-review freeze: `a5c6a0ff970ab61e81d82e0d9a1c5ce06d7c96a0`
@@ -114,10 +117,12 @@ reading or stroke file changed. The ledger is
 
 ## Review execution
 
-The issue 60 rule calls for three reviewers of different families when a
-batch adds word articles, so, as for B156, a Grok reviewer was added to the
-Claude and GPT reviewers. Models and times below come from the runtime
-session records, not from the reports. All times are 2026-11-22 UTC.
+The repository's review rule for new word cards and learner articles
+(`.github/copilot-instructions.md`) calls for three reviewers of different
+families, so, as for B156, a Grok reviewer was added to the Claude and GPT
+reviewers that the issue 60 proposal keeps. Models and times below come from
+the runtime session records, not from the reports. All times are 2026-11-22
+UTC.
 
 | Run | Model | Snapshot | Window | API req | Tool calls | Max in flight | Verdict |
 |---|---|---|---|---:|---:|---:|---|
