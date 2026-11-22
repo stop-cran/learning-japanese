@@ -46,13 +46,13 @@
   "wordQuizAudit": {
     "directExclusions": [
       {"word": "補佐", "exclude": ["援助", "助手", "手伝い", "世話", "手伝う", "助ける", "支える", "応援"]},
-      {"word": "佳作", "exclude": ["傑作", "名作", "作品"]},
+      {"word": "佳作", "exclude": ["傑作", "名作", "作品", "制作"]},
       {"word": "併用", "exclude": ["使用", "利用", "使う", "用いる", "用", "用途"]},
       {"word": "侍", "exclude": ["武士"]},
       {"word": "侮る", "exclude": ["見下ろす"]},
       {"word": "俵", "exclude": ["袋", "バッグ", "鞄"]},
       {"word": "俗語", "exclude": ["言葉", "単語", "語"]},
-      {"word": "倫理", "exclude": ["道徳", "善"]},
+      {"word": "倫理", "exclude": ["道徳", "善", "仁"]},
       {"word": "俊足", "exclude": ["速い"]}
     ]
   },
@@ -124,7 +124,7 @@
   },
   "mechanicalChecks": {
     "contentValidation": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: tools/validate.py reported 0 errors.",
-    "batchAudit": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: 10 kanji, 10 new words, 8 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest ce464da10570fecc.",
+    "batchAudit": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: 10 kanji, 10 new words, 8 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest 31c2c424cc591ef5.",
     "unitTests": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: test_audit_n1_batch.py (22 tests), test_validate.py (87 tests) and the whole tools suite (439 tests).",
     "n1Lint": "Rerun after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions against base e2c25363: the only error is the unrelated, pre-existing phonetic front-matter key in kanji/語.md, outside this batch. The earlier missing ことわり Readings row in kanji/理.md is fixed.",
     "whitespace": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: git -c core.whitespace=cr-at-eol diff --check reported no issues.",
@@ -133,5 +133,5 @@
     "readingExtras": "佐 すけ, たす.ける, さ; 佳 よ.い, え.い, よ.き, か; 併 なら.ぶ, なら.べる, しか.し, しか.しながら, しっか.し, へい.どん, へい; 侍 シ, はべ.る, さぶら.う, さむら.う, じ.する, はんべ.り, じ; 侮 あなど.る, ぶ; 侯 まと, きみ, こう; 俊 すぐ.れる, しゅん; 俗 なら.わし, いや.しい, ぞく.っぽい, ぞく.なる, ぞく.に, ぞく; 俵 ひょう, びょう, ぴょう; 倫 みち, たぐい, つい.で, りん. Sources: the readings Kanjipedia marks as outside the official table (外), the Digital Daijisen character entries and headwords, and the JMdict okurigana scan.",
     "readingOptions": "lean reading_options.py with the same --extra list: 0 problems."
   },
-  "status": "Remaining first-round review findings are source-checked and addressed; unverifiable frequency and usage wording found during the pre-confirmation pass is removed or source-tied; the distractors are redesigned to pass quiz-safety and reading-exposure checks; eight more source-backed kanji exclusions (佐/副, 佳/偉, 佳/華, 併/斉, 侍/兵, 俊/偉, 俊/哲, 倫/善) and the word exclusion 併用/用途 are added; validation and audit pass. Three-family confirmation pending. Not published."
+  "status": "Remaining first-round review findings are source-checked and addressed; unverifiable frequency and usage wording found during the pre-confirmation pass is removed or source-tied; the distractors are redesigned to pass quiz-safety and reading-exposure checks; eight more source-backed kanji exclusions (佐/副, 佳/偉, 佳/華, 併/斉, 侍/兵, 俊/偉, 俊/哲, 倫/善) and the word exclusions 併用/用途, 倫理/仁 and 佳作/制作 are added; validation and audit pass. Three-family confirmation pending. Not published."
 }
