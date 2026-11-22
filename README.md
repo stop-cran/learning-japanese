@@ -185,6 +185,8 @@ GitHub source ZIPs omit `.github/`, `docs/` and `tools/` using `.gitattributes` 
 These contributor instructions, source ledgers, review evidence and tools remain available in Git,
 the web interface and clones; no runtime content or manifest entry is excluded.
 Use a clone rather than a source ZIP when contributing or inspecting the complete audit trail.
+Raw N1 review screenshots, session transcripts and archives from batches 17–110 were pruned and
+remain in Git history; see the [retention note](docs/n1-reviews/README.md).
 
 `python tools/check_content_budget.py` checks exportable working-tree files, including untracked
 runtime additions and any non-runtime files that still ship, and rejects exclusions of the manifest
