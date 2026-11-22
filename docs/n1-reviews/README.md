@@ -1,7 +1,7 @@
 # N1 review records
 
 This folder holds the review records of the N1 kanji batches. Each batch's progress file is
-in [`../n1-sources/`](../n1-sources/). Batches 108–156 each have a `batch-N-closure/` record
+in [`../n1-sources/`](../n1-sources/). Batches 108–157 each have a `batch-N-closure/` record
 (reports, prompts, packets, dispositions, merge proofs and limits) and a `batch-N-publication/`
 receipt; `tools/n1_record_publication.py` writes the receipt for new batches.
 

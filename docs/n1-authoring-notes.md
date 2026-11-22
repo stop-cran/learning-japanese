@@ -136,6 +136,77 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
+## Batch 157: review closed, publication pending
+
+Batch 157 adds the cards 佐 佳 併 侍 侮 侯 俊 俗 俵 倫 (source rows 38, 40, 41, 43, 46,
+47, 50, 51, 55 and 60, the first ten remaining Joyo rows after B156) and one
+new support article for each: 補佐, 佳作, 併用, 侍, 侮る, 諸侯, 俊足, 俗語, 俵 and 倫理. 諸侯 is
+the only support word without a qualifying priority tag; no usable word using 侯
+carries news1, ichi1, spec1 or gai1 (侯補 is only a search-only form of 候補), and
+the ledger records why 諸侯 was chosen over 侯爵 and 王侯. The existing cards 作, 助,
+理, 用, 補, 語, 諸 and 足 and the article 速い gain links or reading rows. The progress
+file is
+[`n1-sources/batch-157-progress.json`](n1-sources/batch-157-progress.json).
+
+The draft was frozen at `a5c6a0ff` on the B156 receipt `e2c25363`. Claude, GPT
+and Grok reviewed it blind, one after the other, each covering all four facets
+with its own emphasis. All three returned NEEDS FIX, and they largely agreed:
+the new titles overlapped existing cards that no quiz exclusion guarded (侍 and
+武士, 侮る and 見下ろす, 補佐 and 助手, 佳作 and 名作, and many kanji pairs), 侮る was taught as
+"underestimate", 倫 lacked 不倫, and 併 lacked 合併. The fixes add exclusions to all
+ten new kanji cards and to every new article except 諸侯, retitle 倫 and 侮る, add
+不倫, 絶倫, 大佐 and 合併 (with a dictionary supplement), and tie frequency and
+comparison wording to JMdict entries or remove it.
+
+The author's own quiz-safety check also failed the frozen distractors. The
+same-sound sets pushed reading questions onto fallback cards, and two sets held
+excluded pairs. Every set was replaced with three everyday Starter cards far
+from the card's meaning and reading, so both questions now take all three wrong
+options from the curated set.
+
+Between r1 and the confirmations the author ran four GPT-only rounds (r2-r5),
+each with three parallel facet reviews on an intermediate snapshot. They found
+smaller points: 俊英 and 王侯 presented as common with only news2/spec2, the rare
+spellings 佐ける and 佳い, missing Readings rows on 助 and 理, and a 俊足 note that
+assigned the "swift horse" sense only to 駿足 without reflecting Daijisen's 俊足
+entry, which points to 駿足 sense 2. These rounds used an inherited model
+(gpt-6-luna) and do not meet the three-family rule. The five pre-merge fix
+commits (the r1 fixes, then the r2-r5 fixes) were later re-signed with the
+batch key; the trees are identical, and the original SHAs survive only on an
+unpushed local branch.
+
+`origin/main` moved once, to `2bc61140`, which pruned raw review screenshots,
+transcripts and archives. The signed merge `684d754c` brought it in, and a
+merge proof adapted from B156 shows that main changed no batch runtime file or
+link target. Main has not moved since.
+
+The first confirmation round (c1, on `cd5d75d1`) confirmed every r1 item.
+Claude and GPT both flagged the 五倫 gloss on 倫, and GPT judged the 仁 exclusion
+on 倫理 an over-exclusion. Several reviewers found some new distractor sets easy
+to reject by category. `81142e4a` removed 五倫, dropped the 仁 exclusion and
+redrew the 侍, 侯, 俵 and 倫 sets. `0daebfba` replaced a generic 男 on 侍 with 雨, and
+`24201899` refreshed the ledger. In the second round (c2) all three families
+confirmed `24201899` with no actionable finding. Claude needed one neutral
+follow-up prompt because its first pass was shallow.
+
+Several optional points were declined, and the declines were accepted. These
+include plain-language labels and quiz selection for the legacy 助 and 理
+readings, the sex-service sense of 風俗 on 俗, and shortening notes on 併 and 俊足;
+c2-claude's minor wording points on 倫 were not applied. The closure record also
+discloses the run-level limits: some reports were recovered from final
+messages, some runs made overlapping calls, and one c2 grep strayed outside the
+packet without being used as evidence. No Android JVM test, Kotlin cross-check
+or phone check was run.
+
+At `24201899`, validation, the 439 host tests, the manifest rebuild, the
+budget, the batch audit, quiz safety and reading options all pass. Lint reports
+only the pre-existing `phonetic` key on 語 and warnings on reused files. After
+publication, delivery becomes 598/1,228, with 630 remaining.
+
+The full record, including the run table, every disposition and the limits, is
+in
+[`n1-reviews/batch-157-closure/README.md`](n1-reviews/batch-157-closure/README.md).
+
 ## Batch 156: published
 
 Review-closed at `ba44b280`, one commit on top of the second of two signed
