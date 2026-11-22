@@ -654,7 +654,7 @@ def audit(root, batch):
     require(candidates_text == base_file(root, commit, candidates_name).replace("\r\n", "\n"),
             "Immutable baseline word candidates changed")
     candidates = json.loads(candidates_text)
-    current = build_manifest(root)
+    current = build_manifest(root, publish_reading=True)
     require(json.loads((root / "manifest.json").read_text(encoding="utf-8")) == current,
             "Manifest is stale")
     before = json.loads(base_file(root, commit, "manifest.json"))

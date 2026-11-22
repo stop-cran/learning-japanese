@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "batch": "157",
+  "membership": ["佐", "佳", "併", "侍", "侮", "侯", "俊", "俗", "俵", "倫"],
+  "baseCommit": "e2c25363285fd8fa100d1c4178e7289592562a31",
+  "drafted": ["佐", "佳", "併", "侍", "侮", "侯", "俊", "俗", "俵", "倫"],
+  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 38, 40, 41, 43, 46, 47, 50, 51, 55, and 60 are the first ten remaining Joyo rows after B156. Every support word's other kanji already has a card or is in this batch. 諸侯 is the sole priority-tag exception: JMdict entry 1344250 has no qualifying priority tag; 侯爵 (1272650) and 王侯 (1588830) have only news2/spec2, 侯補 is a search-only spelling of 候補 (1272730), and 候補 does not use 侯. The exception is explicit and must receive row-specific independent review.",
+  "supportMappings": [
+    {"kanji": "佐", "article": "words/補佐.md", "primaryReading": "ほさ", "entryIds": ["1603460"], "newArticle": true, "priorityTags": ["ichi1", "news1"]},
+    {"kanji": "佳", "article": "words/佳作.md", "primaryReading": "かさく", "entryIds": ["1189760"], "newArticle": true, "priorityTags": ["news1"]},
+    {"kanji": "併", "article": "words/併用.md", "primaryReading": "へいよう", "entryIds": ["1506200"], "newArticle": true, "priorityTags": ["news1"]},
+    {"kanji": "侍", "article": "words/侍.md", "primaryReading": "さむらい", "entryIds": ["1314780"], "newArticle": true, "priorityTags": ["ichi1", "news1"]},
+    {"kanji": "侮", "article": "words/侮る.md", "primaryReading": "あなどる", "entryIds": ["1583670"], "newArticle": true, "priorityTags": ["ichi1"]},
+    {"kanji": "侯", "article": "words/諸侯.md", "primaryReading": "しょこう", "entryIds": ["1344250"], "newArticle": true, "priorityTags": [], "exceptionReason": "No candidate using 侯 carries news1, ichi1, spec1, or gai1. 侯爵 and 王侯 carry only news2/spec2; 侯補 is search-only and 候補 uses 候. Keep this explicit untagged exception for independent review."},
+    {"kanji": "俊", "article": "words/俊足.md", "primaryReading": "しゅんそく", "entryIds": ["1340940"], "newArticle": true, "priorityTags": ["news1"]},
+    {"kanji": "俗", "article": "words/俗語.md", "primaryReading": "ぞくご", "entryIds": ["1405300"], "newArticle": true, "priorityTags": ["ichi1", "news2"]},
+    {"kanji": "俵", "article": "words/俵.md", "primaryReading": "たわら", "entryIds": ["1583390"], "newArticle": true, "priorityTags": ["news1"]},
+    {"kanji": "倫", "article": "words/倫理.md", "primaryReading": "りんり", "entryIds": ["1555390"], "newArticle": true, "priorityTags": ["ichi1", "news1"]}
+  ],
+  "requiredReciprocalPairs": [
+    ["佐", "words/補佐.md"],
+    ["佳", "words/佳作.md"],
+    ["併", "words/併用.md"],
+    ["侍", "words/侍.md"],
+    ["侮", "words/侮る.md"],
+    ["侯", "words/諸侯.md"],
+    ["俊", "words/俊足.md"],
+    ["俗", "words/俗語.md"],
+    ["俵", "words/俵.md"],
+    ["倫", "words/倫理.md"]
+  ],
+  "changedReusedPassages": [
+    {"article": "kanji/補.md", "before": "- 補充 ほじゅう - replenishment; refilling\n", "after": "- 補充 ほじゅう - replenishment; refilling\n- [補佐](../words/補佐.md) ほさ — aid; assistance\n"},
+    {"article": "kanji/作.md", "before": "- [創作](../words/創作.md) そうさく — creative production; original work\n", "after": "- [創作](../words/創作.md) そうさく — creative production; original work\n- [佳作](../words/佳作.md) かさく — fine work; honorable mention\n"},
+    {"article": "kanji/用.md", "before": "- 用いる もちいる — to use\n", "after": "- 用いる もちいる — to use\n- [併用](../words/併用.md) へいよう — combined use; using together\n"},
+    {"article": "kanji/諸.md", "before": "- 諸君 しょくん - you people; everyone (in an address)\n", "after": "- 諸君 しょくん - you people; everyone (in an address)\n- [諸侯](../words/諸侯.md) しょこう — feudal lords\n"},
+    {"article": "kanji/足.md", "before": "- 足りる たりる — to be enough\n", "after": "- 足りる たりる — to be enough\n- [俊足](../words/俊足.md) しゅんそく — fast runner; swift on foot\n"},
+    {"article": "kanji/語.md", "before": "- 物語 ものがたり — story, tale\n", "after": "- 物語 ものがたり — story, tale\n- [俗語](../words/俗語.md) ぞくご — colloquial language; slang\n"},
+    {"article": "kanji/理.md", "before": "- 理解 りかい — understanding\n", "after": "- 理解 りかい — understanding\n- [倫理](../words/倫理.md) りんり — ethics; morals\n"}
+  ],
+  "wordQuizAudit": {
+    "directExclusions": [
+      {"word": "補佐", "exclude": ["援助"]},
+      {"word": "佳作", "exclude": ["傑作"]},
+      {"word": "倫理", "exclude": ["道徳"]}
+    ]
+  },
+  "dictionaryPackets": [
+    {"selection": "batch-157-jmdict-selection.json", "xml": "batch-157-jmdict.xml"}
+  ],
+  "readingDispositions": [
+    {"kanji": "佐", "kind": "on", "reading": "サ", "selected": true, "reason": "The supported common-word article 補佐 directly uses サ.", "entryIds": ["1603460"], "article": "words/補佐.md"},
+    {"kanji": "佳", "kind": "on", "reading": "カ", "selected": true, "reason": "The supported common-word article 佳作 directly uses カ.", "entryIds": ["1189760"], "article": "words/佳作.md"},
+    {"kanji": "併", "kind": "on", "reading": "ヘイ", "selected": true, "reason": "The supported common-word article 併用 directly uses ヘイ.", "entryIds": ["1506200"], "article": "words/併用.md"},
+    {"kanji": "併", "kind": "kun", "reading": "あわ.せる", "selected": false, "reason": "JMdict entry 1284480 marks 併せる as a rarely used kanji form; it is retained for reference but not offered as a quiz reading.", "entryIds": ["1284480"]},
+    {"kanji": "侍", "kind": "on", "reading": "ジ", "selected": false, "reason": "侍従 is a valid sourced example, but the article chosen for this card uses さむらい; keep ジ as reference rather than a quiz target.", "entryIds": ["1314890"]},
+    {"kanji": "侍", "kind": "on", "reading": "シ", "selected": false, "reason": "内侍 supports シ only in a historical title; retain it as a source-only reference and do not quiz it.", "entryIds": ["1582520"], "sourceOnly": true},
+    {"kanji": "侍", "kind": "kun", "reading": "さむらい", "selected": true, "reason": "The supported common-word article 侍 directly uses さむらい.", "entryIds": ["1314780"], "article": "words/侍.md"},
+    {"kanji": "侍", "kind": "kun", "reading": "はべ.る", "selected": false, "reason": "JMdict entry 1314800 marks 侍る as usually written in kana; retain it as reference but do not offer it as a quiz target.", "entryIds": ["1314800"]},
+    {"kanji": "侮", "kind": "on", "reading": "ブ", "selected": false, "reason": "侮辱 is a sourced on-reading example, but the supported article uses あなど.る; retain ブ for reference without selecting it.", "entryIds": ["1498260"]},
+    {"kanji": "侮", "kind": "kun", "reading": "あなど.る", "selected": true, "reason": "The supported common-word article 侮る directly uses あなど.る.", "entryIds": ["1583670"], "article": "words/侮る.md"},
+    {"kanji": "侮", "kind": "kun", "reading": "あなず.る", "selected": false, "reason": "No spelling-reading pair was found in the pinned JMdict snapshot; retain the KANJIDIC2 reading as source-only and do not quiz it.", "entryIds": [], "sourceOnly": true},
+    {"kanji": "侯", "kind": "on", "reading": "コウ", "selected": true, "reason": "The support article 諸侯 directly uses コウ; its untagged status is disclosed in the row-specific exception.", "entryIds": ["1344250"], "article": "words/諸侯.md"},
+    {"kanji": "俊", "kind": "on", "reading": "シュン", "selected": true, "reason": "The supported common-word article 俊足 directly uses シュン.", "entryIds": ["1340940"], "article": "words/俊足.md"},
+    {"kanji": "俗", "kind": "on", "reading": "ゾク", "selected": true, "reason": "The supported common-word article 俗語 uses ゾク and qualifies through ichi1; news2 is not counted.", "entryIds": ["1405300"], "article": "words/俗語.md"},
+    {"kanji": "俵", "kind": "on", "reading": "ヒョウ", "selected": false, "reason": "JMdict supports ヒョウ in 土俵 and as the counter reading, but the selected standalone article uses たわら; keep ヒョウ as reference only.", "entryIds": ["1445550", "1583390"]},
+    {"kanji": "俵", "kind": "kun", "reading": "たわら", "selected": true, "reason": "The supported common-word article 俵 directly uses たわら.", "entryIds": ["1583390"], "article": "words/俵.md"},
+    {"kanji": "倫", "kind": "on", "reading": "リン", "selected": true, "reason": "The supported common-word article 倫理 directly uses リン.", "entryIds": ["1555390"], "article": "words/倫理.md"}
+  ],
+  "curatedProjection": [
+    {"kanji": "佐", "quizOnyomi": ["サ"], "quizKunyomi": [], "onKeys": ["さ"], "kunKeys": []},
+    {"kanji": "佳", "quizOnyomi": ["カ"], "quizKunyomi": [], "onKeys": ["か"], "kunKeys": []},
+    {"kanji": "併", "quizOnyomi": ["ヘイ"], "quizKunyomi": [], "onKeys": ["へい"], "kunKeys": []},
+    {"kanji": "侍", "quizOnyomi": [], "quizKunyomi": ["さむらい"], "onKeys": [], "kunKeys": ["さむらい"]},
+    {"kanji": "侮", "quizOnyomi": [], "quizKunyomi": ["あなど.る"], "onKeys": [], "kunKeys": ["あなどる"]},
+    {"kanji": "侯", "quizOnyomi": ["コウ"], "quizKunyomi": [], "onKeys": ["こう"], "kunKeys": []},
+    {"kanji": "俊", "quizOnyomi": ["シュン"], "quizKunyomi": [], "onKeys": ["しゅん"], "kunKeys": []},
+    {"kanji": "俗", "quizOnyomi": ["ゾク"], "quizKunyomi": [], "onKeys": ["ぞく"], "kunKeys": []},
+    {"kanji": "俵", "quizOnyomi": [], "quizKunyomi": ["たわら"], "onKeys": [], "kunKeys": ["たわら"]},
+    {"kanji": "倫", "quizOnyomi": ["リン"], "quizKunyomi": [], "onKeys": ["りん"], "kunKeys": []}
+  ],
+  "quizAudit": {
+    "佐": {"title": "aide; assistant", "distractors": ["左", "差", "査"], "labels": ["left", "difference; gap", "investigate; inspect"]},
+    "佳": {"title": "beautiful; excellent", "distractors": ["価", "加", "果"], "labels": ["worth; price", "add", "fruit; fruition"]},
+    "併": {"title": "combine; join together", "distractors": ["平", "兵", "閉"], "labels": ["flat; peaceful", "soldier; troops", "shut"]},
+    "侍": {"title": "samurai; retainer", "distractors": ["字", "寺", "次"], "labels": ["written character", "Buddhist temple", "next"]},
+    "侮": {"title": "despise; scorn", "distractors": ["舞", "武", "部"], "labels": ["dance", "military; warrior", "section; department"]},
+    "侯": {"title": "marquis; feudal lord", "distractors": ["交", "光", "向"], "labels": ["intersect; mingle", "light; radiance", "face toward"]},
+    "俊": {"title": "talented; outstanding", "distractors": ["春", "瞬", "旬"], "labels": ["spring season", "blink; instant", "ten days; peak season"]},
+    "俗": {"title": "customs; mundane", "distractors": ["属", "続", "族"], "labels": ["belong; affiliated; genus", "continue", "tribe, family group"]},
+    "俵": {"title": "straw bag; bale", "distractors": ["表", "票", "評"], "labels": ["surface; chart", "ballot; voting slip", "appraise; reputation"]},
+    "倫": {"title": "ethics; moral order", "distractors": ["林", "輪", "臨"], "labels": ["grove; woodland", "wheel; ring", "face (a situation); attend"]}
+  },
+  "sources": {
+    "kanjidic2": "Frozen source-index.json, KANJIDIC2 2026-11-02 snapshot.",
+    "jmdict": "Continuation JMdict_e snapshot from 2026-11-17, pinned in docs/n1-sources/continuation-inputs.json.",
+    "kanjivg": "Pinned revision 70a0b7ae0c18ceb5cb358274b029cce0234a43bc."
+  },
+  "mechanicalChecks": {
+    "contentValidation": "Passed: tools/validate.py reported 0 errors.",
+    "batchAudit": "Passed: 10 kanji, 10 new words, 7 changed existing articles, 17 reading dispositions, and 26 complete JMdict families.",
+    "unitTests": "Passed: test_audit_n1_batch.py (22 tests) and test_validate.py (87 tests).",
+    "n1Lint": "The targeted lean lint reported two pre-existing errors in reused cards kanji/理.md (metadata reading ことわり lacks a Readings row) and kanji/語.md (unsupported phonetic front-matter key), plus 41 warnings. Both errors are present at base commit e2c25363285fd8fa100d1c4178e7289592562a31; B157 only appends a reciprocal word link to each card. No B157 card/article was reported as an error.",
+    "whitespace": "Passed with core.whitespace=cr-at-eol to respect the repository's CRLF files."
+  },
+  "status": "Draft only; not independently reviewed, committed, or published. The 諸侯 priority-tag exception remains subject to review."
+}
