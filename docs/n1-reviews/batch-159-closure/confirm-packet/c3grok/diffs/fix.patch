@@ -1,0 +1,114 @@
+diff --git a/docs/n1-sources/batch-159-progress.json b/docs/n1-sources/batch-159-progress.json
+index 462ac434..519ea59f 100644
+--- a/docs/n1-sources/batch-159-progress.json
++++ b/docs/n1-sources/batch-159-progress.json
+@@ -264,6 +264,31 @@
+       "article": "words/また.md",
+       "before": "Kana is usual. 又 is a recognized spelling, but the kana form serves both repetition and addition. No kanji decomposition is needed.\n",
+       "after": "Kana is usual. [又](../kanji/又.md) is a recognized spelling, but the kana form serves both repetition and addition. No kanji decomposition is needed.\n"
++    },
++    {
++      "article": "kanji/及.md",
++      "before": "**Modern-shape mnemonic, not etymology:** 及 is only three strokes: a long slant down to the left, a stroke that bends as it goes, and a sweep down to the right. Its key is 又, which has no card here. Imagine a runner leaning forward with one arm stretched out, just reaching the person ahead. This is a memory aid only: it makes no claim that 又 contributes meaning or sound. Historical formation is not established here.\n",
++      "after": "**Modern-shape mnemonic, not etymology:** 及 is only three strokes: a long slant down to the left, a stroke that bends as it goes, and a sweep down to the right. Its key is [又](又.md), \"again; also; or.\" Imagine a runner leaning forward with one arm stretched out, just reaching the person ahead. This is a memory aid only: it makes no claim that 又 contributes meaning or sound. Historical formation is not established here.\n"
++    },
++    {
++      "article": "kanji/堅.md",
++      "before": "**Modern-shape mnemonic, not etymology:** find [臣](臣.md), \"retainer; subject,\" at the top left, 又, a small hand-like shape with no card here, at the top right, and [土](土.md), \"earth, soil,\" at the bottom. Imagine a loyal retainer pressing a hand down on packed earth to check that the ground is hard and solid. This is a memory aid only: it makes no claim that 臣, 又 or 土 contributes meaning or sound. Historical formation is not established here.\n",
++      "after": "**Modern-shape mnemonic, not etymology:** find [臣](臣.md), \"retainer; subject,\" at the top left, [又](又.md), \"again; also; or,\" a small hand-like shape, at the top right, and [土](土.md), \"earth, soil,\" at the bottom. Imagine a loyal retainer pressing a hand down on packed earth to check that the ground is hard and solid. This is a memory aid only: it makes no claim that 臣, 又 or 土 contributes meaning or sound. Historical formation is not established here.\n"
++    },
++    {
++      "article": "kanji/暇.md",
++      "before": "**Modern-shape mnemonic, not etymology:** find [日](日.md), \"sun, day,\" the key, at the left, and at the right a more complex shape with 又 at its lower right; neither 又 nor the whole right-hand shape has a card yet. Imagine the sun at the left shining on an empty deck chair at the right: a day with nothing to do. This is a memory aid only: it makes no claim that these parts contribute meaning or sound. Historical formation is not established here.\n",
++      "after": "**Modern-shape mnemonic, not etymology:** find [日](日.md), \"sun, day,\" the key, at the left, and at the right a more complex shape with [又](又.md), \"again; also; or,\" at its lower right; the whole right-hand shape has no card yet. Imagine the sun at the left shining on an empty deck chair at the right: a day with nothing to do. This is a memory aid only: it makes no claim that these parts contribute meaning or sound. Historical formation is not established here.\n"
++    },
++    {
++      "article": "kanji/狭.md",
++      "before": "In 狭い, 狭 writes せま and い is okurigana, the kana ending that follows the kanji. In 狭める, 狭 writes せば and める is okurigana; in 狭まる it writes せば and まる is okurigana. In 手狭 てぜま, \"narrow; small; cramped,\" 手 writes て and 狭 writes ぜま. In 広狭 こうきょう, [広](広.md), \"wide, spacious,\" supplies こう and 狭 supplies きょう. 偏狭 uses 偏, which has no card here.\n",
++      "after": "In 狭い, 狭 writes せま and い is okurigana, the kana ending that follows the kanji. In 狭める, 狭 writes せば and める is okurigana; in 狭まる it writes せば and まる is okurigana. In 手狭 てぜま, \"narrow; small; cramped,\" 手 writes て and 狭 writes ぜま. In 広狭 こうきょう, [広](広.md), \"wide, spacious,\" supplies こう and 狭 supplies きょう. 偏狭 uses [偏](偏.md), \"lean to one side; biased.\"\n"
++    },
++    {
++      "article": "kanji/節.md",
++      "before": "- [竹](竹.md), \"bamboo,\" is the key at the top, and [笑](笑.md), \"laugh,\" has the same ⺮ at the top above a different shape. The 即 below the bamboo does not have a kanji card here. [雪](雪.md), \"snow,\" and [殺](殺.md), \"kill,\" are also read セツ. All are different kanji.\n",
++      "after": "- [竹](竹.md), \"bamboo,\" is the key at the top, and [笑](笑.md), \"laugh,\" has the same ⺮ at the top above a different shape. The part below the bamboo is [即](即.md), \"immediate; at once.\" [雪](雪.md), \"snow,\" and [殺](殺.md), \"kill,\" are also read セツ. All are different kanji.\n"
+     }
+   ],
+   "wordQuizAudit": {
+@@ -943,9 +968,10 @@
+   },
+   "mechanicalChecks": {
+     "contentValidation": "Passed: tools/validate.py reported 0 errors.",
+-    "batchAudit": "Passed: 10 kanji, 9 new words, 10 changed existing articles (including the reused kana-headed articles または and また, which now record the kanji spellings 又は and 又 in their support mappings), 11 required reciprocal pairs, 21 reading dispositions, and 87 complete JMdict families; the manifest is fresh. The audit now accepts a kana-headed support article only when its mapping names a spelling that contains the kanji and appears in the article.",
++    "batchAudit": "Passed: 10 kanji, 9 new words, 15 changed existing articles (eight reused cards that add or link one Common words line, the reused kana-headed articles または and また, which now record the kanji spellings 又は and 又 in their support mappings, and the five cards 及, 堅, 暇, 狭 and 節, whose stale “no card” remarks now link the 又, 偏 and 即 cards), 11 required reciprocal pairs, 21 reading dispositions, and 87 complete JMdict families; the manifest is fresh. The audit now accepts a kana-headed support article only when its mapping names a spelling that contains the kanji and appears in the article.",
++    "staleRemarks": "lean stale_remarks.py over all kanji and word articles: 0 stale remarks. It finds each sentence with a card-absence phrase such as “has no card here” or “does not have a kanji card here”, takes as the remark's subject the last kanji written outside a link before the phrase, other than the card's own kanji, and flags the remark as stale if that kanji has a card. Remarks worded outside its phrase list are not found. The five remarks B159 rewrites (又 in 及, 堅 and 暇; 偏 in 狭 and 即 in 節, both carded in B158) are no longer flagged. One reviewed exception: kanji/悟.md line 46 says the right part of 悟, 五 over 口, has no card of its own; it is about that whole part, which has no card, not about 口. The scan lists the other 37 remarks with a subject; the author read each, and each is about a kanji or part that has no card. It also lists 8 remarks with no kanji before the phrase, which it cannot check; the author read them: seven are about parts or kanji that have no card (the left part of 敵, the right-hand parts of 暇 and 瞬, the shape below the two trees in 礎, and 塞, 櫛 and 釘 in their word articles), and the one in words/こっそり.md is about a greeting card.",
+     "unitTests": "Passed: the whole tools suite (444 tests), including test_audit_n1_batch.py with five new tests for kana-headed support spellings, and test_validate.py.",
+-    "n1Lint": "The targeted lean lint against base 2787e43b reported three pre-existing errors in reused cards: kanji/太.md (metadata reading タ has no Readings row) and kanji/情.md (セイ and なさ.け). Both are present at base commit 2787e43b5706a569d83627849aa40ed3582a7d18; B159 only adds one line to each of these cards. Of the 42 warnings, 40 are on reused cards and words. They report a missing N1 source-index entry, quiz reading list or Metadata line, or a missing Dictionary line or one that cites no JMdict entry id; B159 changes none of these fields, because it only adds or links one Common words line on each of those cards and does not change those word articles. The other two are on kanji/又.md: its また examples または and また do not list 又 in their kanji: front matter. They cannot, because tools/validate.py rejects a kanji: entry that does not occur in the headword, and both headwords are kana. The batch audit and quiz-safety checks accept this support through the spellings 又は and 又 recorded in the support mappings. No new word was reported.",
++    "n1Lint": "The targeted lean lint against base 2787e43b reported three pre-existing errors in reused cards: kanji/太.md (metadata reading タ has no Readings row) and kanji/情.md (セイ and なさ.け). Both are present at base commit 2787e43b5706a569d83627849aa40ed3582a7d18; B159 only adds one line to each of these cards. Of the 44 warnings, 42 are on reused cards and on word articles that lint checks because a changed card lists them; words/普及.md and words/調節.md are listed by 及 and 節. They report a missing N1 source-index entry, quiz reading list or Metadata line, or a missing Dictionary line or one that cites no JMdict entry id; B159 changes none of these fields: on eight reused cards it only adds or links one Common words line, on 及, 堅, 暇, 狭 and 節 it only rewrites one stale “no card” remark into a link, and it does not change those word articles. The other two are on kanji/又.md: its また examples または and また do not list 又 in their kanji: front matter. They cannot, because tools/validate.py rejects a kanji: entry that does not occur in the headword, and both headwords are kana. The batch audit and quiz-safety checks accept this support through the spellings 又は and 又 recorded in the support mappings. No new word was reported.",
+     "whitespace": "Passed with core.whitespace=cr-at-eol to respect the repository's CRLF files, including the new untracked files.",
+     "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning question. For the reading questions, reading_exposure.py shows that the curated options fill all three wrong slots in every outcome for nine cards; for 吟's ギン prompt, 二 (ニ, ジ) and 自 (ジ, シ) both show ジ in one of four outcomes, and the fallback then fills the open slot (61 drawable wrong options in the N1 and All stacks, 4 curated and 57 fallback; 27 in the Starter practice session) with no exposure hit. In addition, every distractor and quiz exclusion is named with its card title in the card's Notes. For 又, the selected reading また is backed by the kana-headed articles または and また through the ledger spellings 又は and 又, which the check now accepts in the same way as the repository audit.",
+     "readingExposure": "lean reading_exposure.py --seeds 200 with the --extra list below: 0 production hits, 0 padded-session hits and 0 one-holder padded hits; 10 latent collisions that no N1, All or Starter pool can draw (厘 り; 又 やす and ふたたび; 吉 え, き, と, よ and えい; 吏 し; 呉 ぐ).",
+diff --git a/kanji/及.md b/kanji/及.md
+index e440eac7..88e2bb7b 100644
+--- a/kanji/及.md
++++ b/kanji/及.md
+@@ -24,7 +24,7 @@ quiz_exclusions: [届, 至, 到, 達, 且]
+ 
+ The Daijisen character entry gives a single sense: catching up to a line, or reaching as far as a range. Its compounds include 及第 きゅうだい, "passing (an examination); making the grade," 言及 げんきゅう, "reference; allusion," 追及 ついきゅう, "investigation (e.g. into someone's guilt); questioning; pressing," 波及 はきゅう, "spread; extension; influence; aftereffect; ripple," and 普及. Among hard-to-read words it lists 埃及 エジプト, "Egypt," a spelling chosen for its sounds; JMdict marks it as rare, and the name is usually written in katakana.
+ 
+-**Modern-shape mnemonic, not etymology:** 及 is only three strokes: a long slant down to the left, a stroke that bends as it goes, and a sweep down to the right. Its key is 又, which has no card here. Imagine a runner leaning forward with one arm stretched out, just reaching the person ahead. This is a memory aid only: it makes no claim that 又 contributes meaning or sound. Historical formation is not established here.
++**Modern-shape mnemonic, not etymology:** 及 is only three strokes: a long slant down to the left, a stroke that bends as it goes, and a sweep down to the right. Its key is [又](又.md), "again; also; or." Imagine a runner leaning forward with one arm stretched out, just reaching the person ahead. This is a memory aid only: it makes no claim that 又 contributes meaning or sound. Historical formation is not established here.
+ 
+ ## Readings
+ 
+diff --git a/kanji/堅.md b/kanji/堅.md
+index a36722f8..42a0bd74 100644
+--- a/kanji/堅.md
++++ b/kanji/堅.md
+@@ -26,7 +26,7 @@ The Daijisen character entry gives two senses for ケン: being tight and hard,
+ 
+ Among words with a hard-to-guess reading, the entry names 堅魚 かつお, "skipjack tuna (Katsuwonus pelamis); oceanic bonito"; JMdict lists 堅魚 as a rarely used spelling of 鰹 and notes that the word is usually written in kana alone.
+ 
+-**Modern-shape mnemonic, not etymology:** find [臣](臣.md), "retainer; subject," at the top left, 又, a small hand-like shape with no card here, at the top right, and [土](土.md), "earth, soil," at the bottom. Imagine a loyal retainer pressing a hand down on packed earth to check that the ground is hard and solid. This is a memory aid only: it makes no claim that 臣, 又 or 土 contributes meaning or sound. Historical formation is not established here.
++**Modern-shape mnemonic, not etymology:** find [臣](臣.md), "retainer; subject," at the top left, [又](又.md), "again; also; or," a small hand-like shape, at the top right, and [土](土.md), "earth, soil," at the bottom. Imagine a loyal retainer pressing a hand down on packed earth to check that the ground is hard and solid. This is a memory aid only: it makes no claim that 臣, 又 or 土 contributes meaning or sound. Historical formation is not established here.
+ 
+ ## Readings
+ 
+diff --git a/kanji/暇.md b/kanji/暇.md
+index 29859e6c..c958d6cc 100644
+--- a/kanji/暇.md
++++ b/kanji/暇.md
+@@ -24,7 +24,7 @@ quiz_exclusions: [休, 時, 悠, 去]
+ 
+ The Daijisen character entry gives one sense for カ, time without work or a break between tasks, as in 閑暇 かんか, "leisure," 賜暇 しか, "furlough; leave of absence," 寸暇 すんか, "moment's leisure; free minute," 余暇 よか, "leisure; leisure time; spare time," and 休暇. For ひま it lists 暇人 ひまじん, "person with a lot of free time on their hands; person of leisure; idler; loafer," and 手間暇 てまひま, "time and effort; trouble." Its separate entry for the noun ひま adds a short gap between activities, the time a task needs, free time, time off, and the ending of a tie between master and servant or husband and wife.
+ 
+-**Modern-shape mnemonic, not etymology:** find [日](日.md), "sun, day," the key, at the left, and at the right a more complex shape with 又 at its lower right; neither 又 nor the whole right-hand shape has a card yet. Imagine the sun at the left shining on an empty deck chair at the right: a day with nothing to do. This is a memory aid only: it makes no claim that these parts contribute meaning or sound. Historical formation is not established here.
++**Modern-shape mnemonic, not etymology:** find [日](日.md), "sun, day," the key, at the left, and at the right a more complex shape with [又](又.md), "again; also; or," at its lower right; the whole right-hand shape has no card yet. Imagine the sun at the left shining on an empty deck chair at the right: a day with nothing to do. This is a memory aid only: it makes no claim that these parts contribute meaning or sound. Historical formation is not established here.
+ 
+ ## Readings
+ 
+diff --git a/kanji/狭.md b/kanji/狭.md
+index 269af476..cbea504a 100644
+--- a/kanji/狭.md
++++ b/kanji/狭.md
+@@ -43,7 +43,7 @@ Other examples for the first two senses are in Notes.
+ | せば.まる | kun | 狭まる せばまる — narrow; contract; no word article yet, not selected for questions here |
+ | さ | kun | 狭 さ — JMdict's prefix "narrow; thin"; the whole word 狭霧 さぎり — mist; fog; no word article yet, not selected for questions here |
+ 
+-In 狭い, 狭 writes せま and い is okurigana, the kana ending that follows the kanji. In 狭める, 狭 writes せば and める is okurigana; in 狭まる it writes せば and まる is okurigana. In 手狭 てぜま, "narrow; small; cramped," 手 writes て and 狭 writes ぜま. In 広狭 こうきょう, [広](広.md), "wide, spacious," supplies こう and 狭 supplies きょう. 偏狭 uses 偏, which has no card here.
++In 狭い, 狭 writes せま and い is okurigana, the kana ending that follows the kanji. In 狭める, 狭 writes せば and める is okurigana; in 狭まる it writes せば and まる is okurigana. In 手狭 てぜま, "narrow; small; cramped," 手 writes て and 狭 writes ぜま. In 広狭 こうきょう, [広](広.md), "wide, spacious," supplies こう and 狭 supplies きょう. 偏狭 uses [偏](偏.md), "lean to one side; biased."
+ 
+ The official Joyo table, the list of standard-use readings, shows キョウ with 狭量, 広狭 and 偏狭, せまい with 狭い and 狭苦しい, せばめる with 狭める, and せばまる with 狭まる. It prints 狭 with the older form 狹 in parentheses. Practice selects せま.い, the reading of the linked word article. The other readings are shown with dictionary examples and are not asked here; being outside the practice set does not make a reading invalid.
+ 
+diff --git a/kanji/節.md b/kanji/節.md
+index 45907887..d1b69342 100644
+--- a/kanji/節.md
++++ b/kanji/節.md
+@@ -52,7 +52,7 @@ The official Joyo table, the list of standard-use readings, shows セツ, with 
+ ## Notes
+ 
+ - The other kanji in the common words are [季](季.md), "seasons," in 季節, [約](約.md), "promise; approximately," in 節約 and [調](調.md), "investigate; tune," in 調節. The word 節 contains only this kanji.
+-- [竹](竹.md), "bamboo," is the key at the top, and [笑](笑.md), "laugh," has the same ⺮ at the top above a different shape. The 即 below the bamboo does not have a kanji card here. [雪](雪.md), "snow," and [殺](殺.md), "kill," are also read セツ. All are different kanji.
++- [竹](竹.md), "bamboo," is the key at the top, and [笑](笑.md), "laugh," has the same ⺮ at the top above a different shape. The part below the bamboo is [即](即.md), "immediate; at once." [雪](雪.md), "snow," and [殺](殺.md), "kill," are also read セツ. All are different kanji.
+ - [季](季.md), "seasons," [春](春.md), "spring season," [期](期.md), "period; term," [接](接.md), "touch; join," [制](制.md), "system; regulate," [倹](倹.md), "frugal; thrifty," [限](限.md), "limit," [際](際.md), "edge; occasion," [祭](祭.md), "festival; ritual; worship," [部](部.md), "section; department," [句](句.md), "phrase; verse," and [旬](旬.md), "ten days; peak season," overlap the senses "season," "period," "joint," "regulation," "economizing," "occasion," "festival," "section" and "verse" that 節 and its words carry, and 限 is close to holding something to a moderate level, as in 節約 and 節減; 接 is also read セツ. They are kept out of this card's quiz options. Do not treat "season," "verse" or "restraint" as exclusive to any one character.
+ 
+ Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot. Word identities and spelling restrictions: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entries 1222840, 1386160, 1386350, 1429240, 1215960, 1183910, 1316270, 1610060, 1386230, 1386290, 1306030, 1386140, 2122790, 1655960, 1298070, 1386150, 1722060 and 1722070. Character reading and compounds: [Digital Daijisen, 節](https://www.weblio.jp/content/節).

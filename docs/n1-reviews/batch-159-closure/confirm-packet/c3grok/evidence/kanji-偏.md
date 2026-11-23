@@ -1,0 +1,46 @@
+---
+kanji: 偏
+title: lean to one side; biased
+jlpt: 1
+tags: [jlpt-n1, grade-8, structure-unclassified]
+strokes: 11
+radical: 人
+radicalNumber: 9
+onyomi: [ヘン]
+kunyomi: [かたよ.る]
+quizOnyomi: [ヘン]
+quizKunyomi: []
+distractors: [魚, 雨, 耳]
+quiz_exclusions: [片, 傾, 傍, 側]
+---
+
+# 偏 — lean to one side; biased
+
+**Strokes:** 11 · **Key (radical):** 人 (no. 9) · **JLPT:** N1 (community list)
+
+## Meaning and origin
+
+偏 means being weighted toward one side or departing from the center, and by extension being biased. A common example is [偏見](../words/偏見.md) へんけん, prejudice or bias. Digital Daijisen also lists the sense “narrow,” as in 偏狭 へんきょう, narrow-mindedness, and the left-hand component of a kanji, as in 人偏 にんべん, the “person” radical.
+
+## Readings
+
+| Reading | Type | Typical words |
+| --- | --- | --- |
+| ヘン | on | [偏見](../words/偏見.md) へんけん — prejudice; bias (JMdict entry 1510380); 偏差値 へんさち — deviation value; standard score (JMdict entry 1611480) |
+| かたよ.る | kun | 偏る かたよる — lean to one side; be unbalanced; be biased (JMdict entry 1590420, which also lists the spelling [片寄る](../words/片寄る.md)); 偏り かたより — deviation; bias (JMdict entry 1510330). Not selected for questions here. |
+
+## Common words
+
+- [偏見](../words/偏見.md) へんけん — prejudice; bias
+- 偏差値 へんさち — deviation value; standard score, often used for academic grades
+- 偏り かたより — deviation; inclination; bias
+
+## Notes
+
+JMdict lists 偏る and [片寄る](../words/片寄る.md) as two spellings of the same かたよる; both spellings can describe physical imbalance or a biased view. 片 (“one-sided; sheet”) shares the one-sided idea, and 傾 (“tilt; incline”) overlaps with leaning. KANJIDIC2 lists “side” among the meanings of 偏, which overlaps with 側 (“side”) and with 傍 (“beside; nearby”), whose KANJIDIC2 meanings also include “side.” These characters overlap with part of 偏's meaning range without being interchangeable.
+
+Digital Daijisen also gives the kun reading ひとえに, which Kanjipedia marks as outside the Joyo table (外); JMdict spells ひとえに, “wholly; solely; earnestly,” as 偏に and notes that it is usually written in kana (entry 1510320). It is not in this card's metadata and is not quizzed.
+
+The meaning-quiz distractors are 魚 (“fish”), 雨 (“rain”), and 耳 (“ear”); none means leaning to one side or being biased.
+
+Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1510380, 1611480, 1590420, 1510330, 1510370, 1643130, 1510320; [Digital Daijisen, 偏](https://www.weblio.jp/content/%E5%81%8F); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).

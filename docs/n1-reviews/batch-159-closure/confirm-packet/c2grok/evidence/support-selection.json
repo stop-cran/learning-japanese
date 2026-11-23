@@ -1,0 +1,145 @@
+{
+  "note": "Excerpt of the batch-159 progress ledger: the selection policy statement and the support-word mapping (JMdict entry ids, priority tags, and the row-specific exception reasons) for each new kanji.",
+  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with at least one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 135, 137, 139, 140, 146, 147, 148, 150, 152, and 153 are the first ten remaining Joyo rows after B158. Every new support word's other kanji already has a card. 又 is supported by the existing kana-headed articles または (spelling 又は, ichi1/news1) and また (spelling 又), under point 2 of the owner-accepted rule for B156 onward: an existing article, including a kana-headed one, is linked instead of adding a new one. Two rows take the rule's untagged route, each with a row-specific justification in its support mapping that must receive independent review: 后 (太后; the tagged 皇后 and 皇太后 need 皇, which has no card) and 吏 (官吏; no 吏 word carries a qualifying tag, and 官吏 has only news2/spec2). The 叔 row uses 叔母 (entry 1607100): its spelling carries ichi1/news1, and its reading しゅくぼ, restricted to that spelling, uses シュク; its support mapping explains why the equally tagged 叔父 is not used.",
+  "supportMappings": [
+    {
+      "kanji": "厘",
+      "article": "words/厘.md",
+      "primaryReading": "りん",
+      "entryIds": [
+        "1555420"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "news1"
+      ]
+    },
+    {
+      "kanji": "又",
+      "article": "words/または.md",
+      "primaryReading": "または",
+      "entryIds": [
+        "1524990"
+      ],
+      "newArticle": false,
+      "priorityTags": [
+        "ichi1",
+        "news1"
+      ],
+      "spelling": "又は"
+    },
+    {
+      "kanji": "又",
+      "article": "words/また.md",
+      "primaryReading": "また",
+      "entryIds": [
+        "1524930"
+      ],
+      "newArticle": false,
+      "priorityTags": [],
+      "spelling": "又",
+      "note": "Existing kana-headed article. JMdict entry 1524930 tags only the reading また (ichi1/news1); the spelling 又 carries no priority tag, so this mapping is recorded as untagged. The qualifying support for 又 is または (spelling 又は)."
+    },
+    {
+      "kanji": "叔",
+      "article": "words/叔母.md",
+      "primaryReading": "しゅくぼ",
+      "entryIds": [
+        "1607100"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "ichi1",
+        "news1"
+      ],
+      "note": "The spelling 叔母 carries ichi1/news1 (the reading おば also carries ichi1/news1). The reading しゅくぼ, restricted to 叔母, carries no priority tag and no irregular, rare, outdated, ateji, or gikun mark, and it uses the KANJIDIC2 reading シュク. 叔父 (entry 1607070) qualifies in the same way, with the reading しゅくふ, but it is not used: 精選版 日本国語大辞典 gives しゅくぶ as a variant reading of 叔父, and the reading quiz can generate しゅくぶ from しゅくふ as a look-alike wrong option. Neither Digital Daijisen nor 精選版 日本国語大辞典 gives a variant reading for 叔母 しゅくぼ."
+    },
+    {
+      "kanji": "叙",
+      "article": "words/叙情.md",
+      "primaryReading": "じょじょう",
+      "entryIds": [
+        "1595470"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "news1"
+      ]
+    },
+    {
+      "kanji": "吉",
+      "article": "words/不吉.md",
+      "primaryReading": "ふきつ",
+      "entryIds": [
+        "1491910"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "ichi1",
+        "news2"
+      ]
+    },
+    {
+      "kanji": "后",
+      "article": "words/太后.md",
+      "primaryReading": "たいこう",
+      "entryIds": [
+        "1787360"
+      ],
+      "newArticle": true,
+      "priorityTags": [],
+      "exceptionReason": "The candidates written with 后 that carry news1, ichi1, spec1, or gai1 cannot be used: 皇后 (entry 1280390, ichi1/news1) and 皇太后 (entry 1280450, news1) both need 皇, which has no card and is not in this batch; 午后 and 最后 are a rarely used and a search-only form of 午後 (1268990) and 最後 (1293810), whose tags belong to the 後 spellings; and 后 のち (1269330) lists 后 only as a search-only form. 后 きさき (1277320) carries only news2. The untagged route of the issue #60 rule therefore applies, with a row-specific justification. 太后 (entry 1787360) is untagged; its other kanji 太 has a card; its spelling and reading carry no irregular, rare, outdated, ateji, or gikun mark; and it backs the quizzed on reading コウ, the only reading in the Joyo table. Its gloss, “empress dowager; queen mother”, names both an empress and a queen, and Digital Daijisen defines it as a title for 太皇太后 or 皇太后. The untagged alternatives include 王后 (2014540, “queen”), 母后 (1783060, “empress dowager”), 后妃 and 后宮. Keep this explicit untagged exception for independent review."
+    },
+    {
+      "kanji": "吏",
+      "article": "words/官吏.md",
+      "primaryReading": "かんり",
+      "entryIds": [
+        "1211850"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "news2",
+        "spec2"
+      ],
+      "exceptionReason": "No candidate written with 吏 carries news1, ichi1, spec1, or gai1 in the pinned snapshot, so the untagged route of the issue #60 rule applies, with a row-specific justification. 官吏 (entry 1211850) is the only 吏 entry with any priority marker (news2/spec2, treated as untagged); all other 吏 entries, including 吏 り (1549690, archaic) and 吏員 (1549700), are untagged. 官吏 is the second example for リ in the Joyo table; its other kanji 官 has a card; its spelling and reading carry no irregular, rare, outdated, ateji, or gikun mark, although JMdict marks its sense as dated; and it backs the quizzed on reading リ. JMdict glosses it “government official; public servant; civil servant”. 吏員 (“official”), the first Joyo example, and 能吏 (1470320), the third, are untagged. Keep this explicit untagged exception for independent review."
+    },
+    {
+      "kanji": "吟",
+      "article": "words/吟味.md",
+      "primaryReading": "ぎんみ",
+      "entryIds": [
+        "1243390"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "ichi1",
+        "news2"
+      ]
+    },
+    {
+      "kanji": "呈",
+      "article": "words/贈呈.md",
+      "primaryReading": "ぞうてい",
+      "entryIds": [
+        "1403570"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "news1"
+      ]
+    },
+    {
+      "kanji": "呉",
+      "article": "words/呉服.md",
+      "primaryReading": "ごふく",
+      "entryIds": [
+        "1269190"
+      ],
+      "newArticle": true,
+      "priorityTags": [
+        "news1"
+      ]
+    }
+  ]
+}

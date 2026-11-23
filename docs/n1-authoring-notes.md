@@ -136,6 +136,103 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
+## Batch 159: review closed, publication pending
+
+Batch 159 adds the cards 厘 又 叔 叙 吉 后 吏 吟 呈 呉 (source rows 135, 137, 139,
+140, 146, 147, 148, 150, 152 and 153, the first ten remaining Joyo rows after
+B158). Nine of them get a new support article: 厘, 叔母, 叙情, 不吉, 太后, 官吏,
+吟味, 贈呈 and 呉服. 又 links the existing kana-headed articles または (spelling
+又は, ichi1/news1) and また (spelling 又) under point 2 of the issue #60 rule,
+and the batch audit now accepts a kana-headed support article when its mapping
+names a spelling that contains the kanji and appears in the article. Two
+support words take the rule's untagged route, each with a row-specific
+justification: 太后 (the tagged 皇后 and 皇太后 need 皇, which has no card) and
+官吏 (no 吏 word carries news1, ichi1, spec1 or gai1; 官吏 has only
+news2/spec2). The existing cards 不, 味, 太, 官, 情, 服, 母 and 贈 each gain one
+link line, and または and また link the 又 card. The cards 及, 堅, 暇, 狭 and 節
+replace a stale "no card" remark with a link to 又, 偏 or 即. The progress file is
+[`n1-sources/batch-159-progress.json`](n1-sources/batch-159-progress.json).
+
+The draft was frozen at `1a9bb910` on the B158 publication receipt `2787e43b`.
+Claude, GPT and Grok reviewed it blind, one after the other, each covering all
+four facets with its own emphasis. All three returned NEEDS FIX. Claude found
+that 又's untagged support 又聞き was justified by "usually written in kana",
+which is not one of the rule's exclusions, and that the reason for 叔's
+untagged support 伯叔 put the 叔父 and 叔母 tags on the readings おじ and おば,
+whereas JMdict puts them on the spellings. GPT raised the same two support
+reasons, found no direct quiz exclusion between 吟味 and 試験 or between 吟 and
+検, and asked for Digital Daijisen links on the new articles. Grok found six
+comprehensibility points, among them 又's sense list, 太后 without a plain
+explanation and the dated sense of 官吏. The fixes in `5c04be73` replace 又聞き
+with the existing articles または and また, correct the 叔 reason, widen the 吟
+and 吟味 exclusions, explain 太后, 呉服, 呈 and 厘, update the 官吏 example and
+link Digital Daijisen for each new word.
+
+The families then confirmed in rounds numbered per family. c1-claude and
+c1-grok confirmed `5c04be73`; c1-gpt still wanted 験 excluded from 吟 and found
+that the ledger still said no tagged 叔 candidate qualified. `4f8ebea7` added
+the exclusion and recorded 伯叔 as an author's exception; c2-claude confirmed
+it, but c2-gpt asked for the qualifying fallback or recorded owner acceptance
+before publication. `54b00e0c` replaced 伯叔 with 叔母 (JMdict 1607100: the
+spelling carries ichi1/news1, and its reading しゅくぼ, restricted to that
+spelling, uses シュク), withdrew the exception and restored 伯.md. 叔父 しゅくふ
+was not used because 精選版 日本国語大辞典 records the variant reading しゅくぶ,
+which the reading quiz could generate as a look-alike wrong option. c3-claude
+confirmed `54b00e0c`, and its optional note on 母's 叔母 line became
+`f85ff382`. On `f85ff382` c3-gpt resolved the 叔 finding but returned NEEDS
+FIX for a stale lint count in the ledger, corrected in `0ba7df63`, which c4-gpt
+confirmed; its optional note on the reading-options summary became `bad899ea`.
+On `bad899ea` c5-gpt, c2-grok and c4-claude all confirmed with no findings.
+
+The author then ran a scan for sentences saying that a kanji has no card,
+which the B157 and B158 publication checks had not run. It found five such
+remarks that were no longer true: 及, 堅 and 暇 said that 又 has no card, 狭
+said so of 偏 and 節 of 即, both carded in B158. `33c3b582` turned each into a
+link to the card followed by its title, and the scan now runs in the author's
+checks. c6-gpt, c3-grok and c5-claude confirmed `33c3b582` with no findings.
+
+After the confirmations, `origin/main` had moved from the base to `f5caf53c`
+through seven owner commits: the sourced origin of 集, mnemonics for the
+illness radical on 疲, 病, 症, 痛, 療 and 癖, mnemonics for the bird component
+on 唯, 椎, 護, 雄 and 鳴, and a new 空 mnemonic with examples. The signed merge
+`3ecba19c` brought them in. A merge proof shows that main changed no batch file,
+link target or quiz field; the one changed main line naming a batch kanji is
+護's new mnemonic, which calls 又 a hand shape without linking it, and the
+author recorded it as reviewed. So no integration review was needed. Because
+main changed 13 cards after the base, the stock batch audit stops at the
+merge; `integration/audit_at_merge.py` in the closure reruns it with main's
+head as the runtime baseline, and it passes with the reviewed counts.
+
+Several optional points were declined, and the declines were accepted: 吏員 or
+能吏 instead of 官吏, 居 as a 呈 exclusion, 吟味's game-abbreviation sense,
+keeping 験 and 確認 as exclusions, a note that the 叔母 examples read しゅくぼ
+only to illustrate the article's reading, and "also しゅくふ" for 叔父 on
+the 叔 card. c2-grok's three optional points (親戚 and 親類 as 叔母 exclusions, the はくぼ
+gloss in a 叔母 example, and 叔.md's gloss of 叔母) were declined, and c3-grok
+accepted the declines. The closure record also discloses the run-level
+limits: GPT reports recovered from final messages, a condensed copy of
+r1-gpt's report given to c1-gpt, overlapping calls, and reports that do not
+name their model version. It also notes that 27 older cards mention 又 without
+linking the new card, left as an optional follow-up. No Android JVM test,
+Kotlin cross-check or phone check was run.
+
+At the merge `3ecba19c`, validation, the 444 host tests, the manifest
+rebuild, the budget, the vocabulary check, quiz safety, the reading-options
+check and the stale-remark scan pass, and the batch audit passes with main's
+runtime baseline. Lint reports 11 errors and 73 warnings (3 and 44 at the
+reviewed `33c3b582`). The errors are metadata readings without a Readings
+row: on the reused cards 太 and 情, older than the batch, and on 疲, 病, 痛, 空
+and 鳴, which lint checks at the merge because main changed them, although
+main added none of those readings. Of the warnings, 42 are on reused files and
+29 on main's cards and the words they list; the other two are on the new 又
+card, whose kana-headed examples または and また cannot declare 又 in their
+`kanji:` front matter. After publication, delivery becomes 618/1,228, with 610
+remaining.
+
+The full record, including the run table, every disposition and the limits, is
+in
+[`n1-reviews/batch-159-closure/README.md`](n1-reviews/batch-159-closure/README.md).
+
 ## Batch 158: published
 
 Batch 158 adds the cards 偏 偽 傍 債 勲 匠 匿 升 即 却 (source rows 63, 67, 68, 72,

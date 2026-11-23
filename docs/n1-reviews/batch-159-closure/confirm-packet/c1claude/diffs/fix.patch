@@ -1,0 +1,756 @@
+diff --git a/docs/n1-sources/batch-159-jmdict-selection.json b/docs/n1-sources/batch-159-jmdict-selection.json
+index 3fefe97b..2d257fb3 100644
+--- a/docs/n1-sources/batch-159-jmdict-selection.json
++++ b/docs/n1-sources/batch-159-jmdict-selection.json
+@@ -74,7 +74,6 @@
+     "1188720",
+     "1269200",
+     "1269160",
+-    "1442420",
+     "1344890",
+     "2871136",
+     "1491290",
+@@ -85,7 +84,6 @@
+     "1257890",
+     "1771940",
+     "2653980",
+-    "2025400",
+     "1293810",
+     "1269330",
+     "2014540",
+diff --git a/docs/n1-sources/batch-159-jmdict.xml b/docs/n1-sources/batch-159-jmdict.xml
+index dfe96722..30e05c18 100644
+--- a/docs/n1-sources/batch-159-jmdict.xml
++++ b/docs/n1-sources/batch-159-jmdict.xml
+@@ -1667,28 +1667,6 @@
+       <gloss xml:lang="eng">Wu and Yue (two rival states in ancient China)</gloss>
+     </sense>
+   </entry>
+-  <entry>
+-    <ent_seq>1442420</ent_seq>
+-    <k_ele>
+-      <keb>伝聞</keb>
+-      <ke_pri>news2</ke_pri>
+-      <ke_pri>nf30</ke_pri>
+-    </k_ele>
+-    <r_ele>
+-      <reb>でんぶん</reb>
+-      <re_pri>news2</re_pri>
+-      <re_pri>nf30</re_pri>
+-    </r_ele>
+-    <sense>
+-      <pos>noun (common) (futsuumeishi)</pos>
+-      <pos>noun or participle which takes the aux. verb suru</pos>
+-      <pos>transitive verb</pos>
+-      <gloss xml:lang="eng">hearsay</gloss>
+-      <gloss xml:lang="eng">rumor</gloss>
+-      <gloss xml:lang="eng">rumour</gloss>
+-      <gloss xml:lang="eng">report</gloss>
+-    </sense>
+-  </entry>
+   <entry>
+     <ent_seq>1344890</ent_seq>
+     <k_ele>
+@@ -1924,22 +1902,6 @@
+       <gloss xml:lang="eng">cloth</gloss>
+     </sense>
+   </entry>
+-  <entry>
+-    <ent_seq>2025400</ent_seq>
+-    <k_ele>
+-      <keb>又ね</keb>
+-      <ke_inf>search-only kanji form</ke_inf>
+-    </k_ele>
+-    <r_ele>
+-      <reb>またね</reb>
+-      <re_pri>spec1</re_pri>
+-    </r_ele>
+-    <sense>
+-      <pos>interjection (kandoushi)</pos>
+-      <gloss xml:lang="eng">bye</gloss>
+-      <gloss xml:lang="eng">see you later</gloss>
+-    </sense>
+-  </entry>
+   <entry>
+     <ent_seq>1293810</ent_seq>
+     <k_ele>
+diff --git a/docs/n1-sources/batch-159-progress.json b/docs/n1-sources/batch-159-progress.json
+index e88cd327..ae099def 100644
+--- a/docs/n1-sources/batch-159-progress.json
++++ b/docs/n1-sources/batch-159-progress.json
+@@ -26,7 +26,7 @@
+     "呈",
+     "呉"
+   ],
+-  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 135, 137, 139, 140, 146, 147, 148, 150, 152, and 153 are the first ten remaining Joyo rows after B158. Every support word's other kanji already has a card. Four rows take the rule's untagged route, each with a row-specific justification in its support mapping that must receive independent review: 又 (又聞き; the tagged 又 words are usually written in kana), 叔 (伯叔; the tags on 叔父 and 叔母 belong to the whole-word readings おじ and おば), 后 (太后; the tagged 皇后 and 皇太后 need 皇, which has no card), and 吏 (官吏; no 吏 word carries a qualifying tag, and 官吏 has only news2/spec2).",
++  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with at least one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 135, 137, 139, 140, 146, 147, 148, 150, 152, and 153 are the first ten remaining Joyo rows after B158. Every new support word's other kanji already has a card. 又 is supported by the existing kana-headed articles または (spelling 又は, ichi1/news1) and また (spelling 又), under point 2 of the owner-accepted rule for B156 onward: an existing article, including a kana-headed one, is linked instead of adding a new one. Three rows take the rule's untagged route, each with a row-specific justification in its support mapping that must receive independent review: 叔 (伯叔; the tags on 叔父 and 叔母 belong to the whole-word readings おじ and おば), 后 (太后; the tagged 皇后 and 皇太后 need 皇, which has no card), and 吏 (官吏; no 吏 word carries a qualifying tag, and 官吏 has only news2/spec2).",
+   "supportMappings": [
+     {
+       "kanji": "厘",
+@@ -42,14 +42,29 @@
+     },
+     {
+       "kanji": "又",
+-      "article": "words/又聞き.md",
+-      "primaryReading": "またぎき",
++      "article": "words/または.md",
++      "primaryReading": "または",
+       "entryIds": [
+-        "1584370"
++        "1524990"
+       ],
+-      "newArticle": true,
++      "newArticle": false,
++      "priorityTags": [
++        "ichi1",
++        "news1"
++      ],
++      "spelling": "又は"
++    },
++    {
++      "kanji": "又",
++      "article": "words/また.md",
++      "primaryReading": "また",
++      "entryIds": [
++        "1524930"
++      ],
++      "newArticle": false,
+       "priorityTags": [],
+-      "exceptionReason": "Every candidate written with 又 that carries news1, ichi1, spec1, or gai1 in the pinned snapshot is a kana word: 又 また (entry 1524930, ichi1/news1) and 又は または (entry 1524990, ichi1/news1) are marked as usually written in kana, and the spec1 on またね (entry 2025400) belongs to the kana reading, with 又ね only a search-only kanji form. An article spelled 又 or 又は would teach a kanji spelling that JMdict marks as usually written in kana; B158 likewise kept 却って (かえ.って) and 即ち (すなわ.ち) for reference only for that reason. The untagged route of the issue #60 rule therefore applies, with a row-specific justification. 又聞き (entry 1584370) is untagged, and JMdict also lists the spelling また聞き. Its spellings and reading carry no irregular, rare, outdated, ateji, or gikun mark; its other kanji 聞 has a card; and it backs the quizzed kun reading また-, the prefix that JMdict gives as sense 8 of 又 (“indirect”, see also 又聞き) and that Digital Daijisen illustrates with ―聞き and ―貸し. The alternatives are all untagged: 又貸し (1525120) uses the same prefix, and 又の名 (1524980) and 又の日 (1524970) are expressions that JMdict also lists with また in kana. Keep this explicit untagged exception for independent review."
++      "spelling": "又",
++      "note": "Existing kana-headed article. JMdict entry 1524930 tags only the reading また (ichi1/news1); the spelling 又 carries no priority tag, so this mapping is recorded as untagged. The qualifying support for 又 is または (spelling 又は)."
+     },
+     {
+       "kanji": "叔",
+@@ -60,7 +75,7 @@
+       ],
+       "newArticle": true,
+       "priorityTags": [],
+-      "exceptionReason": "No candidate qualifies through a reading of 叔. 叔父 (entry 1607070) and 叔母 (entry 1607100) carry ichi1/news1 only on the whole-word readings おじ and おば, which the Joyo table lists in its notes for 叔; their シュク readings しゅくふ and しゅくぼ are restricted to those spellings and untagged. This matches 伯父 and 伯母 for 伯 in B156, where 伯仲 was accepted. All other candidates written with 叔, including 叔世 and the おじ/おば compounds such as 大叔父 and 叔父さん, are untagged, so the untagged route of the issue #60 rule applies, with a row-specific justification. 伯叔 (entry 1474270) is the Joyo table's example for シュク; its other kanji 伯 has a card; its spelling and reading carry no irregular, rare, outdated, ateji, or gikun mark; and it backs the quizzed on reading シュク. JMdict glosses it “brothers; one's father's brothers”. Keep this explicit untagged exception for independent review."
++      "exceptionReason": "No candidate qualifies through a reading of 叔. The spellings 叔父 (entry 1607070) and 叔母 (entry 1607100) carry ichi1/news1, but their tagged readings are the whole-word readings おじ and おば, which the Joyo table lists in its notes for 叔 as special readings of 叔父 and 叔母, not as readings of 叔 alone. Their シュク readings しゅくふ and しゅくぼ are restricted to those spellings and carry no priority tag, and an article headed 叔父 or 叔母 would teach おじ or おば as its primary reading. This matches 伯父 and 伯母 for 伯 in B156, where 伯仲 was accepted. All other candidates written with 叔, including 叔世 and the おじ/おば compounds such as 大叔父 and 叔父さん, are untagged, so the untagged route of the issue #60 rule applies, with a row-specific justification. 伯叔 (entry 1474270) is the Joyo table's only example for シュク; its other kanji 伯 has a card; its spelling and reading carry no irregular, rare, outdated, ateji, or gikun mark; and it backs the quizzed on reading シュク. JMdict glosses it “brothers; one's father's brothers”. Keep this explicit untagged exception for independent review."
+     },
+     {
+       "kanji": "叙",
+@@ -157,7 +172,11 @@
+     ],
+     [
+       "又",
+-      "words/又聞き.md"
++      "words/または.md"
++    ],
++    [
++      "又",
++      "words/また.md"
+     ],
+     [
+       "叔",
+@@ -211,7 +230,7 @@
+     {
+       "article": "kanji/官.md",
+       "before": "- 器官 (きかん) — organ of a living body\n",
+-      "after": "- 器官 (きかん) — organ of a living body\n- [官吏](../words/官吏.md) (かんり) — government official; civil servant\n"
++      "after": "- 器官 (きかん) — organ of a living body\n- [官吏](../words/官吏.md) (かんり) — government official; civil servant (dated)\n"
+     },
+     {
+       "article": "kanji/味.md",
+@@ -228,15 +247,20 @@
+       "before": "- 服用 ふくよう — taking medicine\n",
+       "after": "- 服用 ふくよう — taking medicine\n- [呉服](../words/呉服.md) ごふく — kimono fabrics; cloth for Japanese clothes\n"
+     },
+-    {
+-      "article": "kanji/聞.md",
+-      "before": "- 聞こえる きこえる — to be audible\n",
+-      "after": "- 聞こえる きこえる — to be audible\n- [又聞き](../words/又聞き.md) またぎき — hearsay; learning by hearsay\n"
+-    },
+     {
+       "article": "kanji/太.md",
+       "before": "- 太る ふとる — put on weight\n",
+-      "after": "- 太る ふとる — put on weight\n- [太后](../words/太后.md) たいこう — empress dowager; queen mother\n"
++      "after": "- 太る ふとる — put on weight\n- [太后](../words/太后.md) たいこう — empress dowager; queen mother (here 太 is added to an honored person's title; it does not mean “thick”)\n"
++    },
++    {
++      "article": "words/または.md",
++      "before": "Hiragana is usual; 又は is another spelling. The final は is pronounced わ,\n",
++      "after": "Hiragana is usual; 又は, written with [又](../kanji/又.md), is another spelling. The final は is pronounced わ,\n"
++    },
++    {
++      "article": "words/また.md",
++      "before": "Kana is usual. 又 is a recognized spelling, but the kana form serves both repetition and addition. No kanji decomposition is needed.\n",
++      "after": "Kana is usual. [又](../kanji/又.md) is a recognized spelling, but the kana form serves both repetition and addition. No kanji decomposition is needed.\n"
+     }
+   ],
+   "wordQuizAudit": {
+@@ -248,14 +272,6 @@
+           "パーセント"
+         ]
+       },
+-      {
+-        "word": "又聞き",
+-        "exclude": [
+-          "噂",
+-          "聞く",
+-          "間接"
+-        ]
+-      },
+       {
+         "word": "伯叔",
+         "exclude": [
+@@ -302,7 +318,9 @@
+           "チェック",
+           "確かめる",
+           "選択",
+-          "選ぶ"
++          "選ぶ",
++          "試験",
++          "確認"
+         ]
+       },
+       {
+@@ -399,7 +417,13 @@
+           "詩",
+           "歌",
+           "謡",
+-          "句"
++          "句",
++          "検",
++          "審",
++          "査",
++          "調",
++          "究",
++          "研"
+         ]
+       },
+       {
+@@ -456,30 +480,31 @@
+       "kanji": "又",
+       "kind": "kun",
+       "reading": "また",
+-      "selected": false,
+-      "reason": "又 また and 又は are sourced kun examples (JMdict entries 1524930 and 1524990), but JMdict marks both as usually written in kana; retain また for reference without selecting it.",
++      "selected": true,
++      "reason": "The existing kana-headed article または teaches the spelling 又は (JMdict entry 1524990, ichi1/news1 on both 又は and または), which directly uses また; the existing kana-headed article また also teaches the spelling 又 (entry 1524930).",
+       "entryIds": [
+-        "1524930",
+-        "1524990"
+-      ]
++        "1524990",
++        "1524930"
++      ],
++      "article": "words/または.md"
+     },
+     {
+       "kanji": "又",
+       "kind": "kun",
+       "reading": "また-",
+-      "selected": true,
+-      "reason": "The supported common-word article 又聞き directly uses また-.",
++      "selected": false,
++      "reason": "又聞き and 又貸し are sourced examples of the prefix また- (JMdict entries 1584370 and 1525120; entry 1524930 gives the prefix sense “indirect”), but the selected kun reading is また, supported by the existing articles または and また; retain また- for reference without selecting it.",
+       "entryIds": [
+-        "1584370"
+-      ],
+-      "article": "words/又聞き.md"
++        "1584370",
++        "1525120"
++      ]
+     },
+     {
+       "kanji": "又",
+       "kind": "kun",
+       "reading": "また.の-",
+       "selected": false,
+-      "reason": "又の名 and 又の日 are sourced kun examples (JMdict entries 1524980 and 1524970), but the supported article uses the prefix また-; retain また.の- for reference without selecting it.",
++      "reason": "又の名 and 又の日 are sourced kun examples (JMdict entries 1524980 and 1524970), and JMdict also lists both with また written in kana; the selected kun reading is また, supported by the existing articles または and また; retain また.の- for reference without selecting it.",
+       "entryIds": [
+         "1524980",
+         "1524970"
+@@ -679,7 +704,7 @@
+       "kanji": "又",
+       "quizOnyomi": [],
+       "quizKunyomi": [
+-        "また-"
++        "また"
+       ],
+       "onKeys": [],
+       "kunKeys": [
+@@ -914,14 +939,14 @@
+   },
+   "mechanicalChecks": {
+     "contentValidation": "Passed: tools/validate.py reported 0 errors.",
+-    "batchAudit": "Passed: 10 kanji, 10 new words, 9 changed existing articles, 21 reading dispositions, and 89 complete JMdict families; the manifest is fresh.",
+-    "unitTests": "Passed: the whole tools suite (439 tests), including test_audit_n1_batch.py and test_validate.py.",
+-    "n1Lint": "The targeted lean lint against base 2787e43b reported four pre-existing errors in reused cards: kanji/太.md (metadata reading タ has no Readings row), kanji/情.md (セイ and なさ.け) and kanji/聞.md (unknown front-matter key phonetic). All four are present at base commit 2787e43b5706a569d83627849aa40ed3582a7d18; B159 only adds one line to each of these cards. The 41 warnings are all on reused cards and words. No B159 kanji card or new word was reported.",
++    "batchAudit": "Passed: 10 kanji, 9 new words, 10 changed existing articles (including the reused kana-headed articles または and また, which now record the kanji spellings 又は and 又 in their support mappings), 11 required reciprocal pairs, 21 reading dispositions, and 87 complete JMdict families; the manifest is fresh. The audit now accepts a kana-headed support article only when its mapping names a spelling that contains the kanji and appears in the article.",
++    "unitTests": "Passed: the whole tools suite (444 tests), including test_audit_n1_batch.py with five new tests for kana-headed support spellings, and test_validate.py.",
++    "n1Lint": "The targeted lean lint against base 2787e43b reported three pre-existing errors in reused cards: kanji/太.md (metadata reading タ has no Readings row) and kanji/情.md (セイ and なさ.け). Both are present at base commit 2787e43b5706a569d83627849aa40ed3582a7d18; B159 only adds one line to each of these cards. Of the 37 warnings, 35 are on reused cards and words. The other two are on kanji/又.md: its また examples または and また do not list 又 in their kanji: front matter. They cannot, because tools/validate.py rejects a kanji: entry that does not occur in the headword, and both headwords are kana. The batch audit and quiz-safety checks accept this support through the spellings 又は and 又 recorded in the support mappings. No new word was reported.",
+     "whitespace": "Passed with core.whitespace=cr-at-eol to respect the repository's CRLF files, including the new untracked files.",
+-    "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning and reading questions, and every distractor and quiz exclusion is named with its card title in the card's Notes.",
++    "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning and reading questions, and every distractor and quiz exclusion is named with its card title in the card's Notes. For 又, the selected reading また is backed by the kana-headed articles または and また through the ledger spellings 又は and 又, which the check now accepts in the same way as the repository audit.",
+     "readingExposure": "lean reading_exposure.py --seeds 200 with the --extra list below: 0 production hits, 0 padded-session hits and 0 one-holder padded hits; 10 latent collisions that no N1, All or Starter pool can draw (厘 り; 又 やす and ふたたび; 吉 え, き, と, よ and えい; 吏 し; 呉 ぐ).",
+     "readingExtras": "又 ユウ, ふたた.び; 叔 わか.い; 叙 の.べる; 吉 よ.い, え.い; 后 ゴ, のち, きさき, きみ; 吏 つかさ; 吟 うた.う, うめ.く; 呈 しめ.す; 呉 くれ, く.れる. Sources: the readings Kanjipedia marks as outside the official table (外) for each kanji (厘 has none); the kun readings in the Digital Daijisen character entries (叙 のべる, 吉 よい, 后 きさき, 呉 くれ and くれる), which add nothing new; and a JMdict okurigana scan of kanji-plus-kana headwords, skipping search-only forms (吉 え.い from 吉い in 1605820, a rarely used kanji form with an out-dated kana reading). The scan's じょする, じょす, ぎんじる, ぎんずる, ていする and ていす reuse the on readings, which are already excluded. reading_exposure.py also reads the JMdict single-kanji entries itself (for example 厘 り, JMdict 1555420).",
+     "readingOptions": "lean reading_options.py with the same --extra list: 0 problems. The only informational note is 呉 ぐ, a KANJIDIC2 name-only reading offered by 供, 具, 工 and 求."
+   },
+-  "status": "Candidate under independent review; not published. The 又, 叔, 后 and 吏 untagged-support exceptions remain subject to review."
++  "status": "Candidate under independent review; not published. The 叔, 后 and 吏 untagged-support exceptions and the kana-headed 又 support remain subject to review."
+ }
+diff --git a/kanji/厘.md b/kanji/厘.md
+index 0ec6245b..37a4d850 100644
+--- a/kanji/厘.md
++++ b/kanji/厘.md
+@@ -39,7 +39,7 @@ quiz_exclusions: [銭, 分, 寸]
+ 
+ Digital Daijisen notes that 厘 was originally an abbreviated form of 釐, and JMdict entry 1555420 lists 釐 as an outdated kanji spelling of the same word.
+ 
+-銭 (“coin; sen (1/100 yen)”) is the next larger monetary unit; Digital Daijisen gives one rin as one-tenth of a sen. 分 (“minute, part”), read ぶ, is the next larger fractional unit; JMdict glosses 分 ぶ as one-tenth, including 3 mm as one-tenth of a sun (entry 1502850), and 分 and 厘 appear together in 一分一厘 and 九分九厘. 寸 (“sun (length unit); small”) is the length unit that a rin divides: both JMdict and Digital Daijisen give one rin of length as one-hundredth of a sun.
++銭 (“coin; sen (1/100 yen)”) is the next larger monetary unit; Digital Daijisen gives one rin as one-tenth of a sen. 分 (“minute, part”), read ぶ, is the fractional unit ten times larger; JMdict glosses 分 ぶ as one-tenth, including 3 mm as one-tenth of a sun (entry 1502850), while 厘 is one-hundredth, including 0.3 mm as one-hundredth of a sun, and 分 and 厘 appear together in 一分一厘 and 九分九厘. 寸 (“sun (length unit); small”) is the length unit that a rin divides: both JMdict and Digital Daijisen give one rin of length as one-hundredth of a sun.
+ 
+ The meaning-quiz distractors are 左 (“left”), 青 (“blue, green”), and 電 (“electricity”); none means a small fractional unit.
+ 
+diff --git a/kanji/又.md b/kanji/又.md
+index 6403a155..d5c0c093 100644
+--- a/kanji/又.md
++++ b/kanji/又.md
+@@ -9,7 +9,7 @@ radicalNumber: 29
+ onyomi: [ユウ]
+ kunyomi: [また, また-, また.の-]
+ quizOnyomi: []
+-quizKunyomi: [また-]
++quizKunyomi: [また]
+ distractors: [北, 国, 男]
+ quiz_exclusions: [再, 且, 復, 及, 繰]
+ ---
+@@ -20,21 +20,22 @@ quiz_exclusions: [再, 且, 復, 及, 繰]
+ 
+ ## Meaning and origin
+ 
+-又 means “again,” “also” or “or.” As a word, また means again, also, on the other hand, and, or or (JMdict entry 1524930), and 又は または means “or; either … or” (JMdict entry 1524990); JMdict notes that both are usually written in kana. JMdict entry 1524930 also has a prefix sense, “indirect,” and Digital Daijisen likewise says that また- attached to a noun marks something as indirect, as in [又聞き](../words/又聞き.md) and 又貸し.
++又 means “again,” “also” or “or.” As a word, [又](../words/また.md) また has senses that include “again,” “also,” “on the other hand,” “and; in addition” and “or; otherwise” (JMdict entry 1524930), and [又は](../words/または.md) または means “or; either … or” (JMdict entry 1524990). JMdict notes that both are usually written in kana, so the linked articles are headed in kana and show 又 and 又は as other spellings. JMdict entry 1524930 also has a prefix sense, “indirect,” and Digital Daijisen likewise says that また- attached to a noun marks something as indirect, as in 又聞き and 又貸し.
+ 
+ ## Readings
+ 
+ | Reading | Type | Typical words |
+ | --- | --- | --- |
+ | ユウ | on | Qualified source-only reading here: KANJIDIC2 lists ユウ, but no word reading 又 as ゆう was found in the inspected JMdict snapshot, and the Digital Daijisen entries for 又 on Weblio give no on reading. Not selected for questions here. |
+-| また | kun | 又 また — again; also; on the other hand; and; or (JMdict entry 1524930); 又は または — or; either … or (JMdict entry 1524990). Both are usually written in kana. Not selected for questions here. |
+-| また- | kun | [又聞き](../words/又聞き.md) またぎき — hearsay; learning by hearsay (JMdict entry 1584370); 又貸し またがし — sublease; lending something one has borrowed to someone else (JMdict entry 1525120) |
++| また | kun | [又は](../words/または.md) または — or; either … or (JMdict entry 1524990); [又](../words/また.md) また — again; also; on the other hand; and; or (JMdict entry 1524930). Both are usually written in kana. |
++| また- | kun | 又聞き またぎき — hearsay; learning by hearsay (JMdict entry 1584370); 又貸し またがし — sublease; lending something one has borrowed to someone else (JMdict entry 1525120). Not selected for questions here. |
+ | また.の- | kun | 又の名 またのな — alias; another name (JMdict entry 1524980); 又の日 またのひ — another day; the next day (JMdict entry 1524970). JMdict also lists both with また written in kana. Not selected for questions here. |
+ 
+ ## Common words
+ 
+-- [又聞き](../words/又聞き.md) またぎき — hearsay; learning by hearsay
+-- 又は または — or; either … or (usually written in kana)
++- [又は](../words/または.md) または — or; either … or (usually written in kana)
++- [又](../words/また.md) また — again; also (usually written in kana)
++- 又聞き またぎき — hearsay; learning by hearsay
+ - 又貸し またがし — sublease; lending something one has borrowed
+ - 又の名 またのな — alias; another name
+ 
+@@ -44,6 +45,6 @@ The Joyo table gives 又 only the kun reading また, with the examples 又 and
+ 
+ 再 (“again; repeat”) and 復 (“restore; repeat”) overlap with “again”; JMdict lists 復 as a rarely used spelling of また. 且 (“moreover; also”) and 及 (“reach; extend to; and”) overlap with “also” and “and,” and 繰 (“reel; turn pages; repeat”) overlaps with repetition.
+ 
+-The meaning-quiz distractors are 北 (“north”), 国 (“country”), and 男 (“man, male”); none means again, also or or.
++The meaning-quiz distractors are 北 (“north”), 国 (“country”), and 男 (“man, male”); none means “again,” “also” or “or.”
+ 
+ Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1524930, 1524990, 1584370, 1525120, 1524980, 1524970; [Digital Daijisen, 又](https://www.weblio.jp/content/%E5%8F%88); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/叔.md b/kanji/叔.md
+index 4fdf7f03..b196d662 100644
+--- a/kanji/叔.md
++++ b/kanji/叔.md
+@@ -36,7 +36,7 @@ quiz_exclusions: [伯, 弟]
+ 
+ ## Notes
+ 
+-JMdict notes that 伯父 and 伯母 can mean an uncle or aunt older than one's parent, and 叔父 and 叔母 one younger than one's parent (entries 1607070 and 1607100). Kanjipedia also gives the kun reading わか.い, marked as outside the Joyo table (外); it is not in this card's metadata and is not quizzed.
++JMdict notes that 伯父 and 伯母 can mean an uncle or aunt older than one's parent, and 叔父 and 叔母 one younger than one's parent (entries 1607070 and 1607100). The Joyo table gives 伯叔 as its only example word for シュク; its readings おじ for 叔父 and おば for 叔母 are whole-word special readings, not readings of 叔 alone. Kanjipedia also gives the kun reading わか.い, marked as outside the Joyo table (外); it is not in this card's metadata and is not quizzed.
+ 
+ 伯 (“uncle or aunt; eldest; count (noble)”) is the older-sibling counterpart and the other kanji in 伯叔, 伯父 and 伯母. 弟 (“younger brother”) overlaps with the younger-sibling sense; Digital Daijisen defines 叔父 しゅくふ as a younger brother of one's father or mother.
+ 
+diff --git a/kanji/吟.md b/kanji/吟.md
+index 814940dc..ce674eb6 100644
+--- a/kanji/吟.md
++++ b/kanji/吟.md
+@@ -11,7 +11,7 @@ kunyomi: []
+ quizOnyomi: [ギン]
+ quizKunyomi: []
+ distractors: [二, 自, 社]
+-quiz_exclusions: [詩, 歌, 謡, 句]
++quiz_exclusions: [詩, 歌, 謡, 句, 検, 審, 査, 調, 究, 研]
+ ---
+ 
+ # 吟 — recite poetry; chant
+@@ -39,7 +39,7 @@ quiz_exclusions: [詩, 歌, 謡, 句]
+ 
+ JMdict marks reciting and appreciating traditional poetry as the original meaning of 吟味 (entry 1243390, sense 4, archaic), and Digital Daijisen also marks that sense as the original one. Kanjipedia also gives the kun readings うた.う and うめ.く, marked as outside the Joyo table (外); they are not in this card's metadata and are not quizzed.
+ 
+-詩 (“poem; poetry”) appears with 吟 in 詩吟, 歌 (“song, sing”) and 謡 (“ballad; Noh chanting”) overlap with chanting or singing verse, and 句 (“phrase; verse”) names a verse.
++詩 (“poem; poetry”) appears with 吟 in 詩吟, 歌 (“song, sing”) and 謡 (“ballad; Noh chanting”) overlap with chanting or singing verse, and 句 (“phrase; verse”) names a verse. 検 (“inspect; examine; check”), 審 (“examine; judge; trial”), 査 (“investigate; inspect”), 調 (“investigate; tune”), 究 (“investigate thoroughly”) and 研 (“polish; study closely”) overlap with the sense of examining something closely, as in 吟味.
+ 
+ The meaning-quiz distractors are 二 (“two”), 自 (“self, oneself”), and 社 (“company, shrine”); none means reciting poetry.
+ 
+diff --git a/kanji/呈.md b/kanji/呈.md
+index 73c918c0..16b2a192 100644
+--- a/kanji/呈.md
++++ b/kanji/呈.md
+@@ -37,7 +37,7 @@ quiz_exclusions: [献, 贈, 供, 与, 提, 顕, 示, 掲, 現]
+ 
+ ## Notes
+ 
+-The verb 呈する ていする covers both senses: JMdict glosses it as “to present; to offer” and “to show; to assume (a shape)” (entry 2012430). Kanjipedia also gives the kun reading しめ.す, marked as outside the Joyo table (外); it is not in this card's metadata and is not quizzed.
++The verb 呈する ていする covers both senses: JMdict glosses it as “to present; to offer,” “to show; to display; to exhibit” and “to assume (e.g. a shape)” (entry 2012430). Kanjipedia also gives the kun reading しめ.す, marked as outside the Joyo table (外); it is not in this card's metadata and is not quizzed.
+ 
+ 献 (“offer; contribute; dedicate”) appears with 呈 in 献呈, and 贈 (“give as a gift; confer”) appears in 贈呈. 供 (“accompany, offer”), 与 (“give; grant”) and 提 (“submit; propose; carry in hand”) overlap with offering or submitting. 顕 (“evident; reveal”), 示 (“indicate”), 掲 (“put up; display; publish”) and 現 (“actual; present”) overlap with showing or appearing; 示 also appears in 呈示.
+ 
+diff --git a/kanji/太.md b/kanji/太.md
+index 50128fe6..353e2d13 100644
+--- a/kanji/太.md
++++ b/kanji/太.md
+@@ -35,7 +35,7 @@ In [太陽](../words/太陽.md) たいよう, "the sun," 太 instead has the gre
+ - [太陽](../words/太陽.md) たいよう — the sun
+ - 太い ふとい — thick; fat
+ - 太る ふとる — put on weight
+-- [太后](../words/太后.md) たいこう — empress dowager; queen mother
++- [太后](../words/太后.md) たいこう — empress dowager; queen mother (here 太 is added to an honored person's title; it does not mean “thick”)
+ 
+ ## Notes
+ 
+diff --git a/kanji/官.md b/kanji/官.md
+index 1173d955..6388ff8a 100644
+--- a/kanji/官.md
++++ b/kanji/官.md
+@@ -34,7 +34,7 @@ This office scene is a memory aid, not a historical derivation.
+ - [警官](../words/警官.md) (けいかん) — police officer
+ - 官庁 (かんちょう) — government office; agency
+ - 器官 (きかん) — organ of a living body
+-- [官吏](../words/官吏.md) (かんり) — government official; civil servant
++- [官吏](../words/官吏.md) (かんり) — government official; civil servant (dated)
+ 
+ ## Notes
+ 
+diff --git a/kanji/聞.md b/kanji/聞.md
+index de45285b..802d8c39 100644
+--- a/kanji/聞.md
++++ b/kanji/聞.md
+@@ -36,7 +36,6 @@ not the etymology. It means "hear", "listen" and "ask" (hearing in order to find
+ - [聞く](../words/聞く.md) きく — to hear, listen, ask
+ - [新聞](../words/新聞.md) しんぶん — newspaper
+ - 聞こえる きこえる — to be audible
+-- [又聞き](../words/又聞き.md) またぎき — hearsay; learning by hearsay
+ 
+ ## Notes
+ 
+diff --git a/tools/audit_n1_batch.py b/tools/audit_n1_batch.py
+index e6430cd5..d8b67a7f 100644
+--- a/tools/audit_n1_batch.py
++++ b/tools/audit_n1_batch.py
+@@ -57,6 +57,16 @@ def lexical_pair(entry, spelling, reading, *, reject_search_only_readings=False)
+     return False
+ 
+ 
++def support_spelling(row, meta, text, kanji):
++    spelling = row.get("spelling")
++    if spelling is None:
++        return meta["word"]
++    require(isinstance(spelling, str) and meta["word"] == meta["reading"]
++            and not meta.get("kanji") and kanji in spelling and spelling in text,
++            f"Invalid kana-headed support spelling: {row['article']}")
++    return spelling
++
++
+ def base_file(root, commit, name):
+     return subprocess.check_output(
+         ["git", "--no-pager", "show", f"{commit}:{name}"], cwd=root).decode("utf-8")
+@@ -702,12 +712,14 @@ def audit(root, batch):
+         require(c in members and name.startswith("words/") and name.endswith(".md"),
+                 "Invalid support mapping")
+         meta = metadata(root, name)
++        text = (root / name).read_text(encoding="utf-8")
++        spelling = support_spelling(row, meta, text, c)
+         require(meta["reading"] == row["primaryReading"]
+                 and bool(row["newArticle"]) == (name in new_words)
+                 and row["entryIds"] and set(row["entryIds"]) <= families.keys()
+-                and any(lexical_pair(families[i], meta["word"], meta["reading"])
++                and any(lexical_pair(families[i], spelling, meta["reading"])
+                         for i in row["entryIds"]), f"Support identity/restrictions mismatch: {name}")
+-        require(f"(../kanji/{c}.md)" in (root / name).read_text(encoding="utf-8")
++        require(f"(../kanji/{c}.md)" in text
+                 and f"(../{name})" in (root / f"kanji/{c}.md").read_text(encoding="utf-8"),
+                 f"Missing reciprocal link: {c} / {name}")
+     activated = activated_baseline_pairs(before, members, candidates)
+diff --git a/tools/test_audit_n1_batch.py b/tools/test_audit_n1_batch.py
+index 887e9c94..fb9782d2 100644
+--- a/tools/test_audit_n1_batch.py
++++ b/tools/test_audit_n1_batch.py
+@@ -1,7 +1,7 @@
+ import unittest
+ import xml.etree.ElementTree as ET
+ 
+-from audit_n1_batch import lexical_pair, reused_changes, runtime_delta
++from audit_n1_batch import lexical_pair, reused_changes, runtime_delta, support_spelling
+ 
+ 
+ class N1BatchRuntimeDeltaTest(unittest.TestCase):
+@@ -126,5 +126,32 @@ class N1BatchLexicalPairTest(unittest.TestCase):
+         self.assertFalse(lexical_pair(self.entry, "A", "c"))
+ 
+ 
++class N1BatchSupportSpellingTest(unittest.TestCase):
++    def setUp(self):
++        self.row = {"article": "words/または.md", "spelling": "又は"}
++        self.meta = {"word": "または", "reading": "または", "kanji": []}
++        self.text = "Hiragana is usual; 又は, written with [又](../kanji/又.md), is another spelling."
++
++    def test_without_spelling_uses_headword(self):
++        meta = {"word": "伯叔", "reading": "はくしゅく", "kanji": ["伯", "叔"]}
++        self.assertEqual(support_spelling({"article": "words/伯叔.md"}, meta, "", "叔"), "伯叔")
++
++    def test_accepts_kana_headed_article_with_taught_spelling(self):
++        self.assertEqual(support_spelling(self.row, self.meta, self.text, "又"), "又は")
++
++    def test_rejects_kanji_headed_article(self):
++        meta = {"word": "又は", "reading": "または", "kanji": ["又"]}
++        with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
++            support_spelling(self.row, meta, self.text, "又")
++
++    def test_rejects_spelling_absent_from_article(self):
++        with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
++            support_spelling(self.row, self.meta, "Hiragana is usual.", "又")
++
++    def test_rejects_spelling_without_mapped_kanji(self):
++        with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
++            support_spelling(self.row, self.meta, self.text, "叔")
++
++
+ if __name__ == "__main__":
+     unittest.main()
+diff --git a/words/また.md b/words/また.md
+index 7fd987fa..868ee09b 100644
+--- a/words/また.md
++++ b/words/また.md
+@@ -21,7 +21,7 @@ The second use is common in organized explanations and writing; it does not mean
+ 
+ ## How the kanji combine
+ 
+-Kana is usual. 又 is a recognized spelling, but the kana form serves both repetition and addition. No kanji decomposition is needed.
++Kana is usual. [又](../kanji/又.md) is a recognized spelling, but the kana form serves both repetition and addition. No kanji decomposition is needed.
+ 
+ ## Synonyms and antonyms
+ 
+diff --git a/words/または.md b/words/または.md
+index 97baadf5..5cac02b2 100644
+--- a/words/または.md
++++ b/words/または.md
+@@ -21,7 +21,7 @@ The two nouns form one alternative phrase; で then marks the writing tool.
+ 
+ ## How the kanji combine
+ 
+-Hiragana is usual; 又は is another spelling. The final は is pronounced わ,
++Hiragana is usual; 又は, written with [又](../kanji/又.md), is another spelling. The final は is pronounced わ,
+ as in the particle は. The written kana reading remains または, not またわ.
+ Do not interpret it as merely adding "also" to an unrelated sentence.
+ 
+diff --git a/words/不吉.md b/words/不吉.md
+index 8625f665..85a8adb4 100644
+--- a/words/不吉.md
++++ b/words/不吉.md
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ 不吉 is about omens: Digital Daijisen defines it as showing signs of misfortune, not as misfortune that has already happened.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1491910, sense 1; compare entries 1491290, 1492350 and 2230960.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1491910, sense 1; compare entries 1491290, 1492350 and 2230960; [Digital Daijisen, 不吉](https://kotobank.jp/word/%E4%B8%8D%E5%90%89-616943).
+diff --git a/words/伯叔.md b/words/伯叔.md
+index 1ebdd1e3..6b7a770b 100644
+--- a/words/伯叔.md
++++ b/words/伯叔.md
+@@ -12,7 +12,7 @@ quiz_exclusions: [兄弟, おじさん, 親戚]
+ 
+ ## Meaning
+ 
+-伯叔 means elder and younger brothers, and also the elder and younger brothers of one's parent, that is, one's uncles. JMdict glosses it as “brothers; one's father's brothers,” and Digital Daijisen gives two senses: older and younger brothers, and a parent's older and younger brothers, 伯父 and 叔父.
++Digital Daijisen gives 伯叔 two senses: (1) older and younger brothers; (2) the older and younger brothers of one's father or mother, that is, 伯父 and 叔父, one's uncles. JMdict glosses it as “brothers; one's father's brothers.” Both examples below use sense 2.
+ 
+ - 祖父の葬儀には、伯叔がそろって集まりました。 (そふのそうぎには、はくしゅくがそろってあつまりました。) — All my uncles gathered for my grandfather's funeral.
+ - 私の伯叔は皆、父と同じ町で育ちました。 (わたしのはくしゅくはみな、ちちとおなじまちでそだちました。) — My uncles all grew up in the same town as my father.
+@@ -21,7 +21,7 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## How the kanji combine
+ 
+-[伯](../kanji/伯.md) can mean an uncle or aunt older than one's parent, and [叔](../kanji/叔.md) one younger than one's parent. Together, they cover both older and younger brothers.
++[伯](../kanji/伯.md) stands for the older and [叔](../kanji/叔.md) for the younger. In Digital Daijisen's first sense, 兄と弟, they are an older and a younger brother; in the second, a parent's older and younger brothers, 伯父 and 叔父. JMdict notes that 伯父 or 叔父 can mean an uncle older or younger than one's parent (entry 1607070).
+ 
+ ## Synonyms and antonyms
+ 
+@@ -29,6 +29,6 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## Distinctive meaning
+ 
+-伯叔 groups older and younger brothers together; Digital Daijisen's second sense names them as 伯父 and 叔父, a parent's older and younger brothers.
++伯叔 groups older and younger brothers together; Digital Daijisen's second sense names them as 伯父 and 叔父, a parent's older and younger brothers. Neither sense covers aunts (伯母 and 叔母).
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1474270, sense 1; compare entry 1607070.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1474270, sense 1; compare entry 1607070; [Digital Daijisen, 伯叔](https://kotobank.jp/word/%E4%BC%AF%E5%8F%94-600241).
+diff --git a/words/厘.md b/words/厘.md
+index acfe5743..b0226ada 100644
+--- a/words/厘.md
++++ b/words/厘.md
+@@ -25,10 +25,10 @@ This is a single-kanji word. The character [厘](../kanji/厘.md) is read りん
+ 
+ ## Synonyms and antonyms
+ 
+-[分](分.md) (ぶ) is the next larger unit: JMdict glosses it as one-tenth, including one percent as one-tenth of a 割 (entry 1502850). [パーセント](パーセント.md) is a percent; as a fraction of a 割, one 厘 is 0.1 percent.
++[分](分.md) (ぶ) is ten times larger: JMdict glosses it as one-tenth, including one percent as one-tenth of a 割 (entry 1502850), so one 分 equals ten 厘. [パーセント](パーセント.md) is a percent; as a fraction of a 割, one 厘 is 0.1 percent.
+ 
+ ## Distinctive meaning
+ 
+ Digital Daijisen gives the monetary rin as one-thousandth of a yen and one-tenth of a 銭 (sen). The compound 九分九厘 くぶくりん means almost certainly or in all probability (JMdict entry 1243880).
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1555420, senses 1–2; compare entries 1502850 and 1243880.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1555420, senses 1–2; compare entries 1502850 and 1243880; [Digital Daijisen, 厘](https://kotobank.jp/word/%E5%8E%98-150228).
+diff --git a/words/又聞き.md b/words/又聞き.md
+deleted file mode 100644
+index 2f86407a..00000000
+--- a/words/又聞き.md
++++ /dev/null
+@@ -1,34 +0,0 @@
+----
+-word: 又聞き
+-reading: またぎき
+-title: hearsay; learning by hearsay
+-type: wago
+-kanji: [又, 聞]
+-tags: [wago, noun, suru-verb, transitive, communication]
+-quiz_exclusions: [噂, 聞く, 間接]
+----
+-
+-# 又聞き (またぎき) — hearsay; learning by hearsay
+-
+-## Meaning
+-
+-又聞き means hearing something indirectly, as it is passed along. JMdict glosses it as “hearsay; learning by hearsay,” and Digital Daijisen defines it as hearing something passed on, or hearing it indirectly. It can be used with する. JMdict also lists the spelling また聞き.
+-
+-- その話は友達からの又聞きなので、本当かどうかわかりません。 (そのはなしはともだちからのまたぎきなので、ほんとうかどうかわかりません。) — I heard that story secondhand through a friend, so I don't know whether it's true.
+-- 又聞きした情報をそのまま信じてはいけません。 (またぎきしたじょうほうをそのまましんじてはいけません。) — You shouldn't take information you heard secondhand at face value.
+-
+-These are original usage examples, not dictionary quotations.
+-
+-## How the kanji combine
+-
+-[又](../kanji/又.md), used as a prefix, marks something as indirect, and [聞](../kanji/聞.md) means hearing. Digital Daijisen gives 又聞き as an example of that prefix use. Together, they mean hearing something indirectly.
+-
+-## Synonyms and antonyms
+-
+-[噂](噂.md) (うわさ) is a rumor or gossip; Digital Daijisen's example for 又聞き is hearing a rumor secondhand. 伝聞 でんぶん also means hearsay or a report (JMdict entry 1442420). [聞く](聞く.md) (きく) is hearing in general, and [間接](間接.md) (かんせつ) is indirectness.
+-
+-## Distinctive meaning
+-
+-又聞き describes how information was received, indirectly; it does not say whether the information is true. 又貸し またがし, “sublease; lending (something one has borrowed) to someone else” (JMdict entry 1525120), uses the same prefix.
+-
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1584370, sense 1; compare entries 1442420 and 1525120.
+diff --git a/words/叙情.md b/words/叙情.md
+index 3653c1cb..65b37be8 100644
+--- a/words/叙情.md
++++ b/words/叙情.md
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ Digital Daijisen cross-refers 叙情 to 叙事 じょじ, which JMdict glosses as “narration; description of things and facts” (entry 1344840).
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1595470, sense 1; compare entries 1344890, 2871136 and 1344840.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1595470, sense 1; compare entries 1344890, 2871136 and 1344840; [Digital Daijisen, 叙情](https://kotobank.jp/word/%E5%8F%99%E6%83%85-534668).
+diff --git a/words/吟味.md b/words/吟味.md
+index be2b0f18..85a479a1 100644
+--- a/words/吟味.md
++++ b/words/吟味.md
+@@ -5,7 +5,7 @@ title: close examination; careful selection
+ type: kango
+ kanji: [吟, 味]
+ tags: [kango, noun, suru-verb, transitive, judgment]
+-quiz_exclusions: [検討, 検査, 調査, 調べる, チェック, 確かめる, 選択, 選ぶ]
++quiz_exclusions: [検討, 検査, 調査, 調べる, チェック, 確かめる, 選択, 選ぶ, 試験, 確認]
+ ---
+ 
+ # 吟味 (ぎんみ) — close examination; careful selection
+@@ -21,7 +21,7 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## How the kanji combine
+ 
+-[吟](../kanji/吟.md) means reciting poetry, and [味](../kanji/味.md) means taste or savoring. JMdict and Digital Daijisen both give reciting and appreciating poetry as the original meaning of 吟味, and Digital Daijisen lists 吟味 under the sense of 吟 meaning examining contents closely.
++[吟](../kanji/吟.md) can mean reciting poetry, but here it has its sense of examining contents closely: Digital Daijisen lists 吟味 under that sense of 吟. [味](../kanji/味.md) means taste or savoring. Reciting a poem and savoring its flavor is the original meaning of 吟味 in both JMdict (sense 4, archaic) and Digital Daijisen (sense 3).
+ 
+ ## Synonyms and antonyms
+ 
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ Besides careful examination, JMdict lists a dated sense, investigation of a crime (sense 2), which Digital Daijisen also gives, and an archaic sense, reciting and appreciating traditional poetry, noted as the original meaning (sense 4).
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1243390, senses 1, 2 and 4; compare entries 1258000 and 1257890.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1243390, senses 1, 2 and 4; compare entries 1258000 and 1257890; [Digital Daijisen, 吟味](https://kotobank.jp/word/%E5%90%9F%E5%91%B3-54502).
+diff --git a/words/呉服.md b/words/呉服.md
+index 27d3eb2a..299cc111 100644
+--- a/words/呉服.md
++++ b/words/呉服.md
+@@ -15,7 +15,7 @@ quiz_exclusions: [着物, 和服, 布, 生地, 衣服, 服]
+ 呉服 is cloth for Japanese clothes: kimono fabrics. JMdict glosses it as cloth for Japanese clothes, kimono fabrics, textile and drapery, and gives a second sense, silk fabrics, cross-referring to 太物 ふともの, which it glosses as drapery such as cotton or hemp, as opposed to silk (entry 2653980). Digital Daijisen gives the same two senses, plus a third: twill and similar fabrics made with a weaving technique transmitted from the ancient Chinese state of Wu.
+ 
+ - 祖母は昔、呉服の店を営んでいました。 (そぼはむかし、ごふくのみせをいとなんでいました。) — My grandmother used to run a kimono-fabric shop.
+-- デパートの呉服売り場で、帯を選びました。 (デパートのごふくうりばで、おびをえらびました。) — I chose an obi in the department store's kimono section.
++- デパートの呉服売り場で、帯を選びました。 (デパートのごふくうりばで、おびをえらびました。) — I chose an obi, the long sash tied around the waist over a kimono, at the department store's kimono-fabric counter.
+ 
+ These are original usage examples, not dictionary quotations.
+ 
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ A shop that sells 呉服 is a 呉服屋 ごふくや, “kimono fabrics shop; draper” (JMdict entry 1269200).
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1269190, senses 1–2; compare entries 2653980 and 1269200.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1269190, senses 1–2; compare entries 2653980 and 1269200; [Digital Daijisen, 呉服](https://kotobank.jp/word/%E5%91%89%E6%9C%8D-503988).
+diff --git a/words/太后.md b/words/太后.md
+index 46e82b00..d8533196 100644
+--- a/words/太后.md
++++ b/words/太后.md
+@@ -12,7 +12,7 @@ quiz_exclusions: [女王]
+ 
+ ## Meaning
+ 
+-太后 is an empress dowager or queen mother. JMdict glosses it as “empress dowager; queen mother,” and Digital Daijisen defines it as a title for a grand empress dowager (太皇太后) or an empress dowager (皇太后).
++太后 is an empress dowager or queen mother. JMdict glosses it as “empress dowager; queen mother,” and Digital Daijisen defines it as a title for a grand empress dowager (太皇太后) or an empress dowager (皇太后). In plain terms, Digital Daijisen describes 皇太后 as the empress of the previous emperor, or one who is also the current emperor's birth mother, and 太皇太后 as the empress of the emperor two reigns back.
+ 
+ - 太后は若い皇帝を支えました。 (たいこうはわかいこうていをささえました。) — The empress dowager supported the young emperor.
+ - 歴史ドラマで、太后が大きな力を持つ場面がありました。 (れきしドラマで、たいこうがおおきなちからをもつばめんがありました。) — In a historical drama, there was a scene in which the empress dowager held great power.
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ Digital Daijisen defines 太后 through two other titles, 太皇太后 and 皇太后. 皇后 こうごう, which JMdict glosses as “empress (consort)” (entry 1280390), is a different title.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1787360, sense 1; compare entries 1345020, 1280450, 2177070 and 1280390.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1787360, sense 1; compare entries 1345020, 1280450, 2177070 and 1280390; [Digital Daijisen, 太后](https://kotobank.jp/word/%E5%A4%AA%E5%90%8E-556904).
+diff --git a/words/官吏.md b/words/官吏.md
+index 8cc7b74e..e6d67ad2 100644
+--- a/words/官吏.md
++++ b/words/官吏.md
+@@ -15,7 +15,7 @@ quiz_exclusions: [役人, 公務員]
+ 官吏 is a government official or civil servant. JMdict marks it as a dated term. Digital Daijisen defines it as a national public servant (国家公務員), giving 役人 and 官員 as equivalents, and, as a second sense, an official appointed under the Meiji Constitution by the emperor's authority.
+ 
+ - 祖父は戦前、官吏として働いていました。 (そふはせんぜん、かんりとしてはたらいていました。) — Before the war, my grandfather worked as a government official.
+-- 汚職をした官吏が処分されました。 (おしょくをしたかんりがしょぶんされました。) — An official involved in corruption was disciplined.
++- 歴史の本で、汚職をした官吏の話を読みました。 (れきしのほんで、おしょくをしたかんりのはなしをよみました。) — I read about a corrupt government official in a history book.
+ 
+ These are original usage examples, not dictionary quotations.
+ 
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ JMdict marks 官吏 as dated, and Digital Daijisen's second sense ties it to officials under the Meiji Constitution.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1211850, sense 1; compare entries 1538050 and 1274820.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1211850, sense 1; compare entries 1538050 and 1274820; [Digital Daijisen, 官吏](https://kotobank.jp/word/%E5%AE%98%E5%90%8F-49733).
+diff --git a/words/贈呈.md b/words/贈呈.md
+index eb74b9d8..0761109f 100644
+--- a/words/贈呈.md
++++ b/words/贈呈.md
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ The compound 贈呈式 ぞうていしき is a presentation ceremony (JMdict entry 1771940).
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1403570, sense 1; compare entries 1366150 and 1771940.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1403570, sense 1; compare entries 1366150 and 1771940; [Digital Daijisen, 贈呈](https://kotobank.jp/word/%E8%B4%88%E5%91%88-552920).

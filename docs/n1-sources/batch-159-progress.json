@@ -978,5 +978,381 @@
     "readingExtras": "又 ユウ, ふたた.び; 叔 わか.い; 叙 の.べる; 吉 よ.い, え.い; 后 ゴ, のち, きさき, きみ; 吏 つかさ; 吟 うた.う, うめ.く; 呈 しめ.す; 呉 くれ, く.れる. Sources: the readings Kanjipedia marks as outside the official table (外) for each kanji (厘 has none); the kun readings in the Digital Daijisen character entries (叙 のべる, 吉 よい, 后 きさき, 呉 くれ and くれる), which add nothing new; and a JMdict okurigana scan of kanji-plus-kana headwords, skipping search-only forms (吉 え.い from 吉い in 1605820, a rarely used kanji form with an out-dated kana reading). The scan's じょする, じょす, ぎんじる, ぎんずる, ていする and ていす reuse the on readings, which are already excluded. reading_exposure.py also reads the JMdict single-kanji entries itself (for example 厘 り, JMdict 1555420).",
     "readingOptions": "lean reading_options.py with the same --extra list: 0 problems. Two informational notes concern KANJIDIC2 name-only readings that the tool marks as drawable from the fallback: 吉 き on the キツ prompt, offered by 28 cards (among them 気, 期 and 記), and 呉 ぐ on the ゴ prompt, offered by 供, 具, 工 and 求. On both prompts the curated options fill all three wrong slots in every outcome, so the fallback is never consulted, and reading_exposure.py lists both readings among the latent collisions."
   },
-  "status": "Candidate under independent review; not published. The 后 and 吏 untagged-support exceptions and the kana-headed 又 support remain subject to review."
+  "statusBeforeConfirmation": "Candidate under independent review; not published. The 后 and 吏 untagged-support exceptions and the kana-headed 又 support remain subject to review.",
+  "governingIssue": 60,
+  "status": "review-closed-publication-pending",
+  "base": "2787e43b5706a569d83627849aa40ed3582a7d18",
+  "members": [
+    "厘",
+    "又",
+    "叔",
+    "叙",
+    "吉",
+    "后",
+    "吏",
+    "吟",
+    "呈",
+    "呉"
+  ],
+  "sourceRows": [
+    135,
+    137,
+    139,
+    140,
+    146,
+    147,
+    148,
+    150,
+    152,
+    153
+  ],
+  "supports": [
+    [
+      "厘",
+      "厘"
+    ],
+    [
+      "又",
+      "または"
+    ],
+    [
+      "又",
+      "また"
+    ],
+    [
+      "叔",
+      "叔母"
+    ],
+    [
+      "叙",
+      "叙情"
+    ],
+    [
+      "吉",
+      "不吉"
+    ],
+    [
+      "后",
+      "太后"
+    ],
+    [
+      "吏",
+      "官吏"
+    ],
+    [
+      "吟",
+      "吟味"
+    ],
+    [
+      "呈",
+      "贈呈"
+    ],
+    [
+      "呉",
+      "呉服"
+    ]
+  ],
+  "initialSnapshot": "1a9bb910d1bbff162f4e3920e64e8821f635a58d",
+  "reviewedSnapshot": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+  "reviewClosed": [
+    "厘",
+    "又",
+    "叔",
+    "叙",
+    "吉",
+    "后",
+    "吏",
+    "吟",
+    "呈",
+    "呉"
+  ],
+  "published": [],
+  "runtimePublished": false,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 608,
+    "publishedN1Additions": 602,
+    "n2Placements": 6,
+    "undelivered": 620,
+    "reviewClosedPendingRecordsWithCards": 618,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 610,
+    "overallN1TaskComplete": false
+  },
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "mode": "blind-independent-three-family-textual-review",
+    "families": [
+      "claude-sonnet-5.5",
+      "gpt-6.1-sol",
+      "grok-4.7"
+    ],
+    "baseCommit": "2787e43b5706a569d83627849aa40ed3582a7d18",
+    "freezeCommit": "1a9bb910d1bbff162f4e3920e64e8821f635a58d",
+    "reviewedSnapshot": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+    "fixCommits": [
+      "5c04be73367f8c149001318ec2ad67cf2f623ef0",
+      "4f8ebea76b9998de64d39b94df0fbaedfd50fa5d",
+      "54b00e0ca0425b1490e5decaa58505b6e469ab72",
+      "f85ff382097a76e63a3bef2bc5e5b018ad96fd28",
+      "0ba7df6393382bf25f8446d28c07ec9a04b55519",
+      "bad899ea96a9a0310052bd290e50285e02acc161",
+      "33c3b5829887b2e49e0f67ce649fad8b2a722ea7"
+    ],
+    "mergeCommits": [
+      "3ecba19ca48d16380db5f07e602a6fc8fa0f95a5"
+    ],
+    "runs": [
+      {
+        "id": "r1-claude",
+        "model": "claude-sonnet-5.5",
+        "snapshot": "1a9bb910d1bbff162f4e3920e64e8821f635a58d",
+        "verdict": "NEEDS FIX (correctness): finding 1 major (policy): 又's untagged support 又聞き was justified by \"usually written in kana\", which is not one of the rule's exclusions, so the tagged 又 and 又は qualified; finding 2 minor to major (policy): the 叔 reason for the untagged 伯叔 said the 叔父/叔母 tags belong to the readings おじ/おば, whereas they are on the spellings; item 3 judged the 后 and 吏 exceptions acceptable; scoped coverage, consistency and quiz safety, and comprehensibility CLEAN; three optional points; six limits"
+      },
+      {
+        "id": "r1-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "1a9bb910d1bbff162f4e3920e64e8821f635a58d",
+        "verdict": "NEEDS FIX (scoped coverage; consistency and quiz safety): F1 major (no direct 吟味/試験 exclusion; 吟味 drawable in 試験's All-pool quiz), F2 major (no direct 吟/検 exclusion for the taught close-examination sense), F3 minor (the 又 support reason overlooked the existing kana-headed また and the tagged 又は), F4 minor (the 叔 reason overlooked the tagged spellings 叔父 and 叔母), F5 minor (no Digital Daijisen link on the new word articles' Dictionary lines); correctness UNVERIFIED (naturalness of the 伯叔 examples); comprehensibility CLEAN; one optional point; three limits"
+      },
+      {
+        "id": "r1-grok",
+        "model": "grok-4.7",
+        "snapshot": "1a9bb910d1bbff162f4e3920e64e8821f635a58d",
+        "verdict": "NEEDS FIX (comprehensibility): six minor findings F1-F6 (又's sense list \"and, or\"; 伯叔's senses and examples; 太后 not explained in plain terms; no bridge from \"thick\" on 太's new 太后 line; 吟味's component explanation not naming the sense of 吟; 官吏's second example reading as modern usage and 官's line lacking \"dated\"); correctness, scoped coverage, and consistency and quiz safety CLEAN; optional O1-O4; limits L1-L3"
+      },
+      {
+        "id": "c1-claude",
+        "model": "claude-sonnet-5.5",
+        "snapshot": "5c04be73367f8c149001318ec2ad67cf2f623ef0",
+        "confirms": "r1-claude",
+        "verdict": "CONFIRMED: C1-C3, O2, O3, L1-L5 RESOLVED (L4 not re-read); O1 DECLINE ACCEPTED; no findings; optional 1-3 (太后 wording, harmless over-exclusion on 吟, a weak support_spelling check)"
+      },
+      {
+        "id": "c1-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "5c04be73367f8c149001318ec2ad67cf2f623ef0",
+        "confirms": "r1-gpt",
+        "verdict": "NEEDS FIX: F1, F3, F5 RESOLVED; F2 PARTIALLY RESOLVED (験 not excluded); F4 PARTIALLY RESOLVED (the ledger still said no tagged 叔 candidate qualified); O1, L1 DECLINE ACCEPTED; L2, L3 PARTIALLY RESOLVED; comprehensibility UNVERIFIED; optional: a ledger line overstated reading-option completeness"
+      },
+      {
+        "id": "c1-grok",
+        "model": "grok-4.7",
+        "snapshot": "5c04be73367f8c149001318ec2ad67cf2f623ef0",
+        "confirms": "r1-grok",
+        "verdict": "CONFIRMED: F1-F6, O1, O2, L1-L3 RESOLVED; O3, O4 DECLINE ACCEPTED; no findings; optional points on 太后 wording, the 吟味 \"savoring\" attribution and the 確認 exclusion"
+      },
+      {
+        "id": "c2-claude",
+        "model": "claude-sonnet-5.5",
+        "snapshot": "4f8ebea76b9998de64d39b94df0fbaedfd50fa5d",
+        "confirms": "c1-claude",
+        "verdict": "CONFIRMED: O1-O3 RESOLVED; the other reviews' changes accepted; no blocking findings; one minor wording note (the ledger said the 叔 exception was \"reported to the owner\" and put the 叔父/叔母 tags on the whole-word readings)"
+      },
+      {
+        "id": "c2-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "4f8ebea76b9998de64d39b94df0fbaedfd50fa5d",
+        "confirms": "c1-gpt",
+        "verdict": "NEEDS FIX: F2, OPT RESOLVED; F4 PARTIALLY RESOLVED (叔 needs the qualifying fallback or explicit owner acceptance of its exception before publication); L2, L3 PARTIALLY RESOLVED; optional: split long sentences in 太后 and 吟味"
+      },
+      {
+        "id": "c3-claude",
+        "model": "claude-sonnet-5.5",
+        "snapshot": "54b00e0ca0425b1490e5decaa58505b6e469ab72",
+        "confirms": "c2-claude",
+        "verdict": "CONFIRMED: N1, LIM RESOLVED (the 叔 exception withdrawn); O2 DECLINE ACCEPTED; no findings; optional 1-3 (母's 叔母 line, 叔母 example annotations, 叔父 しゅくふ)"
+      },
+      {
+        "id": "c3-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "f85ff382097a76e63a3bef2bc5e5b018ad96fd28",
+        "confirms": "c2-gpt",
+        "verdict": "NEEDS FIX: F4, OPT RESOLVED (叔母 meets point 2 without an exception); L2 DECLINE ACCEPTED; L3 PARTIALLY RESOLVED; one minor finding (the ledger's lint summary still said 37 warnings)"
+      },
+      {
+        "id": "c4-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "0ba7df6393382bf25f8446d28c07ec9a04b55519",
+        "confirms": "c3-gpt",
+        "verdict": "CONFIRMED: F1 RESOLVED (42 warnings, 40 on reused files); L3 DECLINE ACCEPTED; no findings; optional: the readingOptions summary named only 呉, and CHANGES.md overlooked link-targets.tsv"
+      },
+      {
+        "id": "c5-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "bad899ea96a9a0310052bd290e50285e02acc161",
+        "confirms": "c4-gpt",
+        "verdict": "CONFIRMED: O1, O2 RESOLVED; no findings, no optional points"
+      },
+      {
+        "id": "c2-grok",
+        "model": "grok-4.7",
+        "snapshot": "bad899ea96a9a0310052bd290e50285e02acc161",
+        "confirms": "c1-grok",
+        "verdict": "CONFIRMED: O1, O2, LIM RESOLVED; O3 DECLINE ACCEPTED; no findings; optional points on 親戚/親類, the はくぼ gloss and 叔.md:34"
+      },
+      {
+        "id": "c4-claude",
+        "model": "claude-sonnet-5.5",
+        "snapshot": "bad899ea96a9a0310052bd290e50285e02acc161",
+        "confirms": "c3-claude",
+        "verdict": "CONFIRMED: O1 RESOLVED; O2, O3 DECLINE ACCEPTED; no findings, no optional points"
+      },
+      {
+        "id": "c6-gpt",
+        "model": "gpt-6.1-sol",
+        "snapshot": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+        "confirms": "c5-gpt",
+        "verdict": "CONFIRMED: no dispositions (its last report had no findings or optional points); correctness, scoped coverage, consistency and quiz safety, and comprehensibility CLEAN; no findings, no optional points; it fetched the four pinned KanjiVG records and found them byte-identical to the packet's; limits: the 37 remarks the scan lists were not independently established, and its earlier packet has no file named jmdict-scan-c8.txt"
+      },
+      {
+        "id": "c3-grok",
+        "model": "grok-4.7",
+        "snapshot": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+        "confirms": "c2-grok",
+        "verdict": "CONFIRMED: O1 (親戚 and 親類 kept as 叔母 exclusions), O2 (伯母 read はくぼ in a 叔母 example) and O3 (叔.md:34's gloss of 叔母) DECLINE ACCEPTED; all four facets CLEAN; no findings, no optional points; limits: it could not judge the 37 listed remarks, or verify that 偏 and 即 were added in B158 or that 吾, 塞, 櫛 and 釘 have no card"
+      },
+      {
+        "id": "c5-claude",
+        "model": "claude-sonnet-5.5",
+        "snapshot": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+        "confirms": "c4-claude",
+        "verdict": "CONFIRMED: no dispositions (its last report had no findings or optional points); all four facets CLEAN; no findings, no optional points; it disclosed two tool calls in one response; limits: it could not verify that the 37 listed remarks are about kanji without a card and named possible misattributions (無 in 駄.md:55 and 無沙汰.md:23; 浪, 潮, 謹, 懺 and 憬)"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "support_spelling only checks that the mapped spelling appears in the article; c1-claude optional 3 judged this fine for its scope, and no stricter check was added",
+      "吏員 or 能吏 instead of 官吏 (r1-claude O1, DECLINE ACCEPTED)",
+      "居 not excluded from 呈 (an overlap only in the English word \"present\"), and 吟味's JMdict sense 3 (a game abbreviation) not cited (r1-grok O3, O4, DECLINE ACCEPTED)",
+      "験 kept as a 吟 exclusion although it acts only in fallback or custom pools (c2-claude's optional remark under O2; c3-claude DECLINE ACCEPTED)",
+      "叔母 examples not annotated しゅくぼ, and 叔父 not given \"also しゅくふ\" on 叔.md (c3-claude optional 2 and 3, c4-claude DECLINE ACCEPTED)",
+      "確認 kept as a 吟味 exclusion (c1-grok optional, c2-grok DECLINE ACCEPTED)",
+      "親戚 and 親類 kept as 叔母 exclusions although they are hypernyms; 伯母 read はくぼ in 叔母 example 2; 叔.md:34 glosses 叔母 differently from the article title (c2-grok optional, c3-grok DECLINE ACCEPTED)",
+      "lint errors on the reused cards 太 (タ) and 情 (セイ, なさ.け): metadata readings without a Readings row, older than the batch, which only adds one line to each",
+      "10 latent reading collisions not drawable in the checked pools: 厘 り; 又 やす, ふたたび; 吉 え, き, と, よ, えい; 吏 し; 呉 ぐ",
+      "27 older cards mention 又 in their text without linking the new 又 card (伎 努 友 双 反 収 取 受 右 寂 度 径 怒 怪 慢 投 捜 支 桑 耳 護 賢 趣 軽 隻 騒 鼓); none says that 又 has no card, so the stale-remark scan does not flag them, and linking them is left as an optional follow-up. The batch cards 叔 and 叙 name 又 only in their radical lines, which no card links"
+    ],
+    "integration": "After the three families confirmed 33c3b582, origin/main had moved from the base 2787e43b to f5caf53c through seven signed owner commits: c98cfccd, 52929231 and 174d87b9 (the sourced origin of 集, its 隹/鳥 note and the register of 集う), 4797b35d (illness-radical mnemonics on 疲 病 症 痛 療 癖, with docs/illness-radical-mnemonics-sources.json), d513049c (bird-component mnemonics on 唯 椎 護 雄 鳴), and 5db62b1a and f5caf53c (the 空 mnemonic and its 空手 and hunger examples). They change 13 kanji cards, one docs file and manifest.json, and no batch file. Signed merge 3ecba19c has 33c3b582 as first parent and f5caf53c as second; the only conflict was the derived manifest, regenerated with tools/build_manifest.py. integration/merge-proof.json passes: every non-derived path equals one parent byte for byte (44,019 paths, none unmatched); main deleted nothing; none of the 46 batch paths (44 runtime files and the two audit-tool files) or 152 link targets was changed by main; main changed none of the quiz fields of the 13 cards (only 集's tags among their front matter); the manifest lists every batch file; and the one changed main line that mentions a batch kanji is the reviewed kanji/護.md line, where d513049c rewrote \"the shape 又 below it\" as \"隻 is the bird shape 隹 above the hand shape 又\". The line does not link 又.md and makes no claim about its title, readings or quiz fields, and calling 又 a hand shape matches 右.md and 寂.md; the proof passes only if the flagged lines equal this reviewed entry. kanji/狭.md (a batch file since 33c3b582) mentions 症, whose card main changed, but not its front matter, and 雄.md mentions the word また only on lines main left alone. So, as for batches 144, 155, 156 and 157, no integration review was needed. The gates were rerun on 3ecba19c. The stock batch audit stops there because it compares the runtime with the base manifest and main changed 13 cards; integration/audit_at_merge.py proves that main's runtime changes are exactly the 13 non-docs files it changed and that none is a batch file, then reruns the audit with main's head f5caf53c as the runtime baseline, and it passes with the reviewed counts.",
+    "execution": "r1: Claude, GPT and Grok reviewed the freeze 1a9bb910 blind and one after the other, each covering all four facets with an assigned deepest facet (correctness, consistency and quiz safety, comprehensibility). Confirmations: a fresh agent of each family received the author's RESPONSE.md to its family's last report. Claude confirmed 5c04be73 (c1), 4f8ebea7 (c2), 54b00e0c (c3), bad899ea (c4) and 33c3b582 (c5); GPT reviewed 5c04be73 (c1), 4f8ebea7 (c2), f85ff382 (c3), 0ba7df63 (c4), bad899ea (c5) and 33c3b582 (c6); Grok reviewed 5c04be73 (c1), bad899ea (c2) and 33c3b582 (c3). All 17 runs were sequential, with no overlap. All three families CONFIRMED bad899ea and then, after the stale-remark revision, 33c3b582.",
+    "postConfirmationRevision": "After c5-gpt, c2-grok and c4-claude confirmed bad899ea, the author ran a scan for sentences saying that a kanji has no card (lean stale_remarks.py), which the B157 and B158 publication checks had not run. It found five remarks that were no longer true: 又, which B159 cards, in 及.md:27, 堅.md:29 and 暇.md:27, and 偏 in 狭.md:46 and 即 in 節.md:55, both carded by the B158 draft 60d2cd5a. 33c3b582 rewrote each into a link to the card followed by its title and recorded the five lines in changedReusedPassages (changedReusedArticles 10 -> 15), and the scan now runs in the author's check runner. A fresh confirmation round on 33c3b582 (c6-gpt, c3-grok, c5-claude) CONFIRMED it with no findings.",
+    "authorChecks": [
+      "The three last-round reviewers could not see the sentences behind the 37 remarks the scan lists at 33c3b582 (c5-claude suggested 無, 浪, 潮, 謹, 懺 and 憬 might be misattributed). The author reread each sentence: each is about the listed kanji or part, 漫.md:56 names 爛 and 浪 together, and neither the listed subjects nor 爛 has a card in kanji/. At the merge the scan lists 36, because main's 4797b35d rewrote kanji/癖.md:27 and its 疒 remark is gone; the 33 distinct subjects still have no card.",
+      "偏 and 即 were added by 60d2cd5a (\"Draft JLPT N1 batch 158 candidate\"); 吾 (the right part of 悟), 叚, 塞, 櫛 and 釘 have no card.",
+      "jmdict-scan-cN.txt is renamed for each round but its bytes have not changed since the c2 packets (SHA-256 prefix 1eec83ea9bc69204): c5-gpt's packet held it as jmdict-scan-c6.txt, so the c8 packets' statement that it is identical to the earlier round's file holds.",
+      "Every coordinator copy of an earlier report that a later run read equals the stored report apart from line endings and trailing whitespace, except r1-gpt's condensed copy (supplement/)."
+    ]
+  },
+  "gates": {
+    "lint": {
+      "errors": 11,
+      "warnings": 73,
+      "note": "At the reviewed snapshot 33c3b582 lint checked 23 kanji and 76 words and reported 3 errors and 44 warnings. No error and no warning is on the nine new articles, and no error is on the ten new cards. The 3 errors are on reused cards older than the batch, which only adds one line to each: metadata readings without a Readings row on 太 (タ) and 情 (セイ, なさ.け); both are present at base 2787e43b. 42 warnings are on reused cards and on word articles lint checks because a changed card lists them (a missing N1 source-index entry, quiz reading list or Metadata line, or a missing Dictionary line or one that cites no JMdict entry id); B159 changes none of these fields. Two are on 又.md: its また examples または and また cannot list 又 in their kanji: front matter, because validate.py rejects a kanji: entry absent from the headword and both headwords are kana; the support is recorded through the mapped spellings 又は and 又. At the merge 3ecba19c the lint against the base also checks the 13 cards main changed and the words they list (36 kanji, 117 words). Every line of the 33c3b582 output is still present, and the 8 new errors and 29 new warnings are all on main's cards or the words they list: metadata readings without a Readings row on 疲 (-づか.れ, つか.らす), 病 (ヘイ), 痛 (いた.ましい, いた.める), 空 (あ.く, あ.ける) and 鳴 (メイ); 25 warnings on 疲, 病, 痛, 療, 空, 集 and 鳴 (outside the N1 source index, no quizOnyomi or quizKunyomi, no Metadata line, or a Metadata block citing no JMdict id); and \"no Dictionary: line\" on the unchanged words 病気, 病院, 看護婦 and 空. Main removed no Readings row and changed no Metadata line (it reworded three 空 rows keeping their readings and added a 集 つど.う row), so these errors are older than main's commits and the batch."
+    },
+    "unitTests": 444,
+    "validateErrors": 0,
+    "budget": {
+      "files": 9849,
+      "entries": 9865,
+      "retainedBytes": 56884466,
+      "inflatedBytes": 57320538,
+      "localZipBytes": 36537070,
+      "listeningTaskMediaBytes": 5893602,
+      "note": "at the merge 3ecba19c; at 33c3b582 the retained, inflated and local ZIP sizes were 56,881,479, 57,317,551 and 36,535,569 bytes (bad899ea: 56,881,426, 57,317,498 and 36,535,519). The difference at the merge is main's 13 cards. The CI limits are 62 MiB, 80 MiB and 42 MiB."
+    },
+    "vocabularyCheck": "3201/3539 reviewed prompts; exit 0",
+    "manifestRebuildDiff": false,
+    "batchAudit": {
+      "draftKanji": 10,
+      "newWords": 9,
+      "changedReusedArticles": 15,
+      "requiredReciprocalPairs": 11,
+      "activatedBaselinePairs": 0,
+      "readingDispositions": 21,
+      "curatedOfferedKeys": 10,
+      "sourceOnlyOfferedKeys": 0,
+      "dictionaryFamilies": 87,
+      "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+      "manifestFresh": true,
+      "note": "The stock tools/audit_n1_batch.py --batch 159 passed with these counts at the reviewed snapshot 33c3b582 (changedReusedArticles was 10 at bad899ea; 33c3b582 added 及, 堅, 暇, 狭 and 節). At the merge 3ecba19c it stops with \"Changed baseline payload differs from recorded reused passages\": it compares the runtime manifest with the manifest at the base 2787e43b, and main changed 13 kanji cards after that base. integration/audit_at_merge.py proves that main's runtime changes since the base are exactly the 13 non-docs files main changed and that none is a batch file, then reruns the unchanged audit reading manifest.json from main's head f5caf53c instead of the base (every other base read still uses 2787e43b). It passes with the same counts (integration/audit-at-merge.json). CI does not run this audit."
+    },
+    "diffCheck": "clean (git -c core.whitespace=cr-at-eol diff --check from the base 2787e43b to the merge 3ecba19c, including main's seven commits)",
+    "staleRemarks": {
+      "stale": 0,
+      "reviewed": 1,
+      "listed": 36,
+      "withoutKanji": 8,
+      "note": "lean stale_remarks.py over 6831 articles (1608 kanji cards) at the merge 3ecba19c, with one reviewed exception (kanji/悟.md:46, about the whole right part 五 over 口). It listed 37 remarks at 33c3b582; main's 4797b35d rewrote kanji/癖.md:27, so its 疒 remark is gone. No listed subject has a card. The scan is the author's tool, not part of tools/, and finds only the phrases in its list."
+    },
+    "quizSafety": {
+      "cards": 10,
+      "errors": 0,
+      "warnings": 0,
+      "note": "each card's three curated distractors fill all three wrong options of its meaning question. For the reading questions, the curated options fill all three wrong slots in every outcome for nine cards; for 吟's ギン prompt, 二 and 自 both show ジ in one of four outcomes, and the fallback then fills the open slot (61 drawable wrong options in the N1 and All stacks, 4 curated and 57 fallback; 27 in the Starter practice session) with no exposure hit. Eleven existing cards (人 休 何 入 出 口 女 日 月 男 買) still fill one slot each from the fallback, as before."
+    },
+    "readingExposure": {
+      "cards": 10,
+      "seeds": 200,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "latentCollisions": 10,
+      "latentCollisionsNote": "ten attested readings that other cards offer and that no checked N1, All or Starter pool can draw: 厘 り; 又 やす and ふたたび; 吉 え, き, と, よ and えい; 吏 し; 呉 ぐ",
+      "extras": "the readingExtras list in mechanicalChecks"
+    },
+    "readingOptions": {
+      "problems": 0,
+      "seeds": 100,
+      "note": "exit 0. Two informational notes concern KANJIDIC2 name-only readings that the tool marks as drawable from the fallback: 吉 き on the キツ prompt (offered by 28 cards) and 呉 ぐ on the ゴ prompt (供 具 工 求). On both prompts the curated options fill all three wrong slots in every outcome, and reading_exposure.py lists both readings among the latent collisions."
+    },
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "NOT RUN; phone acceptance is outstanding for issue 60 (recorded as performed or explicitly outstanding, never inferred)",
+    "manifest": {
+      "version": "2113084de3ce05a4",
+      "files": 9842,
+      "sha256": "4d3efd69a7271c2be3f1db64df80c3300c4d5ccfb350aff8f4ffad9a8bc106f5",
+      "note": "at the merge 3ecba19c; at 33c3b582 the manifest had the same 9842 files, version 44a04d20d52264cd and sha256 01433ac8317c2033b01d112c7f44056e5c64a24563f81e2998bde3967bb56cc5. The rebuilt manifest differs only in contentVersion and the hashes of main's 13 cards."
+    },
+    "snapshot": "3ecba19ca48d16380db5f07e602a6fc8fa0f95a5",
+    "snapshotNote": "All checks above ran on the merge 3ecba19c (author's check runner, round c9). The same checks ran on the reviewed snapshot 33c3b582 (round c8); validate, unit tests, quiz safety, reading exposure, reading options, vocabulary, the diff check, the word-quiz audit and the distractor evidence gave identical results there (apart from the commit named in their headers), and the differences in lint, budget, manifest, the stale-remark scan and the batch audit are described above.",
+    "closureRerun": "The other checks above, including integration/audit_at_merge.py, were rerun on the closure commit with the same results. There, git diff --check from the base flags 34 files, all captured patches, diff excerpts and evidence copies in docs/n1-reviews/batch-159-closure that keep their recorded bytes (as in B156-B158): trailing whitespace and, in 12 of them, a blank line at the end of the file. Outside that folder it is clean. CI does not run diff --check."
+  },
+  "limits": [
+    "No Kotlin reading cross-check or Android JVM tests (no JDK on the continuation machine); no native, rendered-font, device or phone check. Phone acceptance is outstanding.",
+    "Two supports take the rule's untagged route: 太后 for 后 (JMdict 1787360, no priority tags; the tagged 皇后 and 皇太后 need 皇, which has no card, and the other tagged 后 spellings are rarely used or search-only forms of 後 words) and 官吏 for 吏 (1211850, news2 and spec2 only; no 吏 entry carries news1, ichi1, spec1 or gai1). r1-claude, r1-gpt, r1-grok and c1-gpt found the row-specific justifications sufficient, and c2-grok noted that they remain the batch's untagged exceptions; owner acceptance is not recorded. 又 needs no exception: its support is the existing kana-headed article または (spelling 又は, ichi1/news1), linked under point 2 of the rule, and the existing article また (spelling 又, untagged) is mapped as well.",
+    "叔's support 叔母 relies on the spelling-level ichi1/news1 tags of 叔母: the tagged reading is おば, and the taught reading しゅくぼ, restricted to that spelling, carries no tag. c3-gpt found that this meets point 2 without an exception, and c3-claude, c4-claude and c2-grok confirmed it. The B156 伯 row (伯仲) was not revisited; c2-grok noted that it lies outside this diff and is the owner's decision.",
+    "Two supports changed during review. 又's freeze support 又聞き was justified by \"usually written in kana\", which is not one of the rule's exclusions (r1-claude finding 1); 5c04be73 replaced it with the existing articles または and また and extended tools/audit_n1_batch.py (support_spelling) to accept a kana-headed article whose mapping names a spelling with the kanji. 叔's freeze support 伯叔 was kept in 5c04be73 with a corrected reason and recorded as an author exception in 4f8ebea7; after c2-gpt asked for the qualifying fallback or recorded owner acceptance, 54b00e0c switched to 叔母 and withdrew the exception. 又聞き and 伯叔 have no article, and 伯.md and 聞.md equal the base.",
+    "The families confirmed different intermediate snapshots: Claude confirmed 5c04be73, 4f8ebea7, 54b00e0c, bad899ea and 33c3b582; GPT returned NEEDS FIX on 5c04be73, 4f8ebea7 and f85ff382 and confirmed 0ba7df63, bad899ea and 33c3b582; Grok confirmed 5c04be73, bad899ea and 33c3b582, so c2-grok covered the five commits 4f8ebea7 to bad899ea in one round (a Grok packet built for 4f8ebea7 was never run). All 17 runs were sequential, and each saw only its own family's reports.",
+    "c1-gpt received, as its \"own initial report\", a condensed coordinator copy of r1-gpt's final message (2,342 of 5,329 characters) that wrongly calls itself verbatim; it keeps every finding's number, severity, files, claim and remedy but drops most evidence. RESPONSE.md answered the full report and c1-gpt gave a disposition for every point. The copy is stored in supplement/. Every other copy of an earlier report given to a later run equals the stored report apart from line endings and trailing whitespace.",
+    "No report names an exact model version: the Claude reports say Claude or Claude (Anthropic), the GPT reports say the model identifier is not exposed, and the Grok reports say no model id was exposed. The actual models (claude-sonnet-5.5, gpt-6.1-sol and grok-4.7 in every run) come from the session events.",
+    "Several runs had overlapping tool calls (r1-claude, r1-grok and c1-c5 Claude; at most 4 in flight) or recursive shell commands over packet directories (r1-claude 2, r1-gpt 5, c1-grok 1); see scope-audits in the closure. Each run wrote at most its own report file. The outside-path flags of r1-grok, c1-grok, c2-grok and c3-grok are false positives: a runtime tool-output file, the reviewer's own report folder, and packet or allowed paths that the audit read from JSON-quoted arguments. The audits attribute packet reads only to view and grep calls, so files that GPT runs read through shell commands appear as unread in their coverage tables; the shell commands are listed in each audit.",
+    "Reviewers fetched public dictionary pages and data (Weblio, Kotobank, jisho.org, kanjiapi.dev, the Japanese Wikipedia list of joyo kanji and the Agency for Cultural Affairs Joyo PDF), the four pinned KanjiVG files (c6-gpt) and public files of this repository and of the app repository on GitHub (r1-gpt and c3-gpt; c1-grok's one attempt failed), some through shell downloads; each run's web calls and shell commands are listed in its scope audit. c2-claude, c3-claude, c4-claude, c5-claude, c4-gpt, c5-gpt and c3-grok made none.",
+    "GPT wrote no report file in any round; every stored GPT report is the run's final message. The c1-c5 Claude report files differ in wording from their final messages, with the same labels and verdicts; the files are stored. The r1-claude and Grok report files equal their final messages apart from whitespace.",
+    "The runtime compacted the context twice in r1-grok and once in r1-claude, c1-gpt, c1-grok and c2-grok; the other 12 runs were not compacted (local session log; provenance.json does not record compaction).",
+    "Every stored prompt equals, byte for byte, the first message recorded in its reviewer session.",
+    "10 latent reading collisions are not drawable in the checked N1, All and Starter pools (厘 り; 又 やす, ふたたび; 吉 え, き, と, よ, えい; 吏 し; 呉 ぐ). 吟's ギン prompt can fill one wrong slot from the fallback (61 drawable options, no exposure hit). Sampled seeds are not exhaustive. The reading audits are the author's Python ports of the Kotlin builder, kept outside the repository.",
+    "Lint reports 11 errors and 73 warnings at the merge 3ecba19c (3 and 44 at the reviewed 33c3b582). None is on the nine new articles, and no error is on the ten new cards. Three errors are metadata readings without a Readings row on 太 (タ) and 情 (セイ, なさ.け), older than the batch, which only adds one line to each; the other eight are the same kind of error on 疲, 病, 痛, 空 and 鳴, cards that main changed and lint therefore checks at the merge, but main added none of those readings. Of the warnings, 42 are on reused files, 2 on 又's kana-headed examples, and 29 on main's cards and the words they list.",
+    "The merge 3ecba19c with main came after the last confirmation and was not reviewed; integration/merge-proof.json shows that main changed no batch file or link target, and the one changed main line naming a batch kanji (kanji/護.md, 又 as a hand shape, unlinked) is recorded as reviewed by the author. The stock batch audit fails at the merge because main changed 13 cards after the base; integration/audit_at_merge.py passes with main's head as the runtime baseline. CI does not run the batch audit.",
+    "Closure storage: confirmation packets are deduplicated by content (provenance sameAs, 256 entries) and files of 64 KiB or more are gzipped. A check of the 712 stored or referenced confirmation-packet files (snapshot copies excluded) found 0 errors. In the initial packet, 13 stored files have the bytes the reviewers saw (the nine diffs, selection-order.tsv and the three gzipped dictionary extracts once decompressed), and 25 are LF copies of CRLF files whose conversion back reproduces the packet manifest's hashes. The rule text evidence/selection/rule-7058679348.md is stored as an LF copy of an original that mixes CRLF and LF line endings, so converting it back does not reproduce its hash; the exact bytes (SHA-256 77d5bc8b...) are stored as confirm-packet/common/evidence/rule-7058679348.md.",
+    "The publication checks of B157 and B158 did not run the stale-remark scan, so their cards 偏 and 即 left two \"no card\" remarks stale until 33c3b582; the scan now runs in the author's check runner. It finds only sentences worded with its phrase list, and the author read the 37 remarks it lists at 33c3b582 (36 at the merge) and the 8 it cannot attribute.",
+    "27 older cards mention 又 in their text without linking the new 又 card; none claims that 又 has no card, and linking them is left as an optional follow-up.",
+    "A Grok reviewer was added to the Claude and GPT reviewers because the batch adds word articles, as for B156-B158.",
+    "The gate results come from the author's runs included in the packets and the closure, not from reviewer reruns.",
+    "No published commit is rewritten, no reviewed commit was amended, and every run's final report is kept.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "integration": {
+    "merge": "3ecba19ca48d16380db5f07e602a6fc8fa0f95a5",
+    "originMain": "f5caf53cea9ac3989c33018408d7d9ffb065b074",
+    "mergedFrom": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+    "record": "../n1-reviews/batch-159-closure/README.md",
+    "mergeProof": "../n1-reviews/batch-159-closure/integration/merge-proof.json",
+    "auditAtMerge": "../n1-reviews/batch-159-closure/integration/audit-at-merge.json",
+    "mode": "mechanical-no-overlap",
+    "integrationReview": "not required: every non-derived path equals one parent, main deleted nothing, the 46 batch files (44 runtime files and the two audit-tool files) equal the reviewed snapshot and none was changed by main, none of the 152 link targets was changed by main, main changed no quiz field of its 13 kanji cards, and manifest.json, the only conflict, was regenerated. The one changed main line that names a batch kanji is the reviewed kanji/護.md line, where d513049c calls 又 a hand shape without linking 又.md or touching its quiz fields. Main changed 13 kanji cards that are not batch files, docs/illness-radical-mnemonics-sources.json and manifest.json.",
+    "manifestSha256": "4d3efd69a7271c2be3f1db64df80c3300c4d5ccfb350aff8f4ffad9a8bc106f5",
+    "contentVersion": "2113084de3ce05a4"
+  }
 }

@@ -1,0 +1,49 @@
+---
+kanji: 即
+title: immediate; at once
+jlpt: 1
+tags: [jlpt-n1, grade-8, structure-unclassified]
+strokes: 7
+radical: 卩
+radicalNumber: 26
+onyomi: [ソク]
+kunyomi: [つ.く, つ.ける, すなわ.ち]
+quizOnyomi: [ソク]
+quizKunyomi: []
+distractors: [母, 白, 天]
+quiz_exclusions: [直, 速, 急, 瞬, 早, 突, 就, 則]
+---
+
+# 即 — immediate; at once
+
+**Strokes:** 7 · **Key (radical):** 卩 (no. 26) · **JLPT:** N1 (community list)
+
+## Meaning and origin
+
+即 means immediately or on the spot, as in [即座](../words/即座.md) そくざ. Digital Daijisen also gives the sense of attaching closely to something, read つく, and lists 即位 そくい, accession to the throne, under it; it also gives the sense “that is; namely,” read すなわち.
+
+## Readings
+
+| Reading | Type | Typical words |
+| --- | --- | --- |
+| ソク | on | [即座](../words/即座.md) そくざ — immediate; on the spot (JMdict entry 1404180); 即時 そくじ — prompt; immediate; in real time (JMdict entry 1404210); 即席 そくせき — impromptu; instant (JMdict entry 1404240); 即位 そくい — accession to the throne (JMdict entry 1404110) |
+| つ.く | kun | 即く つく — ascend (the throne); JMdict entry 1331530 lists 即く as another spelling of 就く for that sense only. Not selected for questions here. |
+| つ.ける | kun | 即ける つける — install (a king or emperor); JMdict entry 1331540 lists 即ける as another spelling of 就ける for that sense only. Not selected for questions here. |
+| すなわ.ち | kun | 即ち すなわち — that is; namely; usually written in kana (JMdict entry 1404100). Not selected for questions here. |
+
+## Common words
+
+- [即座](../words/即座.md) そくざ — immediate; on the spot
+- 即時 そくじ — prompt; immediate; in real time
+- 即席 そくせき — impromptu; instant (as in instant ramen)
+- 即位 そくい — accession to the throne
+
+## Notes
+
+直 (“direct; repair”) appears in 直ちに ただちに, “immediately.” 速 (“fast”), 急 (“urgent, sudden”), 瞬 (“blink; instant”), 早 (“early”) and 突 (“thrust; sudden”) share speed or suddenness. 就 (“take a position; undertake”) is the main spelling of the つく and つける verbs above. JMdict lists 則 (“rule; follow a model”) as another spelling of 即する そくする, “to conform to; to be based on” (entry 1404090), and as a rarely used spelling of すなわち.
+
+Kanjipedia also gives the on reading ショク, marked as outside the Joyo table (外); it is not in this card's metadata and is not quizzed.
+
+The meaning-quiz distractors are 母 (“mother”), 白 (“white”), and 天 (“heaven, sky”); none means immediate or at once.
+
+Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1404180, 1404210, 1404240, 1404110, 1331530, 1331540, 1404100, 1404090; [Digital Daijisen, 即](https://www.weblio.jp/content/%E5%8D%B3); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
