@@ -1,0 +1,22 @@
+Snapshot: commit ccc046bb (parent 6605a8b0); reviewer model: Claude (Anthropic).
+Scope: INSTRUCTIONS.md, RESPONSE.md, CHANGES-level data via diffs\changed-lines.txt and diffs\fix.patch (all +/- lines), snapshot\words\升.md in full, evidence\jmdict-cited-entries.xml (entries 1288370 and 1346290 in full), evidence\jmdict-check.txt, evidence\jmdict-entries-with-升.txt in full, evidence\Words.kt (score and reading functions), evidence\word-quiz.txt (the 升 block header and the tie lines), checks\link-targets.tsv (腰掛け row), original-packet repo\words\腰掛け.md front matter. I did not re-read the ten kanji cards (unchanged since my confirmation) or re-audit their quiz options; I did not re-open QuizBuilder/reading-options beyond what 升 needs.
+
+Dispositions:
+- F1 - DECLINE ACCEPTED (I had offered keep-with-reason or remove; the author kept it with a reason). The exclusion is a harmless guard: 1346290 sense 2 is "box (seating at a theatre, etc.)" and the article teaches it (line 15 area and 升席, 1706800). 腰掛け (type wago, tags wago/noun/furniture/posture) scores 2+2+1 = 5 against 升 (Words.kt:197-199), the last-slot score, tie of 668 (word-quiz.txt:1696), so it is reachable; 席/座席/客席 (kango, only "noun" shared) score 2 and are not. The stated difference holds. The risk is small (about 3 of 668 tied slots) and the exclusion adds no wrong option, so there is no cost. The new sentence at 升.md:28 is true to 1288370 (senses "seat; bench"; the second sense is the unrelated "temporary job" sense) and to 1346290 sense 2 and 1706800.
+- O1 - DECLINE ACCEPTED - optional polish; one-paragraph Synonyms sections are the batch pattern, and the sentence stands alone.
+- L1 - RESOLVED (to the extent evidence can show) - jmdict-check.txt shows input SHA-256 equals the pin (42bd8fbc...), the extract hash, `--check` re-extraction byte-identical, "Verified 87 complete JMdict families", exit 0. The patch adds one entry, 1288370, whose content in the patch equals the entry in jmdict-cited-entries.xml; the progress ledger count changes 86 to 87 consistently. I cannot run the tool or confirm the pinned file's hash myself.
+- L2 - RESOLVED - the 19-entry list covers every written form with 升; each is "-" for news1/ichi1/spec1/gai1 and only 1346290 has news2/spec2 (the entry file confirms news2, nf37, spec2 for 升/ます). So no 升-written word qualifies under the rule, consistent with the 升 article not needing further compounds. The list comes from a one-off scan that I cannot reproduce.
+
+Verdicts:
+- Correctness: CLEAN. The new sentence matches 1288370 (seat; bench), 1346290 sense 2 and 1706800 (tatami box seat for four). Link target 腰掛け.md exists, title "seat; bench" equals the quoted gloss (link-targets.tsv). The JMdict dictionary line now lists 1288370, which the article cites.
+- Scoped coverage: CLEAN. Only 升.md lines 28, 34, the ledger line, and one selection/extract entry changed; no kanji card changed.
+- Consistency and quiz safety: CLEAN. 腰掛け is in 升's quiz_exclusions and not elsewhere as a distractor; 升 does not appear in 腰掛け's own list but the exclusion is applied from the 升 side (word-quiz.txt "excluded from the other side: none" does not matter since a one-sided pair already prevents co-occurrence in this builder as the audit reports it). Ledger count and entry count agree. I did not re-check the other nine words' options (unchanged).
+- Comprehensibility: CLEAN. Line 28 is a long three-sentence paragraph and "a whole box of seating" is slightly awkward, but plain, within N5-N4 vocabulary, and 升席 is already glossed at line 15's Meaning paragraph. Polish only (see Optional).
+
+Confirmation: CONFIRMED - every item is DECLINE ACCEPTED or RESOLVED and I established no new actionable defect.
+
+Findings: none.
+
+Optional: Line 28 could read "…not a single seat or bench." as its own sentence break after the 腰掛け gloss ("In its second sense, 升 is a box of seats, such as a 升席, not one seat or bench."), shorter for a phone. Nonblocking.
+
+Limits: I could not run extract_n1_jmdict.py, hash the pinned JMdict, or reproduce the one-off 升 scan; I relied on the supplied outputs and on internal consistency. I did not compare against live online JMdict. The tie-slot probability is read from the supplied audit, not recomputed. This review covers only the revised hunks plus the full 升 article; I did not re-audit the unchanged kanji cards or their quiz and reading options. Every response used a single tool call.

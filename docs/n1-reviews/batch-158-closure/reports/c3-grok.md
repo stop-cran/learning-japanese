@@ -1,0 +1,20 @@
+Snapshot: ef00345d1adda1a32524ba7f81091621d49ddaf3 (parent 348c4f70465633c63706133babacda198eedaa27). Reviewer: GitHub Copilot, Grok 4.7.
+
+Scope: Read this packet's INSTRUCTIONS.md, CHANGES.md, RESPONSE.md, evidence\README.md, diffs\fix.patch, diffs\changed-lines.txt, diffs\changed-files.txt, checks\quiz-safety.txt, checks\link-targets.tsv, and evidence\verify-commit.txt in full. Read snapshot\words\升.md in full and compared line 28 with the earlier confirmation packet's snapshot\words\升.md. Parsed evidence\jmdict-cited-entries.xml entries 1288370, 1346290, and 1706800, and the adjacent 2248100 shō entry. Hash-compared this packet's snapshot, checks, and evidence with the earlier confirmation packet, and line-diffed every checks or evidence file whose hash differed. Read the reading-options.txt hit lines for 傍 and 即, and the reading-exposure.txt summary. Did not re-open QuizBuilder.kt or Words.kt; both are byte-identical to the copies read in the prior confirmation. Did not open the repository or any other report.
+
+Dispositions:
+- O1 - RESOLVED - words\升.md:28 now says "The second sense of 升 is a whole box of seating, such as a 升席, not a single seat or bench." The old "its" is gone, so the second sense cannot be read as 腰掛け's. The predicate is unchanged and still matches line 15, JMdict 1346290 sense 2 (box seating at a theatre and similar places), 1706800 (升席, a tatami box seat for four), and 1288370 sense 1 (seat; bench). Naming 升 once, without "升's", avoids the double naming and the possessive after a kanji that "In 升's second sense, 升 is …" would have left. The sentence is short, names its subject first, and is readable on a phone.
+
+Verdicts:
+- Correctness: CLEAN. No kanji card changed. The only changed sentence is true and says the same thing as the sentence it replaces. No new false claim.
+- Scoped coverage: CLEAN. No coverage change. words\升.md still teaches senses 1–2 of 1346290, still cites 1288370 and 1706800, and still leaves the grid sense off this card.
+- Consistency and quiz safety: CLEAN. Links on the changed line still resolve (link-targets.tsv: 箱, 容器, 腰掛け; 0 unresolved or mismatched). Front matter, exclusions, and quiz options are unchanged. All ten batch cards still fill meaning and reading slots 3/3 from curated distractors (quiz-safety.txt, 0 errors). No quiz reads article bodies; word-quiz.txt differs only in its commit header.
+- Comprehensibility: CLEAN. words\升.md:28 names 升 at the start, so a beginner cannot attach "second sense" to the 腰掛け sentence before it. The wording is at least as clear as "In 升's second sense."
+
+Confirmation: CONFIRMED. The only RESPONSE.md item, O1, is RESOLVED, and no new actionable defect was established.
+
+Findings: none
+
+Optional: none
+
+Limits: I did not open the repository, so I did not recompute manifest.json or re-run the audits. checks\manifest.txt reports a rebuild at ef00345d left manifest.json byte-identical (SHA-256 D98BB0FB… before and after) and the tracked tree clean; contentVersion is cdd61116919da088. Signature status is taken from evidence\verify-commit.txt (good signature, key D4C9A275A218AF747B787AFA9D94B9D311BD26A7, parent 348c4f70, linear history); I did not re-run gpg. I did not run the Kotlin tests; the packet says they were not run. Quiz behaviour is taken from QuizBuilder.kt and Words.kt, both byte-identical to the prior packet, and from the Python audits. Those audits cover the reported pools, not every custom pool. reading-options.txt still reports fallback hits for 傍 そう and 即 しょく because it does not model curated fill; reading-exposure.txt shows 0 production hits and 4 latent collisions, none drawable in the audited pools. That is unchanged and not a defect of this revision. I did not re-fetch live JMdict; the pinned entries in the packet are the cited source, and today's online JMdict may differ slightly. Serial review: one tool call per response.

@@ -1,0 +1,24 @@
+tree 0939972b9937df633e9be9a780ff0e1cb58ca781
+parent 299b4775e84669ed95d9c95ca68aa96fbe9124a7
+author Roman Konstantinovskiy <stop-cran@list.ru> 1795379103 +0100
+committer Roman Konstantinovskiy <stop-cran@list.ru> 1795379103 +0100
+gpgsig -----BEGIN PGP SIGNATURE-----
+ 
+ iJEEABYKADkWIQTUyaJ1ohivdHt4evqdlLnTEb0mpwUCawNPnxsUgAAAAAAEAA5t
+ YW51MiwyLjUrMS4xMiwyLDEACgkQnZS50xG9Jqc/iQEAmTcNd2/lX71hvOdxRgdy
+ SrR4MtCe7S029qfqZQ0MlRsA/ReZjdtRwVUd2OxS7bFmku9TntwP3RKFRZLYaScI
+ yrwP
+ =6axD
+ -----END PGP SIGNATURE-----
+
+Correct B157 closure file list and review-rule source
+
+The published batch leaves words/速い.md unchanged: f1a69909 added a
+mirrored 俊足 exclusion before the merge and 689f0d4d removed it again,
+so the batch touches 38 runtime paths, while the merge proof's 40
+b157RuntimeFiles also count the tool and 速い. The three-family review
+requirement comes from .github/copilot-instructions.md, not issue 60.
+
+Refs #60
+
+Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>

@@ -1,0 +1,190 @@
+Command (run from the packet root): python -B evidence\integrity\verify.py --prior-packet C:\Users\romanko\AppData\Local\Temp\b158-confirm2-gpt
+Run on a build of this packet made just before this transcript was added; verify.py does not read this transcript.
+
+Packet: b158-confirm3-gpt
+Chain (newest first): ef00345d -> 348c4f70 -> ccc046bb -> 6605a8b0 -> 60d2cd5a -> ad1694c1
+
+== 1. Commit objects
+PASS  commits\ef00345d1adda1a32524ba7f81091621d49ddaf3.commit hashes to ef00345d1adda1a32524ba7f81091621d49ddaf3
+      tree 9e80aff3d2bb78aa9e2271119ca6cb423d005a46; parent 348c4f70465633c63706133babacda198eedaa27; subject: N1 B158: name 升 in the 腰掛け contrast sentence
+      committer Roman Konstantinovskiy <stop-cran@list.ru> 1795396066 +0100
+PASS  ef00345d.payload and ef00345d.sig are the object split at its gpgsig header
+PASS  commits\348c4f70465633c63706133babacda198eedaa27.commit hashes to 348c4f70465633c63706133babacda198eedaa27
+      tree 90e2fe5cf30c00755193c952a16229948dbb8b22; parent ccc046bbed099e2d610404c6e2392ac47f65498e; subject: N1 B158: drop two homograph-only quiz exclusions
+      committer Roman Konstantinovskiy <stop-cran@list.ru> 1795394067 +0100
+PASS  348c4f70.payload and 348c4f70.sig are the object split at its gpgsig header
+PASS  commits\ccc046bbed099e2d610404c6e2392ac47f65498e.commit hashes to ccc046bbed099e2d610404c6e2392ac47f65498e
+      tree 2e2a501bb68f3b8ee0e3d8bd744b4ab0a25c542b; parent 6605a8b089fe174b9fd2f1159e3bb917612cf379; subject: N1 B158: justify the 升 quiz exclusion of 腰掛け
+      committer Roman Konstantinovskiy <stop-cran@list.ru> 1795392149 +0100
+PASS  ccc046bb.payload and ccc046bb.sig are the object split at its gpgsig header
+PASS  commits\6605a8b089fe174b9fd2f1159e3bb917612cf379.commit hashes to 6605a8b089fe174b9fd2f1159e3bb917612cf379
+      tree bf59cc4b39001c1a3e702517b92286f4d8035824; parent 60d2cd5ae62371e2713ef666d41de75a91f9b9fb; subject: N1 B158: apply first-round review fixes
+      committer Roman Konstantinovskiy <stop-cran@list.ru> 1795389141 +0100
+PASS  6605a8b0.payload and 6605a8b0.sig are the object split at its gpgsig header
+PASS  commits\60d2cd5ae62371e2713ef666d41de75a91f9b9fb.commit hashes to 60d2cd5ae62371e2713ef666d41de75a91f9b9fb
+      tree 5ea44c644f036ddca0ab42528d4118055ac7ea14; parent ad1694c1fe537a090c712065e77c480deb9edf4d; subject: Draft JLPT N1 batch 158 candidate
+      committer Roman Konstantinovskiy <stop-cran@list.ru> 1795382507 +0100
+PASS  60d2cd5a.payload and 60d2cd5a.sig are the object split at its gpgsig header
+PASS  commits\ad1694c1fe537a090c712065e77c480deb9edf4d.commit hashes to ad1694c1fe537a090c712065e77c480deb9edf4d
+      tree 0939972b9937df633e9be9a780ff0e1cb58ca781; parent 299b4775e84669ed95d9c95ca68aa96fbe9124a7; subject: Correct B157 closure file list and review-rule source
+      committer Roman Konstantinovskiy <stop-cran@list.ru> 1795379103 +0100
+PASS  ad1694c1.payload and ad1694c1.sig are the object split at its gpgsig header
+
+== 2. Parent chain
+PASS  ef00345d has exactly one parent, 348c4f70
+PASS  348c4f70 has exactly one parent, ccc046bb
+PASS  ccc046bb has exactly one parent, 6605a8b0
+PASS  6605a8b0 has exactly one parent, 60d2cd5a
+PASS  60d2cd5a has exactly one parent, ad1694c1
+
+== 3. Signatures (gpgv, key from https://github.com/stop-cran.gpg)
+PASS  key\signing-key.gpg is the dearmored key\signing-key.asc (asc sha256 36f73f3c6f7bd2d40725ed414fcc3e0a345a2810256ca3f0e902508592adf856)
+PASS  gpgv: ef00345d Good signature by D4C9A275A218AF747B787AFA9D94B9D311BD26A7 (exit 0)
+PASS  gpgv: 348c4f70 Good signature by D4C9A275A218AF747B787AFA9D94B9D311BD26A7 (exit 0)
+PASS  gpgv: ccc046bb Good signature by D4C9A275A218AF747B787AFA9D94B9D311BD26A7 (exit 0)
+PASS  gpgv: 6605a8b0 Good signature by D4C9A275A218AF747B787AFA9D94B9D311BD26A7 (exit 0)
+PASS  gpgv: 60d2cd5a Good signature by D4C9A275A218AF747B787AFA9D94B9D311BD26A7 (exit 0)
+PASS  gpgv: ad1694c1 Good signature by D4C9A275A218AF747B787AFA9D94B9D311BD26A7 (exit 0)
+PASS  gpgv left no home directory behind
+
+== 4. Tree objects
+PASS  348c4f70:/ tree 90e2fe5cf30c00755193c952a16229948dbb8b22
+PASS  348c4f70:kanji tree 0bf1da1cb7d119242ad219b6ac3112c8948374a8
+PASS  348c4f70:words tree 446e18c315b780203214567a3cfa8e438e8b9bc2
+PASS  348c4f70:docs tree 4e11de8c0f31407bea02a0c18f2c75d18f3d6142
+PASS  348c4f70:docs/n1-sources tree afeacad717e8808deaff4544910e86ea02987f3f
+PASS  348c4f70:tools tree 570b1a83e379ec035bec2349080687859282f329
+PASS  348c4f70 root tree matches the signed commit's tree header
+PASS  348c4f70: kanji is entry 'kanji' of /
+PASS  348c4f70: words is entry 'words' of /
+PASS  348c4f70: docs is entry 'docs' of /
+PASS  348c4f70: docs/n1-sources is entry 'n1-sources' of docs
+PASS  348c4f70: tools is entry 'tools' of /
+PASS  ef00345d:/ tree 9e80aff3d2bb78aa9e2271119ca6cb423d005a46
+PASS  ef00345d:kanji tree 0bf1da1cb7d119242ad219b6ac3112c8948374a8
+PASS  ef00345d:words tree a6baae0ddab2cb0678c6d7fd4a68eea4e2af066b
+PASS  ef00345d:docs tree 4e11de8c0f31407bea02a0c18f2c75d18f3d6142
+PASS  ef00345d:docs/n1-sources tree afeacad717e8808deaff4544910e86ea02987f3f
+PASS  ef00345d:tools tree 570b1a83e379ec035bec2349080687859282f329
+PASS  ef00345d root tree matches the signed commit's tree header
+PASS  ef00345d: kanji is entry 'kanji' of /
+PASS  ef00345d: words is entry 'words' of /
+PASS  ef00345d: docs is entry 'docs' of /
+PASS  ef00345d: docs/n1-sources is entry 'n1-sources' of docs
+PASS  ef00345d: tools is entry 'tools' of /
+
+== 5. manifest.json
+PASS  manifest\348c4f70.manifest.json is blob manifest.json of signed tree 348c4f70
+PASS  348c4f70 contentVersion 810f3bd3fa524c7a recomputed (tools\build_manifest.py algorithm)
+PASS  348c4f70: manifest lists exactly the 1598 files of kanji/ in the signed tree
+PASS  348c4f70: manifest lists exactly the 5214 files of words/ in the signed tree
+PASS  manifest\ef00345d.manifest.json is blob manifest.json of signed tree ef00345d
+PASS  ef00345d contentVersion cdd61116919da088 recomputed (tools\build_manifest.py algorithm)
+PASS  ef00345d: manifest lists exactly the 1598 files of kanji/ in the signed tree
+PASS  ef00345d: manifest lists exactly the 5214 files of words/ in the signed tree
+      entries that differ 348c4f70 -> ef00345d: files[words/升.md]
+      contentVersion 810f3bd3fa524c7a -> cdd61116919da088
+PASS  blobs\tools\build_manifest.py is tools/build_manifest.py of signed tree ef00345d
+
+== 6. This packet's snapshot\ against the signed tree ef00345d
+PASS  this packet: 19 snapshot file(s) found
+PASS  this packet: snapshot\docs\n1-sources\batch-158-jmdict-selection.json is blob 2149a0a862b9c8f19842d6bf6575d28676680734 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: snapshot\docs\n1-sources\batch-158-jmdict.xml is blob 1bd2be476f21a255702bd69a03df820e2c5cffdb of signed tree ef00345d (raw bytes)
+PASS  this packet: snapshot\docs\n1-sources\batch-158-progress.json is blob 6d24b6829c8c037cfb5f772c7243987dbd635d73 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: snapshot\kanji\偏.md is blob 52fd8aa14a2e42af5af0df5c02a59c80b6f0b517 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/偏.md matches
+PASS  this packet: snapshot\kanji\偽.md is blob 3b1835471bb5b0ba245def80d4f24ddbc02d1b91 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/偽.md matches
+PASS  this packet: snapshot\kanji\傍.md is blob b66a161d9770cb236f29069665dff4af690d8d64 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/傍.md matches
+PASS  this packet: snapshot\kanji\債.md is blob 6b18aeda2d5b9f96edbeb2c4213aa660b6a427b9 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/債.md matches
+PASS  this packet: snapshot\kanji\勲.md is blob 66331977cda3df18887efba205f26f688c1215bd of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/勲.md matches
+PASS  this packet: snapshot\kanji\匠.md is blob 460b42ef74b1fb9c79dedbc54ba27de5bfcdf5c1 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/匠.md matches
+PASS  this packet: snapshot\kanji\匿.md is blob 13abcc5c583d9031fe5f2629ffd0678de88de714 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/匿.md matches
+PASS  this packet: snapshot\kanji\升.md is blob 504f22accd734cfd3325af9bf2cc0ffddc829054 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/升.md matches
+PASS  this packet: snapshot\kanji\即.md is blob 464fbd2055888f4acf643f3d280a5ae859ce97f4 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/即.md matches
+PASS  this packet: snapshot\kanji\却.md is blob 5464dac72e3079db527df27edd9e6f682c343ca5 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of kanji/却.md matches
+PASS  this packet: snapshot\words\偏見.md is blob ec75b385dfe32b22fbcad26ebf505113fad96346 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of words/偏見.md matches
+PASS  this packet: snapshot\words\傍観.md is blob 143a2880afce36afce5dea5f8656dea79d689191 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of words/傍観.md matches
+PASS  this packet: snapshot\words\勲章.md is blob 3ff5c81f800ae1a0e4505bba0af3f3d1b1979c61 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of words/勲章.md matches
+PASS  this packet: snapshot\words\升.md is blob 9de226ebcc13965a092c1fb25fc9cbd447b09318 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of words/升.md matches
+PASS  this packet: snapshot\words\即座.md is blob f6e470602c3877f4f5cba1f0c3bc1a6b8c7bb9cf of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of words/即座.md matches
+PASS  this packet: snapshot\words\師匠.md is blob 947a3539d1f15a4bd70976abac4e394057688548 of signed tree ef00345d (after CRLF->LF)
+PASS  this packet: manifest sha256 of words/師匠.md matches
+
+== 6b. Prior packet b158-confirm2-gpt snapshot\ against the signed tree 348c4f70
+PASS  prior packet: 19 snapshot file(s) found
+PASS  prior packet: snapshot\docs\n1-sources\batch-158-jmdict-selection.json is blob 2149a0a862b9c8f19842d6bf6575d28676680734 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: snapshot\docs\n1-sources\batch-158-jmdict.xml is blob 1bd2be476f21a255702bd69a03df820e2c5cffdb of signed tree 348c4f70 (raw bytes)
+PASS  prior packet: snapshot\docs\n1-sources\batch-158-progress.json is blob 6d24b6829c8c037cfb5f772c7243987dbd635d73 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: snapshot\kanji\偏.md is blob 52fd8aa14a2e42af5af0df5c02a59c80b6f0b517 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/偏.md matches
+PASS  prior packet: snapshot\kanji\偽.md is blob 3b1835471bb5b0ba245def80d4f24ddbc02d1b91 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/偽.md matches
+PASS  prior packet: snapshot\kanji\傍.md is blob b66a161d9770cb236f29069665dff4af690d8d64 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/傍.md matches
+PASS  prior packet: snapshot\kanji\債.md is blob 6b18aeda2d5b9f96edbeb2c4213aa660b6a427b9 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/債.md matches
+PASS  prior packet: snapshot\kanji\勲.md is blob 66331977cda3df18887efba205f26f688c1215bd of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/勲.md matches
+PASS  prior packet: snapshot\kanji\匠.md is blob 460b42ef74b1fb9c79dedbc54ba27de5bfcdf5c1 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/匠.md matches
+PASS  prior packet: snapshot\kanji\匿.md is blob 13abcc5c583d9031fe5f2629ffd0678de88de714 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/匿.md matches
+PASS  prior packet: snapshot\kanji\升.md is blob 504f22accd734cfd3325af9bf2cc0ffddc829054 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/升.md matches
+PASS  prior packet: snapshot\kanji\即.md is blob 464fbd2055888f4acf643f3d280a5ae859ce97f4 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/即.md matches
+PASS  prior packet: snapshot\kanji\却.md is blob 5464dac72e3079db527df27edd9e6f682c343ca5 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of kanji/却.md matches
+PASS  prior packet: snapshot\words\偏見.md is blob ec75b385dfe32b22fbcad26ebf505113fad96346 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of words/偏見.md matches
+PASS  prior packet: snapshot\words\傍観.md is blob 143a2880afce36afce5dea5f8656dea79d689191 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of words/傍観.md matches
+PASS  prior packet: snapshot\words\勲章.md is blob 3ff5c81f800ae1a0e4505bba0af3f3d1b1979c61 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of words/勲章.md matches
+PASS  prior packet: snapshot\words\升.md is blob 1eb22f5aac468400bedfe207fb6645365d3c919b of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of words/升.md matches
+PASS  prior packet: snapshot\words\即座.md is blob f6e470602c3877f4f5cba1f0c3bc1a6b8c7bb9cf of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of words/即座.md matches
+PASS  prior packet: snapshot\words\師匠.md is blob 947a3539d1f15a4bd70976abac4e394057688548 of signed tree 348c4f70 (after CRLF->LF)
+PASS  prior packet: manifest sha256 of words/師匠.md matches
+
+== 7. App code (stop-cran/kanji-cards-android @ 91e1d4b578859f7bfb582f7b9c6acf48c6ca6a75)
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\reading\KanjiReadings.kt is blob 492a43c315816fbdf2079ee8c0bb05c731136b5c
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\quiz\QuizBuilder.kt is blob 47ce071b68abb132e3df427ca54b0c83eebcec2a
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\words\Words.kt is blob 9c8b2c82f8c41a19f6e4840f1b33182a72fd4e9e
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\content\ContentParser.kt is blob 5ab2579262591b7892632c67c806675edf84cf36
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\content\FrontMatter.kt is blob 27cbc475c9d9988435a6db9a2639ab3f7aaa6a16
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\content\Models.kt is blob 1ae2ee39ea0106895329c598c6b4131911c4a71c
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\content\KanjiMeaningMetadata.kt is blob ae7f0bf8396b08de2ac4cca2e7cf6bf58577645c
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\srs\Stacks.kt is blob a8f2ef9915ba8bc6d87e1ecd091d837f9bac4e14
+PASS  app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\srs\PracticePadding.kt is blob b0ff4ad943bda55366cd3ecaf179b2a14737d554
+PASS  app-code\app\src\main\java\io\github\stopcran\kanji\data\Padding.kt is blob b59995d01fae1962678724fc1b5e5238cb46c0cb
+PASS  app-code\app\src\main\java\io\github\stopcran\kanji\data\ContentSync.kt is blob 4a424fe5dfbcae2a37a2b2288e6534f0fee79817
+PASS  app-code\app\src\main\java\io\github\stopcran\kanji\ui\KanjiReadingViewModel.kt is blob 1801c9f854f83659ab4974282eeb531e5b13f305
+PASS  app-code\app\src\main\java\io\github\stopcran\kanji\ui\QuizViewModel.kt is blob 1c5435e14f2fe05eff4fde289bfa746e37a984d0
+PASS  app-code\app\src\main\java\io\github\stopcran\kanji\ui\WordQuizViewModel.kt is blob d939d910ebf9856748a6efab6c92f7d4a0692371
+PASS  evidence\QuizBuilder.kt is byte-identical to app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\quiz\QuizBuilder.kt
+PASS  evidence\Words.kt is byte-identical to app-code\core\src\main\kotlin\io\github\stopcran\kanji\core\words\Words.kt
+
+== 8. Python ports (author tools outside both repositories)
+PASS  ports\reading_exposure.py sha256 d075ed09c034e8a148778e0b346a16a55375ca9297e4970dfccea1d31fb415a8
+PASS  ports\reading_options.py sha256 e9418f0f91f1741ad3368452f4adaafeadea8ac7c6ce2adcd70e1379b77c6f15
+PASS  ports\n1lib.py sha256 1af4061191c0595d389b3a4434f1adbde518aaaf11263cd6b077fb9c90e6f388
+
+All checks passed.
+
+exit 0

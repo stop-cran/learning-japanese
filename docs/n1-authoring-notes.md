@@ -136,6 +136,71 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
+## Batch 158: review closed, publication pending
+
+Batch 158 adds the cards 偏 偽 傍 債 勲 匠 匿 升 即 却 (source rows 63, 67, 68, 72,
+120, 123, 125, 126, 131 and 132, the first ten remaining Joyo rows after B157)
+and one new support article for each: 偏見, 偽造, 傍観, 負債, 勲章, 師匠, 匿名, 升,
+即座 and 返却. 升 ます is the only support word without a qualifying priority
+tag: it carries only news2/spec2, no entry written with 升 carries news1, ichi1,
+spec1 or gai1, and the ledger records why the alternatives 升 しょう, 一升, 一升瓶
+and 升目 were not chosen. The existing cards 名, 師, 座, 章, 見, 観, 負, 返 and 造
+each gain one link line, and the article 片寄る links the 偏 card. The progress
+file is
+[`n1-sources/batch-158-progress.json`](n1-sources/batch-158-progress.json).
+
+The draft was frozen at `60d2cd5a` on the B157 closure correction `ad1694c1`.
+Claude, GPT and Grok reviewed it blind, one after the other, each covering all
+four facets with its own emphasis. All three returned NEEDS FIX. They converged
+on the support word 升: its missing priority tag, a "box seat" sense in its
+title that no exclusion guarded against seating words such as 席 and 腰掛け, a
+grid-square sense that JMdict marks as usually written マス, and tag jargon in
+the Notes. They also found titles that overlapped existing cards with no quiz
+exclusion (偏見 and 意見, 偏 and 側), 偽's distractor 犬, whose JMdict sense 4 is
+"counterfeit", and wording to fix on several cards and articles, such as 債権
+against 債券 and "order" in 勲章. The fixes in `6605a8b0` keep 升 as the one
+explicit exception, retitle the 升 article "measuring box", explain box
+seating with 升席 and drop the grid-square sense, add the exclusions, replace
+犬 with 耳, and add Notes lines for readings the sources give but the cards do
+not show.
+
+The families then confirmed in rounds numbered per family. c1-claude confirmed
+`6605a8b0` with one minor finding: the 升 article still excluded 腰掛け "seat;
+bench". `ccc046bb` kept that exclusion with a stated reason. c1-grok confirmed
+`ccc046bb`, but c1-gpt found the 腰掛け exclusion and the 皮 exclusion on 匿
+without a direct meaning overlap in the displayed titles, which the repository's
+exclusion rule requires. `348c4f70` removed both and kept the sourced contrasts
+in the card bodies. c2-gpt resolved those findings but returned UNVERIFIED,
+because it could not reproduce the manifest, the signed Git objects or the
+app's kanji-reading builder from its packet. `ef00345d` changed only one
+sentence on the 升 article, and the c3-gpt packet added the signed commit
+objects, the signing key, the manifest builder, the relevant Kotlin files of
+the app at a fixed commit and a read-only checker. On `ef00345d` c3-gpt,
+c4-claude and c3-grok all confirmed with no findings. c3-claude needed one
+follow-up prompt to complete required reads; its verdict did not change.
+`origin/main` did not move during the review, so no merge was needed.
+
+Several optional points were declined, and the declines were accepted: 返却's
+"How the kanji combine" line, 隠す and 隠れる as 匿名 exclusions, the repeated
+distractor sentences, splitting a Synonyms paragraph, the "not in this card's
+metadata" wording, the 傍系 summary, the 意見 exclusion and 偽's distractor set.
+The closure record also discloses the run-level limits: reports recovered from
+final messages, overlapping calls, and model self-identification that does not
+match the session records. No Android JVM test, Kotlin cross-check or phone
+check was run.
+
+At `ef00345d`, validation, the 439 host tests, the manifest rebuild, the
+budget, the batch audit and quiz safety pass. Lint reports 4 errors and 59
+warnings, all on reused cards older than the batch: the errors are metadata
+readings without a Readings row on 師, 観 and 負. The reading-options check
+reports 2 full-pool fallback problems (傍 そう, 即 しょく) that the shipped pools
+never reach, as at the freeze. After publication, delivery becomes 608/1,228,
+with 620 remaining.
+
+The full record, including the run table, every disposition and the limits, is
+in
+[`n1-reviews/batch-158-closure/README.md`](n1-reviews/batch-158-closure/README.md).
+
 ## Batch 157: published
 
 Batch 157 adds the cards 佐 佳 併 侍 侮 侯 俊 俗 俵 倫 (source rows 38, 40, 41, 43, 46,

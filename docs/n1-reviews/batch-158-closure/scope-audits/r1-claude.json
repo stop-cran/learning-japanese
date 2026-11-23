@@ -1,0 +1,416 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "9e48d5bb-e834-47d5-ab28-292c0023aeca",
+ "agent": {
+  "agentDisplayName": "b158-r1-claude",
+  "agentType": "general-purpose",
+  "executionMode": "background",
+  "modelSelectionSource": "explicit_override"
+ },
+ "selectedModel": "claude-sonnet-5.5",
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-22T21:38:23.676Z",
+  "last": "2026-11-22T21:43:45.114Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-22T21:38:26.152Z",
+   "chars": 2229,
+   "sha256": "ef0c18ac8953ead17f2e260d584ec9e84e4ad14e27c4a89e2b90f6be49e642a3"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "claude-sonnet-5.5",
+   "responseModel": "claude-sonnet-5-5",
+   "apiRequests": 34
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 4001275,
+  "outputTokens": 28743,
+  "cacheReadTokens": 3840627,
+  "cacheWriteTokens": 160578,
+  "reasoningTokens": 15675,
+  "costMultiplierSum": 34.0
+ },
+ "toolCalls": {
+  "total": 35,
+  "byTool": {
+   "powershell": 29,
+   "web_fetch": 4,
+   "view": 1,
+   "create": 1
+  },
+  "maxInFlight": 2,
+  "overlappingStarts": 2,
+  "overlaps": [
+   {
+    "at": "2026-11-22T21:41:49.532Z",
+    "tools": [
+     "web_fetch",
+     "web_fetch"
+    ]
+   },
+   {
+    "at": "2026-11-22T21:41:55.257Z",
+    "tools": [
+     "web_fetch",
+     "web_fetch"
+    ]
+   }
+  ]
+ },
+ "corpusScans": [
+  {
+   "tool": "powershell",
+   "path": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a",
+   "files": 6901,
+   "recursive": true
+  },
+  {
+   "tool": "powershell",
+   "path": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo",
+   "files": 6816,
+   "recursive": true
+  }
+ ],
+ "shellDirectories": [
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\public-source",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo\\kanji",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo\\words",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\kanji",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\strokes",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\words"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 19,
+   "none": 19,
+   "notFullyRead": [
+    "snapshot/kanji/偏.md",
+    "snapshot/kanji/偽.md",
+    "snapshot/kanji/傍.md",
+    "snapshot/kanji/債.md",
+    "snapshot/kanji/勲.md",
+    "snapshot/kanji/匠.md",
+    "snapshot/kanji/匿.md",
+    "snapshot/kanji/升.md",
+    "snapshot/kanji/即.md",
+    "snapshot/kanji/却.md",
+    "snapshot/kanji/名.md",
+    "snapshot/kanji/師.md",
+    "snapshot/kanji/座.md",
+    "snapshot/kanji/章.md",
+    "snapshot/kanji/見.md",
+    "snapshot/kanji/観.md",
+    "snapshot/kanji/負.md",
+    "snapshot/kanji/返.md",
+    "snapshot/kanji/造.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 10,
+   "none": 10,
+   "notFullyRead": [
+    "snapshot/strokes/偏.json",
+    "snapshot/strokes/偽.json",
+    "snapshot/strokes/傍.json",
+    "snapshot/strokes/債.json",
+    "snapshot/strokes/勲.json",
+    "snapshot/strokes/匠.json",
+    "snapshot/strokes/匿.json",
+    "snapshot/strokes/升.json",
+    "snapshot/strokes/即.json",
+    "snapshot/strokes/却.json"
+   ]
+  },
+  "snapshot/words": {
+   "files": 11,
+   "none": 11,
+   "notFullyRead": [
+    "snapshot/words/偏見.md",
+    "snapshot/words/偽造.md",
+    "snapshot/words/傍観.md",
+    "snapshot/words/勲章.md",
+    "snapshot/words/匿名.md",
+    "snapshot/words/升.md",
+    "snapshot/words/即座.md",
+    "snapshot/words/師匠.md",
+    "snapshot/words/片寄る.md",
+    "snapshot/words/負債.md",
+    "snapshot/words/返却.md"
+   ]
+  },
+  "diffs": {
+   "files": 10,
+   "none": 10,
+   "notFullyRead": [
+    "diffs/kanji__名.md.diff",
+    "diffs/kanji__師.md.diff",
+    "diffs/kanji__座.md.diff",
+    "diffs/kanji__章.md.diff",
+    "diffs/kanji__見.md.diff",
+    "diffs/kanji__観.md.diff",
+    "diffs/kanji__負.md.diff",
+    "diffs/kanji__返.md.diff",
+    "diffs/kanji__造.md.diff",
+    "diffs/words__片寄る.md.diff"
+   ]
+  },
+  "checks": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence (top level)": {
+   "files": 5,
+   "none": 5,
+   "notFullyRead": [
+    "evidence/jmdict-digest.tsv",
+    "evidence/jmdict-families.xml",
+    "evidence/kanjidic2-records.xml",
+    "evidence/provenance.json",
+    "evidence/source-metadata.json"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 11,
+   "none": 11,
+   "notFullyRead": [
+    "evidence/public-source/kanjipedia.json",
+    "evidence/public-source/weblio-偏.txt",
+    "evidence/public-source/weblio-偽.txt",
+    "evidence/public-source/weblio-傍.txt",
+    "evidence/public-source/weblio-債.txt",
+    "evidence/public-source/weblio-勲.txt",
+    "evidence/public-source/weblio-匠.txt",
+    "evidence/public-source/weblio-匿.txt",
+    "evidence/public-source/weblio-升.txt",
+    "evidence/public-source/weblio-即.txt",
+    "evidence/public-source/weblio-却.txt"
+   ]
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 8,
+   "none": 8,
+   "notFullyRead": [
+    "evidence/audits/corpus-attested.txt",
+    "evidence/audits/distractor-senses.txt",
+    "evidence/audits/distractor-use.tsv",
+    "evidence/audits/meta-scan.txt",
+    "evidence/audits/okurigana-scan.txt",
+    "evidence/audits/reading-exposure.txt",
+    "evidence/audits/reading-options.txt",
+    "evidence/audits/word-quiz.txt"
+   ]
+  },
+  "titles": {
+   "files": 2,
+   "none": 2
+  },
+  "rubric": {
+   "files": 4,
+   "none": 4
+  },
+  "repo/docs + README": {
+   "files": 4,
+   "none": 4
+  },
+  "repo/kanji (context)": {
+   "files": 1598,
+   "none": 1598
+  },
+  "repo/words (context)": {
+   "files": 5214,
+   "none": 5214
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full",
+  "mechanical-checks.md": "none"
+ },
+ "outsidePaths": [],
+ "alsoReadAllowed": [],
+ "alsoReadPaths": [],
+ "alsoReadCount": 0,
+ "writes": [
+  {
+   "tool": "create",
+   "path": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-claude.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a; Get-ChildItem -Recurse -File snapshot,evidence,diffs,rubric | % { \"$($_.FullName.Substring(60)) $($_.Length)\" }; Get-Content mechanical-checks.md | select -first 60",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\kanji; foreach($f in '偏','偽','傍','債','勲'){ \"=== $f\"; Get-Content \"$f.md\" -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\kanji; foreach($f in '匠','匿','升','即','却'){ \"=== $f\"; Get-Content \"$f.md\" -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\words; foreach($f in Get-ChildItem *.md){ \"=== $($f.Name)\"; Get-Content $f -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; Get-Content selection\\support-selection.json -Encoding UTF8; Get-Content source-metadata.json -Encoding UTF8; Get-Content public-source\\kanjipedia.json -Encoding UTF8; Get-Content audits\\meta-scan.txt,audits\\okurigana-scan.txt -Encoding UTF8",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; Get-Content jmdict-digest.tsv -Encoding UTF8 -TotalCount 3; (Get-Content jmdict-digest.tsv -Encoding UTF8) | ?{$_ -match '升'} | %{ if($_.Length -gt 600){$_.Substring(0,600)}else{$_} }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; Get-Content jmdict-families.xml -Encoding UTF8 -TotalCount 40",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; @'\nimport xml.etree.ElementTree as ET,sys,re\nids=sys.argv[1:]\nt=ET.parse('jmdict-families.xml')\nfor e in t.getroot():\n    i=e.find('ent_seq').text\n    if i in ids:\n        out=[i]\n        for k in e.findall('k_ele'): out.append('K:'+k.find('keb').text+'['+','.join(x.text for x in k.findall('ke_pri'))+']'+','.join(x.tex...",
+   "writeLike": true
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; python -X utf8 ..\\..\\b158-scratch.py 1518800 1518940 1590440 1562560 1182490 1182460 2867582 1584140 1010130 1403830 1518810 1292110 1292080 1286390 1322880 1498080 1323940",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; python -X utf8 ..\\..\\b158-scratch.py 1247240 1328680 1344810 2411570 1308900 1232060 1156680 1346260 1454470 1170790 1454460 1357550 1581960 1531680 1346290 2248100 1163460 1163470 1654590 1706800",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; python -X utf8 ..\\..\\b158-scratch.py 1404180 1404210 1404240 1404110 1331530 1331540 1404100 1404090 1512180 1556870 1473980 1226620 1411360 1226610 1595084 1411260 1512130 1590240 1430670 1219680 2410020",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; Get-Content reading-options.txt -Encoding UTF8 | select -first 120",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; Select-String -Path reading-options.txt,reading-exposure.txt,corpus-attested.txt -Pattern 'HIT|FAIL|ERROR|violation|WARN|fewer than three wrong options' -Encoding UTF8 | ?{$_.Line -notmatch ' 0 seeds with fewer'} | %{$_.Line}; Get-Content reading-exposure.txt -Encoding UTF8 -TotalCount 25; Get-Content corpus-att...",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; Get-Content word-quiz.txt -Encoding UTF8 -TotalCount 30 | %{ if($_.Length -gt 400){$_.Substring(0,400)}else{$_} }; Select-String -Path word-quiz.txt -Pattern '^== ' -Encoding UTF8 | select -first 30",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; $t=Get-Content word-quiz.txt -Encoding UTF8; $i=0..($t.Count-1)|?{$t[$_] -match '^## (升|匿名|傍観|返却|師匠|即座|勲章|負債)'}; foreach($s in $i){ $t[$s..([Math]::Min($s+45,$t.Count-1))] | %{ if($_.Length -gt 300){$_.Substring(0,300)}else{$_} } ; \"-----\" } | select -first 400",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; $t=Get-Content word-quiz.txt -Encoding UTF8; $idx=@(); for($k=0;$k -lt $t.Count;$k++){ if($t[$k] -match '^## (升|匿名|傍観|返却|師匠|即座)'){$idx+=$k} }; foreach($s in $idx){ $e=[Math]::Min($s+40,$t.Count-1); for($k=$s;$k -le $e;$k++){ $l=$t[$k]; if($l.Length -gt 260){$l=$l.Substring(0,260)}; $l }; '-----' }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; $t=Get-Content word-quiz.txt -Encoding UTF8; $s=(0..($t.Count-1)|?{$t[$_] -match '^## 升'})[0]; $t[$s..($s+30)] | %{ if($_.Length -gt 250){$_.Substring(0,250)}else{$_} }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; $t=Get-Content word-quiz.txt -Encoding UTF8; $s=(0..($t.Count-1)|?{$t[$_] -match '^## 升'})[0]; for($k=$s;$k -lt $t.Count;$k++){ if($t[$k] -match '^### reading quiz'){ $t[$k..($k+6)] | %{ if($_.Length -gt 600){$_.Substring(0,600)}else{$_} }; break } }; foreach($w in '傍観','匿名','師匠','即座','返却','勲章','負債','偽造'){ $s=(0...",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\audits; Select-String -Path corpus-attested.txt -Pattern '偏見|偽造|傍観|負債|勲章|師匠|匿名|^升|即座|返却' -Encoding UTF8 | %{$_.Line}; Get-Content distractor-use.tsv -Encoding UTF8 | select -first 40",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a; Get-ChildItem diffs | %{ \"=== $($_.Name)\"; Get-Content $_.FullName -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo; $ws='差別','片寄る','模倣','複写','コピー','真似','創作','こしらえる','見物','観客','観察','見学','見る','賞','賞品','賞金','銅','飾り','章','秘密','箱','容器','入れ物','ケース','計る','測定','計','容積','すぐに','直ちに','早速','たちまち','一瞬','瞬間','直後','至急','途端','さっさと','先生','教師','名人','マスター','講師','コーチ','職人','神様','教授','博士','借金','借りる','貸し','返す','返る','帰す','払い戻す','戻す','貸し出し','傾く','寄る','公平'; for...",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\public-source; foreach($f in 偏,偽,傍,債,勲,匠,匿,升,即,却){ \"=== $f\"; Get-Content \"weblio-$f.txt\" -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence\\public-source; Get-ChildItem weblio-*.txt | %{ \"=== $($_.Name)\"; Get-Content $_.FullName -Encoding UTF8 }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo\\kanji; foreach($k in '片','傾','虚','装','模','倣','仮','側','辺','近','隣','借','貸','負','恩','工','技','芸','師','術','職','隠','秘','密','潜','伏','箱','計','測','量','寸','昇','直','速','急','瞬','早','突','就','則','退','断','否','返','逆','反','功','績','賞','栄'){ $l=(Get-Content \"$k.md\" -Encoding UTF8 -TotalCount 4)[2]; \"$k $l\" }; Select-String -Path ..\\..\\evidenc...",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a; python -X utf8 b158-scratch.py 2>$null; Copy-Item ..\\..\\..\\b158-scratch.py . -ErrorAction SilentlyContinue; Select-String -Path evidence\\jmdict-digest.tsv -Pattern '1321470|1291410|1260000|1214900|1533700|1351910|1484150|1010130' -Encoding UTF8 | %{ $_.Line.Substring(0,[Math]::Min(250,$_.Line.Length)) }; (Select-String -Path ev...",
+   "writeLike": true
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\repo\\words; foreach($w in '無名','実名','隠す','隠れる','偽名','匿う','匿名','弟子','先生','賞','勲','偽物','贋','偏り','偏る','借金','債務','即席','即時','直ちに','すぐ','すぐに','返事','返す','却下','正座','座る','傍','側','そば','側','枡','斗','計る','量る','測る','師','匠','職人','見学','観客','偏','奇妙','真偽','虚偽','メダル','表彰','賞状','褒章','名誉'){ \"$w \" + (Test-Path \"$w.md\") }; (Get-ChildItem -File | measu...",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; Select-String -Path jmdict-digest.tsv -Pattern '\\t(1224580|1518800|1512180|1308900|1346290|1404180|1454470)\\t' -Encoding UTF8 | %{ ($_.Line -split \"`t\")[1,6] -join ' | ' }",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\evidence; python -X utf8 -c \"\nimport xml.etree.ElementTree as ET\nt=ET.parse('jmdict-families.xml')\nfor e in t.getroot():\n    i=e.find('ent_seq').text\n    if i in ('1224580','1518800','1512180','1404180','1454470','1308900'):\n        print(i,[x.text for x in e.find('sense').findall('pos')])\n\"",
+   "writeLike": false
+  },
+  {
+   "command": "cd C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-candidate-60d2cd5a\\snapshot\\strokes; python -X utf8 -c \"\nimport json,glob\nfor f in sorted(glob.glob('*.json')):\n    d=json.load(open(f,encoding='utf8'))\n    print(f, type(d).__name__, list(d.keys())[:6] if isinstance(d,dict) else len(d))\n    s=d.get('strokes') if isinstance(d,dict) else None\n    print('  ', len(s) if s is not None else '')\n\"; Remo...",
+   "writeLike": true
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&sid=&e=1291410",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&sid=&e=1321470",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/api/v1/search/words?keyword=%E5%8C%BF%E5%90%8D",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/api/v1/search/words?keyword=%E5%8D%87",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 6611,
+  "reportFile": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b158-review-claude.md",
+  "reportExists": true,
+  "reportChars": 6612,
+  "reportBytes": 7021,
+  "reportSha256": "d1b70c88e845b10931e0256c4ac8c2415315e388cf14a0765cd303840581c3bf",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "overlapping tool calls: max in flight 2 (2 overlapping starts)",
+  "recursive shell commands over packet directories: 2",
+  "write-like shell commands: 3 (review them)"
+ ]
+}
