@@ -39,7 +39,9 @@ the kanji-combination section. RU facts labels are `Черты`, `Ключ (ра
 Reading-table semantics remain unchanged and the reader accepts the localized section/table labels.
 
 Legacy counter v1 gloss field `en` remains valid for released EN readers. New-language content uses neutral
-`translation`; the updated parser adapts it to the same gloss model. Declaring both fields is invalid.
+`translation`; the updated parser adapts it to the same gloss model. The authoring validator requires
+`translation` on Russian v1 cards, even if `en` is present. This checks the field name, not the language of its text.
+Declaring both fields is invalid.
 Do not migrate published EN v1 cards to the neutral field until an explicitly approved APK-first compatibility change.
 Other existing `translation`/`gloss` fields are already language-neutral.
 
