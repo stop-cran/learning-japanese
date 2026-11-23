@@ -136,7 +136,7 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
-## Batch 158: review closed, publication pending
+## Batch 158: published
 
 Batch 158 adds the cards 偏 偽 傍 債 勲 匠 匿 升 即 却 (source rows 63, 67, 68, 72,
 120, 123, 125, 126, 131 and 132, the first ten remaining Joyo rows after B157)
@@ -194,8 +194,15 @@ budget, the batch audit and quiz safety pass. Lint reports 4 errors and 59
 warnings, all on reused cards older than the batch: the errors are metadata
 readings without a Readings row on 師, 観 and 負. The reading-options check
 reports 2 full-pool fallback problems (傍 そう, 即 しょく) that the shipped pools
-never reach, as at the freeze. After publication, delivery becomes 608/1,228,
-with 620 remaining.
+never reach, as at the freeze. The closure commit `cb89cdd4` adds only
+documents to `ef00345d`; the same checks give the same results there. It
+fast-forwards main and is the published commit: the
+[CI run](https://github.com/stop-cran/learning-japanese/actions/runs/45100387117)
+passed and the [publication receipt](n1-reviews/batch-158-publication/provenance.json)
+records 9,813 verified runtime hashes in the served ZIP. Delivery is now
+**608/1,228**, with **620 remaining**. The served ZIP retains 56,215,009 bytes,
+71,290 more than at the B157 receipt, under the 62 MiB guard, leaving 8,796,703
+bytes. Phone acceptance is still outstanding.
 
 The full record, including the run table, every disposition and the limits, is
 in

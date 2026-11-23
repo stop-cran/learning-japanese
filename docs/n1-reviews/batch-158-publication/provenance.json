@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "batch": 158,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "cb89cdd4b51695abc2340d332f26a0088c2ef7a6",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/cb89cdd4b51695abc2340d332f26a0088c2ef7a6",
+  "base": "ad1694c1fe537a090c712065e77c480deb9edf4d",
+  "initialSnapshot": "60d2cd5ae62371e2713ef666d41de75a91f9b9fb",
+  "reviewedSnapshot": "ef00345d1adda1a32524ba7f81091621d49ddaf3",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/45100387117",
+    "runId": 45100387117,
+    "receiptSha256": "414b1cd13d9e5f9160ed1870d957521240f92a32537194ba1bce265646d45e73"
+  },
+  "archive": {
+    "zipSha256": "82920125c92b8450adaeab142edb0f844c357f9e9c2783f10522f4c74a3d0549",
+    "receiptSha256": "4ac5b1d8d66bdd8cb0f7f79acb7624260d690db6fa0f6262b6f26b709ae1f4fa",
+    "verifiedRuntimeHashes": 9813,
+    "contentVersion": "cdd61116919da088",
+    "manifestSha256": "d98bb0fba411ba8e69fae13b043a5271b4b804441175049334985996139a15c7"
+  },
+  "reviewIdentity": "Claude claude-sonnet-5.5, GPT gpt-6.1-sol and Grok grok-4.7 each CONFIRMED reviewed snapshot ef00345d; origin/main stayed at ad1694c1 throughout, so no merge was needed; the signed closure cb89cdd4 adds documents only and fast-forwards origin/main ad1694c1",
+  "sourceAccounting": {
+    "delivered": 608,
+    "n1Additions": 602,
+    "n2Placements": 6,
+    "remaining": 620,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "No Kotlin reading cross-check or Android JVM tests (no JDK on the continuation machine); no native, rendered-font, device or phone check. Phone acceptance is outstanding.",
+    "The 升 support word (JMdict 1346290) is the batch's only untagged exception: it carries only news2 and spec2, no entry written with 升 carries news1, ichi1, spec1 or gai1, and the alternatives 升 しょう, 一升, 一升瓶 and 升目 are untagged. The c1 Claude, GPT and Grok reviewers found the row-specific justification sufficient under the rule's untagged route; owner acceptance of the exception is not recorded.",
+    "Two exclusions that reviewers had accepted were removed after a later finding: 腰掛け on the 升 article (accepted by c1-claude and c2-claude in its justified form) and 皮 on 匿 (requested by r1-grok, RESOLVED by c1-grok). The later rounds of both families confirmed the removals.",
+    "The families confirmed different intermediate snapshots (c1-claude 6605a8b0, c1-gpt and c1-grok ccc046bb), and confirmation runs of different families overlapped in time. Each run saw only its own family's reports.",
+    "c2-gpt returned UNVERIFIED on 348c4f70 because it could not reproduce the manifest, the signed objects or the reading builder from the packet; c3-gpt confirmed ef00345d with the added integrity evidence. Its remaining limits: only the snapshot is bound by content, the Kotlin code was not compiled, no phone check was run, and the served ZIP did not exist yet.",
+    "The GPT reports and all Claude reports but one name only the vendor; c3-claude names itself claude-opus-5.5 while the session records show claude-sonnet-5.5. The r1 Grok report says its model version was not identified; the c1-c3 Grok reports name Grok 4.7. The actual models come from the session events.",
+    "Several runs had overlapping or recursive commands (see scope-audits in the closure). r1-claude created, ran and removed a scratch script in its temporary folder; c3-claude created and removed a temporary copy of its report; c1-grok and c2-grok listed their report folders (file names only). r1-grok's outside-path scope-audit flags are false positives.",
+    "GPT wrote no report file in any round; every GPT report was recovered from the final message and equals it exactly. The c1-c4 Claude report files differ in wording from their final messages, with the same labels and verdicts; the files are stored.",
+    "c3-claude needed one follow-up prompt to complete required reads; its dispositions and verdict did not change.",
+    "The runtime compacted the context once in r1-claude, r1-grok and c1-grok; the other 10 runs were not compacted (local session log; provenance.json does not record compaction).",
+    "Every stored prompt equals, byte for byte, the first message recorded in its reviewer session (the c3 Claude follow-up equals that session's second message).",
+    "The reading-options check exits 1 with 2 problems at every snapshot from the freeze on: in the full-pool fallback, 傍's prompt ボウ could be offered そう and 即's prompt ソク could be offered しょく. The shipped N1, All and Starter pools never reach the fallback for these cards, and both cards say the reading is not quizzed.",
+    "4 latent reading collisions are not drawable in the checked N1, All and Starter pools (傍 び and そう, 升 のぼる, 即 しょく). Sampled seeds are not exhaustive. The reading audits are the author's Python ports of the Kotlin builder, kept outside the repository.",
+    "Lint reports 4 errors and 59 warnings, all on pre-existing reused files: the errors are metadata readings without a Readings row on 師 (いくさ), 観 (み.る, しめ.す) and 負 (ま.かす), older than the batch, which only adds one link line to each. None is on the ten new cards or the ten new articles.",
+    "Closure storage: confirmation packets are deduplicated by content (provenance sameAs), large files are gzipped, and the c3gpt manifest blobs and trees are rebuilt from Git. A check of the 386 stored, referenced or rebuilt confirmation-packet files (snapshot copies excluded; 10 rebuilt with git cat-file) found 0 errors. The initial packet's stored text files are LF copies of the CRLF files the reviewers saw.",
+    "A Grok reviewer was added to the Claude and GPT reviewers because the batch adds word articles, as for B156 and B157.",
+    "The gate results come from the author's runs included in the packets, not from reviewer reruns.",
+    "No published commit is rewritten, no reviewed commit was amended, and every run's final report is kept.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}
