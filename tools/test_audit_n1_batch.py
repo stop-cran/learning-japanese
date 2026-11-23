@@ -1,7 +1,8 @@
 import unittest
 import xml.etree.ElementTree as ET
 
-from audit_n1_batch import lexical_pair, reused_changes, runtime_delta, support_spelling
+from audit_n1_batch import (lexical_pair, reused_changes, runtime_delta,
+                            support_mapping_rows, support_spelling)
 
 
 class N1BatchRuntimeDeltaTest(unittest.TestCase):
@@ -151,6 +152,54 @@ class N1BatchSupportSpellingTest(unittest.TestCase):
     def test_rejects_spelling_without_mapped_kanji(self):
         with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
             support_spelling(self.row, self.meta, self.text, "叔")
+
+
+class N1BatchSupplementaryMappingTest(unittest.TestCase):
+    def setUp(self):
+        self.members = {"唄"}
+        self.baseline_files = {"kanji/伯.md": "伯", "kanji/画.md": "画"}
+        self.member_mapping = {"kanji": "唄", "article": "words/子守唄.md"}
+
+    def test_accepts_mappings_for_an_existing_out_of_batch_card(self):
+        supplementary = [
+            {"kanji": "伯", "article": "words/画伯.md"},
+            {"kanji": "画", "article": "words/画伯.md"},
+        ]
+        rows, pairs = support_mapping_rows(
+            [self.member_mapping], supplementary, self.members, self.baseline_files)
+        self.assertEqual(len(rows), 3)
+        self.assertEqual(pairs, {
+            ("唄", "words/子守唄.md"),
+            ("伯", "words/画伯.md"),
+            ("画", "words/画伯.md"),
+        })
+
+    def test_rejects_supplementary_mapping_without_a_baseline_card(self):
+        with self.assertRaisesRegex(ValueError, "supplementary support mapping"):
+            support_mapping_rows(
+                [self.member_mapping],
+                [{"kanji": "伯", "article": "words/画伯.md"}],
+                self.members,
+                {"kanji/画.md": "画"})
+
+    def test_rejects_supplementary_mapping_for_a_batch_member(self):
+        with self.assertRaisesRegex(ValueError, "supplementary support mapping"):
+            support_mapping_rows(
+                [self.member_mapping],
+                [{"kanji": "唄", "article": "words/唄.md"}],
+                self.members,
+                self.baseline_files)
+
+    def test_rejects_duplicate_reciprocal_pair(self):
+        with self.assertRaisesRegex(ValueError, "Duplicate reciprocal mapping"):
+            support_mapping_rows(
+                [self.member_mapping],
+                [
+                    {"kanji": "伯", "article": "words/画伯.md"},
+                    {"kanji": "伯", "article": "words/画伯.md"},
+                ],
+                self.members,
+                self.baseline_files)
 
 
 if __name__ == "__main__":

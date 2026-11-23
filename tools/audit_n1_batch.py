@@ -121,6 +121,27 @@ def activated_baseline_pairs(before, members, candidates):
     return frozen | written
 
 
+def support_mapping_rows(mappings, supplementary, members, baseline_files):
+    require(isinstance(mappings, list) and isinstance(supplementary, list),
+            "Support mappings must be lists")
+    for row in mappings:
+        require(isinstance(row, dict) and row.get("kanji") in members
+                and isinstance(row.get("article"), str)
+                and row["article"].startswith("words/") and row["article"].endswith(".md"),
+                "Invalid support mapping")
+    for row in supplementary:
+        require(isinstance(row, dict) and safe_identifier(row.get("kanji"))
+                and row["kanji"] not in members
+                and f"kanji/{row['kanji']}.md" in baseline_files
+                and isinstance(row.get("article"), str)
+                and row["article"].startswith("words/") and row["article"].endswith(".md"),
+                "Invalid supplementary support mapping")
+    rows = mappings + supplementary
+    pairs = {(row["kanji"], row["article"]) for row in rows}
+    require(len(rows) == len(pairs), "Duplicate reciprocal mapping")
+    return rows, pairs
+
+
 def source_plan_packets(folder, batch, plan, source_audit, variant):
     packets = [
         (f"batch-{batch}-lexical-selection.json", f"batch-{batch}-jmdict.xml"),
@@ -676,12 +697,13 @@ def audit(root, batch):
     if "supportMappings" not in ledger:
         return audit_source_plan(root, batch, ledger, frozen, members, commit, source, before, current,
                                  candidates)
-    mappings = ledger["supportMappings"]
-    pairs = {(r["kanji"], r["article"]) for r in mappings}
+    all_mappings, pairs = support_mapping_rows(
+        ledger["supportMappings"], ledger.get("supplementaryMappings", []),
+        set(members), before["files"])
     recorded_pairs = [tuple(p) for p in ledger["requiredReciprocalPairs"]]
-    require(len(mappings) == len(pairs) == len(recorded_pairs)
+    require(len(all_mappings) == len(pairs) == len(recorded_pairs)
             and pairs == set(recorded_pairs), "Reciprocal mappings differ")
-    new_words = {r["article"] for r in mappings if r["newArticle"]}
+    new_words = {r["article"] for r in all_mappings if r["newArticle"]}
     additions = {f"{kind}/{c}.{suffix}" for c in members
                  for kind, suffix in (("kanji", "md"), ("strokes", "json"))} | new_words
     changes = {r["article"] for r in ledger["changedReusedPassages"]}
@@ -707,10 +729,8 @@ def audit(root, batch):
         require(ids == selection["entryIds"] and len(ids) == len(set(ids)),
                 "Dictionary packet membership/order differs")
         families.update(zip(ids, entries))
-    for row in mappings:
+    for row in all_mappings:
         c, name = row["kanji"], row["article"]
-        require(c in members and name.startswith("words/") and name.endswith(".md"),
-                "Invalid support mapping")
         meta = metadata(root, name)
         text = (root / name).read_text(encoding="utf-8")
         spelling = support_spelling(row, meta, text, c)
