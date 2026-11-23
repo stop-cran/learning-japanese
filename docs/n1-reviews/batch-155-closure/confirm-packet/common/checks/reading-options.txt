@@ -1,0 +1,91 @@
+Command (at fix 25609582): python -X utf8 reading_options.py --extra 卑=ひく.い,ひ,いやしい,いやしむ,いやしめる,ひ.わい --extra 汰=タイ,よな.げる,にご.る,おご.る,た,ゆ.る --extra 沙=シャ,すな,みぎわ,よな.げる,さ,いさご --extra 沢=うるお.う,つや,さわ,たく --extra 胡=コ,ゴ,ウ,えびす,でたらめ,みだ.り,ながい.き,なん.ぞ,いずく.んぞ --extra 鼓=こ,つづみ,こ.す,こ.する --seeds 100 卑 汰 沙 沢 胡 鼓
+The --extra readings are, for the six kanji, every reading Kanjipedia marks as outside the official table (外) and, for the name-use 胡, which is not in the table, every Kanjipedia reading (evidence\kanjipedia-outside-readings.json), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ (outside the official table) or headed by the kanji that is not a KANJIDIC2 reading (evidence\daijisen-heads.txt), and the JMdict kanji-plus-okurigana headword readings listed in evidence\okurigana-scan.txt. Some listed extras are also KANJIDIC2 readings; repeating them changes nothing.
+
+Reading-option audit: 1568 cards in the pool (every card in kanji/); 100 seeds per prompt.
+
+== 卑 (lowly; despicable)   curated option cards: 勇 賢 鋭
+   metadata readings: on ヒ | kun いや.しい いや.しむ いや.しめる
+   unlisted readings attested for 卑: ひくい (--extra list)  ひわい (--extra list)
+   on prompt ヒ (key ひ)
+       excluded keys: 10
+       curated 勇: ゆう
+       curated 賢: けん
+       curated 鋭: えい
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 2 keys, 2: 225 keys, 1: 2 keys, 0: 29 keys
+       tier 3 candidates (2): ひつ ひん
+       tier 2 candidates (225): あい あく あつ あん い いき いく いち いん う うん えい えき えつ えん お おう おく おん か かい かく かつ かん が がい がく がん き きく きつ きょ きん ぎ ぎょ ぎん く くう くつ くん ... (+185 more)
+       unlisted-reading check: none of the 2 unlisted readings is offered by any of the 303 other on-reading cards
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 汰 (sift; weed out)   curated option cards: 縫 磨 塗
+   metadata readings: on タ タイ | kun おご.る にご.る よな.げる
+   unlisted readings attested for 汰: ゆる (--extra list)
+   on prompt タ (key た)
+       excluded keys: 13
+       curated 縫: ほう
+       curated 磨: ま
+       curated 塗: と
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 3 keys, 2: 222 keys, 0: 31 keys
+       tier 3 candidates (3): たく たつ たん
+       unlisted-reading check: none of the 1 unlisted readings is offered by any of the 303 other on-reading cards
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 沙 (sand; sift)   curated option cards: 鉄 銅 塩
+   metadata readings: on サ シャ | kun すな よなげる
+   unlisted readings attested for 沙: みぎわ (--extra list)  いさご (--extra list)
+   on prompt サ (key さ)
+       excluded keys: 8
+       curated 鉄: てつ
+       curated 銅: どう
+       curated 塩: えん
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 5 keys, 2: 218 keys, 0: 31 keys
+       tier 3 candidates (5): さい さく さっ さつ さん
+       unlisted-reading check: none of the 2 unlisted readings is offered by any of the 303 other on-reading cards
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 沢 (marsh; luster)   curated option cards: 霜 岩 丘
+   metadata readings: on タク | kun さわ うるお.い うるお.す つや
+   unlisted readings attested for 沢: うるおう (--extra list)  おも (KANJIDIC2 name reading)  さ (KANJIDIC2 name reading)  さわん (KANJIDIC2 name reading)  わさ (KANJIDIC2 name reading)
+   on prompt タク (key たく)
+       excluded keys: 12
+       curated 霜: no usable on reading, slot filled from the fallback
+       curated 岩: がん
+       curated 丘: きゅう
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 47 keys, 2: 207 keys
+       tier 3 candidates (47): あく いく おく かく がく きく きゃく きょく ぎゃく ぎょく く こく さく しゃく しゅく しょく じゃく じゅく そく ぞく た たい たつ たん ちく ちゃく ちょく とく どく にく はく ばく ひゃく ふく ほく ぼく まく みゃく もく やく ... (+7 more)
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading さ (KANJIDIC2 name reading) is offered only by card(s) 作 再 左 差 査 沙 砂 茶
+       simulation: 35 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 胡 (foreign; dubious)   curated option cards: 甘 柔 静
+   metadata readings: on ウ コ ゴ | kun なんぞ
+   unlisted readings attested for 胡: えびす (--extra list)  でたらめ (--extra list)  みだり (--extra list)  ながいき (--extra list)  いずくんぞ (--extra list)  くる (KANJIDIC2 name reading)
+   on prompt コ (key こ)
+       excluded keys: 8
+       curated 甘: かん
+       curated 柔: じゅう にゅう
+       curated 静: せい じょう
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 3 keys, 2: 220 keys, 0: 31 keys
+       tier 3 candidates (3): こく こつ こん
+       unlisted-reading check: none of the 6 unlisted readings is offered by any of the 303 other on-reading cards
+       simulation: 5 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 鼓 (drum; rouse)   curated option cards: 笛 琴 筆
+   metadata readings: on コ | kun つづみ
+   unlisted readings attested for 鼓: こす (--extra list)  こする (--extra list)
+   on prompt コ (key こ)
+       excluded keys: 4
+       curated 笛: no usable on reading, slot filled from the fallback
+       curated 琴: no usable on reading, slot filled from the fallback
+       curated 筆: ひつ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 3 keys, 2: 223 keys, 0: 31 keys
+       tier 3 candidates (3): こく こつ こん
+       unlisted-reading check: none of the 2 unlisted readings is offered by any of the 303 other on-reading cards
+       simulation: 4 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+0 problem(s)

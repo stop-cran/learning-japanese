@@ -1,0 +1,71 @@
+Digital Daijisen headword list: frozen packet (cdab83b3) versus regenerated after the parser fix.
+The old headword pattern did not accept katakana or the full-width bar inside 〔〕, so two headwords were cut down to their 【…】 part.
+Fixed pattern: ([ぁ-ゖー‐・゙゚]{1,14}(?:〔[^〕【】<>]{1,20}〕)?)【 (the same 15 pages, fetched again). The raw-HTML sha256 prefixes differ on every line because Weblio serves different page HTML on each fetch (two fetches of the 陰 page a few seconds apart gave 541fec68eb02 and c24474fdbb49); apart from those prefixes, only the 醜 and 鎖 headword lines changed.
+
+--- daijisen-heads.txt (cdab83b3 packet)
++++ daijisen-heads.txt (regenerated)
+@@ -1,19 +1,19 @@
+-酌 (https://www.weblio.jp/content/%E9%85%8C, sha256 8e45c8c63aca):
++酌 (https://www.weblio.jp/content/%E9%85%8C, sha256 22b66ba589f2):
+    D しゃく【酌】
+-酔 (https://www.weblio.jp/content/%E9%85%94, sha256 ed5c21c57e76):
++酔 (https://www.weblio.jp/content/%E9%85%94, sha256 06449b5c985d):
+    D すい【酔〔醉〕】
+-酢 (https://www.weblio.jp/content/%E9%85%A2, sha256 938e066435c8):
++酢 (https://www.weblio.jp/content/%E9%85%A2, sha256 c8ee853f0546):
+    D さく【酢】
+    D す【酢／ × 醋／ ▽ 酸】
+-醜 (https://www.weblio.jp/content/%E9%86%9C, sha256 18dbd42c4812):
++醜 (https://www.weblio.jp/content/%E9%86%9C, sha256 9cdb5dcda4b8):
+    D しこ【 ▽ 醜】
+    D しゅう【醜】
+-   D 〕【醜】
+-釈 (https://www.weblio.jp/content/%E9%87%88, sha256 645bdd100d55):
++   D しゅう〔シウ〕【醜】
++釈 (https://www.weblio.jp/content/%E9%87%88, sha256 370efc0c32cf):
+    D しゃく【釈〔釋〕】
+    D しゃく【釈】
+-釣 (https://www.weblio.jp/content/%E9%87%A3, sha256 a0f79b702734):
++釣 (https://www.weblio.jp/content/%E9%87%A3, sha256 a25c2322d025):
+    D ちょう【釣】
+    D つり【釣（り）】
+-鈴 (https://www.weblio.jp/content/%E9%88%B4, sha256 edf6153cfc3f):
++鈴 (https://www.weblio.jp/content/%E9%88%B4, sha256 10f4c571f935):
+    D すず【鈴】
+@@ -21,5 +21,5 @@
+    D れい【鈴】
+-銃 (https://www.weblio.jp/content/%E9%8A%83, sha256 c8fa86901aaa):
++銃 (https://www.weblio.jp/content/%E9%8A%83, sha256 969481ecd712):
+    D じゅう【銃】
+-銭 (https://www.weblio.jp/content/%E9%8A%AD, sha256 b881c5c50044):
++銭 (https://www.weblio.jp/content/%E9%8A%AD, sha256 bb1de5cdadbb):
+    D ぜ‐ぜ【 ▽ 銭】
+@@ -29,18 +29,18 @@
+    D ちゃん【 ▽ 銭】
+-鎖 (https://www.weblio.jp/content/%E9%8E%96, sha256 517d88eae89a):
+-   D 〕【錠／ ▽ 鎖／ × 鏁】
++鎖 (https://www.weblio.jp/content/%E9%8E%96, sha256 0685e1bc5526):
++   D じょう〔ヂヤウ｜ジヤウ〕【錠／ ▽ 鎖／ × 鏁】
+    D くさり【鎖／ × 鏈／ × 鏁】
+    D さ【鎖】
+-鐘 (https://www.weblio.jp/content/%E9%90%98, sha256 42dead357ffc):
++鐘 (https://www.weblio.jp/content/%E9%90%98, sha256 d12476ceb940):
+    D かね【鐘／ × 鉦】
+    D しょう【鐘】
+-鑑 (https://www.weblio.jp/content/%E9%91%91, sha256 b73611111ced):
++鑑 (https://www.weblio.jp/content/%E9%91%91, sha256 1f3871227466):
+    D かがみ【鏡／ ▽ 鑑／ × 鑒】
+    D かん【鑑】
+-附 (https://www.weblio.jp/content/%E9%99%84, sha256 26d23fc8432b):
++附 (https://www.weblio.jp/content/%E9%99%84, sha256 f7caaae61e0a):
+    D ぶ【不／ ▽ 附】
+    D ふ【附】
+-陥 (https://www.weblio.jp/content/%E9%99%A5, sha256 3d39b3a7b724):
++陥 (https://www.weblio.jp/content/%E9%99%A5, sha256 ea0e62285c1d):
+    D かん【陥〔陷〕】
+-陰 (https://www.weblio.jp/content/%E9%99%B0, sha256 04811b01eac2):
++陰 (https://www.weblio.jp/content/%E9%99%B0, sha256 a890738d178b):
+    D いん【陰】
+
+Extra readings passed to the reading audits (extra-readings.json), per kanji, where they differ:
+  鎖: とざ.す, さ.す, くさり, さ -> とざ.す, さ.す, じょう, くさり, さ

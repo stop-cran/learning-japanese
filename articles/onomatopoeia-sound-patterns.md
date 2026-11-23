@@ -17,6 +17,20 @@ In these words, repetition often evokes a continuing state or repeated action:
 The second sentence describes a smiling state, not necessarily many separate smiles.
 Do not translate every repeated word with English "again and again."
 
+The newer cards add useful families. [ころり](../words/ころり.md) can describe one
+light roll or fall, while ころころ can describe rolling along.
+[ちらっと](../words/ちらっと.md) can describe a brief glance, whereas
+[ちらちら](../words/ちらちら.md) has intermittent or flickering uses.
+[ふわり](../words/ふわり.md), [ふわっと](../words/ふわっと.md) and
+[ふわふわ](../words/ふわふわ.md) share light, soft movement uses, but ふわふわ can
+also describe a fluffy condition. [ふらっと](../words/ふらっと.md) can describe a
+casual visit, while [ふらふら](../words/ふらふら.md) can describe unsteady movement.
+These are comparisons of selected uses, not rules that repetition always fixes duration.
+
+[すらすら](../words/すらすら.md) can describe fluent reading, whereas
+[すらり](../words/すらり.md) can describe a slender figure. Similar form does not
+make these senses interchangeable.
+
 Other repeated expressions, such as 時々（ときどき）, "sometimes," are not automatically
 onomatopoeia. Repeated shape and membership of this vocabulary family are different questions.
 
@@ -49,10 +63,18 @@ In some mimetic pairs the voiced form suggests more weight, force, or intensity.
 | [くるくる](../words/くるくる.md) / [ぐるぐる](../words/ぐるぐる.md) | Light, quick spinning versus going round and round, often more insistently | Their uses overlap; object size alone does not decide every sentence. |
 | [とんとん](../words/とんとん.md) / [どんどん](../words/どんどん.md) | Light taps versus stronger repeated beats | どんどん also means rapidly or steadily, as in progress. |
 | [ぺたぺた](../words/ぺたぺた.md) / [べたべた](../words/べたべた.md) | Repeated sticking or light contact versus stickiness/clinginess in common uses | Both have additional uses; this is not a universal strength scale. |
+| [くしゃくしゃ](../words/くしゃくしゃ.md) / [ぐしゃぐしゃ](../words/ぐしゃぐしゃ.md) | Both can describe crumpled paper or dishevelled hair | ぐしゃぐしゃ also describes a soggy mess; the uses overlap. |
 
 Handakuten marks /p/ in ぱ, ぴ, ぷ, ぺ, ぽ. Despite its traditional name 半濁点,
 /p/ is **not a "half-voiced" consonant**. Nor does it mean a sensation must be halfway
 between the corresponding h- and b-words.
+For example, [ほろほろ](../words/ほろほろ.md) can describe tender food crumbling or
+quietly falling tears, [ぽろぽろ](../words/ぽろぽろ.md) can describe drops falling
+one by one, and [ぼろぼろ](../words/ぼろぼろ.md) can describe something worn or
+falling apart. These selected uses overlap; their consonants do not define a fixed scale.
+
+For voicing and /p/ in a different setting, see
+[sound changes in compounds](compound-sound-changes.md).
 
 Vowels, long sounds, and consonants can contribute to an impression, but avoid rules such as
 "い always means small" or "voiced always means loud." The lexical meaning and actual sentence
@@ -75,3 +97,6 @@ Compare actual situations in [rain and movement](onomatopoeia-sound-and-movement
 - [Tofugu's introduction](https://www.tofugu.com/japanese/japanese-onomatopoeia/) discusses
   repeated and non-repeated forms and sound-symbolic contrasts. The qualifications above
   deliberately avoid interpreting its broad pattern descriptions as strict rules.
+- The new-batch JMdict/Jisho capture records
+  the new entries and selected senses; the [dictionary capture](https://github.com/stop-cran/learning-japanese/blob/0638544ce1967ccec58ca7f9208c51ce8eaf4f8d/docs/onomatopoeia-next-100-jmdict.json)
+  preserves that record. Linked earlier cards identify their sources.

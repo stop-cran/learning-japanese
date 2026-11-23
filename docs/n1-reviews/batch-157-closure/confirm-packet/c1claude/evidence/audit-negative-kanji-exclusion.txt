@@ -1,0 +1,21 @@
+Negative test at d427f0b0: ledger row {"kanji": "侮", "exclude": ["卑"]} temporarily changed to {"kanji": "侮", "exclude": ["卑", "軽"]}
+Command: python tools\audit_n1_batch.py --batch 157
+Exit code: 1
+Traceback (most recent call last):
+  File "C:\Users\romanko\n1-kanji-workspace\b157-wt\tools\audit_n1_batch.py", line 789, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\romanko\n1-kanji-workspace\b157-wt\tools\audit_n1_batch.py", line 785, in main
+    print(json.dumps(audit(ROOT, args.batch), ensure_ascii=False, indent=2))
+                     ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\romanko\n1-kanji-workspace\b157-wt\tools\audit_n1_batch.py", line 769, in audit
+    require(metadata(root, f"kanji/{row['kanji']}.md")["quiz_exclusions"] == row["exclude"],
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            "Kanji exclusion ledger mismatch")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\romanko\n1-kanji-workspace\b157-wt\tools\freeze_n1_sources.py", line 65, in require
+    raise ValueError(message)
+ValueError: Kanji exclusion ledger mismatch
+
+After restoring the original bytes: exit code 0
+git status --short: 

@@ -1,0 +1,54 @@
+# Repository-wide scan at ba44b280 for links to the deleted word articles and for mentions of 甲乙
+
+$ git grep -n -F "words/乙.md" ba44b280
+(no output)
+
+$ git grep -n -F "(乙.md)" ba44b280
+ba44b280:kanji/亜.md:49:- [乙](乙.md) (“second rank; stylish”): both characters can mark the second place in an order.
+
+$ git grep -n -F "甲乙.md" ba44b280
+(no output)
+
+$ git grep -n -F "甲乙" ba44b280
+ba44b280:docs/n1-reviews/batch-103-rendered-792/applicable-jmdict.xml:5269:      <xref>甲乙丙丁</xref>
+ba44b280:docs/n1-reviews/batch-110-closure/confirm-packet/common/evidence/joyo/p109.txt:26:テイ 丁字路，甲乙丙丁
+ba44b280:docs/n1-reviews/batch-110-closure/supplement/joyo/p109.txt:26:テイ 丁字路，甲乙丙丁
+ba44b280:docs/n1-reviews/batch-131-closure/review/preparation-001/source-contract/original/jmdict-supplemental-families.xml:1693:      <xref>甲乙丙丁</xref>
+ba44b280:docs/n1-reviews/batch-137-closure/confirm-packet/claude2/evidence/meta-scan.txt:8:   丁.md:57: 甲乙 1280080 not listed part of 甲乙丙丁
+ba44b280:docs/n1-reviews/batch-137-closure/confirm-packet/claude2/evidence/meta-scan.txt:9:   丁.md:57: 甲乙丙 1280090 not listed part of 甲乙丙丁
+ba44b280:docs/n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/meta-scan.txt:8:   丁.md:57: 甲乙 1280080 not listed part of 甲乙丙丁
+ba44b280:docs/n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/meta-scan.txt:9:   丁.md:57: 甲乙丙 1280090 not listed part of 甲乙丙丁
+ba44b280:docs/n1-reviews/batch-137-closure/packet/evidence/joyo-pages.md:131:オツ 乙種，甲乙 乙女（おとめ）
+ba44b280:docs/n1-reviews/batch-137-closure/packet/evidence/joyo-pages.md:560:テイ 丁字路，甲乙丙丁
+ba44b280:docs/n1-reviews/batch-137-closure/reports/initial-claude.md:120:  - Joyo p.109 rows: チョウ 丁数/落丁/二丁目 and テイ 丁字路/甲乙丙丁.
+ba44b280:docs/n1-reviews/batch-140-closure/packet/evidence/joyo-pages.md:558:テイ 丁字路，甲乙丙丁
+ba44b280:docs/n1-reviews/batch-140-closure/packet/evidence/joyo-pages.md:650:ヘイ 丙種，甲乙丙
+ba44b280:docs/n1-reviews/batch-143-closure/packet/evidence/joyo-pages.md:696:ヘイ 丙種，甲乙丙
+ba44b280:docs/n1-reviews/batch-147-closure/packet/evidence/joyo-pages.md:82:オツ 乙種，甲乙 乙女（おとめ）
+ba44b280:docs/n1-sources/batch-053-comparison-jmdict.xml:510:      <xref>甲乙丙丁</xref>
+ba44b280:docs/n1-sources/batch-053-jmdict.xml:6:      <keb>甲乙丙</keb>
+ba44b280:docs/n1-sources/batch-053-jmdict.xml:54:      <xref>甲乙丙丁</xref>
+ba44b280:docs/n1-sources/batch-053-jmdict.xml:68:      <keb>甲乙丙丁</keb>
+ba44b280:docs/n1-sources/batch-053-jmdict.xml:90:      <xref>甲乙丙</xref>
+ba44b280:docs/n1-sources/batch-053-progress.json:150:      "disposition": "Rank/label sequence recognition: 甲乙丙こうおつへい and 甲乙丙丁こうおつへいてい. Not automatic extra support articles or new kanji assignments.",
+ba44b280:docs/n1-sources/batch-130/jmdict-complete-families.xml:5931:      <xref>甲乙丙丁</xref>
+ba44b280:docs/n1-sources/batch-131/jmdict-supplemental-families.xml:1693:      <xref>甲乙丙丁</xref>
+ba44b280:docs/n1-sources/batch-134/comparison-readback/丙.json:618:              "甲乙丙丁",
+ba44b280:docs/n1-sources/batch-134/jmdict-complete-families.xml:5548:      <xref>甲乙丙丁</xref>
+ba44b280:kanji/丁.md:57:The official Joyo table, the list of standard-use readings, shows チョウ, with 丁数 ちょうすう, "number of leaves (in a book, esp. one with traditional Japanese-style binding); number of sheets," 落丁 and 二丁目 にちょうめ, the second 丁目, as examples; and テイ, with 丁字路 and 甲乙丙丁 こうおつへいてい, "A, B, C and D; first, second, third and fourth." チン, トウ, チ and ひのと are not in the table. Practice selects チョウ and テイ, the readings with linked word articles; トウ and ひのと are illustrated with dictionary words, and チン and チ have no verified ordinary example. Being outside the practice set is not proof that a reading is invalid.
+ba44b280:kanji/乙.md:31:| オツ | on | [乙種](../words/乙種.md) おつしゅ — B grade; second class. This word establishes the selected reading. 乙 alone is also a word read おつ — second rank; class B; stylish (JMdict entry 1182940), and 甲乙 こうおつ pairs it with 甲 (JMdict entry 1280080). |
+ba44b280:kanji/乙.md:42:- Joyo lists オツ only, with 乙種 and 甲乙, and gives 乙女 おとめ as a special reading; JMdict glosses 乙女 as “(young) girl; maiden; young lady”. Kanjipedia gives イツ, きのと and おと outside the table (外).
+ba44b280:tools/test_audit_n1_source_plan.py:57:        self.word = "甲未" if variant == "teaching" else "甲乙"
+ba44b280:tools/test_audit_n1_source_plan.py:451:              <k_ele><keb>甲乙</keb></k_ele>
+ba44b280:tools/test_audit_n1_source_plan.py:454:                <re_restr>甲乙</re_restr></r_ele>
+ba44b280:tools/test_audit_n1_source_plan.py:459:        self.assertTrue(lexical_pair(entry, "甲乙", "こうおつ"))
+ba44b280:tools/test_audit_n1_source_plan.py:460:        self.assertFalse(teachable_lexical_pair(entry, "甲乙", "こうおつ"))
+ba44b280:words/丙.md:28:甲乙丙丁 (こうおつへいてい) means A, B, C, D.
+ba44b280:words/乙種.md:16:乙種 is a noun for the second class when things are sorted with the labels 甲, 乙 and 丙, like A, B and C. JMdict glosses it as "B-grade; second-class" and refers to 甲乙丙 (こうおつへい), "A, B and C; first, second and third." Digital Daijisen defines it as the second item when things are classified as 甲, 乙, 丙 and so on: 第2種, the second class.
+ba44b280:words/乙種.md:41:Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1862630; also entries 1280150 (甲種), 1907280 (丙種), 1280090 (甲乙丙) and 1182940 (乙). General meaning: [Digital Daijisen, 乙種](https://www.weblio.jp/content/乙種) and [乙種合格](https://www.weblio.jp/content/乙種合格). Component meanings and readings: [Digital Daijisen, 乙](https://www.weblio.jp/content/乙) and [種](https://www.weblio.jp/content/種), and KANJIDIC2's 2026-11-02 records for 乙 and 種.
+
+$ git grep -n -i -F "%E7%94%B2%E4%B9%99" ba44b280 (percent-encoded 甲乙 and 乙.md)
+(no output)
+
+$ git grep -n -i -F "%E4%B9%99.md" ba44b280 (percent-encoded 甲乙 and 乙.md)
+(no output)

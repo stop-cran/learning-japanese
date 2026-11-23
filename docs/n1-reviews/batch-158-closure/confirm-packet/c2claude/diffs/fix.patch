@@ -1,0 +1,85 @@
+diff --git a/docs/n1-sources/batch-158-jmdict-selection.json b/docs/n1-sources/batch-158-jmdict-selection.json
+index 22d25750..2149a0a8 100644
+--- a/docs/n1-sources/batch-158-jmdict-selection.json
++++ b/docs/n1-sources/batch-158-jmdict-selection.json
+@@ -85,6 +85,7 @@
+     "1321470",
+     "1484150",
+     "1706800",
++    "1288370",
+     "1512130",
+     "1590240",
+     "1466980"
+diff --git a/docs/n1-sources/batch-158-jmdict.xml b/docs/n1-sources/batch-158-jmdict.xml
+index fa21dfbf..1bd2be47 100644
+--- a/docs/n1-sources/batch-158-jmdict.xml
++++ b/docs/n1-sources/batch-158-jmdict.xml
+@@ -2226,6 +2226,38 @@
+       <gloss xml:lang="eng">tatami "box seat" for four people at sumo, kabuki, etc.</gloss>
+     </sense>
+   </entry>
++  <entry>
++    <ent_seq>1288370</ent_seq>
++    <k_ele>
++      <keb>腰掛け</keb>
++      <ke_pri>ichi1</ke_pri>
++      <ke_pri>news2</ke_pri>
++      <ke_pri>nf37</ke_pri>
++    </k_ele>
++    <k_ele>
++      <keb>腰掛</keb>
++      <ke_pri>ichi1</ke_pri>
++    </k_ele>
++    <k_ele>
++      <keb>腰かけ</keb>
++    </k_ele>
++    <r_ele>
++      <reb>こしかけ</reb>
++      <re_pri>ichi1</re_pri>
++      <re_pri>news2</re_pri>
++      <re_pri>nf37</re_pri>
++    </r_ele>
++    <sense>
++      <pos>noun (common) (futsuumeishi)</pos>
++      <gloss xml:lang="eng">seat</gloss>
++      <gloss xml:lang="eng">bench</gloss>
++    </sense>
++    <sense>
++      <pos>noun (common) (futsuumeishi)</pos>
++      <misc>colloquial</misc>
++      <gloss xml:lang="eng">temporary job while looking for a better job or until one marries</gloss>
++    </sense>
++  </entry>
+   <entry>
+     <ent_seq>1512130</ent_seq>
+     <k_ele>
+diff --git a/docs/n1-sources/batch-158-progress.json b/docs/n1-sources/batch-158-progress.json
+index e87d7d4e..0abd60ce 100644
+--- a/docs/n1-sources/batch-158-progress.json
++++ b/docs/n1-sources/batch-158-progress.json
+@@ -1050,7 +1050,7 @@
+   },
+   "mechanicalChecks": {
+     "contentValidation": "Passed: tools/validate.py reported 0 errors.",
+-    "batchAudit": "Passed: 10 kanji, 10 new words, 10 changed existing articles, 30 reading dispositions, and 86 complete JMdict families; the manifest is fresh.",
++    "batchAudit": "Passed: 10 kanji, 10 new words, 10 changed existing articles, 30 reading dispositions, and 87 complete JMdict families; the manifest is fresh.",
+     "unitTests": "Passed: the whole tools suite (439 tests), including test_audit_n1_batch.py and test_validate.py.",
+     "n1Lint": "The targeted lean lint against base ad1694c1 reported four pre-existing errors in reused cards: kanji/師.md (metadata reading いくさ has no Readings row), kanji/観.md (み.る and しめ.す) and kanji/負.md (ま.かす). All four metadata readings are present without a Readings row at base commit ad1694c1fe537a090c712065e77c480deb9edf4d; B158 only appends a reciprocal word link to each of these cards. The 59 warnings are all on reused cards and words. No B158 kanji card or new word was reported.",
+     "whitespace": "Passed with core.whitespace=cr-at-eol to respect the repository's CRLF files, including the new untracked files.",
+diff --git a/words/升.md b/words/升.md
+index 484b63c0..c9a4db24 100644
+--- a/words/升.md
++++ b/words/升.md
+@@ -25,10 +25,10 @@ This is a single-kanji word. The character [升](../kanji/升.md) is read ます
+ 
+ ## Synonyms and antonyms
+ 
+-[箱](箱.md) (はこ) is a box in general; a 升 is a box used for measuring. [容器](容器.md) (ようき) is any container.
++[箱](箱.md) (はこ) is a box in general; a 升 is a box used for measuring. [容器](容器.md) (ようき) is any container. [腰掛け](腰掛け.md) (こしかけ) is a seat or bench (JMdict entry 1288370); in its second sense, 升 is a whole box of seating, such as a 升席, not a single seat or bench.
+ 
+ ## Distinctive meaning
+ 
+ Read しょう, the same character is the volume unit shō, about 1.8 litres (JMdict entry 2248100). JMdict also lists 枡 and 桝 as spellings of ます.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1346290, senses 1–2; compare entries 2248100 and 1706800.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1346290, senses 1–2; compare entries 2248100, 1706800 and 1288370.

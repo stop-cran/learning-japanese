@@ -23,6 +23,11 @@ With many of these words, both direct and `と` forms fit a supplied verb: **ざ
 
 ## Warmth is not one interchangeable meaning
 
+[とろとろ](../words/とろとろ.md) can describe melted, soft food, but **とろとろと煮込む**
+describes gentle simmering. With a moving vehicle, it can instead describe slow movement.
+The supplied verb and situation select the use; slow cooking does not by itself establish
+the finished texture.
+
 [ぽかぽか](../words/ぽかぽか.md) often describes pleasant warmth, but **ぽかぽかとたたく** depicts repeated thumps. The verb selects that different use; it does not say the object gets warm.
 
 [ほかほか](../words/ほかほか.md) suits inviting warmth in food, towels or bedding. [ほくほく](../words/ほくほく.md) can describe a fluffy cooked interior, not merely high temperature. With a person pleased about good fortune, **ほくほくしている** instead describes satisfaction.

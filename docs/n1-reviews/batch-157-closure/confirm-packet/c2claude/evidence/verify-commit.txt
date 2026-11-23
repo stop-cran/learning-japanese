@@ -1,0 +1,16 @@
+Command: git log -1 --format='%G? %GK %s' for every first-parent commit cd5d75d1..24201899 (G = good signature, then the signing key), then git verify-commit for each
+== 2420189965098bd34bdb227a0efbe320d558c612 G 9D94B9D311BD26A7 B157: refresh the ledger's manifest version
+== 0daebfba81712edb61521ded4d8446177f49b054 G 9D94B9D311BD26A7 B157: replace generic 男 distractor on 侍 with 雨
+== 81142e4a239f552db1a3b8f078eb04dec0113294 G 9D94B9D311BD26A7 B157: confirmation fixes for 倫, 倫理 and four distractor sets
+== git verify-commit 24201899
+gpg: Signature made 11/22/26 18:48:35 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+== git verify-commit 0daebfba
+gpg: Signature made 11/22/26 18:31:26 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+== git verify-commit 81142e4a
+gpg: Signature made 11/22/26 18:06:56 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]

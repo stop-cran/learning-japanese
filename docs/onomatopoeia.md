@@ -7,7 +7,12 @@ The second content batch expands the collection to **200 tagged cards** and seve
 The subsequent ぶかぶか addition brought the collection to **201 tagged cards**.
 Later N2 additions どっと and ぶつぶつ brought the collection to **203 tagged cards**;
 the expansion inventory at `af451575` reconciles both without changing their identities or levels.
-The subsequent みっちり and のびのび cards bring the collection to **205 tagged cards**, without adding Grammar exercises.
+The subsequent みっちり and のびのび cards brought the collection to **205 tagged cards**, without adding Grammar exercises.
+The next 100 cards bring the collection to **305 tagged cards**. Their draft practice comprises
+203 exercises in 11 sets. The [source ledger](onomatopoeia-next-100-sources.json) and
+[JMdict capture](onomatopoeia-next-100-jmdict.json) record the selected senses and exercises;
+independent linguistic, editorial and exercise vocabulary reviews remain pending. The new
+illustrations are article-only pending owner acceptance.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
@@ -47,6 +52,9 @@ also records their dictionary identities, snapshot hashes, inspection dates and 
 The later どっと and ぶつぶつ cards use entries 1009210 and 1011200 respectively. Their complete
 families and selected Grammar uses are preserved in the expansion ledger; the unrelated
 loanword ドット is not substituted for the sudden-burst identity.
+Their later pictures show a crowd rushing in, muttering, and small skin bumps. These three
+scenes are article-only pending owner visual review; prompts and observations are in the
+named-scene record. A still cannot uniquely establish the sudden rush or the sound of muttering.
 
 The original batch records identify the inspected local JMdict snapshot by file hashes. Its upstream release date
 has not been established; it is not asserted to be the same snapshot as the earlier
@@ -115,8 +123,15 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 205 tagged cards, retaining the two historical 100-word groups
-and listing later additions separately. The focused
+The overview links to all 305 current tagged cards, retaining the two historical 100-word groups
+and listing later additions separately. Five new guides cover
+[fit and disorder](../articles/onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md),
+[movement and progress](../articles/onomatopoeia-light-movement-and-progress.md),
+[body and texture](../articles/onomatopoeia-body-and-texture.md), and
+[food and water](../articles/onomatopoeia-food-and-water.md). Each mixed Grammar cohort
+points to a best-fit guide, with links to the others; exercise identities are unchanged.
+The earlier focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.
 Confusable pairs are recorded in [the inventory](confusable-words.md).

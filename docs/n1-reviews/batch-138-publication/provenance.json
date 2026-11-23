@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "batch": 138,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "a2a0f3dfdf459a95a75ead88b79d3b57971269c7",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/a2a0f3dfdf459a95a75ead88b79d3b57971269c7",
+  "base": "e7eb6886e0b05cb84d9b60d268513b316ad71a82",
+  "initialSnapshot": "b6020f9e490298de1756e33c51bf9ce314132f4e",
+  "reviewedSnapshot": "3158b2b97cc9ba61368b722d0c45c37536a909c5",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44309389145",
+    "runId": 44309389145,
+    "receiptSha256": "cd07428c177088d351a6bdda3148772de58cd89ff386d372e90ab10533bb189e"
+  },
+  "archive": {
+    "zipSha256": "0d6c8c3337d20da168d175c971f945769c51d764e1d26c6dc7e30d58da9df767",
+    "receiptSha256": "01dbfee1df79de49023a73c331e587bc0ebe319528a328661e4c288eb2f5e93e",
+    "verifiedRuntimeHashes": 8906,
+    "contentVersion": "f12cfb2bc2075c5b",
+    "manifestSha256": "ae11e20903c66f72bdc0f283cb8364c862418833893f2301400fe6da99f5ce5b"
+  },
+  "reviewIdentity": "B138 textual review closed on 3158b2b9 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of b6020f9e; the confirmations of acf7297e and 3158b2b9 (both reviewers) were later turns of the same two reviewer agents, not fresh agents (see batch-138-closure). Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 332,
+    "n1Additions": 326,
+    "n2Placements": 6,
+    "remaining": 896,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "9 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 噴 ほん and はく, 塊 ほど, 壁 がけ, 壊 やぶれる, 契 きつ, けつ and せつ, and 奪 とる.",
+    "One KANJIDIC2 name-only reading can be drawn as a wrong option and is disclosed, not fixed: 執 し on the シツ prompt in a Starter practice session.",
+    "噴 and 契 use Starter-card distractors (口 古 買; 大 天 分) so that all three wrong options are curated in every pool; with tag-similar distractors, Kanjipedia's 外 readings ホン of 噴 and ケツ of 契 could be offered in Starter sessions.",
+    "3 lint warnings on existing word articles' Dictionary lines (噴火, 墨, 威張る) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 噴 ふ.く, 垂 た.れる and た.らす, 堅 ケン, 塊 カイ, 墨 ボク, 壁 ヘキ, 壊 カイ, 奏 かな.でる, 奪 ダツ and 妨 ボウ; seven cards quiz only their on reading and eight only their kun readings.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "Claude's initial review had two tool calls in flight twice; its report discloses one of the two.",
+    "The scope audits do not attribute reads made through shell loops or Python, so audits list cards as unread that the reports say were read; the author checked those claims against the session events.",
+    "Claude's C2 suggestion named セツ as a Kanjipedia reading of 契; Kanjipedia lists キツ and ケツ only, and セツ is the reading of Daijisen's proper-name headword せつ【契】, so the card names キツ and ケツ.",
+    "The 押妨 gloss on 妨 rests on its Weblio page (Digital Daijisen and a dictionary of historical terms); 押妨 has no JMdict entry.",
+    "Fix 1 had an earlier local version (f8f488d1) with a different 押妨 gloss, and fix 2 one (a93ce9c0) with a different commit message; neither was reviewed or published.",
+    "The reading audits in the original packet and the first confirmation packets left out some --extra readings of 垂, 執, 壊, 奏 and 奪: a second --extra for a kanji replaced the first in the author's audit tools. The tools and gate runner were fixed outside the repository; the corrected audits in the second confirmation packets supersede them and add one latent collision, 壊 やぶれる (9 in all).",
+    "The packet builder dropped every blank line from the check outputs it summarized, so the first confirmation packets' quiz-safety.txt had one blank line fewer than the original packet's copy; the second packets copy it byte for byte.",
+    "Neither audit tool models a custom pool without a target's curated distractor cards, where the nine latent readings could be offered as wrong options.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

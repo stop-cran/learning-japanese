@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "id": "onomatopoeia-next-100",
+  "title": "More onomatopoeia in context",
+  "article": "articles/onomatopoeia-food-and-water.md",
+  "constructions": [
+    {
+      "id": "onoma-new-adverb",
+      "label": "Manner with a supplied verb"
+    },
+    {
+      "id": "onoma-new-modifier",
+      "label": "A texture attached to a noun"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "onoma-new-manner",
+      "label": "Fit the supplied word to the sentence",
+      "constructions": [
+        "onoma-new-adverb",
+        "onoma-new-modifier"
+      ]
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "onoma-new-manner-contexts",
+      "label": "Manner and food texture",
+      "facets": [
+        {
+          "id": "manner",
+          "label": "Manner with a supplied verb"
+        },
+        {
+          "id": "modifier",
+          "label": "A texture attached to a noun"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "onoma-new-torotoro-simmer",
+          "facetId": "manner",
+          "exampleKey": "onoma-new-gentle-soup-simmer"
+        },
+        {
+          "exerciseId": "onoma-new-torotoro-tram",
+          "facetId": "manner",
+          "exampleKey": "onoma-new-slow-tram"
+        },
+        {
+          "exerciseId": "onoma-new-torotoro-cheese",
+          "facetId": "modifier",
+          "exampleKey": "onoma-new-melted-cheese-toast"
+        },
+        {
+          "exerciseId": "onoma-new-torotoro-omelette",
+          "facetId": "modifier",
+          "exampleKey": "onoma-new-soft-omelette"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "onoma-new-torotoro-simmer",
+      "target": "onoma-new-adverb",
+      "relationship": "onoma-new-manner",
+      "prompt": "スープを弱火で____煮込む。",
+      "translation": "Use とろとろ in hiragana to describe gentle cooking. Fill the blank with the word and a particle if appropriate; keep the supplied verb.",
+      "evidence": "The supplied verb describes simmering the soup over low heat.",
+      "explanation": "スープを弱火でとろとろ（と）煮込む means to simmer the soup gently over low heat. The wording describes the cooking, not necessarily a thick result.",
+      "answer": "onoma-new-adverb",
+      "acceptedAnswers": [
+        "とろとろ",
+        "とろとろと"
+      ],
+      "options": [
+        {
+          "id": "onoma-new-adverb",
+          "label": "とろとろ",
+          "rationale": "The word can modify the supplied simmering verb directly."
+        },
+        {
+          "id": "onoma-new-modifier",
+          "label": "とろとろした",
+          "rationale": "This leaves an unlinked predicate before the supplied verb."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "onoma-new-with-to",
+          "label": "とろとろと",
+          "rationale": "と can attach the description to the supplied verb."
+        }
+      ]
+    },
+    {
+      "id": "onoma-new-torotoro-tram",
+      "target": "onoma-new-adverb",
+      "relationship": "onoma-new-manner",
+      "prompt": "市電が____走っている。",
+      "translation": "Use とろとろ in hiragana to describe a tram moving slowly. Fill the blank with the word and a particle if appropriate; keep the supplied verb.",
+      "evidence": "The supplied verb describes the tram's movement.",
+      "explanation": "市電がとろとろ（と）走っている means that the tram is moving slowly. Here とろとろ describes the pace, not melted food.",
+      "answer": "onoma-new-adverb",
+      "acceptedAnswers": [
+        "とろとろ",
+        "とろとろと"
+      ],
+      "options": [
+        {
+          "id": "onoma-new-adverb",
+          "label": "とろとろ",
+          "rationale": "The word can describe the way the tram is moving."
+        },
+        {
+          "id": "onoma-new-modifier",
+          "label": "とろとろした",
+          "rationale": "This leaves an unlinked predicate before the supplied verb."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "onoma-new-with-to",
+          "label": "とろとろと",
+          "rationale": "と can attach the description to the supplied verb."
+        }
+      ]
+    },
+    {
+      "id": "onoma-new-torotoro-cheese",
+      "target": "onoma-new-modifier",
+      "relationship": "onoma-new-manner",
+      "prompt": "トーストに____チーズをのせた。",
+      "translation": "Use とろとろ in hiragana to describe the cheese's melted texture. Fill the blank with the word and a connector to the supplied noun.",
+      "evidence": "The texture description comes immediately before the noun チーズ.",
+      "explanation": "とろとろのチーズ describes soft, melted cheese. とろとろしたチーズ and とろとろとしたチーズ also attach the description to the noun.",
+      "answer": "onoma-new-modifier",
+      "acceptedAnswers": [
+        "とろとろの",
+        "とろとろした",
+        "とろとろとした"
+      ],
+      "options": [
+        {
+          "id": "onoma-new-modifier",
+          "label": "とろとろの",
+          "rationale": "の links the texture description to チーズ."
+        },
+        {
+          "id": "onoma-new-adverb",
+          "label": "とろとろと",
+          "rationale": "と alone does not attach this description to the noun."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "onoma-new-with-shita",
+          "label": "とろとろした",
+          "rationale": "した can form a modifier before a noun."
+        },
+        {
+          "id": "onoma-new-with-to-shita",
+          "label": "とろとろとした",
+          "rationale": "とした also forms a modifier before a noun."
+        }
+      ]
+    },
+    {
+      "id": "onoma-new-torotoro-omelette",
+      "target": "onoma-new-modifier",
+      "relationship": "onoma-new-manner",
+      "prompt": "____オムレツを食べた。",
+      "translation": "Use とろとろ in hiragana to describe the omelette's soft texture. Fill the blank with the word and a connector to the supplied noun.",
+      "evidence": "The texture description comes immediately before the noun オムレツ.",
+      "explanation": "とろとろのオムレツ describes a soft, runny omelette. とろとろしたオムレツ and とろとろとしたオムレツ also attach the description to the noun.",
+      "answer": "onoma-new-modifier",
+      "acceptedAnswers": [
+        "とろとろの",
+        "とろとろした",
+        "とろとろとした"
+      ],
+      "options": [
+        {
+          "id": "onoma-new-modifier",
+          "label": "とろとろの",
+          "rationale": "の links the texture description to オムレツ."
+        },
+        {
+          "id": "onoma-new-adverb",
+          "label": "とろとろと",
+          "rationale": "と alone does not attach this description to the noun."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "onoma-new-with-shita",
+          "label": "とろとろした",
+          "rationale": "した can form a modifier before a noun."
+        },
+        {
+          "id": "onoma-new-with-to-shita",
+          "label": "とろとろとした",
+          "rationale": "とした also forms a modifier before a noun."
+        }
+      ]
+    }
+  ]
+}

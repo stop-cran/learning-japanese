@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "batch": 137,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "c1d2e3a746ab8c5b832a532a8ba81522420e2a58",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/c1d2e3a746ab8c5b832a532a8ba81522420e2a58",
+  "base": "2532beecec978156528e83252bf05eb0bc0f8e21",
+  "initialSnapshot": "d3c7394d38992b24d3689bc984fdb4a6cf60bc54",
+  "reviewedSnapshot": "48332d3258953779dda24c0df6fb1c649e6defbb",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44279660858",
+    "runId": 44279660858,
+    "receiptSha256": "f15ee5422fc1c38c4c18425f884f3c35ace5d8ae9ee7438f9a501ff3f2fc7cce"
+  },
+  "archive": {
+    "zipSha256": "74c4ea1ad16b7ea38319d8403868deffd163b55be3334d73f536bcff8607a639",
+    "receiptSha256": "4ea733e99d5a889007766f01c0eb453176c506c7946ea95f66d214010c99355b",
+    "verifiedRuntimeHashes": 8876,
+    "contentVersion": "5546e3a8ab9fbcad",
+    "manifestSha256": "19e9a14619dbb1370330360de9c28e9953d8ae7181fe55c9d03e5b5e286ed9e4"
+  },
+  "reviewIdentity": "B137 textual review closed on 48332d32 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of d3c7394d; the confirmations of 2bc8e9b1 (Claude) and 48332d32 (both) were later turns of the same two reviewer agents, not fresh agents (see batch-137-closure). Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 317,
+    "n1Additions": 311,
+    "n2Placements": 6,
+    "remaining": 911,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "8 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools.",
+    "One KANJIDIC2 name-only reading can be drawn as a wrong option and is disclosed, not fixed: 唯 ゆ on the ユイ prompt in a Starter session that also borrows 油 or 輸.",
+    "4 lint warnings on existing word articles' Dictionary lines (井戸, 但し, 吐き気, 風呂敷) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 傷 ショウ, 哀 アイ, 吐 ト, 井 セイ, 仰 ギョウ and あお.ぐ, and 善 よ.い; nine cards quiz only on readings and six only kun readings.",
+    "火傷 やけど is a gikun reading in the pinned JMdict (1577310), so it does not support a 傷 reading.",
+    "Daijisen labels the ロ of 語呂 and 風呂 as 当て字; the pinned JMdict does not mark those spellings ateji and the Joyo table lists 風呂 under ロ, so ロ is quizzed under the rule.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "Claude's initial review once had two view calls in flight and was summarized after a context compaction for 丁 to 卸; its final message prefixes the report with a summary that says 12 cards where the report says ten.",
+    "The scope audits do not attribute reads made through shell loops or Python, so all three confirmations show cards as unread that their reports say were read; the author checked those claims against the session events. The GPT audits' flags are false positives (a Python ** operator and, in both GPT runs, a relative path to the run's own report).",
+    "GPT's reports cannot name the exact model (the runtime records gpt-6.1-sol); its confirmation did not verify the 42 and 10 published-card counts behind the OP decline, read meta_scan.py without running it and checked the four added Metadata ids directly.",
+    "'Only in つかえのよほろ' (丁) rests on the author's search of the pinned JMdict; Claude found no よほろ headword in WWWJDIC.",
+    "The Metadata-line rule (every word named on a card has its JMdict id listed) is the author's writing rule, not checked by lint; meta_scan.py found 19 such gaps in the 31 published cards of batches 134-136 (docs/n1-reviews/batch-137-closure/meta-scan-b134-b136.txt), left for a later sweep.",
+    "Fix 2 had two earlier local versions (0c7f25fe, fa9be05c) and a GPT confirmation packet was built for fix 1 and replaced before sending; none was reviewed or published.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

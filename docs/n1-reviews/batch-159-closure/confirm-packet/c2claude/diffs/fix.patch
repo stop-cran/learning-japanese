@@ -1,0 +1,93 @@
+diff --git a/docs/n1-sources/batch-159-progress.json b/docs/n1-sources/batch-159-progress.json
+index ae099def..975fe9b0 100644
+--- a/docs/n1-sources/batch-159-progress.json
++++ b/docs/n1-sources/batch-159-progress.json
+@@ -26,7 +26,7 @@
+     "呈",
+     "呉"
+   ],
+-  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with at least one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 135, 137, 139, 140, 146, 147, 148, 150, 152, and 153 are the first ten remaining Joyo rows after B158. Every new support word's other kanji already has a card. 又 is supported by the existing kana-headed articles または (spelling 又は, ichi1/news1) and また (spelling 又), under point 2 of the owner-accepted rule for B156 onward: an existing article, including a kana-headed one, is linked instead of adding a new one. Three rows take the rule's untagged route, each with a row-specific justification in its support mapping that must receive independent review: 叔 (伯叔; the tags on 叔父 and 叔母 belong to the whole-word readings おじ and おば), 后 (太后; the tagged 皇后 and 皇太后 need 皇, which has no card), and 吏 (官吏; no 吏 word carries a qualifying tag, and 官吏 has only news2/spec2).",
++  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with at least one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 135, 137, 139, 140, 146, 147, 148, 150, 152, and 153 are the first ten remaining Joyo rows after B158. Every new support word's other kanji already has a card. 又 is supported by the existing kana-headed articles または (spelling 又は, ichi1/news1) and また (spelling 又), under point 2 of the owner-accepted rule for B156 onward: an existing article, including a kana-headed one, is linked instead of adding a new one. Two rows take the rule's untagged route, each with a row-specific justification in its support mapping that must receive independent review: 后 (太后; the tagged 皇后 and 皇太后 need 皇, which has no card) and 吏 (官吏; no 吏 word carries a qualifying tag, and 官吏 has only news2/spec2). The 叔 row uses the untagged 伯叔 as an author's exception to point 2's preference for a tagged spelling, reported to the owner: the tagged spellings 叔父 and 叔母 have the シュク readings しゅくふ and しゅくぼ, but those readings carry no tag, and the tags belong to the whole-word readings おじ and おば. B156 applied the same interpretation to 伯 (伯仲). The exception is recorded in the 叔 support mapping and must receive independent review.",
+   "supportMappings": [
+     {
+       "kanji": "厘",
+@@ -75,7 +75,7 @@
+       ],
+       "newArticle": true,
+       "priorityTags": [],
+-      "exceptionReason": "No candidate qualifies through a reading of 叔. The spellings 叔父 (entry 1607070) and 叔母 (entry 1607100) carry ichi1/news1, but their tagged readings are the whole-word readings おじ and おば, which the Joyo table lists in its notes for 叔 as special readings of 叔父 and 叔母, not as readings of 叔 alone. Their シュク readings しゅくふ and しゅくぼ are restricted to those spellings and carry no priority tag, and an article headed 叔父 or 叔母 would teach おじ or おば as its primary reading. This matches 伯父 and 伯母 for 伯 in B156, where 伯仲 was accepted. All other candidates written with 叔, including 叔世 and the おじ/おば compounds such as 大叔父 and 叔父さん, are untagged, so the untagged route of the issue #60 rule applies, with a row-specific justification. 伯叔 (entry 1474270) is the Joyo table's only example for シュク; its other kanji 伯 has a card; its spelling and reading carry no irregular, rare, outdated, ateji, or gikun mark; and it backs the quizzed on reading シュク. JMdict glosses it “brothers; one's father's brothers”. Keep this explicit untagged exception for independent review."
++      "exceptionReason": "This row is an author's exception to the preference in point 2 of the issue #60 rule, reported to the owner for a decision. Under the letter of point 2, the tagged spellings 叔父 (entry 1607070) and 叔母 (entry 1607100), both ichi1/news1, are candidates: their readings しゅくふ and しゅくぼ, restricted to those spellings, use the KANJIDIC2 reading シュク and carry no irregular, rare, outdated, ateji, or gikun mark. They are not used because the tags in those entries belong to the whole-word readings おじ and おば, which the Joyo table lists in its notes for 叔 as special readings of 叔父 and 叔母; しゅくふ and しゅくぼ carry no priority tag; and an article headed 叔父 or 叔母 would teach おじ or おば as its primary reading, not シュク. B156 applied the same interpretation to 伯父 and 伯母 when it kept 伯仲 for 伯, and all three review families accepted that row. Every other candidate written with 叔, including 叔世 and the おじ/おば compounds such as 大叔父 and 叔父さん, is untagged. 伯叔 (entry 1474270) is untagged and is the Joyo table's only example for シュク; its other kanji 伯 has a card; its spelling and reading carry no irregular, rare, outdated, ateji, or gikun mark; and it backs the quizzed on reading シュク. JMdict glosses it “brothers; one's father's brothers”. If the owner prefers the letter of point 2, the fallback is an article headed 叔父 whose reading is しゅくふ. Keep this exception for independent review."
+     },
+     {
+       "kanji": "叙",
+@@ -423,7 +423,8 @@
+           "査",
+           "調",
+           "究",
+-          "研"
++          "研",
++          "験"
+         ]
+       },
+       {
+@@ -943,10 +944,10 @@
+     "unitTests": "Passed: the whole tools suite (444 tests), including test_audit_n1_batch.py with five new tests for kana-headed support spellings, and test_validate.py.",
+     "n1Lint": "The targeted lean lint against base 2787e43b reported three pre-existing errors in reused cards: kanji/太.md (metadata reading タ has no Readings row) and kanji/情.md (セイ and なさ.け). Both are present at base commit 2787e43b5706a569d83627849aa40ed3582a7d18; B159 only adds one line to each of these cards. Of the 37 warnings, 35 are on reused cards and words. The other two are on kanji/又.md: its また examples または and また do not list 又 in their kanji: front matter. They cannot, because tools/validate.py rejects a kanji: entry that does not occur in the headword, and both headwords are kana. The batch audit and quiz-safety checks accept this support through the spellings 又は and 又 recorded in the support mappings. No new word was reported.",
+     "whitespace": "Passed with core.whitespace=cr-at-eol to respect the repository's CRLF files, including the new untracked files.",
+-    "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning and reading questions, and every distractor and quiz exclusion is named with its card title in the card's Notes. For 又, the selected reading また is backed by the kana-headed articles または and また through the ledger spellings 又は and 又, which the check now accepts in the same way as the repository audit.",
++    "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning question. For the reading questions, reading_exposure.py shows that the curated options fill all three wrong slots in every outcome for nine cards; for 吟's ギン prompt, 二 (ニ, ジ) and 自 (ジ, シ) both show ジ in one of four outcomes, and the fallback then fills the open slot (61 drawable wrong options in the N1 and All stacks, 4 curated and 57 fallback; 27 in the Starter practice session) with no exposure hit. In addition, every distractor and quiz exclusion is named with its card title in the card's Notes. For 又, the selected reading また is backed by the kana-headed articles または and また through the ledger spellings 又は and 又, which the check now accepts in the same way as the repository audit.",
+     "readingExposure": "lean reading_exposure.py --seeds 200 with the --extra list below: 0 production hits, 0 padded-session hits and 0 one-holder padded hits; 10 latent collisions that no N1, All or Starter pool can draw (厘 り; 又 やす and ふたたび; 吉 え, き, と, よ and えい; 吏 し; 呉 ぐ).",
+     "readingExtras": "又 ユウ, ふたた.び; 叔 わか.い; 叙 の.べる; 吉 よ.い, え.い; 后 ゴ, のち, きさき, きみ; 吏 つかさ; 吟 うた.う, うめ.く; 呈 しめ.す; 呉 くれ, く.れる. Sources: the readings Kanjipedia marks as outside the official table (外) for each kanji (厘 has none); the kun readings in the Digital Daijisen character entries (叙 のべる, 吉 よい, 后 きさき, 呉 くれ and くれる), which add nothing new; and a JMdict okurigana scan of kanji-plus-kana headwords, skipping search-only forms (吉 え.い from 吉い in 1605820, a rarely used kanji form with an out-dated kana reading). The scan's じょする, じょす, ぎんじる, ぎんずる, ていする and ていす reuse the on readings, which are already excluded. reading_exposure.py also reads the JMdict single-kanji entries itself (for example 厘 り, JMdict 1555420).",
+     "readingOptions": "lean reading_options.py with the same --extra list: 0 problems. The only informational note is 呉 ぐ, a KANJIDIC2 name-only reading offered by 供, 具, 工 and 求."
+   },
+-  "status": "Candidate under independent review; not published. The 叔, 后 and 吏 untagged-support exceptions and the kana-headed 又 support remain subject to review."
++  "status": "Candidate under independent review; not published. The 后 and 吏 untagged-support exceptions, the 叔 exception to the tagged-spelling preference (reported to the owner), and the kana-headed 又 support remain subject to review."
+ }
+diff --git a/kanji/吟.md b/kanji/吟.md
+index ce674eb6..d76de21c 100644
+--- a/kanji/吟.md
++++ b/kanji/吟.md
+@@ -11,7 +11,7 @@ kunyomi: []
+ quizOnyomi: [ギン]
+ quizKunyomi: []
+ distractors: [二, 自, 社]
+-quiz_exclusions: [詩, 歌, 謡, 句, 検, 審, 査, 調, 究, 研]
++quiz_exclusions: [詩, 歌, 謡, 句, 検, 審, 査, 調, 究, 研, 験]
+ ---
+ 
+ # 吟 — recite poetry; chant
+@@ -39,7 +39,7 @@ quiz_exclusions: [詩, 歌, 謡, 句, 検, 審, 査, 調, 究, 研]
+ 
+ JMdict marks reciting and appreciating traditional poetry as the original meaning of 吟味 (entry 1243390, sense 4, archaic), and Digital Daijisen also marks that sense as the original one. Kanjipedia also gives the kun readings うた.う and うめ.く, marked as outside the Joyo table (外); they are not in this card's metadata and are not quizzed.
+ 
+-詩 (“poem; poetry”) appears with 吟 in 詩吟, 歌 (“song, sing”) and 謡 (“ballad; Noh chanting”) overlap with chanting or singing verse, and 句 (“phrase; verse”) names a verse. 検 (“inspect; examine; check”), 審 (“examine; judge; trial”), 査 (“investigate; inspect”), 調 (“investigate; tune”), 究 (“investigate thoroughly”) and 研 (“polish; study closely”) overlap with the sense of examining something closely, as in 吟味.
++詩 (“poem; poetry”) appears with 吟 in 詩吟, 歌 (“song, sing”) and 謡 (“ballad; Noh chanting”) overlap with chanting or singing verse, and 句 (“phrase; verse”) names a verse. 検 (“inspect; examine; check”), 審 (“examine; judge; trial”), 査 (“investigate; inspect”), 調 (“investigate; tune”), 究 (“investigate thoroughly”), 研 (“polish; study closely”) and 験 (“test; verify”) overlap with the sense of examining something closely, as in 吟味.
+ 
+ The meaning-quiz distractors are 二 (“two”), 自 (“self, oneself”), and 社 (“company, shrine”); none means reciting poetry.
+ 
+diff --git a/words/吟味.md b/words/吟味.md
+index 85a479a1..01c81abf 100644
+--- a/words/吟味.md
++++ b/words/吟味.md
+@@ -21,7 +21,7 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## How the kanji combine
+ 
+-[吟](../kanji/吟.md) can mean reciting poetry, but here it has its sense of examining contents closely: Digital Daijisen lists 吟味 under that sense of 吟. [味](../kanji/味.md) means taste or savoring. Reciting a poem and savoring its flavor is the original meaning of 吟味 in both JMdict (sense 4, archaic) and Digital Daijisen (sense 3).
++[吟](../kanji/吟.md) can mean reciting poetry, but here it has its sense of examining contents closely: Digital Daijisen lists 吟味 under that sense of 吟. [味](../kanji/味.md) means taste or savoring. Both sources mark poetry recitation as the original meaning of 吟味: Digital Daijisen sense 3 is reciting a poem and savoring its flavor, and JMdict sense 4 (archaic) is “reciting and appreciating traditional poetry”.
+ 
+ ## Synonyms and antonyms
+ 
+diff --git a/words/太后.md b/words/太后.md
+index d8533196..60942413 100644
+--- a/words/太后.md
++++ b/words/太后.md
+@@ -12,7 +12,7 @@ quiz_exclusions: [女王]
+ 
+ ## Meaning
+ 
+-太后 is an empress dowager or queen mother. JMdict glosses it as “empress dowager; queen mother,” and Digital Daijisen defines it as a title for a grand empress dowager (太皇太后) or an empress dowager (皇太后). In plain terms, Digital Daijisen describes 皇太后 as the empress of the previous emperor, or one who is also the current emperor's birth mother, and 太皇太后 as the empress of the emperor two reigns back.
++太后 is an empress dowager or queen mother. JMdict glosses it as “empress dowager; queen mother,” and Digital Daijisen defines it as a title for a grand empress dowager (太皇太后) or an empress dowager (皇太后). In plain terms, Digital Daijisen describes 太皇太后 as the empress of the emperor two reigns back and 皇太后 as the empress of the previous emperor; in a narrower sense, 皇太后 is such an empress who is also the current emperor's birth mother.
+ 
+ - 太后は若い皇帝を支えました。 (たいこうはわかいこうていをささえました。) — The empress dowager supported the young emperor.
+ - 歴史ドラマで、太后が大きな力を持つ場面がありました。 (れきしドラマで、たいこうがおおきなちからをもつばめんがありました。) — In a historical drama, there was a scene in which the empress dowager held great power.

@@ -1,0 +1,8 @@
+Snapshot: commit 77f567338afc45908c3a8961dbbe24772bd0f9fb; reviewer model not exposed
+Scope: All 17 snapshot kanji cards, 10 word cards, 10 stroke files, and 8 diffs; pinned metadata/JMdict/KANJIDIC2 evidence and relevant format, rubric, link/title/confusable context. All four facets reviewed; scoped coverage deepest.
+Verdicts: correctness — NEEDS FIX (words/侮る.md:17 translation); scoped coverage — NEEDS FIX (kanji/佐.md:27-39; source-only reading); consistency and quiz safety — CLEAN (links resolve, titles unique, kanji/word links and exclusions checked); comprehensibility — NEEDS FIX (words/侮る.md:17).
+Findings:
+1. Minor; scoped coverage; kanji/佐.md:27-39. The table gives サ/補佐 but does not qualify the additional, rare source spelling 佐ける (たすける), despite the card teaching 佐 as “help.” Remedy: note it as a rare, non-quiz spelling and distinguish it from usual 助ける. Evidence: pinned JMdict entry 1344410 marks 佐ける “rarely used kanji form”; Weblio Digital Daijisen’s 佐 entry lists kun readings たすける and すけ (https://www.weblio.jp/content/%E4%BD%90). Confidence: high on source evidence; moderate on learner impact.
+2. Minor; correctness/comprehensibility; words/侮る.md:17. “Do not look down on your opponent’s strength” is awkward and blurs the sentence’s “underestimate” sense. Remedy: translate as “Do not underestimate your opponent’s strength.” Evidence: JMdict entry 1583670 and Weblio Digital Daijisen’s 侮る entry give “look down on / make light of” (https://www.weblio.jp/content/%E4%BE%AE+%E3%82%8B); the Japanese target is 相手の力. Confidence: high.
+Optional: none.
+Limits: No native-speaker or runtime/phone acceptance; no exhaustive survey of historical, name-only, or dialect readings. Pinned dictionary versions may differ from current online data.

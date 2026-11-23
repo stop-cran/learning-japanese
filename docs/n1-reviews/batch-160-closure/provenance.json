@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "batch": 160,
+  "status": "textual-review-closed",
+  "base": "e946e840fcf6fc5f530758d861390af77936cd1e",
+  "reviewedHead": "fdf0df122332d39b18c4d36c04e9cde98f591baf",
+  "reviewedSnapshotDiffSha256": "5d5130a948aa6ec3fc1b51e70b60cea10e77d7afeac4be8a59c2085030f1a999",
+  "contentVersion": "25556a8e69ecf82d",
+  "initialDiffSha256": "38156b04dc98e127eaecacbd0439ee99795f786a48b285263c7e72638f89094b",
+  "reconciliationDiffSha256": "82f153095ad3b18f9b6761ad011af72d149dfdb86d552f3e42a7d703a44212fa",
+  "reviewers": [
+    {
+      "model": "claude-sonnet-5.5",
+      "initialReport": "reports/r1-claude.md",
+      "followUpReport": "reports/f1-claude.md",
+      "finalDeltaReport": "reports/f2-claude.md",
+      "facet": "correctness and scoped coverage; final Daijisen-link confirmation"
+    },
+    {
+      "model": "claude-sonnet-5.5",
+      "initialReport": "reports/r1-claude-supplement.md",
+      "facet": "focused 示唆 / 唆 quiz-safety supplement"
+    },
+    {
+      "model": "gpt-6.2-sol",
+      "initialReport": "reports/r2-gpt.md",
+      "followUpReport": "reports/f1-gpt.md",
+      "finalDeltaReport": "reports/f2-gpt.md",
+      "facet": "consistency and quiz safety"
+    },
+    {
+      "model": "grok-4.7",
+      "initialReport": "reports/r3-grok.md",
+      "followUpReport": "reports/f1-grok.md",
+      "facet": "comprehensibility and scoped coverage"
+    }
+  ],
+  "evidenceRecords": [
+    "docs/n1-sources/batch-160-progress.json",
+    "docs/n1-sources/batch-160-jmdict.xml",
+    "docs/n1-sources/batch-160-jmdict-selection.json",
+    "docs/content-format.md"
+  ],
+  "reportSha256": {
+    "reports/f1-claude.md": "76c51d53810365fdf3a4cd76c60c7dc43d174e5a7b70f27304f6d6986b6d414b",
+    "reports/f1-gpt.md": "dbe67b1ef91722976a6fc546020f7a189d94ada2428fdc43e40a7f98257bc217",
+    "reports/f1-grok.md": "396dbb9cda8db3e8f977ec82c35aebbc87bd0d038a7a345f60f43a8f773e3e08",
+    "reports/f2-claude.md": "e304cf185f49ef28013911df25afdc2daa1bc2273cf1d580d09c40cf9d9e35ef",
+    "reports/f2-gpt.md": "14aad2f1ee65ebc3f94b4900e4b029b7907320a7c967e844422c5a3f42051413",
+    "reports/r1-claude-supplement.md": "db367f04bf68fe3475808a6b815fb5814b8ac667c0a9cbf5f1e45d2a708724c9",
+    "reports/r1-claude.md": "3045af5c1063da294e0f0eeae664b3d1fcf34f03285d4a8460e39c63494fd5b0",
+    "reports/r2-gpt.md": "3263146129c86114fb470c1cc24c81e005f49e93e3e2f505aff2ccdb26de287a",
+    "reports/r3-grok.md": "f58d44d073eee2f0284b0df403f0ad76edc8c18043594e6397929dd200797bc2"
+  },
+  "limits": [
+    "Review conclusions apply to the identified textual candidate, not native-speaker, Android runtime, emulator, phone, or general-release acceptance.",
+    "No B160 KANJIDIC2 record packet was available; reviewer limitations on independently checking those source readings remain disclosed in the complete reports.",
+    "The final confirmation round was narrow: GPT checked the final exclusion and Daijisen fixes; Claude checked the Daijisen fragment. It was not a new whole-batch review."
+  ]
+}

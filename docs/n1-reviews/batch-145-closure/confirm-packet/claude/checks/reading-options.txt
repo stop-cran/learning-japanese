@@ -1,0 +1,219 @@
+Command (at fix1 e07ab312): python -X utf8 reading_options.py --extra 湧=ヨウ,わ.く,ユウ --extra 源=ゲン,みなもと --extra 滅=ベツ,ほろぼ.す,ほろ.びる,メツ,めっ.す,めっ.する --extra 滑=ぬめ.る,すべ.る,なめ.る,すべ.らか,なめ.らか,カツ,コツ,ぬめ.り,ぬら.つく --extra 滞=とどこお.る,タイ,なず.む --extra 漫=バン,みだ.りに,そぞ.ろに,すず.ろ,すぞ.ろ,そぞ.ろ,マン,みだ.り --extra 漬=シ,つ.ける,つか.る,ひたす,ひた.す,ひた.る --extra 潔=きよ.い,いさぎよ.い,ケツ --extra 潜=くぐ.る,むぐ.る,もぐ.る,ひそ.む,セン,かずく,ひそかに,かず.く,かづ.く --extra 澄=す.む,すま.す,チョウ --extra 濁=ジョク,にご.る,にご.す,ダク --extra 瀬=ライ,せ,せと --extra 災=わざわ.い,サイ --extra 炎=も.える,えん,ほのお,ほむら --extra 為=な.す,す.る,ため,つく.る,な.る,す,た,イ,さ.れつつある,さ.れる --seeds 100 湧 源 滅 滑 滞 漫 漬 潔 潜 澄 濁 瀬 災 炎 為
+The --extra readings are, for the 15 kanji, every reading Kanjipedia marks as outside the official table (外) (evidence\kanjipedia-outside-readings.json), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ (outside the official table) or headed by the kanji that is not a KANJIDIC2 reading (evidence\daijisen-heads.txt), and the JMdict kanji-plus-okurigana headword readings listed in evidence\okurigana-scan.txt. Some listed extras are also KANJIDIC2 readings; repeating them changes nothing.
+
+Reading-option audit: 1427 cards in the pool (every card in kanji/); 100 seeds per prompt.
+
+== 湧 (well up; surge; arise)   curated option cards: 港 濃 漁
+   metadata readings: on ユウ ヨウ ユ | kun わ.く
+   unlisted readings attested for 湧: わき (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt わ.く (key わく)
+       excluded keys: 5
+       curated 港: みなと
+       curated 濃: こい
+       curated 漁: あさる
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 56 keys, 2: 696 keys, 1: 9 keys, 0: 116 keys
+       tier 3 candidates (56): あく あばく あるく いく うく うごく えがく おく かく かわく きく きずく こく さく しく しずく すく せく そむく たく だく つく つづく とく とどく なく ぬく のぞく はく はぶく ひく ひびく ひらく ふく まく まねく みがく むく やく よく ... (+16 more)
+       unlisted-reading check: none of the 1 unlisted readings is offered by any of the 1697 other kun-reading cards
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 源 (source; headwaters; origin)   curated option cards: 漠 湿 港
+   metadata readings: on ゲン | kun みなもと
+   unlisted readings attested for 源: はら (KANJIDIC2 name reading)  みな (KANJIDIC2 name reading)  もと (KANJIDIC2 name reading)
+   on prompt ゲン (key げん)
+       excluded keys: 6
+       curated 漠: ばく
+       curated 湿: しつ しゅう
+       curated 港: こう
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 55 keys, 2: 196 keys
+       tier 3 candidates (55): あん いん うん えん おん かん がん きん ぎん くん ぐん げ げい げき げつ こん さん ざん しゅん しん じゅん じん すん せん ぜん そん たん だん ちん てん でん どん なん にん ねん はん ばん ひん びん ふらん ... (+15 more)
+       unlisted-reading check: none of the 3 unlisted readings is offered by any of the 300 other on-reading cards
+       simulation: 4 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 滅 (perish; destroy; die out)   curated option cards: 海 水 火
+   metadata readings: on メツ | kun ほろ.びる ほろ.ぶ ほろ.ぼす
+   unlisted readings attested for 滅: べつ (card text)  めっす (card text)  めっする (card text)
+   on prompt メツ (key めつ)
+       excluded keys: 22
+       curated 海: かい
+       curated 水: すい
+       curated 火: か
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 37 keys, 2: 215 keys
+       tier 3 candidates (37): あつ いつ えつ かつ きつ くつ けつ げつ こつ さつ ざつ しつ しゅつ じつ じゅつ せつ ぜつ そつ たつ だつ つ てつ とつ ねつ はつ ばつ ひつ ふつ ぶつ べつ まつ みつ め めい めん りつ れつ
+       HIT (can be drawn): unlisted reading べつ (card text) is offered by card(s) 別
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 滑 (slide; slippery; smooth)   curated option cards: 湖 濃 涙
+   metadata readings: on カツ コツ | kun すべ.る なめ.らか
+   unlisted readings attested for 滑: ぬめる (card text)  なめる (card text)  すべらか (card text)  ぬめり (card text)  ぬらつく (card text)  かり (KANJIDIC2 name reading)  なめり (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt すべ.る (key すべる)
+       excluded keys: 12
+       curated 湖: みずうみ
+       curated 濃: こい
+       curated 涙: なみだ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 4: 7 keys, 3: 304 keys, 2: 542 keys, 1: 10 keys, 0: 31 keys
+       tier 4 candidates (7): すぎる すぐれる すける すすめる すてる する すわる
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading かり (KANJIDIC2 name reading) is offered only by card(s) 権
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 滞 (stagnate; stay; be delayed)   curated option cards: 漁 涼 湖
+   metadata readings: on タイ テイ | kun とどこお.る
+   unlisted readings attested for 滞: なずむ (card text)
+   on prompt タイ (key たい)
+       excluded keys: 13
+       curated 漁: ぎょ りょう
+       curated 涼: りょう
+       curated 湖: こ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 30 keys, 2: 217 keys
+       tier 3 candidates (30): あい い えい かい がい けい げい さい ざい すい せい ぜい た たく たつ たん つい ない ねい はい ばい へい べい まい めい ゆい らい りい るい れい
+       unlisted-reading check: none of the 1 unlisted readings is offered by any of the 300 other on-reading cards
+       simulation: 24 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 漫 (aimless; rambling; comic)   curated option cards: 海 水 日
+   metadata readings: on マン | kun みだり.に そぞ.ろ
+   unlisted readings attested for 漫: ばん (card text)  そぞろに (card text)  すずろ (card text)  すぞろ (card text)  みだり (card text)
+   on prompt マン (key まん)
+       excluded keys: 9
+       curated 海: かい
+       curated 水: すい
+       curated 日: にち じつ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 56 keys, 2: 195 keys
+       tier 3 candidates (56): あん いん うん えん おん かん がん きん ぎん くん ぐん けん げん こん さん ざん しゅん しん じゅん じん すん せん ぜん そん たん だん ちん てん でん どん なん にん ねん はん ばん ひん びん ふらん ふん ぶん ... (+16 more)
+       HIT (can be drawn): unlisted reading ばん (card text) is offered by card(s) 万 判 晩 板 満 番 盤
+       simulation: 4 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 漬 (soak; pickle; steep)   curated option cards: 責 漁 渡
+   metadata readings: on シ | kun つ.ける つ.かる -づ.け -づけ
+   unlisted readings attested for 漬: ひたす (card text)  ひたる (card text)
+   on: no reading prompts
+   kun prompt つ.ける (key つける)
+       excluded keys: 11
+       curated 責: せめる
+       curated 漁: あさる
+       curated 渡: わたる わたる わたす
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 4: 16 keys, 3: 296 keys, 2: 539 keys, 1: 9 keys, 0: 32 keys
+       tier 4 candidates (16): ついえる つかえる つかねる つかまる つかれる つくる つたわる つづける つづまる つとめる つのる つめる つもる つよまる つらなる つる
+       unlisted-reading check: none of the 2 unlisted readings is offered by any of the 1697 other kun-reading cards
+       simulation: 4 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 潔 (clean; pure; upright)   curated option cards: 漁 溶 渡
+   metadata readings: on ケツ | kun いさぎよ.い
+   unlisted readings attested for 潔: きよい (card text)  きよ (KANJIDIC2 name reading)  きよし (KANJIDIC2 name reading)
+   on prompt ケツ (key けつ)
+       excluded keys: 8
+       curated 漁: ぎょ りょう
+       curated 溶: よう
+       curated 渡: と
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 36 keys, 2: 216 keys
+       tier 3 candidates (36): あつ いつ えつ かつ きつ くつ け けい けん こつ さつ ざつ しつ しゅつ じつ じゅつ せつ ぜつ そつ たつ だつ つ てつ とつ ねつ はつ ばつ ひつ ふつ ぶつ べつ まつ みつ めつ りつ れつ
+       unlisted-reading check: none of the 3 unlisted readings is offered by any of the 300 other on-reading cards
+       simulation: 4 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 潜 (dive; submerge; lurk)   curated option cards: 漁 溶 渡
+   metadata readings: on セン | kun ひそ.む もぐ.る かく.れる くぐ.る ひそ.める
+   unlisted readings attested for 潜: むぐる (card text)  かずく (card text)  ひそかに (card text)  かづく (card text)
+   on: no reading prompts
+   kun prompt もぐ.る (key もぐる)
+       excluded keys: 24
+       curated 漁: あさる
+       curated 溶: とける とかす とく
+       curated 渡: わたる わたる わたす
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 4: 7 keys, 3: 297 keys, 2: 549 keys, 1: 9 keys, 0: 32 keys
+       tier 4 candidates (7): もうける もえる もちいる もてる もとおる もとめる もどる
+       unlisted-reading check: none of the 4 unlisted readings is offered by any of the 1697 other kun-reading cards
+       simulation: 6 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 澄 (clear; become transparent; serene)   curated option cards: 海 水 川
+   metadata readings: on チョウ | kun す.む す.ます -す.ます
+   unlisted readings attested for 澄: きよ (KANJIDIC2 name reading)  すす (KANJIDIC2 name reading)  すみ (KANJIDIC2 name reading)  み (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt す.む (key すむ)
+       excluded keys: 8
+       curated 海: うみ
+       curated 水: みず みず
+       curated 川: かわ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 4: 3 keys, 3: 67 keys, 2: 688 keys, 1: 7 keys, 0: 118 keys
+       tier 4 candidates (3): すさむ すすむ すずむ
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading すみ (KANJIDIC2 name reading) is offered only by card(s) 墨 炭 隅
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading み (KANJIDIC2 name reading) is offered only by card(s) 三 実 巳 御 深 身
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 濁 (muddy; cloudy; impure; voiced)   curated option cards: 触 渡 湯
+   metadata readings: on ダク ジョク | kun にご.る にご.す
+   unlisted readings attested for 濁: にごり (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt にご.る (key にごる)
+       excluded keys: 14
+       curated 触: ふれる さわる さわ
+       curated 渡: わたる わたる わたす
+       curated 湯: ゆ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 4: 5 keys, 3: 295 keys, 2: 555 keys, 1: 10 keys, 0: 31 keys
+       tier 4 candidates (5): にがる にぎる にげる にぶる にる
+       unlisted-reading check: none of the 1 unlisted readings is offered by any of the 1697 other kun-reading cards
+       simulation: 6 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 瀬 (shallows; rapids; position)   curated option cards: 湯 湿 滴
+   metadata readings: on ライ | kun せ
+   unlisted readings attested for 瀬: せと (card text)  いわた (KANJIDIC2 name reading)  がせ (KANJIDIC2 name reading)  しげ (KANJIDIC2 name reading)  せい (KANJIDIC2 name reading)  せっ (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt せ (key せ)
+       excluded keys: 2
+       curated 湯: ゆ
+       curated 湿: しめる しめす うるおう うるおす
+       curated 滴: しずく したたる
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 7 keys, 2: 434 keys, 1: 2 keys, 0: 418 keys
+       tier 3 candidates (7): あせ かせ せき せく せる とせ みせ
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading せい (KANJIDIC2 name reading) is offered only by card(s) 背
+       simulation: 7 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 災 (calamity; disaster; misfortune)   curated option cards: 巡 炊 灰
+   metadata readings: on サイ | kun わざわ.い
+   unlisted readings attested for 災: none
+   on prompt サイ (key さい)
+       excluded keys: 4
+       curated 巡: じゅん
+       curated 炊: すい
+       curated 灰: かい
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 33 keys, 2: 214 keys
+       tier 3 candidates (33): あい い えい かい がい けい げい さ さく さっ さつ さん すい せい ぜい たい だい つい てい でい ない ねい はい ばい へい べい まい めい ゆい らい りい るい れい
+       unlisted-reading check: none of the 0 unlisted readings is offered by any of the 300 other on-reading cards
+       simulation: 3 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+   kun: no reading prompts
+
+== 炎 (flame; blaze; inflammation)   curated option cards: 淡 談 炊
+   metadata readings: on エン | kun ほのお
+   unlisted readings attested for 炎: もえる (card text)  ほむら (card text)  ぬく (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt ほのお (key ほのお)
+       excluded keys: 7
+       curated 淡: no usable kun reading, slot filled from the fallback
+       curated 談: no usable kun reading, slot filled from the fallback
+       curated 炊: たく
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 3: 24 keys, 2: 839 keys, 1: 1 keys, 0: 40 keys
+       tier 3 candidates (24): あお うお おお かお しお とお ほうる ほか ほがらか ほこ ほし ほす ほそい ほたる ほっする ほとけ ほとり ほど ほどく ほね ほぼ ほめる ほる ほろびる
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading もえる (card text) is offered only by card(s) 燃
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading ぬく (KANJIDIC2 name reading) is offered only by card(s) 抜 温
+       simulation: 25 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+== 為 (do; act; for the sake of)   curated option cards: 黒 魚 火
+   metadata readings: on イ | kun ため な.る な.す す.る たり つく.る なり
+   unlisted readings attested for 為: す (card text)  た (card text)  されつつある (card text)  される (card text)  びい (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt な.す (key なす)
+       excluded keys: 15
+       curated 黒: くろ くろずむ くろい
+       curated 魚: うお さかな ざかな
+       curated 火: ひ び ほ
+       fallback tiers (distinct best readings of the other cards; closeness 4 = length within 1 and same first and last kana): 4: 3 keys, 3: 109 keys, 2: 641 keys, 1: 10 keys, 0: 115 keys
+       tier 4 candidates (3): なおす ながす ならす
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading す (card text) is offered only by card(s) 州 巣
+       note (cannot be drawn from the full pool; lower closeness tier): unlisted reading た (card text) is offered only by card(s) 手 田
+       simulation: 9 wrong options seen over 100 seeds; 0 seeds with fewer than three wrong options
+
+2 problem(s)

@@ -1,0 +1,8 @@
+Snapshot: commit `4bf9db0c` (`4bf9db0ca6f3f6a701a112c22b6a19955fcca96c`); reviewer model unknown
+Scope: All B157 snapshot cards and stroke files, changed-card diffs, and relevant packet metadata and dictionary evidence; consistency and quiz safety examined deepest.
+Verdicts: correctness — CLEAN; scoped coverage — NEEDS FIX (`kanji/佳.md`, `kanji/侯.md`); consistency and quiz safety — CLEAN; comprehensibility — CLEAN.
+Findings:
+1. Minor; scoped coverage; `snapshot/kanji/佳.md:27–29, 39` — the reading table gives カ, but Digital Daijisen lists よい as a kun reading, and JMdict entry 1605820 marks 佳い as a rarely used kanji form. The KANJIDIC2 statement is accurate, but this source-only reading/spelling is not qualified for learners. Remedy: note it as a rare spelling, not a productive reading. Evidence: [Digital Daijisen, 佳](https://www.weblio.jp/content/%E4%BD%B3); packet JMdict entry 1605820. Confidence: high.
+2. Minor; scoped coverage; `snapshot/kanji/侯.md:29–33` — 諸侯 is the sole word example and is untagged; the 侯 and 侯爵 entries have only `news2`/`spec2`, which do not qualify under the packet rule. 侯補 has qualifying tags but is search-only, so it cannot serve as the example. Remedy: document an exception or find a genuinely qualifying example; do not count 侯補. Evidence: `evidence/jmdict-digest.tsv:251–253, 260`; `evidence/jmdict-families.xml` entry 1272730. Confidence: high.
+Optional: None.
+Limits: No phone or compatible-client quiz simulation; N1 lint was not rerun, as noted in `mechanical-checks.md`.

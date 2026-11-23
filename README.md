@@ -44,7 +44,8 @@ This repository starts as a collection of standalone articles prompted by specif
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [気 expressions: attention, concern, liking, and feelings](articles/ki-expressions-attention-and-feelings.md) | How do 気になる, 気にする, 気に入る, 気づく, and related 気 expressions differ, and what do common 気 compounds mean? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
-| Vocabulary | [Japanese onomatopoeia: 201 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
+| Vocabulary | [Sound changes in Japanese compounds](articles/compound-sound-changes.md) | Why do readings such as はなび, がっこう and しっぱい differ from familiar readings of their parts? |
+| Vocabulary | [Japanese onomatopoeia: 305 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
 | Vocabulary | [Onomatopoeia sound patterns](articles/onomatopoeia-sound-patterns.md) | What can repetition, endings, and voiced consonants suggest without becoming rigid meaning rules? |
 | Vocabulary | [Warmth and texture](articles/onomatopoeia-texture-and-warmth.md) | How do ぽかぽか, ほかほか, ふわふわ, ふかふか, ぺたぺた, and べたべた differ? |
 | Vocabulary | [Rain, rolling, walking, and similar forms](articles/onomatopoeia-sound-and-movement.md) | How do vivid scene descriptions differ, and why are similar-looking words not necessarily synonyms? |
@@ -184,12 +185,16 @@ GitHub source ZIPs omit `.github/`, `docs/` and `tools/` using `.gitattributes` 
 These contributor instructions, source ledgers, review evidence and tools remain available in Git,
 the web interface and clones; no runtime content or manifest entry is excluded.
 Use a clone rather than a source ZIP when contributing or inspecting the complete audit trail.
+Raw N1 review screenshots, session transcripts and archives from batches 17–110 were pruned and
+remain in Git history; see the [retention note](docs/n1-reviews/README.md).
 
 `python tools/check_content_budget.py` checks exportable working-tree files, including untracked
 runtime additions and any non-runtime files that still ship, and rejects exclusions of the manifest
 or any manifested runtime file. The publishing entry guard is **18,000**, below the updated
 Android **20,000-entry** hard limit. Both count directories and skipped files, not just cards.
-The compressed, inflated, retained and per-file byte guards are unchanged.
+The retained-content publishing guard is **62 MiB**, leaving 2 MiB below the
+[Android importer's 64 MiB limit](https://github.com/stop-cran/kanji-cards-android/blob/91e1d4b578859f7bfb582f7b9c6acf48c6ca6a75/core/src/main/kotlin/io/github/stopcran/kanji/core/content/SafeZip.kt).
+Raising the publishing guard above that limit requires an updated importer to reach users first.
 
 The N2 baseline (`7535831`) has 7,964 public ZIP entries. The current
 [N1 kanji-only expansion](docs/n1-authoring-notes.md) uses
@@ -213,8 +218,8 @@ that integration from the original pilot/native measurement basis above.
 The earlier **13,847-entry / approximately 52.4-MiB** projection combined kanji with
 [3,427 N1 vocabulary rows](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv).
 That vocabulary project and other N1 sections remain deferred. Check actual combined output
-incrementally against the unchanged 18,000-entry / 42-MiB compressed / 80-MiB inflated /
-56-MiB retained publishing guards.
+incrementally against the 18,000-entry / 42-MiB compressed / 80-MiB inflated /
+62-MiB retained publishing guards.
 
 Deliver an upgraded Android APK before publishing an archive above older clients' **8,000-entry**
 limit. Source publication alone does not upgrade installed apps; failed sync keeps their last accepted
@@ -495,10 +500,15 @@ record the expansion's exact outputs, owner approval and remaining device-integr
 
 ## Onomatopoeia collection
 
-The [201-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
+The [305-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
 [second 100](articles/japanese-onomatopoeia.md#second-100-word-cards), grouped by everyday situation.
 The second batch adds 97 cards and enriches three existing ones, plus three comparison guides.
 Later additions are listed separately, beginning with [ぶかぶか / ブカブカ](words/ぶかぶか.md), for oversized clothing or shoes.
+The latest 100 have guides to [fit and disorder](articles/onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](articles/onomatopoeia-behaviour-and-reactions.md),
+[movement and progress](articles/onomatopoeia-light-movement-and-progress.md),
+[body and texture](articles/onomatopoeia-body-and-texture.md), and
+[food and water](articles/onomatopoeia-food-and-water.md).
 Cards carry the `onomatopoeia` tag, a broad category such as
 `giongo`, `giseigo`, or `gitaigo`, and a form tag where applicable. Categories can overlap by sense;
 these tags are not new word types or JLPT levels. Existing word IDs and sourced level labels are retained.
@@ -507,7 +517,7 @@ The app has an Onomatopoeia stack with the normal word quizzes. Eligible named s
 support both picture-to-word and word-to-picture quizzes; article-only scenes remain visible in the article.
 The Onomatopoeia stack includes
 tagged words independently of JLPT level; unlevelled words also remain in All rather than a numbered JLPT stack.
-All 201 tagged words have scene catalogs, with 397 illustrations in total. The ぷにぷに scenes pair
+The earlier 201-word collection had scene catalogs with 397 illustrations. The ぷにぷに scenes pair
 a duck-shaped squishy toy with a cat's soft paw pad, showing the texture in inanimate material and living tissue.
 See the [collection and source notes](docs/onomatopoeia.md).
 

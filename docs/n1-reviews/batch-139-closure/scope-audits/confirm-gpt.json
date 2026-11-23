@@ -1,0 +1,214 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "c013a9a9-2a57-4c90-98cb-07dcfc32ccc0",
+ "agent": null,
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-18T15:32:23.622Z",
+  "last": "2026-11-18T15:40:49.080Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-18T15:32:24.192Z",
+   "chars": 2270,
+   "sha256": "1ed6ff0522e8cbc2656c1f98bf9912d52c9f6e3dd4541cdc5ab1c6e1335d780d"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 34
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 3920513,
+  "outputTokens": 18695,
+  "cacheReadTokens": 3770452,
+  "cacheWriteTokens": 149959,
+  "reasoningTokens": 7352,
+  "costMultiplierSum": 34.0
+ },
+ "toolCalls": {
+  "total": 33,
+  "byTool": {
+   "view": 23,
+   "powershell": 7,
+   "rg": 2,
+   "apply_patch": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full (ranges)": 4,
+   "none": 11,
+   "notFullyRead": [
+    "snapshot/kanji/宗.md",
+    "snapshot/kanji/宜.md",
+    "snapshot/kanji/宴.md",
+    "snapshot/kanji/寂.md",
+    "snapshot/kanji/密.md",
+    "snapshot/kanji/審.md",
+    "snapshot/kanji/尋.md",
+    "snapshot/kanji/屈.md",
+    "snapshot/kanji/属.md",
+    "snapshot/kanji/岬.md",
+    "snapshot/kanji/崩.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 1,
+   "full (ranges)": 1,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full (ranges)": 2,
+   "none": 1,
+   "notFullyRead": [
+    "diffs/changed-files.txt"
+   ]
+  },
+  "checks": {
+   "files": 12,
+   "full (ranges)": 4,
+   "none": 8,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/kanji-remarks.txt",
+    "checks/linkplan.txt",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 10,
+   "full (ranges)": 4,
+   "none": 4,
+   "partial": 2,
+   "notFullyRead": [
+    "evidence/KanjiReadings.kt",
+    "evidence/Words.kt",
+    "evidence/meta-scan.txt",
+    "evidence/meta_scan.py",
+    "evidence/weblio-岬-character.txt",
+    "evidence/word-remarks.json"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full (ranges)"
+ },
+ "outsidePaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets"
+ ],
+ "alsoReadAllowed": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-139-a47efe9a",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-139-a47efe9a\\rubric\\copilot-instructions.md"
+ ],
+ "alsoReadCount": 1,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nimport urllib.request,urllib.parse,json\nfor w in ['嫁','お嬢様','嬢ちゃん','嬢さん','宣う']:\n u='https://jisho.org/api/v1/search/words?keyword='+urllib.parse.quote(w)\n d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=30));es=[e for e in d['data'] if any(j.get('word')==w for j in e['japanese'])]\n print('\\nACTUAL ENTRY',u)\n for e in es:\n  print('forms:'...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nimport urllib.request,urllib.parse,json\nfrom html.parser import HTMLParser\nfor w in ['宣べる','宣べ伝える','通る','経る']:\n u='https://jisho.org/api/v1/search/words?keyword='+urllib.parse.quote(w);d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=30));es=[e for e in d['data'] if any(j.get('word')==w for j in e['japanese'])];print('\\nACTUAL ENTRY',u)\n ...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport xml.etree.ElementTree as ET,re,difflib\nb=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets');o=b/'batch-139-a47efe9a';n=b/'confirm-139-gpt'\nold=ET.parse(o/'evidence'/'jmdict-families.xml').getroot();new=ET.parse(n/'evidence'/'jmdict-cited-entries.xml').getroot();entries={e.findtext('ent_seq'):e for e in old.iter('entry')}\ndef canon(e):return (e.tag,tuple(...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\np=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets');n=p/'confirm-139-gpt';o=p/'batch-139-a47efe9a'\nfor rel in [r'checks\\lint.txt',r'checks\\unittest.txt',r'checks\\validate.txt',r'checks\\budget.txt',r'checks\\vocabulary.txt',r'checks\\manifest.txt',r'checks\\linkplan.txt',r'checks\\kanji-remarks.txt',r'evidence\\word-remarks.json']:\n ls=(n/rel).read_text(encoding='ut...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport re,csv,urllib.parse\nb=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets');o=b/'batch-139-a47efe9a';n=b/'confirm-139-gpt'\npatch=(n/'diffs'/'fix.patch').read_text(encoding='utf-8');sections=patch.split('diff --git ')[1:];print('Exact scoped patch reconstruction:')\nfor section in sections:\n ls=section.splitlines();rel=ls[0].split(' b/',1)[1];old=(o/'snapshot...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport xml.etree.ElementTree as ET,re,csv\nb=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets');o=b/'batch-139-a47efe9a';n=b/'confirm-139-gpt'\nfor name in ['QuizBuilder.kt','KanjiReadings.kt']:\n print('App source copy',name, 'identical:',(o/'evidence'/'app-code'/name).read_bytes()==(n/'evidence'/name).read_bytes())\nprint('All changed-line linked kanji titles ind...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport xml.etree.ElementTree as ET,re\nb=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets');o=b/'batch-139-a47efe9a';n=b/'confirm-139-gpt'\nroot=ET.parse(n/'evidence'/'jmdict-cited-entries.xml').getroot();es={e.findtext('ent_seq'):e for e in root.findall('entry')}\nprint('Added Metadata IDs in the revised cards:')\nfor k in '嫁嬢宣峠':\n def ids(p):\n  line=next(l for l ...",
+   "writeLike": false
+  }
+ ],
+ "web": [],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 13630,
+  "reportFile": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm-gpt.md",
+  "reportExists": true,
+  "reportChars": 13631,
+  "reportBytes": 14407,
+  "reportSha256": "e5fa3c5bc02e78bb841ff64a457a1ed7e38900b4a37eb08bc3d2420b76616d52",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "paths outside the packet and report: 1"
+ ]
+}

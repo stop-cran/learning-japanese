@@ -1,0 +1,67 @@
+# Scope of the merge eafee44b (current main merged into the batch again)
+
+$ git rev-list --parents -n 1 eafee44b   # the commit, then its first and second parents
+eafee44b5129b283cd0e62d07303fd49d842204a a7cc61e27261c62e84c3bd1f28e8a9254d9dcb04 0697b7688076d72498a805c8fc834c5bd9926a99
+$ git log -1 --format="%H %s" 0697b768   # the second parent: main at the time of the merge
+0697b7688076d72498a805c8fc834c5bd9926a99 Illustrate dotto and butsubutsu
+
+$ git log --first-parent --format="%h %p %s" 0638544c..a7cc61e2   # the batch line up to the merge (0638544c = the batch's base); e37ad00b is the earlier merge of main
+a7cc61e2 e37ad00b Cite JMdict ids for six words named on B156 cards
+e37ad00b 3c5ef845 9766dbd5 Merge origin/main into the N1 batch 156 candidate
+3c5ef845 395f5364 Drop the unsourced contract-parties sense from the 甲乙 article
+395f5364 2c206d8f Cite KANJIDIC2's 甲 record in the 甲乙 article
+2c206d8f 7eaf5c24 Use same-domain distractors on B156 cards
+7eaf5c24 c6afa163 Apply B156 formal review fixes
+c6afa163 0638544c Add N1 kanji batch 156: 丹 乙 亜 仁 仙 伎 伏 伐 伯 伴
+
+$ git log --first-parent --no-merges --no-renames --name-only --format= 0638544c..a7cc61e2 | sort -u   # every path the batch's own commits add, change or delete (merges of main excluded; manifest.json omitted)
+kanji/丹.md
+kanji/乙.md
+kanji/亜.md
+kanji/仁.md
+kanji/仙.md
+kanji/伎.md
+kanji/伏.md
+kanji/伐.md
+kanji/伯.md
+kanji/伴.md
+kanji/潜.md
+strokes/丹.json
+strokes/乙.json
+strokes/亜.json
+strokes/仁.json
+strokes/仙.json
+strokes/伎.json
+strokes/伏.json
+strokes/伐.json
+strokes/伯.json
+strokes/伴.json
+words/丹念.md
+words/乙.md
+words/亜熱帯.md
+words/仁.md
+words/仙人.md
+words/伐採.md
+words/伯仲.md
+words/伯母さん.md
+words/同伴.md
+words/歌舞伎.md
+words/甲乙.md
+words/降伏.md
+(words/乙.md was added by c6afa163 and deleted by 7eaf5c24.)
+
+$ git diff --name-status --no-renames a7cc61e2 eafee44b -- <the batch paths above>
+(no output: the merge changed none of these paths)
+
+$ git diff --name-status --no-renames a7cc61e2 eafee44b   # everything the merge brought in from main: 11 paths
+M	REVIEW.md
+M	docs/onomatopoeia-scene-images.json
+M	docs/onomatopoeia.md
+M	grammar/onomatopoeia-next-100-cohort-7.json
+A	images/どっと--crowd-rushing-in.webp
+A	images/ぶつぶつ--muttering-to-self.webp
+A	images/ぶつぶつ--small-skin-bumps.webp
+M	manifest.json
+A	scenes/どっと.json
+A	scenes/ぶつぶつ.json
+M	words/ねちねち.md

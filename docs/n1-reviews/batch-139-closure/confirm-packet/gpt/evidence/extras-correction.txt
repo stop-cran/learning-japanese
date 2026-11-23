@@ -1,0 +1,46 @@
+Correction to the reading-audit extras, made at the fix commit 3b6f9727
+
+The two reading audits, reading_exposure.py and reading_options.py, take
+--extra readings: readings attested for a batch kanji beyond its KANJIDIC2
+on and kun lists. The tools label every --extra reading "(card text)". The
+original packet says the extras include every kun reading in the Digital
+Daijisen character entries (its evidence\audits\reading-exposure.txt line 2).
+At the freeze a47efe9a, two such kun readings were missing:
+
+- 宗: the Daijisen character entry gives [訓] むね たっとぶ (the original
+  packet's evidence\public-source\weblio-宗.txt line 6). The freeze extras for
+  宗 were むね only. たっと.ぶ is now added.
+- 宣: the Daijisen character entry gives [訓] のべる のる のたまう (the
+  original packet's evidence\public-source\weblio-宣.txt line 6). The freeze
+  extras for 宣 were の.べる, のたま.う, せん.す, せん.する and のたも.う.
+  の.る is now added.
+
+No other extra changed. The audits were rerun on the fix commit. The
+outputs are checks\reading-exposure.txt and checks\reading-options.txt in
+this packet; compare them with the original packet's evidence\audits\ files
+of the same names. Both files keep the same line count (268 and 227). The
+only changed lines are these:
+
+- reading-exposure.txt
+  - line 1: the command. It names the revision and adds the two readings.
+  - line 46: the 宗 "unlisted readings attested" line ends with たっとぶ
+    (card text).
+  - line 95: the 宣 line adds のる (card text).
+- reading-options.txt
+  - line 1: the command, as above.
+  - line 37: the 宗 "unlisted readings attested" line begins with たっとぶ
+    (card text).
+  - line 72: the 宣 line adds のる (card text).
+  - line 80: the 宣 unlisted-reading check now counts 11 readings, not 10:
+    "none of the 11 unlisted readings is offered by any of the 297 other
+    on-reading cards".
+
+No count changes. reading-exposure.txt line 267 still reports
+0 production hits, 0 padded-session hits and 11 latent collisions, and
+line 268 reports 0 one-holder padded hits. reading-options.txt line 227
+still reports 1 problem, the 岬 さき label at line 196.
+
+宗 and 宣 are quizzed only on their on readings, シュウ and セン. On-reading
+prompts draw wrong options from other cards' on readings. The kun reading
+たっと.ぶ of 尊 is therefore never an option on the 宗 prompt, and no
+on-reading card offers のる.

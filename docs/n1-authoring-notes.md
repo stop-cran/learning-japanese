@@ -77,17 +77,23 @@ disclosed choices:
 - Each frozen candidate gets an independent Claude review, then an
   independent GPT review, run one after the other. Fixes are confirmed by the
   same reviewers where possible; otherwise a fresh replacement confirms, and
-  that is disclosed.
+  that is disclosed. Confirmations also run one after the other: in B137 to
+  B141 the two confirmations of a round ran at the same time, which departs
+  from the contract's one-active-reviewer rule; B141's closure record
+  discloses it, and from B142 on they are serial.
 - The B134-era session-binding, admission and token-forecast records are not
   continued. Each batch keeps one progress file in `n1-sources/` and one
   review record in `n1-reviews/`; `tools/n1_record_publication.py` writes
-  the publication receipt.
+  the publication receipt. Screenshots, raw session transcripts and
+  archives are not committed; the [retention note](n1-reviews/README.md)
+  describes those removed from batches 17–110.
 - Android JVM tests stay **not run** until a JDK is available. No native,
   device or phone acceptance is claimed.
-- `bf9aa740`, `2cdae679` and `c5cdc604` are signed with key
+- `bf9aa740`, `2cdae679` and `c5cdc604`, and batch 136's closure
+  `1e91700e` and receipt `c79aa930`, are signed with key
   `AD3E63ADB89CAE86`, which GitHub does not associate with the account, so
-  they show as Unverified there; later commits use the registered key
-  `9D94B9D311BD26A7`.
+  they show as Unverified there. The other commits from `afed6694` on use
+  the registered key `9D94B9D311BD26A7`. History is not rewritten.
 
 From B136, these are standing steps before a batch is frozen, adopted from
 the B135 review:
@@ -110,6 +116,1911 @@ the B135 review:
   examples in a final Notes bullet. A word is glossed where it first appears.
 - Packet check logs carry no reviewer attributions, so a blind reviewer
   cannot tell who asked for a check.
+- From B138, adopted from the B137 review: a card's Metadata line lists the
+  JMdict entry of every word the card names, and the author's `meta_scan.py`
+  (kept in the [B137 confirmation packet](n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/meta_scan.py))
+  checks this before freeze. It checks whole runs of Japanese script that
+  contain a kanji; kana-only and single-kanji words are not checked. The 19
+  gaps it finds in the 31 published cards of batches 134–136 are
+  [recorded](n1-reviews/batch-137-closure/meta-scan-b134-b136.txt) and left
+  for a later sweep.
+
+From B156 the remaining rows follow the
+[proposal on issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-7058679348),
+which replaces the lean B111 shape above: one supporting word article per kanji
+(an existing one where it fits, otherwise a new one), Joyo rows first in
+source-row order, up to ten kanji per batch. The proposal keeps the blind
+review by Claude and then GPT, one after the other. When a batch adds new word
+articles, the author also adds a Grok reviewer, because the repository's review
+rule for new word cards and learner articles asks for three reviewers of
+different model families; no reply to the proposal has been posted on issue 60
+yet.
+
+## Batch 159: published
+
+Batch 159 adds the cards 厘 又 叔 叙 吉 后 吏 吟 呈 呉 (source rows 135, 137, 139,
+140, 146, 147, 148, 150, 152 and 153, the first ten remaining Joyo rows after
+B158). Nine of them get a new support article: 厘, 叔母, 叙情, 不吉, 太后, 官吏,
+吟味, 贈呈 and 呉服. 又 links the existing kana-headed articles または (spelling
+又は, ichi1/news1) and また (spelling 又) under point 2 of the issue #60 rule,
+and the batch audit now accepts a kana-headed support article when its mapping
+names a spelling that contains the kanji and appears in the article. Two
+support words take the rule's untagged route, each with a row-specific
+justification: 太后 (the tagged 皇后 and 皇太后 need 皇, which has no card) and
+官吏 (no 吏 word carries news1, ichi1, spec1 or gai1; 官吏 has only
+news2/spec2). The existing cards 不, 味, 太, 官, 情, 服, 母 and 贈 each gain one
+link line, and または and また link the 又 card. The cards 及, 堅, 暇, 狭 and 節
+replace a stale "no card" remark with a link to 又, 偏 or 即. The progress file is
+[`n1-sources/batch-159-progress.json`](n1-sources/batch-159-progress.json).
+
+The draft was frozen at `1a9bb910` on the B158 publication receipt `2787e43b`.
+Claude, GPT and Grok reviewed it blind, one after the other, each covering all
+four facets with its own emphasis. All three returned NEEDS FIX. Claude found
+that 又's untagged support 又聞き was justified by "usually written in kana",
+which is not one of the rule's exclusions, and that the reason for 叔's
+untagged support 伯叔 put the 叔父 and 叔母 tags on the readings おじ and おば,
+whereas JMdict puts them on the spellings. GPT raised the same two support
+reasons, found no direct quiz exclusion between 吟味 and 試験 or between 吟 and
+検, and asked for Digital Daijisen links on the new articles. Grok found six
+comprehensibility points, among them 又's sense list, 太后 without a plain
+explanation and the dated sense of 官吏. The fixes in `5c04be73` replace 又聞き
+with the existing articles または and また, correct the 叔 reason, widen the 吟
+and 吟味 exclusions, explain 太后, 呉服, 呈 and 厘, update the 官吏 example and
+link Digital Daijisen for each new word.
+
+The families then confirmed in rounds numbered per family. c1-claude and
+c1-grok confirmed `5c04be73`; c1-gpt still wanted 験 excluded from 吟 and found
+that the ledger still said no tagged 叔 candidate qualified. `4f8ebea7` added
+the exclusion and recorded 伯叔 as an author's exception; c2-claude confirmed
+it, but c2-gpt asked for the qualifying fallback or recorded owner acceptance
+before publication. `54b00e0c` replaced 伯叔 with 叔母 (JMdict 1607100: the
+spelling carries ichi1/news1, and its reading しゅくぼ, restricted to that
+spelling, uses シュク), withdrew the exception and restored 伯.md. 叔父 しゅくふ
+was not used because 精選版 日本国語大辞典 records the variant reading しゅくぶ,
+which the reading quiz could generate as a look-alike wrong option. c3-claude
+confirmed `54b00e0c`, and its optional note on 母's 叔母 line became
+`f85ff382`. On `f85ff382` c3-gpt resolved the 叔 finding but returned NEEDS
+FIX for a stale lint count in the ledger, corrected in `0ba7df63`, which c4-gpt
+confirmed; its optional note on the reading-options summary became `bad899ea`.
+On `bad899ea` c5-gpt, c2-grok and c4-claude all confirmed with no findings.
+
+The author then ran a scan for sentences saying that a kanji has no card,
+which the B157 and B158 publication checks had not run. It found five such
+remarks that were no longer true: 及, 堅 and 暇 said that 又 has no card, 狭
+said so of 偏 and 節 of 即, both carded in B158. `33c3b582` turned each into a
+link to the card followed by its title, and the scan now runs in the author's
+checks. c6-gpt, c3-grok and c5-claude confirmed `33c3b582` with no findings.
+
+After the confirmations, `origin/main` had moved from the base to `f5caf53c`
+through seven owner commits: the sourced origin of 集, mnemonics for the
+illness radical on 疲, 病, 症, 痛, 療 and 癖, mnemonics for the bird component
+on 唯, 椎, 護, 雄 and 鳴, and a new 空 mnemonic with examples. The signed merge
+`3ecba19c` brought them in. A merge proof shows that main changed no batch file,
+link target or quiz field; the one changed main line naming a batch kanji is
+護's new mnemonic, which calls 又 a hand shape without linking it, and the
+author recorded it as reviewed. So no integration review was needed. Because
+main changed 13 cards after the base, the stock batch audit stops at the
+merge; `integration/audit_at_merge.py` in the closure reruns it with main's
+head as the runtime baseline, and it passes with the reviewed counts.
+
+Several optional points were declined, and the declines were accepted: 吏員 or
+能吏 instead of 官吏, 居 as a 呈 exclusion, 吟味's game-abbreviation sense,
+keeping 験 and 確認 as exclusions, a note that the 叔母 examples read しゅくぼ
+only to illustrate the article's reading, and "also しゅくふ" for 叔父 on
+the 叔 card. c2-grok's three optional points (親戚 and 親類 as 叔母 exclusions, the はくぼ
+gloss in a 叔母 example, and 叔.md's gloss of 叔母) were declined, and c3-grok
+accepted the declines. The closure record also discloses the run-level
+limits: GPT reports recovered from final messages, a condensed copy of
+r1-gpt's report given to c1-gpt, overlapping calls, and reports that do not
+name their model version. It also notes that 27 older cards mention 又 without
+linking the new card, left as an optional follow-up. No Android JVM test,
+Kotlin cross-check or phone check was run.
+
+At the merge `3ecba19c`, validation, the 444 host tests, the manifest
+rebuild, the budget, the vocabulary check, quiz safety, the reading-options
+check and the stale-remark scan pass, and the batch audit passes with main's
+runtime baseline. Lint reports 11 errors and 73 warnings (3 and 44 at the
+reviewed `33c3b582`). The errors are metadata readings without a Readings
+row: on the reused cards 太 and 情, older than the batch, and on 疲, 病, 痛, 空
+and 鳴, which lint checks at the merge because main changed them, although
+main added none of those readings. Of the warnings, 42 are on reused files and
+29 on main's cards and the words they list; the other two are on the new 又
+card, whose kana-headed examples または and また cannot declare 又 in their
+`kanji:` front matter. The closure commit `f434a60c` adds only documents to
+the merge `3ecba19c`; the other checks give the same results there. It
+fast-forwards main and is the published commit: the
+[CI run](https://github.com/stop-cran/learning-japanese/actions/runs/45189566076)
+passed and the [publication receipt](n1-reviews/batch-159-publication/provenance.json)
+records 9,842 verified runtime hashes in the served ZIP. Delivery is now
+**618/1,228**, with **610 remaining**. The served ZIP retains 56,286,967 bytes,
+71,958 more than at the B158 receipt, under the 62 MiB guard, leaving 8,724,745
+bytes. Phone acceptance is still outstanding.
+
+The full record, including the run table, every disposition and the limits, is
+in
+[`n1-reviews/batch-159-closure/README.md`](n1-reviews/batch-159-closure/README.md).
+
+## Batch 158: published
+
+Batch 158 adds the cards 偏 偽 傍 債 勲 匠 匿 升 即 却 (source rows 63, 67, 68, 72,
+120, 123, 125, 126, 131 and 132, the first ten remaining Joyo rows after B157)
+and one new support article for each: 偏見, 偽造, 傍観, 負債, 勲章, 師匠, 匿名, 升,
+即座 and 返却. 升 ます is the only support word without a qualifying priority
+tag: it carries only news2/spec2, no entry written with 升 carries news1, ichi1,
+spec1 or gai1, and the ledger records why the alternatives 升 しょう, 一升, 一升瓶
+and 升目 were not chosen. The existing cards 名, 師, 座, 章, 見, 観, 負, 返 and 造
+each gain one link line, and the article 片寄る links the 偏 card. The progress
+file is
+[`n1-sources/batch-158-progress.json`](n1-sources/batch-158-progress.json).
+
+The draft was frozen at `60d2cd5a` on the B157 closure correction `ad1694c1`.
+Claude, GPT and Grok reviewed it blind, one after the other, each covering all
+four facets with its own emphasis. All three returned NEEDS FIX. They converged
+on the support word 升: its missing priority tag, a "box seat" sense in its
+title that no exclusion guarded against seating words such as 席 and 腰掛け, a
+grid-square sense that JMdict marks as usually written マス, and tag jargon in
+the Notes. They also found titles that overlapped existing cards with no quiz
+exclusion (偏見 and 意見, 偏 and 側), 偽's distractor 犬, whose JMdict sense 4 is
+"counterfeit", and wording to fix on several cards and articles, such as 債権
+against 債券 and "order" in 勲章. The fixes in `6605a8b0` keep 升 as the one
+explicit exception, retitle the 升 article "measuring box", explain box
+seating with 升席 and drop the grid-square sense, add the exclusions, replace
+犬 with 耳, and add Notes lines for readings the sources give but the cards do
+not show.
+
+The families then confirmed in rounds numbered per family. c1-claude confirmed
+`6605a8b0` with one minor finding: the 升 article still excluded 腰掛け "seat;
+bench". `ccc046bb` kept that exclusion with a stated reason. c1-grok confirmed
+`ccc046bb`, but c1-gpt found the 腰掛け exclusion and the 皮 exclusion on 匿
+without a direct meaning overlap in the displayed titles, which the repository's
+exclusion rule requires. `348c4f70` removed both and kept the sourced contrasts
+in the card bodies. c2-gpt resolved those findings but returned UNVERIFIED,
+because it could not reproduce the manifest, the signed Git objects or the
+app's kanji-reading builder from its packet. `ef00345d` changed only one
+sentence on the 升 article, and the c3-gpt packet added the signed commit
+objects, the signing key, the manifest builder, the relevant Kotlin files of
+the app at a fixed commit and a read-only checker. On `ef00345d` c3-gpt,
+c4-claude and c3-grok all confirmed with no findings. c3-claude needed one
+follow-up prompt to complete required reads; its verdict did not change.
+`origin/main` did not move during the review, so no merge was needed.
+
+Several optional points were declined, and the declines were accepted: 返却's
+"How the kanji combine" line, 隠す and 隠れる as 匿名 exclusions, the repeated
+distractor sentences, splitting a Synonyms paragraph, the "not in this card's
+metadata" wording, the 傍系 summary, the 意見 exclusion and 偽's distractor set.
+The closure record also discloses the run-level limits: reports recovered from
+final messages, overlapping calls, and model self-identification that does not
+match the session records. No Android JVM test, Kotlin cross-check or phone
+check was run.
+
+At `ef00345d`, validation, the 439 host tests, the manifest rebuild, the
+budget, the batch audit and quiz safety pass. Lint reports 4 errors and 59
+warnings, all on reused cards older than the batch: the errors are metadata
+readings without a Readings row on 師, 観 and 負. The reading-options check
+reports 2 full-pool fallback problems (傍 そう, 即 しょく) that the shipped pools
+never reach, as at the freeze. The closure commit `cb89cdd4` adds only
+documents to `ef00345d`; the same checks give the same results there. It
+fast-forwards main and is the published commit: the
+[CI run](https://github.com/stop-cran/learning-japanese/actions/runs/45100387117)
+passed and the [publication receipt](n1-reviews/batch-158-publication/provenance.json)
+records 9,813 verified runtime hashes in the served ZIP. Delivery is now
+**608/1,228**, with **620 remaining**. The served ZIP retains 56,215,009 bytes,
+71,290 more than at the B157 receipt, under the 62 MiB guard, leaving 8,796,703
+bytes. Phone acceptance is still outstanding.
+
+The full record, including the run table, every disposition and the limits, is
+in
+[`n1-reviews/batch-158-closure/README.md`](n1-reviews/batch-158-closure/README.md).
+
+## Batch 157: published
+
+Batch 157 adds the cards 佐 佳 併 侍 侮 侯 俊 俗 俵 倫 (source rows 38, 40, 41, 43, 46,
+47, 50, 51, 55 and 60, the first ten remaining Joyo rows after B156) and one
+new support article for each: 補佐, 佳作, 併用, 侍, 侮る, 諸侯, 俊足, 俗語, 俵 and 倫理. 諸侯 is
+the only support word without a qualifying priority tag; no usable word using 侯
+carries news1, ichi1, spec1 or gai1 (侯補 is only a search-only form of 候補), and
+the ledger records why 諸侯 was chosen over 侯爵 and 王侯. The existing cards 作, 助,
+理, 用, 補, 語, 諸 and 足 gain links or reading rows. The progress
+file is
+[`n1-sources/batch-157-progress.json`](n1-sources/batch-157-progress.json).
+
+The draft was frozen at `a5c6a0ff` on the B156 receipt `e2c25363`. Claude, GPT
+and Grok reviewed it blind, one after the other, each covering all four facets
+with its own emphasis. All three returned NEEDS FIX, and they largely agreed:
+the new titles overlapped existing cards that no quiz exclusion guarded (侍 and
+武士, 侮る and 見下ろす, 補佐 and 助手, 佳作 and 名作, and many kanji pairs), 侮る was taught as
+"underestimate", 倫 lacked 不倫, and 併 lacked 合併. The fixes add exclusions to all
+ten new kanji cards and to every new article except 諸侯, retitle 倫 and 侮る, add
+不倫, 絶倫, 大佐 and 合併 (with a dictionary supplement), and tie frequency and
+comparison wording to JMdict entries or remove it.
+
+The author's own quiz-safety check also failed the frozen distractors. The
+same-sound sets pushed reading questions onto fallback cards, and two sets held
+excluded pairs. Every set was replaced with three everyday Starter cards far
+from the card's meaning and reading, so both questions now take all three wrong
+options from the curated set.
+
+Between r1 and the confirmations the author ran four GPT-only rounds (r2-r5),
+each with three parallel facet reviews on an intermediate snapshot. They found
+smaller points: 俊英 and 王侯 presented as common with only news2/spec2, the rare
+spellings 佐ける and 佳い, missing Readings rows on 助 and 理, and a 俊足 note that
+assigned the "swift horse" sense only to 駿足 without reflecting Daijisen's 俊足
+entry, which points to 駿足 sense 2. These rounds used an inherited model
+(gpt-6-luna) and do not meet the three-family rule. The five pre-merge fix
+commits (the r1 fixes, then the r2-r5 fixes) were later re-signed with the
+batch key; the trees are identical, and the original SHAs survive only on an
+unpushed local branch.
+
+`origin/main` moved once, to `2bc61140`, which pruned raw review screenshots,
+transcripts and archives. The signed merge `684d754c` brought it in, and a
+merge proof adapted from B156 shows that main changed no batch runtime file or
+link target. Main has not moved since.
+
+The first confirmation round (c1, on `cd5d75d1`) confirmed every r1 item.
+Claude and GPT both flagged the 五倫 gloss on 倫, and GPT judged the 仁 exclusion
+on 倫理 an over-exclusion. Several reviewers found some new distractor sets easy
+to reject by category. `81142e4a` removed 五倫, dropped the 仁 exclusion and
+redrew the 侍, 侯, 俵 and 倫 sets. `0daebfba` replaced a generic 男 on 侍 with 雨, and
+`24201899` refreshed the ledger. In the second round (c2) all three families
+confirmed `24201899` with no actionable finding. Claude needed one neutral
+follow-up prompt because its first pass was shallow.
+
+Several optional points were declined, and the declines were accepted. These
+include plain-language labels and quiz selection for the legacy 助 and 理
+readings, the sex-service sense of 風俗 on 俗, and shortening notes on 併 and 俊足;
+c2-claude's minor wording points on 倫 were not applied. The closure record also
+discloses the run-level limits: some reports were recovered from final
+messages, some runs made overlapping calls, and one c2 grep strayed outside the
+packet without being used as evidence. No Android JVM test, Kotlin cross-check
+or phone check was run.
+
+At `24201899`, validation, the 439 host tests, the manifest rebuild, the
+budget, the batch audit, quiz safety and reading options all pass. Lint reports
+only the pre-existing `phonetic` key on 語 and warnings on reused files. The
+closure commit `5aa7f593` adds only documents to `24201899`; the same checks
+give the same results there. It fast-forwards main and is the published
+commit: the [CI run](https://github.com/stop-cran/learning-japanese/actions/runs/45063731982)
+passed and the [publication receipt](n1-reviews/batch-157-publication/provenance.json)
+records 9,783 verified runtime hashes in the served ZIP. Delivery is now
+**598/1,228**, with **630 remaining**. The served ZIP retains 56,143,719 bytes,
+59,742 more than at the B156 receipt, under the 62 MiB guard, leaving 8,867,993
+bytes. Phone acceptance is still outstanding.
+
+The full record, including the run table, every disposition and the limits, is
+in
+[`n1-reviews/batch-157-closure/README.md`](n1-reviews/batch-157-closure/README.md).
+
+## Batch 156: published
+
+Review-closed at `ba44b280`, one commit on top of the second of two signed
+merges with `origin/main` (`e37ad00b` and `eafee44b`). Published at `f072122b`:
+the [CI run](https://github.com/stop-cran/learning-japanese/actions/runs/44979632081)
+passed and the [publication receipt](n1-reviews/batch-156-publication/provenance.json)
+records 9,753 verified runtime hashes in the served ZIP. Delivery is now
+**588/1,228**, with **640 remaining**. Phone acceptance is still outstanding.
+
+Ten absent frozen members: 丹 乙 亜 仁 仙 伎 伏 伐 伯 伴 (rows 7–34), the first
+ten remaining Joyo rows, in the first batch under the issue 60 proposal. The
+article's word should carry one of JMdict's common-word tags news1, ichi1,
+spec1 or gai1; an untagged word needs a justification reviewed for its row, and
+the word's other kanji must already have cards or join the batch. The batch
+adds ten word articles, one per kanji: 丹念, 乙種, 亜熱帯, 仁, 仙人, 歌舞伎,
+降伏, 伐採, 伯仲 and 同伴. Two existing files change in one line each:
+`words/伯母さん.md` links the 伯 card, and the 潜 card links 伏 in 潜伏
+せんぷく. 伯母さん is a whole-word reading, so 伯 selects ハク through 伯仲.
+Each card quizzes the one on reading its new article uses (丹 タン, 乙 オツ, 亜
+ア, 仁 ジン, 仙 セン, 伎 キ, 伏 フク, 伐 バツ, 伯 ハク, 伴 ハン); every quizzed
+kun list is empty. 伎 わざおぎ and 伐 ハツ, カ, ボチ and そむ.く have no
+checked JMdict example and are labelled source-only. The only exclusion between
+two new cards is 亜/乙, declared on 亜, the later source row.
+
+At the freeze the author also counted news2 and spec2 as qualifying tags, so no
+row was flagged. 仙人 and 伯仲 both carry news2 and spec2, but neither
+has a tag from the proposal's list. 亜熱帯 has news2 **and** the listed spec1.
+These are JMdict priority markers on the word form and reading, not kanji
+or JLPT tags. The fix `7eaf5c24`
+then chose 甲乙 as the 乙 word, which also has news2 and spec2 but no listed tag,
+without checking its other kanji 甲, which has no card. Rechecked against the
+list, seven words carry a listed tag (丹念, 亜熱帯, 仁, 歌舞伎, 降伏, 伐採,
+同伴). No reviewer had raised either error; the author disclosed both in the
+last confirmation round, in statements that dated both errors to the freeze,
+although 甲乙 entered in `7eaf5c24`. `ba44b280` replaced 甲乙 with 乙種 (JMdict
+1862630, untagged): 乙 alone can also be read おと, 早乙女 and 乙女 are
+whole-word readings that do not use オツ, and 乙種 is the first Joyo example
+for 乙, with 種 already a card. 仙人 is kept, because its only candidate with a
+listed tag is the city name 仙台; 伯仲 is kept, because 伯父 and 伯母 are
+tagged only for their whole-word readings おじ and おば, 伯爵 needs 爵, which
+has no card, and 画伯 is the alternative. All three families accepted these row
+decisions. Whether news2 and spec2 should count is a follow-up for the owner.
+
+The issue 60 proposal named the two-family review of earlier batches; because
+the batch adds word articles, a Grok reviewer was added. Claude
+(claude-opus-5.5), GPT (gpt-6.1-sol) and Grok (grok-4.7) reviewed the frozen
+draft `c6afa163` one after the other, each without seeing the others' work and
+each covering all four facets with an assigned emphasis rather than one facet
+each as the repository rule assigns. All three returned NEEDS FIX. The reading
+quiz of the frozen word article 乙 おつ could offer おと, which JMdict also
+gives for the spelling 乙 (C1, G1, X1); the meaning quiz of the word 仁 could
+offer 人物, although JMdict gives 仁 the sense “human” (G2); and the
+distractors of 仙 and 伎 were concrete objects that a learner could rule out
+without knowing the card (G3). The fix `7eaf5c24` replaced the 乙 article with
+甲乙, kept 人物, 個人, 芯 and 中心 out of 仁's meaning options, gave 仙 and 伎
+Starter cards as distractors and applied the optional wording points the author
+accepted. `2c206d8f` gave 乙, 伏, 伐 and 伴 distractors from the domain of the
+card's meaning and replaced 仙's 父 and 伎's 行 and 達 (JMdict gives 父 the
+sense “God; Father”, and the 達 card teaches “attain skill”, both near the
+cards' own meanings); `395f5364` and `3c5ef845` cited KANJIDIC2's 甲 record in
+the 甲乙 article and dropped a contract-parties sense that no source gives. The
+author's `meta_scan.py` then found six words named on the cards without JMdict
+ids on their Metadata lines, which no reviewer had raised; `a7cc61e2` added
+them.
+
+Fresh agents of the same family confirmed the fixes in further rounds, nine
+confirmations in all, although issue 60 asks for the original reviewers where
+possible; the last round confirmed `ba44b280` in all three families with no
+actionable finding, each raising one optional point. Declined points, accepted
+by the confirmations and recorded as follow-ups: an example of /p/ after ん in
+the compound-sound-changes article, which is outside the batch; the weak 中心
+exclusion on 仁; the music-term reading かんおつ for any later 甲乙 article;
+and the over-report of 伯 は in `reading_options.py`. GPT's request to shorten
+the audit-style card text was declined, because the cards follow the batch 149
+layout. Two confirmations would prefer 画伯 to 伯仲 if the row is revisited.
+Four Claude runs once had two read-only calls in flight, contrary to their
+reports; two Claude confirmations disclosed single commands over several files,
+which may count as the combined commands their prompts forbade; `initial-grok`
+disclosed one recursive listing, but its scope audit shows eleven recursive
+commands; and six runs continued after context compaction. The closure
+discloses all of these.
+
+`origin/main` moved twice during the review: the owner's onomatopoeia companion
+guides and their review fixes (`a6a40ef7`, `9766dbd5`), then the ねちねち
+example wording and the どっと and ぶつぶつ scene images (`32f8b991`,
+`0697b768`). The signed merges `e37ad00b` and `eafee44b` regenerated the
+derived manifest, their only conflict, and mechanical proofs show that main
+changed no batch file or link target and that no text line it changed mentions
+a batch kanji or word, so no integration review was needed. Main's CI failed on
+`32f8b991` and `0697b768` because the vocabulary review of
+`onoma-c7-nechinechi-criticism` is stale; the batch's vocabulary check reports
+the same line at closure. `32f8b991` changed only that exercise's English
+instruction. `f072122b` refreshed its context fingerprint without marking
+the pending exercise reviewed. The [closure record](n1-reviews/batch-156-closure/README.md)
+keeps the reports, prompts, packets, dispositions, merge proofs and limits, and
+the [progress file](n1-sources/batch-156-progress.json) records the gates.
+
+Gates at `ba44b280` pass except the vocabulary check, which reports main's
+stale line: 439 host tests, validation, lint (0 errors; 1 older warning on
+`words/潜る.md`), quiz safety, link plan, kanji remarks, card Metadata entry
+ids, manifest rebuild and budget. In the N1 and All stacks all ten reading
+questions take three of three wrong options from their curated distractors; in
+a Starter practice session 乙, 伏, 伐 and 伴 take all three from the fallback,
+as at the freeze. The reading-exposure audit reports no production,
+padded-session or one-holder hit and records ten latent collisions, all
+KANJIDIC2 name readings that no audited pool can draw (丹 た; 亜 や; 仁 く, じ
+and と; 伯 いき, えき, か, き and は). `reading_options.py` reports one
+problem, its known over-report of 伯 は. The local closure measurement was
+56,679,021 retained bytes under the then-current 56 MiB guard. At publication
+the served ZIP retained 56,083,977 bytes under the new 62 MiB guard, leaving
+8,927,735 bytes. The Android import cap remains 64 MiB. Android JVM tests and the
+Kotlin reading cross-check were not run (no JDK); the reading audits are the
+author's Python ports of the Kotlin builder, kept outside the repository; no
+native, device or phone check was done, and phone acceptance is outstanding.
+Follow-ups include a 甲 card and quiz exclusions for the 112 existing words
+whose reading quiz can offer a reading that JMdict attests for the same
+spelling.
+
+## Batch 155: published
+
+Review-closed at `25609582`, merged with `origin/main` in `37c71f81`, and
+published at `6e9f6e97`. The
+[Validate content run 44892024434](https://github.com/stop-cran/learning-japanese/actions/runs/44892024434)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,713 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-155-publication/provenance.json). Delivery is now
+**578/1,228**, with **650 remaining**.
+
+Six absent frozen members: 卑 汰 沙 沢 胡 鼓 (rows 127–1232), the remaining
+rows whose existing declaring word articles use one of the kanji's KANJIDIC2
+readings, under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. At the base, `coverage.py` aligned only 鼓
+(太鼓). Five more rows were misclassified, because the lean alignment had no
+readings for 怯, 贅, 椒 and 無, which have no cards. With KANJIDIC2's 怯
+キョウ, 贅 ゼイ, 椒 ショウ and 無 ム/ブ, the articles 卑怯, 贅沢, 胡椒, 無沙汰
+and 御無沙汰 use 卑 ヒ, 沢 タク, 胡 コ, 沙 サ and 汰 タ, and the pinned JMdict
+marks none of these spellings as ateji and none of the readings as gikun. This
+corrects batch 149, which set 胡 aside because 胡椒 seemed to use none of its
+readings; こしょう uses コ. The batch 149 ledger is not rewritten. The other
+six rows marked as not aligned (伯 戯 撲 皇 眼 邪) are not part of this batch.
+
+No word article is added: six existing articles each change in one line, which
+gains eight links in all, and the same line of 無沙汰 now says “無 does not
+have a card yet” instead of “None of these written characters has a card yet”.
+No existing kanji card changes. `n1_linkplan.py verify --remarks` checks the
+links and that remark, and the author's `kanji_remarks.py` checks that no
+existing card changes. Cards whose senses overlap those of other cards keep
+each other out of their meaning-quiz options where the Notes say so; the only
+pair of new cards that exclude each other is 汰 and 沙, declared on 沙, the
+later source row.
+
+All six cards quiz only their on reading (卑 ヒ, 汰 タ, 沙 サ, 沢 タク, 胡 コ,
+鼓 コ), because the other readings have no declaring word article yet; they
+are listed, not quizzed. Five of the six are in the official Joyo table; 胡 is
+not a Joyo kanji (KANJIDIC2 grade 9, and Digital Daijisen labels it
+［人名用漢字］). 汰 タイ, おご.る, にご.る and よな.げる, 沙 よなげる, 沢
+うるお.い, うるお.す and つや, and 胡 なんぞ have no checked JMdict example
+and are labelled source-only on the cards.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. Design changes before drafting: 汰 does not exclude 沙, because
+the sibling pair is declared on 沙; a sweep of title keywords added 近 and 軽
+to 卑's exclusions and 激 and 扇 to 鼓's; and 虚 was dropped from 胡's,
+because no verbatim source ties 胡's sense でたらめ to 虚. The reading audits
+also take, from an okurigana scan of JMdict headwords, the readings 卑
+ひ.わい, 汰 ゆ.る and 鼓 こ.す and こ.する; none of them collides with a
+reading another card offers. The freeze commit is `97c49eb2`.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `97c49eb2` one after the other, each without seeing
+the other's work. Claude returned CLEAN with four optional suggestions; GPT
+returned NEEDS FIX for three minor points. 卑 (“lowly; despicable”) excluded
+底 (“bottom; base”) only because both English glosses contain “base”, although
+卑 is low in a moral sense and 底 is a physical bottom (G1). 沙 excluded 漠 by
+carrying the meaning of the whole word 沙漠, “desert”, over to 沙 (G2). And
+every card carried an editorial proof dossier, a dictionary-comparison
+paragraph at line 23 and Notes that proved each exclusion with source names,
+entry ids and Japanese definition fragments, too dense for the N5–N4 reader on
+a phone (G3). The fix `25609582` removes both exclusions, keeps 沙漠 on 沙 as
+a rarely used spelling of 砂漠 with a link to 漠, and rewrites line 23 and the
+Notes of all six cards in plain English, with one short reason per excluded
+group, the layout adopted for batch 149. The replaced text is kept verbatim in
+the closure's `exclusion-proofs.md`, and sixteen Metadata ids whose words the
+cards no longer name were removed. Claude's optional suggestions to give 胡
+nearer distractors and to update the 御無沙汰 remark that some of its
+characters lack cards are deferred to a later pass; of its other two, one was
+covered by G1 and the other, on 醜 as a neighbour of 卑, asked for no change.
+Fresh agents of both families confirmed the fix with no finding. The Claude
+confirmation added four optional points, also deferred: 沙 does not give the
+modern meaning of 沙汰, 汰 does not name JMdict for its gloss of 沙汰, 鼓 does
+not make the link from 鼓動 to “pulse” explicit for its 脈 exclusion, and 卑
+could give Kanjipedia's 卑見. That confirmation once had two read-only calls
+in flight, and its report's statement that every response made one call is
+inaccurate on that point; the closure discloses this.
+
+After the batch's base `6cbc14fe` and before the freeze, the owner's commit
+`2cb17a36` (N5 reading support: `docs/reading-n5.md`, two reading files and
+the manifest) reached `main`; the batch was merged with it after review. The
+signed merge `37c71f81` regenerated the derived manifest, its only conflict,
+and a mechanical proof shows that main changed no batch file or link target
+and that none of the non-derived files it changed mentions a batch kanji or
+word, so no integration review was needed. The
+[closure record](n1-reviews/batch-155-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the merge proof and the limits, and the
+[progress file](n1-sources/batch-155-progress.json) records the gates.
+
+Gates at the merge `37c71f81` pass: 439 host tests, validation, lint (0
+errors; 2 warnings on the older, wrapped Dictionary lines of 卑怯 and 太鼓,
+which gain links here), quiz safety, link plan, kanji remarks, card Metadata
+entry ids, manifest rebuild and budget. 沢's タク question takes two of its
+three wrong options from its curated cards and 鼓's コ question one, because
+霜, 笛 and 琴 have no on reading; quiz safety fills the other slots from other
+cards and reports no error or warning. The reading-exposure audit reports no
+production, padded-session or one-holder hit and records one latent collision:
+沢 さ, a KANJIDIC2 name reading that other cards offer but no audited pool can
+draw. `reading_options.py` reports no problem. Android JVM tests were not run
+(no JDK), and no native or phone acceptance is claimed.
+
+## Batch 154: published
+
+Review-closed at `e5c945d6` and published at `c1137b93`. The
+[Validate content run 44872369258](https://github.com/stop-cran/learning-japanese/actions/runs/44872369258)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,701 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-154-publication/provenance.json). Delivery is now
+**572/1,228**, with **656 remaining**.
+
+Fifteen absent frozen members: 随 隠 隣 雄 雷 霧 項 顕 飼 飽 飾 驚 鬼 鮮 黙
+(rows 1158–1230), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: nineteen existing articles each gain one link to a new card,
+and no other line of them changes. Three existing kanji cards change in their
+remarks: 塊's mnemonic now links 鬼, with its title, instead of saying that 鬼
+has no card yet; 微's note on 顕微鏡 now says that 顕 supplies けん instead of
+saying that 顕 has no card here yet; and 鏡's note on the other kanji in its
+common words now links 顕, with its title, and says only that 眼 has no card
+here yet. No other line of an existing card changes. `n1_linkplan.py verify
+--remarks` checks the article links, and the author's `kanji_remarks.py`
+checks that 塊, 微 and 鏡 change only by their declared remarks. Cards whose
+senses overlap those of other cards keep each other out of their meaning-quiz
+options where the Notes say so; no two of the new cards exclude each
+other.
+
+Five cards quiz only their on reading (随 ズイ, 雄 ユウ, 項 コウ, 顕 ケン, 鮮
+セン) and ten only their kun reading (隠 かく.す, 隣 となり, 雷 かみなり, 霧
+きり, 飼 か.う, 飽 あ.きる, 飾 かざ.る, 驚 おどろ.く, 鬼 おに, 黙 だま.る),
+because the other readings have no declaring word article yet; they are
+listed, not quizzed. All fifteen quizzed readings are in the official Joyo
+table. 隠れる, 飽くまで, 飾り and 驚かす use the readings かく.れる, あ.く,
+かざ.り and おどろ.かす, which share a stem with the quizzed かく.す, あ.きる,
+かざ.る and おどろ.く; the app asks one question per stem, so these articles
+are linked on their own rows, which are not quizzed.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. Design changes before drafting replaced four distractor
+candidates: 雄 takes 柔, 飽 takes 祝 and 黙 takes 踊 instead of candidates that
+overlapped an exclusion or a title, and 項 takes 預 instead of 領, whose kun
+reading えり (JMdict files it under 襟, “collar”) also means “nape of the
+neck”, like 項's うなじ. The titles avoid “neighbor” for 隣 (町 is excluded as
+“town, neighborhood”), “raise” for 飼 (挙 is “raise; cite; hold (an event)”)
+and “fall silent” for 黙 (落 is “fall down” and 陥 “fall into; cave in”).
+Kanjipedia's antonyms (雌 for 雄; 微, 隠 and 密 for 顕) are neither excluded nor
+used as distractors. The author's read of the drafts corrected two mnemonics
+against KanjiVG (in 随, ⻌ runs under 有 only; in 雄, 厷 is described only as a
+shape that ends in 厶) and replaced two exclusion reasons with sourced ones:
+隣/近 now rests on 近隣 and 比隣, which Kanjipedia lists among 隣's compounds,
+and 項/個 on Digital Daijisen's second sense of 項, 小分けした一つ一つ. The
+reading audits also take, from an okurigana scan of Digital Daijisen
+headwords, the readings 随 まま.に, 隠 いん.ぺい, こも.る and なま.る, 雷 らい.こう,
+顕 あら.わ and 黙 だんま.り, もく.する and もく.とう; of these only 隠 なまる (by
+鈍) collides with a reading another card offers, and no audited pool can draw
+it. The freeze commit is `f8f3db8c`.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `f8f3db8c` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX for two minor points. Claude found
+two gaps in the common words: 雄 lacked 英雄 and 雄大, which the Joyo table
+prints as examples of ユウ, and 随 lacked 随分 ずいぶん, “very; considerably”.
+GPT found two missing meaning-quiz exclusions: JMdict glosses 追う with “to
+follow after”, so 随 (“follow; at will”) overlaps 追 (“chase; pursue”), and
+glosses 側 そば with “(place) right next to”, so 隣 (“next door; adjoining”)
+overlaps 側 (“side”). The fix `e5c945d6` adds these words and exclusions.
+While checking 側, the author also excluded 辺 (“vicinity; edge”) from 隣:
+JMdict glosses 辺り with “(in the) neighbourhood”, the basis on which 隣
+already excludes 町. 逮 (“arrest; chase”) was checked against 随 and not
+added, because KANJIDIC2 gives it no sense of following. The fix also applies
+optional suggestions: 隣's とな.る row now leads with 隣り合う, the Joyo
+example; 飾 numbers the senses of 飾る that it quotes; 黙 adds 沈黙 and 暗黙
+and notes that Kanjipedia lists もだす outside the table; 項's mnemonic names
+the strokes of 頁 as KanjiVG draws them; and 飽's あ.かす row adds the form
+…に飽かして, while its あ.く row notes that Digital Daijisen calls 飽く
+written style. The author declined to name 英雄 in 雄's note on 英, to add
+随時, 随所 or 黙祷, to replace 黙's distractor 走, which Claude said does
+little work, and to shorten the notes. Fresh agents of both families confirmed
+the fix, with no remaining finding. The
+[closure record](n1-reviews/batch-154-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `e5c945d6` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings, none on the new cards: the word article 隣, which
+gains a link here, and 眼鏡 and 鏡, which declare the edited 鏡 card and are
+checked with it, have no Dictionary line), quiz safety, link plan, kanji
+remarks, manifest rebuild and budget. 鮮's セン quiz takes one of its three
+wrong options from its curated cards (淡 タン), because 腐 and 濁 quiz no
+reading; quiz safety fills the other two from other cards and reports no
+error or warning. The reading-exposure audit reports no production,
+padded-session or one-holder hit for an ordinary reading. Three KANJIDIC2
+name-only readings can be offered only in a Starter practice session that also
+borrows a card holding them: 雄 ゆ (by 愉 or 輸), 雄 よう (by any of its
+eighteen holders, such as 容 or 様) and 飼 かい (by 貝); in the N1 and All pools
+the curated options of 雄 and 飼 fill every wrong slot. It records eight latent
+collisions, attested readings that other cards offer but no audited pool can
+draw: 隠 お and なまる, 雄 かつ, ゆ and よう, 飼 かい, 飽 あき and 飾 しか.
+`reading_options.py` reports no hit. Android JVM tests were not run (no JDK),
+and no native or phone acceptance is claimed.
+
+## Batch 153: published
+
+Review-closed at `3f8b951d` and published at `1ec9d9e7`. The
+[Validate content run 44853520237](https://github.com/stop-cran/learning-japanese/actions/runs/44853520237)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,671 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-153-publication/provenance.json). Delivery is now
+**557/1,228**, with **671 remaining**.
+
+Fifteen absent frozen members: 酌 酔 酢 醜 釈 釣 鈴 銃 銭 鎖 鐘 鑑 附 陥 陰
+(rows 1106–1152), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: twenty existing articles each gain one link to a new card.
+Two of them also lose a sentence that said the new card did not exist yet: 附属
+drops “附 has no card yet.” and 酌む drops “There is no 酌 kanji card in the
+current collection.” One existing kanji card changes in its remarks: 属 now
+links 附, with its title, in 附属 instead of saying that 附 has no card yet. No
+other line of an existing card or article changes. `n1_linkplan.py verify
+--remarks` checks the article links and the two article remarks, and the
+author's `kanji_remarks.py` checks that 属 changes only by its declared remark.
+Cards whose senses overlap those of other cards keep each other out of their
+meaning-quiz options where the Notes say so; two pairs of new cards declare
+this on one card only (鈴 lists 鐘, and 陥 lists 釣, added in review), and the
+app applies an exclusion in both directions.
+
+Six cards quiz only their on reading (釈 シャク, 銃 ジュウ, 銭 セン, 鑑 カン, 附
+フ, 陥 カン) and nine only their kun reading (酌 く.む, 酔 よ.う, 酢 す, 醜
+みにく.い, 釣 つ.る, 鈴 すず, 鎖 くさり, 鐘 かね, 陰 かげ), because the other
+readings have no declaring word article yet; they are listed, not quizzed. All
+fifteen quizzed readings are in the official Joyo table. 酔っ払い, 釣り and
+釣り合う use the readings 酔 よ and 釣 つ.り and つ.り-, which share a stem with
+the quizzed よ.う and つ.る; the app asks one question per stem, so these articles are
+linked on their own rows, which are not quizzed. 附属 is the article that
+declares 附 フ; JMdict files it under 付属, with 附属 as a variant spelling.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. Three design changes came before drafting: 酢 also excludes 償
+and 附 also excludes 仕, from their Kanjipedia senses, and 陥 excludes 滑; a
+group of 陰 exclusions resting only on the compound おかげ was dropped. The
+first check run found three attested readings that a Starter practice session
+borrowing one holder card could offer as wrong reading options: 醜 たぐい (by
+双 or 類), 釈 おく (by 億, 屋 or 憶) and 附 ぶ (by 武, 舞 or 部). 醜's distractors
+賢 鋭 美 therefore became the Starter cards 短 赤 新, 釈's 誇 測 祝 became 書 聞
+学, and 附's 削 離 除 became 外 出 間, so that their curated options fill every
+wrong reading slot in the N1, All and Starter pools. 酢's distractor 粉 became
+麦, because KANJIDIC2 lists デシメートル among 粉's kun readings, which would
+mark it as a wrong option in 酢's kun quiz. A scan comparing the KANJIDIC2
+meanings of every card with the new titles added 踏 to 鑑's exclusions
+(KANJIDIC2 lists “appraise” for 踏) and 覆 to 陰's (KANJIDIC2 lists “shade” for
+both) before the freeze commit `cdab83b3`.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `cdab83b3` one after the other, each without seeing
+the other's work. Claude found no defect and made six optional suggestions.
+GPT returned NEEDS FIX for one missing meaning-quiz exclusion: JMdict glosses
+陥れる with “to lure (into a trap)” and “to capture (a castle, fortress,
+etc.)”, so 陥 (“fall into; cave in”) overlaps 捕 (“capture”) and 釣
+(“angling; lure”). The fix `3f8b951d` adds both to 陥's exclusions. It also
+applies three of Claude's suggestions: 醜's Joyo note adds 醜さ, which the
+Joyo table prints beside 醜い; 釈 lists 釈放 and 会釈 among its common words;
+and 鎖 notes the Digital Daijisen headword じょう【錠／▽鎖／×鏁】, a lock,
+which JMdict files under 錠 with 鎖 as a rarely used form. Claude also noted
+that the audit's extra Digital Daijisen readings lacked 鎖 じょう: the author's
+headword parser cut off headwords whose historical spelling holds katakana or
+｜. With the parser fixed, the extras gain 鎖 じょう and nothing else changes;
+the frozen audit already counted じょう as attested through JMdict and found
+no collision, since no card offers じょう as a kun reading and 鎖 quizzes only
+くさり. Rerun on the headwords of batches 144–152, the fixed parser adds one
+reading not already on a card, 益 よう, which batch 146's audits already listed
+from JMdict; a new exposure run for it finds no hit. Claude's other
+suggestions were declined: 鐘's non-KANJIDIC2 シュ row stays after the
+KANJIDIC2 rows, as on other cards, and the exclusions it called weak but
+defensible (酢/賞, 醜's 同 似 等 匹, 陥/滑 and 鑑's book sense) stay, each
+citing a source sense. Fresh agents of both families confirmed the fix, with no remaining finding. The
+[closure record](n1-reviews/batch-153-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `3f8b951d` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings, none on the new cards, all on existing word
+articles that gain a link here and whose Dictionary line cites no JMdict entry
+id: 日陰, 醜い and 鑑賞), quiz safety, link plan, kanji remarks, manifest
+rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit, for ordinary or KANJIDIC2
+name-only readings. It records eight latent collisions, attested readings that
+other cards offer but no audited pool can draw; two of them, 醜 たぐい (by 双
+or 類) and 釈 おく (by 億, 屋 or 憶), are still reported by
+`reading_options.py`, which does not model curated options. Android JVM tests
+were not run (no JDK), and no native or phone acceptance is claimed.
+
+## Batch 152: published
+
+Review-closed at `b81299f3`, merged with `origin/main` in `197e91d8`, and
+published at `8d0ba4b8`. The
+[Validate content run 44824195905](https://github.com/stop-cran/learning-japanese/actions/runs/44824195905)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,641 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-152-publication/provenance.json). Delivery is now
+**542/1,228**, with **686 remaining**.
+
+Fifteen absent frozen members: 趣 跳 踏 躍 較 載 輝 輩 迫 逸 遂 遣 避 郡 郷
+(rows 1056–1104), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: twenty existing articles each gain one link to a new card,
+and no other line of them changes. Three existing kanji cards change in their
+remarks, four edits in all: 仮's remark now links 遣 in 仮名遣い, 故's links 郷
+in 故郷, and 響 links 郷 in its mnemonic and drops the sentence saying that 郷
+had no card here. No other line of an existing card changes.
+`n1_linkplan.py verify --remarks` checks the article links, and the author's
+`kanji_remarks.py` checks that each existing card changes only by its declared
+remarks. Cards whose senses overlap those of other cards keep each other out of
+their meaning-quiz options where the Notes say so; four pairs of new cards
+declare this on one card only (躍 lists 跳, 郷 lists 郡, 逸 lists 避 and 踏
+lists 遂), and the app applies an exclusion in both directions.
+
+Six cards quiz only their on reading (趣 シュ, 躍 ヤク, 較 カク, 輩 ハイ, 郡
+グン, 郷 キョウ) and nine only their kun reading (跳 は.ねる, 踏 ふ.む, 載 の.る,
+輝 かがや.く, 迫 せま.る, 逸 そ.れる, 遂 つい.に, 遣 -づか.い, 避 さ.ける),
+because the other readings have no declaring word article yet; they are listed,
+not quizzed. 逸 そ.れる and 遂 つい.に are outside the official Joyo table, as
+Kanjipedia marks and both cards say; they are quizzed because the declaring
+articles 逸れる and 遂に use them. 遣's three articles (仮名遣い, 小遣い,
+言葉遣い) all read づかい, the KANJIDIC2 reading -づか.い.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and ran the
+claim audits. The first check run found three attested readings that a Starter
+practice session borrowing one holder card could offer as wrong reading
+options: 迫 せる (by 競), 逸 はしる (by 走) and 逸 すぐれる (by 優). 迫's
+distractors 譲 戻 離 therefore became the Starter cards 出 入 休, and 逸's 戻 従
+求 became 会 供 道, so that their curated options fill every wrong reading slot
+in the N1, All and Starter pools. 載 also excludes the Starter card 書
+(“write”), since Kanjipedia's first sense of 載 includes 書きしるす, and 輩
+excludes 人 (“person”), since KANJIDIC2 lists “people” for 輩. A scan of all
+105 pairs of new cards, comparing KANJIDIC2 meanings with titles, added 避 to
+逸's exclusions (KANJIDIC2 lists “evade” for both); it came after a first freeze
+commit, which was amended to `cdd8fd01` before any review. The scan left 踏/逸
+and 踏/避, which meet only in 踏's “evade payment”, and 載/郷, which meet only in
+“place”, unexcluded as different senses. Six JMdict entry ids were added to
+Metadata lines (考え on 趣, 踏破 and 高踏的 on 踏, 躍り上がる and 踊る on 躍, 場所
+on 郷), and 迫 gained the JMdict gloss of 追い詰める.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `cdd8fd01` one after the other, each without seeing
+the other's work. Claude found no defect and made seven optional suggestions.
+GPT returned NEEDS FIX for missing meaning-quiz exclusions: 踏 (“tread;
+trample”) and 遂 (“accomplish; at last”) share “carry out” with 執 (“take hold;
+carry out; cling”) and 施 (“carry out; give; alms”), 遂 also with 履
+(“footwear; put on shoes; carry out”), and 踏 with 遂 through KANJIDIC2's “carry
+through” for 踏; and 載 (“load; publish”) shares carrying with 運 (“carry;
+luck”). The fix `b81299f3` adds these exclusions on the new cards. It also
+applies three of Claude's suggestions: it excludes 押 on 迫 (JMdict's 押す
+sense 5 includes “to press”); it excludes 脱 on 避, 艶 on 輝 and 弾 on 跳; and it
+gives 蛇遣い へびつかい instead of 人形遣い as 遣's -つか.い example, because
+JMdict's priority-tagged reading of 人形遣い is voiced. 華 joins 艶 on 輝, since
+KANJIDIC2 lists “shine” and “luster” for 華. 映 is not excluded on 輝: its
+title “reflect, project” names no sense of 輝, and the existing shine cards 光
+照 華 艶 do not exclude it either. A further exposure run with the Digital
+Daijisen name readings that Claude listed found no new hit. Fresh agents of
+both families confirmed the fix, with no remaining finding. The reviewed
+snapshot was then merged with `origin/main` `e9ca5450`, which adds two N5
+reading texts (`197e91d8`); the merge changes no batch file, and the only
+conflict, `manifest.json`, was regenerated. The
+[closure record](n1-reviews/batch-152-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the merge proof and the limits.
+
+Gates at the reviewed snapshot `b81299f3` pass: 439 host tests, validation,
+lint (0 errors; 7 warnings, none on the new cards, all on existing word
+articles whose Dictionary line cites no JMdict entry id: 比較的, 踏切 and 逸れる,
+which gain a link here, and 平仮名, 振り仮名, 響き and 響く, which declare 仮 or
+響), quiz safety, link plan, kanji remarks, card Metadata entry ids, manifest
+rebuild and budget; they pass again at the merge. The reading-exposure audit
+reports no production, padded-session or one-holder hit for an ordinary
+reading. Two KANJIDIC2
+name-only readings can be offered only in a Starter practice session that also
+borrows a card holding them: 載 のり (by 則, 法 or 準) and 輝 ひかる (by 光). It
+records twenty latent collisions, attested readings that other cards offer but
+no audited pool can draw; one of them, 迫 せる (by 競), is still reported by
+`reading_options.py`, which does not model curated options. Android JVM tests
+were not run (no JDK), and no native or phone acceptance is claimed.
+
+## Batch 151: published
+
+Review-closed at `15441514` and published at `8235d9b2`. The
+[Validate content run 44790900952](https://github.com/stop-cran/learning-japanese/actions/runs/44790900952)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,609 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-151-publication/provenance.json). Delivery is now
+**527/1,228**, with **701 remaining**.
+
+Fifteen absent frozen members: 訴 証 詩 詳 誇 誓 誘 謙 謡 譲 護 豆 豪 貢 貴
+(rows 1003–1043), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: nineteen existing articles each gain one link to a new card,
+and no other line of them changes. Ten existing kanji cards (献 仮 推 縫 憩 熟 級
+長 義 養) each change in one remark: a sentence saying that a kanji had no card
+here now links that kanji's card. Only 献's remark concerns this batch (貢); the
+other nine had gone stale when earlier work added 虚, 薦 and 裁 (batch 150), 舌
+(batch 149), 慮 (batch 141), 及 and 我 (batch 135), 羊 (commit `1359b467`) and
+短 (before the N1 work). 縫's remark shrinks from two lines to one, because its
+second clause only qualified the old statement. No other line of an existing
+card changes. `n1_linkplan.py verify --remarks` checks the article links, and
+the author's `kanji_remarks.py` checks that each existing card changes only by
+its declared remark. Cards whose senses overlap those of other
+cards keep each other out of their meaning-quiz options where the Notes say so;
+two pairs of new cards declare this on one card only (謡 lists 詩, 譲 lists 謙),
+and the app applies an exclusion in both directions.
+
+Eight cards quiz only their on reading (証 ショウ, 詩 シ, 謙 ケン, 謡 ヨウ, 護
+ゴ, 豪 ゴウ, 貢 コウ, 貴 キ) and seven only their kun reading (訴 うった.える, 詳
+くわ.しい, 誇 ほこ.る, 誓 ちか.う, 誘 さそ.う, 譲 ゆず.る, 豆 まめ), because the
+other readings have no declaring word article yet; they are listed, not quizzed.
+The only word article for 護 is 看護婦, which JMdict marks as obsolete; the 護
+card says so, names 看護師 as the current word and gives 保護 as a Joyo example.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree, and three
+claim auditors re-read the cards against the sources. 証 lost the planned
+exclusions 確 認 券, which had no verifiable overlap, and its distractors became
+罪 刑 損, because the quiz-safety check found 罪 and 罰 excluded from each other.
+譲's first distractors 奪 拾 握 let a Starter practice session that also borrows
+攻 or 責 offer せめる, an attested reading of 譲, so they became 食 行 来. The
+譲 mnemonic now follows KanjiVG's split of 三; the reasons for five exclusions
+(申 on 訴, 徴 on 証, 慢 on 誇, 返 on 譲, and 価 and 値 on 貴) were narrowed to
+what the cited glosses and titles say; smaller fixes aligned quotations on 訴 詩
+誘 豆 and the 誇 mnemonic with their sources; and four JMdict entry ids were
+added to Metadata lines (梵語 on 護, 大いに on 豪, 献じる on 貢, 大切にする on 貴).
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `b624890f` one after the other, each without seeing
+the other's work. Claude found one minor defect: 貴's mnemonic left out
+KanjiVG stroke 5, the horizontal stroke between 中 and 貝. GPT returned NEEDS
+FIX for two quiz options: 誘 excluded 訪 only through the English word "call"
+(JMdict 誘う "to call (for)", 訪 "visit; call on"), though inviting someone is
+not visiting them; and 譲's distractors
+食 行 来 were remote basic actions that gave no credible contrast. The fix
+`15441514` puts 中 on that horizontal stroke, removes 訪 from 誘's exclusions
+and justifies the 呼 exclusion on its own (JMdict 呼ぶ sense 3 "to invite"), and
+replaces 譲's distractors with 買 話 読: buying is the other side of selling,
+and 話 and 読 share the radical 言, but none means handing over. Eleven trial
+sets chose them; every set with a transfer verb that is not a Starter card (奪
+受 借 拾 握) let 攻 or 責 offer せめる again. The fix also applies three optional
+suggestions: 謙's mnemonic accounts for every stroke of 兼, 誓 lists ゼイ
+directly after セイ, and "declaring word" becomes "example word" on five cards.
+Fresh agents of both families confirmed it, with no remaining finding.
+`origin/main` has not moved from the base `b9f0e340`, so no integration merge is
+needed. The [closure record](n1-reviews/batch-151-closure/README.md) keeps the
+reports, prompts, packets, dispositions and limits.
+
+Gates at the reviewed snapshot `15441514` pass: 439 host tests, validation,
+lint (0 errors; 19 warnings, none on the new cards: 4 on the existing card 長,
+13 on existing word articles whose Dictionary line cites no JMdict entry id and
+2 on 看護婦 and 校長, which have no Dictionary line), quiz safety, link plan,
+kanji remarks, card Metadata entry ids, manifest rebuild and budget. The
+reading-exposure audit reports no production, padded-session or one-holder hit
+for an ordinary reading. Two KANJIDIC2 name-only readings can be offered only in
+a Starter practice session, which has no curated options: 豆 ま (by 目 真 間 馬)
+and 豪 ご (by 互 五 午 娯 後 御 悟 期 碁 語 誤 護 降); in the N1 and All pools
+the curated options fill every wrong slot. It records three latent collisions,
+attested readings that other cards offer but no audited pool can draw: 詳 よし,
+譲 せめる and 貴 ぎ. Android JVM tests were not run (no JDK), and no native or
+phone acceptance is claimed.
+
+## Batch 150: published
+
+Review-closed at `7e3c101b` and published at `46d38e1f`. The
+[Validate content run 44752338560](https://github.com/stop-cran/learning-japanese/actions/runs/44752338560)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,579 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-150-publication/provenance.json). Delivery is now
+**512/1,228**, with **716 remaining**.
+
+Fifteen absent frozen members: 葬 蒔 蓄 薦 虚 融 衆 街 衝 裁 裂 裸 覆 視 覧
+(rows 944–997), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: eighteen existing articles each gain one link to a new card,
+and no other line of them changes. No existing kanji card changes.
+`n1_linkplan.py verify --remarks` checks the article links, and the author's
+`kanji_remarks.py` checks that no existing card changes. Cards whose senses
+overlap those of other cards keep each other out of their meaning-quiz options
+where the Notes say so.
+
+Nine cards quiz only their on reading (葬 ソウ, 薦 セン, 虚 キョ, 融 ユウ, 衆
+シュウ, 衝 ショウ, 裁 サイ, 視 シ, 覧 ラン) and six only their kun reading (蒔
+ま.く, 蓄 たくわ.える, 街 まち, 裂 さ.く, 裸 はだか, 覆 おお.う), because the other
+readings have no declaring word article yet; they are listed, not quizzed.
+
+Before the freeze, the author checked the quoted glosses and Japanese phrases
+against their sources and every mnemonic against its KanjiVG tree. The
+reason for excluding 仰 from 覧 lost an unverifiable "revere" and now rests on
+the overlap of "look up" and "look over"; the 裁 mnemonic was reworded to
+follow KanjiVG; 薦's こも row takes the existing label "kun, outside the
+official table"; and 裂's distractors became 縫 編 畳, because the quiz-safety
+check found its earlier choice 縫 excluded from both 結 and 織. Exclusions
+were added on ten cards (街 区 丁, 衆 団 組 公,
+裁 定 絶 布, 衝 争 戦, 虚 穴, 蒔 苗, 覆 殻, 視 and 覧 捜, 裂 断 絶).
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), then
+reviewed the frozen draft `2dd9d46b` one after the other, each without seeing
+the other's work. Claude found the cards clean on all four facets and one
+minor defect in the audit evidence: the reading audits labelled readings
+passed with `--extra` as "card text" (they now say "--extra list"). GPT
+returned NEEDS FIX for four exclusions whose stated overlaps do not hold: a
+seedling is not a seed (蒔 苗), cloth is not cutting cloth (裁 布), and looking
+for is not looking at or over (捜 on 視 and 覧). The fix `7e3c101b` removes
+them, restates the 仰 reasons on 視 and 覧, and applies six of Claude's
+optional suggestions: the exclusions 街 径 and 衝 攻, source-exact quotations
+on 虚 and 薦, plain shape descriptions of 鬲 and 𠂉 in the 融 and 覧 mnemonics
+and a simpler 裸 image. Fresh agents of both families confirmed it, with no
+remaining finding. `origin/main` has not moved from the base `c6dbb52e`, so no
+integration merge is needed. The
+[closure record](n1-reviews/batch-150-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at the reviewed snapshot `7e3c101b` pass: 439 host tests, validation,
+lint (0 errors; 4 warnings on untouched Dictionary lines of the existing
+articles 公衆, 葬式, 蓄える and 街角), quiz safety, link plan, card Metadata
+entry ids, manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit for an ordinary reading. 街's
+name-only reading また could be offered by 復 only in a Starter practice
+session that borrows 復; in the N1 and All pools 街's curated options 橋 庭 池
+fill every wrong slot. It records four latent collisions, all name-only
+readings that other cards offer but no audited pool can draw: 蒔 まい, 蒔 まき,
+街 また and 視 み. Android JVM tests were not run (no JDK), and no native or
+phone acceptance is claimed.
+
+## Batch 149: published
+
+Review-closed at `06b2db87` and published at `5bcf5b30`. The
+[Validate content run 44729410684](https://github.com/stop-cran/learning-japanese/actions/runs/44729410684)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,549 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-149-publication/provenance.json). Delivery is now
+**497/1,228**, with **731 remaining**. The batch commits from `53664748` to
+`5bcf5b30` are signed with a second key of the owner, `AD3E63ADB89CAE86`, which
+is not registered on GitHub, so GitHub shows them as Unverified. Each signature
+is valid locally. History is not rewritten; the receipt commit uses the
+registered key `9D94B9D311BD26A7`.
+
+Fifteen absent frozen members: 翻 翼 脈 腐 臨 臭 興 舌 舎 艶 芝 芽 茂 荘 華
+(rows 875–941), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: seventeen existing articles each gain one link to a new card.
+Two of them also change in one remark each: the 艶 article loses its sentence
+saying there is no 艶 card, and 芝居 quotes 芝 by the new card's title, "turf;
+lawn". No existing kanji card changes. `n1_linkplan.py verify --remarks` checks
+the article links and remarks, and the author's `kanji_remarks.py` checks that
+no existing card changes. Cards whose senses overlap those of other cards keep
+each other out of their meaning-quiz options where the Notes say so.
+
+Seven cards quiz only their on reading (翻 ホン, 脈 ミャク, 臨 リン, 興 キョウ, 舎
+シャ, 荘 ソウ, 華 カ) and eight only their kun reading (翼 つばさ, 腐 くさ.る, 臭
+くさ.い, 舌 した, 艶 つや, 芝 しば, 芽 め, 茂 しげ.る), because the other
+readings have no declaring word article yet; they are listed and illustrated,
+not quizzed.
+
+A preliminary round of four gpt-6-luna agents reviewed the first candidate
+`0a2d710c`; it used one model family and its confirmations overlapped, so it
+does not count as the contract's review, and its reports are kept as evidence
+only. The author then checked every card claim against the pinned sources,
+dropped or rewrote the claims that could not be verified, narrowed the titles
+of 翼 and 舌, gave 脈 and 荘 Starter distractors and added modern-shape
+mnemonics. Two reviewer agents, Claude (claude-opus-5.5) and GPT
+(gpt-6.1-sol), then reviewed the frozen draft `070b6f69` one after the other,
+each without seeing the other's work. Claude found minor defects (the small っ
+of 別荘 described as coming after ベツ, inconsistent "source-only" labels, 豆腐
+missing from 腐, 艶やか shown only as あでやか, implausible Starter distractors
+on six cards, a quoted English "help" on 翼); GPT returned NEEDS FIX for a
+stale sentence in the 艶 word article, the same 別荘 wording, missing
+exclusions (興 復, 茂 密 and 盛) and two long Notes paragraphs. The fixes
+(`b007a0a6`, and `06b2db87`, which replaced 荘's distractor 京 because it shared
+キョウ with 校) were confirmed by fresh agents of both families, with no
+remaining finding. The reviewed snapshot was then merged with `origin/main`
+`65b144b3` (`7f3c0922`); the merge changes no batch file, and the only
+conflict, `manifest.json`, was regenerated. The
+[closure record](n1-reviews/batch-149-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the merge proof and the limits.
+
+Main's new article on sound changes in compounds describes small っ and
+rendaku as correspondences between readings. Later batches use the
+"corresponds to" wording and link
+[the article](../articles/compound-sound-changes.md); the confirmed 荘 and 舌
+lines keep their older wording.
+
+Gates at the reviewed snapshot `06b2db87` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings on untouched Dictionary lines of the existing
+articles 校舎, 艶 and 翻訳), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget; they pass again at the merge. The reading-exposure
+audit reports no production, padded-session or one-holder hit. It records
+sixteen latent collisions, readings that other cards offer but no audited pool
+can draw: 翼 たすける, 脈 ばく, 臨 み, 舌 ことば, 舎 さ, 舎 おく, 艶 もろ, 艶 よし,
+芽 じ, 芽 めぐむ, 茂 き, 茂 む, 茂 すぐれる, 荘 そ, 華 わ and 華 げ. 脈 ばく and
+荘 そ stay safe only while their curated Starter options fill every wrong slot.
+Android JVM tests were not run (no JDK), and no native or phone acceptance is
+claimed.
+
+## Batch 148: published
+
+Review-closed at `04900b9c` and published at `192b40e2`. The
+[Validate content run 44685270706](https://github.com/stop-cran/learning-japanese/actions/runs/44685270706)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,207 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-148-publication/provenance.json). Delivery is now
+**482/1,228**, with **746 remaining**.
+
+Fifteen absent frozen members: 絞 継 綱 緊 締 緩 緯 縁 縄 縛 縦 織 繕 繰 罰
+(rows 838–867), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: seventeen existing articles each gain one link to a new card.
+Three existing cards (張 慢 修) also change in one remark each: a sentence that
+said the kanji (緊, 緩, 繕) had no card here now links it. `n1_linkplan.py verify`
+checks the article links, and the author's `kanji_remarks.py` checks that these
+are the only existing texts that change and that they change only in those
+remarks. Cards whose senses overlap those of other cards keep each other out of
+their meaning-quiz options where the Notes say so.
+
+Six cards quiz only their on reading (継 ケイ, 緊 キン, 緯 イ, 織 シキ, 繕 ゼン,
+罰 バツ) and nine only their kun reading (絞 しぼ.る, 綱 つな, 締 し.める, 緩
+ゆる.い, 縁 ふち, 縄 なわ, 縛 しば.る, 縦 たて, 繰 く.る), because the other
+readings have no declaring word article yet; they are listed and illustrated,
+not quizzed.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `8408b3a5` one after the other, each without seeing the
+other's work. Claude found minor defects (the 締 okurigana attribution, a
+"quiz tool" sentence and two quoted paraphrases on 締, the 縄 variant form, an
+inexact quoted 織豊時代 gloss, a dangling 罰 cross-reference); GPT returned
+NEEDS FIX for the same 締 attribution, the 縁取る okurigana split, the wording of
+継 sense 1, five exclusions that rest on association only (緊 筋, 罰 犯, 緯 経
+and 織, 綱 科) and a missing 縦 against 経 exclusion. The fixes (`cc286cc3`,
+`4162ea2c`, `04900b9c`) were confirmed by fresh agents: Claude's first
+confirmation found one quoted "bind" left on 締, GPT's first confirmation found
+that 縛 was excluded from 緊 by association only. Both families confirmed the
+final commit, and `origin/main` did not move, so there was nothing to merge.
+The [closure record](n1-reviews/batch-148-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `04900b9c` pass: 439 host tests, validation,
+lint (0 errors; 3 warnings on untouched Dictionary lines of the existing
+articles 綱, 緯度 and 威張る), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records nine latent collisions, readings
+that other cards offer but no audited pool can draw: 締 むすぶ, 縁 よる, 縁 え,
+縁 よし, 縛 いましめる, 縦 はなつ, 縦 ゆるす, 縦 よし and 繰 くり. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
+
+
+## Batch 147: published
+
+Review-closed at `886671da` and published at `d93ff39a`. The
+[Validate content run 44597887071](https://github.com/stop-cran/learning-japanese/actions/runs/44597887071)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,177 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-147-publication/provenance.json). Delivery is now
+**467/1,228**, with **761 remaining**.
+
+Fifteen absent frozen members: 瞬 瞳 矢 砕 礎 秀 秘 稚 稼 稿 穏 穴 笛 粋 糧
+(rows 750–818), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No word
+article is added: eighteen existing articles each gain one link to a new card.
+Three existing cards (基 密 透) and three existing word articles (矢印 砕く
+砕ける) also change in one remark each: a sentence that said the kanji had no
+card here now links it or says it has one. `n1_linkplan.py verify` checks the
+article links, and the author's `kanji_remarks.py` checks that these are the
+only existing texts that change and that they change only in those remarks.
+Cards whose senses overlap those of other cards keep each other out of their
+meaning-quiz options where the Notes say so (瞬 against 瞳, 粋 against 秀, 穴
+against 秘 among the new cards).
+
+Eight cards quiz only their on reading (瞬 シュン, 礎 ソ, 秀 シュウ, 秘 ヒ,
+稚 チ, 稿 コウ, 粋 スイ, 糧 リョウ) and seven only their kun reading (瞳 ひとみ,
+矢 や, 砕 くだ.く, 稼 かせ.ぐ, 穏 おだ.やか, 穴 あな, 笛 ふえ), because the
+other readings have no declaring word article yet; they are listed and
+illustrated, not quizzed.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `6a2323e7` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings. They independently
+found three defects: the 秀 mnemonic put 禾 and 乃 side by side, the 粋 mnemonic
+named a full 卒, and the 稚 okurigana split was wrong. Claude also found a
+mnemonic that claimed a vertical stroke in 矢, two inexact quoted titles, and
+over-broad exclusions on 矢 and 砕; GPT found that 穏和 was given the climate
+sense that JMdict restricts to 温和, three exclusions that rest on opposition
+or association (稚 熟, 糧 貯 and 備), and a missing 穴 against 秘 exclusion. The
+fixes (`0df56686`, `99487bb5`) were confirmed by fresh agents; Claude's first
+confirmation found one more omission (静穏 in the Daijisen examples of 穏),
+fixed in `886671da`. Both families confirmed that final commit, and
+`origin/main` did not move, so there was nothing to merge. The
+[closure record](n1-reviews/batch-147-closure/README.md) keeps the reports,
+prompts, packets, dispositions and the limits.
+
+Gates at the reviewed snapshot `886671da` pass: 439 host tests, validation,
+lint (0 errors; 2 warnings on untouched Dictionary lines of the existing
+articles 瞳 and 透明), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records seven latent collisions, readings
+that other cards offer but no audited pool can draw: 矢 さ, 秀 ほ, 稚 わく,
+稼 うえる, 穏 やすらか, 穴 しし and 笛 う. The older reading-options check
+reports one problem, the 穏 prompt おだ.やか with やす.らか (held by 安) as a
+fallback candidate; the three Starter distractors 木 田 花 fill every wrong
+slot, so it cannot be drawn. Android JVM tests were not run (no JDK), and no
+native or phone acceptance is claimed.
+
+## Batch 146: published
+
+Review-closed at `1c941a7a` and published at `e0fba3a1`. The
+[Validate content run 44575726840](https://github.com/stop-cran/learning-japanese/actions/runs/44575726840)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,147 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-146-publication/provenance.json). Delivery is now
+**452/1,228**, with **776 remaining**.
+
+Fifteen absent frozen members: 煮 熟 牧 狂 狭 献 玄 環 甚 癖 益 盛 盾 眺 睡
+(rows 672–747), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. 皇 (row 731) and 眼 (row 746) are skipped:
+their only declaring articles, 天皇 and 眼鏡, align none of their KANJIDIC2
+readings, so no reading could be quizzed. All fifteen pass, so none is set
+aside. No word article is
+added: twenty-three existing articles each gain one link to a new card. One
+existing card also changes in one remark: the 潔 card said 癖 in 潔癖 had no card
+here and now links 癖. `n1_linkplan.py verify` checks the article links, and
+the author's `kanji_remarks.py` checks that 潔 is the only existing card that
+changes and that it changes only in that remark. Cards whose senses overlap
+those of other new cards keep each other out of their meaning-quiz options
+(煮 with 熟); the same is done against existing cards where the Notes say so.
+The [progress file](n1-sources/batch-146-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz only their on reading (熟 ジュク, 牧 ボク, 献 ケン and コン,
+玄 ゲン, 環 カン, 益 エキ, 盾 ジュン, 睡 スイ) and seven only their kun reading
+(煮 に.る, 狂 くる.う, 狭 せま.い, 甚 はなは.だ, 癖 くせ, 盛 も.る and さか.る,
+眺 なが.める), because the other readings have no declaring word article yet;
+they are listed and illustrated, not quizzed. 献 and 玄 record the kun readings
+たてまつ.る and くろ.い as source-only, and 狭 records the on reading コウ as
+Kanjipedia-only. 睡る is, in JMdict, a written form of 眠る ねむる (with ねぶる an
+obsolete kana usage), so 睡 has no word article of its own for its kun readings.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem (熟 こなし, こなす, こなれ, こなれる, じゅくす,
+じゅくする and なれる; 牧 ぼくする; 狂 きょうする and ふれる; 狭 きょうさく,
+せし and せに; 献 けんじる, けんずる, ささげる and まつる; 玄 げんそば; 甚 いたい
+and いたく; 益 えきする; 睡 ねぶたい, ねぶり and ねぶる). On the first gate run,
+a Starter practice session that also borrows one holder card could offer もり
+for 盛 (from 森) because the original distractors 戦 式 店 held only one Starter
+card; 盛 now uses the Starter cards 山 海 店, so the curated distractors fill
+every slot and the random fallback never runs. 煮 and 熟 first excluded each
+other; the exclusion now sits on 煮 only, the repository convention.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `38833c7f` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings. Claude found the
+wrong okurigana boundary of 甚だしい in 甚 (major), "source-only" wrongly
+attached to the official readings ジン and ヘキ, 益体 and 煮凝り presented as
+whole-word readings, loose 熟 and 玄 wording, imprecise sound-change statements
+for 癖, 盛ん filed under さか.る, implementation jargon in four cards, and five
+governance exclusions on 牧 that no displayed label supported; GPT found the
+甚 and 癖 points and objected to the exclusions of 牛 馬 羊 on 牧. The first fix
+(`5e61ef07`) changed nine cards. Later rounds, each checked by a fresh agent,
+found one new inconsistency in 甚 (fixed in `872d6502`) and then moved the 牧
+exclusion list through six states while the two families disagreed on 僧 and
+坊: the five governance exclusions were restored (治 御 官 司 導), 牛 馬 羊 草
+and 坊 were removed, 僧 was removed and then restored because Daijisen gives it
+the general sense "clergy". The final list is 畜 養 育 農 野 僧 治 御 官 司 導 師;
+exclusions are direct, symmetric and not transitive, and only remove options.
+Both families confirmed the final commit `1c941a7a`, and `origin/main` did not
+move, so there was nothing to merge. The
+[closure record](n1-reviews/batch-146-closure/README.md) keeps the reports,
+prompts, packets, dispositions, the full exclusion history and the limits.
+
+Gates at the reviewed snapshot `1c941a7a` pass: 439 host tests, validation, lint (0 errors; 3
+warnings on untouched, wrapped Dictionary lines of the existing articles 煮る,
+矛盾 and 不潔), quiz safety, link plan, card Metadata entry ids, manifest
+rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records ten latent collisions, counted per
+quiz prompt (nine distinct card-and-reading pairs), readings that other cards
+offer but no audited pool can draw: 牧 ま, まい and もく; 狂 ふれる; 狭 せ; 甚
+じ and いたい; 益 よう; 盛 もり (for both prompts). Android JVM tests were not
+run (no JDK), and no native or phone acceptance is claimed.
+
+## Batch 145: published
+
+Review-closed and published at `fc9715d4`. The
+[Validate content run 44542347408](https://github.com/stop-cran/learning-japanese/actions/runs/44542347408)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,117 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-145-publication/provenance.json). Delivery is now
+**437/1,228**, with **791 remaining**.
+
+Fifteen absent frozen members: 湧 源 滅 滑 滞 漫 漬 潔 潜 澄 濁 瀬 災 炎 為
+(rows 636–668), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty existing articles each gain one link to a new
+card, and the 湧く article also drops its remark that neither 湧 nor 涌 has a
+card. Two existing cards also change in one remark each: the 渋 card said 滞
+had no card here and now links 滞, and the 暑 card said there was no card for 炎
+to exclude and now links 炎, noting that it mainly names fire but also means
+blazing heat in 炎天 and 炎暑. `n1_linkplan.py verify` checks the article links and
+the declared 湧く remark, and the author's `kanji_remarks.py` checks
+that 渋 and 暑 are the only existing cards that change and that each changes
+only in that remark. Cards whose senses overlap those of other new cards keep
+each other out of their meaning-quiz options (湧 with 源, 滑 with 滞, 漫 with
+滑, 漬 with 潜 and 潔 with 澄); the same is done against existing cards where
+the Notes say so. The [progress file](n1-sources/batch-145-progress.json)
+records the gates and disclosed limits.
+
+Six cards quiz only their on reading (源 ゲン, 滅 メツ, 滞 タイ, 漫 マン, 潔 ケツ,
+災 サイ) and nine only their kun reading (湧 わ.く, 滑 すべ.る, 漬 つ.ける, 潜
+もぐ.る, 澄 す.む, 濁 にご.る, 瀬 せ, 炎 ほのお, 為 な.す), because the other
+readings have no declaring word article yet; they are listed and illustrated,
+not quizzed. 滅 also records the Kanjipedia-only reading ベツ, which 別 shares.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem (滅 めっす and めっする; 滑 ぬめり and ぬらつく; 滞
+なずむ; 漫 みだり; 漬 ひたす and ひたる; 潜 かずく and かづく; 為 されつつある and される).
+On the first gate runs, 別 offered the card-text reading べつ for the 滅 prompt,
+and a Starter practice session could borrow one holder card for 滅, 漫 and 為
+because the original distractors were not Starter cards. 滅, 漫, 澄 and 為 now
+use the Starter cards 海 水 火, 海 水 日, 海 水 川 and 黒 魚 火, so the curated
+distractors fill every slot and the random fallback never runs; the older
+reading-options check still labels べつ and ばん HITs because it ignores filled
+slots, as in earlier batches, and the exposure audit is authoritative.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `845aefbb` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+a wrong Daijisen reading for 漫 (すずろ, not すず), an inaccurate 暑 remark about
+炎, the 浪漫 spelling, the 濁 ジョク wording, loose 為 wording and a missing
+statement that the table gives 為 no kun reading, and wrong glosses or
+headwords for 防災, 漬物 and 原潜, and Daijisen paraphrases in double quotes
+(災, 為). GPT found the same 漫 and 暑 points, the stale remark in the 湧く
+article, a false "small ん" in 漫, a wrong description of the 瀬 component and
+raw dictionary codes in learner text. The first fix made those changes. A fresh
+Claude agent checked it and found one new point: the paraphrase of Daijisen's
+fourth ため sense in 為 ("acting for someone") should be a relation to someone,
+as in 私のためには叔父にあたる. A second fix commit changed that line and one
+connective in 為; a fresh Claude agent and a GPT agent then confirmed it with no
+finding, one after the other. `origin/main` did not move, so there was nothing
+to merge. The [closure record](n1-reviews/batch-145-closure/README.md) keeps the
+reports, prompts, packets, dispositions and limits, including that the
+confirmers were fresh agents and the two Claude confirmation rounds.
+
+Gates at the reviewed snapshot `97168e79` pass: 439 host tests, validation, lint (0 errors; 5
+warnings on untouched, wrapped Dictionary lines of the existing articles 不潔,
+湧く, 潜る, 澄む and 蒸し暑い; the last is not modified and is linted only because the modified 暑 card declares it), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit. It records ten latent collisions, readings
+that other cards offer but no audited pool can draw: 滅 べつ, 滑 かり, 漫 ばん,
+澄 すみ and み, 瀬 せい, 炎 ぬく and もえる, 為 す and た. Android JVM tests were
+not run (no JDK), and no native or phone acceptance is claimed.
+
+## Batch 144: published
+
+Review-closed and published at `21f31dbe`. The
+[Validate content run 44515040324](https://github.com/stop-cran/learning-japanese/actions/runs/44515040324)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,087 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-144-publication/provenance.json). Delivery is now
+**422/1,228**, with **806 remaining**.
+
+Fifteen absent frozen members: 棋 棚 検 概 欄 歓 殊 殻 汁 沖 泡 泣 淡 渇 渋
+(rows 558–631), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: eighteen existing articles each gain one link to a
+new card. Two existing texts also change in one remark each: the 特殊 article
+said 殊 had no card here and now links 殊, and the 討 card said 検 had no card
+here and now links 検. `n1_linkplan.py verify` checks the article links and
+the 特殊 edit, and the author's `kanji_remarks.py` checks that 討 is the only
+existing card that changes and that it changes only in that remark. Cards
+whose senses overlap those of existing cards keep each other out of their
+meaning-quiz options (for example 検 with 査, 験, 診 and 調; 歓 with 喜, 愉 and
+迎; 殊 with 特 and 珍; 汁 with 液 and 湯; 淡 with 薄 and 微; 渇 with 乾 and 干;
+渋 with 苦 and 酸); no pair among the new cards is excluded. A few titles
+share an English word with an existing title in another sense, such as 欄
+"form field" and 体, 形 and 状 "form", 沖 "open sea" and 野 "open field", or 淡
+"plain" and 原 "plain", and those cards stay ordinary wrong options for each
+other. The [progress file](n1-sources/batch-144-progress.json) records the
+gates and disclosed limits.
+
+Eight cards quiz only their on reading (棋 キ, 検 ケン, 概 ガイ, 欄 ラン,
+歓 カン, 殊 シュ, 淡 タン, 渋 ジュウ) and seven only their kun readings
+(棚 たな, 殻 から, 汁 しる, 沖 おき, 泡 あわ, 泣 な.く, 渇 かわ.く), because the
+other readings have no declaring word article yet; they are listed and
+illustrated, not quizzed. A few readings rest on a single entry or an
+alignment and say so on the card: 欄 てすり, 殻 コク and バイ, 沖 わく, 渋
+シュウ and 泡 発泡 ぽう.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem: 検する けんする, 概して がいして, 殊な けな,
+渇す かっす and 渇する かっする. On the first gate runs, the Daijisen-head
+reading かい of 殻 was offered by 貝, and a Starter practice session could
+borrow one holder card because the original distractors 段, 投 and 役 are not
+Starter cards. 殻 now uses the Starter cards 休, 本 and 木, so the curated
+distractors fill every slot and the random fallback never runs; the older
+reading-options check still labels かい a HIT because it ignores filled
+slots, as in earlier batches, and the exposure audit is authoritative.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `b073abd8` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+that 棚 said 氷棚 was the only JMdict ほう word (陸棚 りくほう exists) and
+misread the Daijisen ▽ mark (it marks 店, not 棚), that 歓 put the look-alike
+part of 権 on the wrong side, that 淡 called あわ a name-only reading, that the
+rewritten 討 bullet kept a sentence without a referent, that 欄 misquoted the
+おばしま gloss, and that 棋 ご and 沖 ちゅう.する were typed kun without saying
+the other source files them under on. GPT found the 歓 and 棚 points too and
+asked for the dense 殻, 汁 and 渋 reference paragraphs to be split. The first
+fix made those changes; the 殻 distractors 休 本 木 stayed, because they are
+Starter cards that fill every slot and keep 貝 かい undrawable. A fresh Claude
+agent checked it and found two small points: 欄 called the table's bracketed
+form a "compatibility form" where the other cards say "older form", and the
+棚 JMdict entry 1551120 was missing from its Metadata line. A second fix
+commit made both changes, and fresh agents of both families confirmed it with
+no finding, one after the other. After review the owner's commit `7b48e5da`
+(a wording change to the 手 card) reached `main`; it was merged without
+touching any batch file, and a mechanical proof shows no overlap, so no
+integration review was needed. The
+[closure record](n1-reviews/batch-144-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the confirmers were
+fresh agents and the two Claude confirmation rounds.
+
+Gates at the merge `7059712f` pass: 439 host tests, validation, lint (0 errors; 3
+warnings on untouched, wrapped Dictionary lines of the existing articles 戸棚,
+淡水 and 特殊), quiz safety, link plan, card Metadata entry ids, manifest
+rebuild and budget. The reading-exposure audit reports no production,
+padded-session or one-holder hit and no drawable KANJIDIC2 name-only reading.
+It records six latent collisions, readings that other cards offer but no
+audited pool can draw: 欄 わく, 歓 ぶ (a KANJIDIC2 name reading), 殊 け, 殻
+かい, 沖 とぶ and 沖 むなしい. Android JVM tests were not run (no JDK), and no
+native or phone acceptance is claimed.
+
+## Batch 143: published
+
+Review-closed and published at `87742e2f`. The
+[Validate content run 44490827250](https://github.com/stop-cran/learning-japanese/actions/runs/44490827250)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,057 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-143-publication/provenance.json). Delivery is now
+**407/1,228**, with **821 remaining**.
+
+Fifteen absent frozen members: 施 旋 旗 既 旦 旨 暑 暦 朗 条 架 柄 染 株 桜
+(rows 483–550), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: seventeen existing articles each gain one link to a
+new card. The existing article 西暦 also has one sentence that said 暦 had no
+card here; it now links 暦 and drops that clause. `n1_linkplan.py verify`
+checks the article links and that edit, and the author's `kanji_remarks.py`
+checks that no existing card changes. Cards whose senses overlap those of
+existing cards keep each other out of their meaning-quiz options (for example
+施 with 与, 贈 and 給; 暑 with 夏 and 熱; 旋 with 回 and 転; 染 with 色); the
+only pair among the new cards is 株 and 桜, listed on 株 only. Several
+titles share an English word with an existing title in another sense, such as
+施 "give" and 産, 暑 "season" and 春, 株 "plant" and 植, 桜 "tree" and 松, and
+those cards stay ordinary wrong options for each other. The
+[progress file](n1-sources/batch-143-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz only their on reading and seven only their kun readings,
+because the other readings have no declaring word article yet; common ones
+such as 旗 キ, 旨 うま.い, 暑 ショ, 暦 こよみ, 条 すじ, 架 か.ける, 柄 つか and
+染 そ.める are listed and illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem: 既に すんでに, 旦つく だんつく and 染みる じみる.
+On the first gate run, the KANJIDIC2 name reading ら of 柄 could be drawn on the
+がら prompt of a Starter practice session that borrows 等, because the third
+curated distractor 札 is not a Starter card. 柄 now uses the Starter card 休
+instead (木 本 休), so the curated distractors fill every slot and the random
+fallback never runs.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `6b5934e7` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+that 既 and 朗 call the Joyo parenthesised form a compatibility ideograph when
+it is the traditional (Kangxi dictionary) form, that 桜's whole-word caveat
+covered 桜ん坊 and its ミザクラ was called a "mizaru cherry", that 染's 愛染
+reads ゼン (an on reading outside the Joyo table) and not a whole-word reading,
+that 旨味 is a separate JMdict entry, that 株's 守株 is 守 シュ + 株 シュ, that
+旦's sentences were garbled, and that 柄 え and "pattern" were paired. It also
+questioned 旗's title word "standard"; that point was declined, because the
+curated distractors fill every slot and a title change reaches every linking
+card. GPT found the 柄 pairing, the 旦つく label, the 蒸し暑い reading and the
+exclusions 既 with 在, 存 and 有 and 旋 with 凱. The fix removed those four
+exclusions and Notes sentences and made the wording changes, and a fresh
+Claude agent checked it and found one more defect in unchanged text: 条彫り and
+条播き read 条 as すじ, so the whole-word caveat belongs to 発条 ばね only.
+That went into a second fix commit that replaced the first before any push,
+and fresh agents of both families confirmed the final fix `9b8f50a8` with no
+finding, one after the other. The
+[closure record](n1-reviews/batch-143-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the confirmers were
+fresh agents, the amended unpushed fix commit, a Claude audit flag for two
+overlapping tool calls, and an author-written report path that does not match
+one audit's allowed path.
+
+Gates at `9b8f50a8` pass: 439 host tests, validation, lint (0 errors; 4
+warnings on untouched, wrapped Dictionary lines of the existing articles 一旦,
+凱旋, 蒸し暑い and 西暦), quiz safety, link plan, card Metadata entry ids,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records ten latent collisions (counted per quiz prompt,
+seven distinct pairs), readings that other cards offer but no audited pool can
+draw: the KANJIDIC2 name readings 旋 せ, 朗 あき and お, 柄 ら and 桜 さ, and the
+card-text readings 柄 いきおい and つく. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed.
+
+## Batch 142: published
+
+Review-closed and published at `4044f5d8`. The
+[Validate content run 44475993403](https://github.com/stop-cran/learning-japanese/actions/runs/44475993403)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **9,027 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-142-publication/provenance.json). Delivery is now
+**392/1,228**, with **836 remaining**.
+
+Fifteen absent frozen members: 挙 振 挿 掌 推 描 提 揮 揺 操 故 敵 斉 斎 斜
+(rows 431–479), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty-four existing articles each gain one link to a
+new card. The Notes remark of the existing 仮 card that said 振 and 遣 had no
+cards now links 振 and names only 遣. `n1_linkplan.py verify` checks the
+article links, and the author's `kanji_remarks.py` checks that no other
+existing card changes and that 仮 changes only by its declared edit. Eight
+pairs of new cards whose senses overlap, 挙 and 推, 挙 and 提, 推 and 提, 振
+and 揺, 振 and 揮, 掌 and 揮, 掌 and 操, and 揮 and 操, keep each other out of
+their meaning-quiz options; each pair is listed on one card only. Six cards
+whose titles share an English word with an existing title in another sense,
+such as 振 "wave" and 波 "wave; billow," keep that card as an ordinary wrong
+option and separate the two senses in a Notes bullet. The
+[progress file](n1-sources/batch-142-progress.json) records the gates and
+disclosed limits.
+
+Nine cards quiz only their on reading and six only their kun readings,
+because the other readings have no declaring word article yet; common ones
+such as 挙 キョ, 振 シン, 推 お.す, 描 ビョウ, 提 さ.げる, 揺 ヨウ, 操 あやつ.る,
+故 ゆえ, 敵 かたき and 斜 シャ are listed and illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 振とう しんとう, 挿げる すげる, 掌る
+つかさどる, 提げる ひっさげる and 斜め なのめ. On the first gate run, two
+attested readings could be drawn in a Starter practice session that borrows
+one holder card: よる, the old verb ▽揺る, on the 揺 ゆ.れる prompt, and い, the
+▽斎 prefix, on the 斎 サイ prompt. Under the batch 136 rule, each of the two
+cards now has three curated Starter-card distractors whose readings are not
+the card's own and are distinct, 入 見 休 for 揺 and 海 毎 買 for 斎, so they
+fill every slot and the random fallback never runs. They are not look-alikes;
+the look-alikes stay in Notes, which name the three cards and what links them
+to the card. On 故 コ the curated card 攻 offers only こう, which the quiz
+skips as a long-vowel variant of the answer, so the random fallback fills one
+slot.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol), reviewed
+the frozen draft `9d393a8f` one after the other, each without seeing the
+other's work. Both returned NEEDS FIX with minor findings only. Claude found
+that the meaning-quiz distractors of 揺 and 斎 are unrelated Starter kanji,
+which the collection convention allows and the cards' Notes disclose, so that
+point was declined, and that 斎's summary of Daijisen さい omitted the pen
+names. GPT found that 提's チョウ row claimed no source assigns the reading to
+提 alone, that 斎.md said 斎宮 is not split between the kanji, that 揺's 缶-like
+part has five strokes where 缶 has six, and that three cards had long
+single-paragraph passages. Fix `3a0399bd` rewrote the 提 row on Daijisen's
+▽提▽灯 and its 唐音 label, gave 斎宮 the reading いつき の みや, said that 揺's
+shape has one stroke fewer than 缶, split the paragraphs of 斎, 斉 and 揺,
+added the pen-name use of 斎 and cited JMdict 2751570 on 描. A fresh agent of
+each family confirmed it with no finding, one after the other (Claude's two
+optional notes are deferred or are checker-output quirks). The
+[closure record](n1-reviews/batch-142-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the confirmers were
+fresh agents, a Claude audit flag for two overlapping tool calls and, for both
+initial runs, a recursive listing of the packet and a read of the prompt file.
+
+Gates at `3a0399bd` pass: 439 host tests, validation, lint (0 errors; 6
+warnings on untouched, wrapped Dictionary lines of the existing articles 一斉,
+体操, 振り仮名, 振舞う, 斜 and 平仮名), quiz safety, link plan, card Metadata
+entry ids, manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records twelve latent collisions, readings that other
+cards offer but no audited pool can draw, such as 揺 よる, 斎 い and the
+KANJIDIC2 name readings 挙 たか, 振 ふり and 斎 いつ. The older reading-options
+check still lists the 斎 い HIT, because it ignores slots that curated
+distractors fill; its simulation drew only curated readings. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
+
+## Batch 141: published
+
+Review-closed and published at `1889f1d5`. The
+[Validate content run 44407220540](https://github.com/stop-cran/learning-japanese/actions/runs/44407220540)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,997 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-141-publication/provenance.json). The shared ZIP
+verifier first rejected the manifest, because since the Momotaro pilot
+`tools/build_manifest.py` publishes a reading map that the verifier did not
+build; it now builds the manifest the same way. Delivery is now
+**377/1,228**, with **851 remaining**.
+
+Fifteen absent frozen members: 悔 悟 惑 惜 愉 慎 慮 慰 憧 憩 懐 懸 扇 抽 拡
+(rows 365–426), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty-one existing articles each gain one link to a
+new card. The Notes remark of the existing 張 card that said 緊 and 拡 had no
+cards now names only 緊. `n1_linkplan.py verify` checks the article links,
+and the author's `kanji_remarks.py` checks that no other existing card
+changes and that 張 changes only by its declared edit. Seven pairs of new
+cards whose senses overlap, 悔 and 惜, 惜 and 懐, 愉 and 慰, 慎 and 慮, 慮 and
+懸, 慰 and 憩, and 憧 and 懐, keep each other out of their meaning-quiz
+options. The [progress file](n1-sources/batch-141-progress.json) records the
+gates and disclosed limits.
+
+Ten cards quiz only their on reading and five only their kun readings,
+because the other readings have no declaring word article yet; common ones
+such as 悔 カイ, 惜 セキ and お.しむ, 慎 つつし.む, 慰 イ, 憩 いこ.い, 懐 カイ
+and ふところ, 懸 か.ける, 扇 おうぎ and 拡 ひろ.げる are listed and
+illustrated, not quizzed. The declaring article 扇ぐ reads 扇 as あお, which is
+not a KANJIDIC2 reading, so it is not quizzed either.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 慮る おもんばかる, 懐しい ゆかしい, 懸る,
+扇ぐ and 抽んでる. No attested reading can be drawn as a wrong option, so no
+card needs distractors chosen to fill every slot. On four prompts, 慮 リョ,
+慰 なぐさ.める, 憧 あこが.れる and 懐 なつ.かしい, one curated card has no reading
+of the prompt's type, so the random fallback fills one slot.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `a92d134a` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX. Both found that 悔しい and 悔やむ
+still said there was no 悔 card, beside the new link to it (Claude: moderate;
+GPT: minor). Claude also found that 抽's ひき- row was illustrated with
+抽き出し, where 抽 writes only ひ. Fix `65b47299` deleted the two sentences,
+declared as remark edits, and used 抽斗 for the ひき- row, split as 抽 ひき
+and 斗 だし; it also applied optional points: 張's Notes name 拡 as the other
+kanji in 拡張, 懸 mentions the reading けんねん of 懸念, and the long reference
+bullets of 懐 and 扇 are split. In the first confirmation round both
+reviewers independently found that the split gives 斗 a reading だし it does
+not have, and both pointed out that JMdict marks けんねん as irregular kana.
+Fix `094a1649` uses the search-only spelling 抽出し for the ひき- row, calls
+抽斗 a reading of the whole word (KANJIDIC2 gives 斗 no だし), and labels
+けんねん as irregular. Both reviewers confirmed it with no finding; Claude's
+two wording nits on 抽 are deferred. The
+[closure record](n1-reviews/batch-141-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including that the two
+confirmations of each round ran at the same time.
+
+Gates at `094a1649` pass: 436 host tests, validation, lint (0 errors; 2
+warnings on untouched, wrapped Dictionary lines of the existing articles
+扇風機 and 威張る), quiz safety, link plan, manifest rebuild and budget. The
+reading-exposure audit reports no production, padded-session or one-holder
+hit and no drawable KANJIDIC2 name-only reading. It records five latent
+collisions, readings that other cards offer but no audited pool can draw: 悔
+け on both kun prompts (the ケ of 懺悔, from Kanjipedia and Daijisen) and the
+KANJIDIC2 name readings 慎 みつ, 懐 かね and 扇 おう. Android JVM tests were not
+run (no JDK), and no native or phone acceptance is claimed.
+
+Main had meanwhile gained the N5 Momotaro reading pilot (`ddc7da27`). The
+non-rewriting merge `a366ac8a` regenerates `manifest.json`, the only
+conflict; its [merge proof](n1-reviews/batch-141-closure/integration/merge-proof.json)
+shows that every other path equals one parent and that main touches no batch
+file, link target or mention, so no integration review was needed. On the
+merged tree, 439 host tests, validation, lint, the manifest rebuild, the
+budget and every batch audit pass, the audits unchanged from `094a1649`.
+
+## Batch 140: published
+
+Review-closed and published at `fe70abbf`. The
+[Validate content run 44382086589](https://github.com/stop-cran/learning-japanese/actions/runs/44382086589)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,966 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-140-publication/provenance.json). Delivery is now
+**362/1,228**, with **866 remaining**.
+
+Fifteen absent frozen members: 嵐 巣 帳 幕 幣 序 弁 往 径 徐 従 徴 志 怠 恨
+(rows 291–360), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. 従,
+deferred in batch 111 because no existing article used its reading ジュウ,
+passes under this rule because 従う and 従って use したが.う. No word article
+is added: twenty-three existing articles each gain one link to a new card.
+半径 and 往復 also lose a sentence that said 径 or 往 had no card, and the
+Notes bullet of the existing 慢 card that said 怠 and 緩 had no cards now
+names only 緩. `n1_linkplan.py verify` checks the two article edits as
+declared remark edits, and the author's `kanji_remarks.py` checks that no
+other existing card changes and that 慢 changes only by its declared edit.
+The [progress file](n1-sources/batch-140-progress.json) records the gates and
+disclosed limits.
+
+Ten cards quiz on readings only and five quiz kun readings only, because the
+other readings have no declaring word article yet; common ones such as 巣
+ソウ, 幕 バク, 従 ジュウ and したが.える, 志 こころざし, 怠 タイ and 恨
+うら.めしい are listed and illustrated, not quizzed. JMdict marks the いとこ of
+従兄弟 and 従姉妹 as gikun, so it is not quizzed either.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 帳つけ, 幕にする, 弁じる, 徐に, 従たる,
+徴する and 怠い. With tag-similar distractors, the audit found that Starter
+sessions could offer まい, a reading of 毎, 米, 枚, 妹 and 埋, on 幣's ヘイ
+prompt; JMdict (2789910) and Daijisen both give まい for 幣. 幣 now takes
+three Starter-card distractors whose readings are not its own (中 南 雨 since
+the review fix), so curated options fill every slot; the shape look-alikes
+常, 帯 and 希 stay in its Notes.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `28831314` one after the other, each without seeing
+the other's work. Both returned NEEDS FIX for minor points only. Claude found
+three quiz-option points: 幣's distractors 中 and 内 have overlapping titles,
+"middle, inside" and "within, inner"; the titles of 徴 and 署 both begin with
+"sign"; and 帳 and 幕 share a curtain sense but did not exclude each other.
+GPT found that 幕 and 徐 quoted two explanatory paraphrases, "covering cloth"
+and "slow, unhurried", as if they were source glosses, and that 弁 and 従 put
+long lists of dictionary senses before their reading tables. Fix `1b24a5f9`
+changed eight cards. 幣 replaces 内 with 雨; Claude's suggested 常, 帯 and 希
+are not Starter cards, and the audit of a local version that used them found
+that a Starter session could then offer まい. 徴 excludes 署 and 帳 excludes 幕.
+The two paraphrases are no longer quoted. 弁 and 従 each sum up their senses
+in one paragraph and keep the full list in a reference bullet at the end of
+the Notes. The fix also applied five optional points: 径's example 小径, 幣's
+rare readings ぜに and にきて, the bento sense in 弁's title, the word 弁護士
+and the link between 徐ろに and KANJIDIC2's おもむ.ろに. Both reviewers
+confirmed the fix; neither left a finding. The
+[closure record](n1-reviews/batch-140-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `1b24a5f9` pass: 436 host tests, validation, lint (0 errors; 4
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The reading-exposure audit reports
+no production, padded-session or one-holder hit and no drawable KANJIDIC2
+name-only reading. It records four latent collisions, readings that other
+cards offer but no audited pool can draw: 幣 まい, 弁 とく, 従 ひろい and the
+KANJIDIC2 name reading 志 じん. The older reading-options check still lists
+まい for 幣, because it ignores slots that curated distractors fill; its
+simulation drew only curated readings. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed.
+
+## Batch 139: published
+
+Review-closed and published at `e62eee92`. The
+[Validate content run 44347453271](https://github.com/stop-cran/learning-japanese/actions/runs/44347453271)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,936 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-139-publication/provenance.json). Delivery is now
+**347/1,228**, with **881 remaining**.
+
+Fifteen absent frozen members: 嫁 嬢 宗 宜 宣 宴 寂 密 審 尋 屈 属 岬 峠 崩
+(rows 237–290), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: twenty existing articles each gain one link to a new
+card. Four of them also lose a sentence that said a kanji had no card: 宴会,
+崩す and 崩れる drop it, and 附属 now says only that 附 has no card yet.
+`n1_linkplan.py verify` checks these as declared remark edits, and the
+author's `kanji_remarks.py` checks that no existing card changes. The
+[progress file](n1-sources/batch-139-progress.json) records the gates and
+disclosed limits.
+
+Eight cards quiz on readings only and seven quiz kun readings only, because
+the other readings have no declaring word article yet; common ones such as
+嫁 とつ.ぐ, 宗 むね, 寂 ジャク and セキ, 尋 ジン and 崩 ホウ are listed and
+illustrated, not quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the readings of JMdict kanji-plus-okurigana headwords whose
+stem is not a card kun stem, such as 嫁す, 嬢さん, 宜う, 宣する, 屈する,
+属する and 崩ずる. With tag-similar distractors, the audit found that Starter
+sessions could offer 先's さき on 岬's みさき prompt; Daijisen and JMdict both
+give さき for 岬. 岬 now takes three Starter-card distractors whose readings
+are not its own (山 田 中), so curated options fill every slot. Quiz
+exclusions could not fix this, because they apply to meaning quizzes only.
+The draft audits left out two Daijisen character-entry kun readings, 宗
+たっと.ぶ and 宣 の.る; the corrected audits add them and change no hit or
+collision count.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `a47efe9a` one after the other, each without seeing
+the other's work. GPT returned NEEDS FIX for one minor defect: 峠 excluded 通
+and 経, which share only the English word "pass" with it. Claude passed the
+batch with two minor source points: 宣 did not give JMdict's note that
+のたまう was originally respectful and is now often used sarcastically, and
+嫁 did not say that JMdict marks its sense "wife" as Kansai dialect. Fix
+`3b6f9727` changed four cards and one word article: it removed both 峠
+exclusions and added a bullet separating a mountain pass from the verbs 通る
+and 経る, added the two notes, and applied three of Claude's optional points:
+嬢's related forms お嬢様, 嬢ちゃん and 嬢さん, 宣's Daijisen kun readings
+with 宣べ伝える, and a full stop in 宴会's reading line. GPT then found that
+the new 嬢 bullet shortened JMdict's gloss of 嬢さん, which Claude had also
+noted as optional. Fix `f1b2bdb8` quotes the gloss in full, and both
+reviewers confirmed it; neither left a finding. The
+[closure record](n1-reviews/batch-139-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `f1b2bdb8` pass: 436 host tests, validation, lint (0 errors; 2
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The corrected reading-exposure audit
+reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 宗 し on the シュウ prompt in the N1
+and All stacks, through the curated distractor 示. It records eleven latent
+collisions, readings that other cards offer but no audited pool can draw.
+The older reading-options check still lists さき for 岬, because it ignores
+slots that curated distractors fill; its simulation drew only curated
+readings. Android JVM tests were not run (no JDK), and no native or phone
+acceptance is claimed.
+
+## Batch 138: published
+
+Review-closed and published at `a2a0f3df`. The
+[Validate content run 44309389145](https://github.com/stop-cran/learning-japanese/actions/runs/44309389145)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,906 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-138-publication/provenance.json). Delivery is now
+**332/1,228**, with **896 remaining**.
+
+Fifteen absent frozen members: 噴 垂 垣 執 堅 塊 墨 壁 壊 奏 契 奨 奪 妨 威
+(rows 174–230), the next fifteen under the selection rule announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084)
+and first applied in batch 137. All fifteen pass, so none is set aside. No
+word article is added: seventeen existing articles each gain one link to a
+new card. The 張 card's sentence that said 威 had no card now links 威 with
+its title. `n1_linkplan.py verify` checks word articles only, so the
+author's `kanji_remarks.py` checks that this is the only edit to an existing
+card. The [progress file](n1-sources/batch-138-progress.json) records the
+gates and disclosed limits.
+
+Seven cards quiz on readings only and eight quiz kun readings only, because
+the other readings have no declaring word article yet; common ones such as
+堅 ケン, 壁 ヘキ, 奪 ダツ and 奏 かな.でる are listed and illustrated, not
+quizzed.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the JMdict kanji-plus-okurigana headwords 垂げ さげ, 垂れ
+しだれ and だれ, 垂れる しだれる, 垂んとす, 執よう, 壊つ, 奏す, 奏する and
+奪る. With tag-similar distractors, the audit found that Starter sessions
+could offer Kanjipedia's 外 readings ホン for 噴 and ケツ for 契. Both cards
+now take three Starter-card distractors whose readings are not their own
+(口 古 買 and 大 天 分), so curated options fill every slot. A second
+`--extra` for the same kanji first replaced the earlier one in the author's
+audit tools instead of adding to it, so the draft audits never checked eight
+extra readings of 垂, 執, 壊 and 奏. The tools now add, the gate runner passes
+one merged `--extra` per kanji, and the corrected audits change no card.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `b6020f9e` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. GPT found
+two missing direct exclusions, 垣–壁 and 奪–魅. Claude found four wording
+points: 堅 did not say JMdict's かたい entry also lists 緊い, 契 did not name
+Kanjipedia's outside readings キツ and ケツ, 妨 gave only one of Daijisen's
+two examples, and 壊's mnemonic misdescribed the lower right. Fix `acf7297e`
+changed ten cards: it added both exclusions and 塊–組, which the author
+found, rewrote the four points (契 names キツ and ケツ but not Claude's セツ,
+which is the reading of a Daijisen proper-name headword), and applied four of
+Claude's optional points: 威's frame strokes, 威張る's on reading い,
+執り行う and 功を奏する. Both reviewers confirmed it, and fix `3158b2b9`
+wrote 契闊's reading in hiragana, Claude's only optional point. Because the
+corrected audits replaced those in the earlier packets, both reviewers also
+confirmed fix 2 with them; neither left a finding. The
+[closure record](n1-reviews/batch-138-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `3158b2b9` pass: 436 host tests, validation, lint (0 errors; 3
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+link plan, manifest rebuild and budget. The corrected reading-exposure audit
+reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 執 し on the シツ prompt in a Starter
+session. It records nine latent collisions, readings that other cards offer
+but no audited pool can draw; the ninth, 壊 やぶれる, was hidden by the
+`--extra` defect. The older reading-options check still lists ほん for 噴 and
+けつ for 契, because it ignores slots that curated distractors fill; its
+simulation drew only curated readings. Android JVM tests were not run (no
+JDK), and no native or phone acceptance is claimed.
+
+## Batch 137: published
+
+Review-closed and published at `c1d2e3a7`. The
+[Validate content run 44279660858](https://github.com/stop-cran/learning-japanese/actions/runs/44279660858)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,876 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-137-publication/provenance.json). Delivery is now
+**317/1,228**, with **911 remaining**.
+
+Fifteen absent frozen members: 丁 井 仰 但 傑 傷 僕 卸 司 吐 呂 哀 哲 唯 善
+(rows 1–164). From this batch on, as announced on
+[issue 60](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6971336084),
+a batch takes the next fifteen, in source-row order, of the 271 absent rows
+at least one of whose KANJIDIC2 readings is used by an existing word article
+that declares the kanji. A card quizzes each reading that a declaring word
+article uses, unless the pinned JMdict marks the spelling as ateji or the
+reading as gikun; name-only readings are never quizzed, and a reading type
+with no such reading gets an empty quizzed list. All fifteen pass, so none
+is set aside. No word article is added: twenty-one existing articles each
+gain one link to a new card. Three sentences that said there was no 丁, 傷
+or 呂 card are updated: 寧 and 敷 now link the new cards, and 火傷 drops the
+sentence. The [progress file](n1-sources/batch-137-progress.json) records
+the gates and disclosed limits.
+
+Nine cards quiz on readings only and six quiz kun readings only, because the
+other readings have no declaring word article yet; common ones such as 傷
+ショウ, 哀 アイ and 善 よ.い are listed and illustrated, not quizzed. 火傷
+やけど is gikun in the pinned JMdict, so it does not support a 傷 reading.
+Daijisen labels the ロ of 語呂 and 風呂 as 当て字, but the pinned JMdict does
+not mark those spellings ateji and the Joyo table lists 風呂 under ロ, so 呂
+quizzes ロ.
+
+The readings passed to the exposure audit with `--extra` follow the standing
+steps: Kanjipedia 外 readings, Daijisen character-entry kun readings and ▽
+headwords, and the JMdict kanji-plus-okurigana headwords 仰く, 仰ける, 吐かす,
+哀れ あはれ, 善い えい and 善し えし. No distractor change was needed.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `d3c7394d` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. Both found
+16 quoted card titles in ten cards that had lost the space after a comma. GPT
+also found that 仰's example 仰山 lacked JMdict's Kansai-dialect label on its
+"a lot" sense. Claude also raised optional source points. Fix `2bc8e9b1`
+copied each quoted title from its linked card and added the Kansai label;
+from the optional points, 丁 now says よほろ appears in JMdict only as
+つかえのよほろ, an archaic reading of 仕丁, 傑作's second sense is labelled
+jocular and dated, 卸下 is labelled a military term, and 卸 words Daijisen's
+おろし definition more closely. Claude confirmed it with one optional point:
+丁's Metadata line lacked 仕丁 (2829360). Fix `48332d32` added it and the
+missing ids of 当て字 on 呂 and 唯々 and 諾々 on 唯. Claude confirmed fix 2,
+and GPT confirmed both fixes; neither left a finding. The
+[closure record](n1-reviews/batch-137-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits.
+
+Gates at `48332d32` pass: 436 host tests, validation, lint (0 errors; 4
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+reading options, link plan, manifest rebuild and budget. The reading-exposure
+audit reports no production, padded-session or one-holder hit apart from one
+disclosed KANJIDIC2 name-only reading: 唯 ゆ on the ユイ prompt in a Starter
+session that also borrows 油 or 輸. Android JVM tests were not run (no JDK),
+and no native or phone acceptance is claimed.
+
+## Batch 136: published
+
+Review-closed and published at `1e91700e`. The
+[Validate content run 44251166449](https://github.com/stop-cran/learning-japanese/actions/runs/44251166449)
+passed on that exact commit, and its GitHub ZIP matches the local runtime:
+all **8,846 runtime hashes**, the manifest and the exported tree. See the
+[receipt](n1-reviews/batch-136-publication/provenance.json). Delivery is now
+**302/1,228**, with **926 remaining**.
+
+Fifteen absent frozen members: 炊 焦 異 端 筋 粗 納 脱 膨 致 請 透 鉢 隔 駄
+(rows 666–1198). They are the remaining fifteen of the thirty absent rows
+whose existing declaring word articles already cover an on-reading and,
+where one exists, a kun-reading; batch 135 took the first fifteen, so this
+selection is exhausted after this batch. Thirty-four existing word articles
+each gain one link to a new card, and no word article is added. The only
+other article text change is the removal, after review, of a stale sentence
+in 透明 that said there was no 透 card. The [progress file](n1-sources/batch-136-progress.json)
+records the gates and disclosed limits. 納's only quizzed on reading is ナッ,
+from 納得, because no word article uses ノウ yet; 駄 quizzes only タ, from
+下駄, because its only ダ word, 無駄, is an ateji spelling. Both cards say so.
+
+This is the first batch drafted under the standing steps above. The readings
+passed to the exposure audit with `--extra` are the Kanjipedia 外 readings,
+the kun readings of the Digital Daijisen character entries, the Daijisen
+headwords marked ▽ for these kanji, and JMdict 2863007 脱る とる; a scan of
+JMdict kanji-plus-okurigana headwords found no further reading stem. In the
+first draft, a Starter session that also borrows one holder card could offer
+とる on 脱 (from 取, 捕, 採 or 撮) and おこす on 致 (from 起). 脱 now has
+the curated distractors 飲 読 聞 and 致 has 話 買 学; each set fills all three
+slots, and both cards name the readings and the chosen cards. The older
+reading-options check still labels 端 はじめ and 致 おこす because it ignores
+filled slots; both prompts are filled by curated distractors.
+
+Two reviewer agents, Claude (claude-opus-5.5) and GPT (gpt-6.1-sol),
+reviewed the frozen draft `420a6669` one after the other, each without seeing
+the other's work, and both returned NEEDS FIX for minor defects. Both found
+that 炊 presented the "boil" sense of 炊く as general Japanese, although
+JMdict marks it as Kansai dialect. GPT also found that 請 placed the 青 of
+静 on the right, where 静 has it on the left, and that 透明 still said there
+was no 透 card. Claude also raised optional source and wording points. Fix
+`7a525b06` changed 炊 (which now names standard 煮る), 請, 透明, and, from
+Claude's points, added the Daijisen kun readings 端 はした and 駄 においうま,
+a kana-spelling note on 粗 and the full 雑炊 gloss. Both reviewers then
+returned CONFIRMED with no findings. The
+[closure record](n1-reviews/batch-136-closure/README.md) keeps the reports,
+prompts, packets, dispositions and limits, including a unit-test excerpt in
+the confirmation packets that lost its final OK line.
+
+Gates at `7a525b06` pass: 436 host tests, validation, lint (0 errors; 8
+warnings on untouched Dictionary lines of existing articles), quiz safety,
+manifest rebuild and budget. The reading-exposure audit reports no
+production, padded-session or one-holder hit apart from two disclosed
+KANJIDIC2 name-only readings: 炊 い on the スイ prompt in the N1 and All
+stacks, and 納 ろ in a Starter session that also borrows 路. Android JVM
+tests were not run (no JDK), and no native or phone acceptance is claimed.
 
 ## Batch 135: published
 

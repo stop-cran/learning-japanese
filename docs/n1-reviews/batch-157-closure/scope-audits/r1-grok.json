@@ -1,0 +1,372 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "5a6540fa-4020-4233-91c8-506661579854",
+ "agent": {
+  "agentDisplayName": "B157 comprehensibility review",
+  "agentType": "general-purpose",
+  "executionMode": "sync",
+  "modelSelectionSource": "explicit_override"
+ },
+ "selectedModel": "grok-4.7",
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-22T07:54:28.383Z",
+  "last": "2026-11-22T08:11:37.813Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-22T07:54:30.913Z",
+   "chars": 2355,
+   "sha256": "a0812a9a0c431b15ae63c9d1ece332d9fb02a040dbac3c5cf179a2c5019618a1"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "grok-4.7",
+   "responseModel": "grok-4.7",
+   "apiRequests": 93
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 8314962,
+  "outputTokens": 60773,
+  "cacheReadTokens": 8009728,
+  "cacheWriteTokens": 0,
+  "reasoningTokens": 45450,
+  "costMultiplierSum": 93.0
+ },
+ "toolCalls": {
+  "total": 99,
+  "byTool": {
+   "view": 66,
+   "powershell": 19,
+   "web_fetch": 6,
+   "grep": 5,
+   "glob": 1,
+   "web_search": 1,
+   "create": 1
+  },
+  "maxInFlight": 3,
+  "overlappingStarts": 7,
+  "overlaps": [
+   {
+    "at": "2026-11-22T07:54:46.032Z",
+    "tools": [
+     "view",
+     "view"
+    ]
+   },
+   {
+    "at": "2026-11-22T07:54:46.032Z",
+    "tools": [
+     "view",
+     "view",
+     "view"
+    ]
+   },
+   {
+    "at": "2026-11-22T07:55:45.737Z",
+    "tools": [
+     "view",
+     "view"
+    ]
+   },
+   {
+    "at": "2026-11-22T07:55:45.737Z",
+    "tools": [
+     "view",
+     "view",
+     "view"
+    ]
+   },
+   {
+    "at": "2026-11-22T08:07:08.081Z",
+    "tools": [
+     "web_fetch",
+     "web_search"
+    ]
+   },
+   {
+    "at": "2026-11-22T08:07:33.920Z",
+    "tools": [
+     "view",
+     "web_fetch"
+    ]
+   },
+   {
+    "at": "2026-11-22T08:08:19.698Z",
+    "tools": [
+     "view",
+     "web_fetch"
+    ]
+   }
+  ]
+ },
+ "corpusScans": [
+  {
+   "tool": "powershell",
+   "path": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff",
+   "files": 6864,
+   "recursive": true
+  }
+ ],
+ "shellDirectories": [
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\repo",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\snapshot",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\snapshot\\strokes",
+  "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\titles"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 17,
+   "full": 10,
+   "full (ranges)": 7,
+   "notFullyRead": []
+  },
+  "snapshot/strokes": {
+   "files": 10,
+   "none": 10,
+   "notFullyRead": [
+    "snapshot/strokes/佐.json",
+    "snapshot/strokes/佳.json",
+    "snapshot/strokes/併.json",
+    "snapshot/strokes/侍.json",
+    "snapshot/strokes/侮.json",
+    "snapshot/strokes/侯.json",
+    "snapshot/strokes/俊.json",
+    "snapshot/strokes/俗.json",
+    "snapshot/strokes/俵.json",
+    "snapshot/strokes/倫.json"
+   ]
+  },
+  "snapshot/words": {
+   "files": 10,
+   "full": 10,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 7,
+   "full": 7,
+   "notFullyRead": []
+  },
+  "checks": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence (top level)": {
+   "files": 5,
+   "full (ranges)": 1,
+   "grep/glob only": 1,
+   "partial": 3,
+   "notFullyRead": [
+    "evidence/jmdict-digest.tsv",
+    "evidence/jmdict-families.xml",
+    "evidence/kanjidic2-records.xml",
+    "evidence/provenance.json"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 10,
+   "full (ranges)": 3,
+   "grep/glob only": 7,
+   "notFullyRead": [
+    "evidence/public-source/weblio-佐.txt",
+    "evidence/public-source/weblio-佳.txt",
+    "evidence/public-source/weblio-併.txt",
+    "evidence/public-source/weblio-侯.txt",
+    "evidence/public-source/weblio-俊.txt",
+    "evidence/public-source/weblio-俵.txt",
+    "evidence/public-source/weblio-倫.txt"
+   ]
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 2,
+   "partial": 1,
+   "shell": 1
+  },
+  "rubric": {
+   "files": 4,
+   "full (ranges)": 4
+  },
+  "repo/docs + README": {
+   "files": 4,
+   "grep/glob only": 1,
+   "none": 1,
+   "partial": 2
+  },
+  "repo/kanji (context)": {
+   "files": 1588,
+   "none": 1588
+  },
+  "repo/words (context)": {
+   "files": 5204,
+   "none": 5204
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full",
+  "mechanical-checks.md": "full (ranges)"
+ },
+ "outsidePaths": [
+  "[\"C:\\\\Users\\\\romanko\\\\AppData\\\\Local\\\\Temp\\\\b157-review-candidate-a5c6a0ff\"]",
+  "[\"C:\\\\Users\\\\romanko\\\\AppData\\\\Local\\\\Temp\\\\b157-review-candidate-a5c6a0ff\\\\repo\\\\docs\\\\content-format.md\"]"
+ ],
+ "alsoReadAllowed": [],
+ "alsoReadPaths": [],
+ "alsoReadCount": 0,
+ "writes": [
+  {
+   "tool": "create",
+   "path": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-grok.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "Select-String -Path \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\jmdict-digest.tsv\" -Pattern \"^(佳|併|侍|侮|侯|俊|俗|俵|倫)\\t\" | ForEach-Object { $_.Line }",
+   "writeLike": false
+  },
+  {
+   "command": "$p = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\jmdict-digest.tsv\"; Get-Content -LiteralPath $p -Encoding UTF8 | Where-Object { $_ -match '^(佳|併|侍|侮|侯|俊|俗|俵|倫)\\t' -and $_ -match 'news1|ichi1|spec1|gai1|news2|spec2' } | ForEach-Object { $_.Substring(0, [Math]::Min(220, $_.Length)) }",
+   "writeLike": false
+  },
+  {
+   "command": "$p = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\jmdict-digest.tsv\"; Get-Content -LiteralPath $p -Encoding UTF8 | Where-Object { $_ -match '^侯\\t' } | ForEach-Object { $_.Substring(0, [Math]::Min(260, $_.Length)) }",
+   "writeLike": false
+  },
+  {
+   "command": "Get-ChildItem -LiteralPath \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\" -Recurse -File | Select-Object -ExpandProperty FullName",
+   "writeLike": false
+  },
+  {
+   "command": "$ids = @('1189760','1506200','1284480','1314780','1314890','1314800','1582520','1498260','1583670','1272730','1272630','1272650','1344250','1588830','1340940','1340880','1405300','1499960','1583390','1445550','1166100','1555390','1603460','1454240')\n$path = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\jmdict-families.xml\"\n$xml = [xml](Get-Content -LiteralPath $path ...",
+   "writeLike": false
+  },
+  {
+   "command": "$ids = @('1189760','1506200','1284480','1314780','1314800','1582520','1498260','1583670','1272730','1272630','1344250','1588830','1340940','1340880','1405300','1499960','1583390','1445550','1166100','1555390','1603460','1454240','1314890')\n$path = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\jmdict-families.xml\"\n$xml = New-Object System.Xml.XmlDocument\n$xml.Preserve...",
+   "writeLike": false
+  },
+  {
+   "command": "$base = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\titles\"\nWrite-Output \"=== KANJI HITS ===\"\n$needles = @('佐','佳','併','侍','侮','侯','俊','俗','俵','倫','左','差','査','価','加','果','美','優','平','兵','閉','合','字','寺','次','士','舞','武','部','交','光','向','春','瞬','旬','秀','英','属','続','族','表','票','評','林','輪','臨','辱','風','土','諸','侯','徳','援','助','傑','作','道','徳')\n$kt = Get-Content -LiteralPath \"$bas...",
+   "writeLike": false
+  },
+  {
+   "command": "$base = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\titles\"\n$kt = Get-Content -LiteralPath \"$base\\kanji-titles.tsv\" -Encoding UTF8\n$wt = Get-Content -LiteralPath \"$base\\word-titles.tsv\" -Encoding UTF8\nWrite-Output \"=== KANJI semantic scan ===\"\n$patterns = @('aid','assist','help','beaut','excel','outstanding','talent','combin','join','samurai','warrior','retain','despis','sc...",
+   "writeLike": false
+  },
+  {
+   "command": "$wt = Get-Content -LiteralPath \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\titles\\word-titles.tsv\" -Encoding UTF8\nWrite-Output (\"word title rows: \" + $wt.Count)\n$wt | Where-Object { $_ -match '佳作|併用|侍|侮る|俊足|俗語|俵|倫理|補佐|諸侯|傑作|道徳|援助|武士|見下|軽ん|兼用|合併|侮辱|土俵' } | Select-Object -First 80",
+   "writeLike": false
+  },
+  {
+   "command": "$wt = Get-Content -LiteralPath \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\titles\\word-titles.tsv\" -Encoding UTF8\n$patterns = @('samurai','look down','underestimate','disdain','scorn','despise','slang','colloquial','jargon','ethics','morals','morality','feudal','lord','daimyo','prince','fast runner','swift','speed','aide','assistance','assist','honorable','honourable','mast...",
+   "writeLike": false
+  },
+  {
+   "command": "$wt = Get-Content -LiteralPath \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\titles\\word-titles.tsv\" -Encoding UTF8\n$words = @('隠語','口語','方言','スラング','卑語','名作','助手','見下す','蔑む','軽んじる','兼用','混合','武士','侍','名作','佳作','傑作','土俵','一俵','合併','併合','侮辱','侮蔑','倫理','道徳','補佐','援助','諸侯','王侯','俊足','駿足','俗語','風俗','佳作')\nforeach ($w in ($words | Select-Object -Unique)) {\n  $hits = $wt | Where-Obj...",
+   "writeLike": false
+  },
+  {
+   "command": "$p = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\repo\\docs\\confusable-words.md\"\nSelect-String -LiteralPath $p -Pattern '侍|武士|侮|見下|佳作|名作|傑作|補佐|援助|助手|倫理|道徳|諸侯|俗語|俵|袋|併用|兼' | ForEach-Object { \"{0}:{1}\" -f $_.LineNumber, $_.Line.Trim() }",
+   "writeLike": false
+  },
+  {
+   "command": "$p = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\repo\\docs\\confusable-words.md\"\nWrite-Output (\"bytes \" + (Get-Item -LiteralPath $p).Length)\n$c = Get-Content -LiteralPath $p -Encoding UTF8\nWrite-Output (\"lines \" + $c.Count)\n$c | Select-String -Pattern '武士|samurai|見下ろす|名作|傑作|援助|道徳' | Select-Object -First 30 | ForEach-Object { $_.Line.Substring(0, [Math]::Min(180, $_.Line.Leng...",
+   "writeLike": false
+  },
+  {
+   "command": "$root = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\repo\"\n$files = @(\n  'words\\見下ろす.md',\n  'words\\武士.md',\n  'words\\名作.md',\n  'words\\傑作.md',\n  'words\\助手.md',\n  'words\\援助.md',\n  'words\\道徳.md',\n  'words\\袋.md',\n  'kanji\\丞.md',\n  'kanji\\援.md',\n  'kanji\\傑.md',\n  'kanji\\兼.md',\n  'kanji\\才.md',\n  'kanji\\秀.md',\n  'kanji\\英.md',\n  'kanji\\士.md',\n  'kanji\\武.md',\n  'kanji\\徳.md',\n  'kanji\\...",
+   "writeLike": false
+  },
+  {
+   "command": "$kpath = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\kanjidic2-records.xml\"\n$xml = New-Object System.Xml.XmlDocument\n$xml.Load($kpath)\n$chars = $xml.SelectNodes('//character')\nWrite-Output (\"kanjidic chars: \" + $chars.Count)\nforeach ($ch in $chars) {\n  $lit = $ch.SelectSingleNode('./literal').InnerText\n  $strokes = ($ch.SelectNodes('./misc/stroke_count') | ForEach-...",
+   "writeLike": false
+  },
+  {
+   "command": "$p = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\evidence\\jmdict-families.xml\"\nSelect-String -LiteralPath $p -Pattern 'あなず' -Encoding UTF8 | ForEach-Object { $_.Line.Trim() }",
+   "writeLike": false
+  },
+  {
+   "command": "$p = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\repo\\docs\\jlpt-levels.md\"\nSelect-String -LiteralPath $p -Pattern 'word|vocabulary|N1' | Select-Object -First 25 | ForEach-Object { \"{0}:{1}\" -f $_.LineNumber, $_.Line.Trim().Substring(0, [Math]::Min(160, $_.Line.Trim().Length)) }",
+   "writeLike": false
+  },
+  {
+   "command": "$root = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\snapshot\"\n$files = @(\n  'words\\侮る.md','kanji\\侮.md','words\\侍.md','kanji\\侍.md','kanji\\佐.md','kanji\\俊.md','kanji\\佳.md','kanji\\併.md','kanji\\俗.md','words\\俊足.md','words\\補佐.md','words\\佳作.md','words\\倫理.md','kanji\\倫.md','words\\諸侯.md','kanji\\侯.md'\n)\nforeach ($f in $files) {\n  Write-Output \"===== $f =====\"\n  $i = 0\n  Get-Content -Lit...",
+   "writeLike": false
+  },
+  {
+   "command": "$root = \"C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-candidate-a5c6a0ff\\snapshot\"\nforeach ($f in @('words\\侍.md','words\\俊足.md','kanji\\併.md','kanji\\俗.md','words\\補佐.md')) {\n  Write-Output \"===== $f =====\"\n  $i = 0\n  Get-Content -LiteralPath (Join-Path $root $f) -Encoding UTF8 | ForEach-Object { $i++; \"{0,3}|{1}\" -f $i, $_ }\n}",
+   "writeLike": false
+  }
+ ],
+ "web": [
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/search/%E4%BE%AE%E3%82%8B",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E4%BE%AE%E3%82%8B",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://ejje.weblio.jp/content/%E4%BE%AE%E3%82%8B",
+   "ok": true
+  },
+  {
+   "tool": "web_search",
+   "query": "侮る underestimate JMdict OR Eijiro OR Kenkyusha \"to underestimate\"",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://jisho.org/word/%E8%A6%8B%E4%B8%8B%E3%82%8D%E3%81%99",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%86%85%E4%BE%8D",
+   "ok": true
+  },
+  {
+   "tool": "web_fetch",
+   "url": "https://www.weblio.jp/content/%E5%86%85%E4%BE%8D",
+   "ok": true
+  }
+ ],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 11112,
+  "reportFile": "C:\\Users\\romanko\\AppData\\Local\\Temp\\b157-review-grok.md",
+  "reportExists": true,
+  "reportChars": 11113,
+  "reportBytes": 12188,
+  "reportSha256": "f461b849bc4384e7e16bc2ac9af079a25422a710afa32391babc3a16932aa07c",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "overlapping tool calls: max in flight 3 (7 overlapping starts)",
+  "recursive shell commands over packet directories: 1",
+  "paths outside the packet and report: 2"
+ ]
+}

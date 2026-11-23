@@ -46,7 +46,8 @@ For focused sentence practice, continue with [Onomatopoeia in sentences](onomato
 Its twelve-word core and focused companion sets supply familiar words and practise selected
 constructions for the first 203 cards, separately from the vocabulary-card schedules.
 This covers representative uses of each card, not every dictionary sense or possible attachment.
-[みっちり](../words/みっちり.md) and [のびのび](../words/のびのび.md) are not included in these exercises.
+[みっちり](../words/みっちり.md) and [のびのび](../words/のびのび.md) are not included in the historical expansion.
+Additional draft practice introduces selected uses of [とろとろ](../words/とろとろ.md) and ninety-nine further words.
 
 Common patterns include an adverb before a verb, an adverb with と, and a state expressed
 with する. Some words also work with な or に. These patterns are **word-specific**:
@@ -134,9 +135,16 @@ The second batch was first published as text-only; illustrations followed separa
 
 ## Further word cards
 
-The collection now contains **205 tagged word cards**. The ぶかぶか addition brought it to 201;
-later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり and のびのび. They are listed here without
+The collection now contains **305 tagged word cards**. The ぶかぶか addition brought it to 201;
+later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり, のびのび and the one hundred new cards below. They are listed here without
 changing the original two 100-word groups or their existing card identities.
+
+The latest selection has five thematic companions: [fit and disorder](onomatopoeia-fit-and-disorder.md),
+[behaviour and reactions](onomatopoeia-behaviour-and-reactions.md),
+[light movement and progress](onomatopoeia-light-movement-and-progress.md),
+[body and texture](onomatopoeia-body-and-texture.md), and
+[food and water](onomatopoeia-food-and-water.md). Its Grammar cohorts mix themes; each
+links to a best-fit starting guide and the guides link to one another.
 
 | Scene | Card |
 | --- | --- |
@@ -145,6 +153,36 @@ changing the original two 100-word groups or their existing card identities.
 | Muttering or small bumps | [ぶつぶつ](../words/ぶつぶつ.md) — different constructions select muttering or bumps/spots; see the card for further uses |
 | Intensive work or instruction | [みっちり](../words/みっちり.md) — doing something thoroughly and intensively |
 | Acting freely and at ease | [のびのび](../words/のびのび.md) — without constraint; also distinguish the postponement use |
+| Melted food and gentle cooking | [とろとろ](../words/とろとろ.md) — soft and melted, or gently simmering; context distinguishes other senses |
+| Tender food and falling drops | [ほろほろ](../words/ほろほろ.md), [ぽろぽろ](../words/ぽろぽろ.md) — crumbling tenderly; drops falling one by one |
+| Weight and fizz | [ずっしり](../words/ずっしり.md), [しゅわしゅわ](../words/しゅわしゅわ.md) — a substantial weight; fine carbonated bubbles |
+| Fish, bodies and sensations | [ぴちぴち](../words/ぴちぴち.md), [むちむち](../words/むちむち.md), [ぞわぞわ](../words/ぞわぞわ.md) — jumping fish; plumpness; a shivery sensation |
+| Buzz and splashing | [ぶんぶん](../words/ぶんぶん.md), [びちゃびちゃ](../words/びちゃびちゃ.md) — buzzing or vigorous swinging; wet splashing |
+| Indecision, idling and groups | [うじうじ](../words/うじうじ.md), [うだうだ](../words/うだうだ.md), [うじゃうじゃ](../words/うじゃうじゃ.md) — hesitant worry; idling or going on; teeming groups |
+| Winding forms and precise fit | [うねうね](../words/うねうね.md), [かっちり](../words/かっちり.md) — repeated curves; a tight or precise fit |
+| Crispness and trembling | [からっと](../words/からっと.md), [がくがく](../words/がくがく.md) — crisp and dry; unsteady shaking |
+| Rustling and sturdy fastening | [がさがさ](../words/がさがさ.md), [がっしり](../words/がっしり.md), [がっちり](../words/がっちり.md) — rough rustling or texture; solid construction; a secure hold |
+| Packed spaces and exact amounts | [きちきち](../words/きちきち.md), [きっかり](../words/きっかり.md), [きっちり](../words/きっちり.md) — packed tightly; exactly; precisely or properly |
+| Awkwardness and sharp edges | [ぎくしゃく](../words/ぎくしゃく.md), [ぎざぎざ](../words/ぎざぎざ.md), [ぎすぎす](../words/ぎすぎす.md) — stiff or strained; serrated; tense and unfriendly |
+| Squeezing, wrinkles and clear outlines | [ぎゅっと](../words/ぎゅっと.md), [くしゃくしゃ](../words/くしゃくしゃ.md), [くっきり](../words/くっきり.md), [くねくね](../words/くねくね.md) — firm pressure; crumpled; distinct; winding or wriggling |
+| Dizziness, texture and force | [くらくら](../words/くらくら.md), [ぐちゃぐちゃ](../words/ぐちゃぐちゃ.md), [ぐっと](../words/ぐっと.md), [ぐんぐん](../words/ぐんぐん.md), [げっそり](../words/げっそり.md) — dizzy; pulpy or muddled; firm or substantial; vigorous progress; discouraged |
+| Steady work and brief movement | [こつこつ](../words/こつこつ.md), [ころり](../words/ころり.md) — patient effort; one light roll or fall |
+| Complications, clutter and attitude | [ごたごた](../words/ごたごた.md), [ごちゃごちゃ](../words/ごちゃごちゃ.md), [さばさば](../words/さばさば.md) — troubles; jumbled disorder; frank and easy-going |
+| Fitting, struggling and careful effort | [しっくり](../words/しっくり.md), [じたばた](../words/じたばた.md), [じっくり](../words/じっくり.md) — naturally fitting; flailing or panicking; careful and thorough |
+| Gradual sensations and flowing air | [じんわり](../words/じんわり.md), [すうすう](../words/すうすう.md) — warmth or feeling spreading gradually; a light draft |
+| Decisive and fluent action | [すっぱり](../words/すっぱり.md), [すらすら](../words/すらすら.md), [すらり](../words/すらり.md) — decisive break; smooth speech or reading; slender proportions |
+| Smooth progress and hurried movement | [すんなり](../words/すんなり.md), [せかせか](../words/せかせか.md) — proceeding without resistance; moving restlessly in a hurry |
+| Crowds, pressure and flowing liquid | [ぞろぞろ](../words/ぞろぞろ.md), [たじたじ](../words/たじたじ.md), [たらたら](../words/たらたら.md) — moving in a crowd; faltering under pressure; dripping steadily |
+| Loose clothing and clever behavior | [だぶだぶ](../words/だぶだぶ.md), [ちゃっかり](../words/ちゃっかり.md), [ちやほや](../words/ちやほや.md) — baggy clothing; shrewdly securing an advantage; pampering with attention |
+| Small movement and direct action | [ちょろちょろ](../words/ちょろちょろ.md), [ちらっと](../words/ちらっと.md), [つかつか](../words/つかつか.md), [つんつん](../words/つんつん.md) — trickling or darting; glancing briefly; striding directly; poking repeatedly |
+| Rapid action and persistence | [どしどし](../words/どしどし.md), [にょろにょろ](../words/にょろにょろ.md), [ねちねち](../words/ねちねち.md), [のこのこ](../words/のこのこ.md) — in quick succession; slithering; persistently; appearing unconcernedly |
+| Accuracy and eye movement | [ばっちり](../words/ばっちり.md), [ばらばら](../words/ばらばら.md), [ぱちくり](../words/ぱちくり.md), [ぱっちり](../words/ぱっちり.md) — perfectly; scattered; blinking in surprise; wide-open bright eyes |
+| Twitching and quiet | [ひくひく](../words/ひくひく.md), [ひっそり](../words/ひっそり.md) — twitching; quiet and secluded |
+| Bobbing and unexpected appearances | [ひょこひょこ](../words/ひょこひょこ.md), [ひょっこり](../words/ひょっこり.md), [ひょろひょろ](../words/ひょろひょろ.md), [びっしり](../words/びっしり.md) — bobbing steps; sudden appearance; spindly or unsteady; densely packed |
+| Casual and light movement | [ふらっと](../words/ふらっと.md), [ふわっと](../words/ふわっと.md), [ふわり](../words/ふわり.md) — casual or by chance; lightly floating; softly drifting |
+| Soft conditions and frivolous behavior | [ぶよぶよ](../words/ぶよぶよ.md), [へなへな](../words/へなへな.md), [へらへら](../words/へらへら.md) — soft and mushy; limp or weak; laughing frivolously |
+| Sticky surfaces and hesitant movement | [べったり](../words/べったり.md), [べとべと](../words/べとべと.md), [ほやほや](../words/ほやほや.md), [ほんのり](../words/ほんのり.md), [ぼさぼさ](../words/ぼさぼさ.md), [ぼちぼち](../words/ぼちぼち.md), [ぽかん](../words/ぽかん.md), [ぽちゃぽちゃ](../words/ぽちゃぽちゃ.md), [もじもじ](../words/もじもじ.md), [もたもた](../words/もたもた.md) — sticky; fresh; subtle; tousled; gradual; blank; splashing; hesitant; slow |
+| Shaggy textures and motion | [もじゃもじゃ](../words/もじゃもじゃ.md), [ゆさゆさ](../words/ゆさゆさ.md), [ゆるゆる](../words/ゆるゆる.md), [よろよろ](../words/よろよろ.md), [ぷかぷか](../words/ぷかぷか.md), [ぷりぷり](../words/ぷりぷり.md), [ごわごわ](../words/ごわごわ.md), [ぴたっと](../words/ぴたっと.md), [ふさふさ](../words/ふさふさ.md), [あたふた](../words/あたふた.md) — shaggy; swaying; loose; staggering; floating; springy or angry; coarse; exact; luxuriant; flustered |
 
 ## Sources and limits
 

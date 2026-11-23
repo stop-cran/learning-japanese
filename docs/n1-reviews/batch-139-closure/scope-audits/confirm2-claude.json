@@ -1,0 +1,202 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "1f1f7e74-08b6-480f-b544-645dacf4aa3c",
+ "agent": null,
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-18T15:51:38.514Z",
+  "last": "2026-11-18T15:53:00.586Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-18T15:51:38.974Z",
+   "chars": 2561,
+   "sha256": "5c393cd601e2aba4eed5dc8604b143b813ed1f516cbf0dbfb313fe53ea0cc3f0"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "claude-opus-5.5",
+   "responseModel": "claude-opus-5-5",
+   "apiRequests": 6
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 853181,
+  "outputTokens": 7732,
+  "cacheReadTokens": 703323,
+  "cacheWriteTokens": 149844,
+  "reasoningTokens": 501,
+  "costMultiplierSum": 90.0
+ },
+ "toolCalls": {
+  "total": 5,
+  "byTool": {
+   "powershell": 5
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-139-claude",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-139-claude\\checks"
+ ],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "none": 15,
+   "notFullyRead": [
+    "snapshot/kanji/嫁.md",
+    "snapshot/kanji/嬢.md",
+    "snapshot/kanji/宗.md",
+    "snapshot/kanji/宜.md",
+    "snapshot/kanji/宣.md",
+    "snapshot/kanji/宴.md",
+    "snapshot/kanji/寂.md",
+    "snapshot/kanji/密.md",
+    "snapshot/kanji/審.md",
+    "snapshot/kanji/尋.md",
+    "snapshot/kanji/屈.md",
+    "snapshot/kanji/属.md",
+    "snapshot/kanji/岬.md",
+    "snapshot/kanji/峠.md",
+    "snapshot/kanji/崩.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "none": 3,
+   "notFullyRead": [
+    "diffs/changed-files.txt",
+    "diffs/changed-lines.txt",
+    "diffs/fix.patch"
+   ]
+  },
+  "checks": {
+   "files": 12,
+   "none": 12,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/kanji-remarks.txt",
+    "checks/link-targets.tsv",
+    "checks/linkplan.txt",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/quiz-safety.txt",
+    "checks/reading-exposure.txt",
+    "checks/reading-options.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 5,
+   "none": 5,
+   "notFullyRead": [
+    "evidence/QuizBuilder.kt",
+    "evidence/README.md",
+    "evidence/jmdict-cited-entries.xml",
+    "evidence/meta-scan.txt",
+    "evidence/meta_scan.py"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "none"
+ },
+ "outsidePaths": [],
+ "alsoReadAllowed": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-139-a47efe9a",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-claude",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm-claude.md",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\initial-claude.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-claude",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-claude\\checks"
+ ],
+ "alsoReadCount": 2,
+ "writes": [],
+ "shellCommands": [
+  {
+   "command": "$p=\"C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-139-claude\"; Get-ChildItem $p | % Name; Get-ChildItem \"$p\\*\" -Directory | % { \"[$($_.Name)]\"; Get-ChildItem $_.FullName | % { \"  $($_.Name) $($_.Length)\" } }; \"=====INSTR\"; Get-Content -Raw -Encoding UTF8 \"$p\\INSTRUCTIONS.md\"",
+   "writeLike": false
+  },
+  {
+   "command": "$p=\"C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-139-claude\"; foreach($f in 'RESPONSE.md','CHANGES.md','diffs\\fix.patch','diffs\\changed-lines.txt','diffs\\changed-files.txt','evidence\\README.md','evidence\\jmdict-cited-entries.xml','checks\\link-targets.tsv'){ \"===== $f\"; Get-Content -Raw -Encoding UTF8 \"$p\\$f\" }",
+   "writeLike": false
+  },
+  {
+   "command": "$p=\"C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-139-claude\"; $c1=\"C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-claude\"; $i=0; Get-Content -Encoding UTF8 \"$p\\snapshot\\kanji\\嬢.md\" | % { $i++; \"$i`t$_\" }; \"=== hashes vs confirm-139\"; Get-ChildItem \"$p\\snapshot\\kanji\" | % { \"$($_.Name) \" + $(if((Get-FileHash $_.FullName).Hash -eq (Get-FileHash \"$c1\\snapshot\\kanji\\$($_...",
+   "writeLike": false
+  },
+  {
+   "command": "$p=\"C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm2-139-claude\\checks\"; $c1=\"C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-claude\\checks\"; foreach($f in 'linkplan.txt','validate.txt','vocabulary.txt','lint.txt','manifest.txt','kanji-remarks.txt'){ \"== $f same-raw: \" + ((Get-Content -Raw -Encoding UTF8 \"$p\\$f\") -eq (Get-Content -Raw -Encoding UTF8 \"$c1\\$f\")); Get-Conten...",
+   "writeLike": false
+  },
+  {
+   "command": "$r=@'\n# Confirmation report, round 2: batch 139\n\n**Snapshot:** commit f1b2bdb84f7e932dfe59cb68829fc004415d0a74. My earlier confirmation covered 3b6f972767928e01261440466899f32df398d7f1, and the initially reviewed snapshot was a47efe9af926316eaa86656033bf6e109f2be697. Reviewer model: Claude (Anthropic).\n\n**Scope:**\n\nPacket `confirm2-139-claude`:\n- Read in full: `INSTRUCTIONS.md`, `RESPONSE.md`, `CH...",
+   "writeLike": false
+  }
+ ],
+ "web": [],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 6387,
+  "reportFile": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm2-claude.md",
+  "reportExists": true,
+  "reportChars": 6154,
+  "reportBytes": 6222,
+  "reportSha256": "58e958913799e75aae0d896545c043ef9c3b75b77251fad092ef6ea6a57a7ddc",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": false,
+  "finalContainsReport": true,
+  "similarity": 0.9814
+ },
+ "flags": []
+}

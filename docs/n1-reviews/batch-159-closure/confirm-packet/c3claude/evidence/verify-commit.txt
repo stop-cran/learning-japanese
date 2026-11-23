@@ -1,0 +1,102 @@
+### git verify-commit -v 1a9bb910
+tree b3746bbdac21f01789c1c030009657e033d8e973
+parent 2787e43b5706a569d83627849aa40ed3582a7d18
+author Roman Konstantinovskiy <stop-cran@list.ru> 1795406536 +0100
+committer Roman Konstantinovskiy <stop-cran@list.ru> 1795408078 +0100
+
+Draft JLPT N1 batch 159 candidate
+
+Refs #60
+
+Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>
+gpg: Signature made 11/23/26 05:27:59 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+
+### git verify-commit -v 5c04be73
+gpg: Signature made 11/23/26 07:51:57 Central Europe Standard Time
+tree 0523ae493ee6169b8283e9ae2754d5f6d5aa13bb
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+parent 1a9bb910d1bbff162f4e3920e64e8821f635a58d
+author Roman Konstantinovskiy <stop-cran@list.ru> 1795413586 +0100
+committer Roman Konstantinovskiy <stop-cran@list.ru> 1795416717 +0100
+
+N1 B159: apply first-round review fixes
+
+Switch 又 support to the existing kana-headed articles または (又は) and
+また (又), dropping the new 又聞き article and the 聞 link, and teach the
+batch audit to accept a kana-headed support article through an explicit
+spelling recorded in its mapping. Clarify 叔/伯叔 senses and the 叔
+exception, widen the 吟 and 吟味 quiz exclusions, explain 太后, 呉服,
+呈 and 厘, update the 官吏 example, and link Digital Daijisen for each
+new word.
+
+Refs #60
+
+Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>
+
+### git verify-commit -v 4f8ebea7
+gpg: Signature made 11/23/26 09:08:31 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+tree f5aaaa0da154e85e7d7a34c46f7fe2f5ebfdf310
+parent 5c04be73367f8c149001318ec2ad67cf2f623ef0
+author Roman Konstantinovskiy <stop-cran@list.ru> 1795421310 +0100
+committer Roman Konstantinovskiy <stop-cran@list.ru> 1795421310 +0100
+
+N1 B159: apply second-round review fixes
+
+Exclude 験 from the 吟 meaning quiz, describe the 叔 row as an author's
+exception to the tagged-spelling preference (叔父 and 叔母 are tagged
+spellings whose シュク readings carry no tag), correct the quiz-safety
+note for the 吟 reading prompt, and clarify the 太后 and 吟味 source
+wording.
+
+Refs #60
+
+Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>
+
+### git verify-commit -v 54b00e0c
+gpg: Signature made 11/23/26 09:57:00 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+tree 1a67ddeea39a5bce77833cb16c96363a47aec744
+parent 4f8ebea76b9998de64d39b94df0fbaedfd50fa5d
+author Roman Konstantinovskiy <stop-cran@list.ru> 1795424220 +0100
+committer Roman Konstantinovskiy <stop-cran@list.ru> 1795424220 +0100
+
+N1 B159: apply third-round review fixes
+
+Replace the 叔 support article 伯叔 with 叔母 (しゅくぼ, JMdict 1607100):
+the spelling 叔母 carries ichi1/news1 and its reading しゅくぼ, restricted
+to that spelling, uses シュク, which follows the letter of point 2 of the
+issue #60 rule. 叔父 しゅくふ is not used because 精選版 日本国語大辞典
+records the variant reading しゅくぶ, which the reading quiz can generate
+as a look-alike wrong option.
+
+Delete words/伯叔.md, restore kanji/伯.md to its B158 text, link 叔母 from
+the 叔 and 母 cards, and regenerate the ledger and manifest. Split two
+long sentences in 太后 and 吟味 without changing their content.
+
+Refs #60
+
+Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>
+
+### git log --show-signature --format='%H %G? %s' 2787e43b..54b00e0c
+gpg: Signature made 11/23/26 09:57:00 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+54b00e0ca0425b1490e5decaa58505b6e469ab72 G N1 B159: apply third-round review fixes
+gpg: Signature made 11/23/26 09:08:31 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+4f8ebea76b9998de64d39b94df0fbaedfd50fa5d G N1 B159: apply second-round review fixes
+gpg: Signature made 11/23/26 07:51:57 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+5c04be73367f8c149001318ec2ad67cf2f623ef0 G N1 B159: apply first-round review fixes
+gpg: Signature made 11/23/26 05:27:59 Central Europe Standard Time
+gpg:                using EDDSA key D4C9A275A218AF747B787AFA9D94B9D311BD26A7
+gpg: Good signature from "Roman Konstantinovskiy <stop-cran@list.ru>" [ultimate]
+1a9bb910d1bbff162f4e3920e64e8821f635a58d G Draft JLPT N1 batch 159 candidate

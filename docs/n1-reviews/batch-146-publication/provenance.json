@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "batch": 146,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "e0fba3a1745dc024e677287562455bd954c94203",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/e0fba3a1745dc024e677287562455bd954c94203",
+  "base": "ffbf576ee0531e56f8f36e0a7287b53f443b0d29",
+  "initialSnapshot": "38833c7f58bdd2406dbb808c6b2a74257ef29f12",
+  "reviewedSnapshot": "1c941a7a15e9eb53179d4fe37b596dc97c14b1f6",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44575726840",
+    "runId": 44575726840,
+    "receiptSha256": "072ac6fa51aa46b9ebb7bfe8acf92ae62b069501fff456cb642d6b27be8a16aa"
+  },
+  "archive": {
+    "zipSha256": "e2d1048948ab84adbb6bf8f25bae44948e86e4b284fa307c1f7347faae34c806",
+    "receiptSha256": "0eeda9eba1d31059e2cf7b054d675e9e6186dd8c0ba231f069b896e43d7269f7",
+    "verifiedRuntimeHashes": 9147,
+    "contentVersion": "efe2d5ed43c194e2",
+    "manifestSha256": "91407e24ae0276b74e9e0c6d5ba171401c03b756d7335fddead398c018227c71"
+  },
+  "reviewIdentity": "B146 textual review closed on 1c941a7a with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of 38833c7f; six fix commits followed, mostly on the 牧 exclusion list where the two families disagreed on 僧 and 坊, and the final confirmations of 1c941a7a (both reviewers) were run by fresh agents of the same families. Disclosed limits: no JDK, so the Android JVM tests were not run; scope audits do not attribute shell and Python reads; two prompts were recovered from the runtime session record; the 僧 and 牧 judgments rest partly on live Weblio text; the reading audits are Python ports without a Kotlin cross-check.",
+  "sourceAccounting": {
+    "delivered": 452,
+    "n1Additions": 446,
+    "n2Placements": 6,
+    "remaining": 776,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "10 latent reading collisions (attested readings offered by other cards, counted per quiz prompt; nine distinct card-and-reading pairs) are not drawable in the checked N1, All and Starter pools: 牧 ま (摩 磨 馬 魔), まい (埋 妹 枚 毎 米) and もく (木 目), 狂 ふれる (触), 狭 せ (瀬 背), 甚 じ (路) and いたい (痛), 益 よう (妖 容 幼 揚 曜 栄 様 洋 and 9 more), 盛 もり (守 森; one pair, counted for both the も.る and さか.る prompts).",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools, and no one-holder Starter case exists. The first gate run showed a one-holder padded hit for 盛 (もり, offered by 森), because the original distractors 戦 式 店 held only one Starter card and left slots to the random fallback; they were replaced by the Starter cards 山 海 店, which fill every slot.",
+    "3 lint warnings on existing word articles' Dictionary lines (煮る, 矛盾, 不潔) are pre-existing and out of scope: each line wraps, so the entry id is on the next line.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. Eight cards quiz only their on reading (熟 ジュク, 牧 ボク, 献 ケン and コン, 玄 ゲン, 環 カン, 益 エキ, 盾 ジュン, 睡 スイ) and seven only their kun reading (煮 に.る, 狂 くる.う, 狭 せま.い, 甚 はなは.だ, 癖 くせ, 盛 も.る and さか.る, 眺 なが.める).",
+    "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the later confirmations covered only the changed lines and the cumulative change.",
+    "The 牧 exclusion judgments of the last rounds rest partly on Digital Daijisen text read live on Weblio, not on a pinned copy in the packet.",
+    "The prompts of confirm3-gpt and confirm4-claude were given inline and recovered from the runtime session record, not from saved files.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

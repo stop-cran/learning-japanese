@@ -19,7 +19,7 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
-def build_manifest(root: Path) -> dict:
+def build_manifest(root: Path, *, publish_reading: bool = False) -> dict:
     language = read_language(root)
     files = {}
     for folder in FOLDERS:
@@ -70,6 +70,21 @@ def build_manifest(root: Path) -> dict:
         }
         if entries:
             payloads[key] = entries
+    # The catalog CLI opts in. The function default stays false so other callers must choose it.
+    # Pre-reading clients ignore an unknown reading map and skip an unlisted reading/ folder.
+    if publish_reading:
+        reading = {
+            path.relative_to(root).as_posix(): sha256(path)
+            for path in sorted((root / "reading").glob("*.json")) if path.is_file()
+        }
+        reading_images = {
+            path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sorted((root / "reading-images").glob("*.webp")) if path.is_file()
+        }
+        if reading:
+            payloads["reading"] = reading
+        if reading_images:
+            payloads["readingImages"] = reading_images
     combined = hashlib.sha256(
         json.dumps({**payloads, **language}, sort_keys=True, ensure_ascii=False).encode("utf-8")
     ).hexdigest()
@@ -78,13 +93,14 @@ def build_manifest(root: Path) -> dict:
 
 
 def main() -> None:
-    manifest = build_manifest(ROOT)
+    manifest = build_manifest(ROOT, publish_reading=True)
     (ROOT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
     count = sum(len(manifest.get(key, {})) for key in (
         "files", "images", "scenes", "listening", "audio", "curriculum",
         "listeningTasks", "listeningTaskAudio", "listeningTaskImages",
+        "reading", "readingImages",
     ))
     print(f"manifest.json: {count} files incl. {len(manifest.get('images', {}))} images, "
           f"{len(manifest.get('scenes', {}))} scene catalogs, {len(manifest.get('listening', {}))} listening passages, "

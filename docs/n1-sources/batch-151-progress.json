@@ -1,0 +1,316 @@
+{
+  "batch": 151,
+  "base": "b9f0e3403cf692850df678db3a3fd7544c3e0323",
+  "governingIssue": 60,
+  "status": "published-verified-with-disclosed-review-limits",
+  "members": [
+    "訴",
+    "証",
+    "詩",
+    "詳",
+    "誇",
+    "誓",
+    "誘",
+    "謙",
+    "謡",
+    "譲",
+    "護",
+    "豆",
+    "豪",
+    "貢",
+    "貴"
+  ],
+  "sourceRows": [
+    1003,
+    1005,
+    1011,
+    1013,
+    1014,
+    1016,
+    1018,
+    1030,
+    1032,
+    1035,
+    1036,
+    1037,
+    1039,
+    1041,
+    1043
+  ],
+  "selectionReason": "The next fifteen, in source-row order, of the absent frozen rows at least one of whose KANJIDIC2 readings is used by an existing word article that declares the kanji (an automatic alignment of each word's kana against the kanji's readings), the rule announced on issue 60 after batch 136. No word article is added: 19 existing articles each gain one link to a new card. A card quizzes each reading that a declaring word article uses, unless the pinned JMdict marks the spelling as ateji or the reading as gikun; name-only readings are never quizzed; a reading type with no such reading gets an empty quizzed list. All fifteen pass, so none is set aside. Ten existing cards (献 仮 推 縫 憩 熟 級 長 義 養) also change in one remark each: a sentence that said a kanji had no card here now links it. No other line of a word article or an existing card changes. 46 rows of the 106-row group, 11 rows whose declaring articles use none of their KANJIDIC2 readings, and 644 rows with no declaring article remain.",
+  "supports": [
+    [
+      "訴",
+      "訴える"
+    ],
+    [
+      "証",
+      "保証"
+    ],
+    [
+      "証",
+      "証明"
+    ],
+    [
+      "詩",
+      "詩"
+    ],
+    [
+      "詩",
+      "詩人"
+    ],
+    [
+      "詳",
+      "詳しい"
+    ],
+    [
+      "誇",
+      "誇り"
+    ],
+    [
+      "誓",
+      "誓う"
+    ],
+    [
+      "誘",
+      "誘う"
+    ],
+    [
+      "謙",
+      "謙虚"
+    ],
+    [
+      "謙",
+      "謙遜"
+    ],
+    [
+      "謡",
+      "歌謡"
+    ],
+    [
+      "謡",
+      "民謡"
+    ],
+    [
+      "譲",
+      "譲る"
+    ],
+    [
+      "護",
+      "看護婦"
+    ],
+    [
+      "豆",
+      "豆"
+    ],
+    [
+      "豪",
+      "豪華"
+    ],
+    [
+      "貢",
+      "貢献"
+    ],
+    [
+      "貴",
+      "貴重"
+    ]
+  ],
+  "initialSnapshot": "b624890f8aea8cfb6b5a08ee6beff21df5f8c807",
+  "reviewedSnapshot": "15441514ec9a0a3835921e2031f7d79bec6c8920",
+  "reviewClosed": [
+    "訴",
+    "証",
+    "詩",
+    "詳",
+    "誇",
+    "誓",
+    "誘",
+    "謙",
+    "謡",
+    "譲",
+    "護",
+    "豆",
+    "豪",
+    "貢",
+    "貴"
+  ],
+  "published": [
+    "訴",
+    "証",
+    "詩",
+    "詳",
+    "誇",
+    "誓",
+    "誘",
+    "謙",
+    "謡",
+    "譲",
+    "護",
+    "豆",
+    "豪",
+    "貢",
+    "貴"
+  ],
+  "runtimePublished": true,
+  "accounting": {
+    "frozenPendingRecords": 1228,
+    "publishedPendingRecordsWithCards": 527,
+    "publishedN1Additions": 521,
+    "n2Placements": 6,
+    "undelivered": 701,
+    "reviewClosedPendingRecordsWithCards": 527,
+    "localUnreviewedDrafts": 0,
+    "notStarted": 701,
+    "overallN1TaskComplete": false
+  },
+  "sources": {
+    "kanjidic2": "docs/n1-sources/kanjidic2-selected.xml (KANJIDIC2 2026-11-02 records, frozen)",
+    "jmdict": "docs/n1-sources/continuation-inputs.json (JMdict_e continuation snapshot created 2026-11-17)",
+    "kanjivg": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "joyo": "Bunka-cho joyokanjihyo_20101130.pdf (sha256 d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42)",
+    "dictionary": "Digital Daijisen via weblio",
+    "kanjipedia": "Kanjipedia (kanjipedia.jp) character pages, for readings marked outside the official table"
+  },
+  "review": {
+    "status": "closed-with-disclosed-limits",
+    "mode": "blind-independent-two-family-textual-review",
+    "families": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ],
+    "fixCommits": [
+      "15441514ec9a0a3835921e2031f7d79bec6c8920"
+    ],
+    "runs": [
+      {
+        "id": "initial-claude",
+        "snapshot": "b624890f8aea8cfb6b5a08ee6beff21df5f8c807",
+        "verdict": "NEEDS FIX (minor): one correctness finding, the 貴 mnemonic stroke account (C1); CLEAN on the other facets and cards"
+      },
+      {
+        "id": "initial-gpt",
+        "snapshot": "b624890f8aea8cfb6b5a08ee6beff21df5f8c807",
+        "verdict": "NEEDS FIX (minor): two consistency and quiz-safety findings, the 誘/訪 exclusion (G1) and the 譲 distractors (G2)"
+      },
+      {
+        "id": "confirm-claude",
+        "snapshot": "15441514",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "id": "confirm-gpt",
+        "snapshot": "15441514",
+        "verdict": "CONFIRMED"
+      }
+    ],
+    "remainingActionableFindings": [],
+    "deferredOptional": [
+      "Claude initial, optional: O2 (replace the obsolete 看護婦 as 護's example word), O4 (further words: 告訴, 起訴, 控訴, 誘拐, おびき出す, 宣誓) and O6 (the 縫 remark diff, no change needed) (declined)",
+      "GPT initial, optional: GO1 (shorten the audit-style Notes; only the \"declaring word\" to \"example word\" part was applied) and GO2 (prefer a current example over 看護婦 when one exists) (declined)",
+      "Claude confirmation, optional: on 護 and 豪 line 23, \"example word\" names both the linked article and a Joyo example, which could read \"The Joyo table also gives Y as an example\"; the 話 and 読 distractors on 譲 are only visually related, through the shared 言 (editorial; not applied)",
+      "GPT confirmation, optional: none"
+    ],
+    "closure": "../n1-reviews/batch-151-closure/README.md",
+    "closureProvenance": "../n1-reviews/batch-151-closure/provenance.json",
+    "closureProvenanceSha256": "1964bbdf77340e32a52661b1f4c65496562da1d2d79484d7db6e559fe2f00b65",
+    "execution": "All four runs started after the previous one ended, each with at most one tool call in flight and no overlapping starts; each confirmation was a fresh agent of the same model family, given the author's statement on its family's initial report and allowed to read the original packet and that report. Both families confirmed the same final commit 15441514, which was written before either confirmation started. The initial-gpt audit flags two recursive shell commands over packet directories; these are false positives, matching ** used as Python exponentiation to sample Bezier curves of the stroke files. The confirm-gpt audit flags one path outside the packet and report; this is the parent review-packets folder, used only as a base variable to build paths into the original packet and the confirmation packet.",
+    "integration": "none: origin/main equalled the base b9f0e340 at closure, so publication is a fast-forward"
+  },
+  "gates": {
+    "lint": {
+      "errors": 0,
+      "warnings": 19,
+      "note": "none on the 15 new cards. Four are on the existing card 長, which changes only by one remark: it predates the N1 work, is outside the N1 source index and has no quiz fields and no Metadata line. Fifteen are on existing word articles that change only by their new link to a batch card or that the linter adds because they declare a checked kanji: 13 Dictionary lines cite no JMdict entry id (民謡, 誓う, 平仮名, 延長, 振り仮名, 特長, 生長, 縫う, 長女, 長所, 長方形, 長男, 長短) and 2 articles have no Dictionary line (看護婦, 校長). 6 warnings with --no-jmdict (長 four, 看護婦, 校長)"
+    },
+    "unitTests": 439,
+    "validateErrors": 0,
+    "budget": {
+      "files": 9616,
+      "entries": 9632,
+      "retainedBytes": 56066773,
+      "inflatedBytes": 56426069,
+      "localZipBytes": 36082651,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "vocabularyCheck": "3201/3539",
+    "manifestRebuildDiff": false,
+    "titlesUnique": true,
+    "quizSafety": {
+      "cards": 15,
+      "errors": 0,
+      "warnings": 0
+    },
+    "readingExposure": {
+      "cards": 15,
+      "productionHits": 0,
+      "paddedSessionHits": 0,
+      "oneHolderPaddedHits": 0,
+      "productionNameOnly": [],
+      "paddedNameOnly": [
+        "豆 ま (KANJIDIC2 name reading, offered by 目 真 間 馬)",
+        "豪 ご (KANJIDIC2 name reading, offered by 互 五 午 娯 後 御 悟 期 碁 語 誤 護 降)"
+      ],
+      "oneHolderNameOnly": [],
+      "latentCollisions": 3,
+      "latentCollisionsNote": "three attested readings offered by other cards and not drawable in the checked pools: 詳 よし (由; KANJIDIC2 name reading), 譲 せめる (攻 数 責; Digital Daijisen kun reading from the --extra list), 貴 ぎ (儀 技 疑 義 議; KANJIDIC2 name reading)",
+      "extras": "For the 15 kanji: every reading Kanjipedia marks as outside the official table (外), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ or headed by the kanji that is not a KANJIDIC2 reading, plus the JMdict kanji+okurigana headword readings whose stem is not a card kun stem; the audit labels them \"--extra list\" and its second line states their sources"
+    },
+    "readingOptions": {
+      "labelledHits": [
+        "豆 ま (info)",
+        "豪 ご (info)"
+      ],
+      "drawable": true,
+      "problems": 0,
+      "note": "both are KANJIDIC2 name-only readings, not on or kun readings, listed for information: 豆 ま is offered by 目 真 間 馬 and 豪 ご by 互 五 午 娯 後 御 悟 期 碁 語 誤 護 降. reading_options.py does not model curated distractor slots. reading_exposure.py shows that both can be drawn only in a Starter practice session, which has no curated options; in the N1 and All pools the curated options (芋 卵 塩 on 豆, 弱 静 暗 on 豪) fill every wrong slot"
+    },
+    "okuriganaHeadwordScan": "JMdict kanji+okurigana headwords for the 15 kanji: every reading whose stem is not a card kun stem is among the extras",
+    "linkPlan": {
+      "changedWordFiles": 19,
+      "addedLinks": 19,
+      "problems": 0,
+      "otherArticleEdits": [],
+      "kanjiCardEdits": [
+        "献: the remark that said 貢 had no card yet now links 貢 (a card of this batch)",
+        "仮: likewise for 虚 (batch 150)",
+        "推: likewise for 薦 (batch 150)",
+        "縫: likewise for 裁 (batch 150); the remark shrinks from two lines to one, dropping the clause \"this does not change the complete word's reading\", which only qualified the old no-card statement",
+        "憩: likewise for 舌 (batch 149)",
+        "熟: likewise for 慮 (batch 141)",
+        "級: likewise for 及 (batch 135)",
+        "長: likewise for 短 (a card that predates the N1 work)",
+        "義: likewise for 羊 (added by commit 1359b467) and 我 (batch 135), in one sentence",
+        "養: likewise for 羊"
+      ]
+    },
+    "kanjiRemarks": "kanji_remarks.py: 15 new cards, 10 existing cards changed only by their declared remark replacement, 0 problems",
+    "metaScan": "every word named on the 15 cards as a whole run has its JMdict entry id on the card's Metadata line; 61 shorter words found only inside longer quoted phrases and headwords are not listed",
+    "kotlinReadingCrosscheck": "NOT RUN (needs Kotlin scratch-test output; no JDK on the continuation machine)",
+    "androidJvm": "NOT RUN (no JDK on the continuation machine)",
+    "nativeRenderedPhone": "not run; the issue-60 batch cycle does not require it per batch",
+    "snapshot": "15441514ec9a0a3835921e2031f7d79bec6c8920"
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "3 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 詳 よし (由; KANJIDIC2 name reading), 譲 せめる (攻 数 責; Digital Daijisen kun reading from the --extra list), 貴 ぎ (儀 技 疑 義 議; KANJIDIC2 name reading).",
+    "Two KANJIDIC2 name-only readings can be drawn as wrong reading options in a Starter practice session, which has no curated options: 豆 ま (offered by 目 真 間 馬) and 豪 ご (offered by 互 五 午 娯 後 御 悟 期 碁 語 誤 護 降). In the N1 and All pools the curated options fill every wrong slot.",
+    "19 lint warnings on existing files are pre-existing and out of scope: 4 on the legacy card 長 and 15 on existing word articles' Dictionary lines.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed. Eight cards quiz only their on reading (証 ショウ, 詩 シ, 謙 ケン, 謡 ヨウ, 護 ゴ, 豪 ゴウ, 貢 コウ, 貴 キ) and seven only their kun reading (訴 うった.える, 詳 くわ.しい, 誇 ほこ.る, 誓 ちか.う, 誘 さそ.う, 譲 ゆず.る, 豆 まめ).",
+    "The only word article for 護 is 看護婦, which JMdict marks as obsolete; the 護 card names 看護師 as the current term, and no article for a current 護 word is added in this batch.",
+    "Some readings on the cards rest on a single dictionary entry or a Kanjipedia-only entry and are labelled as source-only where they appear; the card text is the authority for which.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options, except where a Notes bullet on the card says otherwise. The two pairs of new cards that exclude each other declare it on one card only (謡 lists 詩, 譲 lists 謙); the app's QuizBuilder applies an exclusion in both directions.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology; component and stroke statements follow the pinned KanjiVG revision.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they can list files as unread that the reports say were read.",
+    "Several judgments rest partly on live reads of Digital Daijisen, Kanjipedia and Jisho pages, not on pinned copies in the packet.",
+    "Three earlier cards (脈 華 覆) still list an on reading that is outside the official table after their kun rows; only 誓 was reordered in this batch.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ],
+  "publication": {
+    "commit": "8235d9b2a846d31441c232465f6230546c755161",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/8235d9b2a846d31441c232465f6230546c755161",
+    "receipt": "../n1-reviews/batch-151-publication/provenance.json"
+  }
+}

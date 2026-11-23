@@ -1,0 +1,143 @@
+Digital Daijisen (デジタル大辞泉) headwords on Weblio, collected by daijisen_heads.py (coordinator retrieval).
+For each queried form, the script fetches https://www.weblio.jp/content/<form>, records the raw-HTML sha256
+prefix, and lists every kana headword whose bracketed form list contains the query. "D" marks a headword
+found inside the Digital Daijisen block. "▽" before a form means Daijisen marks that reading of that form as
+outside the official Joyo table; "×" marks a non-Joyo character. A ▽ applies only to the form it precedes.
+
+Part 1: kanji-plus-okurigana forms from the cards and the JMdict okurigana scan, plus 異, 端 and 粗.
+異なる (https://www.weblio.jp/content/%E7%95%B0%E3%81%AA%E3%82%8B, sha256 a962819cdc64):
+   D こと‐な・る【異なる】
+異 (https://www.weblio.jp/content/%E7%95%B0, sha256 f65ec2f50114):
+   D い【異】
+   D け【 ▽ 異】
+   D こと【異】
+脱ぐ (https://www.weblio.jp/content/%E8%84%B1%E3%81%90, sha256 c7fe63fd15a0):
+   D ぬ・ぐ【脱ぐ】
+脱げる (https://www.weblio.jp/content/%E8%84%B1%E3%81%92%E3%82%8B, sha256 3d7cb4a25625):
+   D ぬ・げる【脱げる】
+膨らむ (https://www.weblio.jp/content/%E8%86%A8%E3%82%89%E3%82%80, sha256 41ac96ff14ef):
+   D ふくら・む【膨らむ／ × 脹らむ】
+膨れる (https://www.weblio.jp/content/%E8%86%A8%E3%82%8C%E3%82%8B, sha256 17584eed9d63):
+   D ふく・れる【膨れる／ × 脹れる】
+焦げる (https://www.weblio.jp/content/%E7%84%A6%E3%81%92%E3%82%8B, sha256 0552143a897d):
+   D こ・げる【焦げる】
+焦がす (https://www.weblio.jp/content/%E7%84%A6%E3%81%8C%E3%81%99, sha256 5fd6936c1628):
+   D こが・す【焦がす】
+焦がれる (https://www.weblio.jp/content/%E7%84%A6%E3%81%8C%E3%82%8C%E3%82%8B, sha256 9dd19d1b2be5):
+   D こが・れる【焦がれる】
+焦る (https://www.weblio.jp/content/%E7%84%A6%E3%82%8B, sha256 a335eafa2de7):
+   D あせ・る【焦る】
+   D いら・る【 ▽ 焦る／ ▽ 苛る】
+焦れる (https://www.weblio.jp/content/%E7%84%A6%E3%82%8C%E3%82%8B, sha256 c95fc706d65a):
+   D いら・れる【 ▽ 焦れる／ ▽ 苛れる】
+   D じ・れる【 ▽ 焦れる】
+焦らす (https://www.weblio.jp/content/%E7%84%A6%E3%82%89%E3%81%99, sha256 6c5a64bd4a94):
+   D じら・す【 ▽ 焦らす】
+炊く (https://www.weblio.jp/content/%E7%82%8A%E3%81%8F, sha256 4dba3271fb56):
+   D た・く【炊く】
+炊ぐ (https://www.weblio.jp/content/%E7%82%8A%E3%81%90, sha256 919f13be8551):
+   D かし・ぐ【 ▽ 炊ぐ／ × 爨ぐ】
+端 (https://www.weblio.jp/content/%E7%AB%AF, sha256 cb20568c5210):
+   D たん【端】
+   D つま【 ▽ 端／妻】
+   D は【端】
+   D はし【端】
+   D はした【 ▽ 端】
+   D はじ【 ▽ 端】
+   D はた【端／ ▽ 傍／ ▽ 側】
+   D はな【 ▽ 端】
+   D へた【 ▽ 辺／ ▽ 端】
+端っこ (https://www.weblio.jp/content/%E7%AB%AF%E3%81%A3%E3%81%93, sha256 2282bde81185):
+   D はしっ‐こ【端っこ】
+粗い (https://www.weblio.jp/content/%E7%B2%97%E3%81%84, sha256 142fabbc4f94):
+   D あら・い【粗い】
+粗 (https://www.weblio.jp/content/%E7%B2%97, sha256 8fa40af4358c):
+   D あら【荒／粗】
+   D そ【粗】
+   D そ【粗／ × 麁】
+   D ほぼ【 ▽ 略／ ▽ 粗】
+納める (https://www.weblio.jp/content/%E7%B4%8D%E3%82%81%E3%82%8B, sha256 3eaf3b5dfeee):
+   D おさ・める【収める／納める】
+納まる (https://www.weblio.jp/content/%E7%B4%8D%E3%81%BE%E3%82%8B, sha256 2daec141c1ef):
+   D おさま・る【収まる／納まる】
+致す (https://www.weblio.jp/content/%E8%87%B4%E3%81%99, sha256 d042f21ae2d2):
+   D いた・す【致す】
+   D おく・す【 ▽ 遣す／ ▽ 致す】
+   D おこ・す【 ▽ 遣す／ ▽ 致す】
+請う (https://www.weblio.jp/content/%E8%AB%8B%E3%81%86, sha256 213062dd9be0):
+   D こ・う【請う／乞う】
+請ける (https://www.weblio.jp/content/%E8%AB%8B%E3%81%91%E3%82%8B, sha256 18fa00759156):
+   D う・ける【受ける／請ける／ ▽ 享ける／ ▽ 承ける】
+透く (https://www.weblio.jp/content/%E9%80%8F%E3%81%8F, sha256 8b0d91e7ebe6):
+   D す・く【透く】
+透かす (https://www.weblio.jp/content/%E9%80%8F%E3%81%8B%E3%81%99, sha256 3eb36b85829f):
+   D すかす【透かす】
+   D すか・す【透かす】
+透ける (https://www.weblio.jp/content/%E9%80%8F%E3%81%91%E3%82%8B, sha256 2cc2933b3548):
+   D す・ける【透ける】
+透る (https://www.weblio.jp/content/%E9%80%8F%E3%82%8B, sha256 3849200e977e):
+   D とお・る【通る／ ▽ 徹る／ ▽ 透る】
+透す (https://www.weblio.jp/content/%E9%80%8F%E3%81%99, sha256 0ffd02b68cd9):
+   D とお・す【通す／ ▽ 徹す／ ▽ 透す】
+隔てる (https://www.weblio.jp/content/%E9%9A%94%E3%81%A6%E3%82%8B, sha256 6d65d9f8cc7b):
+   D へだ・てる【隔てる】
+隔たる (https://www.weblio.jp/content/%E9%9A%94%E3%81%9F%E3%82%8B, sha256 db867799869c):
+   D へだた・る【隔たる】
+筋 (https://www.weblio.jp/content/%E7%AD%8B, sha256 00a4c6c96f67):
+   D きん【筋】
+   D すじ【筋／ ▽ 条】
+
+Part 2: each of the 15 kanji queried alone (all 15 batch members).
+
+炊 (https://www.weblio.jp/content/%E7%82%8A, sha256 a55f59e5f45a):
+   D すい【炊】
+焦 (https://www.weblio.jp/content/%E7%84%A6, sha256 d9049d500398):
+   D しょう【焦】
+異 (https://www.weblio.jp/content/%E7%95%B0, sha256 f65ec2f50114):
+   D い【異】
+   D け【 ▽ 異】
+   D こと【異】
+端 (https://www.weblio.jp/content/%E7%AB%AF, sha256 cb20568c5210):
+   D たん【端】
+   D つま【 ▽ 端／妻】
+   D は【端】
+   D はし【端】
+   D はした【 ▽ 端】
+   D はじ【 ▽ 端】
+   D はた【端／ ▽ 傍／ ▽ 側】
+   D はな【 ▽ 端】
+   D へた【 ▽ 辺／ ▽ 端】
+筋 (https://www.weblio.jp/content/%E7%AD%8B, sha256 00a4c6c96f67):
+   D きん【筋】
+   D すじ【筋／ ▽ 条】
+粗 (https://www.weblio.jp/content/%E7%B2%97, sha256 8fa40af4358c):
+   D あら【荒／粗】
+   D そ【粗】
+   D そ【粗／ × 麁】
+   D ほぼ【 ▽ 略／ ▽ 粗】
+納 (https://www.weblio.jp/content/%E7%B4%8D, sha256 e5beb8bde415):
+   D とう【納】
+   D な【納】
+   D なっ【納】
+   D なん【納】
+   D のう【納】
+脱 (https://www.weblio.jp/content/%E8%84%B1, sha256 7c3f7922fefa):
+   D だつ【脱】
+膨 (https://www.weblio.jp/content/%E8%86%A8, sha256 a115e4b4ce01):
+   D ぼう【膨】
+致 (https://www.weblio.jp/content/%E8%87%B4, sha256 c7c2f4040e03):
+   D ち【致】
+請 (https://www.weblio.jp/content/%E8%AB%8B, sha256 d2e01bb6f965):
+   D しょう【 ▽ 請】
+   D しょう【井／正／生／声／姓／性／青／政／星／省／清／ ▽ 聖／精／ ▽ 請】
+   D しん【 ▽ 清／請】
+   D せい【請】
+透 (https://www.weblio.jp/content/%E9%80%8F, sha256 cee73f5d0d63):
+   D とう【透】
+鉢 (https://www.weblio.jp/content/%E9%89%A2, sha256 9bb6aea87995):
+   D はち【鉢】
+   D はつ【 ▽ 八／鉢】
+隔 (https://www.weblio.jp/content/%E9%9A%94, sha256 c6a35184fe76):
+   D かく【隔】
+駄 (https://www.weblio.jp/content/%E9%A7%84, sha256 8627b9857134):
+   D だ【駄】

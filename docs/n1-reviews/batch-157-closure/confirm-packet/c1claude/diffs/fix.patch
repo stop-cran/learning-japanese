@@ -1,0 +1,952 @@
+diff --git a/docs/n1-sources/batch-157-jmdict-supplement-selection.json b/docs/n1-sources/batch-157-jmdict-supplement-selection.json
+new file mode 100644
+index 00000000..e03c7fb3
+--- /dev/null
++++ b/docs/n1-sources/batch-157-jmdict-supplement-selection.json
+@@ -0,0 +1,7 @@
++{
++  "schemaVersion": 1,
++  "batch": "157",
++  "entryIds": [
++    "1578970"
++  ]
++}
+diff --git a/docs/n1-sources/batch-157-jmdict-supplement.xml b/docs/n1-sources/batch-157-jmdict-supplement.xml
+new file mode 100644
+index 00000000..d1ec8ef9
+--- /dev/null
++++ b/docs/n1-sources/batch-157-jmdict-supplement.xml
+@@ -0,0 +1,34 @@
++<?xml version='1.0' encoding='utf-8'?>
++<JMdict>
++  <entry>
++    <ent_seq>1578970</ent_seq>
++    <k_ele>
++      <keb>合併</keb>
++      <ke_pri>ichi1</ke_pri>
++      <ke_pri>news1</ke_pri>
++      <ke_pri>nf03</ke_pri>
++    </k_ele>
++    <r_ele>
++      <reb>がっぺい</reb>
++      <re_pri>ichi1</re_pri>
++      <re_pri>news1</re_pri>
++      <re_pri>nf03</re_pri>
++    </r_ele>
++    <sense>
++      <pos>noun (common) (futsuumeishi)</pos>
++      <pos>noun or participle which takes the aux. verb suru</pos>
++      <pos>transitive verb</pos>
++      <pos>intransitive verb</pos>
++      <gloss xml:lang="eng">merger (of companies, towns, etc.)</gloss>
++      <gloss xml:lang="eng">combination</gloss>
++      <gloss xml:lang="eng">union</gloss>
++      <gloss xml:lang="eng">amalgamation</gloss>
++      <gloss xml:lang="eng">consolidation</gloss>
++      <gloss xml:lang="eng">coalition</gloss>
++      <gloss xml:lang="eng">fusion</gloss>
++      <gloss xml:lang="eng">annexation</gloss>
++      <gloss xml:lang="eng">affiliation</gloss>
++      <gloss xml:lang="eng">incorporation</gloss>
++    </sense>
++  </entry>
++</JMdict>
+diff --git a/docs/n1-sources/batch-157-progress.json b/docs/n1-sources/batch-157-progress.json
+index 02c72bb0..d255d9bc 100644
+--- a/docs/n1-sources/batch-157-progress.json
++++ b/docs/n1-sources/batch-157-progress.json
+@@ -4,14 +4,14 @@
+   "membership": ["佐", "佳", "併", "侍", "侮", "侯", "俊", "俗", "俵", "倫"],
+   "baseCommit": "e2c25363285fd8fa100d1c4178e7289592562a31",
+   "drafted": ["佐", "佳", "併", "侍", "侮", "侯", "俊", "俗", "俵", "倫"],
+-  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 38, 40, 41, 43, 46, 47, 50, 51, 55, and 60 are the first ten remaining Joyo rows after B156. Every support word's other kanji already has a card or is in this batch. 諸侯 is the sole priority-tag exception: JMdict entry 1344250 has no qualifying priority tag; 侯爵 (1272650) and 王侯 (1588830) have only news2/spec2, 侯補 is a search-only spelling of 候補 (1272730), and 候補 does not use 侯. The exception is explicit and must receive row-specific independent review.",
++  "selectionReason": "The issue #60 rule selects up to ten absent Joyo kanji in frozen source-row order, with one support-word article per selected kanji. A qualifying support word uses JMdict news1, ichi1, spec1, or gai1; news2/spec2 do not qualify. The selected rows 38, 40, 41, 43, 46, 47, 50, 51, 55, and 60 are the first ten remaining Joyo rows after B156. Every support word's other kanji already has a card or is in this batch. Among considered alternatives, JMdict entries 1340880 (俊英), 1272630 (侯), 1272650 (侯爵), and 1588830 (王侯) carry only news2/spec2 and do not qualify; entry 1405300 (俗語) carries news2 plus ichi1 and qualifies via ichi1. 諸侯 is the sole priority-tag exception: JMdict entry 1344250 has no qualifying priority tag; 侯補 is a search-only spelling of 候補 (1272730), and 候補 does not use 侯. The exception is explicit and must receive row-specific independent review.",
+   "supportMappings": [
+     {"kanji": "佐", "article": "words/補佐.md", "primaryReading": "ほさ", "entryIds": ["1603460"], "newArticle": true, "priorityTags": ["ichi1", "news1"]},
+     {"kanji": "佳", "article": "words/佳作.md", "primaryReading": "かさく", "entryIds": ["1189760"], "newArticle": true, "priorityTags": ["news1"]},
+     {"kanji": "併", "article": "words/併用.md", "primaryReading": "へいよう", "entryIds": ["1506200"], "newArticle": true, "priorityTags": ["news1"]},
+     {"kanji": "侍", "article": "words/侍.md", "primaryReading": "さむらい", "entryIds": ["1314780"], "newArticle": true, "priorityTags": ["ichi1", "news1"]},
+     {"kanji": "侮", "article": "words/侮る.md", "primaryReading": "あなどる", "entryIds": ["1583670"], "newArticle": true, "priorityTags": ["ichi1"]},
+-    {"kanji": "侯", "article": "words/諸侯.md", "primaryReading": "しょこう", "entryIds": ["1344250"], "newArticle": true, "priorityTags": [], "exceptionReason": "No candidate using 侯 carries news1, ichi1, spec1, or gai1. 侯爵 and 王侯 carry only news2/spec2; 侯補 is search-only and 候補 uses 候. Keep this explicit untagged exception for independent review."},
++    {"kanji": "侯", "article": "words/諸侯.md", "primaryReading": "しょこう", "entryIds": ["1344250"], "newArticle": true, "priorityTags": [], "exceptionReason": "No candidate using 侯 carries news1, ichi1, spec1, or gai1. 侯爵 and 王侯 carry only news2/spec2; 侯補 is search-only and 候補 uses 候. Among these non-qualifying candidates, 侯爵 would also need 爵, which has no card, and 王侯 (entry 1588830) means “the king and his feudal lords”, while 諸侯 (entry 1344250, “feudal lords; barons; princes”) matches the card's feudal-lord sense. Keep this explicit untagged exception for independent review."},
+     {"kanji": "俊", "article": "words/俊足.md", "primaryReading": "しゅんそく", "entryIds": ["1340940"], "newArticle": true, "priorityTags": ["news1"]},
+     {"kanji": "俗", "article": "words/俗語.md", "primaryReading": "ぞくご", "entryIds": ["1405300"], "newArticle": true, "priorityTags": ["ichi1", "news2"]},
+     {"kanji": "俵", "article": "words/俵.md", "primaryReading": "たわら", "entryIds": ["1583390"], "newArticle": true, "priorityTags": ["news1"]},
+@@ -36,30 +36,56 @@
+     {"article": "kanji/諸.md", "before": "- 諸君 しょくん - you people; everyone (in an address)\n", "after": "- 諸君 しょくん - you people; everyone (in an address)\n- [諸侯](../words/諸侯.md) しょこう — feudal lords\n"},
+     {"article": "kanji/足.md", "before": "- 足りる たりる — to be enough\n", "after": "- 足りる たりる — to be enough\n- [俊足](../words/俊足.md) しゅんそく — fast runner; swift on foot\n"},
+     {"article": "kanji/語.md", "before": "- 物語 ものがたり — story, tale\n", "after": "- 物語 ものがたり — story, tale\n- [俗語](../words/俗語.md) ぞくご — colloquial language; slang\n"},
+-    {"article": "kanji/理.md", "before": "- 理解 りかい — understanding\n", "after": "- 理解 りかい — understanding\n- [倫理](../words/倫理.md) りんり — ethics; morals\n"}
++    {"article": "kanji/理.md", "before": "- 理解 りかい — understanding\n", "after": "- 理解 りかい — understanding\n- [倫理](../words/倫理.md) りんり — ethics; morals\n"},
++    {"article": "kanji/理.md", "before": "This table focuses on リ; the metadata also preserves the source kun reading ことわり.\n", "after": "This table includes ことわり as a source-only kun reading alongside the common on reading リ.\n"},
++    {"article": "kanji/理.md", "before": "| リ | on | 理由 りゆう — reason; [料理](../words/料理.md) りょうり — cooking |\n", "after": "| リ | on | 理由 りゆう — reason; [料理](../words/料理.md) りょうり — cooking |\n| ことわり | kun, source-only here | 理 (ことわり) — reason; logic (JMdict entry 2412900; source-listed reading; not used in a common-word example here) |\n"},
++    {"article": "kanji/理.md", "before": "Learn the complete word: the broad idea of \"reason\" does not predict every compound's meaning.\n", "after": "Learn the complete word: the broad idea of \"reason\" does not predict every compound's meaning.\n\nMetadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entry 2412900.\n"},
++    {"article": "kanji/助.md", "before": "| ジョ | on | 助手 じょしゅ — assistant |\n", "after": "| ジョ | on | 助手 じょしゅ — assistant |\n| す.ける | kun, source-only here | KANJIDIC2 lists this form; the common reading たす.ける is shown above. |\n| すけ | kun, source-only here | KANJIDIC2 lists this form; no matching common-word example is cited here. |\n"},
++    {"article": "kanji/助.md", "before": "The table selects readings; the metadata retains the additional source forms.\n", "after": "The table marks source-only readings explicitly.\n"}
+   ],
+   "wordQuizAudit": {
+     "directExclusions": [
+-      {"word": "補佐", "exclude": ["援助"]},
+-      {"word": "佳作", "exclude": ["傑作"]},
+-      {"word": "倫理", "exclude": ["道徳"]}
++      {"word": "補佐", "exclude": ["援助", "助手", "手伝い", "世話", "手伝う", "助ける", "支える", "応援"]},
++      {"word": "佳作", "exclude": ["傑作", "名作", "作品", "制作"]},
++      {"word": "併用", "exclude": ["使用", "利用", "使う", "用いる", "用", "用途"]},
++      {"word": "侍", "exclude": ["武士"]},
++      {"word": "侮る", "exclude": ["見下ろす"]},
++      {"word": "俵", "exclude": ["袋", "バッグ", "鞄"]},
++      {"word": "俗語", "exclude": ["言葉", "単語", "語"]},
++      {"word": "倫理", "exclude": ["道徳", "善", "仁"]},
++      {"word": "俊足", "exclude": ["速い"]}
++    ]
++  },
++  "kanjiQuizAudit": {
++    "directExclusions": [
++      {"kanji": "佐", "exclude": ["丞", "助", "援", "支", "副"]},
++      {"kanji": "佳", "exclude": ["美", "良", "善", "宜", "優", "俊", "傑", "秀", "英", "卓", "豪", "偉", "華"]},
++      {"kanji": "併", "exclude": ["合", "兼", "結", "並", "共", "協", "接", "括", "統", "斉"]},
++      {"kanji": "侍", "exclude": ["士", "武", "臣", "仕", "僕", "兵"]},
++      {"kanji": "侮", "exclude": ["卑"]},
++      {"kanji": "侯", "exclude": ["殿"]},
++      {"kanji": "俊", "exclude": ["秀", "英", "傑", "才", "優", "卓", "豪", "賢", "偉", "哲"]},
++      {"kanji": "俗", "exclude": ["凡", "卑"]},
++      {"kanji": "俵", "exclude": ["袋"]},
++      {"kanji": "倫", "exclude": ["伴", "輩", "徳", "義", "善"]}
+     ]
+   },
+   "dictionaryPackets": [
+-    {"selection": "batch-157-jmdict-selection.json", "xml": "batch-157-jmdict.xml"}
++    {"selection": "batch-157-jmdict-selection.json", "xml": "batch-157-jmdict.xml"},
++    {"selection": "batch-157-jmdict-supplement-selection.json", "xml": "batch-157-jmdict-supplement.xml"}
+   ],
+   "readingDispositions": [
+     {"kanji": "佐", "kind": "on", "reading": "サ", "selected": true, "reason": "The supported common-word article 補佐 directly uses サ.", "entryIds": ["1603460"], "article": "words/補佐.md"},
+     {"kanji": "佳", "kind": "on", "reading": "カ", "selected": true, "reason": "The supported common-word article 佳作 directly uses カ.", "entryIds": ["1189760"], "article": "words/佳作.md"},
+-    {"kanji": "併", "kind": "on", "reading": "ヘイ", "selected": true, "reason": "The supported common-word article 併用 directly uses ヘイ.", "entryIds": ["1506200"], "article": "words/併用.md"},
+-    {"kanji": "併", "kind": "kun", "reading": "あわ.せる", "selected": false, "reason": "JMdict entry 1284480 marks 併せる as a rarely used kanji form; it is retained for reference but not offered as a quiz reading.", "entryIds": ["1284480"]},
+-    {"kanji": "侍", "kind": "on", "reading": "ジ", "selected": false, "reason": "侍従 is a valid sourced example, but the article chosen for this card uses さむらい; keep ジ as reference rather than a quiz target.", "entryIds": ["1314890"]},
+-    {"kanji": "侍", "kind": "on", "reading": "シ", "selected": false, "reason": "内侍 supports シ only in a historical title; retain it as a source-only reference and do not quiz it.", "entryIds": ["1582520"], "sourceOnly": true},
++    {"kanji": "併", "kind": "on", "reading": "ヘイ", "selected": true, "reason": "The supported article 併用 and the common compound 合併 directly use ヘイ.", "entryIds": ["1506200", "1578970"], "article": "words/併用.md"},
++    {"kanji": "併", "kind": "kun", "reading": "あわ.せる", "selected": false, "reason": "JMdict entry 1284480 marks 併せる as a rarely used kanji form; 合わせる is the common spelling of the verb.", "entryIds": ["1284480"]},
++    {"kanji": "侍", "kind": "on", "reading": "ジ", "selected": false, "reason": "侍従 is a valid sourced example, while the supported article for this card uses さむらい; retain ジ as a documented reading.", "entryIds": ["1314890"]},
++    {"kanji": "侍", "kind": "on", "reading": "シ", "selected": false, "reason": "Digital Daijisen defines 内侍 as the women officials of the palace office 内侍司, and Seisenban Nihon Kokugo Daijiten places them under the ritsuryō system; retain シ as a documented reading.", "entryIds": ["1582520"]},
+     {"kanji": "侍", "kind": "kun", "reading": "さむらい", "selected": true, "reason": "The supported common-word article 侍 directly uses さむらい.", "entryIds": ["1314780"], "article": "words/侍.md"},
+-    {"kanji": "侍", "kind": "kun", "reading": "はべ.る", "selected": false, "reason": "JMdict entry 1314800 marks 侍る as usually written in kana; retain it as reference but do not offer it as a quiz target.", "entryIds": ["1314800"]},
+-    {"kanji": "侮", "kind": "on", "reading": "ブ", "selected": false, "reason": "侮辱 is a sourced on-reading example, but the supported article uses あなど.る; retain ブ for reference without selecting it.", "entryIds": ["1498260"]},
++    {"kanji": "侍", "kind": "kun", "reading": "はべ.る", "selected": false, "reason": "JMdict entry 1314800 marks 侍る as usually written in kana; retain it as a documented reading.", "entryIds": ["1314800"]},
++    {"kanji": "侮", "kind": "on", "reading": "ブ", "selected": false, "reason": "侮辱 is a sourced on-reading example, while the supported article for this card uses あなど.る; retain ブ as a documented reading.", "entryIds": ["1498260"]},
+     {"kanji": "侮", "kind": "kun", "reading": "あなど.る", "selected": true, "reason": "The supported common-word article 侮る directly uses あなど.る.", "entryIds": ["1583670"], "article": "words/侮る.md"},
+-    {"kanji": "侮", "kind": "kun", "reading": "あなず.る", "selected": false, "reason": "No spelling-reading pair was found in the pinned JMdict snapshot; retain the KANJIDIC2 reading as source-only and do not quiz it.", "entryIds": [], "sourceOnly": true},
++    {"kanji": "侮", "kind": "kun", "reading": "あなず.る", "selected": false, "reason": "Digital Daijisen records あなずる as an older form of あなどる; no matching spelling-reading pair appears in the pinned JMdict snapshot.", "entryIds": []},
+     {"kanji": "侯", "kind": "on", "reading": "コウ", "selected": true, "reason": "The support article 諸侯 directly uses コウ; its untagged status is disclosed in the row-specific exception.", "entryIds": ["1344250"], "article": "words/諸侯.md"},
+     {"kanji": "俊", "kind": "on", "reading": "シュン", "selected": true, "reason": "The supported common-word article 俊足 directly uses シュン.", "entryIds": ["1340940"], "article": "words/俊足.md"},
+     {"kanji": "俗", "kind": "on", "reading": "ゾク", "selected": true, "reason": "The supported common-word article 俗語 uses ゾク and qualifies through ichi1; news2 is not counted.", "entryIds": ["1405300"], "article": "words/俗語.md"},
+@@ -80,16 +106,16 @@
+     {"kanji": "倫", "quizOnyomi": ["リン"], "quizKunyomi": [], "onKeys": ["りん"], "kunKeys": []}
+   ],
+   "quizAudit": {
+-    "佐": {"title": "aide; assistant", "distractors": ["左", "差", "査"], "labels": ["left", "difference; gap", "investigate; inspect"]},
+-    "佳": {"title": "beautiful; excellent", "distractors": ["価", "加", "果"], "labels": ["worth; price", "add", "fruit; fruition"]},
+-    "併": {"title": "combine; join together", "distractors": ["平", "兵", "閉"], "labels": ["flat; peaceful", "soldier; troops", "shut"]},
+-    "侍": {"title": "samurai; retainer", "distractors": ["字", "寺", "次"], "labels": ["written character", "Buddhist temple", "next"]},
+-    "侮": {"title": "despise; scorn", "distractors": ["舞", "武", "部"], "labels": ["dance", "military; warrior", "section; department"]},
+-    "侯": {"title": "marquis; feudal lord", "distractors": ["交", "光", "向"], "labels": ["intersect; mingle", "light; radiance", "face toward"]},
+-    "俊": {"title": "talented; outstanding", "distractors": ["春", "瞬", "旬"], "labels": ["spring season", "blink; instant", "ten days; peak season"]},
+-    "俗": {"title": "customs; mundane", "distractors": ["属", "続", "族"], "labels": ["belong; affiliated; genus", "continue", "tribe, family group"]},
+-    "俵": {"title": "straw bag; bale", "distractors": ["表", "票", "評"], "labels": ["surface; chart", "ballot; voting slip", "appraise; reputation"]},
+-    "倫": {"title": "ethics; moral order", "distractors": ["林", "輪", "臨"], "labels": ["grove; woodland", "wheel; ring", "face (a situation); attend"]}
++    "佐": {"title": "aide; assistant", "distractors": ["母", "友", "子"], "labels": ["mother", "friend", "child"]},
++    "佳": {"title": "beautiful; excellent", "distractors": ["新", "古", "短"], "labels": ["new", "old", "short"]},
++    "併": {"title": "combine; join together", "distractors": ["分", "動", "休"], "labels": ["minute, part", "move", "rest"]},
++    "侍": {"title": "samurai; retainer", "distractors": ["父", "母", "子"], "labels": ["father", "mother", "child"]},
++    "侮": {"title": "despise; scorn", "distractors": ["聞", "話", "会"], "labels": ["hear, ask", "talk, speak", "meet"]},
++    "侯": {"title": "marquis; feudal lord", "distractors": ["国", "京", "社"], "labels": ["country", "capital", "company, shrine"]},
++    "俊": {"title": "talented; outstanding", "distractors": ["安", "少", "多"], "labels": ["cheap, peaceful", "few, a little", "many, much"]},
++    "俗": {"title": "customs; mundane", "distractors": ["天", "新", "名"], "labels": ["heaven, sky", "new", "name"]},
++    "俵": {"title": "straw bag; bale", "distractors": ["田", "土", "木"], "labels": ["rice field", "earth, soil", "tree, wood"]},
++    "倫": {"title": "ethics; moral principles", "distractors": ["力", "事", "名"], "labels": ["power", "matter, affair", "name"]}
+   },
+   "sources": {
+     "kanjidic2": "Frozen source-index.json, KANJIDIC2 2026-11-02 snapshot.",
+@@ -97,11 +123,15 @@
+     "kanjivg": "Pinned revision 70a0b7ae0c18ceb5cb358274b029cce0234a43bc."
+   },
+   "mechanicalChecks": {
+-    "contentValidation": "Passed: tools/validate.py reported 0 errors.",
+-    "batchAudit": "Passed: 10 kanji, 10 new words, 7 changed existing articles, 17 reading dispositions, and 26 complete JMdict families.",
+-    "unitTests": "Passed: test_audit_n1_batch.py (22 tests) and test_validate.py (87 tests).",
+-    "n1Lint": "The targeted lean lint reported two pre-existing errors in reused cards kanji/理.md (metadata reading ことわり lacks a Readings row) and kanji/語.md (unsupported phonetic front-matter key), plus 41 warnings. Both errors are present at base commit e2c25363285fd8fa100d1c4178e7289592562a31; B157 only appends a reciprocal word link to each card. No B157 card/article was reported as an error.",
+-    "whitespace": "Passed with core.whitespace=cr-at-eol to respect the repository's CRLF files."
++    "contentValidation": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: tools/validate.py reported 0 errors.",
++    "batchAudit": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign, the added quiz exclusions and the later gloss and source-citation fixes: 10 kanji, 10 new words, 8 changed existing articles, 17 reading dispositions, 27 complete JMdict families, and manifest 00777806885a6934.",
++    "unitTests": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: test_audit_n1_batch.py (22 tests), test_validate.py (87 tests) and the whole tools suite (439 tests).",
++    "n1Lint": "Rerun after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions against base e2c25363: the only error is the unrelated, pre-existing phonetic front-matter key in kanji/語.md, outside this batch. The earlier missing ことわり Readings row in kanji/理.md is fixed.",
++    "whitespace": "Passed after the first-round review fixes, the removal of unverifiable wording, the distractor redesign and the added quiz exclusions: git -c core.whitespace=cr-at-eol diff --check reported no issues.",
++    "quizSafety": "lean quiz_safety.py for the ten kanji: 0 errors and 0 warnings. Each card's three curated distractors fill all three wrong options of its meaning and reading questions in the N1 and All stacks and in Starter practice sessions. The frozen draft's same-sound distractors failed this check with 29 errors and 1 warning: nine cards' Notes did not name their distractors, the excluded pairs 春/旬 (俊) and 属/族 (俗) sat inside option sets, and 俊's option titles shared the word \"season\". Just before the redesign (e2b433da), the first-round fixes had added 4 more warnings: 佐/助 and 佳/俊 were declared on both cards, and 俵's Notes did not name its new exclusion 袋. No reviewer raised these; the check found them before the confirmation round. The mirrored declarations on the reused cards 助 (佐) and 速い (俊足) were removed because a declaration on either card excludes the pair both ways (docs/content-format.md).",
++    "readingExposure": "lean reading_exposure.py --seeds 200 with the --extra list below: 0 production hits, 0 padded-session hits and 0 one-holder padded hits; 4 latent collisions that no N1, All or Starter pool can draw (佳 けい and えい, 侍 かみ, 俗 しょく). In the frozen draft, 続 (ショク) was a curated 俗 distractor, so the しょく reading of 俗 in JMdict 1405100 was a production hit.",
++    "readingExtras": "佐 すけ, たす.ける, さ; 佳 よ.い, え.い, よ.き, か; 併 なら.ぶ, なら.べる, しか.し, しか.しながら, しっか.し, へい.どん, へい; 侍 シ, はべ.る, さぶら.う, さむら.う, じ.する, はんべ.り, じ; 侮 あなど.る, ぶ; 侯 まと, きみ, こう; 俊 すぐ.れる, しゅん; 俗 なら.わし, いや.しい, ぞく.っぽい, ぞく.なる, ぞく.に, ぞく; 俵 ひょう, びょう, ぴょう; 倫 みち, たぐい, つい.で, りん. Sources: the readings Kanjipedia marks as outside the official table (外), the Digital Daijisen character entries and headwords, and the JMdict okurigana scan.",
++    "readingOptions": "lean reading_options.py with the same --extra list: 0 problems."
+   },
+-  "status": "Draft only; not independently reviewed, committed, or published. The 諸侯 priority-tag exception remains subject to review."
++  "status": "Remaining first-round review findings are source-checked and addressed; unverifiable frequency and usage wording found during the pre-confirmation pass is removed or source-tied; the distractors are redesigned to pass quiz-safety and reading-exposure checks; eight more source-backed kanji exclusions (佐/副, 佳/偉, 佳/華, 併/斉, 侍/兵, 俊/偉, 俊/哲, 倫/善) and the word exclusions 併用/用途, 倫理/仁 and 佳作/制作 are added; validation and audit pass. Three-family confirmation pending. Not published."
+ }
+diff --git a/kanji/佐.md b/kanji/佐.md
+index f458bef5..a29fd2df 100644
+--- a/kanji/佐.md
++++ b/kanji/佐.md
+@@ -10,8 +10,8 @@ onyomi: [サ]
+ kunyomi: []
+ quizOnyomi: [サ]
+ quizKunyomi: []
+-distractors: [左, 差, 査]
+-quiz_exclusions: []
++distractors: [母, 友, 子]
++quiz_exclusions: [丞, 助, 援, 支, 副]
+ ---
+ 
+ # 佐 — aide; assistant
+@@ -20,7 +20,7 @@ quiz_exclusions: []
+ 
+ ## Meaning and origin
+ 
+-佐 can mean an assistant or help. It appears in common compounds such as [補佐](../words/補佐.md), “aid; assistance; assistant.”
++佐 can mean an assistant or help. It appears in common compounds such as [補佐](../words/補佐.md), “aid; assistance; assistant.” Digital Daijisen also gives an officer-rank sense, as in 大佐 たいさ, “colonel; (navy) captain.”
+ 
+ **Modern-shape mnemonic, not etymology:** 亻 stands beside 左; picture an aide standing beside a leader. This is only a visual cue. It does not claim that 左 contributes the historical meaning.
+ 
+@@ -33,9 +33,12 @@ quiz_exclusions: []
+ ## Common words
+ 
+ - [補佐](../words/補佐.md) ほさ — aid; assistance; assistant
++- 大佐 たいさ — colonel; (navy) captain (JMdict entry 1413740)
+ 
+ ## Notes
+ 
+-The meaning-quiz distractors 左 (“left”), 差 (“difference; gap”) and 査 (“investigate; inspect”) share the サ reading or sound but do not mean “assistant.”
++左, 差 and 査 share the サ reading but mean “left,” “difference,” and “investigation.” 佐 overlaps with 助 in assistance-related glosses: Digital Daijisen explains 佐 as supporting and helping from the side, as in 補佐, while 助 is the character of the common verb 助ける たすける, “help; save.” 丞 (“assist; aid”), 援 (“aid; assistance”) and 支 (“support”) are also close in meaning, and JMdict glosses 副 ふく (“vice-; secondary”) as “assistant; associate; vice-; sub-; deputy” (entry 1500330). JMdict records 佐ける (たすける) as a rare spelling of 助ける; the usual spelling is 助ける (entry 1344410).
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entry 1603460; [Digital Daijisen, 佐](https://www.weblio.jp/content/%E4%BD%90); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++The meaning-quiz distractors are 母 (“mother”), 友 (“friend”), and 子 (“child”); none means an aide or an assistant.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1603460, 1344410, 1413740, 1500330; [Digital Daijisen, 佐](https://www.weblio.jp/content/%E4%BD%90); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/佳.md b/kanji/佳.md
+index 15fa3df2..7de3d1ca 100644
+--- a/kanji/佳.md
++++ b/kanji/佳.md
+@@ -10,8 +10,8 @@ onyomi: [カ]
+ kunyomi: []
+ quizOnyomi: [カ]
+ quizKunyomi: []
+-distractors: [価, 加, 果]
+-quiz_exclusions: [美, 優]
++distractors: [新, 古, 短]
++quiz_exclusions: [美, 良, 善, 宜, 優, 俊, 傑, 秀, 英, 卓, 豪, 偉, 華]
+ ---
+ 
+ # 佳 — beautiful; excellent
+@@ -22,8 +22,6 @@ quiz_exclusions: [美, 優]
+ 
+ 佳 means excellent, pleasing or beautiful. A common example is [佳作](../words/佳作.md), a fine work or a work receiving an honorable mention.
+ 
+-**Modern-shape mnemonic, not etymology:** pair the person-shaped left side 亻 with the balanced shape on the right as a cue for something pleasing. This visual association makes no claim about historical formation.
+-
+ ## Readings
+ 
+ | Reading | Type | Typical words |
+@@ -36,8 +34,10 @@ quiz_exclusions: [美, 優]
+ 
+ ## Notes
+ 
+-佳作 can praise a fine work or name an honorable mention in a contest; the context tells which sense is intended. The KANJIDIC2 metadata for this card lists カ as its reading.
++佳作 can praise a fine work or name an honorable mention in a contest; the context tells which sense is intended. KANJIDIC2 lists カ for this card. JMdict also records 佳い (よい) as a rarely used spelling; it is not taught here as a usual kun reading.
++
++美 centers on beauty; 良, 善 and 宜 can mean “good,” matching Digital Daijisen's よい gloss for 佳; 優 can mean superior; and 俊, 傑, 秀, 英, 卓 and 豪 have excellence-related senses. JMdict glosses 偉い えらい (偉, “admirable; great”) as “great; excellent; admirable” (entry 1155780), and lists 華 as a spelling of はな with the sense “beauty” (entry 1194500). These characters share part of 佳’s meaning range without being interchangeable in every context.
+ 
+-美 (“beauty”) and 優 (“gentle; superior”) are excluded from this card’s meaning choices because their displayed meanings overlap with “beautiful; excellent.”
++The meaning-quiz distractors are 新 (“new”), 古 (“old”), and 短 (“short”); none means beautiful or excellent.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entry 1189760; [Digital Daijisen, 佳](https://www.weblio.jp/content/%E4%BD%B3); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1189760, 1605820, 1155780, 1194500; [Digital Daijisen, 佳](https://www.weblio.jp/content/%E4%BD%B3); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/併.md b/kanji/併.md
+index 223f3972..50bdbcdb 100644
+--- a/kanji/併.md
++++ b/kanji/併.md
+@@ -10,8 +10,8 @@ onyomi: [ヘイ]
+ kunyomi: [あわ.せる]
+ quizOnyomi: [ヘイ]
+ quizKunyomi: []
+-distractors: [平, 兵, 閉]
+-quiz_exclusions: [合]
++distractors: [分, 動, 休]
++quiz_exclusions: [合, 兼, 結, 並, 共, 協, 接, 括, 統, 斉]
+ ---
+ 
+ # 併 — combine; join together
+@@ -20,25 +20,24 @@ quiz_exclusions: [合]
+ 
+ ## Meaning and origin
+ 
+-併 means to join or bring things together. In [併用](../words/併用.md), two or more things are used together.
+-
+-**Modern-shape mnemonic, not etymology:** use the person-shaped 亻 and the right-hand form as a visual cue for bringing things together. This does not claim a historical explanation for the parts.
++併 means to join or bring things together. In [併用](../words/併用.md), two or more things are used together. Digital Daijisen also records a second sense, used interchangeably with 並, of standing side by side, as in 併記 へいき “writing side by side” and 併存 へいぞん “coexistence”; JMdict also lists the spellings 並記 and 並存.
+ 
+ ## Readings
+ 
+ | Reading | Type | Typical words |
+ | --- | --- | --- |
+ | ヘイ | on | [併用](../words/併用.md) へいよう — combined use (JMdict entry 1506200) |
+-| あわ.せる | kun | 併せる あわせる — combine; unite (rarely used kanji form; JMdict entry 1284480). Not selected for questions. |
++| あわ.せる | kun | 併せる あわせる — combine; unite (rarely used kanji form; JMdict entry 1284480). |
+ 
+ ## Common words
+ 
+-- [併用](../words/併用.md) へいよう — combined use; using together
++- [併用](../words/併用.md) へいよう — combined use; using together (JMdict entry 1506200)
++- 合併 がっぺい — merger; consolidation (JMdict entry 1578970)
+ 
+ ## Notes
+ 
+-JMdict marks 併せる as a rarely used kanji form; the common spelling of that verb is 合わせる. The quiz uses ヘイ from the more useful support word 併用.
++JMdict marks 併せる as a rarely used kanji form of 合わせる, the common spelling, but notes that the sense “to do at the same time; to take (e.g. into consideration) together; to do in addition to” is written esp. 併せる when in kanji. 合 also means to fit, 兼 can describe combining roles, and 結 has senses of tying and joining. 並 shares the side-by-side sense, and 共, 協, 接, 括 and 統 have related senses of togetherness, joining or unifying. KANJIDIC2 also gives 併 the meaning “collective,” close to 斉 (“uniform; all together; simultaneous”), and JMdict glosses 併せて あわせて as “in addition; besides; at the same time” (entry 1506010, sense 2, esp. 併せて).
+ 
+-合 (“fit together”) is excluded from meaning choices because its displayed meaning overlaps with “combine; join together.”
++The meaning-quiz distractors are 分 (“minute, part”), 動 (“move”), and 休 (“rest”); none means combining or joining together.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1284480, 1506200; [Digital Daijisen, 併](https://www.weblio.jp/content/%E4%BD%B5); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1284480, 1506200, 1578970, 1506070, 1663430, 1506010; [Digital Daijisen, 併](https://www.weblio.jp/content/%E4%BD%B5); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/侍.md b/kanji/侍.md
+index b3a6f64b..411985b1 100644
+--- a/kanji/侍.md
++++ b/kanji/侍.md
+@@ -10,8 +10,8 @@ onyomi: [ジ, シ]
+ kunyomi: [さむらい, はべ.る]
+ quizOnyomi: []
+ quizKunyomi: [さむらい]
+-distractors: [字, 寺, 次]
+-quiz_exclusions: [士]
++distractors: [父, 母, 子]
++quiz_exclusions: [士, 武, 臣, 仕, 僕, 兵]
+ ---
+ 
+ # 侍 — samurai; retainer
+@@ -26,10 +26,10 @@ quiz_exclusions: [士]
+ 
+ | Reading | Type | Typical words |
+ | --- | --- | --- |
+-| ジ | on | 侍従 じじゅう — chamberlain (JMdict entry 1314890). Not selected for questions. |
+-| シ | on | 内侍 ないし — lady-in-waiting (JMdict entry 1582520; historical title). source-only. |
++| ジ | on | 侍従 じじゅう — chamberlain (JMdict entry 1314890). |
++| シ | on | 内侍 ないし — maid of honor; lady-in-waiting (JMdict entry 1582520); a historical court title. |
+ | さむらい | kun | [侍](../words/侍.md) さむらい — samurai (JMdict entry 1314780) |
+-| はべ.る | kun | 侍る はべる — wait upon; serve (usually written in kana; JMdict entry 1314800). Source-only. |
++| はべ.る | kun | 侍る はべる — wait upon; serve (usually written in kana; JMdict entry 1314800). |
+ 
+ ## Common words
+ 
+@@ -38,6 +38,8 @@ quiz_exclusions: [士]
+ 
+ ## Notes
+ 
+-The quiz uses さむらい from the selected word article. JMdict marks 侍る as usually written in kana, and 内侍 is a historical title rather than a common beginner word. 士 can also be read as a word for a warrior, so it is excluded from this card’s meaning choices.
++侍る is usually written in kana, and 内侍 is a historical court title. 士 and 武 also have warrior senses, and JMdict glosses 兵 (“soldier; troops”) read つわもの as “soldier; warrior” (entry 2822790). 臣 means retainer or subject, 仕 means serve or attend, and 僕 can mean servant. Digital Daijisen explains the ジ sense as serving beside a person of high rank.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1314780, 1314890, 1314800, 1582520; [Digital Daijisen, 侍](https://www.weblio.jp/content/%E4%BE%8D); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++The meaning-quiz distractors are 父 (“father”), 母 (“mother”), and 子 (“child”); they name family members; none means a samurai or a retainer.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1314780, 1314890, 1314800, 1582520, 2822790; [Digital Daijisen, 侍](https://www.weblio.jp/content/%E4%BE%8D); [Digital Daijisen, 内侍](https://kotobank.jp/word/%E5%86%85%E4%BE%8D-107312); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/侮.md b/kanji/侮.md
+index a8d4fba4..7b2392c7 100644
+--- a/kanji/侮.md
++++ b/kanji/侮.md
+@@ -10,8 +10,8 @@ onyomi: [ブ]
+ kunyomi: [あなど.る, あなず.る]
+ quizOnyomi: []
+ quizKunyomi: [あなど.る]
+-distractors: [舞, 武, 部]
+-quiz_exclusions: []
++distractors: [聞, 話, 会]
++quiz_exclusions: [卑]
+ ---
+ 
+ # 侮 — despise; scorn
+@@ -26,17 +26,19 @@ quiz_exclusions: []
+ 
+ | Reading | Type | Typical words |
+ | --- | --- | --- |
+-| ブ | on | 侮辱 ぶじょく — insult; affront (JMdict entry 1498260). Not selected for questions. |
++| ブ | on | 侮辱 ぶじょく — insult; affront (JMdict entry 1498260). |
+ | あなど.る | kun | [侮る](../words/侮る.md) あなどる — look down on; make light of (JMdict entry 1583670) |
+-| あなず.る | kun | Listed in KANJIDIC2; no matching spelling-reading pair was found in the pinned JMdict data. source-only. |
++| あなず.る | kun | あなずる — older form of あなどる (Digital Daijisen via Weblio). |
+ 
+ ## Common words
+ 
+-- [侮る](../words/侮る.md) あなどる — look down on; underestimate
++- [侮る](../words/侮る.md) あなどる — look down on; make light of
+ - 侮辱 ぶじょく — insult; affront
+ 
+ ## Notes
+ 
+-The selected quiz reading is あなど.る, which has a direct example in the support article. あなず.る remains in the source metadata but is not selected for questions because no supporting JMdict example was found.
++Digital Daijisen records あなずる as an older form of あなどる. 卑 (“lowly; despicable”) is related: KANJIDIC2 also lists “despise” among its meanings.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1498260, 1583670; [Digital Daijisen, 侮](https://www.weblio.jp/content/%E4%BE%AE); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++The meaning-quiz distractors are 聞 (“hear, ask”), 話 (“talk, speak”), and 会 (“meet”); none means despising or scorning.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1498260, 1583670; [Digital Daijisen, 侮](https://www.weblio.jp/content/%E4%BE%AE); [Digital Daijisen, 侮る](https://www.weblio.jp/content/%E4%BE%AE+%E3%82%8B); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/侯.md b/kanji/侯.md
+index 24fd0e1b..88d6daff 100644
+--- a/kanji/侯.md
++++ b/kanji/侯.md
+@@ -10,8 +10,8 @@ onyomi: [コウ]
+ kunyomi: []
+ quizOnyomi: [コウ]
+ quizKunyomi: []
+-distractors: [交, 光, 向]
+-quiz_exclusions: []
++distractors: [国, 京, 社]
++quiz_exclusions: [殿]
+ ---
+ 
+ # 侯 — marquis; feudal lord
+@@ -20,7 +20,7 @@ quiz_exclusions: []
+ 
+ ## Meaning and origin
+ 
+-侯 is a historical title for a marquis or feudal lord. The compound [諸侯](../words/諸侯.md) しょこう refers to feudal lords as a group.
++侯 is a historical title for a marquis or feudal lord. The historical compound [諸侯](../words/諸侯.md) しょこう refers to feudal lords as a group.
+ 
+ ## Readings
+ 
+@@ -30,11 +30,12 @@ quiz_exclusions: []
+ 
+ ## Common words
+ 
+-- [諸侯](../words/諸侯.md) しょこう — feudal lords; barons; princes
+-- 王侯 おうこう — kings and feudal lords (JMdict entry 1588830)
++- [諸侯](../words/諸侯.md) しょこう — feudal lords; historical term, not an everyday word
+ 
+ ## Notes
+ 
+-侯 refers to a historical title or rank; it is not the character in 候補 こうほ (“candidate”). JMdict lists 侯補 only as a search-only form for that word.
++侯 refers to a historical rank or title; it is not the character in 候補 こうほ (“candidate”). JMdict lists 侯補 only as a search-only form for 候補, which uses 候. JMdict marks 諸侯 as historical and gives it no frequency tag, so this card includes it as a clearly labeled historical example, not as everyday vocabulary. 殿 can mean “lord” as an honorific as well as a palace; 侯 refers specifically to a rank.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1272730, 1272630, 1272650, 1344250, 1588830; [Digital Daijisen, 侯](https://www.weblio.jp/content/%E4%BE%AF); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++The meaning-quiz distractors are 国 (“country”), 京 (“capital”), and 社 (“company, shrine”); none means a marquis or a feudal lord.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1272730, 1272630, 1272650, 1344250; [Digital Daijisen, 侯](https://www.weblio.jp/content/%E4%BE%AF); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/俊.md b/kanji/俊.md
+index 1537efbd..463c0ec2 100644
+--- a/kanji/俊.md
++++ b/kanji/俊.md
+@@ -10,8 +10,8 @@ onyomi: [シュン]
+ kunyomi: []
+ quizOnyomi: [シュン]
+ quizKunyomi: []
+-distractors: [春, 瞬, 旬]
+-quiz_exclusions: [秀, 英]
++distractors: [安, 少, 多]
++quiz_exclusions: [秀, 英, 傑, 才, 優, 卓, 豪, 賢, 偉, 哲]
+ ---
+ 
+ # 俊 — talented; outstanding
+@@ -20,7 +20,7 @@ quiz_exclusions: [秀, 英]
+ 
+ ## Meaning and origin
+ 
+-俊 carries ideas such as talent, excellence and genius. Its reading appears in [俊足](../words/俊足.md), a word whose common sense is “fast runner.”
++俊 carries ideas such as talent, excellence and genius. Its reading appears in [俊足](../words/俊足.md), a word whose first JMdict sense is “swiftness of foot; fast runner.”
+ 
+ ## Readings
+ 
+@@ -31,10 +31,11 @@ quiz_exclusions: [秀, 英]
+ ## Common words
+ 
+ - [俊足](../words/俊足.md) しゅんそく — fast runner; swift on foot
+-- 俊英 しゅんえい — excellence; genius
+ 
+ ## Notes
+ 
+-俊足 is a whole-word example, not a claim that 俊 alone means “fast.” JMdict also records a “gifted person” sense for the spelling 俊足. 秀 (“excel; outstanding”) and 英 (“English; outstanding”) are excluded from meaning choices because their displayed meanings overlap with this card’s idea of excellence.
++俊足 is a whole-word example, not a claim that 俊 alone means “fast.” JMdict also records a “gifted person” sense for the spelling 俊足. 俊’s talent and excellence meanings overlap with senses of 秀, 英, 佳, 傑, 才, 優, 卓 and 豪, and with 偉 (“admirable; great”): JMdict glosses 偉い えらい as “great; excellent; admirable” (entry 1155780). Digital Daijisen explains 俊 as outstanding talent and intellect, which also overlaps with 賢 (“wise; intelligent”) and 哲 (“philosophy; wise; sage”). Each character has other uses.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1340940, 1340880; [Digital Daijisen, 俊](https://www.weblio.jp/content/%E4%BF%8A); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++The meaning-quiz distractors are 安 (“cheap, peaceful”), 少 (“few, a little”), and 多 (“many, much”); none means talented or outstanding.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1340940, 1155780; [Digital Daijisen, 俊](https://www.weblio.jp/content/%E4%BF%8A); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/俗.md b/kanji/俗.md
+index c6571a65..fa222608 100644
+--- a/kanji/俗.md
++++ b/kanji/俗.md
+@@ -10,8 +10,8 @@ onyomi: [ゾク]
+ kunyomi: []
+ quizOnyomi: [ゾク]
+ quizKunyomi: []
+-distractors: [属, 続, 族]
+-quiz_exclusions: []
++distractors: [天, 新, 名]
++quiz_exclusions: [凡, 卑]
+ ---
+ 
+ # 俗 — customs; mundane
+@@ -20,7 +20,7 @@ quiz_exclusions: []
+ 
+ ## Meaning and origin
+ 
+-俗 can refer to customs, ordinary or worldly things, and what is colloquial. In [俗語](../words/俗語.md) ぞくご it names colloquial language or slang.
++俗 can refer to customs, ordinary or worldly things, colloquial use, and what is considered lowbrow or vulgar. In [俗語](../words/俗語.md) ぞくご it names colloquial language or slang. 風俗 (ふうぞく) can mean manners, customs or public morals; in another sense it refers to the sex-service industry.
+ 
+ ## Readings
+ 
+@@ -31,10 +31,12 @@ quiz_exclusions: []
+ ## Common words
+ 
+ - [俗語](../words/俗語.md) ぞくご — colloquial language; slang
+-- 風俗 ふうぞく — manners; customs (JMdict entry 1499960)
++- 風俗 ふうぞく — manners; customs; public morals; also the sex-service industry in a separate sense (JMdict entry 1499960)
+ 
+ ## Notes
+ 
+-俗語 does not necessarily mean an offensive or obscene expression. Whether a particular term is rude, playful or neutral depends on that term and its context.
++俗語 does not necessarily mean an offensive or obscene expression. 俗’s “mundane” sense overlaps with 凡 (“commonplace; mediocre”), and its lowbrow sense overlaps with 卑 (“lowly; despicable”); the characters also have distinct senses.
++
++The meaning-quiz distractors are 天 (“heaven, sky”), 新 (“new”), and 名 (“name”); none means customs or the mundane.
+ 
+ Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1405300, 1499960; [Digital Daijisen, 俗](https://www.weblio.jp/content/%E4%BF%97); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/俵.md b/kanji/俵.md
+index 0a55469d..2b5a5a5d 100644
+--- a/kanji/俵.md
++++ b/kanji/俵.md
+@@ -10,8 +10,8 @@ onyomi: [ヒョウ]
+ kunyomi: [たわら]
+ quizOnyomi: []
+ quizKunyomi: [たわら]
+-distractors: [表, 票, 評]
+-quiz_exclusions: []
++distractors: [田, 土, 木]
++quiz_exclusions: [袋]
+ ---
+ 
+ # 俵 — straw bag; bale
+@@ -26,7 +26,7 @@ quiz_exclusions: []
+ 
+ | Reading | Type | Typical words |
+ | --- | --- | --- |
+-| ヒョウ | on | 土俵 どひょう — (wrestling) ring (JMdict entry 1445550); 俵 ひょう is also listed for the counter sense (entry 1583390). Not selected for questions. |
++| ヒョウ | on | 土俵 どひょう — (wrestling) ring (JMdict entry 1445550); JMdict also lists 俵 ひょう, the only reading for the counter sense (entry 1583390). |
+ | たわら | kun | [俵](../words/俵.md) たわら — straw bag; sack (JMdict entry 1583390) |
+ 
+ ## Common words
+@@ -37,6 +37,10 @@ quiz_exclusions: []
+ 
+ ## Notes
+ 
+-The selected quiz reading is たわら from the support article. ヒョウ is shown by the compound 土俵 and by the counter reading; it is not the reading used in the article [俵](../words/俵.md).
++JMdict lists ヒョウ in 土俵. For the standalone word [俵](../words/俵.md), JMdict tags たわら as common and also lists ひょう, the only reading for the counter sense.
++
++JMdict glosses 俵 as “straw bag; sack; bale,” which overlaps with the card title of 袋 (“bag; sack; pouch”).
++
++The meaning-quiz distractors are 田 (“rice field”), 土 (“earth, soil”), and 木 (“tree, wood”); none means a straw bag or a bale.
+ 
+ Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1166100, 1445550, 1583390; [Digital Daijisen, 俵](https://www.weblio.jp/content/%E4%BF%B5); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/倫.md b/kanji/倫.md
+index f8958187..d495280e 100644
+--- a/kanji/倫.md
++++ b/kanji/倫.md
+@@ -1,6 +1,6 @@
+ ---
+ kanji: 倫
+-title: ethics; moral order
++title: ethics; moral principles
+ jlpt: 1
+ tags: [jlpt-n1, grade-8, structure-unclassified]
+ strokes: 10
+@@ -10,17 +10,17 @@ onyomi: [リン]
+ kunyomi: []
+ quizOnyomi: [リン]
+ quizKunyomi: []
+-distractors: [林, 輪, 臨]
+-quiz_exclusions: []
++distractors: [力, 事, 名]
++quiz_exclusions: [伴, 輩, 徳, 義, 善]
+ ---
+ 
+-# 倫 — ethics; moral order
++# 倫 — ethics; moral principles
+ 
+ **Strokes:** 10 · **Key (radical):** 人 (no. 9) · **JLPT:** N1 (community list)
+ 
+ ## Meaning and origin
+ 
+-倫 relates to ethical principles and human relationships. Its reading appears in [倫理](../words/倫理.md) りんり, “ethics; morals.”
++倫 refers to the path or principles people should follow. Digital Daijisen also gives a second sense, companions of the same standing, seen in 絶倫 ぜつりん, “matchless; peerless”; KANJIDIC2 lists “companion” among its meanings. Its reading appears in [倫理](../words/倫理.md) りんり, “ethics; morals.”
+ 
+ ## Readings
+ 
+@@ -31,9 +31,12 @@ quiz_exclusions: []
+ ## Common words
+ 
+ - [倫理](../words/倫理.md) りんり — ethics; morals
++- 不倫 ふりん — infidelity; an extramarital affair
+ 
+ ## Notes
+ 
+-The meaning quiz excludes no character here; related ideas such as virtue are not identical to the displayed title “ethics; moral order.” The JMdict spelling 倫理 is the support for the selected reading リン.
++倫理 and 不倫 are common compounds using リン with distinct senses: ethics versus infidelity. 倫 also appears in 五倫 ごりん, “the five Confucian filial-piety relationships.” 伴 and 輩 share the companion sense, while 徳 (“virtue”), 善 (“good; virtue”) and 義 (“righteousness”) are related moral concepts.
+ 
+-Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entry 1555390; [Digital Daijisen, 倫](https://www.weblio.jp/content/%E5%80%AB); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
++The meaning-quiz distractors are 力 (“power”), 事 (“matter, affair”), and 名 (“name”); none means ethics or moral principles.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entries 1555390, 1495370, 1387000, 1593605; [Digital Daijisen, 倫](https://www.weblio.jp/content/%E5%80%AB); [Digital Daijisen, 不倫](https://www.weblio.jp/content/%E4%B8%8D%E5%80%AB); [Joyo kanji table (2010)](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf).
+diff --git a/kanji/助.md b/kanji/助.md
+index e4257a9f..cc6871ae 100644
+--- a/kanji/助.md
++++ b/kanji/助.md
+@@ -29,6 +29,8 @@ distractors: [加, 男, 動]
+ | たす.ける | kun | [助ける](../words/助ける.md) たすける — help; save |
+ | たす.かる | kun | 助かる たすかる — be saved; be helped |
+ | ジョ | on | 助手 じょしゅ — assistant |
++| す.ける | kun, source-only here | KANJIDIC2 lists this form; the common reading たす.ける is shown above. |
++| すけ | kun, source-only here | KANJIDIC2 lists this form; no matching common-word example is cited here. |
+ 
+ ## Common words
+ 
+@@ -40,7 +42,7 @@ distractors: [加, 男, 動]
+ 
+ 助けて！ (たすけて！) means "Help!" The て-form here requests assistance.
+ Do not confuse the left-hand 且 with the 田 above 力 in [男](男.md).
+-The table selects readings; the metadata retains the additional source forms.
++The table marks source-only readings explicitly.
+ 
+ Sources: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project);
+ [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entries 1344410, 1344380, 1344650.
+diff --git a/kanji/理.md b/kanji/理.md
+index 2e0bb1b9..c255e3c3 100644
+--- a/kanji/理.md
++++ b/kanji/理.md
+@@ -23,11 +23,12 @@ distractors: [野, 重, 地]
+ 
+ ## Readings
+ 
+-This table focuses on リ; the metadata also preserves the source kun reading ことわり.
++This table includes ことわり as a source-only kun reading alongside the common on reading リ.
+ 
+ | Reading | Type | Typical words |
+ | --- | --- | --- |
+ | リ | on | 理由 りゆう — reason; [料理](../words/料理.md) りょうり — cooking |
++| ことわり | kun, source-only here | 理 (ことわり) — reason; logic (JMdict entry 2412900; source-listed reading; not used in a common-word example here) |
+ 
+ ## Common words
+ 
+@@ -41,3 +42,5 @@ This table focuses on リ; the metadata also preserves the source kun reading 
+ The classical radical is 玉, even though its left-side shape here looks like 王.
+ Compare [野](野.md), which has 里 on the left rather than the right, and [重](重.md), with its dense central stack of strokes.
+ Learn the complete word: the broad idea of "reason" does not predict every compound's meaning.
++
++Metadata: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), 2026-11-02 snapshot; JMdict entry 2412900.
+diff --git a/tools/audit_n1_batch.py b/tools/audit_n1_batch.py
+index 536771db..e6430cd5 100644
+--- a/tools/audit_n1_batch.py
++++ b/tools/audit_n1_batch.py
+@@ -625,6 +625,11 @@ def audit(root, batch):
+         required_fields(ledger, {"requiredReciprocalPairs", "changedReusedPassages", "wordQuizAudit",
+                                  "dictionaryPackets", "readingDispositions", "curatedProjection", "quizAudit"},
+                         "Legacy batch ledger")
++        if "kanjiQuizAudit" in ledger:
++            required_fields(ledger["kanjiQuizAudit"], {"directExclusions"}, "Kanji quiz audit")
++            kanji_exclusions = ledger["kanjiQuizAudit"]["directExclusions"]
++        else:
++            kanji_exclusions = []
+     else:
+         required_fields(ledger, {"sourceCompletionPlan", "sourceCompletionAudit", "draftAudit"},
+                         "Unsupported or incomplete batch ledger")
+@@ -673,8 +678,13 @@ def audit(root, batch):
+     runtime_delta(before, current, additions, changes)
+     for name in changes:
+         rows = [r for r in ledger["changedReusedPassages"] if r["article"] == name]
+-        exclusion_rows = [r for r in ledger["wordQuizAudit"]["directExclusions"]
+-                          if f"words/{r['word']}.md" == name]
++        exclusion_rows = [
++            r for r in ledger["wordQuizAudit"]["directExclusions"]
++            if f"words/{r['word']}.md" == name
++        ] + [
++            r for r in kanji_exclusions
++            if f"kanji/{r['kanji']}.md" == name
++        ]
+         require(len(exclusion_rows) <= 1, "Duplicate reused exclusion decision")
+         reused_changes(base_file(root, commit, name),
+                        (root / name).read_text(encoding="utf-8"), rows,
+@@ -755,6 +765,9 @@ def audit(root, batch):
+     for row in ledger["wordQuizAudit"]["directExclusions"]:
+         require(metadata(root, f"words/{row['word']}.md")["quiz_exclusions"] == row["exclude"],
+                 "Word exclusion ledger mismatch")
++    for row in kanji_exclusions:
++        require(metadata(root, f"kanji/{row['kanji']}.md")["quiz_exclusions"] == row["exclude"],
++                "Kanji exclusion ledger mismatch")
+     return {"batch": batch, "baseCommit": commit, "draftKanji": len(members),
+             "newWords": len(new_words), "changedReusedArticles": len(changes),
+             "requiredReciprocalPairs": len(pairs), "activatedBaselinePairs": len(activated),
+diff --git a/words/佳作.md b/words/佳作.md
+index 6eb97acc..abb0bf0d 100644
+--- a/words/佳作.md
++++ b/words/佳作.md
+@@ -5,7 +5,7 @@ title: fine work; honorable mention
+ type: kango
+ kanji: [佳, 作]
+ tags: [kango, noun, art]
+-quiz_exclusions: [傑作]
++quiz_exclusions: [傑作, 名作, 作品, 制作]
+ ---
+ 
+ # 佳作 (かさく) — fine work; honorable mention
+@@ -25,10 +25,10 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## Synonyms and antonyms
+ 
+-[傑作](傑作.md) can also praise an excellent work, but its title is “masterpiece”; the labels can overlap in a meaning quiz, so the pair is excluded.
++[傑作](傑作.md) and [名作](名作.md) can both describe outstanding works. 佳作 means a fine work and can also name an honorable mention in a contest. [作品](作品.md) (“creative work; piece”) names any work, and JMdict glosses [制作](制作.md) first as “work (film, book).”
+ 
+ ## Distinctive meaning
+ 
+ In a contest, 佳作 can mean a work that receives an honorable mention.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1189760, senses 1–2.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1189760, senses 1–2; compare entries 1297910 and 1374810.
+diff --git a/words/併用.md b/words/併用.md
+index 492d0b7b..bd21e673 100644
+--- a/words/併用.md
++++ b/words/併用.md
+@@ -5,7 +5,7 @@ title: combined use; using together
+ type: kango
+ kanji: [併, 用]
+ tags: [kango, noun, method]
+-quiz_exclusions: []
++quiz_exclusions: [使用, 利用, 使う, 用いる, 用, 用途]
+ ---
+ 
+ # 併用 (へいよう) — combined use; using together
+@@ -29,6 +29,6 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## Distinctive meaning
+ 
+-The word names combined use; it does not establish whether the combination is safe or effective. For medicines, follow a qualified professional's instructions rather than inferring safety from the word.
++JMdict glosses 併用 as combined use, using jointly or using at the same time.
+ 
+ Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1506200, sense 1.
+diff --git a/words/侍.md b/words/侍.md
+index 6b5dbc49..ed8aa02d 100644
+--- a/words/侍.md
++++ b/words/侍.md
+@@ -5,7 +5,7 @@ title: samurai
+ type: wago
+ kanji: [侍]
+ tags: [wago, noun, history]
+-quiz_exclusions: []
++quiz_exclusions: [武士]
+ ---
+ 
+ # 侍 (さむらい) — samurai
+@@ -13,6 +13,7 @@ quiz_exclusions: []
+ ## Meaning
+ 
+ 侍 is a historical word for a warrior, especially a military retainer serving a feudal lord.
++JMdict also records a colloquial figurative sense for a person with a strong backbone or considerable talent.
+ 
+ - 物語に、主君を守る侍が登場します。 (ものがたりに、しゅくんをまもるさむらいがとうじょうします。) — A samurai who protects his lord appears in the story.
+ - その映画は、一人の侍の旅を描いています。 (そのえいがは、ひとりのさむらいのたびをえがいています。) — The film depicts the journey of a samurai.
+@@ -25,10 +26,10 @@ This is a single-kanji word. The character [侍](../kanji/侍.md) uses its kun r
+ 
+ ## Synonyms and antonyms
+ 
+-JMdict also records a colloquial figurative sense: a person with a strong backbone or considerable talent.
++JMdict glosses [武士](武士.md) ぶし as “samurai; warrior” (entry 1583680); the historical sense of 侍 さむらい is a warrior, especially a military retainer of a daimyo in the Edo period.
+ 
+ ## Distinctive meaning
+ 
+-This article focuses on the historical warrior sense.
++The colloquial figurative sense describes a person, not a warrior from a historical period.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1314780, senses 1–2.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1314780, senses 1–2; compare entry 1583680.
+diff --git a/words/侮る.md b/words/侮る.md
+index 0e25fcd3..d192cd0b 100644
+--- a/words/侮る.md
++++ b/words/侮る.md
+@@ -1,21 +1,21 @@
+ ---
+ word: 侮る
+ reading: あなどる
+-title: look down on; underestimate
++title: look down on; make light of
+ type: wago
+ kanji: [侮]
+ tags: [wago, verb, attitude]
+-quiz_exclusions: []
++quiz_exclusions: [見下ろす]
+ ---
+ 
+-# 侮る (あなどる) — look down on; underestimate
++# 侮る (あなどる) — look down on; make light of
+ 
+ ## Meaning
+ 
+ 侮る means to disdain or look down on someone or something, or to make light of it.
+ 
+-- 相手の力を侮ってはいけません。 (あいてのちからをあなどってはいけません。) — You must not underestimate your opponent’s strength.
+-- 彼は危険を侮って、準備をしませんでした。 (かれはきけんをあなどって、じゅんびをしませんでした。) — He underestimated the danger and did not prepare.
++- 相手の力を侮ってはいけません。 (あいてのちからをあなどってはいけません。) — Do not make light of your opponent’s strength.
++- 彼は危険を侮って、準備をしませんでした。 (かれはきけんをあなどって、じゅんびをしませんでした。) — He made light of the danger and did not prepare.
+ 
+ These are original usage examples, not dictionary quotations.
+ 
+@@ -25,7 +25,7 @@ This is a single-kanji verb. The character [侮](../kanji/侮.md) uses its kun r
+ 
+ ## Synonyms and antonyms
+ 
+-JMdict glosses include “to look down on,” “to make light of,” and “to despise.”
++Like [見下ろす](見下ろす.md), 侮る can express contempt for someone. 見下ろす also has a literal sense of looking down from a higher position.
+ 
+ ## Distinctive meaning
+ 
+diff --git a/words/俊足.md b/words/俊足.md
+index ae9c4cfc..4ec8e647 100644
+--- a/words/俊足.md
++++ b/words/俊足.md
+@@ -5,14 +5,14 @@ title: fast runner; swift on foot
+ type: kango
+ kanji: [俊, 足]
+ tags: [kango, noun, sports]
+-quiz_exclusions: []
++quiz_exclusions: [速い]
+ ---
+ 
+ # 俊足 (しゅんそく) — fast runner; swift on foot
+ 
+ ## Meaning
+ 
+-俊足 means swiftness of foot or a fast runner. JMdict also records a sense meaning a gifted person for this spelling.
++俊足 means swiftness of foot or a fast runner.
+ 
+ - 俊足の選手が、一塁からホームまで走りました。 (しゅんそくのせんしゅが、いちるいからほーむまではしりました。) — A fast runner ran from first base to home.
+ - 彼は俊足を生かして、盗塁を決めました。 (かれはしゅんそくをいかして、とうるいをきめました。) — He used his speed to steal a base.
+@@ -21,7 +21,7 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## How the kanji combine
+ 
+-[俊](../kanji/俊.md) and [足](../kanji/足.md) form a word whose established common sense is “swift on foot; fast runner.” The complete compound is read しゅんそく.
++[俊](../kanji/俊.md) conveys talent or excellence, while [足](../kanji/足.md) means foot. Together, they form a word for swiftness on foot and a fast runner; the compound is read しゅんそく.
+ 
+ ## Synonyms and antonyms
+ 
+@@ -29,6 +29,6 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## Distinctive meaning
+ 
+-The word can also mean a gifted person in the sense restricted to the spelling 俊足. JMdict lists 駿足 for a separate “swift horse” sense; that sense does not apply to this spelling.
++JMdict also lists a sense restricted to the spelling 俊足: a gifted person. Digital Daijisen gives that sense first; its second 俊足 sense points to 駿足 sense 2, swiftness of foot or a person who is swift, and 駿足 sense 1 is a swift horse. This article focuses on JMdict's first sense, “swiftness of foot; fast runner.”
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1340940, senses 1 and 3.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1340940, senses 1 and 3; [Digital Daijisen, 俊足](https://kotobank.jp/word/%E4%BF%8A%E8%B6%B3-530016) and [駿足](https://kotobank.jp/word/%E9%A7%BF%E8%B6%B3-530017).
+diff --git a/words/俗語.md b/words/俗語.md
+index 9d19e34c..c62a8a92 100644
+--- a/words/俗語.md
++++ b/words/俗語.md
+@@ -5,7 +5,7 @@ title: colloquial word; slang
+ type: kango
+ kanji: [俗, 語]
+ tags: [kango, noun, language]
+-quiz_exclusions: []
++quiz_exclusions: [言葉, 単語, 語]
+ ---
+ 
+ # 俗語 (ぞくご) — colloquial word; slang
+diff --git a/words/俵.md b/words/俵.md
+index 47d60c6a..3c516eb8 100644
+--- a/words/俵.md
++++ b/words/俵.md
+@@ -5,7 +5,7 @@ title: straw bag; bale
+ type: wago
+ kanji: [俵]
+ tags: [wago, noun, measure]
+-quiz_exclusions: []
++quiz_exclusions: [袋, バッグ, 鞄]
+ ---
+ 
+ # 俵 (たわら) — straw bag; bale
+@@ -25,10 +25,10 @@ This is a single-kanji word. The character [俵](../kanji/俵.md) is read たわ
+ 
+ ## Synonyms and antonyms
+ 
+-The card focuses on the object sense; the separate counter reading is described below.
++JMdict glosses [袋](袋.md) as “bag; sack; pouch” (entry 1411070); 俵 specifically means a straw bag or bale.
+ 
+ ## Distinctive meaning
+ 
+-俵 can also be used as a counter for sacks. JMdict lists ひょう for that counter sense; the selected word reading in this article is たわら.
++俵 can also be used as a counter for sacks, read ひょう. For the noun, JMdict tags たわら as common and also lists ひょう.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1583390, senses 1–2.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1583390, senses 1–2; compare entry 1411070.
+diff --git a/words/倫理.md b/words/倫理.md
+index 9b5ee967..30649838 100644
+--- a/words/倫理.md
++++ b/words/倫理.md
+@@ -5,7 +5,7 @@ title: ethics; morals
+ type: kango
+ kanji: [倫, 理]
+ tags: [kango, noun, ethics]
+-quiz_exclusions: [道徳]
++quiz_exclusions: [道徳, 善, 仁]
+ ---
+ 
+ # 倫理 (りんり) — ethics; morals
+@@ -25,10 +25,10 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## Synonyms and antonyms
+ 
+-[道徳](道徳.md) overlaps with 倫理 in referring to moral principles and conduct. Their answer labels can be confused in a word quiz, so the pair is excluded.
++[道徳](道徳.md) also concerns moral principles and conduct; JMdict glosses it as “morals; morality.” [善](善.md) (“moral good; virtue”) names a related moral concept. JMdict glosses [仁](仁.md) as “benevolence (esp. as a virtue of Confucianism); consideration; compassion; humanity; charity,” another related moral concept.
+ 
+ ## Distinctive meaning
+ 
+ The second example uses 倫理 in the phrase 倫理の審査, an ethics review for a research study.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1555390; compare entry 1454240.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1555390, sense 1; compare entries 1454240, 1394250 and 1369620.
+diff --git a/words/補佐.md b/words/補佐.md
+index 3cc64547..111e30f8 100644
+--- a/words/補佐.md
++++ b/words/補佐.md
+@@ -5,7 +5,7 @@ title: aide; assistance
+ type: kango
+ kanji: [補, 佐]
+ tags: [kango, noun, work]
+-quiz_exclusions: [援助]
++quiz_exclusions: [援助, 助手, 手伝い, 世話, 手伝う, 助ける, 支える, 応援]
+ ---
+ 
+ # 補佐 (ほさ) — aide; assistance
+@@ -25,10 +25,10 @@ These are original usage examples, not dictionary quotations.
+ 
+ ## Synonyms and antonyms
+ 
+-[援助](援助.md) also means aid or assistance, but is broader: 補佐 often describes helping a person carry out a role. The words overlap, so they are excluded from each other’s meaning quiz choices.
++[援助](援助.md) and 補佐 both mean aid or assistance. [助手](助手.md) names an assistant; [手伝い](手伝い.md) can mean help or a helper; [世話](世話.md) can mean care or assistance. These English glosses overlap, though each Japanese word has distinct uses.
+ 
+ ## Distinctive meaning
+ 
+ 補佐 can name either the act of assisting or the person who provides assistance.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1603460.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1603460, sense 1.
+diff --git a/words/諸侯.md b/words/諸侯.md
+index 18271ee3..3b0c2e99 100644
+--- a/words/諸侯.md
++++ b/words/諸侯.md
+@@ -31,4 +31,4 @@ These are original usage examples, not dictionary quotations.
+ 
+ JMdict marks 諸侯 as a historical term.
+ 
+-Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1344250; compare entry 1588830.
++Dictionary: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entry 1344250, sense 1; compare entry 1588830.

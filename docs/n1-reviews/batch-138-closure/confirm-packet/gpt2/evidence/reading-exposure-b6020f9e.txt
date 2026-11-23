@@ -1,0 +1,262 @@
+Command (at freeze b6020f9e, rerun on 2026-11-18 with the corrected tools; same command as at 3158b2b9): python -X utf8 reading_exposure.py --extra 噴=ホン,は.く --extra 垂=しだ.れる,しで,なんなん.とする,しず.る,しだれ,しずれ,さ.げ,しだ.れ,だ.れ,なりなん.とす,なんなん.とす --extra 垣=エン --extra 執=とら.える,しつ.よう --extra 塊=つちくれ,くれ,ほど,まるかし,まるかせ,まろかし,まろかせ --extra 墨=モク --extra 壁=がけ --extra 壊=エ,やぶ.る,やぶ.れる,こわ.る,こほ.つ,こぼ.つ --extra 奏=すす.める,もう.す,そう.す,そう.する --extra 契=キツ,ケツ,きざ.む,わりふ,セツ --extra 奨=ソウ,すす.める --extra 奪=タツ,と.る --extra 妨=ホウ --extra 威=おど.す,おどし --seeds 200 噴 垂 垣 執 堅 塊 墨 壁 壊 奏 契 奨 奪 妨 威
+The --extra readings are, for the 15 kanji, every reading Kanjipedia marks as outside the official table (外) (evidence\kanjipedia-outside-readings.json), every kun reading in the Digital Daijisen character entries and every Daijisen headword reading marked ▽ (outside the official table) or headed by the kanji that is not a KANJIDIC2 reading (evidence\daijisen-heads.txt), and the JMdict kanji-plus-okurigana headword readings listed in evidence\okurigana-scan.txt. Some listed extras are also KANJIDIC2 readings; repeating them changes nothing.
+
+Reading-exposure audit: pools as built by the app (content.inStack): N1 stack = 1322 cards; All stack = 1322 cards.
+N1 stack = every card tagged jlpt-n1 .. jlpt-n5 (Stacks.includes); All = every card in kanji/. The pool is the whole shipped content of the stack.
+Starter practice session = the 118 cards tagged starter plus the borrowed target (the Starter stack borrows started cards of other stacks to pad a short "Practice more" session; the All and JLPT stacks borrow nothing).
+
+== 噴 (erupt; spout; gush)   curated option cards: 口 古 買   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 口: tags jlpt-n4 grade-1 pictograph starter; in pools: N1 stack, All stack, Starter practice session; on コウ ク | kun くち
+   curated 古: tags jlpt-n4 grade-2 compound starter; in pools: N1 stack, All stack, Starter practice session; on コ | kun ふる.い ふる- -ふる.す
+   curated 買: tags jlpt-n4 grade-2 compound starter; in pools: N1 stack, All stack, Starter practice session; on バイ | kun か.う
+   JMdict single-kanji entries: none
+   unlisted readings attested for 噴: ほん (card text)  はく (card text)
+   on prompt フン (key ふん)
+       N1 stack: curated 口 古 買 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+       All stack: identical to N1 stack
+       Starter practice session: identical to N1 stack
+       attested reading ほん (card text) is offered by 反 品 本; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [噴 反] -> たん はん ほ ほん; [噴 品] -> ひん ほん
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (3 holders tried)
+       attested reading はく (card text) is offered by 博 拍 泊 白 薄; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [噴 博] -> はく; [噴 拍] -> はく
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (5 holders tried)
+       sampling N1 stack: 200 seeds, 4 of 4 drawable wrong options seen
+       sampling All stack: 200 seeds, 4 of 4 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 4 of 4 drawable wrong options seen
+   kun: no reading prompts
+
+== 垂 (hang down; droop; dangle)   curated option cards: 郵 乗 重   tags: jlpt-n1 grade-6 structure-unclassified
+   curated 郵: tags jlpt-n2 grade-6 structure-unclassified; in pools: N1 stack, All stack; on ユウ | kun -
+   curated 乗: tags jlpt-n3 grade-3 structure-unclassified; in pools: N1 stack, All stack; on ジョウ ショウ | kun の.る -の.り の.せる
+   curated 重: tags jlpt-n4 grade-3 structure-unclassified; in pools: N1 stack, All stack; on ジュウ チョウ | kun え おも.い おも.り おも.なう かさ.ねる かさ.なる おも
+   JMdict single-kanji entries: 1370860: [word usually written using kana alone] sauce (esp. soy or mirin-based dipping sauce) -> たれ・だれ・タレ・ダレ; 1767000: zigzag-shaped paper streamer often used to adorn Shinto-related objects -> しで
+   unlisted readings attested for 垂: たる (KANJIDIC2 name reading)  しだれる (card text)  しで (card text, JMdict 1767000)  なんなんとする (card text)  しずる (card text)  しだれ (card text)  しずれ (card text)  さげ (card text)  なりなんとす (card text)
+   on prompt スイ (key すい)
+       N1 stack: curated 郵 乗 重 -> 4 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 5 drawable wrong options (5 curated, 0 fallback)
+       All stack: curated 郵 乗 重 -> 4 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 5 drawable wrong options (5 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 12 drawable wrong options (0 curated, 12 fallback)
+       sampling N1 stack: 200 seeds, 5 of 5 drawable wrong options seen
+       sampling All stack: 200 seeds, 5 of 5 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 12 of 12 drawable wrong options seen
+   kun: no reading prompts
+
+== 垣 (fence; hedge)   curated option cards: 坂 城 埋   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 坂: tags jlpt-n2 grade-3 structure-unclassified; in pools: N1 stack, All stack; on ハン | kun さか
+   curated 城: tags jlpt-n2 grade-4 structure-unclassified; in pools: N1 stack, All stack; on ジョウ セイ | kun しろ
+   curated 埋: tags jlpt-n2 grade-8 structure-unclassified; in pools: N1 stack, All stack; on マイ | kun う.める う.まる う.もれる うず.める うず.まる い.ける
+   JMdict single-kanji entries: 1204780: fence, hedge, railing -> かき
+   unlisted readings attested for 垣: がい (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt かき (key かき)
+       N1 stack: curated 坂 城 埋 -> 6 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 8 drawable wrong options (8 curated, 0 fallback)
+       All stack: curated 坂 城 埋 -> 6 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 8 drawable wrong options (8 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 12 drawable wrong options (0 curated, 12 fallback)
+       sampling N1 stack: 200 seeds, 8 of 8 drawable wrong options seen
+       sampling All stack: 200 seeds, 8 of 8 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 12 of 12 drawable wrong options seen
+
+== 執 (take hold; carry out; cling)   curated option cards: 報 幸 熱   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 報: tags jlpt-n3 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ホウ | kun むく.いる
+   curated 幸: tags jlpt-n3 grade-3 structure-unclassified; in pools: N1 stack, All stack; on コウ | kun さいわ.い さち しあわ.せ
+   curated 熱: tags jlpt-n3 grade-4 structure-unclassified; in pools: N1 stack, All stack; on ネツ | kun あつ.い
+   JMdict single-kanji entries: 2655790: [archaic] bow (and arrow; esp. of a noble) -> たらし; 2655810: [archaic] attachment, obsession, persistence -> しゅう
+   unlisted readings attested for 執: し (KANJIDIC2 name reading)  とらえる (card text)  しつよう (card text)  たらし (JMdict 2655790)
+   on prompt シツ (key しつ)
+       N1 stack: curated 報 幸 熱 -> 1 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 3 drawable wrong options (3 curated, 0 fallback)
+       All stack: curated 報 幸 熱 -> 1 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 3 drawable wrong options (3 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 14 drawable wrong options (0 curated, 14 fallback)
+       info: し (KANJIDIC2 name reading) is a KANJIDIC2 name-only reading offered by 仕 伺 使 刺 史 司 四 士 (+26 more); can be drawn in: Starter practice session
+       sampling N1 stack: 200 seeds, 3 of 3 drawable wrong options seen
+       sampling All stack: 200 seeds, 3 of 3 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 14 of 14 drawable wrong options seen
+   kun: no reading prompts
+
+== 堅 (hard; solid; steady)   curated option cards: 臣 監 基   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 臣: tags jlpt-n2 grade-4 structure-unclassified; in pools: N1 stack, All stack; on シン ジン | kun -
+   curated 監: tags jlpt-n1 grade-8 structure-unclassified; in pools: N1 stack, All stack; on カン | kun -
+   curated 基: tags jlpt-n1 grade-5 structure-unclassified; in pools: N1 stack, All stack; on キ | kun もと
+   JMdict single-kanji entries: 1895580: [rare term] strength, solidity, firmness -> けん
+   unlisted readings attested for 堅: きん (KANJIDIC2 name reading)
+   on: no reading prompts
+   kun prompt かた.い (key かたい)
+       N1 stack: curated 基 -> 1 outcomes; deficit 2: the fallback fills the open slots; 7 drawable wrong options (1 curated, 6 fallback)
+       All stack: curated 基 -> 1 outcomes; deficit 2: the fallback fills the open slots; 7 drawable wrong options (1 curated, 6 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 23 drawable wrong options (0 curated, 23 fallback)
+       sampling N1 stack: 200 seeds, 7 of 7 drawable wrong options seen
+       sampling All stack: 200 seeds, 7 of 7 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 23 of 23 drawable wrong options seen
+
+== 塊 (lump; clod; mass)   curated option cards: 魅 城 場   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 魅: tags jlpt-n1 grade-8 structure-unclassified; in pools: N1 stack, All stack; on ミ | kun -
+   curated 城: tags jlpt-n2 grade-4 structure-unclassified; in pools: N1 stack, All stack; on ジョウ セイ | kun しろ
+   curated 場: tags jlpt-n4 grade-2 structure-unclassified; in pools: N1 stack, All stack; on ジョウ チョウ | kun ば
+   JMdict single-kanji entries: 1590410: lump, mass, bundle -> かたまり
+   unlisted readings attested for 塊: くれ (card text)  ほど (card text)  まるかし (card text)  まるかせ (card text)  まろかし (card text)  まろかせ (card text)
+   on: no reading prompts
+   kun prompt かたまり (key かたまり)
+       N1 stack: curated 城 場 -> 1 outcomes; deficit 1: the fallback fills the open slots; 9 drawable wrong options (2 curated, 7 fallback)
+       All stack: curated 城 場 -> 1 outcomes; deficit 1: the fallback fills the open slots; 9 drawable wrong options (2 curated, 7 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 63 drawable wrong options (0 curated, 63 fallback)
+       attested reading ほど (card text) is offered by 程; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [塊 程] -> ほど
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (1 holders tried)
+       sampling N1 stack: 200 seeds, 9 of 9 drawable wrong options seen
+       sampling All stack: 200 seeds, 9 of 9 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 60 of 63 drawable wrong options seen
+
+== 墨 (ink; inkstick)   curated option cards: 墓 型 堂   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 墓: tags jlpt-n1 grade-5 structure-unclassified; in pools: N1 stack, All stack; on - | kun はか
+   curated 型: tags jlpt-n2 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ケイ | kun かた -がた
+   curated 堂: tags jlpt-n4 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ドウ | kun -
+   JMdict single-kanji entries: 1521510: sumi, India ink, Chinese ink -> すみ; 2826280: [abbreviation] Mexico -> ぼく
+   unlisted readings attested for 墨: すの (KANJIDIC2 name reading)  もく (card text)
+   on: no reading prompts
+   kun prompt すみ (key すみ)
+       N1 stack: curated 墓 型 -> 2 outcomes; deficit 1: the fallback fills the open slots; 52 drawable wrong options (3 curated, 49 fallback)
+       All stack: curated 墓 型 -> 2 outcomes; deficit 1: the fallback fills the open slots; 52 drawable wrong options (3 curated, 49 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 6 drawable wrong options (0 curated, 6 fallback)
+       sampling N1 stack: 200 seeds, 50 of 52 drawable wrong options seen
+       sampling All stack: 200 seeds, 50 of 52 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 6 of 6 drawable wrong options seen
+
+== 壁 (wall; barrier)   curated option cards: 辛 基 坂   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 辛: tags jlpt-n2 grade-8 structure-unclassified; in pools: N1 stack, All stack; on シン | kun から.い つら.い -づら.い かのと
+   curated 基: tags jlpt-n1 grade-5 structure-unclassified; in pools: N1 stack, All stack; on キ | kun もと
+   curated 坂: tags jlpt-n2 grade-3 structure-unclassified; in pools: N1 stack, All stack; on ハン | kun さか
+   JMdict single-kanji entries: 1509290: wall, partition -> かべ・へき
+   unlisted readings attested for 壁: がけ (card text)
+   on: no reading prompts
+   kun prompt かべ (key かべ)
+       N1 stack: curated 辛 基 坂 -> 4 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 6 drawable wrong options (6 curated, 0 fallback)
+       All stack: curated 辛 基 坂 -> 4 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 6 drawable wrong options (6 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 7 drawable wrong options (0 curated, 7 fallback)
+       attested reading がけ (card text) is offered by 掛; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [壁 掛] -> かかり かかる かけ かける がかり がかる がけ
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (1 holders tried)
+       sampling N1 stack: 200 seeds, 6 of 6 drawable wrong options seen
+       sampling All stack: 200 seeds, 6 of 6 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 7 of 7 drawable wrong options seen
+
+== 壊 (break; destroy; demolish)   curated option cards: 均 埋 塔   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 均: tags jlpt-n2 grade-5 structure-unclassified; in pools: N1 stack, All stack; on キン | kun なら.す
+   curated 埋: tags jlpt-n2 grade-8 structure-unclassified; in pools: N1 stack, All stack; on マイ | kun う.める う.まる う.もれる うず.める うず.まる い.ける
+   curated 塔: tags jlpt-n2 grade-8 structure-unclassified; in pools: N1 stack, All stack; on トウ | kun -
+   JMdict single-kanji entries: none
+   unlisted readings attested for 壊: やぶれる (card text)  こわる (card text)  こほつ (card text)  こぼつ (card text)
+   on: no reading prompts
+   kun prompt こわ.す (key こわす)
+       N1 stack: curated 均 埋 -> 6 outcomes; deficit 1: the fallback fills the open slots; 13 drawable wrong options (7 curated, 6 fallback)
+       All stack: curated 均 埋 -> 6 outcomes; deficit 1: the fallback fills the open slots; 13 drawable wrong options (7 curated, 6 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 11 drawable wrong options (0 curated, 11 fallback)
+       attested reading やぶれる (card text) is offered by 敗 破; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [壊 敗] -> やぶれる; [壊 破] -> やぶれる われる
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (2 holders tried)
+       sampling N1 stack: 200 seeds, 13 of 13 drawable wrong options seen
+       sampling All stack: 200 seeds, 13 of 13 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 11 of 11 drawable wrong options seen
+
+== 奏 (play music; report to a ruler)   curated option cards: 春 天 実   tags: jlpt-n1 grade-6 structure-unclassified
+   curated 春: tags jlpt-n4 grade-2 structure-unclassified; in pools: N1 stack, All stack; on シュン | kun はる
+   curated 天: tags jlpt-n5 grade-1 indicative starter; in pools: N1 stack, All stack, Starter practice session; on テン | kun あまつ あめ あま-
+   curated 実: tags jlpt-n3 grade-3 structure-unclassified; in pools: N1 stack, All stack; on ジツ シツ | kun み みの.る まこと みの みち.る
+   JMdict single-kanji entries: 2843386: report to the emperor -> そう
+   unlisted readings attested for 奏: すすむ (KANJIDIC2 name reading)  すすめる (card text)  もうす (card text)  そうす (card text)  そうする (card text)
+   on prompt ソウ (key そう)
+       N1 stack: curated 春 天 実 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+       All stack: curated 春 天 実 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+       Starter practice session: curated 天 -> 1 outcomes; deficit 2: the fallback fills the open slots; 17 drawable wrong options (1 curated, 16 fallback)
+       sampling N1 stack: 200 seeds, 4 of 4 drawable wrong options seen
+       sampling All stack: 200 seeds, 4 of 4 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 17 of 17 drawable wrong options seen
+   kun: no reading prompts
+
+== 契 (pledge; vow; agreement)   curated option cards: 大 天 分   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 大: tags jlpt-n5 grade-1 pictograph starter; in pools: N1 stack, All stack, Starter practice session; on ダイ タイ | kun おお- おお.きい おお.いに
+   curated 天: tags jlpt-n5 grade-1 indicative starter; in pools: N1 stack, All stack, Starter practice session; on テン | kun あまつ あめ あま-
+   curated 分: tags jlpt-n5 grade-2 compound starter; in pools: N1 stack, All stack, Starter practice session; on ブン フン ブ | kun わ.ける わ.け わ.かれる わ.かる わ.かつ
+   JMdict single-kanji entries: none
+   unlisted readings attested for 契: きつ (card text)  けつ (card text)  きざむ (card text)  わりふ (card text)  せつ (card text)
+   on prompt ケイ (key けい)
+       N1 stack: curated 大 天 分 -> 6 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 6 drawable wrong options (6 curated, 0 fallback)
+       All stack: identical to N1 stack
+       Starter practice session: identical to N1 stack
+       attested reading きつ (card text) is offered by 喫 詰; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [契 喫] -> きつ; [契 詰] -> きち きつ
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (2 holders tried)
+       attested reading けつ (card text) is offered by 傑 欠 決 結 血; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [契 傑] -> けつ; [契 欠] -> けつ けん
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (5 holders tried)
+       attested reading せつ (card text) is offered by 切 折 接 殺 節 設 説 雪; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [契 切] -> さい せつ; [契 折] -> しゃく せつ
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (8 holders tried)
+       sampling N1 stack: 200 seeds, 6 of 6 drawable wrong options seen
+       sampling All stack: 200 seeds, 6 of 6 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 6 of 6 drawable wrong options seen
+   kun: no reading prompts
+
+== 奨 (encourage; exhort; promote)   curated option cards: 美 奥 奇   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 美: tags jlpt-n3 grade-3 structure-unclassified; in pools: N1 stack, All stack; on ビ ミ | kun うつく.しい
+   curated 奥: tags jlpt-n2 grade-8 structure-unclassified; in pools: N1 stack, All stack; on オウ | kun おく おく.まる くま
+   curated 奇: tags jlpt-n1 grade-8 structure-unclassified; in pools: N1 stack, All stack; on キ | kun く.しき あや.しい くし めずら.しい
+   JMdict single-kanji entries: none
+   unlisted readings attested for 奨: まさし (KANJIDIC2 name reading)
+   on prompt ショウ (key しょう)
+       N1 stack: curated 美 奥 奇 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+       All stack: curated 美 奥 奇 -> 2 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 4 drawable wrong options (4 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 19 drawable wrong options (0 curated, 19 fallback)
+       sampling N1 stack: 200 seeds, 4 of 4 drawable wrong options seen
+       sampling All stack: 200 seeds, 4 of 4 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 19 of 19 drawable wrong options seen
+   kun: no reading prompts
+
+== 奪 (snatch; rob; deprive)   curated option cards: 集 隼 雑   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 集: tags jlpt-n4 grade-3 structure-unclassified; in pools: N1 stack, All stack; on シュウ | kun あつ.まる あつ.める つど.う
+   curated 隼: tags jlpt-n1 grade-9 structure-unclassified; in pools: N1 stack, All stack; on - | kun はやぶさ
+   curated 雑: tags jlpt-n3 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ザツ ゾウ | kun まじ.える まじ.る
+   JMdict single-kanji entries: none
+   unlisted readings attested for 奪: とる (card text)
+   on: no reading prompts
+   kun prompt うば.う (key うばう)
+       N1 stack: curated 集 隼 雑 -> 6 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 6 drawable wrong options (6 curated, 0 fallback)
+       All stack: curated 集 隼 雑 -> 6 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 6 drawable wrong options (6 curated, 0 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 14 drawable wrong options (0 curated, 14 fallback)
+       attested reading とる (card text) is offered by 取 捕 採 撮 録; it cannot be drawn in the N1 stack, All stack or Starter practice session pool
+       risk class (a smaller pool without the curated cards, e.g. unit-test sized or hypothetical content; not a pool the app builds from the shipped stacks): [奪 取] -> とり とる どり; [奪 捕] -> つかまえる つかまる とらえる とらわれる とる
+       Starter practice session that also borrows one holder card (the pool grows by that card): not drawable with any single holder (5 holders tried)
+       sampling N1 stack: 200 seeds, 6 of 6 drawable wrong options seen
+       sampling All stack: 200 seeds, 6 of 6 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 14 of 14 drawable wrong options seen
+
+== 妨 (hinder; obstruct; interfere)   curated option cards: 姉 始 旅   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 姉: tags jlpt-n4 grade-2 structure-unclassified; in pools: N1 stack, All stack; on シ | kun あね はは
+   curated 始: tags jlpt-n4 grade-3 structure-unclassified; in pools: N1 stack, All stack; on シ | kun はじ.める -はじ.める はじ.まる
+   curated 旅: tags jlpt-n4 grade-3 compound starter; in pools: N1 stack, All stack, Starter practice session; on リョ | kun たび
+   JMdict single-kanji entries: none
+   unlisted readings attested for 妨: none
+   on: no reading prompts
+   kun prompt さまた.げる (key さまたげる)
+       N1 stack: curated 姉 始 旅 -> 4 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 5 drawable wrong options (5 curated, 0 fallback)
+       All stack: curated 姉 始 旅 -> 4 outcomes; the curated options fill all three wrong slots in every outcome, the fallback is never consulted; 5 drawable wrong options (5 curated, 0 fallback)
+       Starter practice session: curated 旅 -> 1 outcomes; deficit 2: the fallback fills the open slots; 12 drawable wrong options (1 curated, 11 fallback)
+       sampling N1 stack: 200 seeds, 5 of 5 drawable wrong options seen
+       sampling All stack: 200 seeds, 5 of 5 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 12 of 12 drawable wrong options seen
+
+== 威 (intimidate; authority; dignity)   curated option cards: 成 歳 減   tags: jlpt-n1 grade-8 structure-unclassified
+   curated 成: tags jlpt-n3 grade-4 structure-unclassified; in pools: N1 stack, All stack; on セイ ジョウ | kun な.る な.す -な.す
+   curated 歳: tags jlpt-n3 grade-8 structure-unclassified; in pools: N1 stack, All stack; on サイ セイ | kun とし とせ よわい
+   curated 減: tags jlpt-n2 grade-5 structure-unclassified; in pools: N1 stack, All stack; on ゲン | kun へ.る へ.らす
+   JMdict single-kanji entries: 2581990: leather strap binding the plates of traditional Japanese armor (armour) -> おどし; 2583080: power, authority, might -> い
+   unlisted readings attested for 威: いさ (KANJIDIC2 name reading)  たけ (KANJIDIC2 name reading)  たけし (KANJIDIC2 name reading)
+   on prompt イ (key い)
+       N1 stack: curated 成 歳 減 -> 4 outcomes; deficit 0/1: the fallback fills the open slots; 35 drawable wrong options (4 curated, 31 fallback)
+       All stack: curated 成 歳 減 -> 4 outcomes; deficit 0/1: the fallback fills the open slots; 35 drawable wrong options (4 curated, 31 fallback)
+       Starter practice session: curated none -> 1 outcomes; deficit 3: the fallback fills the open slots; 14 drawable wrong options (0 curated, 14 fallback)
+       sampling N1 stack: 200 seeds, 24 of 35 drawable wrong options seen
+       sampling All stack: 200 seeds, 24 of 35 drawable wrong options seen
+       sampling Starter practice session: 200 seeds, 14 of 14 drawable wrong options seen
+   kun: no reading prompts
+
+0 production hit(s) (N1 / All stack pools); 0 padded-session hit(s) (Starter practice session only); 9 latent collision(s) (attested reading offered by another card, not drawable in any of these pools)
+0 one-holder padded hit(s) (a Starter practice session that also borrows one holder card can offer an attested reading that is not a KANJIDIC2 name-only reading); 0 more for KANJIDIC2 name-only readings

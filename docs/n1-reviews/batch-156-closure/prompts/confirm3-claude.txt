@@ -1,0 +1,19 @@
+Third confirmation round for batch 156. The author has revised the batch again after your second confirmation report. You are still an independent reviewer: work alone and read-only, and do not look for the other reviewers' reports or any author material beyond what the packet gives you.
+
+The execution limits of your earlier rounds still apply: every assistant response must contain exactly ONE tool call; wait for its result before making the next. Never issue parallel tool calls, and do not combine several commands in one call; if you notice that you did either, say so in Limits. No sub-agents, background jobs or other sessions; no recursive directory listings and no corpus scans. Read large files in line ranges. Do not create helper scripts or temporary files.
+
+Revised snapshot under review: commit a7cc61e27261c62e84c3bd1f28e8a9254d9dcb04. Your second confirmation report reviewed 3c5ef8450e38051682dab2bea5fce320b992e5ea; the initially reviewed snapshot was c6afa16315d5a88b5045eeb85d429b8f7fd90b1f. Between them the author merged current main into the batch (merge e37ad00b796ed16dc752f5e60f0fd119f14dfa5e, whose first parent is 3c5ef845); the merge changed no batch file (evidence\merge-scope.txt), and the revision under review is a child of that merge.
+
+Your packet for this round is this folder:
+C:\Users\romanko\n1-kanji-workspace\review-packets\confirm3-156-claude
+Read its INSTRUCTIONS.md in full first: it defines the mandate, the allowed local reads (this packet; your earlier confirmation packet confirm2-156-claude, read-only; the original packet batch-156-c6afa163, read-only; your own initial report reports-156-hold\initial-claude.md and your own second confirmation report reports-156-hold\confirm2-claude.md), the tasks and the exact report contract. Then read CHANGES.md and RESPONSE.md. RESPONSE.md is the author's statement on each point of YOUR second confirmation report and on one item the author raised; it is a set of claims to verify, not evidence. Public web sources are allowed and encouraged; a search snippet is not verification.
+
+Give one disposition for every ID in RESPONSE.md (P1 and A1). This revision changes only the Metadata line of five kanji cards, on the revised side: 乙 60, 亜 53, 仁 55, 仙 51 and 伯 53. No other line of any card, no stroke file and no word article changed. The OLD text of those five cards (at 3c5ef845, which is also their text at the merge e37ad00b) is in confirm2-156-claude\snapshot\kanji\. In particular:
+- Check from diffs\fix.patch that each of the five lines changes only by the added JMdict ids and that no other text changed.
+- For each added id (1862630 乙種, 1149860 亜麻, 1369740 仁術, 1387150 仙骨, 1329130 酒仙, 2261500 伯母さん), check against evidence\jmdict-cited-entries.xml (and the online JMdict if you wish) that it is the entry of the word the card names, and that the reading and meaning the card gives for that word agree with the entry; for 伯母さん, read lines 33 and 38 of 伯.
+- Check evidence\meta-scan-before.txt and evidence\meta-scan-after.txt against the cards: the six gaps before, none after, and whether each of the four part-of-run matches is acceptable as CHANGES.md describes it.
+- Check that evidence\merge-scope.txt supports the statement that the merge changed no batch file, and that the checks\ outputs are as CHANGES.md describes them.
+- For P1, check that the article it concerns is unchanged and judge whether the decline is acceptable.
+Report only new, established findings. Say what you could not verify. State the model you are.
+
+Write the complete report as UTF-8 Markdown to C:\Users\romanko\n1-kanji-workspace\review-packets\reports-156\confirm3-claude.md (create only that one file) and ALSO return the same complete report as your final message. Do not edit, stage, commit or push anything else. When the report is written, stop.

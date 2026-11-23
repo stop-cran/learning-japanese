@@ -1,0 +1,195 @@
+{
+ "reviewAccepted": false,
+ "note": "Records model identity and read scope only; it does not accept a review.",
+ "session": "60266d87-4e3d-4c12-86b1-ef1e81f912a4",
+ "agentId": "c013a9a9-2a57-4c90-98cb-07dcfc32ccc0",
+ "agent": null,
+ "selectedModel": null,
+ "reasoningEffort": null,
+ "window": {
+  "first": "2026-11-18T15:51:38.619Z",
+  "last": "2026-11-18T15:54:32.612Z"
+ },
+ "userMessages": [
+  {
+   "timestamp": "2026-11-18T15:51:39.064Z",
+   "chars": 2535,
+   "sha256": "a167a52058b144c6da08cb54b21ab5a3485ff9af3963250c5f56dbf036616dd9"
+  }
+ ],
+ "actualModels": [
+  {
+   "model": "gpt-6.1-sol",
+   "responseModel": "gpt-6.1-sol",
+   "apiRequests": 19
+  }
+ ],
+ "usageTotals": {
+  "inputTokens": 3205418,
+  "outputTokens": 7153,
+  "cacheReadTokens": 3168507,
+  "cacheWriteTokens": 36854,
+  "reasoningTokens": 1629,
+  "costMultiplierSum": 19.0
+ },
+ "toolCalls": {
+  "total": 18,
+  "byTool": {
+   "view": 15,
+   "powershell": 2,
+   "apply_patch": 1
+  },
+  "maxInFlight": 1,
+  "overlappingStarts": 0,
+  "overlaps": []
+ },
+ "corpusScans": [],
+ "shellDirectories": [],
+ "packetCoverage": {
+  "snapshot/kanji": {
+   "files": 15,
+   "full (ranges)": 1,
+   "none": 14,
+   "notFullyRead": [
+    "snapshot/kanji/嫁.md",
+    "snapshot/kanji/宗.md",
+    "snapshot/kanji/宜.md",
+    "snapshot/kanji/宣.md",
+    "snapshot/kanji/宴.md",
+    "snapshot/kanji/寂.md",
+    "snapshot/kanji/密.md",
+    "snapshot/kanji/審.md",
+    "snapshot/kanji/尋.md",
+    "snapshot/kanji/屈.md",
+    "snapshot/kanji/属.md",
+    "snapshot/kanji/岬.md",
+    "snapshot/kanji/峠.md",
+    "snapshot/kanji/崩.md"
+   ]
+  },
+  "snapshot/strokes": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "snapshot/words": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "diffs": {
+   "files": 3,
+   "full (ranges)": 1,
+   "none": 2,
+   "notFullyRead": [
+    "diffs/changed-files.txt",
+    "diffs/changed-lines.txt"
+   ]
+  },
+  "checks": {
+   "files": 12,
+   "full (ranges)": 3,
+   "none": 9,
+   "notFullyRead": [
+    "checks/budget.txt",
+    "checks/kanji-remarks.txt",
+    "checks/link-targets.tsv",
+    "checks/linkplan.txt",
+    "checks/lint.txt",
+    "checks/manifest.txt",
+    "checks/unittest.txt",
+    "checks/validate.txt",
+    "checks/vocabulary.txt"
+   ]
+  },
+  "evidence (top level)": {
+   "files": 5,
+   "full (ranges)": 3,
+   "none": 2,
+   "notFullyRead": [
+    "evidence/meta-scan.txt",
+    "evidence/meta_scan.py"
+   ]
+  },
+  "evidence/public-source": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/kanjivg": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/app-code": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "evidence/audits": {
+   "files": 0,
+   "notFullyRead": []
+  },
+  "titles": {
+   "files": 0
+  },
+  "rubric": {
+   "files": 0
+  },
+  "repo/docs + README": {
+   "files": 0
+  },
+  "repo/kanji (context)": {
+   "files": 0
+  },
+  "repo/words (context)": {
+   "files": 0
+  }
+ },
+ "rootFiles": {
+  "INSTRUCTIONS.md": "full (ranges)"
+ },
+ "outsidePaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets"
+ ],
+ "alsoReadAllowed": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\batch-139-a47efe9a",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-gpt",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm-gpt.md",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\initial-gpt.md"
+ ],
+ "alsoReadPaths": [
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-gpt\\evidence\\KanjiReadings.kt",
+  "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\confirm-139-gpt\\evidence\\Words.kt"
+ ],
+ "alsoReadCount": 2,
+ "writes": [
+  {
+   "tool": "apply_patch",
+   "path": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm2-gpt.md",
+   "ok": true,
+   "allowed": true
+  }
+ ],
+ "shellCommands": [
+  {
+   "command": "@'\nimport json,urllib.request,urllib.parse\nu='https://jisho.org/api/v1/search/words?keyword='+urllib.parse.quote('嬢さん')\nd=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=30));print('Actual public entry:',u)\nfor e in d['data']:\n if any(j.get('word')=='嬢さん' for j in e['japanese']):\n  print('Forms:',json.dumps(e['japanese'],ensure_ascii=False))\n...",
+   "writeLike": false
+  },
+  {
+   "command": "@'\nfrom pathlib import Path\nimport xml.etree.ElementTree as ET\nb=Path(r'C:\\Users\\romanko\\n1-kanji-workspace\\review-packets');n=b/'confirm2-139-gpt';p=b/'confirm-139-gpt';o=b/'batch-139-a47efe9a'\nprint('Bounded comparison of the 15 named batch cards:')\nfor k in '嫁嬢宗宜宣宴寂密審尋屈属岬峠崩':\n old=p/'snapshot'/'kanji'/(k+'.md')\n if not old.is_file():old=o/'snapshot'/'kanji'/(k+'.md')\n a=old.read_bytes();z=(n/'s...",
+   "writeLike": false
+  }
+ ],
+ "web": [],
+ "otherTools": [],
+ "final": {
+  "finalMessageChars": 7634,
+  "reportFile": "C:\\Users\\romanko\\n1-kanji-workspace\\review-packets\\reports-139\\confirm2-gpt.md",
+  "reportExists": true,
+  "reportChars": 7635,
+  "reportBytes": 8004,
+  "reportSha256": "c01ead481d282b6dfc143ead6a5c751fcd9503982dd3b9b0ea602472a85e9272",
+  "finalSource": "assistant.message",
+  "finalEqualsReport": true,
+  "finalContainsReport": true
+ },
+ "flags": [
+  "paths outside the packet and report: 1"
+ ]
+}

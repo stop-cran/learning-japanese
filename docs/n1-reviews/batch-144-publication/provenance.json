@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "batch": 144,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "21f31dbe76840643184ab8c220eab95491cb8609",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/21f31dbe76840643184ab8c220eab95491cb8609",
+  "base": "1d262eb60ff8bae674781ce2e7635e002542c36e",
+  "initialSnapshot": "b073abd8f2ab578f29cf2b5e25f36e02fc1aab58",
+  "reviewedSnapshot": "8db07f740a2071609b29539cc1a29e4420bc43e5",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44515040324",
+    "runId": 44515040324,
+    "receiptSha256": "f2ae426dd78955f4930205b67aa0d316c13808adf775eb1622e1265601ab2267"
+  },
+  "archive": {
+    "zipSha256": "0ff276eb5dd45c5e9c41a8a4737cfcd22dd25d994e6601aa09534a23f9a8f94e",
+    "receiptSha256": "88ff7822fa77aae26af2bac79fd7b270988795d7c2355d33322f95192e8d78cd",
+    "verifiedRuntimeHashes": 9087,
+    "contentVersion": "6147644f9beaec4c",
+    "manifestSha256": "74ff3f63fb6f15a3eef30c0df984c85bcaa609f05c7fc777892d294c28cb5ff8"
+  },
+  "reviewIdentity": "B144 textual review closed on 8db07f74 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of b073abd8; the first Claude confirmation of the first fix 2be716f0 found two more minor points (fixed in 8db07f74), and the final confirmations of 8db07f74 (both reviewers) were run by fresh agents of the same two model families, one after the other, each given its family's earlier report and the original packet (see batch-144-closure). After review, owner commit 7b48e5da (kanji/手.md only) was merged without overlap (mechanical merge proof, no integration review needed). Published at 21f31dbe as a fast-forward of main. Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 422,
+    "n1Additions": 416,
+    "n2Placements": 6,
+    "remaining": 806,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "6 latent reading collisions (attested readings offered by other cards, counted per quiz prompt; six distinct card-and-reading pairs) are not drawable in the checked N1, All and Starter pools: 欄 わく (惑), 歓 ぶ (a KANJIDIC2 name reading, offered by 不 分 夫 武 歩 舞 豊 部), 殊 け (化 家 希 怪 気 花), 殻 かい (貝), 沖 とぶ (飛) and 沖 むなしい (空).",
+    "No KANJIDIC2 name-only reading can be drawn as a wrong option in the checked pools, and no one-holder Starter case exists. The first gate runs showed the Daijisen-head reading かい of 殻 (JMdict 2647520, from かい【▽卵／▽殻】) offered by 貝 and a one-holder padded hit, because the original distractors 段, 投 and 役 are not Starter cards and left slots to the random fallback; they were replaced by the Starter cards 休, 本 and 木, which fill every slot. The older reading-options check still labels かい as a HIT because it ignores filled slots; the reading-exposure audit is authoritative (the same labelled-hit precedent as batches 135, 138 and 139 to 142).",
+    "3 lint warnings on existing word articles' Dictionary lines (戸棚, 淡水, 特殊) are pre-existing and out of scope: each line wraps, so the entry id is on the next line.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed: 棋 ゴ; 検 しら.べる and あらた.める; 概 おおむ.ね; 欄 てすり; 歓 よろこ.ぶ (no article for that spelling); 殊 こと; 殻 コク and バイ; 沖 チュウ; 泣 キュウ; 淡 あわ.い; 渇 カツ; 渋 しぶ, しぶ.い and しぶる. Eight cards quiz only their on reading (棋 キ, 検 ケン, 概 ガイ, 欄 ラン, 歓 カン, 殊 シュ, 淡 タン, 渋 ジュウ) and seven only their kun readings (棚 たな, 殻 から, 汁 しる, 沖 おき, 泡 あわ, 泣 な.く, 渇 かわ.く).",
+    "Some readings on the cards rest on a single dictionary entry or a lean alignment and are labelled source-only or alignment where they appear: 欄 てすり (the おばしま entry 2844081 is mentioned but not added), 殻 コク (船殻 2831954) and バイ, 沖 わく, 渋 シュウ (渋さ has no JMdict entry) and 泡 発泡 ぽう. 滞 has no card, so 渋 names it as plain text.",
+    "Some titles share an English word with existing titles in another sense and are not excluded from each other's quiz options: 概 \"bearing\" (穂), 欄 \"form field\" (体, 形, 状), 沖 \"open sea\" (剖, 爆, 野, 開) and \"rise high\" (高), 淡 \"plain\" (原). No Notes bullet on these cards separates those senses. 泡 and 淡 share the word 淡雪/泡雪 あわゆき (1418470), and 汁 and 渋 may share a kakishibu overlap; neither pair is excluded.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "The scope audits do not attribute reads made through shell commands or Python, so they list cards and other files as unread that the reports say were read; the second Claude confirmation covered only the two changed lines and the GPT confirmation the cumulative change, so neither re-read the unchanged cards or any word article.",
+    "The meaning of the round-bracketed forms in the Joyo table (so-called Kangxi dictionary forms) rests on a secondary source quoting note 6 of the table; the official PDF fetch timed out for the reviewer.",
+    "origin/main moved after review (owner commit 7b48e5da, kanji/手.md and manifest.json only); it was merged without an integration review because the mechanical merge proof shows no overlap with the batch.",
+    "Cosmetic, not applied: 欄.md:44 says \"in parentheses\" while sibling cards say \"in round brackets\".",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

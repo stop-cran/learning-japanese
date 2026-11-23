@@ -57,6 +57,16 @@ def lexical_pair(entry, spelling, reading, *, reject_search_only_readings=False)
     return False
 
 
+def support_spelling(row, meta, text, kanji):
+    spelling = row.get("spelling")
+    if spelling is None:
+        return meta["word"]
+    require(isinstance(spelling, str) and meta["word"] == meta["reading"]
+            and not meta.get("kanji") and kanji in spelling and spelling in text,
+            f"Invalid kana-headed support spelling: {row['article']}")
+    return spelling
+
+
 def base_file(root, commit, name):
     return subprocess.check_output(
         ["git", "--no-pager", "show", f"{commit}:{name}"], cwd=root).decode("utf-8")
@@ -109,6 +119,27 @@ def activated_baseline_pairs(before, members, candidates):
                if name.startswith("words/") and name.endswith(".md")
                for c in members if c in name[len("words/"):-len(".md")]}
     return frozen | written
+
+
+def support_mapping_rows(mappings, supplementary, members, baseline_files):
+    require(isinstance(mappings, list) and isinstance(supplementary, list),
+            "Support mappings must be lists")
+    for row in mappings:
+        require(isinstance(row, dict) and row.get("kanji") in members
+                and isinstance(row.get("article"), str)
+                and row["article"].startswith("words/") and row["article"].endswith(".md"),
+                "Invalid support mapping")
+    for row in supplementary:
+        require(isinstance(row, dict) and safe_identifier(row.get("kanji"))
+                and row["kanji"] not in members
+                and f"kanji/{row['kanji']}.md" in baseline_files
+                and isinstance(row.get("article"), str)
+                and row["article"].startswith("words/") and row["article"].endswith(".md"),
+                "Invalid supplementary support mapping")
+    rows = mappings + supplementary
+    pairs = {(row["kanji"], row["article"]) for row in rows}
+    require(len(rows) == len(pairs), "Duplicate reciprocal mapping")
+    return rows, pairs
 
 
 def source_plan_packets(folder, batch, plan, source_audit, variant):
@@ -625,6 +656,11 @@ def audit(root, batch):
         required_fields(ledger, {"requiredReciprocalPairs", "changedReusedPassages", "wordQuizAudit",
                                  "dictionaryPackets", "readingDispositions", "curatedProjection", "quizAudit"},
                         "Legacy batch ledger")
+        if "kanjiQuizAudit" in ledger:
+            required_fields(ledger["kanjiQuizAudit"], {"directExclusions"}, "Kanji quiz audit")
+            kanji_exclusions = ledger["kanjiQuizAudit"]["directExclusions"]
+        else:
+            kanji_exclusions = []
     else:
         required_fields(ledger, {"sourceCompletionPlan", "sourceCompletionAudit", "draftAudit"},
                         "Unsupported or incomplete batch ledger")
@@ -654,27 +690,33 @@ def audit(root, batch):
     require(candidates_text == base_file(root, commit, candidates_name).replace("\r\n", "\n"),
             "Immutable baseline word candidates changed")
     candidates = json.loads(candidates_text)
-    current = build_manifest(root)
+    current = build_manifest(root, publish_reading=True)
     require(json.loads((root / "manifest.json").read_text(encoding="utf-8")) == current,
             "Manifest is stale")
     before = json.loads(base_file(root, commit, "manifest.json"))
     if "supportMappings" not in ledger:
         return audit_source_plan(root, batch, ledger, frozen, members, commit, source, before, current,
                                  candidates)
-    mappings = ledger["supportMappings"]
-    pairs = {(r["kanji"], r["article"]) for r in mappings}
+    all_mappings, pairs = support_mapping_rows(
+        ledger["supportMappings"], ledger.get("supplementaryMappings", []),
+        set(members), before["files"])
     recorded_pairs = [tuple(p) for p in ledger["requiredReciprocalPairs"]]
-    require(len(mappings) == len(pairs) == len(recorded_pairs)
+    require(len(all_mappings) == len(pairs) == len(recorded_pairs)
             and pairs == set(recorded_pairs), "Reciprocal mappings differ")
-    new_words = {r["article"] for r in mappings if r["newArticle"]}
+    new_words = {r["article"] for r in all_mappings if r["newArticle"]}
     additions = {f"{kind}/{c}.{suffix}" for c in members
                  for kind, suffix in (("kanji", "md"), ("strokes", "json"))} | new_words
     changes = {r["article"] for r in ledger["changedReusedPassages"]}
     runtime_delta(before, current, additions, changes)
     for name in changes:
         rows = [r for r in ledger["changedReusedPassages"] if r["article"] == name]
-        exclusion_rows = [r for r in ledger["wordQuizAudit"]["directExclusions"]
-                          if f"words/{r['word']}.md" == name]
+        exclusion_rows = [
+            r for r in ledger["wordQuizAudit"]["directExclusions"]
+            if f"words/{r['word']}.md" == name
+        ] + [
+            r for r in kanji_exclusions
+            if f"kanji/{r['kanji']}.md" == name
+        ]
         require(len(exclusion_rows) <= 1, "Duplicate reused exclusion decision")
         reused_changes(base_file(root, commit, name),
                        (root / name).read_text(encoding="utf-8"), rows,
@@ -687,17 +729,17 @@ def audit(root, batch):
         require(ids == selection["entryIds"] and len(ids) == len(set(ids)),
                 "Dictionary packet membership/order differs")
         families.update(zip(ids, entries))
-    for row in mappings:
+    for row in all_mappings:
         c, name = row["kanji"], row["article"]
-        require(c in members and name.startswith("words/") and name.endswith(".md"),
-                "Invalid support mapping")
         meta = metadata(root, name)
+        text = (root / name).read_text(encoding="utf-8")
+        spelling = support_spelling(row, meta, text, c)
         require(meta["reading"] == row["primaryReading"]
                 and bool(row["newArticle"]) == (name in new_words)
                 and row["entryIds"] and set(row["entryIds"]) <= families.keys()
-                and any(lexical_pair(families[i], meta["word"], meta["reading"])
+                and any(lexical_pair(families[i], spelling, meta["reading"])
                         for i in row["entryIds"]), f"Support identity/restrictions mismatch: {name}")
-        require(f"(../kanji/{c}.md)" in (root / name).read_text(encoding="utf-8")
+        require(f"(../kanji/{c}.md)" in text
                 and f"(../{name})" in (root / f"kanji/{c}.md").read_text(encoding="utf-8"),
                 f"Missing reciprocal link: {c} / {name}")
     activated = activated_baseline_pairs(before, members, candidates)
@@ -755,6 +797,9 @@ def audit(root, batch):
     for row in ledger["wordQuizAudit"]["directExclusions"]:
         require(metadata(root, f"words/{row['word']}.md")["quiz_exclusions"] == row["exclude"],
                 "Word exclusion ledger mismatch")
+    for row in kanji_exclusions:
+        require(metadata(root, f"kanji/{row['kanji']}.md")["quiz_exclusions"] == row["exclude"],
+                "Kanji exclusion ledger mismatch")
     return {"batch": batch, "baseCommit": commit, "draftKanji": len(members),
             "newWords": len(new_words), "changedReusedArticles": len(changes),
             "requiredReciprocalPairs": len(pairs), "activatedBaselinePairs": len(activated),

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "batch": 139,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "e62eee92ca9b396c761540e265c9ba48c8f8c4b6",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/e62eee92ca9b396c761540e265c9ba48c8f8c4b6",
+  "base": "d65a9931d4231bf56f76c2c2a975b8bdd75eb3cd",
+  "initialSnapshot": "a47efe9af926316eaa86656033bf6e109f2be697",
+  "reviewedSnapshot": "f1b2bdb84f7e932dfe59cb68829fc004415d0a74",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/44347453271",
+    "runId": 44347453271,
+    "receiptSha256": "9cf4f351184d648c13e38184a3f8016ebc6f627416e6e4e3f729c6f167128cf3"
+  },
+  "archive": {
+    "zipSha256": "a3ec605dca3ba88d5eff5bff0936aece60741aecefc03bbb5ebe223090810867",
+    "receiptSha256": "66b9067676e048f89f4b860803c7110ed6e372b9bc18b627e1e3b3c3d57e09b5",
+    "verifiedRuntimeHashes": 8936,
+    "contentVersion": "d95ae8abb99f587b",
+    "manifestSha256": "a363b8c754dae87a369b6a40f4c82fb419014b1f6bdd32b7aeef88434e2c16ef"
+  },
+  "reviewIdentity": "B139 textual review closed on f1b2bdb8 with independent blind Claude (claude-opus-5.5) and GPT (gpt-6.1-sol) reviews of a47efe9a; the confirmations of 3b6f9727 and f1b2bdb8 (both reviewers) were later turns of the same two reviewer agents, not fresh agents (see batch-139-closure). Bounded textual reviews, not native-speaker certification.",
+  "sourceAccounting": {
+    "delivered": 347,
+    "n1Additions": 341,
+    "n2Placements": 6,
+    "remaining": 881,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "Textual review only: no Kotlin, Android JVM, native, rendered-font, device or phone acceptance (no JDK on the continuation machine).",
+    "11 latent reading collisions (attested readings offered by other cards) are not drawable in the checked N1, All and Starter pools: 嫁 かす, 宗 そ, 宜 き, たか, のり, よし and よい, 寂 しずか, 尋 つぐ and つね, and 岬 さき.",
+    "One KANJIDIC2 name-only reading can be drawn as a wrong option and is disclosed, not fixed: 宗 し on the シュウ prompt in the N1 and All stacks, offered by the curated distractor 示.",
+    "岬 uses Starter-card distractors (山 田 中) so that all three wrong options are curated in every pool; with tag-similar distractors, 先's さき, a reading Daijisen and JMdict give for 岬, could be offered in Starter sessions.",
+    "2 lint warnings on existing word articles' Dictionary lines (宣伝, 宴会) are pre-existing and out of scope.",
+    "Under the batch rule, readings with no declaring word article are listed but not quizzed, including common ones such as 嫁 カ and とつ.ぐ, 宗 ソウ and むね, 宜 ギ, 寂 ジャク, セキ and さび.れる, 密 ひそ.か, 尋 ジン, 属 ショク and 崩 ホウ; eight cards quiz only their on reading and seven only their kun readings.",
+    "Each mnemonic is a modern-shape memory aid, labelled on the card as not etymology.",
+    "The reading audits are the author's Python ports of the Kotlin builder; no Kotlin cross-check was run.",
+    "Claude's first confirmation had a second user turn: its report said it had not read CHANGES.md, so it was asked to read the file in full and rewrite the report. The rewrite replaced the first report file and stayed CONFIRMED; the follow-up prompt is in the closure.",
+    "The scope audits do not attribute reads made through shell commands or Python, or writes made through PowerShell, so audits list cards and word articles as unread that the reports say were read; the author checked those claims against the session events.",
+    "Claude's initial review could not verify 岬's Digital Daijisen character entry, because the packet's Weblio extract held another dictionary's block; the confirmation packets add the character entry (evidence/weblio-岬-character.txt), and Claude marked the limit resolved.",
+    "The reading audits in the original packet left out two Daijisen character-entry kun readings, 宗 たっと.ぶ and 宣 の.る; the corrected audits in the confirmation packets add them, no hit or collision count changes, and both reviewers checked every differing line.",
+    "The first CHANGES.md said two existing Metadata ids moved before the new ones, and that 宴会 changed only a colon; neither was true. The fix-2 CHANGES.md corrects both, and Claude marked them resolved.",
+    "Fix 1 had three earlier local versions (c2b9973b, 8530c8bb, 2dacd6e5), amended before any confirmation packet was built; none was reviewed or published.",
+    "Neither audit tool models a custom pool without a target's curated distractor cards, where the eleven latent readings could be offered as wrong options.",
+    "The GPT reviewers also read Weblio, jisho.org, kanjiapi.dev (HTTP 403) and the pinned KanjiVG revision, mostly through Python; the scope audits list only web_fetch calls, and the reports describe these reads.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}
