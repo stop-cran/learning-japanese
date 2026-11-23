@@ -9,6 +9,8 @@ import sys
 import unicodedata
 from pathlib import Path
 
+from content_language import read_language
+
 ROOT = Path(__file__).resolve().parent.parent
 KANA = re.compile(r"^[ぁ-ゟァ-ヿー]+$")
 CARD_KEYS = {"id", "kind", "text", "en", "translation", "noun", "phrase", "reading", "good", "kana", "hard", "distractors", "note", "readingAnswers"}
@@ -17,6 +19,11 @@ REQUIRED = ("id", "kind", "text", "en", "noun", "phrase", "reading", "good", "ka
 
 def check_counters(err, root: Path = ROOT) -> int:
     """Reports problems through err(path, message); returns the number of counter files read."""
+    try:
+        language = read_language(root)["baseLanguage"]
+    except ValueError as exc:
+        err(root / "content-language.json", str(exc))
+        return 0
     files = sorted((root / "counters").glob("*.json"))
     cards: dict[str, dict] = {}
     accepted: dict[str, set[str]] = {}
@@ -70,7 +77,7 @@ def check_counters(err, root: Path = ROOT) -> int:
             err(path, "'cards' must be a non-empty list")
             continue
         for card in group:
-            check_card(path, counter, card, cards, accepted, err)
+            check_card(path, counter, card, cards, accepted, err, language)
         for item in data.get("reverse", []):
             reverse.append((path, item, counter))
     for path, item, counter in reverse:
@@ -138,7 +145,10 @@ def check_expressions(path, data, seen, err):
         check_readings(path, key, item["reading"], item["readingAnswers"], err)
 
 
-def check_card(path, counter, card, cards, accepted, err) -> None:
+def check_card(path, counter, card, cards, accepted, err, language) -> None:
+    if isinstance(card, dict) and language == "ru" and "translation" not in card:
+        err(path, f"{card.get('id', 'card')}: Russian counter cards require 'translation', not legacy 'en'")
+        return
     if isinstance(card, dict) and "translation" in card:
         if "en" in card:
             err(path, "card must not declare both 'translation' and legacy 'en'")
