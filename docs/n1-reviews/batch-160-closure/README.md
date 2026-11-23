@@ -1,9 +1,11 @@
 # Batch 160: textual-review closure
 
-**Status:** Textual review is closed. Publication is recorded only by the generated
-[`batch-160-publication/provenance.json`](../batch-160-publication/provenance.json); until that
-receipt exists, no publication is asserted here. This batch adds ten kanji cards, eleven support
-articles and changes 21 reused articles. It is not completion of the full N1 expansion.
+**Status:** Textual review is closed. Runtime publication is verified for
+[commit `352178da`](https://github.com/stop-cran/learning-japanese/commit/352178da3602e4c25e0d1b14e616855b621491bb).
+The CI, exact ZIP/runtime checks and delivery accounting are recorded in the generated
+[`batch-160-publication/provenance.json`](../batch-160-publication/provenance.json). This batch adds
+ten kanji cards, eleven support articles and changes 21 reused articles. It is not completion of
+the full N1 expansion.
 
 ## Reviewed candidate
 
@@ -97,7 +99,9 @@ B160 KANJIDIC2 record packet. No native-speaker review, Android runtime/RealCont
 test, phone acceptance or general-release certification was performed for this batch. The review
 closure is textual and source-bounded, not runtime or device acceptance.
 
-Publication verification must use the exact pushed commit, its successful content CI run and the
-exact GitHub ZIP/runtime-hash verifier. The repository's publication recorder will then advance
-the batch ledger and preserve the delivery receipt; a later contributor-only receipt commit also
-requires its own CI/exported-tree check.
+The content commit's [Validate content run](https://github.com/stop-cran/learning-japanese/actions/runs/45284075625)
+succeeded. The exact GitHub ZIP matched the exported runtime tree and manifest, with 9,873 runtime
+hashes verified; its archive and manifest hashes are in the publication receipt. The verified
+delivery count is 628/1,228 records: 622 N1 additions, six N2 placements and 600 undelivered.
+This publication does not provide Android runtime, emulator, device, phone or general-release
+acceptance; those limits remain as disclosed above.
