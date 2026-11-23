@@ -57,6 +57,16 @@ def lexical_pair(entry, spelling, reading, *, reject_search_only_readings=False)
     return False
 
 
+def support_spelling(row, meta, text, kanji):
+    spelling = row.get("spelling")
+    if spelling is None:
+        return meta["word"]
+    require(isinstance(spelling, str) and meta["word"] == meta["reading"]
+            and not meta.get("kanji") and kanji in spelling and spelling in text,
+            f"Invalid kana-headed support spelling: {row['article']}")
+    return spelling
+
+
 def base_file(root, commit, name):
     return subprocess.check_output(
         ["git", "--no-pager", "show", f"{commit}:{name}"], cwd=root).decode("utf-8")
@@ -702,12 +712,14 @@ def audit(root, batch):
         require(c in members and name.startswith("words/") and name.endswith(".md"),
                 "Invalid support mapping")
         meta = metadata(root, name)
+        text = (root / name).read_text(encoding="utf-8")
+        spelling = support_spelling(row, meta, text, c)
         require(meta["reading"] == row["primaryReading"]
                 and bool(row["newArticle"]) == (name in new_words)
                 and row["entryIds"] and set(row["entryIds"]) <= families.keys()
-                and any(lexical_pair(families[i], meta["word"], meta["reading"])
+                and any(lexical_pair(families[i], spelling, meta["reading"])
                         for i in row["entryIds"]), f"Support identity/restrictions mismatch: {name}")
-        require(f"(../kanji/{c}.md)" in (root / name).read_text(encoding="utf-8")
+        require(f"(../kanji/{c}.md)" in text
                 and f"(../{name})" in (root / f"kanji/{c}.md").read_text(encoding="utf-8"),
                 f"Missing reciprocal link: {c} / {name}")
     activated = activated_baseline_pairs(before, members, candidates)

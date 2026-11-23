@@ -1,7 +1,7 @@
 import unittest
 import xml.etree.ElementTree as ET
 
-from audit_n1_batch import lexical_pair, reused_changes, runtime_delta
+from audit_n1_batch import lexical_pair, reused_changes, runtime_delta, support_spelling
 
 
 class N1BatchRuntimeDeltaTest(unittest.TestCase):
@@ -124,6 +124,33 @@ class N1BatchLexicalPairTest(unittest.TestCase):
     def test_rejects_absent_spelling_or_reading(self):
         self.assertFalse(lexical_pair(self.entry, "C", "b"))
         self.assertFalse(lexical_pair(self.entry, "A", "c"))
+
+
+class N1BatchSupportSpellingTest(unittest.TestCase):
+    def setUp(self):
+        self.row = {"article": "words/または.md", "spelling": "又は"}
+        self.meta = {"word": "または", "reading": "または", "kanji": []}
+        self.text = "Hiragana is usual; 又は, written with [又](../kanji/又.md), is another spelling."
+
+    def test_without_spelling_uses_headword(self):
+        meta = {"word": "伯叔", "reading": "はくしゅく", "kanji": ["伯", "叔"]}
+        self.assertEqual(support_spelling({"article": "words/伯叔.md"}, meta, "", "叔"), "伯叔")
+
+    def test_accepts_kana_headed_article_with_taught_spelling(self):
+        self.assertEqual(support_spelling(self.row, self.meta, self.text, "又"), "又は")
+
+    def test_rejects_kanji_headed_article(self):
+        meta = {"word": "又は", "reading": "または", "kanji": ["又"]}
+        with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
+            support_spelling(self.row, meta, self.text, "又")
+
+    def test_rejects_spelling_absent_from_article(self):
+        with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
+            support_spelling(self.row, self.meta, "Hiragana is usual.", "又")
+
+    def test_rejects_spelling_without_mapped_kanji(self):
+        with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
+            support_spelling(self.row, self.meta, self.text, "叔")
 
 
 if __name__ == "__main__":
