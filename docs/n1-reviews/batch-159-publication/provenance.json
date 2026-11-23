@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "batch": 159,
+  "status": "published-verified-with-disclosed-review-limits",
+  "publishedCommit": "f434a60cc52445e441d1a2047cf610ba37b80402",
+  "publishedCommitUrl": "https://github.com/stop-cran/learning-japanese/commit/f434a60cc52445e441d1a2047cf610ba37b80402",
+  "base": "2787e43b5706a569d83627849aa40ed3582a7d18",
+  "initialSnapshot": "1a9bb910d1bbff162f4e3920e64e8821f635a58d",
+  "reviewedSnapshot": "33c3b5829887b2e49e0f67ce649fad8b2a722ea7",
+  "method": "Owner-signed fast-forward main, matching Validate content CI, exact ZIP/runtime equality.",
+  "ci": {
+    "url": "https://github.com/stop-cran/learning-japanese/actions/runs/45189566076",
+    "runId": 45189566076,
+    "receiptSha256": "76588e7ed5360f16b866ff559ca2084ca1f5332929b01ef2b15fb651575075df"
+  },
+  "archive": {
+    "zipSha256": "ce53dbb55332f50781d07bd6ce718f4e83d92898a6451ee3c489e61b6afcabd2",
+    "receiptSha256": "cfe2f2fa40345faa910587a1cc687e3a66b1cec01ec9a810b512802f5d1e22db",
+    "verifiedRuntimeHashes": 9842,
+    "contentVersion": "2113084de3ce05a4",
+    "manifestSha256": "4d3efd69a7271c2be3f1db64df80c3300c4d5ccfb350aff8f4ffad9a8bc106f5"
+  },
+  "reviewIdentity": "Claude claude-sonnet-5.5, GPT gpt-6.1-sol and Grok grok-4.7 each CONFIRMED reviewed snapshot 33c3b582 (c5-claude, c6-gpt, c3-grok); origin/main moved from the base 2787e43b to f5caf53c through seven owner commits, brought in by the signed merge 3ecba19c with a mechanical no-overlap proof; the signed closure f434a60c adds documents only and fast-forwards origin/main f5caf53c",
+  "sourceAccounting": {
+    "delivered": 618,
+    "n1Additions": 612,
+    "n2Placements": 6,
+    "remaining": 610,
+    "overallN1TaskComplete": false
+  },
+  "limits": [
+    "No Kotlin reading cross-check or Android JVM tests (no JDK on the continuation machine); no native, rendered-font, device or phone check. Phone acceptance is outstanding.",
+    "Two supports take the rule's untagged route: 太后 for 后 (JMdict 1787360, no priority tags; the tagged 皇后 and 皇太后 need 皇, which has no card, and the other tagged 后 spellings are rarely used or search-only forms of 後 words) and 官吏 for 吏 (1211850, news2 and spec2 only; no 吏 entry carries news1, ichi1, spec1 or gai1). r1-claude, r1-gpt, r1-grok and c1-gpt found the row-specific justifications sufficient, and c2-grok noted that they remain the batch's untagged exceptions; owner acceptance is not recorded. 又 needs no exception: its support is the existing kana-headed article または (spelling 又は, ichi1/news1), linked under point 2 of the rule, and the existing article また (spelling 又, untagged) is mapped as well.",
+    "叔's support 叔母 relies on the spelling-level ichi1/news1 tags of 叔母: the tagged reading is おば, and the taught reading しゅくぼ, restricted to that spelling, carries no tag. c3-gpt found that this meets point 2 without an exception, and c3-claude, c4-claude and c2-grok confirmed it. The B156 伯 row (伯仲) was not revisited; c2-grok noted that it lies outside this diff and is the owner's decision.",
+    "Two supports changed during review. 又's freeze support 又聞き was justified by \"usually written in kana\", which is not one of the rule's exclusions (r1-claude finding 1); 5c04be73 replaced it with the existing articles または and また and extended tools/audit_n1_batch.py (support_spelling) to accept a kana-headed article whose mapping names a spelling with the kanji. 叔's freeze support 伯叔 was kept in 5c04be73 with a corrected reason and recorded as an author exception in 4f8ebea7; after c2-gpt asked for the qualifying fallback or recorded owner acceptance, 54b00e0c switched to 叔母 and withdrew the exception. 又聞き and 伯叔 have no article, and 伯.md and 聞.md equal the base.",
+    "The families confirmed different intermediate snapshots: Claude confirmed 5c04be73, 4f8ebea7, 54b00e0c, bad899ea and 33c3b582; GPT returned NEEDS FIX on 5c04be73, 4f8ebea7 and f85ff382 and confirmed 0ba7df63, bad899ea and 33c3b582; Grok confirmed 5c04be73, bad899ea and 33c3b582, so c2-grok covered the five commits 4f8ebea7 to bad899ea in one round (a Grok packet built for 4f8ebea7 was never run). All 17 runs were sequential, and each saw only its own family's reports.",
+    "c1-gpt received, as its \"own initial report\", a condensed coordinator copy of r1-gpt's final message (2,342 of 5,329 characters) that wrongly calls itself verbatim; it keeps every finding's number, severity, files, claim and remedy but drops most evidence. RESPONSE.md answered the full report and c1-gpt gave a disposition for every point. The copy is stored in supplement/. Every other copy of an earlier report given to a later run equals the stored report apart from line endings and trailing whitespace.",
+    "No report names an exact model version: the Claude reports say Claude or Claude (Anthropic), the GPT reports say the model identifier is not exposed, and the Grok reports say no model id was exposed. The actual models (claude-sonnet-5.5, gpt-6.1-sol and grok-4.7 in every run) come from the session events.",
+    "Several runs had overlapping tool calls (r1-claude, r1-grok and c1-c5 Claude; at most 4 in flight) or recursive shell commands over packet directories (r1-claude 2, r1-gpt 5, c1-grok 1); see scope-audits in the closure. Each run wrote at most its own report file. The outside-path flags of r1-grok, c1-grok, c2-grok and c3-grok are false positives: a runtime tool-output file, the reviewer's own report folder, and packet or allowed paths that the audit read from JSON-quoted arguments. The audits attribute packet reads only to view and grep calls, so files that GPT runs read through shell commands appear as unread in their coverage tables; the shell commands are listed in each audit.",
+    "Reviewers fetched public dictionary pages and data (Weblio, Kotobank, jisho.org, kanjiapi.dev, the Japanese Wikipedia list of joyo kanji and the Agency for Cultural Affairs Joyo PDF), the four pinned KanjiVG files (c6-gpt) and public files of this repository and of the app repository on GitHub (r1-gpt and c3-gpt; c1-grok's one attempt failed), some through shell downloads; each run's web calls and shell commands are listed in its scope audit. c2-claude, c3-claude, c4-claude, c5-claude, c4-gpt, c5-gpt and c3-grok made none.",
+    "GPT wrote no report file in any round; every stored GPT report is the run's final message. The c1-c5 Claude report files differ in wording from their final messages, with the same labels and verdicts; the files are stored. The r1-claude and Grok report files equal their final messages apart from whitespace.",
+    "The runtime compacted the context twice in r1-grok and once in r1-claude, c1-gpt, c1-grok and c2-grok; the other 12 runs were not compacted (local session log; provenance.json does not record compaction).",
+    "Every stored prompt equals, byte for byte, the first message recorded in its reviewer session.",
+    "10 latent reading collisions are not drawable in the checked N1, All and Starter pools (厘 り; 又 やす, ふたたび; 吉 え, き, と, よ, えい; 吏 し; 呉 ぐ). 吟's ギン prompt can fill one wrong slot from the fallback (61 drawable options, no exposure hit). Sampled seeds are not exhaustive. The reading audits are the author's Python ports of the Kotlin builder, kept outside the repository.",
+    "Lint reports 11 errors and 73 warnings at the merge 3ecba19c (3 and 44 at the reviewed 33c3b582). None is on the nine new articles, and no error is on the ten new cards. Three errors are metadata readings without a Readings row on 太 (タ) and 情 (セイ, なさ.け), older than the batch, which only adds one line to each; the other eight are the same kind of error on 疲, 病, 痛, 空 and 鳴, cards that main changed and lint therefore checks at the merge, but main added none of those readings. Of the warnings, 42 are on reused files, 2 on 又's kana-headed examples, and 29 on main's cards and the words they list.",
+    "The merge 3ecba19c with main came after the last confirmation and was not reviewed; integration/merge-proof.json shows that main changed no batch file or link target, and the one changed main line naming a batch kanji (kanji/護.md, 又 as a hand shape, unlinked) is recorded as reviewed by the author. The stock batch audit fails at the merge because main changed 13 cards after the base; integration/audit_at_merge.py passes with main's head as the runtime baseline. CI does not run the batch audit.",
+    "Closure storage: confirmation packets are deduplicated by content (provenance sameAs, 256 entries) and files of 64 KiB or more are gzipped. A check of the 712 stored or referenced confirmation-packet files (snapshot copies excluded) found 0 errors. In the initial packet, 13 stored files have the bytes the reviewers saw (the nine diffs, selection-order.tsv and the three gzipped dictionary extracts once decompressed), and 25 are LF copies of CRLF files whose conversion back reproduces the packet manifest's hashes. The rule text evidence/selection/rule-7058679348.md is stored as an LF copy of an original that mixes CRLF and LF line endings, so converting it back does not reproduce its hash; the exact bytes (SHA-256 77d5bc8b...) are stored as confirm-packet/common/evidence/rule-7058679348.md.",
+    "The publication checks of B157 and B158 did not run the stale-remark scan, so their cards 偏 and 即 left two \"no card\" remarks stale until 33c3b582; the scan now runs in the author's check runner. It finds only sentences worded with its phrase list, and the author read the 37 remarks it lists at 33c3b582 (36 at the merge) and the 8 it cannot attribute.",
+    "27 older cards mention 又 in their text without linking the new 又 card; none claims that 又 has no card, and linking them is left as an optional follow-up.",
+    "A Grok reviewer was added to the Claude and GPT reviewers because the batch adds word articles, as for B156-B158.",
+    "The gate results come from the author's runs included in the packets and the closure, not from reviewer reruns.",
+    "No published commit is rewritten, no reviewed commit was amended, and every run's final report is kept.",
+    "This exact published runtime and ZIP are verified, not the remaining N1 set.",
+    "A later contributor-only receipt commit needs its own CI and exported-tree equality check."
+  ]
+}

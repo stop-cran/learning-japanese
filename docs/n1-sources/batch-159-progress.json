@@ -980,7 +980,7 @@
   },
   "statusBeforeConfirmation": "Candidate under independent review; not published. The 后 and 吏 untagged-support exceptions and the kana-headed 又 support remain subject to review.",
   "governingIssue": 60,
-  "status": "review-closed-publication-pending",
+  "status": "published-verified-with-disclosed-review-limits",
   "base": "2787e43b5706a569d83627849aa40ed3582a7d18",
   "members": [
     "厘",
@@ -1066,14 +1066,14 @@
     "呈",
     "呉"
   ],
-  "published": [],
-  "runtimePublished": false,
+  "published": ["厘", "又", "叔", "叙", "吉", "后", "吏", "吟", "呈", "呉"],
+  "runtimePublished": true,
   "accounting": {
     "frozenPendingRecords": 1228,
-    "publishedPendingRecordsWithCards": 608,
-    "publishedN1Additions": 602,
+    "publishedPendingRecordsWithCards": 618,
+    "publishedN1Additions": 612,
     "n2Placements": 6,
-    "undelivered": 620,
+    "undelivered": 610,
     "reviewClosedPendingRecordsWithCards": 618,
     "localUnreviewedDrafts": 0,
     "notStarted": 610,
@@ -1354,5 +1354,10 @@
     "integrationReview": "not required: every non-derived path equals one parent, main deleted nothing, the 46 batch files (44 runtime files and the two audit-tool files) equal the reviewed snapshot and none was changed by main, none of the 152 link targets was changed by main, main changed no quiz field of its 13 kanji cards, and manifest.json, the only conflict, was regenerated. The one changed main line that names a batch kanji is the reviewed kanji/護.md line, where d513049c calls 又 a hand shape without linking 又.md or touching its quiz fields. Main changed 13 kanji cards that are not batch files, docs/illness-radical-mnemonics-sources.json and manifest.json.",
     "manifestSha256": "4d3efd69a7271c2be3f1db64df80c3300c4d5ccfb350aff8f4ffad9a8bc106f5",
     "contentVersion": "2113084de3ce05a4"
+  },
+  "publication": {
+    "commit": "f434a60cc52445e441d1a2047cf610ba37b80402",
+    "url": "https://github.com/stop-cran/learning-japanese/commit/f434a60cc52445e441d1a2047cf610ba37b80402",
+    "receipt": "../n1-reviews/batch-159-publication/provenance.json"
   }
 }

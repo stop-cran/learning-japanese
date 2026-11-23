@@ -136,7 +136,7 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
-## Batch 159: review closed, publication pending
+## Batch 159: published
 
 Batch 159 adds the cards 厘 又 叔 叙 吉 后 吏 吟 呈 呉 (source rows 135, 137, 139,
 140, 146, 147, 148, 150, 152 and 153, the first ten remaining Joyo rows after
@@ -226,8 +226,15 @@ and 鳴, which lint checks at the merge because main changed them, although
 main added none of those readings. Of the warnings, 42 are on reused files and
 29 on main's cards and the words they list; the other two are on the new 又
 card, whose kana-headed examples または and また cannot declare 又 in their
-`kanji:` front matter. After publication, delivery becomes 618/1,228, with 610
-remaining.
+`kanji:` front matter. The closure commit `f434a60c` adds only documents to
+the merge `3ecba19c`; the other checks give the same results there. It
+fast-forwards main and is the published commit: the
+[CI run](https://github.com/stop-cran/learning-japanese/actions/runs/45189566076)
+passed and the [publication receipt](n1-reviews/batch-159-publication/provenance.json)
+records 9,842 verified runtime hashes in the served ZIP. Delivery is now
+**618/1,228**, with **610 remaining**. The served ZIP retains 56,286,967 bytes,
+71,958 more than at the B158 receipt, under the 62 MiB guard, leaving 8,724,745
+bytes. Phone acceptance is still outstanding.
 
 The full record, including the run table, every disposition and the limits, is
 in
