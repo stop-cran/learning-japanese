@@ -1,0 +1,109 @@
+{
+  "correction": "retained-n2-reverse-links",
+  "base": "6e1e0342c91d9d6ba88fee577abd9e638dd645d3",
+  "reports": [
+    {
+      "stage": "initial",
+      "snapshot": "3cbc312e31506bb099b599c7025030f44e820c0e",
+      "facet": "correctness: readings, sound-change and note claims, glosses against the word cards and dictionary; scoped coverage",
+      "responseModel": "claude-sonnet-5.5",
+      "dispatchModels": [
+        "claude-sonnet-5.5"
+      ],
+      "firstCall": "2026-11-24T22:06:43.908Z",
+      "finished": "2026-11-24T22:09:05.281Z",
+      "assistantResponses": 9,
+      "unsuccessfulToolCalls": 0,
+      "report": "reports/claude-initial.md",
+      "sha256": "26a3b74beb9c03636aa3a1e4fcdf8f61df21cd61bbcb4062bbd84f83cc19ecd2"
+    },
+    {
+      "stage": "initial",
+      "snapshot": "3cbc312e31506bb099b599c7025030f44e820c0e",
+      "facet": "consistency and quiz safety: link targets and reciprocity, unchanged front matter/quiz fields, metadata ids, counts and accounting claims; scoped coverage",
+      "responseModel": "gpt-6.2-sol",
+      "dispatchModels": [
+        "gpt-6.2-sol"
+      ],
+      "firstCall": "2026-11-24T22:09:16.390Z",
+      "finished": "2026-11-24T22:10:59.342Z",
+      "assistantResponses": 15,
+      "unsuccessfulToolCalls": 0,
+      "report": "reports/gpt-initial.md",
+      "sha256": "f6747814f1ee743b9ff0c30223909290bf195eb939c2c0b447282eb2fc331cdf"
+    },
+    {
+      "stage": "initial",
+      "snapshot": "3cbc312e31506bb099b599c7025030f44e820c0e",
+      "facet": "learner comprehensibility: whether the added rows and notes are clear and concise on a phone, and helpful rather than confusing; scoped coverage",
+      "responseModel": "grok-4.7",
+      "dispatchModels": [
+        "grok-4.7"
+      ],
+      "firstCall": "2026-11-24T22:11:08.668Z",
+      "finished": "2026-11-24T22:18:23.422Z",
+      "assistantResponses": 9,
+      "unsuccessfulToolCalls": 0,
+      "report": "reports/grok-initial.md",
+      "sha256": "49d10e35d67f0bc352a0a11e0ac01fb2c5967df47fac7533f915f60712014eb1"
+    },
+    {
+      "stage": "followup",
+      "snapshot": "ce260bb71ad56c40be503479fe0670a392402bb2",
+      "facet": "correctness: readings, sound-change and note claims, glosses against the word cards and dictionary; scoped coverage",
+      "responseModel": "claude-sonnet-5.5",
+      "dispatchModels": [
+        "claude-sonnet-5.5"
+      ],
+      "firstCall": "2026-11-24T22:32:15.069Z",
+      "finished": "2026-11-24T22:33:02.927Z",
+      "assistantResponses": 5,
+      "unsuccessfulToolCalls": 0,
+      "report": "reports/claude-followup.md",
+      "sha256": "302ddaf3d2bfa4c6b337eb6f07f562b4f3e9f7bdfc899c8620bcf41ed6f85a71"
+    },
+    {
+      "stage": "followup",
+      "snapshot": "ce260bb71ad56c40be503479fe0670a392402bb2",
+      "facet": "consistency and quiz safety: link targets and reciprocity, unchanged front matter/quiz fields, metadata ids, counts and accounting claims; scoped coverage",
+      "responseModel": "gpt-6.2-sol",
+      "dispatchModels": [
+        "gpt-6.2-sol"
+      ],
+      "firstCall": "2026-11-24T22:33:09.815Z",
+      "finished": "2026-11-24T22:33:50.961Z",
+      "assistantResponses": 6,
+      "unsuccessfulToolCalls": 0,
+      "report": "reports/gpt-followup.md",
+      "sha256": "bcdc393b8bc3bcc5ccc6800ed73fc5cd06fc190f21c23c2699d81fda954fde7c"
+    },
+    {
+      "stage": "followup",
+      "snapshot": "ce260bb71ad56c40be503479fe0670a392402bb2",
+      "facet": "learner comprehensibility: whether the added rows and notes are clear and concise on a phone, and helpful rather than confusing; scoped coverage",
+      "responseModel": "grok-4.7",
+      "dispatchModels": [
+        "grok-4.7"
+      ],
+      "firstCall": "2026-11-24T22:33:58.765Z",
+      "finished": "2026-11-24T22:36:00.376Z",
+      "assistantResponses": 5,
+      "unsuccessfulToolCalls": 0,
+      "report": "reports/grok-followup.md",
+      "sha256": "d084a0809c6525dbc20b9aafcb722205bce6b0101a388e7fb6420f0eed68e83f"
+    }
+  ],
+  "reconciliation": "reconciliation.md",
+  "followupsContinuedOriginalSessions": [
+    "claude",
+    "gpt",
+    "grok"
+  ],
+  "reconciliationSha256": "c246cfcabc1165ab8837cbd927e4c4958cde553853d425bd5d9376ab5e4e159e",
+  "teachingDiffSha256": {
+    "baseToInitial": "7338c510ea0fe3a25e73d9d152fdeaa9946395e8da1a7dee65ae12b8410ad4fb",
+    "initialToFollowup": "4395d75739c8e60e529991d8186b360039f6976a9ed1e60195b951ee0d68e5f8",
+    "baseToFollowup": "67329524026c9b20993212362918087087a255c6921e7ddd1af5d27e6f62bc13"
+  },
+  "limits": "Packet-based blind facet reviews run serially and bounded same-session confirmations; not native-speaker, device, Android or whole-set acceptance."
+}
