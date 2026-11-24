@@ -65,7 +65,7 @@ does not establish linguistic correctness. Read a real card alongside the format
    `tags`.
 2. Sections: `## Meaning` (with examples, each with English translation), `## How the kanji combine` (relation: opposites, synonyms,
    modifier+head, verb+object, etc.; optional for kana-only words with `kanji: []`), `## Synonyms and antonyms`, `## Distinctive meaning` (register, nuance, when not to use it).
-   If a note explains a particle "in the examples," check which word it marks and which verb it goes with in each sentence.
+   If a note says "in the examples," check the verb and the noun each particle marks in each sentence.
    Name the example when the explanation applies to only one.
 3. For kango, explain what each kanji contributes and the relation between them (e.g. opposite pair 長 + 短).
 4. Verify word/reading pairs in JMdict. Use natural or attested examples only; do not invent collocations to prove a point.
@@ -86,5 +86,6 @@ Leave consequential unresolved claims out of the teaching text or explicitly mar
 - **2026-10-08 - Review-driven additions:** Synonymous quiz choices and the actual four-choice fallback justify the linked quiz rule;
   unexplained 辵/辶 and 艸/艹 forms justify the learner-facing radical clarification. These are editorial checks, not new historical claims.
 - **2026-11-24 - Example scope (add):** The Russian B256 review surfaced an inherited error in [櫛](../../words/櫛.md):
-  the comb is the tool in 櫛で髪をとかす but the object in 櫛をかばんに入れる. The note now distinguishes the two;
-  this is an editorial check, not a validator rule.
+  the comb is the tool in 櫛で髪をとかす but the object in 櫛をかばんに入れる. The same check caught a verb mismatch
+  in [汗](../../words/汗.md): the first example describes sweating (汗をかく), the second wiping sweat away (汗を拭く).
+  This is an editorial check, not a validator rule.
