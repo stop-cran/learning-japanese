@@ -52,6 +52,7 @@ displayed quiz labels are.
 | [ぺたぺた](../words/ぺたぺた.md), [べたべた](../words/べたべた.md), [ぺらぺら](../words/ぺらぺら.md), [ぺこぺこ](../words/ぺこぺこ.md) | First pair warrants a tactile/action contrast; the larger group is similar-sounding, not four synonyms. See [scene comparisons](../articles/onomatopoeia-sound-and-movement.md). |
 | [しとしと](../words/しとしと.md), [ざあざあ](../words/ざあざあ.md), [ぱらぱら](../words/ぱらぱら.md), [ぽつぽつ](../words/ぽつぽつ.md) | Sustained quiet rain, noisy rain, scattered drops, or intermittent occurrences; [rain comparison](../articles/onomatopoeia-sound-and-movement.md#rain-is-not-just-rain-noise). |
 | [どきどき](../words/どきどき.md), [わくわく](../words/わくわく.md) | Heart-pounding unease/excitement versus eager anticipation; both may describe a happy event. |
+| [ばっさり](../words/ばっさり.md), [すっぱり](../words/すっぱり.md), [きっぱり](../words/きっぱり.md) | Bold/drastic removal, a clean complete break, and unambiguous resolve overlap in their decisive-action glosses. The new card excludes both older cards directly; their existing pair remains excluded on すっぱり. This does not make all their constructions interchangeable. |
 | [しっとり](../words/しっとり.md), [じめじめ](../words/じめじめ.md), [じとじと](../words/じとじと.md), [びしょびしょ](../words/びしょびしょ.md), [ぐっしょり](../words/ぐっしょり.md) | Appropriate moisture, unpleasant damp, and soaking wetness; [texture guide](../articles/onomatopoeia-texture-and-warmth.md#moist-damp-or-drenched). |
 
 The starter review also identified overlaps with words outside this theme:

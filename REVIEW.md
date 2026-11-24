@@ -35,6 +35,42 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## ばっさり: new word card and haircut illustration (2026-11-24)
+
+Three blind, read-only reviewers received the complete [ばっさり card](words/ばっさり.md),
+the same rubric, dictionary access and staged tree `422865e4318974dccda8eeac2ab19d75d65c4587`
+over `894d30525e87a394b0b5a6de9767d2d1084b6ed3`. Each reviewed scoped coverage as well as
+the assigned facet. Model attribution below comes from the actual report-bearing responses,
+cross-checked with session launch, tool dispatch and response-usage records; the labels agreed.
+
+| Facet | Model / session | Initial result |
+| --- | --- | --- |
+| Correctness | `claude-opus-5.5` / `8edc8755-5ae8-42cc-a1bd-a0fae31cd025` | **CLEAN**, scoped coverage **CLEAN**. Checked both cards' new teaching, translations and optional と against JMdict and Daijisen; also inspected the image. Noted that removal need not mean the part was *unwanted*. |
+| Consistency and quiz safety | `gpt-6.1-sol` / `18b5752e-4c4d-43b2-83a0-603d128cd85e` | **CLEAN**, scoped coverage **CLEAN**. Checked displayed labels, direct exclusions with すっぱり and きっぱり, all 306 tagged/indexed words, historical practice counts, provenance, single image ownership, article-only eligibility and all runtime hashes. Inspected the WebP. |
+| Comprehensibility | `grok-4.7` / `b88c4c3f-e9ae-4ded-b247-afbd914e373b` | **CLEAN**, scoped coverage **CLEAN** for the new card, adjacent すっぱり comparison and learner index. Suggested limiting the overlap explicitly to cutting and bridging the single-stroke gloss to the haircut. The caption was clear; this reviewer could not inspect the pixels. |
+
+**Reconciliation:** No initial reviewer reported a blocking defect. The optional wording
+improvements were adopted in staged tree `c6638edcb2a2f0f8b54759499aa3d2ecc8deb811`:
+the new card drops *unwanted*, pairs a possible single branch-cutting stroke with a haircut
+that need not take one snip, and distinguishes getting a haircut from cutting one's own hair.
+The すっぱり comparison now limits the overlap to cutting. Extending the lesson to other
+literal cutting or harsh criticism remains optional and outside this small card's teaching scope.
+The coordinator separately reproduced a scene-plan mismatch on a fresh LF checkout: the
+generator hashes raw article bytes, unlike the LF-normalized runtime manifest. The revised
+card has an LF checkout rule and matching plan/manifest hash; the earlier generation-request
+hash stays historical. Neither the scene nor the original artwork was regenerated.
+
+All three original reviewers re-read the five-file delta on that revised tree. Correctness,
+consistency/quiz safety, comprehensibility and each assigned scope's coverage remained
+**CLEAN**; the consistency reviewer confirmed the portable pin. The same three response
+models returned the confirmations. No actionable finding remains within the reviewed scope.
+
+The illustrated haircut is **article-only** pending owner visual review. A still cannot
+establish the previous length, number of snips or decisiveness; no native-speaker, phone or
+learning-effectiveness acceptance is claimed. See the [collection notes](docs/onomatopoeia.md)
+and [source and image record](docs/onomatopoeia-scene-images.json) for the inspected entries,
+exact original prompt, deployment, byte hashes and visual observations.
+
 ## Next-100 onomatopoeia guides: bounded review (2026-11-21)
 
 The shared initial staged tree was `4889fda7d106564c07d0463adb322da3f4a8164d`, based

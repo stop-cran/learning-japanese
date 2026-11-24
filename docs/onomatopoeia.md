@@ -13,13 +13,15 @@ The next 100 cards bring the collection to **305 tagged cards**. Their draft pra
 [JMdict capture](onomatopoeia-next-100-jmdict.json) record the selected senses and exercises;
 independent linguistic, editorial and exercise vocabulary reviews remain pending. The new
 illustrations are article-only pending owner acceptance.
+The later **ばっさり** addition brings the live collection to **306 tagged cards**, without
+adding Grammar exercises or changing the next-100 batch's pending review status.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
 reuses the twelve-word pilot. Its [historical ledger](grammar-onomatopoeia-sources.json) retains
 the original bounded acceptance. Owner-authorized [collection expansion #59](grammar-onomatopoeia-expansion-sources.json)
 adds selected sentence operations for the remaining 191 cards through nine focused sets and guides.
-That Grammar practice set remains 203 words; the later みっちり and のびのび cards are outside its coverage.
+That Grammar practice set remains 203 words; the later みっちり, のびのび and ばっさり cards are outside its coverage.
 No word identities or schedules change. The [owner-trial protocol](grammar-onomatopoeia-trial.md)
 still requires actual feedback: expansion authorization is not evidence of learning effectiveness.
 
@@ -104,6 +106,26 @@ session usage records for `ba893eb7-b340-4f3d-b702-46f43a99b18d`,
 The correctness reviewer inspected the image; the comprehensibility reviewer could not view
 its pixels. These reviews do not establish native-speaker certification or device behavior.
 
+For **ばっさり**, [JMdict via Jisho](https://jisho.org/search/ばっさり), entry **2395420**,
+and [Digital Daijisen via Kotobank](https://kotobank.jp/word/ばつさり-3216201) were inspected
+on **2026-11-24**. Both distinguish literal cutting from bold/drastic removal and support
+optional と. The katakana バッサリ is the same identity; no JLPT level is inferred.
+The neighboring [すっぱり entry](https://kotobank.jp/word/すつぱり-3212751), senses 1–2,
+supports an overlapping emphasis contrast rather than mutually exclusive meanings.
+The older untidy/sprawling sense in the separate Seisen Nikkoku entry on the ばっさり page
+is not taught. The original examples cover a substantial haircut and deletion of a manuscript's
+first half. Direct quiz exclusions protect すっぱり and きっぱり; ざっくり has no card at this snapshot
+and is not added as a broken reference or expanded into a separate lesson.
+
+The single original haircut illustration uses the existing Azure `img` deployment
+(`gpt-image-2.5-sunburst`, version `2026-09-08`), verified immediately before generation.
+The author inspected the actual 512 px WebP: a stylist holds a long detached lock beside a
+customer with a short bob; additional cut locks lie on the floor. The image is article-only,
+not proof of a preceding hair length, a literal single snip or a uniquely identifiable adverb.
+A second, figurative illustration was not generated because a text-free editing scene would
+not clearly demonstrate deletion. The [named-scene record](onomatopoeia-scene-images.json)
+preserves the exact prompt, hashes and observations; owner visual review and phone testing remain pending.
+
 Examples are original teaching sentences selected for ordinary usage, with English translations
 and kana support. They are not quotations or claims of attestation in a particular manga,
 news report, recipe, or corpus. Dictionary recognition is not proof of relative frequency.
@@ -123,7 +145,7 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 305 current tagged cards, retaining the two historical 100-word groups
+The overview links to all 306 current tagged cards, retaining the two historical 100-word groups
 and listing later additions separately. Five new guides cover
 [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md),
 [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md),

@@ -45,7 +45,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Vocabulary | [気 expressions: attention, concern, liking, and feelings](articles/ki-expressions-attention-and-feelings.md) | How do 気になる, 気にする, 気に入る, 気づく, and related 気 expressions differ, and what do common 気 compounds mean? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
 | Vocabulary | [Sound changes in Japanese compounds](articles/compound-sound-changes.md) | Why do readings such as はなび, がっこう and しっぱい differ from familiar readings of their parts? |
-| Vocabulary | [Japanese onomatopoeia: 305 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
+| Vocabulary | [Japanese onomatopoeia: 306 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
 | Vocabulary | [Onomatopoeia sound patterns](articles/onomatopoeia-sound-patterns.md) | What can repetition, endings, and voiced consonants suggest without becoming rigid meaning rules? |
 | Vocabulary | [Warmth and texture](articles/onomatopoeia-texture-and-warmth.md) | How do ぽかぽか, ほかほか, ふわふわ, ふかふか, ぺたぺた, and べたべた differ? |
 | Vocabulary | [Rain, rolling, walking, and similar forms](articles/onomatopoeia-sound-and-movement.md) | How do vivid scene descriptions differ, and why are similar-looking words not necessarily synonyms? |
@@ -500,7 +500,7 @@ record the expansion's exact outputs, owner approval and remaining device-integr
 
 ## Onomatopoeia collection
 
-The [305-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
+The [306-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
 [second 100](articles/japanese-onomatopoeia.md#second-100-word-cards), grouped by everyday situation.
 The second batch adds 97 cards and enriches three existing ones, plus three comparison guides.
 Later additions are listed separately, beginning with [ぶかぶか / ブカブカ](words/ぶかぶか.md), for oversized clothing or shoes.
