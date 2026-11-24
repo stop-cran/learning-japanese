@@ -42,13 +42,30 @@
     "妊"
   ],
   "runtimePublished": false,
-  "status": "unreviewed draft",
+  "status": "initial reviews reconciled; original-reviewer confirmations pending",
+  "initialSnapshot": "b89b7a459db5f06a35fd690a7a5f535a5fdeb4dd",
+  "revisedChecks": {
+    "contentVersion": "b007c795aca426b2",
+    "dictionaryFamilies": 75,
+    "validationErrors": 0,
+    "meaningQuizErrors": 0,
+    "meaningQuizWarnings": 0,
+    "wholeWordMetadataGaps": 0,
+    "substringOnlyMatches": 11,
+    "localBudget": {"files": 9967, "entries": 9983, "retainedBytes": 57144894, "inflatedBytes": 57580966, "localZipBytes": 36679917}
+  },
   "mechanicalChecks": {
     "batchAudit": "10 kanji, nine new words, eight changed existing articles, 17 reciprocal pairs, 32 reading rows, 10 offered keys and 71 pinned complete JMdict families. No runtime delta outside the mapped articles, strokes and manifest.",
     "reviewCandidateContentVersion": "f53cb073d97a67b6",
     "quiz": "No structural meaning-quiz errors or warnings. The reading-option analysis with Kanjipedia outside-table readings found no N1/All or ordinary padded-Starter hit and no non-name one-holder hit. Four latent collisions; two one-holder cases were name-only readings, not offered on/kun answers.",
     "citations": "Zero whole-word metadata gaps across the 17 changed kanji articles; 11 substring-only matches. This test is not linguistic verification.",
-    "localBudget": {"files": 9967, "entries": 9983, "retainedBytes": 57144067, "inflatedBytes": 57580139, "localZipBytes": 36679569}
+    "localBudget": {
+      "files": 9967,
+      "entries": 9983,
+      "retainedBytes": 57144067,
+      "inflatedBytes": 57580139,
+      "localZipBytes": 36679569
+    }
   },
   "selectionReason": "First ten absent Jōyō rows on the B162 receipt; no name-use rows advanced.",
   "selectionNotes": {
@@ -422,6 +439,16 @@
       "article": "kanji/婦.md",
       "before": "Sources: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project); [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entries 1583640, 1326160, 1496670.",
       "after": "Sources: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project); [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entries 1583640, 1326160, 1496670.\n\nMetadata: Word evidence: [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project), entries 1326160, 1467370, 1496670, 1583640."
+    },
+    {
+      "article": "words/一.md",
+      "before": "entry 1160790, sense 1.",
+      "after": "entry 1160790, sense 1; entry 2138590 for 壱万円 and 一万円."
+    },
+    {
+      "article": "kanji/良.md",
+      "before": "- [奈良](../words/奈良.md) なら — Nara (city or prefecture)",
+      "after": "- [奈良](../words/奈良.md) なら — Nara (city or prefecture); 良 is ら in this name, not the usual compound reading リョウ."
     }
   ],
   "wordQuizAudit": {
@@ -430,14 +457,17 @@
         "word": "奉仕",
         "exclude": [
           "サービス",
-          "援助"
+          "援助",
+          "勤め"
         ]
       },
       {
         "word": "奔走",
         "exclude": [
           "努力",
-          "走る"
+          "走る",
+          "苦心",
+          "せっせと"
         ]
       },
       {
@@ -508,7 +538,8 @@
         "kanji": "奮",
         "exclude": [
           "励",
-          "振"
+          "振",
+          "鼓"
         ]
       },
       {
@@ -673,7 +704,7 @@
       "kind": "kun",
       "reading": "ほう.ずる",
       "selected": false,
-      "reason": "奉ずる (ほうずる) — to dedicate or to follow. The frozen source puts the form here; it starts with the on sound ほう.",
+      "reason": "奉ずる (ほうずる) — to dedicate or to follow. The form is listed here under kun readings, although it starts with the on sound ほう.",
       "entryIds": [
         "1515790"
       ]
@@ -694,7 +725,7 @@
       "kind": "kun",
       "reading": "はし.る",
       "selected": false,
-      "reason": "奔る (はしる) — run or rush. JMdict marks this spelling rare; the usual spelling is 走る. Kanjipedia marks the kun-reading outside the table.",
+      "reason": "奔る (はしる) — a rare spelling in the 走る family, noted for running away or eloping. For the ordinary verb “run,” use 走る. Kanjipedia marks the kun-reading outside the table.",
       "entryIds": [
         "1402540"
       ]
@@ -746,7 +777,7 @@
       "kind": "kun",
       "reading": "やっこ",
       "selected": false,
-      "reason": "奴 (やっこ) — a servant, for example a samurai's attendant. An outside-table reading distinct from やつ.",
+      "reason": "奴 (やっこ) — a servant, for example a samurai's attendant. This is a different word, also with an outside-table reading.",
       "entryIds": [
         "1445630"
       ]
@@ -1002,7 +1033,7 @@
       ]
     },
     "奈": {
-      "title": "na in names; how",
+      "title": "na in names",
       "distractors": [
         "示",
         "宗",
