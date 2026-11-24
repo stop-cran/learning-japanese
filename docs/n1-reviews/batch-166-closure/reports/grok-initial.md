@@ -1,0 +1,15 @@
+Snapshot: aca8b242dcad188c7927dac74e708cc668de6995, from snapshot.txt (base 7f13b789a3774f93f9702d40006d5075772d77a6). No git check. Packet files only.
+
+Scope: Comprehensibility and scoped coverage, including natural examples, contrast, and concise phone readings. Reviewer: Grok 4.7 (grok-4.7). Correctness and quiz safety were not assigned and are UNVERIFIED. Read in full: kanji-1..4, words-1..3, comparison-words.txt, changed.txt, primary.xml, sources.json, families-1..6.jsonl, quiz.txt, labels.txt. Older kanji reviewed only in the changed.txt hunks.
+
+Verdicts: correctness UNVERIFIED on every card. Assigned facets: 屯 and 崎 NEEDS FIX. All other new cards, the four comparison words, and the six older-kanji hunks CLEAN.
+
+Findings:
+- Minor; coverage and comprehensibility; kanji-1.txt:115,124 (kanji/屯.md). The card defines 屯する as gather or hang out, and says a friend hangout is not being stationed. Cited JMdict 2151610 also has sense 2, troops assembling or being quartered, usually kana. Learners can reject that military use. Remedy: add sense 2 in the たむろ row; limit the hangout warning to the casual sense; keep 駐屯 as the garrison compound. Evidence: families-6.jsonl 2151610. Confidence: high.
+- Minor; comprehensibility and coverage; kanji-3.txt:126,130 (kanji/崎.md). The only common-word line shows 崎 as みさき and links to 岬 under the label 崎. JMdict 1297220 gives priority さき for cape; 1611700 gives 崎 no priority for みさき. The card already marks みさき outside the standard table. A phone scan can treat the quiz alternate as the ordinary headword. Remedy: link text 岬, labeled as the unprioritized quiz spelling; add 崎 (さき), including 長崎 (ながさき), as the ordinary common word. Evidence: families-2.jsonl 1297220, families-5.jsonl 1611700, quiz.txt priority note. Confidence: high on the data, medium that quiz-first order is itself wrong.
+
+No consequential unnatural example was established. New sentence readings checked against the packet were accurate. 分岐, 峰, and 崇拝 already contrast in examples. 海峡, the ぽ warning, and the 利口 and 岬 spelling notes are concise.
+
+Optional: Rewrite source-audit wording at kanji-1.txt:78–79, kanji-2.txt:78,123–124, and kanji-3.txt:125 into short glosses; add 尿検査 (にょうけんさ). At kanji-4.txt:40,44, say 巧い is an alternate skill spelling of 上手い, not the meal spelling. At words-1.txt:27 and comparison-words.txt:162, link 尾 and state only sourced sense splits: animal tail on both; kite or comet on 尾 1485770 senses 2–3; tail end on しっぽ 1358800 sense 2. Do not invent a register ranking. One clause may bound 尾 sense 4, the mountain-foot slope. kanji-1.txt:32 should say “fish, shrimp, etc.” Do not invent an 一尾 reading.
+
+Limits: No device, native-speaker, or external-page verification. Daijisen and 精選版 text were not in the packet, so 峰 (ね) and 列のしっぽ are unverified beyond the citations. primary.xml returned through 1611700. Kanjipedia-only readings were not treated as mandatory. Archaic 峡 (かい), 2568690, is omitted. KANJIDIC “scene, arena, theater” for 岐 has no supporting family entry. Quiz asymmetry for 尾 and しっぽ was out of facet.
