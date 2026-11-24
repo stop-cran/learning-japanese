@@ -1,0 +1,90 @@
+{
+  "batch": 162,
+  "initialSnapshot": "4dcff959aaa5394e35342e11b9f2c48d846f395e",
+  "revisedTeaching": "338e7b203854e34c786a365d75083a4696952a92",
+  "integratedSnapshot": "32ed450b37b8158f5a01bc5cee57d18c8f2aa155",
+  "correctionDiffSha256": "c70818f20b533e37aec62ca3081b56800a6fbb6bedef62f47e0f10b8d64a4970",
+  "reconciliation": "reconciliation.md",
+  "reconciliationSha256": "c799fcd57cab0e44a4a6d59df179f2a377b97537b10170939b4ed5b4eff18c2d",
+  "limits": "The three initial reviews were independent and facet-specific. Each original reviewer confirmed the changes, not the entire batch a second time. The reports identify which evidence they inspected; they do not establish native-speaker, phone, Android or whole-set acceptance.",
+  "reports": [
+    {
+      "stage": "initial",
+      "facet": "correctness and scoped coverage",
+      "responseModel": "claude-sonnet-5.5",
+      "dispatchModels": [
+        "claude-sonnet-5.5"
+      ],
+      "report": "reports/claude-initial.md",
+      "sha256": "1574df00033bf57ff9c982dfe1edcfc6733fee0db01d0b4b6b02f934edf5ad04",
+      "assistantResponses": 30,
+      "firstModelCall": "2026-11-24T06:34:19.942Z",
+      "finished": "2026-11-24T06:41:58.587Z"
+    },
+    {
+      "stage": "initial",
+      "facet": "consistency and quiz safety",
+      "responseModel": "gpt-6.2-sol",
+      "dispatchModels": [
+        "gpt-6.2-sol"
+      ],
+      "report": "reports/gpt-initial.md",
+      "sha256": "ed59e3957b482cad7066ba90ded285db870dac963917073225fb8c0096efe428",
+      "assistantResponses": 26,
+      "firstModelCall": "2026-11-24T06:42:19.438Z",
+      "finished": "2026-11-24T06:44:47.743Z"
+    },
+    {
+      "stage": "initial",
+      "facet": "learner comprehensibility and scoped coverage",
+      "responseModel": "grok-4.7",
+      "dispatchModels": [
+        "grok-4.7"
+      ],
+      "report": "reports/grok-initial.md",
+      "sha256": "656daa7b9d15016ca4d707c283b04b5b44973a8b554fa3859babf54376b8bec5",
+      "assistantResponses": 36,
+      "firstModelCall": "2026-11-24T06:45:08.213Z",
+      "finished": "2026-11-24T06:59:37.127Z"
+    },
+    {
+      "stage": "followup",
+      "facet": "correctness and scoped coverage",
+      "responseModel": "claude-sonnet-5.5",
+      "dispatchModels": [
+        "claude-sonnet-5.5"
+      ],
+      "report": "reports/claude-followup.md",
+      "sha256": "2b790a0775af6c1c62fec7e0081bbd19d618d1f4b3b9798748df01a5aedfe756",
+      "assistantResponses": 3,
+      "firstModelCall": "2026-11-24T07:41:44.868Z",
+      "finished": "2026-11-24T07:43:29.260Z"
+    },
+    {
+      "stage": "followup",
+      "facet": "consistency and quiz safety",
+      "responseModel": "gpt-6.2-sol",
+      "dispatchModels": [
+        "gpt-6.2-sol"
+      ],
+      "report": "reports/gpt-followup.md",
+      "sha256": "48e32799ff259c4b9486bd2204001e9674ef2aa3eaed2bcc0382ad9bfd66d656",
+      "assistantResponses": 4,
+      "firstModelCall": "2026-11-24T07:43:57.854Z",
+      "finished": "2026-11-24T07:44:19.160Z"
+    },
+    {
+      "stage": "followup",
+      "facet": "learner comprehensibility and scoped coverage",
+      "responseModel": "grok-4.7",
+      "dispatchModels": [
+        "grok-4.7"
+      ],
+      "report": "reports/grok-followup.md",
+      "sha256": "987193bbf3b4209203f5a60c8f8a45321f6791134942db6b290cd441620ddf05",
+      "assistantResponses": 3,
+      "firstModelCall": "2026-11-24T07:44:39.301Z",
+      "finished": "2026-11-24T07:46:53.371Z"
+    }
+  ]
+}
