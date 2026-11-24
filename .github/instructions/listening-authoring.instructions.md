@@ -30,6 +30,8 @@ and the shared [language/task review rules](../copilot-instructions.md).
   people, as the default for natural scenes. Follow `tools/image_prompts.json`'s `style`
   and the [selected listening illustrations](../../docs/listening-task-pool/illustrations.json).
   A numbered grid must remain an equally presented comparison, not a decorative scene.
+  Preserve the original `visual.role` even for printed choices; check the [room and cup
+  examples](../../docs/listening-tasks.md#identity-originals-and-review) before exposing labels.
   Keep artwork original and text-free except necessary controlled labels; no named
   artist/franchise imitation, speech bubbles, brands or highlighted answer.
 - Freeze visual invariants in the prompt: exact people/objects, left/right roles,

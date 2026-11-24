@@ -196,6 +196,15 @@ required graphics; it does not claim a scored equivalent. Audio-choice accessibi
 only numbers until authorized help/feedback. Test actual C/D presentation and all required stages,
 not just a file player or representative voice preview.
 
+When adapting a task, check `visual.role` independently of `choiceMode`. In the
+[N4 discussion room](../listening-tasks/n4-task-discussion-room.json), the printed choices say
+`1の並べ方` through `4の並べ方`; without the numbered picture they identify no arrangement.
+In the [N5 cup task](../listening-tasks/n5-task-cups-for-visitors.json), the labels name each cup's
+size and colour. Printing those labels beside their numbers before the choice would let the learner
+skip the picture. Keep the original marked image, with descriptions available separately for study;
+explain the match in the answer. A structurally valid text-choice draft alone cannot establish that
+the picture needed by the original task was preserved.
+
 E first authors/reviews/listens to one original scored pilot per type. The separately authorized
 full pool has 28 scored tasks (8/7/6/7 by type) including those pilots, plus four separate worked
 examples. All 32 stories are independent. Examples have `usage:"example"` and cannot supply
