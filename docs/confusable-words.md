@@ -52,6 +52,9 @@ displayed quiz labels are.
 | [ぺたぺた](../words/ぺたぺた.md), [べたべた](../words/べたべた.md), [ぺらぺら](../words/ぺらぺら.md), [ぺこぺこ](../words/ぺこぺこ.md) | First pair warrants a tactile/action contrast; the larger group is similar-sounding, not four synonyms. See [scene comparisons](../articles/onomatopoeia-sound-and-movement.md). |
 | [しとしと](../words/しとしと.md), [ざあざあ](../words/ざあざあ.md), [ぱらぱら](../words/ぱらぱら.md), [ぽつぽつ](../words/ぽつぽつ.md) | Sustained quiet rain, noisy rain, scattered drops, or intermittent occurrences; [rain comparison](../articles/onomatopoeia-sound-and-movement.md#rain-is-not-just-rain-noise). |
 | [どきどき](../words/どきどき.md), [わくわく](../words/わくわく.md) | Heart-pounding unease/excitement versus eager anticipation; both may describe a happy event. |
+| [ひやひや](../words/ひやひや.md), [はらはら](../words/はらはら.md), [どきどき](../words/どきどき.md) | Apprehension, anxious suspense and a pounding heart can accompany the same event; [body and feelings](../articles/onomatopoeia-body-and-feelings.md#apprehension-and-a-pounding-heart). ひやひや/はらはら is directly excluded. The distinct heartbeat label is not excluded merely because the situation overlaps. |
+| [ひやひや](../words/ひやひや.md), [ひんやり](../words/ひんやり.md), [冷たい](../words/冷たい.md) | The new card's secondary skin-cold sense overlaps the older temperature labels. Both pairs are directly excluded on ひやひや; this does not equate apprehension with cold skin. |
+| [ばっさり](../words/ばっさり.md), [すっぱり](../words/すっぱり.md), [きっぱり](../words/きっぱり.md) | Bold/drastic removal, a clean complete break, and unambiguous resolve overlap in their decisive-action glosses. The new card excludes both older cards directly; their existing pair remains excluded on すっぱり. This does not make all their constructions interchangeable. |
 | [しっとり](../words/しっとり.md), [じめじめ](../words/じめじめ.md), [じとじと](../words/じとじと.md), [びしょびしょ](../words/びしょびしょ.md), [ぐっしょり](../words/ぐっしょり.md) | Appropriate moisture, unpleasant damp, and soaking wetness; [texture guide](../articles/onomatopoeia-texture-and-warmth.md#moist-damp-or-drenched). |
 
 The starter review also identified overlaps with words outside this theme:
@@ -67,6 +70,13 @@ Other protected secondary-sense overlaps include
 [ばたばた](../words/ばたばた.md)/[どんどん](../words/どんどん.md) or [次々](../words/次々.md)
 (rapid succession). These are pairwise quiz exclusions, not claims that every Japanese construction
 in a pair is interchangeable.
+
+The “on edge” labels on [ぴりぴり](../words/ぴりぴり.md) and [尖る](../words/尖る.md)
+can also fit an apprehensive person in an English meaning quiz. Both are directly excluded
+on ひやひや, not treated as interchangeable Japanese words.
+The ひやひや addition also directly excludes びくびく, おどおど, 心配, 不安, 緊張,
+恐れる, 恐怖 and 悩む for overlapping fear, nervousness or worry labels. These guards
+do not claim identical constructions, intensity or visible behavior.
 
 ### Onomatopoeia second-batch comparisons
 

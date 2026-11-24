@@ -135,8 +135,9 @@ The second batch was first published as text-only; illustrations followed separa
 
 ## Further word cards
 
-The collection now contains **305 tagged word cards**. The ぶかぶか addition brought it to 201;
-later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり, のびのび and the one hundred new cards below. They are listed here without
+The collection now contains **307 tagged word cards**. The ぶかぶか addition brought it to 201;
+later N2 additions どっと and ぶつぶつ brought it to 203, followed by みっちり, のびのび,
+the one hundred new cards below, ばっさり, and ひやひや. They are listed here without
 changing the original two 100-word groups or their existing card identities.
 
 The latest selection has five thematic companions: [fit and disorder](onomatopoeia-fit-and-disorder.md),
@@ -153,6 +154,8 @@ links to a best-fit starting guide and the guides link to one another.
 | Muttering or small bumps | [ぶつぶつ](../words/ぶつぶつ.md) — different constructions select muttering or bumps/spots; see the card for further uses |
 | Intensive work or instruction | [みっちり](../words/みっちり.md) — doing something thoroughly and intensively |
 | Acting freely and at ease | [のびのび](../words/のびのび.md) — without constraint; also distinguish the postponement use |
+| Bold cutting and drastic removal | [ばっさり](../words/ばっさり.md) — a substantial haircut or drastic deletion, not just any decisive action |
+| Nervous concern about what might go wrong | [ひやひや / 冷や冷や](../words/ひやひや.md) — apprehension about a possible mishap or discovery; overlaps with はらはら |
 | Melted food and gentle cooking | [とろとろ](../words/とろとろ.md) — soft and melted, or gently simmering; context distinguishes other senses |
 | Tender food and falling drops | [ほろほろ](../words/ほろほろ.md), [ぽろぽろ](../words/ぽろぽろ.md) — crumbling tenderly; drops falling one by one |
 | Weight and fizz | [ずっしり](../words/ずっしり.md), [しゅわしゅわ](../words/しゅわしゅわ.md) — a substantial weight; fine carbonated bubbles |

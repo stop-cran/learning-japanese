@@ -2,6 +2,64 @@
   "baseline_commit": "df01062fb3cca7c32e9a751b639820635cca2dbf",
   "scope": "The original 200 onomatopoeia cards and the subsequent ぶかぶか, みっちり and のびのび additions: 203 word catalogs, using selected taught senses rather than every dictionary sub-sense. The みっちり and のびのび additions have article-only contextual illustrations.",
   "inventory": "tools/onomatopoeia_scene_plan.json",
+  "counts_scope": "The top-level counts and scope retain the earlier 203-word inventory. The later_article_only_additions, bassari_article_only_addition and hiyahiya_article_only_addition objects are separate additions and are not included in those historical totals.",
+  "hiyahiya_article_only_addition": {
+    "basis_commit": "5b7e2b78afe08b89403859c626d0e1ac16b3dbae",
+    "date": "2026-11-24",
+    "provider": "Copilot image_generation tool; underlying model not exposed",
+    "request_parameters": "Prompt only; size and quality defaults were not overridden.",
+    "original_png_dimensions": [1254, 1254],
+    "storage": "512x512 WebP, quality 80, method 6; converted with tools/generate_images.py to_webp",
+    "generation_invocations": 1,
+    "review": "Author inspected the stored WebP. Article-only pending owner visual review; no native-speaker or physical-phone acceptance claimed.",
+    "images": [
+      {
+        "word": "ひやひや",
+        "scene": "worried-about-falling-plates",
+        "generationArticleSha256": "1329eb02080038f545cff246a64a0e5255c4851696960fa0ac87da81d6d01eb5",
+        "prompt": "Create one original square, text-free editorial illustration for a Japanese learning card about apprehension that something might go wrong. In a simple home kitchen, one adult is carefully carrying a slightly tilted stack of plain ceramic plates with both hands; the upper plates are offset but none have fallen or broken. Beside them, a second adult watches the plates with clearly worried eyebrows, a tense mouth and both hands half-raised, ready to catch them. Make the observer's anxious anticipation the emotional focus, not anger, excitement or actual injury. Two people with natural anatomy and plausible hands; no one hurt, no shards. Clean modern editorial illustration with soft natural colours, gentle shading and clear shapes, like a picture in a Japanese children's magazine or recipe book. Uncluttered background, coherent perspective, square composition. Absolutely no text, no letters, no kana, no kanji, no numbers, no speech bubbles, no sound-effect lettering, no watermark, no signature. Original artwork, not imitating any specific artist or work.",
+        "originalPngSha256": "cec0d5376cf087c7f1a3b93eb63882472f93575506abf9f83df73a408d0d089c",
+        "webp": "images/ひやひや--worried-about-falling-plates.webp",
+        "webpSha256": "01edaf43bab4b78399741e79a94393389dd3df816300a830d5c9831dcdd7ebb9",
+        "webpBytes": 25194,
+        "observation": "At 512x512, one adult holds a stack of plain plates with a tilted upper plate; another watches with wide eyes, a tense mouth and raised hands. Kitchen perspective and hands appear coherent; no broken dishes, injury, text or watermark visible. The picture associates a possible mishap with anxious anticipation but also fits はらはら. It cannot prove a private feeling, physical cold or a future outcome. No separate discovery or cold-sensation image was generated.",
+        "quizEligible": false
+      }
+    ]
+  },
+  "bassari_article_only_addition": {
+    "basis_commit": "894d30525e87a394b0b5a6de9767d2d1084b6ed3",
+    "date": "2026-11-24",
+    "provider": "Azure OpenAI",
+    "deployment": "img",
+    "generation_model": "gpt-image-2.5-sunburst",
+    "generation_model_version": "2026-09-08",
+    "model_evidence": "Read the existing deployment's properties.model immediately before generation on 2026-11-24; model name and version matched. No deployment or capacity change.",
+    "request_parameters": {
+      "size": "1024x1024",
+      "n": 1,
+      "quality": "medium",
+      "output_format": "png"
+    },
+    "storage": "512x512 WebP, quality 80, method 6",
+    "generated_at": "2026-11-24T16:42:30.248323+00:00",
+    "generation_invocations": 1,
+    "review": "Author inspected the actual stored output. Article-only pending owner visual review; no native-speaker or physical-phone acceptance claimed.",
+    "images": [
+      {
+        "word": "ばっさり",
+        "scene": "substantial-haircut",
+        "generationArticleSha256": "44be3e29027041c3f709486ae1304d00643aeca242fedd83ecf80906770c18ad",
+        "prompt": "A friendly hairdresser stands beside a seated adult customer in a plain salon cape. The customer now has a neat chin-length dark bob. The hairdresser holds up a visibly long detached lock of matching dark hair in one hand and closed salon scissors pointed away from the customer in the other hand. Several long cut locks lie on the floor beside the chair, suggesting a substantial haircut rather than a little trim. Natural hands and tools, calm pleased expressions, simple salon setting, no mirror or before-and-after panels. Clean modern editorial illustration with soft natural colours, gentle shading and clear shapes, like a picture in a Japanese children's magazine or recipe book. One clear subject, uncluttered background, square composition. Absolutely no text, no letters, no kana, no kanji, no numbers, no speech bubbles, no sound-effect lettering, no watermark, no signature. Original artwork, not imitating any specific artist or work.",
+        "originalPngSha256": "9d5b4f85ac2dd9c0ea8b16d641ab5fad4a16d9bdfce45bcdd25351decf22db46",
+        "webp": "images/ばっさり--substantial-haircut.webp",
+        "webpSha256": "378d8511a154e7d3a0aca799c25e31821ff9ed86e030ec041baac942b4c5da73",
+        "webpBytes": 23664,
+        "observation": "At 512x512, a stylist holds a long detached dark lock and raised scissors beside a relaxed customer with a chin-length bob and plain cape. Several long locks are on the floor. Hands and setting appear coherent; no visible lettering, logos or watermark. The scissors are slightly open rather than closed as requested, safely away from the customer; the caption does not assert closed scissors. This is a haircut-result association, not visual proof of the previous length, a single snip, drastic intent or a unique adverb. No second figurative scene was generated.",
+        "quizEligible": false
+      }
+    ]
+  },
   "later_article_only_additions": {
     "basis_commit": "32f8b991f2fcc8a7c0eda171ed1043043a3e95ca",
     "date": "2026-11-21",
@@ -50,6 +108,79 @@
     "docs/onomatopoeia-batch2-sources.json"
   ],
   "additional_lexical_sources": [
+    {
+      "word": "ひやひや",
+      "path": "words/ひやひや.md",
+      "inspection_date": "2026-11-24",
+      "basis_commit": "5b7e2b78afe08b89403859c626d0e1ac16b3dbae",
+      "dictionary": "JMdict via Jisho",
+      "entry": "1556810",
+      "entry_identity_evidence": "The actual result's Edit in JMdict link has q=1556810. The API groups 冷や冷や with reading ひやひや and kana ヒヤヒヤ; both senses are usually-kana and have no returned sense restrictions. The separate ヒヤヒヤ interjection result (entry 2854888, hear hear) is not the selected identity.",
+      "spellings": ["ひやひや", "冷や冷や", "ヒヤヒヤ"],
+      "focus_senses": [2],
+      "dictionary_side_notes": [1],
+      "observed_senses": [
+        {
+          "sense": 1,
+          "summary": "Feeling chilly.",
+          "parts_of_speech": ["Suru verb", "Intransitive verb", "Adverb (fukushi)", "Adverb taking the 'to' particle"],
+          "tags": ["Usually written using kana alone"],
+          "restrictions": []
+        },
+        {
+          "sense": 2,
+          "summary": "Fear, nervousness, anxiety, worry or being on edge.",
+          "parts_of_speech": ["Suru verb", "Intransitive verb", "Adverb (fukushi)", "Adverb taking the 'to' particle"],
+          "tags": ["Usually written using kana alone"],
+          "restrictions": []
+        }
+      ],
+      "sources": [
+        "https://jisho.org/search/ひやひや",
+        "https://jisho.org/api/v1/search/words?keyword=ひやひや",
+        "https://kotobank.jp/word/冷や冷や-612894",
+        "https://kotobank.jp/word/はらはら-605071",
+        "https://www.weblio.jp/content/はらはら",
+        "https://jisho.org/api/v1/search/words?keyword=ぴりぴり",
+        "https://jisho.org/search/どきどき"
+      ],
+      "secondary_dictionary_evidence": "Digital Daijisen's 冷や冷や heading records skin-felt cold (sense 1) and worry/fear (sense 2), with a discovery concern as its latter usage example. Seisen Nikkoku's はらはら worry sense is on Kotobank; Digital Daijisen's はらはら sense 3 on Weblio illustrates watching a child's stage debut. JMdict 1009050 sense 2 identifies a fast-beating heart. These support emphasis comparisons, not an exclusive observer/participant rule.",
+      "quiz_review_basis": "Direct exclusions cover はらはら, びくびく, おどおど, 心配, 不安, 緊張, 恐れる, 恐怖 and 悩む for fear/worry/nervousness; ひんやり and 冷たい cover literal skin-cold. The English titles for ぴりぴり and 尖る both offer 'on edge', also a gloss of ひやひや. JMdict ぴりぴり sense 2 independently supports nervous tension; the 尖る guard concerns the broad displayed label, not a claim that touchiness means fear. Each corresponding card was inspected. The current どきどき label is heart pounding; a shared situation alone does not make it an interchangeable answer. Other temperature actions, scary causes and the illness 風邪 are not the skin-cold state.",
+      "scope_limits": "No upstream JMdict revision, frequency ranking, JLPT level, native-speaker acceptance or app/device execution is claimed. Both Japanese example sentences are original. The existing three historical cohorts and Grammar exercises are unchanged."
+    },
+    {
+      "word": "ばっさり",
+      "path": "words/ばっさり.md",
+      "inspection_date": "2026-11-24",
+      "basis_commit": "894d30525e87a394b0b5a6de9767d2d1084b6ed3",
+      "dictionary": "JMdict via Jisho",
+      "entry": "2395420",
+      "entry_identity_evidence": "Jisho's Edit in JMdict link has q=2395420; the result lists both kana forms under one entry.",
+      "readings": ["ばっさり", "バッサリ"],
+      "focus_senses": [1, 2],
+      "observed_senses": [
+        {
+          "sense": 1,
+          "parts_of_speech": ["Adverb (fukushi)", "Adverb taking the 'to' particle"],
+          "glosses": ["(cutting) with a single stroke", "lopping off (branches, etc.)", "(cutting hair) short"],
+          "tag": "Onomatopoeic or mimetic word"
+        },
+        {
+          "sense": 2,
+          "parts_of_speech": ["Adverb (fukushi)", "Adverb taking the 'to' particle"],
+          "glosses": ["drastically (slash a budget, etc.)", "resolutely", "ruthlessly (discard, etc.)", "completely"],
+          "tag": "Onomatopoeic or mimetic word"
+        }
+      ],
+      "sources": [
+        "https://jisho.org/search/ばっさり",
+        "https://kotobank.jp/word/ばつさり-3216201",
+        "https://kotobank.jp/word/すつぱり-3212751"
+      ],
+      "daijisen_evidence": "The actual ばっさり heading defines vigorous/bold blade cutting (sense 1, branches and long hair) and bold removal (sense 2, removing entertainment expenses from a budget). All three model phrases explicitly show optional (と). The すっぱり heading's senses 1 and 2 support a clean cut and resolute action, including quitting tobacco; the contrast is emphasis, not exclusivity.",
+      "scope_limits": "The separate Seisen Nikkoku entry on the same ばっさり page records an older untidy/sprawling sense; it is not taught or attributed to Daijisen. No upstream JMdict release date, frequency claim, JLPT level or native certification is asserted. The teaching sentences are original.",
+      "quiz_review_basis": "Direct exclusions with すっぱり and きっぱり protect broad decisive-action titles against the ordinary resolute cutting/removal use. The existing すっぱり/きっぱり exclusion remains. ざっくり has no card in the baseline. Cutting/removal verbs name the action rather than the adverbial manner and are not excluded merely for the shared topic."
+    },
     {
       "word": "ぶかぶか",
       "path": "words/ぶかぶか.md",
