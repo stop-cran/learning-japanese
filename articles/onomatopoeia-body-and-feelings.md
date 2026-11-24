@@ -2,7 +2,7 @@
 
 A vivid Japanese expression can describe **what an experience feels like** without identifying its cause.
 These are language-learning comparisons, not medical categories or diagnostic advice.
-The [onomatopoeia index](japanese-onomatopoeia.md) links all 200 word cards.
+The [onomatopoeia index](japanese-onomatopoeia.md) links the full word-card collection.
 
 ## Several ways pain can feel
 
@@ -53,6 +53,22 @@ These are useful tendencies, not an absolute pleasant/unpleasant division.
 [ほっと](../words/ほっと.md) often marks tension easing:
 無事（ぶじ）だと分かって、ほっとした — “I felt relieved to learn that they were safe.”
 It need not involve a visibly happy celebration.
+
+## Apprehension and a pounding heart
+
+[ひやひや](../words/ひやひや.md) describes nervous concern that something might go wrong
+or be discovered. [はらはら](../words/はらはら.md) also expresses anxious suspense,
+often while watching an uncertain event. Both can fit the same risky situation;
+neither is reserved exclusively for an observer or a participant.
+
+- 秘密（ひみつ）がばれるのではないかと、ひやひやしていた。
+  — I was on edge, worried that the secret might get out.
+
+Here, ばれる means “be found out,” and のではないかと introduces the feared possibility.
+The sentence does not say that the secret was actually discovered.
+[どきどき](../words/どきどき.md) describes a pounding heart, which can accompany the
+worry but is not part of what ひやひや must mean. In a different context, ひやひや
+can describe cold felt against the skin; the anxious use does not require that sensation.
 
 ## Cheerfulness, disappointment, and a subdued mood
 

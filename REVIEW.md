@@ -35,6 +35,62 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## ひやひや: new word card and apprehension illustration (2026-11-24)
+
+Three blind reviewers read the complete [ひやひや card](words/ひやひや.md) on uncommitted
+tree `452a18e63acc0d828430208528bf9c115828f3fe` over `5b7e2b78afe08b89403859c626d0e1ac16b3dbae`.
+They received the same rubric and dictionary access. The model IDs below match the local
+response-usage records for each initial review, including the report-bearing turn.
+
+| Facet | Response model / session | Initial verdict and scope |
+| --- | --- | --- |
+| Correctness | `claude-opus-5.5` / `760c86d3-ec99-4672-bb53-32a6d4d877fb` | **CLEAN**; scoped coverage **CLEAN**. Read the card, the three companion-card changes, the feelings-guide passage and the index addition. Checked both senses, spellings, examples and qualified comparisons. |
+| Consistency and quiz safety | `gpt-6.1-sol` / `1111fbc9-0f76-4acf-aef2-6767ee10f343` | **NEEDS FIX**; scoped coverage **CLEAN**. Checked labels, exclusions, links, source record, all 307 tagged/indexed words and 10,112 manifest hashes. Identified an unprotected “on edge” answer on ぴりぴり. |
+| Comprehensibility | `grok-4.7` / `02abe703-f42b-4a4f-a342-8942c57b791b` | **CLEAN**; scoped coverage **CLEAN**. Read the full card, the three adjacent comparisons, the feelings-guide passage and the index row. Suggested illustrating the observer overlap and making the usual-kana note explicit. |
+
+**Reconciliation tree:** `0741c2902f62db45289835dda0903e19207eac91`. The medium
+quiz-safety finding was verified against the displayed ぴりぴり title and JMdict sense 2:
+“on edge” fits both cards, and a shared exclusion of 緊張 does not protect this pair.
+The original consistency reviewer confirmed the direct exclusion fixes it (**resolved**,
+high confidence). The author also guarded the broad “be on edge” title
+on 尖る, without equating its touchiness with fear. The distinct heartbeat title on
+どきどき remains eligible. The [source record](docs/onomatopoeia-scene-images.json)
+and [confusable-word notes](docs/confusable-words.md) document the decisions.
+
+The optional wording changes adopted were a concrete shared watching scene, a usual-kana
+note, a narrower はらはら backlink, “the secret” without an inferred possessor, and an
+explicit ひやひや referent in the guide. The revised citation is Daijisen はらはら sense 3,
+which illustrates watching an uncertain event. The unrelated katakana interjection stays
+in contributor notes rather than expanding the learner card. Only the three changed
+comparison cards' raw-byte pins were refreshed in the scene plan; in that text-only pass,
+no illustration, scene eligibility or Grammar exercise changed. These checks do not establish relative
+frequency, native-speaker acceptance, device behavior or learning effectiveness.
+
+All three original reviewers read the eight-file delta on the reconciliation tree.
+**Correctness, consistency and quiz safety, comprehensibility, and scoped coverage
+were CLEAN** on the revised text. No actionable finding or new regression remained
+within their assigned scopes.
+
+The subsequent illustration pass adds one article-only scene: an anxious observer beside
+someone holding a tilted stack of plates. The author inspected the stored WebP and recorded
+the prompt, hashes and limitations in the [image ledger](docs/onomatopoeia-scene-images.json).
+The original word-card teaching is unchanged. LF checkout rules and matching raw-byte pins
+cover the new card and its three edited comparison cards, avoiding platform-dependent
+scene-plan drift. Existing images and their eligibility remain unchanged.
+
+All three original reviewers checked illustrated tree `62b25cdd8cd958a00a85fefcc1fc016fda2a8e8f`
+against the text reconciliation tree. The report-bearing responses, dispatches and usage
+records matched the three models and sessions above.
+
+| Facet | Illustrated-snapshot result |
+| --- | --- |
+| Correctness | **CLEAN**, scoped coverage **CLEAN**. Inspected the stored WebP: the observer's raised hands and expression beside the still-intact plates fit the caption. No accident has occurred. This scene can also fit はらはら. |
+| Consistency and quiz safety | **CLEAN**, scoped coverage **CLEAN**. Inspected the PNG and WebP, verified their hashes, catalog and manifest bindings, unique ownership, four targeted card pins and absence of a legacy fallback. Both picture-quiz directions exclude the new scene; the 13 word-level exclusions remain intact. |
+| Comprehensibility | **CLEAN** for the prose, caption wording and article-only choice; scoped coverage **CLEAN**. Visual correspondence between the caption and the image was **UNVERIFIED by this reviewer**: the interface rejected both images. Metadata and the prompt were not treated as visual evidence. |
+
+No actionable finding remained. The holder may also look anxious; the caption need not
+specify both people's expressions. Owner visual review and phone testing remain pending.
+
 ## ばっさり: new word card and haircut illustration (2026-11-24)
 
 Three blind, read-only reviewers received the complete [ばっさり card](words/ばっさり.md),

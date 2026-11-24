@@ -13,7 +13,8 @@ The next 100 cards bring the collection to **305 tagged cards**. Their draft pra
 [JMdict capture](onomatopoeia-next-100-jmdict.json) record the selected senses and exercises;
 independent linguistic, editorial and exercise vocabulary reviews remain pending. The new
 illustrations are article-only pending owner acceptance.
-The later **ばっさり** addition brings the live collection to **306 tagged cards**, without
+The later **ばっさり** addition brought the collection to **306 tagged cards**.
+**ひやひや** brings the live collection to **307 tagged cards**, without
 adding Grammar exercises or changing the next-100 batch's pending review status.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
@@ -21,7 +22,7 @@ The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.m
 reuses the twelve-word pilot. Its [historical ledger](grammar-onomatopoeia-sources.json) retains
 the original bounded acceptance. Owner-authorized [collection expansion #59](grammar-onomatopoeia-expansion-sources.json)
 adds selected sentence operations for the remaining 191 cards through nine focused sets and guides.
-That Grammar practice set remains 203 words; the later みっちり, のびのび and ばっさり cards are outside its coverage.
+That Grammar practice set remains 203 words; the later みっちり, のびのび, ばっさり and ひやひや cards are outside its coverage.
 No word identities or schedules change. The [owner-trial protocol](grammar-onomatopoeia-trial.md)
 still requires actual feedback: expansion authorization is not evidence of learning effectiveness.
 
@@ -126,6 +127,34 @@ A second, figurative illustration was not generated because a text-free editing 
 not clearly demonstrate deletion. The [named-scene record](onomatopoeia-scene-images.json)
 preserves the exact prompt, hashes and observations; owner visual review and phone testing remain pending.
 
+For **ひやひや**, [JMdict via Jisho](https://jisho.org/search/ひやひや), entry **1556810**,
+and [Digital Daijisen via Kotobank](https://kotobank.jp/word/冷や冷や-612894) were inspected
+on **2026-11-24**. Both record a physical skin-cold sense and apprehension. The card teaches
+the latter first, with original accident/discovery examples and a secondary literal-cold note.
+冷や冷や and the kana forms share that identity; the separate katakana “hear, hear!”
+entry **2854888** is not imported into it. No JLPT level or relative-frequency claim is inferred.
+The [Seisen Nikkoku はらはら entry](https://kotobank.jp/word/はらはら-605071) records
+apprehension, and [Digital Daijisen はらはら sense 3](https://www.weblio.jp/content/はらはら)
+illustrates watching a child's stage debut. JMdict どきどき entry **1009050** names
+a pounding heartbeat. These are differences of emphasis, not mutually exclusive situations.
+
+Direct exclusions on the new card protect はらはら and the inspected fear/worry labels,
+the “on edge” titles of ぴりぴり and 尖る, and ひんやり and 冷たい for the literal side sense.
+No transitive protection is assumed.
+The current どきどき title explicitly names the heartbeat and is not excluded merely
+because the same event may cause both feelings. Related cards, the body/feelings guide,
+the learner index and the confusable-word inventory link the new comparison.
+This addition does not add or rewrite any Grammar exercise.
+
+The single original illustration shows an anxious observer beside someone holding a tilted
+stack of plates. It illustrates apprehension before a possible mishap, not an accident that
+has already happened. The Copilot image tool generated the original PNG; the existing
+repository converter produced the inspected 512 px WebP. Its scene catalog is article-only:
+the image also fits はらはら, and a still cannot establish an internal feeling. The discovery
+example and skin-cold side sense remain textual rather than receiving additional images.
+The [named-scene record](onomatopoeia-scene-images.json) preserves the exact prompt, hashes,
+provider limits and observations. Owner visual review and phone testing remain pending.
+
 Examples are original teaching sentences selected for ordinary usage, with English translations
 and kana support. They are not quotations or claims of attestation in a particular manga,
 news report, recipe, or corpus. Dictionary recognition is not proof of relative frequency.
@@ -145,7 +174,7 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-The overview links to all 306 current tagged cards, retaining the two historical 100-word groups
+The overview links to all 307 current tagged cards, retaining the two historical 100-word groups
 and listing later additions separately. Five new guides cover
 [fit and disorder](../articles/onomatopoeia-fit-and-disorder.md),
 [behaviour and reactions](../articles/onomatopoeia-behaviour-and-reactions.md),
