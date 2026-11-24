@@ -416,23 +416,13 @@
     },
     {
       "article": "words/低下.md",
-      "before": "quiz_exclusions: [下がる, 下降, 減る, 減らす, 落ちる, 下げる]",
-      "after": "quiz_exclusions: [下がる, 下降, 減る, 減らす, 落ちる, 下げる, 堕落]"
-    },
-    {
-      "article": "words/低下.md",
       "before": "Some decreases are deteriorations, as with concentration; others are simply lower measurements, as with temperature. 低下 does not itself say that the change is morally bad or permanent. [定価](定価.md), \"list price,\" shares the reading but not the meaning.",
       "after": "Some decreases are deteriorations, as with concentration; others are simply lower measurements, as with temperature. 低下 does not itself say that the change is morally bad or permanent. By contrast, [堕落](堕落.md) frames a fall into a worse state, often involving conduct or morality. [定価](定価.md), \"list price,\" shares the reading but not the meaning."
     },
     {
       "article": "words/教養.md",
-      "before": "quiz_exclusions: [文化, 教育, 知識, 学問, 学, 学習]",
-      "after": "quiz_exclusions: [文化, 教育, 知識, 学問, 学, 学習, 培養]"
-    },
-    {
-      "article": "words/教養.md",
       "before": "[文化](文化.md) (ぶんか) can describe a society's culture rather than one person's cultivation. [教育](教育.md) (きょういく) concerns education or teaching, and [知識](知識.md) (ちしき) knowledge more generally. 無教養 (むきょうよう) means uncultured or unrefined.",
-      "after": "[文化](文化.md) (ぶんか) can describe a society's culture rather than one person's cultivation. [教育](教育.md) (きょういく) concerns education or teaching, and [知識](知識.md) (ちしき) knowledge more generally. 無教養 (むきょうよう) means uncultured or unrefined.\n\n[培養](培養.md) shares the broad idea of cultivation, but usually refers to a growth or fostering process rather than a person's cultivated knowledge or refinement."
+      "after": "[文化](文化.md) (ぶんか) can describe a society's culture rather than one person's cultivation. [教育](教育.md) (きょういく) concerns education or teaching, and [知識](知識.md) (ちしき) knowledge more generally. 無教養 (むきょうよう) means uncultured or unrefined.\n\n[培養](培養.md) in this article refers to managed biological growth; 教養 describes a person's cultivated knowledge and refinement. Their English glosses can overlap in “culture,” but the Japanese words are not interchangeable."
     },
     {
       "article": "words/こらえる.md",
@@ -442,7 +432,7 @@
     {
       "article": "words/こらえる.md",
       "before": "[我慢](我慢.md) (がまん), with する, overlaps in endurance and self-restraint. 耐える (たえる) overlaps in enduring a difficulty, but the practical patterns differ: 寒さをこらえる versus 寒さに耐える, \"endure the cold.\"",
-      "after": "[我慢](我慢.md) (がまん), with する, overlaps in endurance and self-restraint. [たえる](たえる.md) overlaps in enduring a difficulty, but the practical patterns differ: 寒さをこらえる versus 寒さに耐える, \"endure the cold.\""
+      "after": "[我慢](我慢.md) (がまん), with する, overlaps in endurance and self-restraint. [たえる](たえる.md) overlaps in enduring a difficulty, but the practical patterns differ: 寒さをこらえる versus 寒さに耐える (さむさにたえる), \"endure the cold.\""
     },
     {
       "article": "words/こらえる.md",
@@ -461,7 +451,8 @@
       {
         "word": "圏内",
         "exclude": [
-          "以内"
+          "以内",
+          "内"
         ]
       },
       {
@@ -471,33 +462,10 @@
         ]
       },
       {
-        "word": "教養",
-        "exclude": [
-          "文化",
-          "教育",
-          "知識",
-          "学問",
-          "学",
-          "学習",
-          "培養"
-        ]
-      },
-      {
         "word": "培養",
         "exclude": [
-          "教養"
-        ]
-      },
-      {
-        "word": "低下",
-        "exclude": [
-          "下がる",
-          "下降",
-          "減る",
-          "減らす",
-          "落ちる",
-          "下げる",
-          "堕落"
+          "教養",
+          "育てる"
         ]
       },
       {
@@ -510,6 +478,7 @@
         "word": "たえる",
         "exclude": [
           "こらえる",
+          "我慢",
           "凌ぐ"
         ]
       },
@@ -557,7 +526,8 @@
         "exclude": [
           "育",
           "養",
-          "耕"
+          "耕",
+          "修"
         ]
       },
       {
@@ -941,9 +911,13 @@
   },
   "sourceDecisions": [
     "news2 and spec2 remain qualifying tags under the owner-approved issue #60 rule; 坑道 1277390 carries both.",
-    "培養 1473360 is the primary 培 support and carries news1. 培う 1473350 also carries news2/spec2, is directly attested for つちか.う, and remains a documented unselected reading rather than a second article.",
-    "培養 and 教養 retain separate word articles but are directly excluded from each other's quiz choices because their displayed titles overlap; the new 培養 article contrasts biological or figurative growth with a person's cultivated knowledge.",
-    "堕落 and 低下 retain separate word articles but are directly excluded from each other's quiz choices because their displayed titles overlap; the new 堕落 article distinguishes a fall into a worse state from a neutral measured decrease.",
+    "培養 1473360 is the primary 培 support and carries news1. 培う 1473350 also carries news2/spec2, is directly attested for つちか.う, and remains a documented unselected reading rather than a second article. The learner article is scoped to the source-verified biological sense; broader JMdict plant-growing and figurative senses are not taught because no attested example was established.",
+    "培養 and 教養 retain separate word articles. One exclusion declaration on the new 培養 card blocks the direct quiz pair in both directions because the displayed titles overlap; its revised article focuses on biological culture and contrasts it with a person's cultivated knowledge.",
+    "堕落 and 低下 retain separate word articles. One exclusion declaration on the new 堕落 card blocks the direct quiz pair in both directions because the displayed titles overlap; the article distinguishes a negative moral or social decline from a neutral measured decrease.",
+    "圏内 and 内 retain separate cards and word identities. The new 圏内 card excludes the direct quiz pair because both can be glossed as inside/within; its article explains the added range boundary.",
+    "たえる and 我慢 retain separate word identities. The new たえる card excludes the direct quiz pair because both can describe bearing difficulty; its article distinguishes withstanding a condition from putting up with discomfort or restraining a desire.",
+    "培 and 修 retain separate kanji cards. The new 培 card excludes the direct quiz pair because 修 has a verified self-cultivation sense that overlaps with 培's cultivate/foster gloss.",
+    "培養 and 育てる retain separate word identities. The new 培養 card excludes the direct quiz pair because both can refer to growing living things; the revised article limits its teaching to managed biological culture.",
     "堀, 濠 and 壕 share JMdict entry 1522060 and reading ほり. Keep words/濠.md and its N3 identity; link it to the new 堀 card and state that 堀 is the everyday spelling.",
     "堪 uses two separate JMdict families for たえる and こらえる despite their shared possible spelling 堪える. Map the kana-headed articles with spelling 堪える.",
     "The 嚇 spellings 嚇す and 嚇かす are marked rarely used in JMdict; neither is the primary support article.",
@@ -962,15 +936,15 @@
       "errors": 0
     },
     "manifest": {
-      "contentVersion": "f21a141bb4f91824",
+      "contentVersion": "09243c4be32646a3",
       "runtimeFiles": 9902
     },
     "contentBudget": {
       "files": 9909,
       "entries": 9925,
-      "retainedBytes": 57015370,
-      "inflatedBytes": 57451442,
-      "localZipBytes": 36608507,
+      "retainedBytes": 57018225,
+      "inflatedBytes": 57454297,
+      "localZipBytes": 36609817,
       "listeningTaskMediaBytes": 5893602
     },
     "batchAudit": {
@@ -1021,9 +995,9 @@
     "whitespace": "Passed with core.whitespace=cr-at-eol; existing content files use CRLF."
   },
   "limits": [
-    "Independent blind reviews and reviewer confirmations remain pending.",
+    "Initial blind reviews are archived; post-fix confirmations could not be collected because the original reviewers were synchronous one-shot agents, so findings were reconciled directly against the revised diff.",
     "No Android runtime, emulator, native-speaker, device or phone acceptance is claimed.",
     "No integration, commit, push, CI, runtime ZIP verification or issue #60 update is claimed."
   ],
-  "status": "drafted; review and publication pending"
+  "status": "review reconciled; publication pending"
 }

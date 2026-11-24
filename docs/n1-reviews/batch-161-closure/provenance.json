@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "batch": 161,
+  "status": "textual-review-reconciled",
+  "base": "e824da99c8a19479bfede4e6fbe88b1f21a4180b",
+  "initialReviewedHead": "bac3477e5323fad11c54e2f2bd424cd5c3693096",
+  "reviewedSnapshotDiffSha256": "668f0d2dc5f256e13a99d50750c9386149941e89518e0c9e05d2ec1e187a1695",
+  "initialDiffSha256": "618b79d3c14ed94e8db8c0317652689a0db1fb9bde0675631116a7ccfdcba601",
+  "reconciliationDiffSha256": "dfdcf62b2c92f73edcb4ac0534dbd06cbeee208f4f92acc277592355669e334e",
+  "contentVersion": "09243c4be32646a3",
+  "reviewers": [
+    {
+      "model": "claude-sonnet-5.5",
+      "initialReport": "reports/r1-claude.md",
+      "followUpReport": null,
+      "facet": "correctness and scoped coverage"
+    },
+    {
+      "model": "gpt-6.2-sol",
+      "initialReport": "reports/r2-gpt.md",
+      "followUpReport": null,
+      "facet": "consistency and quiz safety"
+    },
+    {
+      "model": "grok-4.7",
+      "initialReport": "reports/r3-grok.md",
+      "followUpReport": null,
+      "facet": "comprehensibility and scoped coverage"
+    }
+  ],
+  "evidenceRecords": [
+    "docs/n1-sources/batch-161-progress.json",
+    "docs/n1-sources/batch-161-jmdict.xml",
+    "docs/n1-sources/batch-161-jmdict-selection.json",
+    "docs/content-format.md"
+  ],
+  "reportSha256": {
+    "reports/r1-claude.md": "67e68b60350c5b7f73a7a29d6d99c48acd8ca56c90d339bd0ccc421d4a19cd50",
+    "reports/r2-gpt.md": "97e215f6e2c7d216fee65f56cd886e05be10ee688dadd6a1b1ef95543bda8bbe",
+    "reports/r3-grok.md": "9d1428e517429fd17053efff906030b75daba221a3eb2c3865a3899d721dabfd",
+    "reconciliation.md": "c7dddf16de4c5cd5715babb5f44d58a683ebf70d28469d6bbb1feadbfcbf0232"
+  },
+  "postFixConfirmation": "Unavailable: original reviewers were synchronous one-shot tasks and could not accept follow-up messages; see reconciliation.md.",
+  "limits": [
+    "Textual and source-bounded review only; the original correctness reviewer did not inspect all linked dictionary pages.",
+    "No independent post-fix review report was obtained.",
+    "No Android runtime, emulator, native-speaker, device, phone, or general-release acceptance is claimed."
+  ]
+}
