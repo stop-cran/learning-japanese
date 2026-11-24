@@ -1,0 +1,21 @@
+**All four meaning-quiz exclusions are fixed in the revised cards and audit records.** The teaching and citation fixes are in place except for one residual wording issue in 恒. The 満悦 eligibility record still contradicts itself, and the 忠実 reading-option check is author-reported rather than independently confirmed.
+
+**Snapshot and scope:** `cfef4688ebb87df5d3532cac45d372ccf502da34` against the blind candidate `dc46cc08608fa8714a68a36af77fb9ebd1b8fa37`. I read all five revised-text files and all five diffs in full: six kanji cards, nine word cards, and no edits by me. I also read `followup-facts.txt`, `followup-evidence-diff.txt`, and `correction-evidence.txt`, and cross-checked the relevant local JMdict entries, source records, initial quiz mapping, and labels.
+
+| Original finding | Disposition | Confirmation |
+|---|---|---|
+| 忍ぶ–潜る | **Resolved** | `words/忍ぶ.md:8` declares 潜る directly; the revised word audit matches. |
+| 忠実–ねっしん | **Resolved** | `words/忠実.md:8` declares ねっしん directly; the revised word audit matches. |
+| 悼–愁 | **Resolved** | `kanji/悼.md:14` declares 愁 directly; the revised kanji audit matches. The notes preserve the distinction between mourning a death and broader sorrow. |
+| 追悼–嘆く | **Resolved** | `words/追悼.md:8` declares 嘆く directly; the revised word audit matches. |
+| 満悦 omitted the usual ご満悦 form | **Resolved** | `words/満悦.md:15–22` now states JMdict `1526740`’s usage note and leads with ご満悦. It retains the bare verb, supported by the author’s recorded Daijisen example. |
+| 恒 made 常に sound exclusive | **Partially resolved** | `kanji/恒.md:41` now says **ordinary writing** and separates standard use from quiz selection. The reading row at line 33 still says “is written 常に” without that qualification. |
+| 愁い omitted sense-specific spelling preferences | **Resolved** | `kanji/愁.md:33` now gives both preferences from JMdict `1540740`, without making them strict rules. |
+| 満悦 was described as untagged | **Partially resolved** | The ledger now distinguishes “no qualifying preferred-tier spelling” from genuinely untagged 恭しい, but both revised exception records still conclude “the untagged route.” |
+| Missing dictionary citations and heading links | **Resolved** | 忍ぶ now cites `2126560` and `1321590`, 郷愁 cites `1200550`, and 愚か cites `2832535`. 忠実, 恒例, and 追悼 link the Daijisen character headings 実 sense 4, 例 sense 3, and 追 sense 4, respectively. |
+| Optional 忍ぶ contrast | **Optional, addressed** | The revision contrasts 人目を忍ぶ with 隠す, “hide something else.” |
+| 忠実 / まめ reading-option concern, previously a limit | **Partially resolved (evidence only)** | JMdict `2827450` confirms まめ is valid for this spelling. The author reports it is never offered, but the packet supplies neither generated options nor the filtering logic. Selecting ちゅうじつ as the answer does not itself rule out まめ as a distractor. |
+
+**Remaining actionable items:** In `kanji/恒.md:33`, say that 常に is the *ordinary* spelling and that the recorded Kanjipedia `つね.に` for 恒 is outside standard use and not quizzed. In `docs/n1-sources/batch-169-progress.json:159,333`, replace or explain “untagged route” in both records. Attribute `news2`, `spec2`, and `nf37` to the raw JMdict spelling and reading: the supplied initial mapping lists `nf37` in `readingPriorityTags`, not `priorityTags`, and the evidence diff shows no array change. To close the 忠実 evidence gap, supply the relevant option trace or a focused assertion that まめ is not offered as wrong. No other actionable regression or optional suggestion emerged in scope.
+
+**Navigation, counts, and limits:** The batch remains ten source rows mapped to nine new words and one N2 reuse. The revised text and diffs preserve the 16 previously checked reciprocal pairs and their readings, including 惨–みじめ. The 25 reading rows, ten offered keys, and 30 fixed meaning distractor slots are unchanged. The four additions bring the audited direct-exclusion counts to **55 kanji and 49 new-word declarations**. The selection diff adds `1170650`; the total of 114 families is author-reported. External dictionary and standard-use page checks, exhaustive priority scans, issue #60 eligibility, and mechanical audit results are also author evidence, not checks I reran. No fresh whole-deck, manifest, native-speaker, or device review was performed.
