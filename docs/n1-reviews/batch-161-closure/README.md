@@ -1,7 +1,8 @@
 # Batch 161: textual-review reconciliation
 
-**Status:** The reported findings were reconciled against the revised candidate. Publication is
-pending; this is not Android, phone, native-speaker or general-release acceptance.
+**Status:** The reported findings were reconciled, and the content commit is published with matching
+CI and exact ZIP/runtime verification. This is not Android, phone, native-speaker or general-release
+acceptance; see [`batch-161-publication`](../batch-161-publication/provenance.json).
 
 ## Candidate snapshots
 
