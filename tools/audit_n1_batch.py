@@ -57,10 +57,18 @@ def lexical_pair(entry, spelling, reading, *, reject_search_only_readings=False)
     return False
 
 
-def support_spelling(row, meta, text, kanji):
+def support_spelling(row, meta, text, kanji, entries=()):
     spelling = row.get("spelling")
     if spelling is None:
         return meta["word"]
+    if meta.get("kanji") and spelling != meta["word"]:
+        sense = row.get("senseNumber")
+        require(isinstance(spelling, str) and kanji in spelling and spelling in text
+                and type(sense) is int and any(
+                    all(teachable_lexical_pair(entry, form, meta["reading"], sense)
+                        for form in (spelling, meta["word"])) for entry in entries),
+                f"Alternate spelling lacks a shared reading and sense: {row['article']}")
+        return spelling
     require(isinstance(spelling, str) and meta["word"] == meta["reading"]
             and not meta.get("kanji") and kanji in spelling and spelling in text,
             f"Invalid kana-headed support spelling: {row['article']}")
@@ -733,7 +741,8 @@ def audit(root, batch):
         c, name = row["kanji"], row["article"]
         meta = metadata(root, name)
         text = (root / name).read_text(encoding="utf-8")
-        spelling = support_spelling(row, meta, text, c)
+        spelling = support_spelling(row, meta, text, c,
+                                    (families[i] for i in row["entryIds"] if i in families))
         require(meta["reading"] == row["primaryReading"]
                 and bool(row["newArticle"]) == (name in new_words)
                 and row["entryIds"] and set(row["entryIds"]) <= families.keys()

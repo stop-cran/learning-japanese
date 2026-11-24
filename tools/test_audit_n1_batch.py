@@ -149,6 +149,17 @@ class N1BatchSupportSpellingTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
             support_spelling(self.row, self.meta, "Hiragana is usual.", "又")
 
+    def test_kanji_headed_variant_requires_shared_sense_for_both_spellings(self):
+        meta = {"word": "落ちる", "reading": "おちる", "kanji": ["落"]}
+        row = {"article": "words/落ちる.md", "spelling": "墜ちる", "senseNumber": 1}
+        entry = ET.fromstring("""<entry><k_ele><keb>落ちる</keb></k_ele>
+            <k_ele><keb>墜ちる</keb></k_ele><r_ele><reb>おちる</reb></r_ele>
+            <sense><gloss>fall</gloss></sense></entry>""")
+        self.assertEqual(support_spelling(row, meta, "墜ちる", "墜", [entry]), "墜ちる")
+        ET.SubElement(entry.find("sense"), "stagk").text = "落ちる"
+        with self.assertRaisesRegex(ValueError, "shared reading and sense"):
+            support_spelling(row, meta, "墜ちる", "墜", [entry])
+
     def test_rejects_spelling_without_mapped_kanji(self):
         with self.assertRaisesRegex(ValueError, "kana-headed support spelling"):
             support_spelling(self.row, self.meta, self.text, "叔")
