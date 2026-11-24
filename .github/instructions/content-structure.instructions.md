@@ -68,6 +68,7 @@ does not establish linguistic correctness. Read a real card alongside the format
    If a note says "in the examples," check the verb and the noun each particle marks in each sentence.
    Name the example when the explanation applies to only one.
 3. For kango, explain what each kanji contributes and the relation between them (e.g. opposite pair 長 + 短).
+   When explaining a word with kana after a kanji, distinguish the reading of the whole part from the sounds written by the kanji itself.
 4. Verify word/reading pairs in JMdict. Use natural or attested examples only; do not invent collocations to prove a point.
    Respect restrictions that tie a reading or sense to particular spellings. A dictionary's inclusion of an item does not establish that it is common.
 
@@ -89,3 +90,6 @@ Leave consequential unresolved claims out of the teaching text or explicitly mar
   the comb is the tool in 櫛で髪をとかす but the object in 櫛をかばんに入れる. The same check caught a verb mismatch
   in [汗](../../words/汗.md): the first example describes sweating (汗をかく), the second wiping sweat away (汗を拭く).
   This is an editorial check, not a validator rule.
+- **2026-11-24 - Okurigana in compounds (clarify):** [待ち合わせる](../../words/待ち合わせる.md) attributed
+  まち to 待 and あわ to 合, including kana already visible in the spelling. Compare the entries for
+  [待](../../kanji/待.md) and [合](../../kanji/合.md): in 待ち and 合わせる the kanji write ま and あ.
