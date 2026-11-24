@@ -27,7 +27,10 @@ were normalized to repository-relative paths; findings, evidence, scope and limi
 Model names are from the agent execution records. These were synchronous, one-shot agent tasks.
 Post-fix messages were rejected by the runtime, so no independent follow-up reports were obtained.
 [`reconciliation.md`](reconciliation.md) records the author's direct post-fix check against each
-original finding and its evidence; it does not represent reviewer confirmation.
+original finding and its evidence; it does not represent reviewer confirmation. After publication,
+a [replacement reviewer](reports/post-publication-confirmation.md) independently checked the actual
+corrections. The original reports and author reconciliation are unchanged. Their recorded SHA-256
+values identify the committed Git blobs (LF), not Windows checkout copies (CRLF).
 
 ## Checks and boundaries
 
