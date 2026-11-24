@@ -2,8 +2,8 @@
 
 **Choose the unit, write the whole expression, then learn its reading.** These are
 different skills. Knowing that age uses 歳 does not yet mean you can read 二十歳.
-The N5 foundation has an N4-oriented extension. These are practical teaching
-targets, not an official exhaustive JLPT checklist.
+The N5 foundation has an N4-oriented extension and selected later-level items.
+These are practical teaching targets, not an official exhaustive JLPT checklist.
 
 ## Three kinds of practice
 
@@ -115,6 +115,21 @@ The final part still controls important counter sounds: **十一本（じゅう�
 is eleven long objects; **二十三本（にじゅうさんぼん）** is twenty-three.
 三十本 is さんじゅっぽん / さんじっぽん. In contrast, 三十枚 is
 さんじゅうまい and 三十台 is さんじゅうだい: do not contract every counter.
+
+The native general series with つ stops at ten, but abstract counts continue.
+**質問を十個用意した（しつもんをじゅっこよういした）** means “I prepared ten
+questions.” For eleven individual items, including questions, the general count
+is **十一個（じゅういっこ）**; do not form 十一つ.
+**十一の質問（じゅういちのしつもん）** means “eleven questions.”
+
+A bare number can also be used in some contexts:
+**りんごが十一あります（じゅういち）** means “There are eleven apples.”
+Do not assume that omitting the counter fits every context.
+For quiz or test problems,
+[問（もん）](https://bunpro.jp/ja/vocabs/%E5%95%8F) is a specific counter:
+**テストには問題が十一問あります（じゅういちもん）** means “The test has
+eleven questions.”
+It counts test/exam questions, not every conversational question.
 
 For people, 十一人 is じゅういちにん, not a compound ending in ひとり.
 十四人 ends in よにん. 名 is a formal person-count alternative, while 回 and 度
