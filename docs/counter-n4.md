@@ -218,3 +218,50 @@ forced real Android importer passed after the 九人 reading correction. Content
 commit `9ecd5b6873d0cdd27929e2b74899ca2c769bd25c` introduced this payload. Its
 signature used an unverified email override; the follow-up release-record commit
 uses the repository's established signing identity without rewriting history.
+
+### Later count extensions
+
+These individually leveled additions are outside the historical totals above:
+
+| File | Level | Exercise | Basis |
+| --- | ---: | --- | --- |
+| `abstractcounts.json` | N4 | Count eleven questions with 個; reading practice uses the displayed 十一個. | Extends the N5 ～つ series beyond ten with the general-count form in the [Tofugu ～つ table](https://www.tofugu.com/japanese/japanese-counter-tsu/). |
+| `mon.json` | N2 | Count questions on a test with 十一問. | [Bunpro's 問 entry](https://bunpro.jp/ja/vocabs/%E5%95%8F) classifies this counter as N2 and gives test-question examples. |
+
+These levels are editorial study placements, not official JLPT item assignments.
+The files remain separate so each exercise inherits its own level in the app.
+The app's N5, N4 and N3 filters do not include N2: the 問 exercise is available
+under **All**, not a separate N2 filter.
+
+The [Tofugu table](https://www.tofugu.com/japanese/japanese-counter-tsu/) lists
+十一 and 十一個 and discusses abstract questions. An
+[attested conversational example](https://note.com/2ji_oyayubi/n/nfcb19496f16a)
+uses 質問を十個, while [this counting lesson](https://www.italki.com/ja/podcast/episode/93zuwbvzervmaix60yrjpr)
+uses a bare １１ in りんごが１１あります. An
+[interview article](https://www.aceround.app/ja/blog/questions-to-ask-interviewer-at-end/)
+uses 11の質問. These support the respective constructions, not an unrestricted
+rule that a counter may always be omitted. Neither original teacher-context
+sentence was directly corroborated; the bare-count sentence is not presented as
+a model or accepted in the 個-constrained exercise. That is not a claim that
+either sentence is ungrammatical.
+
+### Later count review
+
+An independent `kanji-accuracy-reviewer` (GPT-6.1 Terra) examined both exercises,
+their article passage, six card links, level notes and manifest at
+`de6dd519bc6efc9e8d0b392daf7291727ce4a915` plus the candidate changes. The
+original reviewer rechecked the staged diff against
+`ac5304bac6a9352c7e6d98526e932875e6445edf`, manifest `74be191d80ca5f69`.
+Its final verdicts for these changes were **CLEAN** for correctness, scoped
+coverage and comprehensibility.
+
+Reconciliation: the ambiguous cues and missing translations are **resolved**.
+The uncorroborated teacher-context examples are **resolved by narrowing**:
+the exercise requests 個 and the article uses supported examples instead. The
+review did not establish that either original sentence was wrong.
+
+The review also identified two pre-existing issues in `kanji/十.md`, outside this
+change: its metadata omits the bound reading そ listed by
+[kanjiapi.dev](https://kanjiapi.dev/v1/kanji/%E5%8D%81), and its account of 半
+conflicts with [Kanjipedia's 半 entry](https://www.kanjipedia.jp/kanji/0005726200).
+The existing 十色 and 日本刀 lookups were not verified.
