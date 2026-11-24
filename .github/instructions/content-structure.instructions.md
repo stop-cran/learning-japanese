@@ -65,6 +65,8 @@ does not establish linguistic correctness. Read a real card alongside the format
    `tags`.
 2. Sections: `## Meaning` (with examples, each with English translation), `## How the kanji combine` (relation: opposites, synonyms,
    modifier+head, verb+object, etc.; optional for kana-only words with `kanji: []`), `## Synonyms and antonyms`, `## Distinctive meaning` (register, nuance, when not to use it).
+   If a note explains a particle "in the examples," check which word it marks and which verb it goes with in each sentence.
+   Name the example when the explanation applies to only one.
 3. For kango, explain what each kanji contributes and the relation between them (e.g. opposite pair 長 + 短).
 4. Verify word/reading pairs in JMdict. Use natural or attested examples only; do not invent collocations to prove a point.
    Respect restrictions that tie a reading or sense to particular spellings. A dictionary's inclusion of an item does not establish that it is common.
@@ -83,3 +85,6 @@ Leave consequential unresolved claims out of the teaching text or explicitly mar
   missing links to existing cards grounded the authoring checks above. Distinguish missing phonetic evidence from an assertion of no phonetic component.
 - **2026-10-08 - Review-driven additions:** Synonymous quiz choices and the actual four-choice fallback justify the linked quiz rule;
   unexplained 辵/辶 and 艸/艹 forms justify the learner-facing radical clarification. These are editorial checks, not new historical claims.
+- **2026-11-24 - Example scope (add):** The Russian B256 review surfaced an inherited error in [櫛](../../words/櫛.md):
+  the comb is the tool in 櫛で髪をとかす but the object in 櫛をかばんに入れる. The note now distinguishes the two;
+  this is an editorial check, not a validator rule.

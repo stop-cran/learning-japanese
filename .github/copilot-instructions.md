@@ -80,8 +80,9 @@ are part of the exercise, not interchangeable decoration.
   **consistency and quiz safety**, and **comprehensibility**. Include scoped coverage in these assignments and retain its separate report verdict;
   consistency includes related counts, navigation, source records and manifest integration, not just the new file.
   Give all reviewers the same identified snapshot, rubric and source access, and the complete new card/article as a shared sample.
-  Verify and record the actual reviewer models; if a required independent family cannot be provided or verified,
-  disclose the limit and ask the user rather than claiming the requirement passed.
+  Verify which model produced each review. When execution records distinguish the launch label, dispatch and
+  response models, record discrepancies; a launch label alone does not prove a second family. If a required
+  independent family cannot be provided or verified, retain the report, disclose the limit and ask the user.
 - For edits to existing cards/articles, keep review proportional: one reviewer per selected model can cover correctness, scoped coverage and comprehensibility
   for a small edit; multi-model review is not mandatory unless requested. Large batches may use bounded facet assignments.
   State each reviewer's files and facet so no unassigned area is accidentally reported as reviewed.
@@ -205,6 +206,9 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-24 - Reviewer attribution (clarify):** In Russian B256 the correctness review's launch and completion
+  labels named one family, while the first dispatch and all 42 responses, including the report, named another.
+  Count the family that performed the work, not the label; this changes neither the findings nor the required facets.
 - **2026-11-10 - New-card facet review (add/resolve conflict):** Review of [みっちり](../words/みっちり.md)
   identified a missing direct `密` quiz exclusion, a secondary dictionary gloss promoted into an insufficiently supported
   model example, and live collection counts needing separation from the historical 203-word practice set.
