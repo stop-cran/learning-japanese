@@ -132,6 +132,41 @@ the [content format](../docs/content-format.md) remains canonical.
   [archive packaging contract](../README.md#app-archive-packaging), run the CI budget check and verify
   the exact GitHub ZIP preserves every runtime manifest entry/hash; keep authoring evidence in Git.
 
+### N1 kanji batches
+
+These apply to the JLPT N1 kanji expansion (issue 60). The current state and next steps are in the
+[notes](../docs/n1-authoring-notes.md#continuation-state-after-b170-2026-11-25) and the
+[2026-11-25 hand-off](../docs/n1-handoffs/2026-11-25/README.md); each rule below comes from a batch that hit it.
+
+- **Evidence of delivery.** Fetch `origin/main` and re-derive the counts from `docs/n1-sources/source-index.json` and the
+  publication receipts before planning, because other sessions merge to `main` meanwhile. A `batch-N-progress.json`
+  ledger is not proof of publication: B106 and B107 keep `published: []`, yet 勅 and 勘 are cards on `main`. Use the
+  receipt, the CI run of that exact commit and the ZIP comparison.
+- **One writer, drafts off shipped paths.** One session at a time authors and publishes N1 batches. Keep an unreviewed
+  membership file and its `strokes/*.json` out of `main`: `strokes/` is listed in `manifest.json` and ships in the
+  archive, so a draft stays in the batch worktree or the hand-off folder until its reviews are closed.
+- **Re-root after an integration merge.** When `main` moved after the draft was rooted, set `baseCommit` in both the
+  membership file and the ledger and record `integration`, as B167 to B169 did: `tools/audit_n1_batch.py` requires the
+  two to match, and the writer's close script (`code/writer/b170_close.py` in the hand-off) does not rewrite it. Keep
+  reviewed blobs byte for byte, combine an upstream edit to the same card by hand (B168 問), rebuild `manifest.json`
+  and rerun the gates.
+- **Metadata ids on one line.** `meta_scan.py` (under `docs/n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/`)
+  counts JMdict ids only on the first `Metadata:` line, so ids on a wrapped continuation or a `Dictionary:` line read as
+  missing. B167 閉 and 凡 and B168 縫 collapsed theirs into one line.
+- **Scripts and inputs live on the writer PC.** The batch scripts hard-code the worktree name and base commit, and
+  `n1lib.py` defaults `N1_REPO` to a stale clone: adapt a copy and set `N1_REPO`. The pinned JMdict and the other
+  inputs outside Git cannot be re-downloaded (EDRDG serves only its latest file); never substitute one silently, add a
+  new pin record as B135 did and disclose it.
+- **Quoting and rare glyphs.** Quote dictionary text only as short cited clauses, never a full Digital Daijisen entry
+  or a scraped page. Avoid glyphs in U+2E80 to U+2FDF and U+3400 to U+4DBF, and check any other code point in Android's
+  `RareHan.isRare` ranges (U+F900 to U+FAFF, U+20000 to U+2FFFF) first: `RareHanTest` fails on a rare code point that is
+  missing from its `covered` set, and 13 already used are missing from the fonts.
+- **Word tags and levels.** JMdict `news2` and `spec2` count as qualifying tags (owner decision, issue 60 comment
+  7112026459, applied since B160); name them in the ledger note, as B170 did for 慶弔. New words carry no JLPT level.
+- **Budget.** The retained-content guard is 62 MiB, 2 MiB under Android's 64 MiB importer limit, so raising it past
+  64 MiB needs an updated importer to reach users first. Ask the owner before raising any guard; the last ten batches
+  added about 72 KB of retained bytes each.
+
 ## Worked example: an attachment rule left implicit
 
 This is an illustrative rendering of a resolved issue, not a new review or a verbatim archived report. The [original construction explanation](https://github.com/stop-cran/learning-japanese/blob/3e80a29aaf02434a4b4fffacf6840f05cad7c142/articles/koto-wake-and-formal-nouns.md#L64-L95) used "clause + わけだ" and the correct example 日本語が上手なわけだ without explicitly explaining the connector.
@@ -235,6 +270,12 @@ These checks concern the local clone and the push, not learner content; they car
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-25 - N1 kanji hand-off (add):** Saving the N1 work before an app restart collected failures that the rules
+  above did not cover. B106 and B107 keep `published: []` although 勅 and 勘 are on `main`. Writer checkpoints 155 to 158
+  disagreed on whether `words/悪戯.md` is CRLF or LF (the committed blob is LF; a checkout follows `core.autocrlf`). Two checkpoints
+  held verbatim Digital Daijisen tables, which a scan of the hand-off set found and the hand-off trimmed. Thirteen code
+  points on 22 cards are missing from Android's rare-glyph fonts. B167 to B169 each re-rooted `baseCommit` after merging
+  `main`, and the B170 close script does not. The new subsection records these checks; it changes no learner-facing rule.
 - **2026-11-25 - Local publishing pitfalls (add):** Publishing the Russian-edition guidance from a long-lived local stack hit
   four mechanical failures. Two worktree creations under a long root failed with `Filename too long` after minutes (deepest
   tracked path: 165 characters). Two local content commits duplicated

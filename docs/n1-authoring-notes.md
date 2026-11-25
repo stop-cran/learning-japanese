@@ -136,6 +136,115 @@ rule for new word cards and learner articles asks for three reviewers of
 different model families; no reply to the proposal has been posted on issue 60
 yet.
 
+## Continuation state after B170 (2026-11-25)
+
+B170 (慈 慕 慨 慶 憂 憤 憾 懇 懲 遺) is the last published batch: content
+`bb6d6682`, receipt `beca991c`. Delivery is **728/1,228**: 722 N1 cards plus
+the six retained N2 cards 保 案 派 第 策 結, with **500 remaining** (305 Joyo
+rows and 195 name-use rows). B171 is prepared but not drafted: its evidence,
+card plan, membership file and ten stroke files exist, its content and render
+scripts do not, and nothing is under review or running. Main has since gained
+docs-only commits from other sessions, so fetch it and diff it against
+`beca991c` before planning.
+
+The [2026-11-25 handoff](n1-handoffs/2026-11-25/README.md) preserves what was
+only on the writer PC: scratch tooling, the B171 draft files (kept off their
+shipped paths), evidence and the resume steps. Where its README or this section
+disagrees with the copied writer checkpoints, the README and this section win.
+
+Where the records are: these notes have no per-batch section after B159. For
+each batch N from 108 to 170 the ledger is `n1-sources/batch-N-progress.json`
+and the reviews and receipt are `n1-reviews/batch-N-closure/` and
+`batch-N-publication/`; B160 to B170 also keep `batch-N-membership.json`,
+`batch-N-jmdict-selection.json` and `batch-N-jmdict.xml` in `n1-sources/`. The
+narrative is in the issue 60 checkpoint comments. Do not infer publication from
+a ledger alone: B106 and B107 keep `published: []`, yet 勅 and 勘 are cards on
+main that the checkpoints
+([B106](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6725961665),
+[B107](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6740987966))
+count as delivered. Use the publication receipt, the CI run of that exact
+commit and the ZIP comparison.
+
+Standing rules from the owner's instructions:
+
+- One sequential writer authors and publishes N1 batches; no second session
+  does so meanwhile.
+- Blind reviews run one after the other: claude-sonnet-5.5, then gpt-6.2-sol,
+  then grok-4.7, each with initial, follow-up and final stages in the same
+  sessions (B168 to B170). Record the models that actually responded and the
+  limits the reviewers state.
+- A claim a card cannot verify is dropped and the teaching rethought, then the
+  review is repeated. Two clashing cards are replaced by one card written from
+  both, then reviewed again.
+- New words carry no JLPT level. JMdict `news2` and `spec2` count as qualifying
+  tags under the owner's decision, applied since B160
+  ([comment 7112026459](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-7112026459));
+  name the tags in the ledger note, as B170 did for 慶弔.
+- Quote dictionary text only as short cited clauses; never commit a full
+  Digital Daijisen entry or a scraped page. Two writer checkpoints were trimmed
+  in the handoff for this reason.
+- Budget: the retained guard is 62 MiB (56 MiB until `f072122b`), 2 MiB under
+  the Android importer's 64 MiB limit. Baseline retained bytes are 57,686,579,
+  so about 7.3 MB remain against roughly 3.6 to 6.5 MB for the remaining ~50
+  batches, and the 42 MiB compressed guard has about 7.0 MB left. The owner said
+  "try x2 for now. Then maybe we increase more": ask before raising a guard, and
+  note that going past 64 MiB needs an updated importer to reach users first.
+
+Pitfalls found in B167 to B170 and the B171 preparation:
+
+- Main moves while a batch is under review. The integration merge must also set
+  `baseCommit` in the membership file and the ledger and record `integration`
+  as B167 to B169 did, because `tools/audit_n1_batch.py` requires the two to
+  match and `b170_close.py` does not rewrite it. Reviewed article and stroke
+  blobs stay byte for byte (39, 39 and 36 in B167 to B169); an upstream edit to
+  a card the batch also edited is combined by hand (B168 問).
+- The batch scripts hard-code the worktree name, the base commit and paths, and
+  `n1lib.py` defaults `N1_REPO` to a stale clone. Adapt a copy, set `N1_REPO`,
+  and never rerun a script unchanged.
+- `meta_scan.py` counts JMdict ids only on the first `Metadata:` line, so ids on
+  a wrapped continuation or a `Dictionary:` line look missing. B167 閉 and 凡
+  and B168 縫 collapsed theirs into one line; 握 (wrapped) and 警 (`Dictionary:`
+  only) still need it in B171.
+- Cards and words are LF in the index but CRLF in a Windows checkout
+  (`i/lf w/crlf` for 悪戯, 警, 握, 暴 and 産), while this notes file is CRLF in
+  the index. Writer checkpoints 155 to 157 call 悪戯.md CRLF and 158 corrects
+  them. Check `git ls-files --eol` and keep the committed blob's endings.
+- Quiz exclusions name exact kanji IDs, apply to meaning choices, and exclude
+  only the declared direct pair, whichever card declares it
+  (`docs/content-format.md`).
+- PowerShell mangles kanji passed as arguments: pipe a here-string to
+  `python -X utf8 -`, set `PYTHONIOENCODING=utf-8` and redirect output to a file
+  before reading it.
+
+Other open items:
+
+- Inputs outside Git exist only on the writer PC: the pinned JMdict
+  (`n1-sources/continuation-inputs.json`, sha256 `42bd8fbc…`), the Joyo table
+  PDF text and the KanjiVG stroke cache. EDRDG serves only its latest JMdict, so
+  the pin cannot be re-downloaded. Never substitute a newer file silently; add a
+  new pin record as B135 did and disclose it.
+- Android's `RareHan.kt` routes 25 code points used in the cards to bundled
+  fonts, and 13 of them are missing from the assigned font and from
+  `RareHanTest` (`U+2E8C U+2E95 U+2EA4 U+2ECC U+2ECF U+2ED6 U+3404 U+342E U+4343
+  U+2008A U+21C2A U+2298F U+27607`). Twenty-two earlier cards are affected
+  ([comment 7138231670](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-7138231670));
+  B169 and B170 added none. It is a static cmap check, not a device
+  observation, and it blocks whole-set acceptance only. New cards avoid U+2E80
+  to U+2FDF and U+3400 to U+4DBF, and check any other code point in
+  `RareHan.isRare`'s ranges (U+F900 to U+FAFF, U+20000 to U+2FFFF) first:
+  `RareHanTest` fails on a rare code point missing from its `covered` set.
+- Eleven name-use rows are blocked: 崚 彪 晟 燿 舜 赳 have no usable pinned
+  spelling, and 侑 嵯 怜 滉 瑚 need out-of-scope constituents. Recheck each at
+  its turn and never fabricate support.
+- Limits stand: dictionary, Kanjipedia, standard-table and KanjiVG checks are
+  author records, quiz checks are static simulations, and no native-speaker,
+  Android, device or whole-set acceptance is claimed.
+
+Next: write `b171_content.py` and `b171_render.py` from the B170 copies, render,
+run the gates, make the signed draft commit, review, close, integrate and
+publish (target 738 delivered, 490 remaining), then reselect B172 on the B171
+receipt.
+
 ## Batch 159: published
 
 Batch 159 adds the cards 厘 又 叔 叙 吉 后 吏 吟 呈 呉 (source rows 135, 137, 139,
