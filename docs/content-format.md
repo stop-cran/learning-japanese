@@ -482,6 +482,10 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   glossing `いい` as “you're allowed to” gives the permission answer; glossing `撮りたい` as “want to take a photo” rules out the
   stated alternative of acting against the employee's wish. Leave those occurrences untappable and explain them after the answer.
   By contrast, “doesn't want to run” for `走りたくない` does not identify **who ran** in the [runner task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2665-L2691).
+- Check the hint's **reading** as well as its gloss against accepted answers. In the [recording-device task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/ability-perception.json#L1437-L1475),
+  `機械` means “machine”, but its tap would single out `きかい`, the accepted kana answer for `機会` (“opportunity”).
+  Both label readings are intentionally supplied in the instructions. Withhold this tap, not the valid kana answer;
+  the two words being homophones is not by itself a reason to hide either word in other exercises.
 
 The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 prompts in 32 files at
 `4b53b854aa9138772f9f6d43c2f58c8474d0f5a3`. The initial pilot covers **four** state-change prompts, not the whole corpus.
