@@ -55,7 +55,9 @@ task, not just the Japanese sentence or intended key:
 - Check lexical boundaries and senses by occurrence. Correct offsets and hashes do not prove that a matched substring
   is a word, or that its gloss fits this prompt.
 - Count genuinely different contexts, not item IDs or noun substitutions. Paired forms and interpretations share keys;
-  useful repetition is not independent transfer evidence or demonstrated mastery.
+  useful repetition is not independent transfer evidence or demonstrated mastery. When a reader puts paired tasks
+  on one page, try them in order with choices hidden. Does the neighboring instruction or the previous answer's
+  explanation give away the next answer? If so, separate the attempts or present the pair as a worked comparison.
 - For group/dependency/chapter changes, follow the [shared curriculum contract](../docs/content-format.md#prerequisites-and-roadmap-chapters).
   Review the actual prerequisite operation, incoming/outgoing edges, both leaf and collapsed chapter cycles, partial availability,
   unmapped versus unowned content, stable identities and old-reader compatibility. Keep reasons and exact ownership in the
@@ -206,6 +208,10 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-25 - Paired exercises in a reader (clarify):** In the [causative short-form exercises](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2346-L2531),
+  one instruction supplies 読ませられた and its inverse supplies 読まされた. The Russian offline reader showed
+  both even with choices hidden and answers closed. Study library 017 shows one direction at a time; the Japanese
+  prompts and keys are unchanged. This was a reader presentation finding, not an observed Android grading defect.
 - **2026-11-24 - Reviewer attribution (clarify):** In Russian B256 the correctness review's launch and completion
   labels named one family, while the first dispatch and all 42 responses, including the report, named another.
   Count the family that performed the work, not the label; this changes neither the findings nor the required facets.
