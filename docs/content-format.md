@@ -502,6 +502,10 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   ask about the chairs in one question and the [spare handouts](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/transitivity-results.json#L1617-L1628) in the other.
   A hint for `もう` (“already”) or `まだ` (“not yet”) gives the stage of one item and helps infer the other, even with choices hidden.
   Keep both stage words untappable in these two questions; hints identifying the chairs or handouts can stay.
+  Check the hints together with the choices hidden **and** shown. In the [nonmetal-part task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/descriptive-contexts.json#L1656-L1665),
+  the learner must select the part from the materials note. Together, hints for `本体` (body), `ふた` (lid) and `木` (wood)
+  give away which part to name. [Both choices](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/descriptive-contexts.json#L1700-L1708) already supply `ふたは`;
+  checking only that view misses the selection required in a typed answer. `金属` (metal) can stay tappable: the cue supplies it in both modes.
   Protect the part of a predicate that distinguishes the choices, not necessarily the whole phrase. In the
   [train pair](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/judgment-expectation.json#L1168-L1226),
   `出た` means “departed” in both sentences; leave `と思っている` / `と思っていた` for the learner to interpret.
