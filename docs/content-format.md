@@ -486,6 +486,12 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   `機械` means “machine”, but its tap would single out `きかい`, the accepted kana answer for `機会` (“opportunity”).
   Both label readings are intentionally supplied in the instructions. Withhold this tap, not the valid kana answer;
   the two words being homophones is not by itself a reason to hide either word in other exercises.
+- When a task asks **who did what**, a translated hint can give away a role through its grammar. In the
+  [grandmother's wish](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/hopes-wishes.json#L1336-L1357),
+  `祈りました` marks past tense, not gender. Russian `молилась` (“prayed”, feminine) points toward the grandmother
+  before the learner has distinguished the person praying from the person returning. A hint can keep the tense without
+  assigning the role: `молиться (здесь — прошедшее время)`. This does not require neutralizing every verb hint;
+  in the [event-success task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/hopes-wishes.json#L648-L670), the learner supplies the wish, not the person praying.
 
 The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 prompts in 32 files at
 `4b53b854aa9138772f9f6d43c2f58c8474d0f5a3`. The initial pilot covers **four** state-change prompts, not the whole corpus.
