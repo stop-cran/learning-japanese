@@ -498,6 +498,10 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   glossing `いい` as “you're allowed to” gives the permission answer; glossing `撮りたい` as “want to take a photo” rules out the
   stated alternative of acting against the employee's wish. Leave those occurrences untappable and explain them after the answer.
   By contrast, “doesn't want to run” for `走りたくない` does not identify **who ran** in the [runner task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2665-L2691).
+  Check both items in a shared passage. The [meeting tasks](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/transitivity-results.json#L1488-L1499)
+  ask about the chairs in one question and the [spare handouts](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/transitivity-results.json#L1617-L1628) in the other.
+  A hint for `もう` (“already”) or `まだ` (“not yet”) gives the stage of one item and helps infer the other, even with choices hidden.
+  Keep both stage words untappable in these two questions; hints identifying the chairs or handouts can stay.
   Protect the part of a predicate that distinguishes the choices, not necessarily the whole phrase. In the
   [train pair](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/judgment-expectation.json#L1168-L1226),
   `出た` means “departed” in both sentences; leave `と思っている` / `と思っていた` for the learner to interpret.
