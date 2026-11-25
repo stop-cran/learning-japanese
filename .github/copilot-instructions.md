@@ -27,6 +27,7 @@ Native PR reviews keep their platform's supported format. Do not assume support 
 - **Correctness:** Check whole constructions, including attachment forms, tense, polarity, register, and translations. An isolated correct example may still leave a necessary rule unexplained.
 - **Scoped coverage:** Check prerequisites and distinctions needed to answer the article's stated question. Do not demand every related word, historical development, or grammatical framework.
 - **Comprehensibility:** Prefer contrastive examples that actually demonstrate the claimed distinction. Supply selective kana readings for unfamiliar words, ambiguous spellings, and classical forms; explain technical terms when needed.
+- When a diagram teaches by position, inspect it in the reader, not just in Markdown. Check that each Japanese label still lines up with its time interval or gloss and that the full row is reachable on a narrow screen.
 - **Qualified claims:** Separate strict rules from tendencies, learning shortcuts, and context-dependent translations. Acknowledge meaningful differences between grammatical frameworks instead of treating a classification as universal.
 - **Linguistic layers:** Distinguish grammatical function, lexical identity, spelling, pronunciation, contraction, register, historical usage, and present-day naturalness. Another reading of the same kanji does not invalidate a documented reading. Kanji associations are not by themselves etymology or evidence of fixed semantic compartments.
 - **Natural examples:** Dictionary recognition of a rare spelling does not establish the idiomaticity of an invented collocation. Use attested rare expressions or clearly qualify the uncertainty; do not invent examples to manufacture a distinction.
@@ -209,6 +210,8 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-25 - Diagram alignment (clarify):** The Russian offline preview collapsed a [two-part timeline](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/articles/verb-extensions-direction-and-aspect.md#L89-L92)
+  and [four derivation rows](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/articles/verb-extensions-direction-and-aspect.md#L319-L324) into running text. The Japanese was intact, but its placement carried meaning. Check the displayed rows; the fix was in the offline renderer, not the source lesson or Android.
 - **2026-11-25 - Interpretation hints (clarify):** The Russian causative hint review found that a correct gloss
   could answer the permission question or eliminate its distractor. It also found `後` attached to the whole
   expression `その後` (“after that”). The reviewer rechecked the three corrected records in those two tasks;
