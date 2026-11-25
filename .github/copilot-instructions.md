@@ -206,10 +206,42 @@ After every content edit, before committing: `python tools/validate.py` and `pyt
 disappears, and cards that reference it fail to parse). Then check pairs in [docs/confusable-words.md](../docs/confusable-words.md) against
 `quiz_exclusions` (see `docs/content-format.md`) whenever a word `title` is added or reworded.
 
+## Local working trees and publishing
+
+These checks concern the local clone and the push, not learner content; they carry no linguistic claim.
+
+- **Windows path limit.** At `beca991c` the deepest tracked path is 165 characters
+  (`docs/n1-reviews/batch-158-closure/confirm-packet/c3gpt/evidence/integrity/app-code/core/src/main/kotlin/io/github/stopcran/kanji/core/content/KanjiMeaningMetadata.kt`)
+  and `core.longpaths` is unset by default. Two `git worktree add` attempts under a root of about 96 characters ran for
+  minutes, then failed with `Filename too long` and `Could not reset index file to revision 'HEAD'`, leaving a
+  half-registered worktree and a branch that tracked `origin/main`. Use a short root (30 characters worked), keep
+  root plus 165 under 260, and create the branch with `--no-track` so a bare `git push` cannot target `main`.
+- **Check a local stack against `main` before pushing.** Content may already be on `main` as a re-signed copy.
+  `git cherry -v origin/main <branch>` marks such commits `-`: it did so for two local content commits that duplicated
+  [6b988091](https://github.com/stop-cran/learning-japanese/commit/6b988091f84b8eb2ab177e1b2ebe9aa30d95b58f) and
+  [491ecfd9](https://github.com/stop-cran/learning-japanese/commit/491ecfd9f8ba717f03995c07fd8e9b1ae6562c9b).
+  Drop them rather than re-push; re-applying one also conflicts in `manifest.json`. A branch named `…-pre-resign`
+  has the same shape, so compare its subjects with `main` first.
+- **Signing and account.** A cherry-pick re-signs with the configured `user.signingkey`, and a local keyring can hold
+  several keys. GitHub verifies only keys registered for the account: at `beca991c`, `main` commits signed with
+  `9D94B9D311BD26A7` are `valid`, while [2f5cade1](https://github.com/stop-cran/learning-japanese/commit/2f5cade160e8340705e7e980ae8c2fb3f5bd118a)
+  and [b132a5b0](https://github.com/stop-cran/learning-japanese/commit/b132a5b08e8f9c6b2c3a6799440345faa0900af8),
+  signed with `AD3E63ADB89CAE86`, are `unknown_key` and not verified. Check `git log --format='%h %G? %GK'` before the push and
+  `gh api repos/<owner>/<repo>/commits/<sha> --jq .commit.verification` after it. A 403 on `git push` means the credential
+  helper chose an account without write access, not a branch protection; supply the repository owner's token per
+  command, never store it in the repository or its config, and publish through a feature branch and PR, not `main`.
+
 ## Maintaining this guide
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-25 - Local publishing pitfalls (add):** Publishing the Russian-edition guidance from a long-lived local stack hit
+  four mechanical failures. Two worktree creations under a long root failed with `Filename too long` after minutes (deepest
+  tracked path: 165 characters). Two local content commits duplicated
+  [6b988091](https://github.com/stop-cran/learning-japanese/commit/6b988091f84b8eb2ab177e1b2ebe9aa30d95b58f) and
+  [491ecfd9](https://github.com/stop-cran/learning-japanese/commit/491ecfd9f8ba717f03995c07fd8e9b1ae6562c9b), which `git cherry`
+  showed as already applied. Seven local commits carried the second local key, which GitHub rates `unknown_key` on two `main`
+  commits. The default credential's push returned 403. The new section records these checks; it changes no learner-facing rule.
 - **2026-11-25 - Diagram alignment (clarify):** The Russian offline preview collapsed a [two-part timeline](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/articles/verb-extensions-direction-and-aspect.md#L89-L92)
   and [four derivation rows](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/articles/verb-extensions-direction-and-aspect.md#L319-L324) into running text. The Japanese was intact, but its placement carried meaning. Check the displayed rows; the fix was in the offline renderer, not the source lesson or Android.
 - **2026-11-25 - Interpretation hints (clarify):** The Russian causative hint review found that a correct gloss
