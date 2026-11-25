@@ -486,6 +486,9 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   Supply an original, context-specific English `gloss`. Keep compounds/inflections meaningful; do not infer sense from a kanji substring.
 - Optional `word` is the exact existing `words/<word>.md` identity, without a directory or extension. No slashes, control characters,
   `.` or `..`. Do not fabricate a dictionary match; omit the reference for a local gloss. Canonical references need sense/spelling review.
+  The learner's `headword` need not match a card filename. For [勉強します](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/n5-foundation-particles.json#L392-L398)
+  glossed as “to study,” use `べんきょうします` for the displayed reading and `勉強する` for the verb headword. The
+  [word card](../words/勉強.md) covers both the noun and verb under `勉強`; that is its ID if linked. A local gloss needs no link.
 - At most 128 spans; nonblank text/reading/headword and word IDs are limited to 80 code points, glosses to 240.
   Integers must be JSON numbers, not strings/booleans/fractions. Unknown fields are errors.
 - Annotate lexical vocabulary, not particles, grammatical auxiliaries, the blank, or the construction being tested. Never supply the
