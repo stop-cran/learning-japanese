@@ -484,6 +484,10 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   Integers must be JSON numbers, not strings/booleans/fractions. Unknown fields are errors.
 - Annotate lexical vocabulary, not particles, grammatical auxiliaries, the blank, or the construction being tested. Never supply the
   missing answer or its explanation as a hint. A visible inflected lexical verb may be annotated unless that form is protected by the task.
+  In the [dog-at-the-doorway pair](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/motion-stages.json#L1022-L1095),
+  `玄関にいる` tells us where the observer is, not which way the dog moved. Leave the particle `に` untappable; `いる` (“be there”)
+  is a word in its own right. In the [boat example](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/motion-stages.json#L1153-L1164),
+  `みている` (“am watching”) is one verb phrase: its `いる` does not mean “be there.”
   In an interpretation task, check what the hint tells the learner about **each choice**. In the [photo-permission task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2827-L2852),
   glossing `いい` as “you're allowed to” gives the permission answer; glossing `撮りたい` as “want to take a photo” rules out the
   stated alternative of acting against the employee's wish. Leave those occurrences untappable and explain them after the answer.
