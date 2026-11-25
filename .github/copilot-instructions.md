@@ -53,7 +53,8 @@ task, not just the Japanese sentence or intended key:
 - Read every completed option and feedback branch against that scenario's actual roles, polarity and event stage.
   Shared templates must not import another example's facts.
 - Check lexical boundaries and senses by occurrence. Correct offsets and hashes do not prove that a matched substring
-  is a word, or that its gloss fits this prompt.
+  is a word, that its headword identifies the expression being glossed, or that a correct gloss is safe to show
+  before the answer. See the [permission and runner examples](../docs/content-format.md#vocabulary-support).
 - Count genuinely different contexts, not item IDs or noun substitutions. Paired forms and interpretations share keys;
   useful repetition is not independent transfer evidence or demonstrated mastery. When a reader puts paired tasks
   on one page, try them in order with choices hidden. Does the neighboring instruction or the previous answer's
@@ -208,6 +209,10 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-25 - Interpretation hints (clarify):** The Russian causative hint review found that a correct gloss
+  could answer the permission question or eliminate its distractor. It also found `後` attached to the whole
+  expression `その後` (“after that”). The reviewer rechecked the three corrected records in those two tasks;
+  none of the hints was activated. The contrasting examples clarify the vocabulary contract without blacklisting a word.
 - **2026-11-25 - Paired exercises in a reader (clarify):** In the [causative short-form exercises](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2346-L2531),
   one instruction supplies 読ませられた and its inverse supplies 読まされた. The Russian offline reader showed
   both even with choices hidden and answers closed. Study library 017 shows one direction at a time; the Japanese

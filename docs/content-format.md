@@ -478,6 +478,10 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   Integers must be JSON numbers, not strings/booleans/fractions. Unknown fields are errors.
 - Annotate lexical vocabulary, not particles, grammatical auxiliaries, the blank, or the construction being tested. Never supply the
   missing answer or its explanation as a hint. A visible inflected lexical verb may be annotated unless that form is protected by the task.
+  In an interpretation task, check what the hint tells the learner about **each choice**. In the [photo-permission task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2827-L2852),
+  glossing `いい` as “you're allowed to” gives the permission answer; glossing `撮りたい` as “want to take a photo” rules out the
+  stated alternative of acting against the employee's wish. Leave those occurrences untappable and explain them after the answer.
+  By contrast, “doesn't want to run” for `走りたくない` does not identify **who ran** in the [runner task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2665-L2691).
 
 The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 prompts in 32 files at
 `4b53b854aa9138772f9f6d43c2f58c8474d0f5a3`. The initial pilot covers **four** state-change prompts, not the whole corpus.
