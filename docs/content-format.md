@@ -327,6 +327,12 @@ the cue gives `買います`, glosses it with `買う`, then asks the learner to
 The learner can produce `買うか` without doing the conversion. Give the reading of the **supplied** form
 (`買います（かいます）`, “buy”); keep the plain-form model in the explanation. The required `か` can stay in the instruction.
 
+In a fixed-order reader, check the order of the **claims**, not just the answer buttons. For example, each
+[pair about kinds of things](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/descriptive-contexts.json#L146-L190)
+shares a passage. If the supported claim (`言える`) always comes first, its position gives away the answer even with
+the buttons hidden. Vary which claim comes first across passages in both the lesson and its index. Keep each claim
+linked to its own feedback and retain the shared example key: reversing two claims does not create another context.
+
 **Optional JLPT level:** an exercise may declare one `jlpt` integer from 1 to 5. Omit it when classification is uncertain;
 explicit `null`, quoted numbers, booleans, fractions and out-of-range values are invalid. Do not add redundant level tags or
 cumulative memberships. The app's new-material scope is cumulative (N3 includes N3/N4/N5), while browsing is exact; All and
