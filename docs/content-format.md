@@ -333,6 +333,12 @@ shares a passage. If the supported claim (`言える`) always comes first, its p
 the buttons hidden. Vary which claim comes first across passages in both the lesson and its index. Keep each claim
 linked to its own feedback and retain the shared example key: reversing two claims does not create another context.
 
+For readers with exercise links, try the index link before opening the answer. In the
+[key-holder pair](../grammar/formal-nouns-hoka-exclusion.json), the IDs start with `hoka` and `naka`:
+using them as URL fragments shows which word fills the blank, even when the link text just says “Exercise 1.”
+Use an answer-neutral destination for learner links (including links between paired questions). Keep the exercise
+ID for progress and group membership, and keep old bookmarks working. This is a reader check, not a JSON schema change.
+
 **Optional JLPT level:** an exercise may declare one `jlpt` integer from 1 to 5. Omit it when classification is uncertain;
 explicit `null`, quoted numbers, booleans, fractions and out-of-range values are invalid. Do not add redundant level tags or
 cumulative memberships. The app's new-material scope is cumulative (N3 includes N3/N4/N5), while browsing is exact; All and
