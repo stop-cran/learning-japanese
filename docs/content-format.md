@@ -321,6 +321,12 @@ the post-answer `explanation`. The one response slot may contain a label, fragme
 state the required operation and spelling/spacing constraints without printing its answer.
 Preserve existing exercises' translation placement rather than silently rewriting their task.
 
+For a formation task, check what the learner can **assemble** from the instruction, not just whether it contains
+a whole accepted string. In the [book-purchase question](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/reports-questions.json#L142-L164),
+the cue gives `買います`, glosses it with `買う`, then asks the learner to convert it and append `か`.
+The learner can produce `買うか` without doing the conversion. Give the reading of the **supplied** form
+(`買います（かいます）`, “buy”); keep the plain-form model in the explanation. The required `か` can stay in the instruction.
+
 **Optional JLPT level:** an exercise may declare one `jlpt` integer from 1 to 5. Omit it when classification is uncertain;
 explicit `null`, quoted numbers, booleans, fractions and out-of-range values are invalid. Do not add redundant level tags or
 cumulative memberships. The app's new-material scope is cumulative (N3 includes N3/N4/N5), while browsing is exact; All and
