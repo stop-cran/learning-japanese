@@ -23,10 +23,15 @@ and the shared [language/task review rules](../copilot-instructions.md).
 - After shortening or revising a dialogue, reread the entire exchange, translations,
   options, evidence references and feedback. Remove replies to deleted questions;
   do not invent facts to justify a distractor or strengthen a conclusion.
+- Keep translation manuscripts out of runtime directories until publication is intended.
+  Check the generated manifest, not just the absence of an approval. See the
+  [legacy passage example](../../docs/listening-n5.md#manifest-and-budgets).
 - Use the established soft animated/editorial **still-illustration** style, not schematic
   people, as the default for natural scenes. Follow `tools/image_prompts.json`'s `style`
   and the [selected listening illustrations](../../docs/listening-task-pool/illustrations.json).
   A numbered grid must remain an equally presented comparison, not a decorative scene.
+  Preserve the original `visual.role` even for printed choices; check the [room and cup
+  examples](../../docs/listening-tasks.md#identity-originals-and-review) before exposing labels.
   Keep artwork original and text-free except necessary controlled labels; no named
   artist/franchise imitation, speech bubbles, brands or highlighted answer.
 - Freeze visual invariants in the prompt: exact people/objects, left/right roles,

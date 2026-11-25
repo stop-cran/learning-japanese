@@ -321,6 +321,24 @@ the post-answer `explanation`. The one response slot may contain a label, fragme
 state the required operation and spelling/spacing constraints without printing its answer.
 Preserve existing exercises' translation placement rather than silently rewriting their task.
 
+For a formation task, check what the learner can **assemble** from the instruction, not just whether it contains
+a whole accepted string. In the [book-purchase question](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/reports-questions.json#L142-L164),
+the cue gives `買います`, glosses it with `買う`, then asks the learner to convert it and append `か`.
+The learner can produce `買うか` without doing the conversion. Give the reading of the **supplied** form
+(`買います（かいます）`, “buy”); keep the plain-form model in the explanation. The required `か` can stay in the instruction.
+
+In a fixed-order reader, check the order of the **claims**, not just the answer buttons. For example, each
+[pair about kinds of things](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/descriptive-contexts.json#L146-L190)
+shares a passage. If the supported claim (`言える`) always comes first, its position gives away the answer even with
+the buttons hidden. Vary which claim comes first across passages in both the lesson and its index. Keep each claim
+linked to its own feedback and retain the shared example key: reversing two claims does not create another context.
+
+For readers with exercise links, try the index link before opening the answer. In the
+[key-holder pair](../grammar/formal-nouns-hoka-exclusion.json), the IDs start with `hoka` and `naka`:
+using them as URL fragments shows which word fills the blank, even when the link text just says “Exercise 1.”
+Use an answer-neutral destination for learner links (including links between paired questions). Keep the exercise
+ID for progress and group membership, and keep old bookmarks working. This is a reader check, not a JSON schema change.
+
 **Optional JLPT level:** an exercise may declare one `jlpt` integer from 1 to 5. Omit it when classification is uncertain;
 explicit `null`, quoted numbers, booleans, fractions and out-of-range values are invalid. Do not add redundant level tags or
 cumulative memberships. The app's new-material scope is cumulative (N3 includes N3/N4/N5), while browsing is exact; All and
@@ -474,10 +492,47 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   Supply an original, context-specific English `gloss`. Keep compounds/inflections meaningful; do not infer sense from a kanji substring.
 - Optional `word` is the exact existing `words/<word>.md` identity, without a directory or extension. No slashes, control characters,
   `.` or `..`. Do not fabricate a dictionary match; omit the reference for a local gloss. Canonical references need sense/spelling review.
+  The learner's `headword` need not match a card filename. For [勉強します](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/n5-foundation-particles.json#L392-L398)
+  glossed as “to study,” use `べんきょうします` for the displayed reading and `勉強する` for the verb headword. The
+  [word card](../words/勉強.md) covers both the noun and verb under `勉強`; that is its ID if linked. A local gloss needs no link.
+  Read the linked card as part of the unanswered exercise. In [妹が本____読みます。](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/basic-particles.json#L1238-L1246),
+  “book” helps with `本`, but the [card's example](../words/本.md#meaning) `本を読む` gives the missing `を`.
+  Keep the local gloss and omit `word` for that occurrence; the card itself needs no change.
 - At most 128 spans; nonblank text/reading/headword and word IDs are limited to 80 code points, glosses to 240.
   Integers must be JSON numbers, not strings/booleans/fractions. Unknown fields are errors.
 - Annotate lexical vocabulary, not particles, grammatical auxiliaries, the blank, or the construction being tested. Never supply the
   missing answer or its explanation as a hint. A visible inflected lexical verb may be annotated unless that form is protected by the task.
+  In the [dog-at-the-doorway pair](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/motion-stages.json#L1022-L1095),
+  `玄関にいる` tells us where the observer is, not which way the dog moved. Leave the particle `に` untappable; `いる` (“be there”)
+  is a word in its own right. In the [boat example](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/motion-stages.json#L1153-L1164),
+  `みている` (“am watching”) is one verb phrase: its `いる` does not mean “be there.”
+  In an interpretation task, check what the hint tells the learner about **each choice**. In the [photo-permission task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2827-L2852),
+  glossing `いい` as “you're allowed to” gives the permission answer; glossing `撮りたい` as “want to take a photo” rules out the
+  stated alternative of acting against the employee's wish. Leave those occurrences untappable and explain them after the answer.
+  By contrast, “doesn't want to run” for `走りたくない` does not identify **who ran** in the [runner task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/causative-perspective.json#L2665-L2691).
+  Check both items in a shared passage. The [meeting tasks](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/transitivity-results.json#L1488-L1499)
+  ask about the chairs in one question and the [spare handouts](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/transitivity-results.json#L1617-L1628) in the other.
+  A hint for `もう` (“already”) or `まだ` (“not yet”) gives the stage of one item and helps infer the other, even with choices hidden.
+  Keep both stage words untappable in these two questions; hints identifying the chairs or handouts can stay.
+  Check the hints together with the choices hidden **and** shown. In the [nonmetal-part task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/descriptive-contexts.json#L1656-L1665),
+  the learner must select the part from the materials note. Together, hints for `本体` (body), `ふた` (lid) and `木` (wood)
+  give away which part to name. [Both choices](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/descriptive-contexts.json#L1700-L1708) already supply `ふたは`;
+  checking only that view misses the selection required in a typed answer. `金属` (metal) can stay tappable: the cue supplies it in both modes.
+  Protect the part of a predicate that distinguishes the choices, not necessarily the whole phrase. In the
+  [train pair](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/judgment-expectation.json#L1168-L1226),
+  `出た` means “departed” in both sentences; leave `と思っている` / `と思っていた` for the learner to interpret.
+  In the [visit task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/judgment-expectation.json#L1397-L1415),
+  the question *is* about polarity, so glossing `来なかった` as “didn't come” would answer it.
+- Check the hint's **reading** as well as its gloss against accepted answers. In the [recording-device task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/ability-perception.json#L1437-L1475),
+  `機械` means “machine”, but its tap would single out `きかい`, the accepted kana answer for `機会` (“opportunity”).
+  Both label readings are intentionally supplied in the instructions. Withhold this tap, not the valid kana answer;
+  the two words being homophones is not by itself a reason to hide either word in other exercises.
+- When a task asks **who did what**, a translated hint can give away a role through its grammar. In the
+  [grandmother's wish](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/hopes-wishes.json#L1336-L1357),
+  `祈りました` marks past tense, not gender. Russian `молилась` (“prayed”, feminine) points toward the grandmother
+  before the learner has distinguished the person praying from the person returning. A hint can keep the tense without
+  assigning the role: `молиться (здесь — прошедшее время)`. This does not require neutralizing every verb hint;
+  in the [event-success task](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/hopes-wishes.json#L648-L670), the learner supplies the wish, not the person praying.
 
 The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 prompts in 32 files at
 `4b53b854aa9138772f9f6d43c2f58c8474d0f5a3`. The initial pilot covers **four** state-change prompts, not the whole corpus.

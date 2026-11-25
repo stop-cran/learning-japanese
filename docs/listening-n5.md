@@ -79,6 +79,12 @@ Include both maps in `contentVersion`. Keep the app's existing 50 MiB retained, 
 archive limits; the pilot budget check retains headroom. Invalid audio, review bindings, paths or timing metadata are errors,
 not successful fallbacks. They must not produce learner failures.
 
+**An unapproved passage can still be listed in the manifest.** For example, a text-only translation of
+`n5-asking-the-way.json` placed in `listening/` appears in `manifest.listening` even without `audio` or `audioReview`.
+[`build_manifest.py`](../tools/build_manifest.py) lists files by location; the [passage validator](../tools/validate_listening.py)
+checks readiness separately. Keep a reading-only manuscript under a contributor path such as
+`docs/pilot-b-drafts/listening/`; regenerating the manifest for a draft-only change should leave it unchanged.
+
 ## Learning and pacing
 
 Listen first, then show all questions. One complete replay is normal; extra replay, additional slowing or declared guessing
