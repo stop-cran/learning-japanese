@@ -492,12 +492,15 @@ explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, 
   Supply an original, context-specific English `gloss`. Keep compounds/inflections meaningful; do not infer sense from a kanji substring.
 - Optional `word` is the exact existing `words/<word>.md` identity, without a directory or extension. No slashes, control characters,
   `.` or `..`. Do not fabricate a dictionary match; omit the reference for a local gloss. Canonical references need sense/spelling review.
-  The learner's `headword` need not match a card filename. For [勉強します](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/n5-foundation-particles.json#L392-L398)
-  glossed as “to study,” use `べんきょうします` for the displayed reading and `勉強する` for the verb headword. The
-  [word card](../words/勉強.md) covers both the noun and verb under `勉強`; that is its ID if linked. A local gloss needs no link.
+  The learner's `headword` need not match a card filename. For [勉強します](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/basic-particles.json#L3893-L3901)
+  glossed “study; will study,” use `べんきょうします` for the displayed reading and `勉強する` for the verb headword; the span's
+  `word` is `勉強`. The [word card](../words/勉強.md) covers both the noun and verb under `勉強`; that is its ID if linked.
+  A local gloss needs no link.
   Read the linked card as part of the unanswered exercise. In [妹が本____読みます。](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/basic-particles.json#L1238-L1246),
   “book” helps with `本`, but the [card's example](../words/本.md#meaning) `本を読む` gives the missing `を`.
-  Keep the local gloss and omit `word` for that occurrence; the card itself needs no change.
+  Where a card example does that, keep the local gloss and omit `word` for that occurrence; the card itself needs no change.
+  (At the pinned revision that exercise still links `word: 本` in its [`vocabulary` block](https://github.com/stop-cran/learning-japanese/blob/6af98cb717755690a9ca793e5454a96ebd7a8f9f/grammar/basic-particles.json#L1280-L1288);
+  this states the rule to apply when authoring or revising spans, not what that data contains.)
 - At most 128 spans; nonblank text/reading/headword and word IDs are limited to 80 code points, glosses to 240.
   Integers must be JSON numbers, not strings/booleans/fractions. Unknown fields are errors.
 - Annotate lexical vocabulary, not particles, grammatical auxiliaries, the blank, or the construction being tested. Never supply the
