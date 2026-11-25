@@ -146,26 +146,54 @@ These apply to the JLPT N1 kanji expansion (issue 60). The current state and nex
   membership file and its `strokes/*.json` out of `main`: `strokes/` is listed in `manifest.json` and ships in the
   archive, so a draft stays in the batch worktree or the hand-off folder until its reviews are closed.
 - **Re-root after an integration merge.** When `main` moved after the draft was rooted, set `baseCommit` in both the
-  membership file and the ledger and record `integration`, as B167 to B169 did: `tools/audit_n1_batch.py` requires the
-  two to match, and the writer's close script (`code/writer/b170_close.py` in the hand-off) does not rewrite it. Keep
-  reviewed blobs byte for byte, combine an upstream edit to the same card by hand (B168 問), rebuild `manifest.json`
-  and rerun the gates.
+  membership file and the ledger inside the merge commit, as B167 to B169 did, and leave `selectionBase` at the old base
+  (nothing in `tools/` reads it). `tools/audit_n1_batch.py` requires the two `baseCommit` values to match and requires
+  `source-index.json` and `baseline-word-candidates.json` to equal their versions at that commit. `b170_publish.py` asserts
+  `origin/main == baseCommit` (and `HEAD^2 == baseCommit` for a merge), so redo the merge if `main` moves again. The
+  writer's `b170_close.py` (in the hand-off) cannot close a re-rooted merge unchanged: the merge commit has already moved
+  `baseCommit` to `origin/main`, so it takes its no-merge branch and fails its `HEAD` assertion. For a merge close,
+  replace its lines 14 to 22 with `b169_close.py` lines 14 and 15 and keep the hand-written `integration` record, adding
+  `merged: true` and `upstream`, which `b170_publish.py` reads (hand-off README, "Integration rule"; that change has not
+  been run). Keep reviewed blobs byte for byte, combine an upstream edit to the same card by hand (B168 問), rebuild
+  `manifest.json` and rerun the gates.
 - **Metadata ids on one line.** `meta_scan.py` (under `docs/n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/`)
   counts JMdict ids only on the first `Metadata:` line, so ids on a wrapped continuation or a `Dictionary:` line read as
   missing. B167 閉 and 凡 and B168 縫 collapsed theirs into one line.
 - **Scripts and inputs live on the writer PC.** The batch scripts hard-code the worktree name and base commit, and
-  `n1lib.py` defaults `N1_REPO` to a stale clone: adapt a copy and set `N1_REPO`. The pinned JMdict and the other
-  inputs outside Git cannot be re-downloaded (EDRDG serves only its latest file); never substitute one silently, add a
-  new pin record as B135 did and disclose it.
+  `n1lib.py` defaults `N1_REPO` to a stale clone: adapt a copy and set `N1_REPO`. The pinned `JMdict_e.gz` (sha256 in
+  `docs/n1-sources/continuation-inputs.json`) is known to exist only on that PC: on 2026-11-25 EDRDG's current file
+  differed from the pin and EDRDG offers no dated copies, so never substitute one silently; add a new pin record as B135
+  did and disclose it. The Joyo table PDF and the KanjiVG stroke inputs can be fetched again.
 - **Quoting and rare glyphs.** Quote dictionary text only as short cited clauses, never a full Digital Daijisen entry
   or a scraped page. Avoid glyphs in U+2E80 to U+2FDF and U+3400 to U+4DBF, and check any other code point in Android's
   `RareHan.isRare` ranges (U+F900 to U+FAFF, U+20000 to U+2FFFF) first: `RareHanTest` fails on a rare code point that is
-  missing from its `covered` set, and 13 already used are missing from the fonts.
+  missing from its `covered` set, and 13 already used are missing from the fonts
+  ([Android #147](https://github.com/stop-cran/kanji-cards-android/issues/147), open).
+- **Android CI follows content `main`.** Android's CI clones this repository's `main` at run time and runs on Android
+  pushes to `main` and pull requests, so a content change reaches it at the next Android run and nothing here triggers
+  one. On 2026-11-25 `RareHanTest` had failed in all nine observed Android `main` runs (2026-11-15 to 2026-11-21). The log
+  does not name the cloned content commit, so the content behind each run is a candidate inferred from the checkout's file
+  count and the content push times; the first red run's candidate held two uncovered code points (U+2EA4 in 援, U+2ECF in
+  廊). Content CI does not run Android tests and no JDK or Android SDK was found on the writer PC, so a batch whose cards
+  use any code point in the ranges above lists them in the checkpoint's limits. Whether to extend Android's font subset
+  or revise the 22 cards is an open owner decision recorded in #147 (linked above); until it is made, do not rewrite
+  published cards only to avoid those code points.
+- **Direct signed pushes.** N1 batches and hand-off docs go to `main` as signed fast-forward pushes by `stop-cran`:
+  `b170_publish.py` pushes `HEAD:main`, then requires GitHub's `verified: true` and a successful CI run on that exact SHA.
+  On 2026-11-25 `main` had no branch protection or rulesets (`gh api repos/stop-cran/learning-japanese/rules/branches/main`
+  returned `[]`). The owner had asked in earlier sessions for pushes to the default branch as `stop-cran`, and the
+  writers' brief added signing and never rewriting pushed history; none of that is a repository rule. This differs from
+  the feature-branch advice in "Local working trees and publishing", which was added after a Russian-edition publication
+  (its 2026-11-25 entry below). Fetch first, push fast-forward only, and never rewrite pushed history.
 - **Word tags and levels.** JMdict `news2` and `spec2` count as qualifying tags (owner decision, issue 60 comment
   7112026459, applied since B160); name them in the ledger note, as B170 did for 慶弔. New words carry no JLPT level.
-- **Budget.** The retained-content guard is 62 MiB, 2 MiB under Android's 64 MiB importer limit, so raising it past
-  64 MiB needs an updated importer to reach users first. Ask the owner before raising any guard; the last ten batches
-  added about 72 KB of retained bytes each.
+- **Budget.** The retained-content guard is 62 MiB (`f072122b`, 2026-11-22, raised it from 56 MiB), 2 MiB under Android's
+  64 MiB importer limit, so raising it past 64 MiB needs an updated importer to reach users first. Suggested practice (not
+  a recorded owner rule): tell the owner before raising any guard, in a separate, disclosed commit made before the guard is
+  hit. At B170 CI printed 57,070,495 retained bytes, 7,941,217 under the guard; B161 to B170 added 71,971
+  per batch on average and 130,105 at most (B169), an observation rather than a bound. Read headroom from CI's
+  `check_content_budget.py` output or the batch's `zip-receipt.json`: a Windows checkout with `core.autocrlf=true` counts
+  CRLF, so a local run over-read by 616,084 bytes at B170.
 
 ## Worked example: an attachment rule left implicit
 
@@ -264,18 +292,27 @@ These checks concern the local clone and the push, not learner content; they car
   signed with `AD3E63ADB89CAE86`, are `unknown_key` and not verified. Check `git log --format='%h %G? %GK'` before the push and
   `gh api repos/<owner>/<repo>/commits/<sha> --jq .commit.verification` after it. A 403 on `git push` means the credential
   helper chose an account without write access, not a branch protection; supply the repository owner's token per
-  command, never store it in the repository or its config, and publish through a feature branch and PR, not `main`.
+  command, never store it in the repository or its config, and publish through a feature branch and PR, not `main`. The N1
+  kanji batches are the exception: they follow "Direct signed pushes" under "N1 kanji batches" above.
 
 ## Maintaining this guide
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-25 - Android CI follows content (add):** The hand-off notes first described the rare-glyph gap as blocking
+  whole-set acceptance only, and quoted a local Windows budget run (57,686,579 retained bytes, about 7.3 MB of headroom)
+  that over-read CRLF; CI reported 57,070,495 and 7,941,217. Android's CI history then showed that `RareHanTest` failed in
+  all nine observed `main` runs (2026-11-15 to 2026-11-21) and that this CI clones this repository's `main` at run time.
+  The N1 batches subsection gained a bullet on this and a corrected budget bullet; they change no learner-facing rule.
 - **2026-11-25 - N1 kanji hand-off (add):** Saving the N1 work before an app restart collected failures that the rules
   above did not cover. B106 and B107 keep `published: []` although 勅 and 勘 are on `main`. Writer checkpoints 155 to 158
-  disagreed on whether `words/悪戯.md` is CRLF or LF (the committed blob is LF; a checkout follows `core.autocrlf`). Two checkpoints
-  held verbatim Digital Daijisen tables, which a scan of the hand-off set found and the hand-off trimmed. Thirteen code
-  points on 22 cards are missing from Android's rare-glyph fonts. B167 to B169 each re-rooted `baseCommit` after merging
-  `main`, and the B170 close script does not. The new subsection records these checks; it changes no learner-facing rule.
+  disagreed on whether `words/悪戯.md` is CRLF or LF (the committed blob is LF; a checkout follows `core.autocrlf`). Three
+  checkpoints held Digital Daijisen text beyond short clauses (two verbatim tables, and three one-line definitions in
+  156), which a scan of the hand-off set found and the hand-off trimmed. Thirteen code points on 22 cards are missing from
+  Android's rare-glyph fonts. B167 to B169 each re-rooted `baseCommit` after merging `main`, and reading the B170 close
+  script showed that it cannot close such a merge unchanged (not run). The N1 batches push signed fast-forward commits
+  straight to `main`, which conflicts with the feature-branch advice in "Local working trees and publishing"; the
+  new subsection says which applies. It records these checks and changes no learner-facing rule.
 - **2026-11-25 - Local publishing pitfalls (add):** Publishing the Russian-edition guidance from a long-lived local stack hit
   four mechanical failures. Two worktree creations under a long root failed with `Filename too long` after minutes (deepest
   tracked path: 165 characters). Two local content commits duplicated

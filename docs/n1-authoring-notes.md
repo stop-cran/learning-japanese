@@ -165,7 +165,8 @@ main that the checkpoints
 count as delivered. Use the publication receipt, the CI run of that exact
 commit and the ZIP comparison.
 
-Standing rules from the owner's instructions:
+Working rules (the owner's instructions where cited, otherwise the writers'
+practice):
 
 - One sequential writer authors and publishes N1 batches; no second session
   does so meanwhile.
@@ -177,34 +178,86 @@ Standing rules from the owner's instructions:
   review is repeated. Two clashing cards are replaced by one card written from
   both, then reviewed again.
 - New words carry no JLPT level. JMdict `news2` and `spec2` count as qualifying
-  tags under the owner's decision, applied since B160
+  tags, recorded as owner decisions on issue 60 and applied since B160
   ([comment 7112026459](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-7112026459));
   name the tags in the ledger note, as B170 did for 慶弔.
 - Quote dictionary text only as short cited clauses; never commit a full
-  Digital Daijisen entry or a scraped page. Two writer checkpoints were trimmed
-  in the handoff for this reason.
-- Budget: the retained guard is 62 MiB (56 MiB until `f072122b`), 2 MiB under
-  the Android importer's 64 MiB limit. Baseline retained bytes are 57,686,579,
-  so about 7.3 MB remain against roughly 3.6 to 6.5 MB for the remaining ~50
-  batches, and the 42 MiB compressed guard has about 7.0 MB left. The owner said
-  "try x2 for now. Then maybe we increase more": ask before raising a guard, and
-  note that going past 64 MiB needs an updated importer to reach users first.
+  Digital Daijisen entry or a scraped page. Three writer checkpoints (155, 156
+  and 157) were trimmed in the handoff for this reason.
+- Batches and handoff docs reach `main` by signed, direct fast-forward pushes
+  as `stop-cran`. The owner had asked in earlier sessions on this repository for
+  pushes to the default branch as that account, and the writers' brief added
+  signing and never rewriting pushed history; nothing in the repository
+  enforces any of it. `b170_publish.py` pushes `HEAD:main`, then requires
+  GitHub's `verified: true` and a successful CI run on that exact SHA. On
+  2026-11-25 `main` had no branch protection or rulesets. Fetch first,
+  fast-forward only, and never rewrite pushed history.
+- Budget: the retained guard is 62 MiB. `f072122b` (2026-11-22) raised it from
+  56 MiB, and its message says to keep headroom under Android's 64 MiB import
+  cap, so going past 64 MiB needs an updated importer to reach users first.
+  Suggested practice, not a recorded owner rule: tell the owner before raising
+  any guard again, and do it in a separate, disclosed commit before the guard
+  is hit. CI printed 57,070,495 retained bytes for
+  `97282e43`, which leaves 7,941,217 bytes (about 7.57 MiB), and the real
+  zipball (`zip-receipt.json`, 37,599,206 bytes) leaves 6,440,986 bytes (about
+  6.14 MiB) under the 42 MiB compressed guard. B161 to B170 added 71,971
+  retained bytes per batch on average (about 44 KB compressed), with peaks of
+  130,105 (B169) and 92,984 (B170). If the next ~50 batches grow like that, they
+  would use roughly 3.6 MB at the mean, 5.6 MB at the last two batches' mean or
+  6.5 MB at B169's rate; the peak is an observation, not a bound, and the 195
+  name-use rows may grow differently. Read headroom from CI or the receipt: a
+  Windows run with `core.autocrlf=true` counts CRLF and printed 57,686,579
+  retained bytes for the same tree (616,084 too many).
 
-Pitfalls found in B167 to B170 and the B171 preparation:
+Pitfalls found in B167 to B170 and the B171 preparation (the handoff README has
+the detail under "Integration rule" and "Pipeline pitfalls"):
 
-- Main moves while a batch is under review. The integration merge must also set
-  `baseCommit` in the membership file and the ledger and record `integration`
-  as B167 to B169 did, because `tools/audit_n1_batch.py` requires the two to
-  match and `b170_close.py` does not rewrite it. Reviewed article and stroke
-  blobs stay byte for byte (39, 39 and 36 in B167 to B169); an upstream edit to
-  a card the batch also edited is combined by hand (B168 問).
+- Main moves while a batch is under review. The integration merge commit must
+  also set `baseCommit` in the membership file and the ledger and leave
+  `selectionBase` at the old base. `tools/audit_n1_batch.py` requires the two
+  `baseCommit` values to match and requires `source-index.json` and
+  `baseline-word-candidates.json` to equal their versions at that commit, and
+  `b170_publish.py` asserts `origin/main == baseCommit` before it closes, so
+  redo the merge if main moves again. `b170_close.py` cannot close a re-rooted
+  merge unchanged: it compares `origin/main` with `baseCommit`, which the merge
+  commit has already moved, so it takes its no-merge branch and fails its `HEAD`
+  assertion. For a merge close, replace its lines 14 to 22 with `b169_close.py`
+  lines 14 and 15, keep the hand-written `integration` record and add
+  `merged: true` and `upstream`, which `b170_publish.py` line 32 reads (the
+  handoff README's "Integration rule" has the detail; that change has not been
+  run). Reviewed article and
+  stroke blobs stay byte for byte (39, 39 and 36 in B167 to B169); an upstream
+  edit to a card the batch also edited is combined by hand (B168 問). Everything
+  on main since `beca991c` is docs-only.
 - The batch scripts hard-code the worktree name, the base commit and paths, and
   `n1lib.py` defaults `N1_REPO` to a stale clone. Adapt a copy, set `N1_REPO`,
   and never rerun a script unchanged.
+- No gate checks the ledger's `accounting` block. The render writes it, the
+  close script sets two of its fields, and only `tools/n1_record_publication.py`
+  advances the published figures, after the content is on main. Only the receipt
+  step asserts any of it (the published and undelivered counts), so a stale
+  figure surfaces after publication. The B170 scripts hard-code the figures; for
+  B171 the render needs 728 published, 722 N1 additions, 500 undelivered and 490
+  not started, `b171_close.py` needs 738, and the receipt step needs 738
+  delivered and 490 undelivered.
+- The review scripts build the reviewers' `rubric.txt` from
+  `.github/copilot-instructions.md` in the draft snapshot: the text before
+  `## Grammar exercises`, and the text from `## Independent review and
+  reconciliation` to `## Worked example`. `### N1 kanji batches` sits in that
+  second range and did not exist when B170 was drafted, so a draft rooted on a
+  later main gives the reviewers text that B170's did not have. Cut the slice at
+  that heading or disclose the difference, and do not rename those headings.
+  `b170_panel.py` also needs PyYAML and hard-codes the 26-word comparison list
+  and a snapshot sentence saying that no existing word article is reused as a
+  support, which is false for B171 (戯 reuses `words/悪戯.md`).
 - `meta_scan.py` counts JMdict ids only on the first `Metadata:` line, so ids on
   a wrapped continuation or a `Dictionary:` line look missing. B167 閉 and 凡
   and B168 縫 collapsed theirs into one line; 握 (wrapped) and 警 (`Dictionary:`
-  only) still need it in B171.
+  only) still need it in B171. The `meta_scan` and `word_quiz` gates run
+  `docs/n1-reviews/batch-137-closure/confirm-packet/gpt/evidence/meta_scan.py`
+  and
+  `docs/n1-reviews/batch-156-closure/packet/evidence/audits/word_quiz_audit.py`;
+  `n1_gates.py` in the handoff runs every gate in one command.
 - Cards and words are LF in the index but CRLF in a Windows checkout
   (`i/lf w/crlf` for 悪戯, 警, 握, 暴 and 産), while this notes file is CRLF in
   the index. Writer checkpoints 155 to 157 call 悪戯.md CRLF and 158 corrects
@@ -218,19 +271,36 @@ Pitfalls found in B167 to B170 and the B171 preparation:
 
 Other open items:
 
-- Inputs outside Git exist only on the writer PC: the pinned JMdict
-  (`n1-sources/continuation-inputs.json`, sha256 `42bd8fbc…`), the Joyo table
-  PDF text and the KanjiVG stroke cache. EDRDG serves only its latest JMdict, so
-  the pin cannot be re-downloaded. Never substitute a newer file silently; add a
-  new pin record as B135 did and disclose it.
+- The pinned `JMdict_e.gz` (`n1-sources/continuation-inputs.json`, sha256
+  `42bd8fbc…`) lives only on the writer PC, in `jmdict\`; the pin record says
+  raw dictionary bytes stay outside Git. On 2026-11-25 EDRDG's current file
+  (`Last-Modified` 25 Nov 2026, 10,613,343 bytes) differed from the pin, and
+  EDRDG offers no dated copies, so the pinned file is not available from EDRDG
+  (third-party snapshots were not searched). The author made no backup, so only
+  one copy is known; the owner should choose where one may go. Never substitute
+  a newer file silently; add a new pin record
+  as B135 did and disclose it. The Joyo table PDF (rebuild its page text with
+  pdfplumber) and the KanjiVG stroke inputs can be fetched again.
 - Android's `RareHan.kt` routes 25 code points used in the cards to bundled
-  fonts, and 13 of them are missing from the assigned font and from
-  `RareHanTest` (`U+2E8C U+2E95 U+2EA4 U+2ECC U+2ECF U+2ED6 U+3404 U+342E U+4343
+  fonts, and 13 of them are missing from those fonts and from `RareHanTest`'s
+  `covered` set (`U+2E8C U+2E95 U+2EA4 U+2ECC U+2ECF U+2ED6 U+3404 U+342E U+4343
   U+2008A U+21C2A U+2298F U+27607`). Twenty-two earlier cards are affected
   ([comment 7138231670](https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-7138231670));
   B169 and B170 added none. It is a static cmap check, not a device
-  observation, and it blocks whole-set acceptance only. New cards avoid U+2E80
-  to U+2FDF and U+3400 to U+4DBF, and check any other code point in
+  observation. It does not block content publication (content CI runs no
+  Android tests), but it blocks whole-set acceptance. Android's CI clones this
+  repository's `main` at run time, and `RareHanTest` failed in all nine observed
+  Android `main` runs (2026-11-15 to 2026-11-21). Android's log does not name
+  the content commit it cloned, so the content behind each run is a candidate
+  inferred from the checkout's file count and the content push times; the first
+  red run's candidate held two uncovered code points (U+2EA4 in 援, U+2ECF in
+  廊). See
+  [kanji-cards-android#147](https://github.com/stop-cran/kanji-cards-android/issues/147),
+  which lists the options; extending the font subset or revising the 22 cards is
+  an open owner decision. A dry run with the font tooling found a HanaMin 8.030
+  glyph for all 25 code points (about 3 KB more font data); it was not applied,
+  and no local Android build or device test was run for it. New cards avoid
+  U+2E80 to U+2FDF and U+3400 to U+4DBF, and check any other code point in
   `RareHan.isRare`'s ranges (U+F900 to U+FAFF, U+20000 to U+2FFFF) first:
   `RareHanTest` fails on a rare code point missing from its `covered` set.
 - Eleven name-use rows are blocked: 崚 彪 晟 燿 舜 赳 have no usable pinned
@@ -241,9 +311,9 @@ Other open items:
   Android, device or whole-set acceptance is claimed.
 
 Next: write `b171_content.py` and `b171_render.py` from the B170 copies, render,
-run the gates, make the signed draft commit, review, close, integrate and
-publish (target 738 delivered, 490 remaining), then reselect B172 on the B171
-receipt.
+run the gates, make the signed draft commit, review, merge current `main`,
+close and publish (target 738 delivered, 490 remaining), then reselect B172 on
+the B171 receipt.
 
 ## Batch 159: published
 
